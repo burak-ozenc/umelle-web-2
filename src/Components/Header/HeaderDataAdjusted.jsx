@@ -7,19 +7,19 @@ const HeaderDataAdjusted = [
                 dropdown: [
                     {
                         title: 'Policy Management',
-                        link: '/umelle/solutions'
+                        link: '/solutions'
                     },
                     {
                         title: 'Finance Management',
-                        link: '#'
+                        link: '/solutions'
                     },
                     {
                         title: 'Internal and Governmental Compliance',
-                        link: '#'
+                        link: '/solutions'
                     },
                     {
                         title: 'Risk Management ',
-                        link: '#'
+                        link: '/solutions'
                     }
                 ]
             },
@@ -28,23 +28,23 @@ const HeaderDataAdjusted = [
                 dropdown: [
                     {
                         title: 'Member and User Management',
-                        link: '/umelle/solutions'
+                        link: '/solutions'
                     },
                     {
                         title: 'Communication Management',
-                        link: '/umelle/solutions'
+                        link: '/solutions'
                     },
                     {
                         title: 'Vendor Management',
-                        link: '/umelle/solutions'
+                        link: '/solutions'
                     },
                     {
                         title: 'KPIs',
-                        link: '/umelle/solutions'
+                        link: '/solutions'
                     },
                     {
                         title: 'Certificate Management',
-                        link: '/umelle/solutions'
+                        link: '/solutions'
                     }
                 ]
             }
@@ -56,22 +56,22 @@ const HeaderDataAdjusted = [
         dropdown: [
             {
                 title: 'Web & Desktop',
-                link: '/umelle/services'
+                link: '/services'
             }, {
                 title: 'Mobile',
-                link: '/umelle/services'
+                link: '/services'
             }, {
                 title: 'Data Integration and Formats',
-                link: '/umelle/services'
+                link: '/services'
             }, {
                 title: 'Content Management and Web APIs',
-                link: '/umelle/services'
+                link: '/services'
             }, {
                 title: 'Cloud Services and Deployment',
-                link: '/umelle/services'
+                link: '/services'
             }, {
                 title: 'UX/UI Design',
-                link: '/umelle/services'
+                link: '/services'
             }
         ]
     }, {
