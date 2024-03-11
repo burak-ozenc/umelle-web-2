@@ -87,10 +87,10 @@ function App() {
               <Suspense fallback={<></>}>
                 <Routes>
                   {/*UMELLE*/}
-                  <Route path="/umelle" element={<UmelleHome style={{ "--base-color": "#27ae60" }} />} />
-                  <Route path="/umelle/solutions" element={<UmelleSolutions style={{ "--base-color": "#27ae60" }} />} />
-                  <Route path="/umelle/services" element={<UmelleServices style={{ "--base-color": "#27ae60" }} />} />
-                  <Route path="/umelle/company" element={<UmelleCompany style={{ "--base-color": "#27ae60" }} />} />
+                  <Route path="/" element={<UmelleHome style={{ "--base-color": "#27ae60" }} />} />
+                  <Route path="/solutions" element={<UmelleSolutions style={{ "--base-color": "#27ae60" }} />} />
+                  <Route path="/services" element={<UmelleServices style={{ "--base-color": "#27ae60" }} />} />
+                  <Route path="/company" element={<UmelleCompany style={{ "--base-color": "#27ae60" }} />} />
                 </Routes>
               </Suspense>
             </AnimatePresence>
