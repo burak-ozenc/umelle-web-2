@@ -60,11 +60,11 @@ const FancyTextBoxSwitch = (params, item, i) => {
         case "fancy-text-box-04":
             return (
                 <div className="text-box-content h-full p-16 bg-[#fff] relative shadow-[0_0_15px_rgba(0,0,0,0.1)] rounded-lg overflow-hidden lg:p-[2.5rem] md:p-16">
-                    <div className="feature-box-icon text-[40px] inline-block mr-[20px]">
+                    <div className="feature-box-icon text-[20px] d-flex flex-row mr-[20px]">
                         {item.icon.class && <i className={item.icon.class}></i>}
                     </div>
                     <div className="feature-box-content inline-block leading-[22px]">
-                        <div className="text-darkgray font-serif text-base font-medium leading-[20px]">{item.title}</div>
+                        <div className="text-darkgray font-serif text-base font-medium leading-[16x]">{item.title}</div>
                         <span className="text-sm font-serif">{item.subTitle}</span>
                     </div>
                     <div className="bg-[#ededed] mt-[25px] w-full h-[1px]"></div>
@@ -99,7 +99,7 @@ const FancyTextBoxSwitch = (params, item, i) => {
             return (
                 <div className="text-box-content">
                     <div className="text-box">
-                        {item.icon && <i className={item.icon}></i>}
+                        {item.icon && <i className={`text-[5px] ${item.icon}`}></i>}
                         {item.title && <span>{item.title}</span>}
                     </div>
                     <div className="text-box-hover">

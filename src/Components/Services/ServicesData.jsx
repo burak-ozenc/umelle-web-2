@@ -150,20 +150,20 @@ const serviceData5 = [
         link: "/page/about-me",
         linkTitle: "More Info"
     },
-    {
-        title: "24/7 Support",
-        icon: "feather-arrow-right",
-        content: "Our dedicated support team is available around the clock to ensure your operations run smoothly. With quick response times and expert assistance, we're here when you need us.",
-        link: "/page/about-me",
-        linkTitle: "More Info"
-    },
-    {
-        title: "Cloud-Based Solutions",
-        icon: "feather-arrow-right",
-        content: "Access your data anytime, anywhere with our cloud-based solutions. Enjoy the flexibility and reliability of cloud computing, ensuring your operations are mobile and resilient.",
-        link: "/page/about-me",
-        linkTitle: "More Info"
-    },
+    // {
+    //     title: "24/7 Support",
+    //     icon: "feather-arrow-right",
+    //     content: "Our dedicated support team is available around the clock to ensure your operations run smoothly. With quick response times and expert assistance, we're here when you need us.",
+    //     link: "/page/about-me",
+    //     linkTitle: "More Info"
+    // },
+    // {
+    //     title: "Cloud-Based Solutions",
+    //     icon: "feather-arrow-right",
+    //     content: "Access your data anytime, anywhere with our cloud-based solutions. Enjoy the flexibility and reliability of cloud computing, ensuring your operations are mobile and resilient.",
+    //     link: "/page/about-me",
+    //     linkTitle: "More Info"
+    // },
     {
         title: "Collaborative Tools",
         icon: "feather-arrow-right",

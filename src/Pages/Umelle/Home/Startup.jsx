@@ -251,91 +251,114 @@ const HomeStartupPage = (props) => {
                             >
                                 {({isSubmitting, status, setFieldValue}) => (
                                     <Form ref={form1}>
+                                        <h4>
+                                            Features
+                                        </h4>
                                         <Row>
-                                            <Col xl={6} md={6} xs={6}>
-                                                <h4>
-                                                    Features
-                                                </h4>
-                                                <Checkbox type="checkbox" name="checkbox_1_1" className="inline-block"
-                                                          labelClass="flex items-center mb-[25px]">
+                                            <Col xl={8} md={8} xs={8}>
+                                                {/*#TODO*/}
+                                                {/*seperate features and function areas*/}
+                                                <Row className="bg-lightgray">
+                                                    <Col xl={6} md={6} xs={6}>
+                                                        <Checkbox type="checkbox" name="checkbox_1_1"
+                                                                  className="inline-block"
+                                                                  labelClass="flex items-center mb-[25px]">
                                                     <span className="ml-[10px] text-base">
                                                         Certificates of Coverage
                                                     </span>
-                                                </Checkbox>
-                                                <Checkbox type="checkbox" name="checkbox_1_2" className="inline-block"
-                                                          labelClass="flex items-center mb-[25px]">
+                                                        </Checkbox>
+                                                        <Checkbox type="checkbox" name="checkbox_1_2"
+                                                                  className="inline-block"
+                                                                  labelClass="flex items-center mb-[25px]">
                                                     <span className="ml-[10px] text-base">
                                                         Policy Management 
                                                     </span>
-                                                </Checkbox>
-                                                <Checkbox type="checkbox" name="checkbox_1_3" className="inline-block"
-                                                          labelClass="flex items-center mb-[25px]">
+                                                        </Checkbox>
+                                                        <Checkbox type="checkbox" name="checkbox_1_3"
+                                                                  className="inline-block"
+                                                                  labelClass="flex items-center mb-[25px]">
                                                     <span className="ml-[10px] text-base">
                                                         Vendor Management 
                                                     </span>
-                                                </Checkbox>
-                                                <Checkbox type="checkbox" name="checkbox_1_4" className="inline-block"
-                                                          labelClass="flex items-center mb-[25px]">
+                                                        </Checkbox>
+                                                        <Checkbox type="checkbox" name="checkbox_1_4"
+                                                                  className="inline-block"
+                                                                  labelClass="flex items-center mb-[25px]">
                                                     <span className="ml-[10px] text-base">
                                                         Liability Payroll
                                                     </span>
-                                                </Checkbox>
-                                                <Checkbox type="checkbox" name="checkbox_1_5" className="inline-block"
-                                                          labelClass="flex items-center mb-[25px]">
+                                                        </Checkbox>
+                                                        <Checkbox type="checkbox" name="checkbox_1_5"
+                                                                  className="inline-block"
+                                                                  labelClass="flex items-center mb-[25px]">
                                                     <span className="ml-[10px] text-base">
                                                         Claims  
                                                     </span>
-                                                </Checkbox>
-                                                <Checkbox type="checkbox" name="checkbox_1_6" className="inline-block"
-                                                          labelClass="flex items-center mb-[25px]">
+                                                        </Checkbox>
+                                                        <Checkbox type="checkbox" name="checkbox_1_6"
+                                                                  className="inline-block"
+                                                                  labelClass="flex items-center mb-[25px]">
                                                     <span className="ml-[10px] text-base">
                                                         Contacts  
                                                     </span>
-                                                </Checkbox>
-                                                <Checkbox type="checkbox" name="checkbox_1_7" className="inline-block"
-                                                          labelClass="flex items-center mb-[25px]">
+                                                        </Checkbox>
+                                                        <Checkbox type="checkbox" name="checkbox_1_7"
+                                                                  className="inline-block"
+                                                                  labelClass="flex items-center mb-[25px]">
                                                     <span className="ml-[10px] text-base">
                                                         Programs   
                                                     </span>
-                                                </Checkbox>
-                                                <Checkbox type="checkbox" name="checkbox_1_8" className="inline-block"
-                                                          labelClass="flex items-center mb-[25px]">
+                                                        </Checkbox>
+                                                    </Col>
+                                                    <Col xl={6} md={6} xs={6}>
+                                                        <Checkbox type="checkbox" name="checkbox_1_8"
+                                                                  className="inline-block"
+                                                                  labelClass="flex items-center mb-[25px]">
                                                     <span className="ml-[10px] text-base">
                                                         External/Internal Compliance 
                                                     </span>
-                                                </Checkbox>
-                                                <Checkbox type="checkbox" name="checkbox_1_9" className="inline-block"
-                                                          labelClass="flex items-center mb-[25px]">
+                                                        </Checkbox>
+                                                        <Checkbox type="checkbox" name="checkbox_1_9"
+                                                                  className="inline-block"
+                                                                  labelClass="flex items-center mb-[25px]">
                                                     <span className="ml-[10px] text-base">
                                                         Property   
                                                     </span>
-                                                </Checkbox>
-                                                <Checkbox type="checkbox" name="checkbox_1_10" className="inline-block"
-                                                          labelClass="flex items-center mb-[25px]">
+                                                        </Checkbox>
+                                                        <Checkbox type="checkbox" name="checkbox_1_10"
+                                                                  className="inline-block"
+                                                                  labelClass="flex items-center mb-[25px]">
                                                     <span className="ml-[10px] text-base">
                                                         Stand Alone Programs 
                                                     </span>
-                                                </Checkbox>
-                                                <Checkbox type="checkbox" name="checkbox_1_11" className="inline-block"
-                                                          labelClass="flex items-center mb-[25px]">
+                                                        </Checkbox>
+                                                        <Checkbox type="checkbox" name="checkbox_1_11"
+                                                                  className="inline-block"
+                                                                  labelClass="flex items-center mb-[25px]">
                                                     <span className="ml-[10px] text-base">
                                                         KPIs/Scorecards 
                                                     </span>
-                                                </Checkbox>
-                                                <Checkbox type="checkbox" name="checkbox_1_12" className="inline-block"
-                                                          labelClass="flex items-center mb-[25px]">
+                                                        </Checkbox>
+                                                        <Checkbox type="checkbox" name="checkbox_1_12"
+                                                                  className="inline-block"
+                                                                  labelClass="flex items-center mb-[25px]">
                                                     <span className="ml-[10px] text-base">
                                                         Reporting/Analytics/Dashboards 
                                                     </span>
-                                                </Checkbox>
-                                                <Checkbox type="checkbox" name="checkbox_1_13" className="inline-block"
-                                                          labelClass="flex items-center mb-[25px]">
+                                                        </Checkbox>
+                                                        <Checkbox type="checkbox" name="checkbox_1_13"
+                                                                  className="inline-block"
+                                                                  labelClass="flex items-center mb-[25px]">
                                                     <span className="ml-[10px] text-base">
                                                         Underwriting and Questionnaires 
                                                     </span>
-                                                </Checkbox>
+                                                        </Checkbox>
+                                                    </Col>
+                                                </Row>
                                             </Col>
-                                            <Col xl={6} md={6} xs={6}>
+
+
+                                            <Col xl={4} md={4} xs={4}>
                                                 <h4>
                                                     Functions
                                                 </h4>

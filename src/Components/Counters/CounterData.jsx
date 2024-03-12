@@ -118,7 +118,7 @@ const CounterData05 = [
     },
     {
         number:{
-            text: "5000",
+            text: "41995",
             class: "text-gradient bg-gradient-to-r from-[#556fff] to-[#e66176] inline-block"
         },
         title:"Claims Assessed",

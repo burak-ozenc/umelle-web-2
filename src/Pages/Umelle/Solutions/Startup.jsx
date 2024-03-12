@@ -25,6 +25,7 @@ import {serviceData5} from "../../../Components/Services/ServicesData";
 import {ProcessStepData02} from "../../../Components/ProcessStep/ProcessStepData";
 import FancyTextBox from "../../../Components/FancyTextBox/FancyTextBox";
 import {fancyTextBox06} from "../../../Components/FancyTextBox/FancyTextBoxData";
+import Accordions from "../../../Components/Accordion/Accordion";
 
 const HamburgerMenu = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.HamburgerMenu})))
 const Header = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Header})))
@@ -170,15 +171,6 @@ const HomeStartupPage = (props) => {
                                 The Premier Choice for Pooled Insurance Providers
                             </m.span>
                         </Col>
-                        {/*<Col md={6} sm={6} className="text-center align-items-center justify-center">*/}
-                        {/*    <h6 className="font-serif text-darkgray text-center font-medium mb-[5%]">*/}
-                        {/*        Tailor-Made Insurance Data Software Designed Around Your Business Needs*/}
-                        {/*    </h6>*/}
-                        {/*    <p className="m-[150px] text-[23px] mb-[100px]">*/}
-                        {/*        That's why we've meticulously crafted a solution that not only meets these needs but exceeds*/}
-                        {/*        them, providing a blend of fiscal precision and superior member service.*/}
-                        {/*    </p>*/}
-                        {/*</Col>*/}
                         <Col xs={6} lg={6} md={6}
                              className="justify-center items-center my-0 mx-auto relative flex flex-col">
                             <div initial={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)'}}
@@ -208,7 +200,7 @@ const HomeStartupPage = (props) => {
                 </Overlap>
             </section>
             {/* Section End */}
-            
+
             {/* Section Start */}
             <m.section className="bg-white py-[160px] lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px]" {...fadeIn}>
                 <Container>
@@ -256,8 +248,8 @@ const HomeStartupPage = (props) => {
                         <m.div className="col-12 p-0 col-lg-6" {...{...fadeIn, transition: {delay: 0.36}}} >
                             <m.div
                                 className="bg-gradient-to-tr from-[#556fff] via-[#ff77dd] to-[#f767a6] px-24 py-28 lg:py-20 lg:px-16 md:p-20 text-white text-center">
-                                
-                                
+
+
                                 <h6 className="font-serif text-white font-medium mb-[40px]">
                                     What truly sets our solution apart is our custom architecture. Recognizing that no
                                     two insurance providers are the same, we offer the ultimate flexibility: you can add
@@ -315,15 +307,47 @@ const HomeStartupPage = (props) => {
             {/* Section End */}
 
             {/* Section Start */}
-            <section className="py-[160px] lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px] bg-lightgray">
+            <m.section className="py-[160px] lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px] bg-lightgray">
                 <h6 className="font-serif text-gray-900 text-center font-medium mb-24">Understand and apply the business
                     process</h6>
                 <Container>
                     <ProcessStep grid="row-cols-1 row-cols-sm-2 row-cols-lg-5 gap-y-10" className=""
                                  theme="process-step-style-03" data={ProcessStepData02} animation={fadeIn}/>
                 </Container>
-            </section>
+            </m.section>
             {/* Section End */}
+
+            {/* Section Start */}
+            <m.section>
+                <Container>
+                    <Row className="mt-[100px]">
+                        <Col md={4}>
+                            <p>
+                                <span className="font-bold">Client Name :</span> ACWA JPIA
+                            </p>
+                            <p>
+                                <span className="font-bold">Industry:</span>
+                                Pooled Insurer in the Water and Water Infrastructure
+                            </p>
+                            <p>
+                                <span className="font-bold">Client Overview:</span>
+                                ACWA JPIA is a pooled insurer providing insurance services to more than 350
+                                members. Part of the larger JPIA group of like-minded Insurers and Service Providers,
+                                they
+                                provide top-level services to their members and clients.
+                            </p>
+                        </Col>
+                        <Col md={8}>
+                            <Row className="justify-center">
+                                <Col lg={10} md={10}>
+                                    <Accordions theme="accordion-style-03" className="" animation={fadeIn} />
+                                </Col>
+                            </Row>
+                        </Col>
+                    </Row>
+                </Container>
+            </m.section>
+            {/* Section Start */}
 
             {/* Footer Start */}
             <Footer className="startup-footer bg-no-repeat bg-right" theme="light"

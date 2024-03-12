@@ -12,6 +12,24 @@ const AccordionData = [
         content: "Gain critical insights into your operations, identify trends, and make data-driven decisions that propel your business forward. Our comprehensive analytics suite ensures you're always ahead of the curve, providing the intelligence you need to optimize your strategies and achieve your goals."
     }
 ]
+const SolutionClientAccordionData = [
+    {
+        title: "The Challenge",
+        content: "ACWA JPIA saw the opportunity to optimize and modernize their operations and business management software. Canned products were dragging the organization down with undue cost and complex procedures that didn't meet their standards. Using several vendors to provide services created issues, as some services were not meeting scalability and flexibility standards.  "
+    },
+    {
+        title: "The Solution",
+        content: "We crafted an end-to-end member and resource management system aimed solely at solving the problems of the company and their members. The system offers a full host of features, including:"
+    },
+    {
+        title: "Process and Collaboration",
+        content: "Our collaboration used the strengths of the Agile methodology to maximize feedback and allow for successful module iterations that ultimately delivered on the organization's needs. "
+    },
+    {
+        title: "The Impact",
+        content: "This process also allowed our team to understand the business in more detail, which led to many breakthroughs and innovations in the way the solution was delivered. Through a robust relationship and collaboration, UMELLE was able to deploy this experience to develop a unique solution and optimize the operations of several key functions; allowing the organization to focus on new horizons. "
+    }
+]
 
 const AccordionData02 = [
     {
@@ -63,4 +81,4 @@ const AccordionData05 = [
     }
 ]
 
-export {AccordionData ,AccordionData02,AccordionData05};
+export {AccordionData ,AccordionData02,AccordionData05, SolutionClientAccordionData};
