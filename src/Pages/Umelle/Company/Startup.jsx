@@ -21,15 +21,6 @@ import FooterData from '../../../Components/Footers/FooterData';
 import {
     TestimonialsCarouselData1
 } from "../../../Components/TestimonialCarousel/TestimonialsCarouselData";
-import Lists from "../../../Components/Lists/Lists";
-import {
-    CloudAndDataDatabase,
-    DataFormats,
-    Frameworks,
-    Languages,
-    ORM,
-    TechnologiesList
-} from "../../../Components/Lists/ListsData";
 import TestimonialsCarousel01 from "../../../Components/TestimonialCarousel/TestimonialsCarousel01";
 import TextBox from "../../../Components/TextBox/TextBox";
 import {TextBoxData02} from "../../../Components/TextBox/TextBoxData";
@@ -73,7 +64,7 @@ const HomeStartupPage = (props) => {
             <HeaderNav fluid="fluid" theme="dark" expand="lg"
                        className="py-[0px] px-[35px] md:px-[15px] md:py-[20px] sm:px-0">
                 <Col lg={2} sm={6} xs={"auto"} className="mr-auto ps-0">
-                    <Link aria-label="header logo" className="flex items-center" to="/umelle">
+                    <Link aria-label="header logo" className="flex items-center" to="/">
                         <Navbar.Brand className="inline-block p-0 m-0">
                             <img className="default-logo" width="111" height="36"
                                  src='/assets/img/webp/umelle-logo.webp'
@@ -159,10 +150,6 @@ const HomeStartupPage = (props) => {
 
         <SideButtons/>
 
-        {/* Section Start */}
-        {/*<StartupPageBannerSlider/>*/}
-        {/* Section End */}
-
         {/* Section start */}
         <section className="overflow-visible cover-background"
                  style={{backgroundImage: `url("https://via.placeholder.com/1920x1080")`}}>
@@ -240,65 +227,6 @@ const HomeStartupPage = (props) => {
                 </Container>
             </m.section>
             {/* Section End */}
-
-
-            {/* Section Start */}
-
-            <m.section className="py-[160px] lg:py-[120px] md:py-[95px] sm:py-[80px] xs;py-[50px]" {...fadeIn}>
-                <Container>
-                    <Row>
-                        <Col className="mb-[4%]">
-                            <h6 className="font-serif text-darkgray text-center font-medium mb-[25px] lg:mb-[15px]">
-                                Our Tech Stack
-                            </h6>
-                        </Col>
-                    </Row>
-
-                    <Row>
-                        <Col lg={12} className="px-[15px] md:mb-[15px]">
-                            <Row>
-                                <Col lg={4} className="px-[15px] md:mb-[15px]">
-                                    <div className="bg-lightgray p-[40px] sm:p-[30px]">
-                                        <h5 className="text-darkgray lg:mb-[15px]">Technologies</h5>
-                                        <Lists theme="list-style-06" data={TechnologiesList} animation={fadeIn}/>
-                                    </div>
-                                </Col>
-
-                                <Col lg={8} className="px-[15px] md:mb-[15px]">
-                                    <Row className="ml-3">
-                                        <Col lg={6} className="px-[15px] md:mb-[15px]">
-                                            <div className="bg-lightgray p-[40px] sm:p-[30px]">
-                                                <h5 className="text-dark lg:mb-[15px]">Languages</h5>
-                                                <Lists theme="list-style-06" data={Languages} animation={fadeIn}/>
-                                            </div>
-                                            <div className="bg-lightgray p-[40px] sm:p-[30px] mt-4">
-                                                <h5 className="text-dark lg:mb-[15px]">Frameworks</h5>
-                                                <Lists theme="list-style-06" data={Frameworks} animation={fadeIn}/>
-                                            </div>
-                                        </Col>
-                                        <Col lg={6} className="px-[15px] md:mb-[15px]">
-                                            <div className="bg-lightgray p-[40px] sm:p-[30px]">
-                                                <h5 className="text-dark lg:mb-[15px]">Data Formats</h5>
-                                                <Lists theme="list-style-06" data={DataFormats} animation={fadeIn}/>
-                                            </div>
-                                            <div className="bg-lightgray p-[40px] sm:p-[30px] mt-4">
-                                                <h5 className="text-dark lg:mb-[15px]">ORM</h5>
-                                                <Lists theme="list-style-06" data={ORM} animation={fadeIn}/>
-                                            </div>
-                                            <div className="bg-lightgray p-[40px] sm:p-[30px] mt-4">
-                                                <h5 className="text-dark lg:mb-[15px]">Cloud And Database</h5>
-                                                <Lists theme="list-style-06" data={CloudAndDataDatabase}
-                                                       animation={fadeIn}/>
-                                            </div>
-                                        </Col>
-                                    </Row>
-                                </Col>
-                            </Row>
-                        </Col>
-
-                    </Row>
-                </Container>
-            </m.section>
 
             {/* Section Start */}
             <m.section

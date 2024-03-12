@@ -4,7 +4,7 @@ import React, {lazy} from 'react'
 import {Link} from 'react-router-dom';
 import {Col, Container, Navbar, Row} from "react-bootstrap";
 import * as Yup from 'yup';
-import {AnimatePresence, m} from 'framer-motion';
+import {AnimatePresence, domMax, LazyMotion, m} from 'framer-motion';
 import {Form, Formik} from 'formik';
 
 // Functions
@@ -18,14 +18,13 @@ import InViewPort from '../../../Components/InViewPort';
 
 // Data
 import FooterData from '../../../Components/Footers/FooterData';
-import CustomIconWithText from "../../../Components/CustomIconWithText/CustomIconWithText";
-import {CustomIconWithTextData2} from "../../../Components/CustomIconWithText/CustomIconWithTextData";
-import CustomModal from "../../../Components/CustomModal";
 import Counter from "../../../Components/Counters/Counter";
 import {CounterData05} from "../../../Components/Counters/CounterData";
 import Services from "../../../Components/Services/Services";
 import {serviceData5} from "../../../Components/Services/ServicesData";
 import {ProcessStepData02} from "../../../Components/ProcessStep/ProcessStepData";
+import FancyTextBox from "../../../Components/FancyTextBox/FancyTextBox";
+import {fancyTextBox06} from "../../../Components/FancyTextBox/FancyTextBoxData";
 
 const HamburgerMenu = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.HamburgerMenu})))
 const Header = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Header})))
@@ -33,7 +32,6 @@ const HeaderNav = React.lazy(() => import("../../../Components/Header/Header").t
 const Menu = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Menu})))
 const SearchBar = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.SearchBar})))
 
-const Buttons = lazy(() => import('../../../Components/Button/Buttons'))
 const ProcessStep = lazy(() => import('../../../Components/ProcessStep/ProcessStep'))
 const Overlap = lazy(() => import('../../../Components/Overlap/Overlap'))
 const ReactCustomScrollbar = lazy(() => import("../../../Components/ReactCustomScrollbar"))
@@ -41,7 +39,6 @@ const MessageBox = lazy(() => import('../../../Components/MessageBox/MessageBox'
 const SocialIcons = lazy(() => import("../../../Components/SocialIcon/SocialIcons"))
 const SideButtons = lazy(() => import("../../../Components/SideButtons"))
 const StaticInstagram = lazy(() => import('../../../Components/Instagram/StaticInstagram'))
-const StartupPageBannerSlider = lazy(() => import('./StartupBanner'))
 
 // Filter the blog data category wise
 const SocialIconsData = [{
@@ -65,7 +62,7 @@ const HomeStartupPage = (props) => {
             <HeaderNav fluid="fluid" theme="dark" expand="lg"
                        className="py-[0px] px-[35px] md:px-[15px] md:py-[20px] sm:px-0">
                 <Col lg={2} sm={6} xs={"auto"} className="mr-auto ps-0">
-                    <Link aria-label="header logo" className="flex items-center" to="/umelle">
+                    <Link aria-label="header logo" className="flex items-center" to="/">
                         <Navbar.Brand className="inline-block p-0 m-0">
                             <img className="default-logo" width="111" height="36"
                                  src='/assets/img/webp/umelle-logo.webp'
@@ -151,8 +148,55 @@ const HomeStartupPage = (props) => {
 
         <SideButtons/>
 
-        {/* Section Start */}
-        <StartupPageBannerSlider/>
+        {/* Section start */}
+        <section className="overflow-visible cover-background"
+                 style={{backgroundImage: `url("https://via.placeholder.com/1920x1080")`}}>
+            <Container>
+                <LazyMotion strict features={domMax}>
+                    <Row
+                        className="full-screen md:h-[650px] sm:h-[350px] xs:h-[450px] align-items-center justify-center">
+                        <Col xs={6} lg={6} md={6}
+                             className="justify-center items-center my-0 mx-auto relative flex flex-col">
+                            <m.h4 initial={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)'}}
+                                  animate={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)'}}
+                                  transition={{duration: 0.5, delay: 0.5, ease: "easeIn"}}
+                                  className="font-serif font-semibold pb-[10px] text-[60px] tracking-[0px] text-white mb-[35px] lg:text-[55px] lg:leading-[20px] xs:text-[35px] xs:leading-[40px] xs:mb-[20px]">
+                                Tailor-Made Insurance Data Software Designed Around Your Business Needs
+                            </m.h4>
+                            <m.span initial={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)'}}
+                                    animate={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)'}}
+                                    transition={{duration: 0.5, delay: 0.8, ease: "easeIn"}}
+                                    className="font-serif block text-[19px] leading-[28px] mb-[35px] font-light text-white xs:text-base xs:mb-[20px]">
+                                The Premier Choice for Pooled Insurance Providers
+                            </m.span>
+                        </Col>
+                        {/*<Col md={6} sm={6} className="text-center align-items-center justify-center">*/}
+                        {/*    <h6 className="font-serif text-darkgray text-center font-medium mb-[5%]">*/}
+                        {/*        Tailor-Made Insurance Data Software Designed Around Your Business Needs*/}
+                        {/*    </h6>*/}
+                        {/*    <p className="m-[150px] text-[23px] mb-[100px]">*/}
+                        {/*        That's why we've meticulously crafted a solution that not only meets these needs but exceeds*/}
+                        {/*        them, providing a blend of fiscal precision and superior member service.*/}
+                        {/*    </p>*/}
+                        {/*</Col>*/}
+                        <Col xs={6} lg={6} md={6}
+                             className="justify-center items-center my-0 mx-auto relative flex flex-col">
+                            <div initial={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)'}}
+                                 animate={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)'}}
+                                 transition={{duration: 0.5, delay: 0.9, ease: "easeIn"}}>
+                                <Link aria-label="started now" to="/page/contact-classic"
+                                      className="uppercase startup-link font-medium">
+                                    SCHEDULE A MEETING
+                                    <div>
+                                        <i className="fas fa-play"></i>
+                                    </div>
+                                </Link>
+                            </div>
+                        </Col>
+                    </Row>
+                </LazyMotion>
+            </Container>
+        </section>
         {/* Section End */}
 
         {/* Lazy Load HTML */}
@@ -164,10 +208,9 @@ const HomeStartupPage = (props) => {
                 </Overlap>
             </section>
             {/* Section End */}
-
+            
             {/* Section Start */}
-            <section
-                className="bg-lightgray border-t border-solid border-mediumgray text-center grid-rows-2 grid-cols-3 py-[10px] lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px]">
+            <m.section className="bg-white py-[160px] lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px]" {...fadeIn}>
                 <Container>
                     <Row>
                         <Col className="mb-[4%]">
@@ -181,15 +224,15 @@ const HomeStartupPage = (props) => {
                             </p>
                         </Col>
                     </Row>
-                    <CustomIconWithText
-                        grid="row-cols-2 row-cols-lg-4 row-cols-sm-1"
-                        theme="custom-icon-with-text02"
-                        data={CustomIconWithTextData2}
+                    <FancyTextBox
+                        grid="row-cols-1 row-cols-lg-2 gap-y-10 justify-center"
+                        className="col-12 col-lg-4 col-md-6 col-md-9"
+                        theme="fancy-text-box-04"
+                        data={fancyTextBox06}
                         animation={fadeIn}/>
                 </Container>
-            </section>
+            </m.section>
             {/* Section End */}
-
 
             {/* Info Banner Style 07 */}
             <section className="py-[160px] lg:py-[95px] md:py-[75px]  xs:py-[50px]">
@@ -213,41 +256,14 @@ const HomeStartupPage = (props) => {
                         <m.div className="col-12 p-0 col-lg-6" {...{...fadeIn, transition: {delay: 0.36}}} >
                             <m.div
                                 className="bg-gradient-to-tr from-[#556fff] via-[#ff77dd] to-[#f767a6] px-24 py-28 lg:py-20 lg:px-16 md:p-20 text-white text-center">
-                                {/* Modal Component Start */}
-                                <CustomModal.Wrapper
-                                    modalBtn={<Buttons
-                                        type="submit"
-                                        className="btn-sonar border-0 mx-auto mb-14"
-                                        themeColor="#fff"
-                                        size="lg"
-                                        title={<i
-                                            className="icon-control-play text-gradient bg-gradient-to-tr from-[#b783ff] to-[#ff9393]"/>}/>}>
-                                    <div className="w-[1020px] max-w-full relative rounded mx-auto">
-                                        <div className="fit-video">
-                                            <iframe width="100%" height="100%"
-                                                    className="shadow-[0_0_8px_rgba(0,0,0,0.06)]" controls
-                                                    src="https://www.youtube.com/embed/g0f_BRYJLJE?autoplay=1"
-                                                    title="YouTube video player" frameBorder="0"
-                                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                                    allowFullScreen></iframe>
-                                        </div>
-                                    </div>
-                                </CustomModal.Wrapper>
-                                {/* Modal Component End */}
-
-                                <span className="text-xmd font-serif mb-[20px] block text-white opacity-70">
-                  Powerful theme for creatives designer
-                </span>
-                                <h5 className="font-serif text-white font-medium mb-[40px]">
-                                    We design brand, digital experience that engage the right
-                                    customers{" "}
-                                </h5>
-                                <Buttons
-                                    className="mx-3 font-medium font-serif hover:text-white uppercase after:h-[2px] btn-link after:bg-white"
-                                    size="xl"
-                                    color="#fff"
-                                    title="Get Started Now"
-                                />
+                                
+                                
+                                <h6 className="font-serif text-white font-medium mb-[40px]">
+                                    What truly sets our solution apart is our custom architecture. Recognizing that no
+                                    two insurance providers are the same, we offer the ultimate flexibility: you can add
+                                    features and functions based on your business needs and ensure your program fits
+                                    nicely with your business requirements.
+                                </h6>
                             </m.div>
                         </m.div>
                     </Row>
@@ -300,13 +316,14 @@ const HomeStartupPage = (props) => {
 
             {/* Section Start */}
             <section className="py-[160px] lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px] bg-lightgray">
-                <h6 className="font-serif text-gray-900 text-center font-medium mb-24">Understand and apply the business process</h6>
+                <h6 className="font-serif text-gray-900 text-center font-medium mb-24">Understand and apply the business
+                    process</h6>
                 <Container>
                     <ProcessStep grid="row-cols-1 row-cols-sm-2 row-cols-lg-5 gap-y-10" className=""
                                  theme="process-step-style-03" data={ProcessStepData02} animation={fadeIn}/>
                 </Container>
             </section>
-            {/* Section End */}            
+            {/* Section End */}
 
             {/* Footer Start */}
             <Footer className="startup-footer bg-no-repeat bg-right" theme="light"

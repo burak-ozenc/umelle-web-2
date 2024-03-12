@@ -66,7 +66,7 @@ const HomeStartupPage = (props) => {
             <HeaderNav fluid="fluid" theme="dark" expand="lg"
                        className="py-[0px] px-[35px] md:px-[15px] md:py-[20px] sm:px-0">
                 <Col lg={2} sm={6} xs={"auto"} className="mr-auto ps-0">
-                    <Link aria-label="header logo" className="flex items-center" to="/umelle">
+                    <Link aria-label="header logo" className="flex items-center" to="/">
                         <Navbar.Brand className="inline-block p-0 m-0">
                             <img className="default-logo" width="111" height="36"
                                  src='/assets/img/webp/umelle-logo.webp'

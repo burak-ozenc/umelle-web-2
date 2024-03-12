@@ -181,6 +181,59 @@ const fancyTextBox04 = [
         description: "Enhancing digital experiences with intuitive and visually compelling design, blending user-centric principles with innovative creativity to deliver interfaces that drive satisfaction, loyalty, and business expansion."
     }
 ]
+const fancyTextBox06 = [
+    {
+        icon: {
+            class: "line-icon-Gear-2 text-basecolor"
+        },
+        title: "Member Management",
+        // subTitle: "Easy installation theme",
+        description: "Effortlessly manage your member data with a system adapted to your specific requirements. Dynamic Member Management feature ensures seamless tracking, updating, and analysis of member information across programs and policies, enhancing engagement and satisfaction."
+        // backgroundText: " "
+    },
+    {
+        icon: {
+            class: "line-icon-Transform text-basecolor"
+        },
+        title: "User Management",
+        description: "Gain full control over user access and roles within your organization. With your customizable User Management, you can define permissions, streamline operations, and safeguard sensitive data, all tailored to your organizational structure."
+    },
+    {
+        icon: {
+            class: "line-icon-Heart text-basecolor"
+        },
+        title: "Communication Management",
+        description: "Expertly integrating diverse data sources and formats to optimize insights and decision-making, whether managing structured databases or unifying unstructured data for enhanced efficiency."
+    },
+    {
+        icon: {
+            class: "line-icon-Heart text-basecolor"
+        },
+        title: "Content Management and Web APIs",
+        description: "Streamlining content management and empowering secure interaction with third-party services through robust web APIs, offering scalable solutions for content distribution across various platforms."
+    },
+    {
+        icon: {
+            class: "line-icon-Heart text-basecolor"
+        },
+        title: "Cloud Services and Deployment",
+        description: "Unlock the power of your data with Advanced Reporting Analytics. Make informed decisions with customizable reports that offer deep insights into trends, risks, and opportunities, all generated with the click of a button."
+    },
+    {
+        icon: {
+            class: "line-icon-Heart text-basecolor"
+        },
+        title: "Automated Invoicing",
+        description: "We can automate your invoice to reflect your business. Want to invoice Proprty seporately from other policies? Done. Want to combine all policies into one invoice? Done. You are in control. We bring to bear expertise in the field to provide rapid solutions."
+    },
+    {
+        icon: {
+            class: "line-icon-Heart text-basecolor"
+        },
+        title: "Policy and Program Management",
+        description: "No matter your business line we can help you create custom business flows to help manage your business with efficiency. With a wide range of knowledge in Property, Workers Compensation, General Liability, Benefits such as dental and medical, Cyber Liability and others, we can help you craft the perfect system."
+    }
+]
 
 const fancyTextBox05 = [
     {
@@ -209,4 +262,4 @@ const fancyTextBox05 = [
     },
 ]
 
-export { fancyTextBox01, fancyTextBox02, fancyTextBox03, fancyTextBox04, fancyTextBox05 }
+export { fancyTextBox01, fancyTextBox02, fancyTextBox03, fancyTextBox04, fancyTextBox05, fancyTextBox06 }

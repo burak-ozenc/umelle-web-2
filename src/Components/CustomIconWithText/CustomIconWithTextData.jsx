@@ -36,16 +36,16 @@ const CustomIconWithTextData2 = [
     {
         icon: "line-icon-Like-2",
         title: "Communication Management",
-        content: "Elevate your communication strategies with your specialized module. Whether it's internal team coordination or member outreach, your Communication Management will be designed to optimize interactions, ensuring messages are timely, relevant, and effective. "
+        content: "Expertly integrating diverse data sources and formats to optimize insights and decision-making, whether managing structured databases or unifying unstructured data for enhanced efficiency. "
     },
     {
         icon: "line-icon-Talk-Man",
-        title: "Asset Management",
-        content: "Navigate your organizations assets with ease. Keep track of certificates, create and send automated invoices to clients based on claims and internal business logic and much more. Our solution allows you and your clients to be in control of your assets."
+        title: "Content Management and Web APIs",
+        content: "Streamlining content management and empowering secure interaction with third-party services through robust web APIs, offering scalable solutions for content distribution across various platforms."
     },
     {
         icon: "line-icon-Paper-Plane",
-        title: "Advanced Reporting Analytics",
+        title: "Cloud Services and Deployment",
         content: "Unlock the power of your data with Advanced Reporting Analytics. Make informed decisions with customizable reports that offer deep insights into trends, risks, and opportunities, all generated with the click of a button."
     },
     {

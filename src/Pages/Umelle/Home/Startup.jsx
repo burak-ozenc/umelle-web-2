@@ -224,7 +224,7 @@ const HomeStartupPage = (props) => {
                 </Container>
             </m.section>
             {/* Section End */}
-            
+
             {/* Section Start */}
             <m.section className="py-[160px] lg:py-[120px] md:py-[80px] xs:py-[50px]" {...fadeIn}>
                 <Container>
@@ -234,8 +234,8 @@ const HomeStartupPage = (props) => {
                                 form style 01</h6>
                         </Col>
                     </Row>
-                    <Row className="justify-center">
-                        <Col xl={10} lg={10} md={10}>
+                    <Row className="m-auto">
+                        <Col xl={12} lg={12} md={12}>
                             <Formik
                                 initialValues={{name: '', email: '', phone: '', comment: '', recaptcha: ''}}
                                 validationSchema={ContactFormStyle02Schema}
@@ -253,49 +253,131 @@ const HomeStartupPage = (props) => {
                                     <Form ref={form1}>
                                         <Row>
                                             <Col xl={6} md={6} xs={6}>
-                                                <Checkbox type="checkbox" name="checkbox_1" className="inline-block" labelClass="flex items-center mb-[25px]">
-                                                    <span className="ml-[10px] text-base">Remember me</span>
+                                                <h4>
+                                                    Features
+                                                </h4>
+                                                <Checkbox type="checkbox" name="checkbox_1_1" className="inline-block"
+                                                          labelClass="flex items-center mb-[25px]">
+                                                    <span className="ml-[10px] text-base">
+                                                        Certificates of Coverage
+                                                    </span>
                                                 </Checkbox>
-                                                <Checkbox type="checkbox" name="checkbox_2" className="inline-block" labelClass="flex items-center mb-[25px]">
-                                                    <span className="ml-[10px] text-base">Remember me</span>
+                                                <Checkbox type="checkbox" name="checkbox_1_2" className="inline-block"
+                                                          labelClass="flex items-center mb-[25px]">
+                                                    <span className="ml-[10px] text-base">
+                                                        Policy Management 
+                                                    </span>
                                                 </Checkbox>
-                                                <Checkbox type="checkbox" name="checkbox_3" className="inline-block" labelClass="flex items-center mb-[25px]">
-                                                    <span className="ml-[10px] text-base">Remember me</span>
+                                                <Checkbox type="checkbox" name="checkbox_1_3" className="inline-block"
+                                                          labelClass="flex items-center mb-[25px]">
+                                                    <span className="ml-[10px] text-base">
+                                                        Vendor Management 
+                                                    </span>
                                                 </Checkbox>
-                                                <Checkbox type="checkbox" name="checkbox_4" className="inline-block" labelClass="flex items-center mb-[25px]">
-                                                    <span className="ml-[10px] text-base">Remember me</span>
+                                                <Checkbox type="checkbox" name="checkbox_1_4" className="inline-block"
+                                                          labelClass="flex items-center mb-[25px]">
+                                                    <span className="ml-[10px] text-base">
+                                                        Liability Payroll
+                                                    </span>
                                                 </Checkbox>
-                                                <Checkbox type="checkbox" name="checkbox_5" className="inline-block" labelClass="flex items-center mb-[25px]">
-                                                    <span className="ml-[10px] text-base">Remember me</span>
+                                                <Checkbox type="checkbox" name="checkbox_1_5" className="inline-block"
+                                                          labelClass="flex items-center mb-[25px]">
+                                                    <span className="ml-[10px] text-base">
+                                                        Claims  
+                                                    </span>
                                                 </Checkbox>
-                                                <Checkbox type="checkbox" name="checkbox_6" className="inline-block" labelClass="flex items-center mb-[25px]">
-                                                    <span className="ml-[10px] text-base">Remember me</span>
-                                                </Checkbox>        
+                                                <Checkbox type="checkbox" name="checkbox_1_6" className="inline-block"
+                                                          labelClass="flex items-center mb-[25px]">
+                                                    <span className="ml-[10px] text-base">
+                                                        Contacts  
+                                                    </span>
+                                                </Checkbox>
+                                                <Checkbox type="checkbox" name="checkbox_1_7" className="inline-block"
+                                                          labelClass="flex items-center mb-[25px]">
+                                                    <span className="ml-[10px] text-base">
+                                                        Programs   
+                                                    </span>
+                                                </Checkbox>
+                                                <Checkbox type="checkbox" name="checkbox_1_8" className="inline-block"
+                                                          labelClass="flex items-center mb-[25px]">
+                                                    <span className="ml-[10px] text-base">
+                                                        External/Internal Compliance 
+                                                    </span>
+                                                </Checkbox>
+                                                <Checkbox type="checkbox" name="checkbox_1_9" className="inline-block"
+                                                          labelClass="flex items-center mb-[25px]">
+                                                    <span className="ml-[10px] text-base">
+                                                        Property   
+                                                    </span>
+                                                </Checkbox>
+                                                <Checkbox type="checkbox" name="checkbox_1_10" className="inline-block"
+                                                          labelClass="flex items-center mb-[25px]">
+                                                    <span className="ml-[10px] text-base">
+                                                        Stand Alone Programs 
+                                                    </span>
+                                                </Checkbox>
+                                                <Checkbox type="checkbox" name="checkbox_1_11" className="inline-block"
+                                                          labelClass="flex items-center mb-[25px]">
+                                                    <span className="ml-[10px] text-base">
+                                                        KPIs/Scorecards 
+                                                    </span>
+                                                </Checkbox>
+                                                <Checkbox type="checkbox" name="checkbox_1_12" className="inline-block"
+                                                          labelClass="flex items-center mb-[25px]">
+                                                    <span className="ml-[10px] text-base">
+                                                        Reporting/Analytics/Dashboards 
+                                                    </span>
+                                                </Checkbox>
+                                                <Checkbox type="checkbox" name="checkbox_1_13" className="inline-block"
+                                                          labelClass="flex items-center mb-[25px]">
+                                                    <span className="ml-[10px] text-base">
+                                                        Underwriting and Questionnaires 
+                                                    </span>
+                                                </Checkbox>
                                             </Col>
                                             <Col xl={6} md={6} xs={6}>
-                                                <Checkbox type="checkbox" name="checkbox_7" className="inline-block" labelClass="flex items-center mb-[25px]">
-                                                    <span className="ml-[10px] text-base">Remember me</span>
+                                                <h4>
+                                                    Functions
+                                                </h4>
+                                                <Checkbox type="checkbox" name="checkbox_2_1" className="inline-block"
+                                                          labelClass="flex items-center mb-[25px]">
+                                                    <span className="ml-[10px] text-base">
+                                                        Automated Invoicing 
+                                                    </span>
                                                 </Checkbox>
-                                                <Checkbox type="checkbox" name="checkbox_8" className="inline-block" labelClass="flex items-center mb-[25px]">
-                                                    <span className="ml-[10px] text-base">Remember me</span>
+                                                <Checkbox type="checkbox" name="checkbox_2_2" className="inline-block"
+                                                          labelClass="flex items-center mb-[25px]">
+                                                    <span className="ml-[10px] text-base">
+                                                        Program Management Wizard 
+                                                    </span>
                                                 </Checkbox>
-                                                <Checkbox type="checkbox" name="checkbox_9" className="inline-block" labelClass="flex items-center mb-[25px]">
-                                                    <span className="ml-[10px] text-base">Remember me</span>
+                                                <Checkbox type="checkbox" name="checkbox_2_3" className="inline-block"
+                                                          labelClass="flex items-center mb-[25px]">
+                                                    <span className="ml-[10px] text-base">
+                                                        Internal Chat 
+                                                    </span>
                                                 </Checkbox>
-                                                <Checkbox type="checkbox" name="checkbox_10" className="inline-block" labelClass="flex items-center mb-[25px]">
-                                                    <span className="ml-[10px] text-base">Remember me</span>
+                                                <Checkbox type="checkbox" name="checkbox_2_3" className="inline-block"
+                                                          labelClass="flex items-center mb-[25px]">
+                                                    <span className="ml-[10px] text-base">
+                                                        Custom Business Settings 
+                                                    </span>
                                                 </Checkbox>
-                                                <Checkbox type="checkbox" name="checkbox_11" className="inline-block" labelClass="flex items-center mb-[25px]">
-                                                    <span className="ml-[10px] text-base">Remember me</span>
+                                                <Checkbox type="checkbox" name="checkbox_2_4" className="inline-block"
+                                                          labelClass="flex items-center mb-[25px]">
+                                                    <span className="ml-[10px] text-base">
+                                                        Discount Management 
+                                                    </span>
                                                 </Checkbox>
-                                                <Checkbox type="checkbox" name="checkbox_12" className="inline-block" labelClass="flex items-center mb-[25px]">
-                                                    <span className="ml-[10px] text-base">Remember me</span>
+                                                <Checkbox type="checkbox" name="checkbox_2_5" className="inline-block"
+                                                          labelClass="flex items-center mb-[25px]">
+                                                    <span className="ml-[10px] text-base">
+                                                        Automated Certificate Renewal 
+                                                    </span>
                                                 </Checkbox>
                                             </Col>
                                         </Row>
-                                        
-                                        
-                                        
+
                                         {process.env.REACT_APP_GRECAPTCHA_API_KEY && (
                                             <ReCAPTCHA
                                                 ref={recaptcha}
@@ -306,17 +388,38 @@ const HomeStartupPage = (props) => {
                                                 }}
                                             />
                                         )}
-                                        <Buttons ariaLabel="form button" type="submit"
-                                                 className={`font-medium font-serif rounded-none uppercase text-[11px]${isSubmitting ? " loading" : ""}`}
-                                                 themeColor={["#0039e3", "#8600d4"]} size="md" color="#fff"
-                                                 title="send message"/>
-                                        <AnimatePresence>
-                                            {status && <m.div initial={{opacity: 0}} animate={{opacity: 1}}
-                                                              exit={{opacity: 0}}><MessageBox
-                                                className="mt-[35px] py-[10px] tracking-[1px]" theme="message-box01"
-                                                variant="success" message="Your message has been sent successfully!"/>
-                                            </m.div>}
-                                        </AnimatePresence>
+
+                                        <Row className="row-cols-1 row-cols-md-1 mt-5">
+                                            <Col className="mb-16 lg:mb-[25px] sm:mb-0">
+                                                <Input showErrorMsg={false} type="text" name="name"
+                                                       className="py-[15px] px-[20px] text-md w-full border-[1px] border-solid border-[#dfdfdf]"
+                                                       labelClass="mb-[25px]" placeholder="Your name"/>
+                                                <Input showErrorMsg={false} type="text" name="company"
+                                                       className="py-[15px] px-[20px] text-md w-full border-[1px] border-solid border-[#dfdfdf]"
+                                                       labelClass="mb-[25px]" placeholder="Your company"/>
+                                                <Input showErrorMsg={false} type="email" name="email"
+                                                       className="py-[15px] px-[20px] w-full text-md border-[1px] border-solid border-[#dfdfdf]"
+                                                       labelClass="mb-[25px]" placeholder="Your email address"/>
+                                                <Input showErrorMsg={false} type="tel" name="phone"
+                                                       className="py-[15px] px-[20px] w-full text-md border-[1px] border-solid border-[#dfdfdf]"
+                                                       labelClass="sm:mb-[25px]" placeholder="Your position"/>
+                                            </Col>
+                                            <Col xs={5}>
+                                                <Buttons ariaLabel="form button" type="submit"
+                                                         className={`font-medium font-serif rounded-none uppercase text-[11px]${isSubmitting ? " loading" : ""}`}
+                                                         themeColor={["#0039e3", "#8600d4"]} size="md" color="#fff"
+                                                         title="send message"/>
+                                                <AnimatePresence>
+                                                    {status && <m.div initial={{opacity: 0}} animate={{opacity: 1}}
+                                                                      exit={{opacity: 0}}><MessageBox
+                                                        className="mt-[35px] py-[10px] tracking-[1px]"
+                                                        theme="message-box01"
+                                                        variant="success"
+                                                        message="Your message has been sent successfully!"/>
+                                                    </m.div>}
+                                                </AnimatePresence>
+                                            </Col>
+                                        </Row>
                                     </Form>
                                 )}
                             </Formik>
@@ -325,7 +428,7 @@ const HomeStartupPage = (props) => {
                 </Container>
             </m.section>
             {/* Section End */}
-            
+
             {/* Section Start */}
             <m.section
                 className="py-[160px] lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px] bg-lightgray" {...fadeIn}>
