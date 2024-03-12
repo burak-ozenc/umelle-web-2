@@ -88,7 +88,7 @@ const HeaderDataAdjusted = [
         dropdown: [
              {
                 title: 'About UMELLE',
-                link: ''
+                link: '/company'
             },
             {
                 title: 'Blog',

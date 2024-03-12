@@ -1,4 +1,4 @@
-import React, {lazy} from 'react'
+import React, {lazy, useRef} from 'react'
 
 // Libraries
 import {Link} from 'react-router-dom';
@@ -24,7 +24,8 @@ import ProgressBar from "../../../Components/ProgressBar/ProgressBar";
 import {ProgressBarData02} from "../../../Components/ProgressBar/ProgressBarData";
 import TestimonialsCarousel02 from "../../../Components/TestimonialCarousel/TestimonialsCarousel02";
 import {TestimonialsCarouselData2} from "../../../Components/TestimonialCarousel/TestimonialsCarouselData";
-import {ContactFormStyle03Schema} from "../../../Components/Form/FormSchema";
+import {ContactFormStyle02Schema, ContactFormStyle03Schema} from "../../../Components/Form/FormSchema";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const IconWithText = lazy(() => import('../../../Components/IconWithText/IconWithText'))
 const HamburgerMenu = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.HamburgerMenu})))
@@ -59,13 +60,15 @@ const SocialIconsData = [{
 const Footer_Data = [FooterData[0], FooterData[1], FooterData[4], FooterData[3]]
 
 const HomeStartupPage = (props) => {
+    const form1 = useRef(null)
+    const recaptcha = useRef()
     return (<div style={props.style}>
         {/* Header Start */}
         <Header topSpace={{md: true}} type="reverse-scroll">
             <HeaderNav fluid="fluid" theme="dark" expand="lg"
                        className="py-[0px] px-[35px] md:px-[15px] md:py-[20px] sm:px-0">
                 <Col lg={2} sm={6} xs={"auto"} className="mr-auto ps-0">
-                    <Link aria-label="header logo" className="flex items-center" to="/umelle">
+                    <Link aria-label="header logo" className="flex items-center" to="/">
                         <Navbar.Brand className="inline-block p-0 m-0">
                             <img className="default-logo" width="111" height="36"
                                  src='/assets/img/webp/umelle-logo.webp'
@@ -164,8 +167,7 @@ const HomeStartupPage = (props) => {
                 </Overlap>
             </section>
             {/* Section End */}
-            
-            
+
 
             {/* Section Start */}
             <section className="pt-20 switch-tabs">
@@ -174,7 +176,8 @@ const HomeStartupPage = (props) => {
                         We understand the unique challenges and needs of pooled insurance providers
                     </h6>
                     <p className="m-[150px] text-[23px] mb-[100px]">
-                        That's why we've meticulously crafted a solution that not only meets these needs but exceeds them, providing a blend of fiscal precision and superior member service.
+                        That's why we've meticulously crafted a solution that not only meets these needs but exceeds
+                        them, providing a blend of fiscal precision and superior member service.
                     </p>
                 </Col>
                 <Tabs
@@ -221,7 +224,108 @@ const HomeStartupPage = (props) => {
                 </Container>
             </m.section>
             {/* Section End */}
-
+            
+            {/* Section Start */}
+            <m.section className="py-[160px] lg:py-[120px] md:py-[80px] xs:py-[50px]" {...fadeIn}>
+                <Container>
+                    <Row>
+                        <Col className='mb-[6%]'>
+                            <h6 className="font-serif text-gray-900 text-center font-medium mb-[25px] lg:mb-[15px]">Contact
+                                form style 01</h6>
+                        </Col>
+                    </Row>
+                    <Row className="justify-center">
+                        <Col xl={10} lg={10} md={10}>
+                            <Formik
+                                initialValues={{name: '', email: '', phone: '', comment: '', recaptcha: ''}}
+                                validationSchema={ContactFormStyle02Schema}
+                                onSubmit={async (values, actions) => {
+                                    actions.setSubmitting(true)
+                                    if (values.recaptcha !== '') {
+                                        const response = await sendEmail(values)
+                                        response.status === "success" && resetForm(actions, recaptcha);
+                                    } else {
+                                        recaptcha.current.captcha.classList.add("error")
+                                    }
+                                }}
+                            >
+                                {({isSubmitting, status, setFieldValue}) => (
+                                    <Form ref={form1}>
+                                        <Row>
+                                            <Col xl={6} md={6} xs={6}>
+                                                <Checkbox type="checkbox" name="checkbox_1" className="inline-block" labelClass="flex items-center mb-[25px]">
+                                                    <span className="ml-[10px] text-base">Remember me</span>
+                                                </Checkbox>
+                                                <Checkbox type="checkbox" name="checkbox_2" className="inline-block" labelClass="flex items-center mb-[25px]">
+                                                    <span className="ml-[10px] text-base">Remember me</span>
+                                                </Checkbox>
+                                                <Checkbox type="checkbox" name="checkbox_3" className="inline-block" labelClass="flex items-center mb-[25px]">
+                                                    <span className="ml-[10px] text-base">Remember me</span>
+                                                </Checkbox>
+                                                <Checkbox type="checkbox" name="checkbox_4" className="inline-block" labelClass="flex items-center mb-[25px]">
+                                                    <span className="ml-[10px] text-base">Remember me</span>
+                                                </Checkbox>
+                                                <Checkbox type="checkbox" name="checkbox_5" className="inline-block" labelClass="flex items-center mb-[25px]">
+                                                    <span className="ml-[10px] text-base">Remember me</span>
+                                                </Checkbox>
+                                                <Checkbox type="checkbox" name="checkbox_6" className="inline-block" labelClass="flex items-center mb-[25px]">
+                                                    <span className="ml-[10px] text-base">Remember me</span>
+                                                </Checkbox>        
+                                            </Col>
+                                            <Col xl={6} md={6} xs={6}>
+                                                <Checkbox type="checkbox" name="checkbox_7" className="inline-block" labelClass="flex items-center mb-[25px]">
+                                                    <span className="ml-[10px] text-base">Remember me</span>
+                                                </Checkbox>
+                                                <Checkbox type="checkbox" name="checkbox_8" className="inline-block" labelClass="flex items-center mb-[25px]">
+                                                    <span className="ml-[10px] text-base">Remember me</span>
+                                                </Checkbox>
+                                                <Checkbox type="checkbox" name="checkbox_9" className="inline-block" labelClass="flex items-center mb-[25px]">
+                                                    <span className="ml-[10px] text-base">Remember me</span>
+                                                </Checkbox>
+                                                <Checkbox type="checkbox" name="checkbox_10" className="inline-block" labelClass="flex items-center mb-[25px]">
+                                                    <span className="ml-[10px] text-base">Remember me</span>
+                                                </Checkbox>
+                                                <Checkbox type="checkbox" name="checkbox_11" className="inline-block" labelClass="flex items-center mb-[25px]">
+                                                    <span className="ml-[10px] text-base">Remember me</span>
+                                                </Checkbox>
+                                                <Checkbox type="checkbox" name="checkbox_12" className="inline-block" labelClass="flex items-center mb-[25px]">
+                                                    <span className="ml-[10px] text-base">Remember me</span>
+                                                </Checkbox>
+                                            </Col>
+                                        </Row>
+                                        
+                                        
+                                        
+                                        {process.env.REACT_APP_GRECAPTCHA_API_KEY && (
+                                            <ReCAPTCHA
+                                                ref={recaptcha}
+                                                className="mb-[35px]"
+                                                sitekey={process.env.REACT_APP_GRECAPTCHA_API_KEY}
+                                                onChange={(response) => {
+                                                    setFieldValue("recaptcha", response)
+                                                }}
+                                            />
+                                        )}
+                                        <Buttons ariaLabel="form button" type="submit"
+                                                 className={`font-medium font-serif rounded-none uppercase text-[11px]${isSubmitting ? " loading" : ""}`}
+                                                 themeColor={["#0039e3", "#8600d4"]} size="md" color="#fff"
+                                                 title="send message"/>
+                                        <AnimatePresence>
+                                            {status && <m.div initial={{opacity: 0}} animate={{opacity: 1}}
+                                                              exit={{opacity: 0}}><MessageBox
+                                                className="mt-[35px] py-[10px] tracking-[1px]" theme="message-box01"
+                                                variant="success" message="Your message has been sent successfully!"/>
+                                            </m.div>}
+                                        </AnimatePresence>
+                                    </Form>
+                                )}
+                            </Formik>
+                        </Col>
+                    </Row>
+                </Container>
+            </m.section>
+            {/* Section End */}
+            
             {/* Section Start */}
             <m.section
                 className="py-[160px] lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px] bg-lightgray" {...fadeIn}>
