@@ -103,14 +103,14 @@ const serviceData4 = [
 const serviceData5 = [
     {
         title: "Seamless Integration",
-        icon: "feather-arrow-right",
+        icon: "feather-arrow-right",//icon: "line-icon-Wizard"
         content: "Engineered to seamlessly integrate into your existing workflows, ensuring a smooth transition and immediate efficiency gains without disrupting your daily operations.",
         link: "/page/about-me",
         linkTitle: "More Info"
     },
     {
         title: "Customizable Dashboards",
-        icon: "feather-arrow-right",
+        icon: "feather-arrow-right",//line-icon-File-Chart
         content: "With fully customizable dashboards, you can gain instant access to the insights that matter most. Tailor your view to monitor real-time data, track performance metrics, and make informed decisions with ease.",
         link: "/page/about-me",
         linkTitle: "More Info"

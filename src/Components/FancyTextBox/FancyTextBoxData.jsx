@@ -184,54 +184,67 @@ const fancyTextBox04 = [
 const fancyTextBox06 = [
     {
         icon: {
-            class: "line-icon-Gear-2 text-basecolor"
+            class: "line-icon-Management text-basecolor"
         },
-        title: "Member Management",
+        title: "Policy and Program Management",
         // subTitle: "Easy installation theme",
-        description: "Effortlessly manage your member data with a system adapted to your specific requirements. Dynamic Member Management feature ensures seamless tracking, updating, and analysis of member information across programs and policies, enhancing engagement and satisfaction."
+        description: "No matter your business line we can help you create custom business flows to help manage your business with efficiency. With a wide range of knowledge in Property, Workers Compensation, General Liability, Benefits such as dental and medical, Cyber Liability and others, we can help you craft the perfect system."
         // backgroundText: " "
     },
     {
         icon: {
-            class: "line-icon-Transform text-basecolor"
+            class: "line-icon-Financial text-basecolor"
         },
-        title: "User Management",
-        description: "Gain full control over user access and roles within your organization. With your customizable User Management, you can define permissions, streamline operations, and safeguard sensitive data, all tailored to your organizational structure."
+        title: "Finance Management",
+        description: "Be in full control with our financial management solutions. By integrating your business logic with your financials we can provide stability and reliability to your bottom line. With integrated financial management tools you will never make a mistake and get accurate reporting and analytics data."
+    },{
+        icon: {
+            class: "line-icon-Folder-WithDocument text-basecolor"
+        },
+        title: "Internal and Government Compliance",
+        description: "Stay compliant with government regulations and align your organization in one place. Our solution allows you to combine your business logic and government regulations to streamline your operational integrity and reduce the risk non-compliance. We allow you to plan for the future by building flexible and interactive tools to keep your organization compliant."
     },
     {
         icon: {
-            class: "line-icon-Heart text-basecolor"
+            class: "line-icon-Umbrella-2"
+        },
+        title: "Risk management",
+        description: "Build interactive and flexible tools that allow for easy data collection and decision making. Automate your underwriting process, add actuarial business logic or automate communication between your core risk profiling processes. Our solutions allow you to manage risk the way you want it done."
+    },
+    {
+        icon: {
+            class: "line-icon-Add-UserStar text-basecolor"
+        },
+        title: "Member and User Management",
+        description: "Streamline your organizational processes with integrated Member and User Management. This unified platform allows for efficient tracking, updating, and analyzing of member data, while also offering robust tools for defining user roles and permissions. Enhance member engagement and data security through a system that aligns with your organizational structure, simplifying administrative tasks and improving operational efficiency."
+    },
+    {
+        icon: {
+            class: "line-icon-Speach-BubbleDialog text-basecolor"
         },
         title: "Communication Management",
-        description: "Expertly integrating diverse data sources and formats to optimize insights and decision-making, whether managing structured databases or unifying unstructured data for enhanced efficiency."
+        description: "Communicate and share documents with clients and members reliably and internally. Reduce the need for sending sensitive data through third party channels."
     },
     {
         icon: {
-            class: "line-icon-Heart text-basecolor"
+            class: "line-icon-Profile text-basecolor"
         },
-        title: "Content Management and Web APIs",
-        description: "Streamlining content management and empowering secure interaction with third-party services through robust web APIs, offering scalable solutions for content distribution across various platforms."
+        title: "Vendor Management",
+        description: "Integrated vendor management allows you to manage vendors and integrate business data more reliably. Our solution allows your business logic to integrate or decouple with vendors as your business needs change without affecting your core functions and data."
     },
     {
         icon: {
-            class: "line-icon-Heart text-basecolor"
+            class: "line-icon-Bar-Chart text-basecolor"
         },
-        title: "Cloud Services and Deployment",
-        description: "Unlock the power of your data with Advanced Reporting Analytics. Make informed decisions with customizable reports that offer deep insights into trends, risks, and opportunities, all generated with the click of a button."
+        title: "KPIs and Analytics",
+        description: "Track KPIs and get active reporting and analytics on what matters most to your business. Our interactive systems allow you to change your KPIs as your business changes. Combined with our reporting and analytics solutions you will always be informed."
     },
     {
         icon: {
-            class: "line-icon-Heart text-basecolor"
+            class: "line-icon-Add-User text-basecolor"
         },
-        title: "Automated Invoicing",
-        description: "We can automate your invoice to reflect your business. Want to invoice Proprty seporately from other policies? Done. Want to combine all policies into one invoice? Done. You are in control. We bring to bear expertise in the field to provide rapid solutions."
-    },
-    {
-        icon: {
-            class: "line-icon-Heart text-basecolor"
-        },
-        title: "Policy and Program Management",
-        description: "No matter your business line we can help you create custom business flows to help manage your business with efficiency. With a wide range of knowledge in Property, Workers Compensation, General Liability, Benefits such as dental and medical, Cyber Liability and others, we can help you craft the perfect system."
+        title: "Certificate Management",
+        description: "Issue and renew certificates of coverage automatically. Generate and send certificates to all clients and members based on your business logic."
     }
 ]
 

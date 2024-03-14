@@ -2,13 +2,14 @@ import React, {lazy} from 'react'
 
 // Libraries
 import {Link} from 'react-router-dom';
-import {Col, Container, Navbar, Row} from "react-bootstrap";
+import {Col, Container, Navbar, Row, Tab, Tabs} from "react-bootstrap";
 import * as Yup from 'yup';
 import {AnimatePresence, domMax, LazyMotion, m} from 'framer-motion';
 import {Form, Formik} from 'formik';
 
 // Functions
 import {fadeIn} from '../../../Functions/GlobalAnimations';
+import {ScrollToAnchor} from '../../../Functions/Utilities';
 
 // Components
 import {resetForm, sendEmail} from "../../../Functions/Utilities";
@@ -26,6 +27,7 @@ import {ProcessStepData02} from "../../../Components/ProcessStep/ProcessStepData
 import FancyTextBox from "../../../Components/FancyTextBox/FancyTextBox";
 import {fancyTextBox06} from "../../../Components/FancyTextBox/FancyTextBoxData";
 import Accordions from "../../../Components/Accordion/Accordion";
+import AccordionSolutions from "../../../Components/Accordion/AccordionSolutions";
 
 const HamburgerMenu = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.HamburgerMenu})))
 const Header = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Header})))
@@ -57,6 +59,7 @@ const SocialIconsData = [{
 const Footer_Data = [FooterData[0], FooterData[1], FooterData[4], FooterData[3]]
 
 const HomeStartupPage = (props) => {
+    ScrollToAnchor();
     return (<div style={props.style}>
         {/* Header Start */}
         <Header topSpace={{md: true}} type="reverse-scroll">
@@ -202,6 +205,39 @@ const HomeStartupPage = (props) => {
             {/* Section End */}
 
             {/* Section Start */}
+            
+
+            <section id="test" className="pt-20 switch-tabs">
+                <Col className="text-center">
+                    <h6 className="font-serif text-darkgray text-center font-medium mb-[5%]">
+                        Empowering Pooled Insurance with Tailor-Made Solutions
+                    </h6>
+                    <p className="m-[150px] text-[23px] mb-[100px]">
+                        Off-the-shelf software often falls short. Recognizing this gap, we offer solutions and experience to help meet your precise needs by providing targeted benefits through our core competencies.
+                    </p>
+                </Col>
+                <Tabs
+                    defaultActiveKey="light"
+                    id="uncontrolled-tab-example"
+                    className="justify-center"
+                    style={{display: 'none'}}
+                >
+                    {/* Accordion style 03 ( Light ) start */}
+                    <Tab eventKey="light" title="LIGHT">
+                        <m.section className="py-20 bg-lightgray">
+                            <Container>
+                                <Row className="justify-center">
+                                    <Col lg={10} md={10}>
+                                        <AccordionSolutions theme="accordion-style-03" className="test" animation={fadeIn}/>
+                                    </Col>
+                                </Row>
+                            </Container>
+                        </m.section>
+                    </Tab>
+                    {/* Accordion style 03 ( Light ) end */}
+                </Tabs>
+            </section>
+            {/* Section End */}
             <m.section className="bg-white py-[160px] lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px]" {...fadeIn}>
                 <Container>
                     <Row>
@@ -340,7 +376,7 @@ const HomeStartupPage = (props) => {
                         <Col md={8}>
                             <Row className="justify-center">
                                 <Col lg={10} md={10}>
-                                    <Accordions theme="accordion-style-03" className="" animation={fadeIn} />
+                                    <Accordions theme="accordion-style-03" className="" animation={fadeIn}/>
                                 </Col>
                             </Row>
                         </Col>
@@ -386,6 +422,8 @@ const HomeStartupPage = (props) => {
             </Footer>
             {/* Footer End */}
         </InViewPort>
+        <div id="test-sol"
+        ></div>
     </div>)
 }
 

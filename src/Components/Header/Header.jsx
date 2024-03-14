@@ -316,7 +316,7 @@ export const Menu = memo((props) => {
                                                                 return (
                                                                     <li className="nav-item" key={i}>
                                                                         {item.title && <Link className="nav-link"
-                                                                                             to={item.link ? item.link : "#"}> {item.icon && (
+                                                                                             to={item.link ? item.link : "#"}>{item.icon && (
                                                                             <i className={`${item.icon} mr-[10px]`}></i>)}{" "}
                                                                             {item.title}
                                                                         </Link>}

@@ -6,12 +6,12 @@ import { m } from "framer-motion"
 import { PropTypes } from "prop-types";
 
 // Data
-import {AccordionData} from './AccordionData'
+import {AccordionDataSolutions} from './AccordionData'
 
 // css
 import "../../Assets/scss/components/_accordion.scss"
 
-const Accordions = (props) => {
+const AccordionSolution = (props) => {
 
     return (
         <div className={`${props.theme} ${props.themeColor}${props.className ? ` ${props.className}` : ""}`}>
@@ -43,8 +43,8 @@ const Accordions = (props) => {
     )
 }
 
-Accordions.defaultProps = {
-    data: AccordionData,
+AccordionSolution.defaultProps = {
+    data: AccordionDataSolutions,
     animationDelay: 0.2,
     theme: "accordion-style-01",
     themeColor: "light"
@@ -65,4 +65,4 @@ Accordion.propTypes = {
     themeColor: PropTypes.string,
 }
 
-export default memo(Accordions)
+export default memo(AccordionSolution)

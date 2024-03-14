@@ -6,20 +6,20 @@ const HeaderDataAdjusted = [
                 title: 'Insurance Management',
                 dropdown: [
                     {
-                        title: 'Policy Management',
-                        link: '/solutions'
+                        title: 'Policy and Program Management',
+                        link: '/solutions#policyAndProgramManagement'
                     },
                     {
                         title: 'Finance Management',
-                        link: '/solutions'
+                        link: '/solutions#financeManagement'
                     },
                     {
                         title: 'Internal and Governmental Compliance',
-                        link: '/solutions'
+                        link: '/solutions#internalAndGovernmentalCompliance'
                     },
                     {
-                        title: 'Risk Management ',
-                        link: '/solutions'
+                        title: 'Risk Management',
+                        link: '/solutions#riskManagement'
                     }
                 ]
             },
@@ -28,23 +28,23 @@ const HeaderDataAdjusted = [
                 dropdown: [
                     {
                         title: 'Member and User Management',
-                        link: '/solutions'
+                        link: '/solutions#memberAndUserManagement'
                     },
                     {
                         title: 'Communication Management',
-                        link: '/solutions'
+                        link: '/solutions#communicationManagement'
                     },
                     {
                         title: 'Vendor Management',
-                        link: '/solutions'
+                        link: '/solutions#vendorManagement'
                     },
                     {
-                        title: 'KPIs',
-                        link: '/solutions'
+                        title: 'KPIs and Analytics',
+                        link: '/solutions#kPIsAndAnalytics'
                     },
                     {
                         title: 'Certificate Management',
-                        link: '/solutions'
+                        link: '/solutions#certificateManagement'
                     }
                 ]
             }

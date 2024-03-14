@@ -1,5 +1,7 @@
 import Isotope from "isotope-layout";
 import Swiper from "swiper"
+import {useLocation} from "react-router-dom";
+import {useEffect, useRef} from "react";
 
 export const getCookie = (name) => {
     var cookieArr = document.cookie.split(";");
@@ -170,4 +172,30 @@ export const setDocumentFullHeight = () => {
 
     window.addEventListener("resize", documentHeight)
     documentHeight()
+}
+
+
+
+export const ScrollToAnchor = () => {
+    const location = useLocation();
+    const lastHash = useRef('');
+
+    // listen to location change using useEffect with location as dependency
+    // https://jasonwatmore.com/react-router-v6-listen-to-location-route-change-without-history-listen
+    useEffect(() => {
+        if (location.hash) {
+            lastHash.current = location.hash.slice(1); // safe hash for further use after navigation
+        }
+
+        if (lastHash.current && document.getElementById(lastHash.current)) {
+            setTimeout(() => {
+                document
+                    .getElementById(lastHash.current)
+                    ?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                lastHash.current = '';
+            }, 100);
+        }
+    }, [location]);
+
+    return null;
 }

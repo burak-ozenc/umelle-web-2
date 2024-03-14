@@ -11,7 +11,7 @@ import {Form, Formik} from 'formik';
 import {fadeIn} from '../../../Functions/GlobalAnimations';
 
 // Components
-import {resetForm, sendEmail} from "../../../Functions/Utilities";
+import {resetForm, ScrollToAnchor, sendEmail} from "../../../Functions/Utilities";
 import {Checkbox, Input, TextArea} from '../../../Components/Form/Form'
 import FooterMenu, {Footer} from '../../../Components/Footers/Footer';
 import InViewPort from '../../../Components/InViewPort';
@@ -62,6 +62,7 @@ const Footer_Data = [FooterData[0], FooterData[1], FooterData[4], FooterData[3]]
 const HomeStartupPage = (props) => {
     const form1 = useRef(null)
     const recaptcha = useRef()
+    ScrollToAnchor();
     return (<div style={props.style}>
         {/* Header Start */}
         <Header topSpace={{md: true}} type="reverse-scroll">
@@ -153,7 +154,7 @@ const HomeStartupPage = (props) => {
         {/* Header End */}
 
         <SideButtons/>
-
+        
         {/* Section Start */}
         <StartupPageBannerSlider/>
         {/* Section End */}
@@ -170,7 +171,7 @@ const HomeStartupPage = (props) => {
 
 
             {/* Section Start */}
-            <section className="pt-20 switch-tabs">
+            <section id="test" className="pt-20 switch-tabs">
                 <Col className="text-center">
                     <h6 className="font-serif text-darkgray text-center font-medium mb-[5%]">
                         We understand the unique challenges and needs of pooled insurance providers

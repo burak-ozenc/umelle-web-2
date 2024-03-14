@@ -33,22 +33,22 @@ const IconWithTextData_01 = [
 
 const IconWithTextData_02 = [
     {
-        icon: "line-icon-Navigation-LeftWindow text-gradient bg-gradient-to-r from-[#556fff] via-[#e05fc4] to-[#ff798e]",
+        icon: "line-icon-Light-Bulb text-gradient bg-gradient-to-r from-[#556fff] via-[#e05fc4] to-[#ff798e]",
         title: "Solution Consulting",
         content: "We're committed to delivering excellence. Our solution consultants are ready to equip you with innovative and time-tested strategies, ensuring technology solves your business challenges effectively.",
     },
     {
-        icon: "line-icon-Cursor-Click2 text-gradient bg-gradient-to-r from-[#556fff] via-[#e05fc4] to-[#ff798e]",
+        icon: "line-icon-Conference text-gradient bg-gradient-to-r from-[#556fff] via-[#e05fc4] to-[#ff798e]",
         title: "Dedicated Team",
         content: "Skip the hassle of recruitment and training. With us, you gain access to a dedicated team focused on delivering your solution only.  We ensure your project crosses the finish line on schedule.",
     },
     {
-        icon: "line-icon-Archery-2 text-gradient bg-gradient-to-r from-[#556fff] via-[#e05fc4] to-[#ff798e]",
+        icon: "line-icon-Handshake text-gradient bg-gradient-to-r from-[#556fff] via-[#e05fc4] to-[#ff798e]",
         title: "Collaborative Approach",
         content: "Communication is key, and we're always to update you on our latest progress. Our flexible communication framework is designed to adapt to your preferred updates and check-in schedule, ensuring you're always in the loop.",
     },
     {
-        icon: "line-icon-Female text-gradient bg-gradient-to-r from-[#556fff] via-[#e05fc4] to-[#ff798e]",
+        icon: "line-icon-Resize text-gradient bg-gradient-to-r from-[#556fff] via-[#e05fc4] to-[#ff798e]",
         title: "Scalability",
         content: "Future-proof your operations with our cutting-edge modular architecture. We build systems that not only meet your current needs but also grow alongside your business, guaranteeing long-term scalability and adaptability.",
     },
