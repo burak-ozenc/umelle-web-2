@@ -20,48 +20,56 @@ const AccordionDataSolutions = [
     {
         icon: "line-icon-Management text-basecolor",
         title: "Policy and Program Management",
-        // subTitle: "Easy installation theme",
+        id: 'policyAndProgramManagement',
         content: "No matter your business line we can help you create custom business flows to help manage your business with efficiency. With a wide range of knowledge in Property, Workers Compensation, General Liability, Benefits such as dental and medical, Cyber Liability and others, we can help you craft the perfect system."
         // backgroundText: " "
     },
     {
         icon: "line-icon-Financial text-basecolor",
         title: "Finance Management",
+        id: 'financeManagement',
         content: "Be in full control with our financial management solutions. By integrating your business logic with your financials we can provide stability and reliability to your bottom line. With integrated financial management tools you will never make a mistake and get accurate reporting and analytics data."
     },
     {
         icon: "line-icon-Folder-WithDocument text-basecolor",
         title: "Internal and Government Compliance",
+        id: 'internalAndGovernmentalCompliance',
         content: "Stay compliant with government regulations and align your organization in one place. Our solution allows you to combine your business logic and government regulations to streamline your operational integrity and reduce the risk non-compliance. We allow you to plan for the future by building flexible and interactive tools to keep your organization compliant."
     },
     {
-        icon:  "line-icon-Umbrella-2",
+        icon: "line-icon-Umbrella-2",
         title: "Risk management",
+        id: 'riskManagement',
         content: "Build interactive and flexible tools that allow for easy data collection and decision making. Automate your underwriting process, add actuarial business logic or automate communication between your core risk profiling processes. Our solutions allow you to manage risk the way you want it done."
     },
     {
-        icon:  "line-icon-Add-UserStar text-basecolor",
+        icon: "line-icon-Add-UserStar text-basecolor",
         title: "Member and User Management",
+        id: 'memberAndUserManagement',
         content: "Streamline your organizational processes with integrated Member and User Management. This unified platform allows for efficient tracking, updating, and analyzing of member data, while also offering robust tools for defining user roles and permissions. Enhance member engagement and data security through a system that aligns with your organizational structure, simplifying administrative tasks and improving operational efficiency."
     },
     {
         icon: "line-icon-Speach-BubbleDialog text-basecolor",
         title: "Communication Management",
+        id: 'communicationManagement',
         content: "Communicate and share documents with clients and members reliably and internally. Reduce the need for sending sensitive data through third party channels."
     },
     {
-        icon:  "line-icon-Profile text-basecolor",
+        icon: "line-icon-Profile text-basecolor",
         title: "Vendor Management",
+        id: 'vendorManagement',
         content: "Integrated vendor management allows you to manage vendors and integrate business data more reliably. Our solution allows your business logic to integrate or decouple with vendors as your business needs change without affecting your core functions and data."
     },
     {
-        icon:  "line-icon-Bar-Chart text-basecolor",
+        icon: "line-icon-Bar-Chart text-basecolor",
         title: "KPIs and Analytics",
+        id: 'kPIsAndAnalytics',
         content: "Track KPIs and get active reporting and analytics on what matters most to your business. Our interactive systems allow you to change your KPIs as your business changes. Combined with our reporting and analytics solutions you will always be informed."
     },
     {
         icon: "line-icon-Add-User text-basecolor",
         title: "Certificate Management",
+        id: 'certificateManagement',
         content: "Issue and renew certificates of coverage automatically. Generate and send certificates to all clients and members based on your business logic."
     }
 ]
@@ -135,4 +143,4 @@ const AccordionData05 = [
     }
 ]
 
-export {AccordionData ,AccordionData02,AccordionData05, SolutionClientAccordionData,AccordionDataSolutions};
+export {AccordionData, AccordionData02, AccordionData05, SolutionClientAccordionData, AccordionDataSolutions};

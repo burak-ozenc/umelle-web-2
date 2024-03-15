@@ -10,12 +10,14 @@ import GlobalContext from "./Context/Context";
 
 // Components
 import ScrollToTopButton from "./Components/ScrollToTop"
+import {ScrollToAnchor} from "./Functions/Utilities";
 
 // Home
 const UmelleHome = lazy(() => import("./Pages/Umelle/Home/Startup"))
 const UmelleSolutions = lazy(() => import("./Pages/Umelle/Solutions/Startup"))
 const UmelleServices = lazy(() => import("./Pages/Umelle/Services/Startup"))
 const UmelleCompany = lazy(() => import("./Pages/Umelle/Company/Startup"))
+const Contact = lazy(() => import("./Pages/Umelle/Contact/Contact"))
 
 function App() {
   const [headerHeight, setHeaderHeight] = useState(0);
@@ -66,6 +68,8 @@ function App() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location]);
 
+  ScrollToAnchor();
+  
   return (
     <GlobalContext.Provider
       value={{
@@ -86,11 +90,13 @@ function App() {
             <AnimatePresence exitBeforeEnter>
               <Suspense fallback={<></>}>
                 <Routes>
+                  
                   {/*UMELLE*/}
                   <Route path="/" element={<UmelleHome style={{ "--base-color": "#27ae60" }} />} />
                   <Route path="/solutions" element={<UmelleSolutions style={{ "--base-color": "#27ae60" }} />} />
                   <Route path="/services" element={<UmelleServices style={{ "--base-color": "#27ae60" }} />} />
                   <Route path="/company" element={<UmelleCompany style={{ "--base-color": "#27ae60" }} />} />
+                  <Route path="/contact" element={<Contact style={{ "--base-color": "#27ae60" }} />} />
                 </Routes>
               </Suspense>
             </AnimatePresence>

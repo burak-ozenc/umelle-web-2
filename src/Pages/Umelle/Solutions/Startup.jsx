@@ -28,6 +28,7 @@ import FancyTextBox from "../../../Components/FancyTextBox/FancyTextBox";
 import {fancyTextBox06} from "../../../Components/FancyTextBox/FancyTextBoxData";
 import Accordions from "../../../Components/Accordion/Accordion";
 import AccordionSolutions from "../../../Components/Accordion/AccordionSolutions";
+import Buttons from "../../../Components/Button/Buttons";
 
 const HamburgerMenu = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.HamburgerMenu})))
 const Header = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Header})))
@@ -154,7 +155,7 @@ const HomeStartupPage = (props) => {
 
         {/* Section start */}
         <section className="overflow-visible cover-background"
-                 style={{backgroundImage: `url("https://via.placeholder.com/1920x1080")`}}>
+                 style={{backgroundImage: `url("https://i.ibb.co/hHCtj1f/homeheader-v1-01.png")`}}>
             <Container>
                 <LazyMotion strict features={domMax}>
                     <Row
@@ -164,13 +165,13 @@ const HomeStartupPage = (props) => {
                             <m.h4 initial={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)'}}
                                   animate={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)'}}
                                   transition={{duration: 0.5, delay: 0.5, ease: "easeIn"}}
-                                  className="font-serif font-semibold pb-[10px] text-[60px] tracking-[0px] text-white mb-[35px] lg:text-[55px] lg:leading-[20px] xs:text-[35px] xs:leading-[40px] xs:mb-[20px]">
+                                  className="font-serif font-semibold pb-[10px] text-[60px] tracking-[0px] text-black mb-[35px] lg:text-[55px] lg:leading-[20px] xs:text-[35px] xs:leading-[40px] xs:mb-[20px]">
                                 Tailor-Made Insurance Data Software Designed Around Your Business Needs
                             </m.h4>
                             <m.span initial={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)'}}
                                     animate={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)'}}
                                     transition={{duration: 0.5, delay: 0.8, ease: "easeIn"}}
-                                    className="font-serif block text-[19px] leading-[28px] mb-[35px] font-light text-white xs:text-base xs:mb-[20px]">
+                                    className="font-serif block text-[19px] leading-[28px] mb-[35px] font-light text-black xs:text-base xs:mb-[20px]">
                                 The Premier Choice for Pooled Insurance Providers
                             </m.span>
                         </Col>
@@ -194,6 +195,39 @@ const HomeStartupPage = (props) => {
         </section>
         {/* Section End */}
 
+        {/* Section Start */}
+        <section className="pt-20 switch-tabs">
+            <Col className="text-center">
+                <h6 className="font-serif text-darkgray text-center font-medium mb-[5%]">
+                    Empowering Pooled Insurance with Tailor-Made Solutions
+                </h6>
+                <p className="m-[150px] text-[23px] mb-[100px]">
+                    Off-the-shelf software often falls short. Recognizing this gap, we offer solutions and experience to help meet your precise needs by providing targeted benefits through our core competencies.
+                </p>
+            </Col>
+            <Tabs
+                defaultActiveKey="light"
+                id="uncontrolled-tab-example"
+                className="justify-center"
+                style={{display: 'none'}}
+            >
+                {/* Accordion style 03 ( Light ) start */}
+                <Tab eventKey="light" title="LIGHT">
+                    <m.section className="py-20 bg-lightgray">
+                        <Container>
+                            <Row className="justify-center">
+                                <Col lg={10} md={10}>
+                                    <AccordionSolutions theme="accordion-style-03" className="test" animation={fadeIn}/>
+                                </Col>
+                            </Row>
+                        </Container>
+                    </m.section>
+                </Tab>
+                {/* Accordion style 03 ( Light ) end */}
+            </Tabs>
+        </section>
+        {/* Section End */}
+        
         {/* Lazy Load HTML */}
         <InViewPort>
             {/* Section Start */}
@@ -204,40 +238,7 @@ const HomeStartupPage = (props) => {
             </section>
             {/* Section End */}
 
-            {/* Section Start */}
             
-
-            <section id="test" className="pt-20 switch-tabs">
-                <Col className="text-center">
-                    <h6 className="font-serif text-darkgray text-center font-medium mb-[5%]">
-                        Empowering Pooled Insurance with Tailor-Made Solutions
-                    </h6>
-                    <p className="m-[150px] text-[23px] mb-[100px]">
-                        Off-the-shelf software often falls short. Recognizing this gap, we offer solutions and experience to help meet your precise needs by providing targeted benefits through our core competencies.
-                    </p>
-                </Col>
-                <Tabs
-                    defaultActiveKey="light"
-                    id="uncontrolled-tab-example"
-                    className="justify-center"
-                    style={{display: 'none'}}
-                >
-                    {/* Accordion style 03 ( Light ) start */}
-                    <Tab eventKey="light" title="LIGHT">
-                        <m.section className="py-20 bg-lightgray">
-                            <Container>
-                                <Row className="justify-center">
-                                    <Col lg={10} md={10}>
-                                        <AccordionSolutions theme="accordion-style-03" className="test" animation={fadeIn}/>
-                                    </Col>
-                                </Row>
-                            </Container>
-                        </m.section>
-                    </Tab>
-                    {/* Accordion style 03 ( Light ) end */}
-                </Tabs>
-            </section>
-            {/* Section End */}
             <m.section className="bg-white py-[160px] lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px]" {...fadeIn}>
                 <Container>
                     <Row>
@@ -305,8 +306,7 @@ const HomeStartupPage = (props) => {
                 <Container>
                     <Row>
                         <Col className="mb-[6%]">
-                            <h6 className="font-serif text-darkgray text-center font-medium mb-[25px] lg:mb-[15px]">Counters
-                                style 05</h6>
+                            <h6 className="font-serif text-darkgray text-center font-medium mb-[25px] lg:mb-[15px]">Our Solutions:</h6>
                         </Col>
                     </Row>
                     <Counter
@@ -384,6 +384,34 @@ const HomeStartupPage = (props) => {
                 </Container>
             </m.section>
             {/* Section Start */}
+
+            {/* Section start */}
+            <section className="h-[225px]2"
+                     style={{backgroundImage: `url("https://iili.io/JWPWj3b.png")`}}>
+                <Container>
+                    <LazyMotion strict features={domMax}>
+                        <Row
+                            className="md:h-[450px] sm:h-[450px] xs:h-[450px] align-items-center justify-center "
+                        >
+                            <Col xs={6} lg={6} md={6}
+                                 className="justify-center align-items-center items-center my-0 mx-auto relative flex flex-col">
+                                <div initial={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)'}}
+                                     animate={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)'}}
+                                     transition={{duration: 0.5, delay: 0.9, ease: "easeIn"}}
+                                     className="justify-center m-[7rem] align-items-center"
+                                >
+                                    <Buttons ariaLabel="button"
+                                             href="/contact"
+                                             className="mx-[10px] font-medium font-serif uppercase rounded-none lg:mb-[15px] landscape:lg:mb-[15px] justify-center align-items-center"
+                                             themeColor={["#556fff", "#ff798e"]} size="md" color="#fff"
+                                             title="SCHEDULE A MEETING"/>
+                                </div>
+                            </Col>
+                        </Row>
+                    </LazyMotion>
+                </Container>
+            </section>
+            {/* Section End */}
 
             {/* Footer Start */}
             <Footer className="startup-footer bg-no-repeat bg-right" theme="light"

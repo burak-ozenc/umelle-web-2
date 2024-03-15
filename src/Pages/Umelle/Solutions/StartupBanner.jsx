@@ -4,12 +4,11 @@ import {Pagination, Navigation, EffectFade, Autoplay} from "swiper";
 import {LazyMotion, domMax, m} from 'framer-motion';
 import {Container, Row, Col} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
-
 const StartupPageBannerSlider = () => {
     const [activeSlide, setActiveSlide] = useState(0)
     const swiperData = [
         {
-            img: "https://via.placeholder.com/1920x1100",
+            img: "../../../Assets/img/umelle/homeheader_v2-01.png",
             title: "Tailor-Made Insurance Data Software Designed Around Your Business Needs",
             subTitle: "The Premier Choice for Pooled Insurance Providers"
         }

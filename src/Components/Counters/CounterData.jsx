@@ -110,7 +110,7 @@ const CounterData04 = [
 const CounterData05 = [
     {
         number:{
-            text: "1000",
+            text: "1106",
             class: "text-gradient bg-gradient-to-r from-[#556fff] to-[#e66176] inline-block"
         },
         title:" Auto-Generated Invoices",
@@ -126,10 +126,10 @@ const CounterData05 = [
     },
     {
         number:{
-            text: "3000",
+            text: "2834",
             class: "text-gradient bg-gradient-to-r from-[#556fff] to-[#e66176] inline-block"
         },
-        title:"Reports",
+        title:"Renewed Certificates of Coverage",
         content:"",
     },
 ]

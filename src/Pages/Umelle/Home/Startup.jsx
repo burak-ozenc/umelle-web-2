@@ -4,7 +4,7 @@ import React, {lazy, useRef} from 'react'
 import {Link} from 'react-router-dom';
 import {Col, Container, Navbar, Row, Tab, Tabs} from "react-bootstrap";
 import * as Yup from 'yup';
-import {AnimatePresence, m} from 'framer-motion';
+import {AnimatePresence, domMax, LazyMotion, m} from 'framer-motion';
 import {Form, Formik} from 'formik';
 
 // Functions
@@ -12,7 +12,7 @@ import {fadeIn} from '../../../Functions/GlobalAnimations';
 
 // Components
 import {resetForm, ScrollToAnchor, sendEmail} from "../../../Functions/Utilities";
-import {Checkbox, Input, TextArea} from '../../../Components/Form/Form'
+import {Checkbox, Input} from '../../../Components/Form/Form'
 import FooterMenu, {Footer} from '../../../Components/Footers/Footer';
 import InViewPort from '../../../Components/InViewPort';
 
@@ -24,8 +24,8 @@ import ProgressBar from "../../../Components/ProgressBar/ProgressBar";
 import {ProgressBarData02} from "../../../Components/ProgressBar/ProgressBarData";
 import TestimonialsCarousel02 from "../../../Components/TestimonialCarousel/TestimonialsCarousel02";
 import {TestimonialsCarouselData2} from "../../../Components/TestimonialCarousel/TestimonialsCarouselData";
-import {ContactFormStyle02Schema, ContactFormStyle03Schema} from "../../../Components/Form/FormSchema";
-import ReCAPTCHA from "react-google-recaptcha";
+import {ContactFormStyle02Schema} from "../../../Components/Form/FormSchema";
+import ReCAPTCHA from "react-google-recaptcha"
 
 const IconWithText = lazy(() => import('../../../Components/IconWithText/IconWithText'))
 const HamburgerMenu = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.HamburgerMenu})))
@@ -66,7 +66,7 @@ const HomeStartupPage = (props) => {
     return (<div style={props.style}>
         {/* Header Start */}
         <Header topSpace={{md: true}} type="reverse-scroll">
-            <HeaderNav fluid="fluid" theme="dark" expand="lg"
+            <HeaderNav fluid="fluid" theme="light" expand="lg"
                        className="py-[0px] px-[35px] md:px-[15px] md:py-[20px] sm:px-0">
                 <Col lg={2} sm={6} xs={"auto"} className="mr-auto ps-0">
                     <Link aria-label="header logo" className="flex items-center" to="/">
@@ -154,7 +154,7 @@ const HomeStartupPage = (props) => {
         {/* Header End */}
 
         <SideButtons/>
-        
+
         {/* Section Start */}
         <StartupPageBannerSlider/>
         {/* Section End */}
@@ -501,84 +501,33 @@ const HomeStartupPage = (props) => {
             </section>
             {/* Section End */}
 
-            {/* Section Start */}
-            <m.section
-                className="py-[160px] lg:py-[120px] md:py-[75px] sm:py-[50px] xs:py-[80px] xxs:py-[50px]"  {...fadeIn}>
+
+            {/* Section start */}
+            <section className="overflow-visible h-[225px]2"
+                     style={{backgroundImage: `url("https://i.ibb.co/XZsnq0w/homepage-bottompagebanner-CTA-v2-01.png")`}}>
                 <Container>
-                    <Row>
-                        <Col className='mb-[6%]'>
-                            <h6 className="font-serif text-gray-900 text-center font-medium mb-[25px] lg:mb-[15px]">
-                                Let's discuss your project
-                            </h6>
-                        </Col>
-                    </Row>
-                    <Row className="justify-center">
-                        <Col>
-                            <Formik
-                                initialValues={{name: '', email: '', phone: '', terms_condition: false}}
-                                validationSchema={ContactFormStyle03Schema}
-                                onSubmit={async (values, actions) => {
-                                    actions.setSubmitting(true)
-                                    const response = await sendEmail(values)
-                                    response.status === "success" && resetForm(actions)
-                                }}
-                            >
-                                {({isSubmitting, status}) => (
-                                    <Form>
-                                        <Row className="row-cols-1 row-cols-md-2">
-                                            <Col className="mb-16 lg:mb-[25px] sm:mb-0">
-                                                <Input showErrorMsg={false} type="text" name="name"
-                                                       className="py-[15px] px-[20px] text-md w-full border-[1px] border-solid border-[#dfdfdf]"
-                                                       labelClass="mb-[25px]" placeholder="Your name"/>
-                                                <Input showErrorMsg={false} type="text" name="company"
-                                                       className="py-[15px] px-[20px] text-md w-full border-[1px] border-solid border-[#dfdfdf]"
-                                                       labelClass="mb-[25px]" placeholder="Your company"/>
-                                                <Input showErrorMsg={false} type="email" name="email"
-                                                       className="py-[15px] px-[20px] w-full text-md border-[1px] border-solid border-[#dfdfdf]"
-                                                       labelClass="mb-[25px]" placeholder="Your email address"/>
-                                                <Input showErrorMsg={false} type="tel" name="phone"
-                                                       className="py-[15px] px-[20px] w-full text-md border-[1px] border-solid border-[#dfdfdf]"
-                                                       labelClass="sm:mb-[25px]" placeholder="Your position"/>
-                                            </Col>
-                                            <Col className="mb-16 lg:mb-[25px]">
-                                                <TextArea
-                                                    className="border-[1px] border-solid border-[#dfdfdf] w-full h-full py-[15px] px-[20px] text-md resize-none"
-                                                    name="comment" labelClass="h-full sm:h-[200px]"
-                                                    placeholder="Your message"></TextArea>
-                                            </Col>
-                                            <Col className="text-left sm:mb-[20px]">
-                                                <Checkbox type="checkbox" name="terms_condition"
-                                                          className="inline-block mt-[4px]"
-                                                          labelClass="flex items-start">
-                                                    <span className="ml-[10px] text-sm w-[85%] md:w-[90%] xs:w-[85%]">I accept the terms & conditions and I understand that my data will be hold securely in accordance with the&nbsp;
-                                                        <Link to="/privacy" target="_blank"
-                                                              className="text-darkgray underline hover:text-fastblue">privacy policy</Link>.</span>
-                                                </Checkbox>
-                                            </Col>
-                                            <Col className="text-right sm:text-center">
-                                                <Buttons ariaLabel="form button" type="submit"
-                                                         className={`text-xs tracking-[1px] rounded-none py-[12px] px-[28px] uppercase${isSubmitting ? " loading" : ""}`}
-                                                         themeColor={["#556fff", "#ff798e"]} size="md" color="#fff"
-                                                         title="Send Message"/>
-                                            </Col>
-                                        </Row>
-                                        <AnimatePresence>
-                                            {status && <Row><Col xs={12}>
-                                                <m.div initial={{opacity: 0}} animate={{opacity: 1}}
-                                                       exit={{opacity: 0}}><MessageBox className="mt-[20px] py-[10px]"
-                                                                                       theme="message-box01"
-                                                                                       variant="success"
-                                                                                       message="Your message has been sent successfully!"/>
-                                                </m.div>
-                                            </Col></Row>}
-                                        </AnimatePresence>
-                                    </Form>
-                                )}
-                            </Formik>
-                        </Col>
-                    </Row>
+                    <LazyMotion strict features={domMax}>
+                        <Row
+                            className="md:h-[450px] sm:h-[450px] xs:h-[450px] align-items-center justify-center "
+                        >
+                            <Col xs={6} lg={6} md={6}
+                                 className="justify-center align-items-center items-center my-0 mx-auto relative flex flex-col">
+                                <div initial={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)'}}
+                                     animate={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)'}}
+                                     transition={{duration: 0.5, delay: 0.9, ease: "easeIn"}}
+                                     className="justify-center m-[7rem] align-items-center"
+                                >
+                                    <Buttons ariaLabel="button"
+                                             href="/contact"
+                                             className="mx-[10px] font-medium font-serif uppercase rounded-none lg:mb-[15px] landscape:lg:mb-[15px] justify-center align-items-center"
+                                             themeColor={["#556fff", "#ff798e"]} size="md" color="#fff"
+                                             title="SCHEDULE A MEETING"/>
+                                </div>
+                            </Col>
+                        </Row>
+                    </LazyMotion>
                 </Container>
-            </m.section>
+            </section>
             {/* Section End */}
 
             {/* Footer Start */}

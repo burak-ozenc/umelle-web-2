@@ -12,18 +12,18 @@ const StartupPageBannerSlider = () => {
     const [activeSlide, setActiveSlide] = useState(0)
     const swiperData = [
         {
-            img: "https://via.placeholder.com/1920x1100",
+            img: "https://i.ibb.co/hHCtj1f/homeheader-v1-01.png",
             title: "Customise Your Liability",
             subTitle: "Pooled insurance management solutions tailored to your unique business logic"
         }
         ,
         {
-            img: "https://via.placeholder.com/1920x1100",
+            img: "https://i.ibb.co/hHCtj1f/homeheader-v1-01.png",
             title: "",
             subTitle: "A blend of fiscal precision and superior member service"
         },
         {
-            img: "https://via.placeholder.com/1920x1100",
+            img: "https://i.ibb.co/hHCtj1f/homeheader-v1-01.png",
             title: "",
             subTitle: "Designed to streamline operations across all your programs and policies."
         }
@@ -55,7 +55,7 @@ const StartupPageBannerSlider = () => {
                                        transition={{duration: 1.7, ease: "easeInOut"}}
                                        style={{backgroundImage: `url(${item.img})`}}
                                        className="overflow-hidden absolute h-full w-full top-0 left-0 cover-background"></m.div>
-                                <m.div className="opacity-50 absolute h-full w-full top-0 left-0 bg-darkgray"></m.div>
+                                <m.div className="opacity-0 absolute h-full w-full top-0 left-0 bg-darkgray"></m.div>
                                 <Container className="text-center">
                                     <Row className="full-screen items-center justify-center md:landscape:h-[500px]">
                                         <Col xs={6} lg={6} md={6}
@@ -63,11 +63,11 @@ const StartupPageBannerSlider = () => {
                                             <m.h1 initial={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)'}}
                                                   animate={{clipPath: activeSlide === i ? 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)' : 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)'}}
                                                   transition={{duration: 0.5, delay: 0.5, ease: "easeIn"}}
-                                                  className="font-serif font-semibold pb-[10px] text-[70px] tracking-[-2px] text-white mb-[35px] lg:text-[55px] lg:leading-[60px] xs:text-[35px] xs:leading-[40px] xs:mb-[20px]">{item.title}</m.h1>
+                                                  className="font-serif font-semibold pb-[10px] text-[70px] tracking-[-2px] text-black mb-[35px] lg:text-[55px] lg:leading-[60px] xs:text-[35px] xs:leading-[40px] xs:mb-[20px]">{item.title}</m.h1>
                                             <m.span initial={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)'}}
                                                     animate={{clipPath: activeSlide === i ? 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)' : 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)'}}
                                                     transition={{duration: 0.5, delay: 0.8, ease: "easeIn"}}
-                                                    className="font-serif block text-[42px] leading-[48px] mb-[35px] font-light text-white xs:text-base xs:mb-[40px]">{item.subTitle}</m.span>
+                                                    className="font-serif block text-[42px] leading-[48px] mb-[35px] font-light text-black xs:text-base xs:mb-[40px]">{item.subTitle}</m.span>
                                             <m.div initial={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)'}}
                                                    animate={{clipPath: activeSlide === i ? 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)' : 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)'}}
                                                    transition={{duration: 0.5, delay: 0.9, ease: "easeIn"}}>
