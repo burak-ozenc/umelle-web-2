@@ -231,8 +231,9 @@ const HomeStartupPage = (props) => {
                 <Container>
                     <Row>
                         <Col className='mb-[6%]'>
-                            <h6 className="font-serif text-gray-900 text-center font-medium mb-[25px] lg:mb-[15px]">Contact
-                                form style 01</h6>
+                            <h6 className="font-serif text-gray-900 text-center font-medium mb-[25px] lg:mb-[15px]">
+                                Stop overpaying for superfluous features and never miss out on the functionalities you need. Experience the perfect balance of cost and utility.
+                            </h6>
                         </Col>
                     </Row>
                     <Row className="m-auto">
@@ -254,10 +255,10 @@ const HomeStartupPage = (props) => {
                                     <Form ref={form1}>
                                         <Row>
                                             <Col xl={7} md={7} xs={7}>
-                                                <h4>
-                                                    Features
-                                                </h4>
-                                                <Row className="bg-lightgray p-5 m-4">
+                                                <Row className="bg-lightgray p-3 m-2">
+                                                    <h4 className="text-center">
+                                                        Features
+                                                    </h4>
                                                     <Col xl={6} md={6} xs={6}>
                                                         <Checkbox type="checkbox" name="checkbox_1_1"
                                                                   className="inline-block"
@@ -355,9 +356,7 @@ const HomeStartupPage = (props) => {
                                                     </Col>
                                                 </Row>
                                             </Col>
-
-
-                                            <Col className="bg-lightgray p-5 m-4" xl={4} md={4} xs={4}>
+                                            <Col className="bg-lightgray p-3 m-2" xl={4} md={4} xs={4}>
                                                 <h4>
                                                     Functions
                                                 </h4>

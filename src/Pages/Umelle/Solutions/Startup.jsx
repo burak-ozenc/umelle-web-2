@@ -1,8 +1,8 @@
-import React, {lazy} from 'react'
+import React, {lazy, useRef} from 'react'
 
 // Libraries
 import {Link} from 'react-router-dom';
-import {Col, Container, Navbar, Row, Tab, Tabs} from "react-bootstrap";
+import {Accordion, Col, Container, Navbar, Row, Tab, Tabs} from "react-bootstrap";
 import * as Yup from 'yup';
 import {AnimatePresence, domMax, LazyMotion, m} from 'framer-motion';
 import {Form, Formik} from 'formik';
@@ -13,7 +13,7 @@ import {ScrollToAnchor} from '../../../Functions/Utilities';
 
 // Components
 import {resetForm, sendEmail} from "../../../Functions/Utilities";
-import {Input} from '../../../Components/Form/Form'
+import {Checkbox, Input} from '../../../Components/Form/Form'
 import FooterMenu, {Footer} from '../../../Components/Footers/Footer';
 import InViewPort from '../../../Components/InViewPort';
 
@@ -26,9 +26,10 @@ import {serviceData5} from "../../../Components/Services/ServicesData";
 import {ProcessStepData02} from "../../../Components/ProcessStep/ProcessStepData";
 import FancyTextBox from "../../../Components/FancyTextBox/FancyTextBox";
 import {fancyTextBox06} from "../../../Components/FancyTextBox/FancyTextBoxData";
-import Accordions from "../../../Components/Accordion/Accordion";
 import AccordionSolutions from "../../../Components/Accordion/AccordionSolutions";
 import Buttons from "../../../Components/Button/Buttons";
+import {ContactFormStyle02Schema} from "../../../Components/Form/FormSchema";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const HamburgerMenu = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.HamburgerMenu})))
 const Header = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Header})))
@@ -60,6 +61,8 @@ const SocialIconsData = [{
 const Footer_Data = [FooterData[0], FooterData[1], FooterData[4], FooterData[3]]
 
 const HomeStartupPage = (props) => {
+    const form1 = useRef(null)
+    const recaptcha = useRef()
     ScrollToAnchor();
     return (<div style={props.style}>
         {/* Header Start */}
@@ -202,7 +205,8 @@ const HomeStartupPage = (props) => {
                     Empowering Pooled Insurance with Tailor-Made Solutions
                 </h6>
                 <p className="m-[150px] text-[23px] mb-[100px]">
-                    Off-the-shelf software often falls short. Recognizing this gap, we offer solutions and experience to help meet your precise needs by providing targeted benefits through our core competencies.
+                    Off-the-shelf software often falls short. Recognizing this gap, we offer solutions and experience to
+                    help meet your precise needs by providing targeted benefits through our core competencies.
                 </p>
             </Col>
             <Tabs
@@ -217,7 +221,7 @@ const HomeStartupPage = (props) => {
                         <Container>
                             <Row className="justify-center">
                                 <Col lg={10} md={10}>
-                                    <AccordionSolutions theme="accordion-style-03" className="test" animation={fadeIn}/>
+                                    <AccordionSolutions theme="accordion-style-03" animation={fadeIn}/>
                                 </Col>
                             </Row>
                         </Container>
@@ -227,7 +231,7 @@ const HomeStartupPage = (props) => {
             </Tabs>
         </section>
         {/* Section End */}
-        
+
         {/* Lazy Load HTML */}
         <InViewPort>
             {/* Section Start */}
@@ -238,7 +242,7 @@ const HomeStartupPage = (props) => {
             </section>
             {/* Section End */}
 
-            
+
             <m.section className="bg-white py-[160px] lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px]" {...fadeIn}>
                 <Container>
                     <Row>
@@ -306,7 +310,8 @@ const HomeStartupPage = (props) => {
                 <Container>
                     <Row>
                         <Col className="mb-[6%]">
-                            <h6 className="font-serif text-darkgray text-center font-medium mb-[25px] lg:mb-[15px]">Our Solutions:</h6>
+                            <h6 className="font-serif text-darkgray text-center font-medium mb-[25px] lg:mb-[15px]">Our
+                                Solutions:</h6>
                         </Col>
                     </Row>
                     <Counter
@@ -358,25 +363,188 @@ const HomeStartupPage = (props) => {
                 <Container>
                     <Row className="mt-[100px]">
                         <Col md={4}>
-                            <p>
-                                <span className="font-bold">Client Name :</span> ACWA JPIA
-                            </p>
-                            <p>
-                                <span className="font-bold">Industry:</span>
-                                Pooled Insurer in the Water and Water Infrastructure
-                            </p>
-                            <p>
-                                <span className="font-bold">Client Overview:</span>
-                                ACWA JPIA is a pooled insurer providing insurance services to more than 350
-                                members. Part of the larger JPIA group of like-minded Insurers and Service Providers,
-                                they
-                                provide top-level services to their members and clients.
-                            </p>
+                            <div>
+                                <p>
+                                    <span className="font-bold">Client Name :</span> 
+                                    ACWA JPIA
+                                </p>
+                                <br/>
+                                <p>
+                                    <span className="font-bold">Industry:</span>
+                                    Pooled Insurer in the Water and Water Infrastructure
+                                </p>
+                                <br/>
+                                <p>
+                                    <span className="font-bold">Client Overview:</span>
+                                    ACWA JPIA is a pooled insurer providing insurance services to more than 350
+                                    members. Part of the larger JPIA group of like-minded Insurers and Service Providers,
+                                    they provide top-level services to their members and clients.
+                                </p>
+                            </div>
                         </Col>
                         <Col md={8}>
                             <Row className="justify-center">
                                 <Col lg={10} md={10}>
-                                    <Accordions theme="accordion-style-03" className="" animation={fadeIn}/>
+                                    <div
+                                        id="testx"
+                                        className={`accordion-style-03 ${props.themeColor}${props.className ? ` ${props.className}` : ""}`}>
+                                        <Accordion defaultActiveKey={1}>
+                                            <div id={1} className={`accordion-item-wrapper`}
+                                                 key={1}
+                                                 {...{
+                                                     ...props.animation,
+                                                     transition: {delay: 0 * props.animationDelay}
+                                                 }}
+                                            >
+                                                <Accordion.Item key={1} eventKey={1}>
+                                                    <Accordion.Header>
+                                                        The Challenge
+                                                    </Accordion.Header>
+
+                                                    <Accordion.Body>
+                                                        <div>
+                                                            <p>
+                                                                ACWA JPIA saw the opportunity to optimize and modernize
+                                                                their operations and business management software.
+                                                            </p>
+                                                            <br/>
+                                                            <p>
+                                                                Canned products were dragging the organization down with
+                                                                undue cost and complex procedures that didn't meet their
+                                                                standards.
+                                                            </p>
+                                                            <br/>
+                                                            <p>
+                                                                Using several vendors to provide services created
+                                                                issues, as some services were not meeting scalability
+                                                                and flexibility standards.
+                                                            </p>
+                                                        </div>
+                                                    </Accordion.Body>
+                                                </Accordion.Item>
+                                            </div>
+                                            <div id={2} className={`accordion-item-wrapper`}
+                                                 key={2}
+                                                 {...{
+                                                     ...props.animation,
+                                                     transition: {delay: 0 * props.animationDelay}
+                                                 }}
+                                            >
+                                                <Accordion.Item key={2} eventKey={2}>
+                                                    <Accordion.Header>
+                                                        The Solution
+                                                    </Accordion.Header>
+
+                                                    <Accordion.Body>
+                                                        <div>
+                                                            <p>
+                                                                We crafted an end-to-end member and resource management
+                                                                system aimed solely at solving the problems of the
+                                                                company and their members. The system offers a full host
+                                                                of features, including:
+                                                            </p>
+                                                            <br/>
+                                                            <ol>
+                                                                <li>Business Intelligence, Reporting and Analytics</li>
+                                                                <li>Custom Wizzard</li>
+                                                                <li>User Management</li>
+                                                                <li>Member Management and Services</li>
+                                                                <li>Data Repositories and Templates</li>
+                                                                <li>Automated Invoicing</li>
+                                                                <li>Liability</li>
+                                                                <li>Workers Compensation</li>
+                                                                <li>Property</li>
+                                                                <li>Incident and Claims Management</li>
+                                                                <li>Dashboard</li>
+                                                                <li>Contact Management</li>
+                                                                <li>Finance Management</li>
+                                                            </ol>
+                                                        </div>
+                                                    </Accordion.Body>
+                                                </Accordion.Item>
+                                            </div>
+
+                                            <div id={3} className={`accordion-item-wrapper`}
+                                                 key={3}
+                                                 {...{
+                                                     ...props.animation,
+                                                     transition: {delay: 0 * props.animationDelay}
+                                                 }}
+                                            >
+                                                <Accordion.Item key={3} eventKey={3}>
+                                                    <Accordion.Header>
+                                                        Process and Collaboration:
+                                                    </Accordion.Header>
+
+                                                    <Accordion.Body>
+                                                        <div>
+                                                            <p>
+                                                                Our collaboration used the strengths of the Agile
+                                                                methodology to maximize feedback and allow for
+                                                                successful module iterations that ultimately delivered
+                                                                on the organization's needs.
+                                                            </p>
+                                                        </div>
+                                                    </Accordion.Body>
+                                                </Accordion.Item>
+                                            </div>
+
+                                            <div id={4} className={`accordion-item-wrapper`}
+                                                 key={4}
+                                                 {...{
+                                                     ...props.animation,
+                                                     transition: {delay: 0 * props.animationDelay}
+                                                 }}
+                                            >
+                                                <Accordion.Item key={4} eventKey={4}>
+                                                    <Accordion.Header>
+                                                        The Impact
+                                                    </Accordion.Header>
+
+                                                    <Accordion.Body>
+                                                        <div>
+                                                            <p>
+                                                                This process also allowed our team to understand the
+                                                                business in more detail, which led to many breakthroughs
+                                                                and innovations in the way the solution was delivered.
+                                                                Through a robust relationship and collaboration, UMELLE
+                                                                was able to deploy this experience to develop a unique
+                                                                solution and optimize the operations of several key
+                                                                functions; allowing the organization to focus on new
+                                                                horizons.
+                                                            </p>
+                                                        </div>
+                                                    </Accordion.Body>
+                                                </Accordion.Item>
+                                            </div>
+
+
+                                            {/*<div id={item.id} className={`accordion-item-wrapper`}*/}
+                                            {/*     key={key}*/}
+                                            {/*     {...{*/}
+                                            {/*         ...props.animation,*/}
+                                            {/*         transition: {delay: key * props.animationDelay}*/}
+                                            {/*     }}*/}
+                                            {/*>*/}
+                                            {/*    <Accordion.Item key={key} eventKey={key}>*/}
+                                            {/*        {item.title &&*/}
+                                            {/*            <Accordion.Header>*/}
+                                            {/*                {item.icon &&*/}
+                                            {/*                    <i className={`text-[2em] m-2 ${item.icon}`}></i>}*/}
+                                            {/*                {item.time && <span*/}
+                                            {/*                    className="panel-time">{item.time}</span>}*/}
+                                            {/*                {item.title && <span*/}
+                                            {/*                    className="panel-title">{item.title}</span>}*/}
+                                            {/*                {item.author && <span*/}
+                                            {/*                    className="panel-speaker">{item.author}</span>}*/}
+                                            {/*            </Accordion.Header>*/}
+                                            {/*        }*/}
+                                            {/*        {item.content &&*/}
+                                            {/*            <Accordion.Body> {item.content} </Accordion.Body>}*/}
+                                            {/*    </Accordion.Item>*/}
+                                            {/*</div>*/}
+                                        </Accordion>
+                                    </div>
                                 </Col>
                             </Row>
                         </Col>
@@ -384,6 +552,231 @@ const HomeStartupPage = (props) => {
                 </Container>
             </m.section>
             {/* Section Start */}
+
+            {/* Section Start */}
+            <m.section className="py-[160px] lg:py-[120px] md:py-[80px] xs:py-[50px]" {...fadeIn}>
+                <Container>
+                    <Row>
+                        <Col className='mb-[6%]'>
+                            <h6 className="font-serif text-gray-900 text-center font-medium mb-[25px] lg:mb-[15px]">
+                                Stop overpaying for superfluous features and never miss out on the functionalities you
+                                need. Experience the perfect balance of cost and utility.
+                            </h6>
+                        </Col>
+                    </Row>
+                    <Row className="m-auto">
+                        <Col xl={12} lg={12} md={12}>
+                            <Formik
+                                initialValues={{name: '', email: '', phone: '', comment: '', recaptcha: ''}}
+                                validationSchema={ContactFormStyle02Schema}
+                                onSubmit={async (values, actions) => {
+                                    actions.setSubmitting(true)
+                                    if (values.recaptcha !== '') {
+                                        const response = await sendEmail(values)
+                                        response.status === "success" && resetForm(actions, recaptcha);
+                                    } else {
+                                        recaptcha.current.captcha.classList.add("error")
+                                    }
+                                }}
+                            >
+                                {({isSubmitting, status, setFieldValue}) => (
+                                    <Form ref={form1}>
+                                        <Row>
+                                            <Col xl={7} md={7} xs={7}>
+                                                <Row className="bg-lightgray p-3 m-2">
+                                                    <h4 className="text-center">
+                                                        Features
+                                                    </h4>
+                                                    <Col xl={6} md={6} xs={6}>
+                                                        <Checkbox type="checkbox" name="checkbox_1_1"
+                                                                  className="inline-block"
+                                                                  labelClass="flex items-center mb-[5px]">
+                                                    <span className="ml-[10px] text-base">
+                                                        Certificates of Coverage
+                                                    </span>
+                                                        </Checkbox>
+                                                        <Checkbox type="checkbox" name="checkbox_1_2"
+                                                                  className="inline-block"
+                                                                  labelClass="flex items-center mb-[5px]">
+                                                    <span className="ml-[10px] text-base">
+                                                        Policy Management 
+                                                    </span>
+                                                        </Checkbox>
+                                                        <Checkbox type="checkbox" name="checkbox_1_3"
+                                                                  className="inline-block"
+                                                                  labelClass="flex items-center mb-[5px]">
+                                                    <span className="ml-[10px] text-base">
+                                                        Vendor Management 
+                                                    </span>
+                                                        </Checkbox>
+                                                        <Checkbox type="checkbox" name="checkbox_1_4"
+                                                                  className="inline-block"
+                                                                  labelClass="flex items-center mb-[5px]">
+                                                    <span className="ml-[10px] text-base">
+                                                        Liability Payroll
+                                                    </span>
+                                                        </Checkbox>
+                                                        <Checkbox type="checkbox" name="checkbox_1_5"
+                                                                  className="inline-block"
+                                                                  labelClass="flex items-center mb-[5px]">
+                                                    <span className="ml-[10px] text-base">
+                                                        Claims  
+                                                    </span>
+                                                        </Checkbox>
+                                                        <Checkbox type="checkbox" name="checkbox_1_6"
+                                                                  className="inline-block"
+                                                                  labelClass="flex items-center mb-[5px]">
+                                                    <span className="ml-[10px] text-base">
+                                                        Contacts  
+                                                    </span>
+                                                        </Checkbox>
+                                                        <Checkbox type="checkbox" name="checkbox_1_7"
+                                                                  className="inline-block"
+                                                                  labelClass="flex items-center mb-[5px]">
+                                                    <span className="ml-[10px] text-base">
+                                                        Programs   
+                                                    </span>
+                                                        </Checkbox>
+                                                    </Col>
+                                                    <Col xl={6} md={6} xs={6}>
+                                                        <Checkbox type="checkbox" name="checkbox_1_8"
+                                                                  className="inline-block"
+                                                                  labelClass="flex items-center mb-[5px]">
+                                                    <span className="ml-[10px] text-base">
+                                                        External/Internal Compliance 
+                                                    </span>
+                                                        </Checkbox>
+                                                        <Checkbox type="checkbox" name="checkbox_1_9"
+                                                                  className="inline-block"
+                                                                  labelClass="flex items-center mb-[5px]">
+                                                    <span className="ml-[10px] text-base">
+                                                        Property   
+                                                    </span>
+                                                        </Checkbox>
+                                                        <Checkbox type="checkbox" name="checkbox_1_10"
+                                                                  className="inline-block"
+                                                                  labelClass="flex items-center mb-[5px]">
+                                                    <span className="ml-[10px] text-base">
+                                                        Stand Alone Programs 
+                                                    </span>
+                                                        </Checkbox>
+                                                        <Checkbox type="checkbox" name="checkbox_1_11"
+                                                                  className="inline-block"
+                                                                  labelClass="flex items-center mb-[5px]">
+                                                    <span className="ml-[10px] text-base">
+                                                        KPIs/Scorecards 
+                                                    </span>
+                                                        </Checkbox>
+                                                        <Checkbox type="checkbox" name="checkbox_1_12"
+                                                                  className="inline-block"
+                                                                  labelClass="flex items-center mb-[5px]">
+                                                    <span className="ml-[10px] text-base">
+                                                        Reporting/Analytics/Dashboards 
+                                                    </span>
+                                                        </Checkbox>
+                                                        <Checkbox type="checkbox" name="checkbox_1_13"
+                                                                  className="inline-block"
+                                                                  labelClass="flex items-center mb-[5px]">
+                                                    <span className="ml-[10px] text-base">
+                                                        Underwriting and Questionnaires 
+                                                    </span>
+                                                        </Checkbox>
+                                                    </Col>
+                                                </Row>
+                                            </Col>
+                                            <Col className="bg-lightgray p-3 m-2" xl={4} md={4} xs={4}>
+                                                <h4>
+                                                    Functions
+                                                </h4>
+                                                <Checkbox type="checkbox" name="checkbox_2_1" className="inline-block"
+                                                          labelClass="flex items-center mb-[5px]">
+                                                    <span className="ml-[10px] text-base">
+                                                        Automated Invoicing 
+                                                    </span>
+                                                </Checkbox>
+                                                <Checkbox type="checkbox" name="checkbox_2_2" className="inline-block"
+                                                          labelClass="flex items-center mb-[5px]">
+                                                    <span className="ml-[10px] text-base">
+                                                        Program Management Wizard 
+                                                    </span>
+                                                </Checkbox>
+                                                <Checkbox type="checkbox" name="checkbox_2_3" className="inline-block"
+                                                          labelClass="flex items-center mb-[5px]">
+                                                    <span className="ml-[10px] text-base">
+                                                        Internal Chat 
+                                                    </span>
+                                                </Checkbox>
+                                                <Checkbox type="checkbox" name="checkbox_2_3" className="inline-block"
+                                                          labelClass="flex items-center mb-[5px]">
+                                                    <span className="ml-[10px] text-base">
+                                                        Custom Business Settings 
+                                                    </span>
+                                                </Checkbox>
+                                                <Checkbox type="checkbox" name="checkbox_2_4" className="inline-block"
+                                                          labelClass="flex items-center mb-[5px]">
+                                                    <span className="ml-[10px] text-base">
+                                                        Discount Management 
+                                                    </span>
+                                                </Checkbox>
+                                                <Checkbox type="checkbox" name="checkbox_2_5" className="inline-block"
+                                                          labelClass="flex items-center mb-[5px]">
+                                                    <span className="ml-[10px] text-base">
+                                                        Automated Certificate Renewal 
+                                                    </span>
+                                                </Checkbox>
+                                            </Col>
+                                        </Row>
+
+                                        {process.env.REACT_APP_GRECAPTCHA_API_KEY && (
+                                            <ReCAPTCHA
+                                                ref={recaptcha}
+                                                className="mb-[35px]"
+                                                sitekey={process.env.REACT_APP_GRECAPTCHA_API_KEY}
+                                                onChange={(response) => {
+                                                    setFieldValue("recaptcha", response)
+                                                }}
+                                            />
+                                        )}
+
+                                        <Row className="row-cols-1 row-cols-md-1 mt-5">
+                                            <Col className="mb-16 lg:mb-[25px] sm:mb-0">
+                                                <Input showErrorMsg={false} type="text" name="name"
+                                                       className="py-[15px] px-[20px] text-md w-full border-[1px] border-solid border-[#dfdfdf]"
+                                                       labelClass="mb-[25px]" placeholder="Your name"/>
+                                                <Input showErrorMsg={false} type="text" name="company"
+                                                       className="py-[15px] px-[20px] text-md w-full border-[1px] border-solid border-[#dfdfdf]"
+                                                       labelClass="mb-[25px]" placeholder="Your company"/>
+                                                <Input showErrorMsg={false} type="email" name="email"
+                                                       className="py-[15px] px-[20px] w-full text-md border-[1px] border-solid border-[#dfdfdf]"
+                                                       labelClass="mb-[25px]" placeholder="Your email address"/>
+                                                <Input showErrorMsg={false} type="tel" name="phone"
+                                                       className="py-[15px] px-[20px] w-full text-md border-[1px] border-solid border-[#dfdfdf]"
+                                                       labelClass="sm:mb-[25px]" placeholder="Your position"/>
+                                            </Col>
+                                            <Col xs={5}>
+                                                <Buttons ariaLabel="form button" type="submit"
+                                                         className={`font-medium font-serif rounded-none uppercase text-[11px]${isSubmitting ? " loading" : ""}`}
+                                                         themeColor={["#0039e3", "#8600d4"]} size="md" color="#fff"
+                                                         title="send message"/>
+                                                <AnimatePresence>
+                                                    {status && <m.div initial={{opacity: 0}} animate={{opacity: 1}}
+                                                                      exit={{opacity: 0}}><MessageBox
+                                                        className="mt-[35px] py-[10px] tracking-[1px]"
+                                                        theme="message-box01"
+                                                        variant="success"
+                                                        message="Your message has been sent successfully!"/>
+                                                    </m.div>}
+                                                </AnimatePresence>
+                                            </Col>
+                                        </Row>
+                                    </Form>
+                                )}
+                            </Formik>
+                        </Col>
+                    </Row>
+                </Container>
+            </m.section>
+            {/* Section End */}
 
             {/* Section start */}
             <section className="h-[225px]2"
