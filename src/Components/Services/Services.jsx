@@ -20,13 +20,10 @@ const Services = (props) => {
                     return (
                         <m.div key={i} className={`col px-[15px]${props.className ? ` ${props.className}` : ""}`} {...{ ...props.animation, transition: { delay: i * props.animationDelay } }}>
                             <div className={props.theme}>
-                                <div className='service-style min-h-[26rem]'>
+                                <div className='service-style min-h-[22rem]'>
                                     {props.theme === "service-style-03" && <span className='verticalline'></span>}
                                     {item.title && <span className="title font-medium text-darkgray block font-serif mb-[10px]">{item.title}</span>}
                                     {item.content && <p>{item.content}</p>}
-                                    {(props.theme === "service-style-02" || props.theme === "service-style-05") && <div className='info-service'>
-                                        {(item.linkTitle || item.icon) && <Link aria-label="services" to={item.link ? item.link : "#"} className="no-underline font-serif font-medium text-gray-900 text-sm uppercase block">{item.linkTitle}<i className={item.icon}></i></Link>}
-                                    </div>}
                                 </div>
                             </div>
                         </m.div>

@@ -92,44 +92,87 @@ const ListData05 = [
 const TechnologiesList = [
     {
         content: "Blazor",
+        img: 'https://via.placeholder.com/232x110',
+        target: "_self",
+        link: '#'
+
     },
     {
         content: "ASP.NET",
+        img: 'https://via.placeholder.com/232x110',
+        target: "_self",
+        link: '#'
     },
     {
         content: "AJAX",
+        img: 'https://via.placeholder.com/232x110',
+        target: "_self",
+        link: '#'
     },
     {
         content: "HTML5",
+        img: 'https://via.placeholder.com/232x110',
+        target: "_self",
+        link: '#'
     },
     {
         content: "CSS",
+        img: 'https://via.placeholder.com/232x110',
+        target: "_self",
+        link: '#'
     },
     {
         content: "JavaScript",
+        img: 'https://via.placeholder.com/232x110',
+        target: "_self",
+        link: '#'
     },
     {
         content: "Silverlight",
+        img: 'https://via.placeholder.com/232x110',
+        target: "_self",
+        link: '#'
     },
     {
         content: "Windows Forms",
+        img: 'https://via.placeholder.com/232x110',
+        target: "_self",
+        link: '#'
     },
     {
         content: "WPF",
+        img: 'https://via.placeholder.com/232x110',
+        target: "_self",
+        link: '#'
     },
     {
         content: "XAML",
+        img: 'https://via.placeholder.com/232x110',
+        target: "_self",
+        link: '#'
     },
     {
         content: "XAF",
+        img: 'https://via.placeholder.com/232x110',
+        target: "_self",
+        link: '#'
     },
     {
         content: "SignalR",
+        img: 'https://via.placeholder.com/232x110',
+        target: "_self",
+        link: '#'
     },
     {
         content: "WebAPI",
-    },{
+        img: 'https://via.placeholder.com/232x110',
+        target: "_self",
+        link: '#'
+    }, {
         content: "RESTful services",
+        img: 'https://via.placeholder.com/232x110',
+        target: "_self",
+        link: '#'
     },
 ]
 
@@ -147,7 +190,7 @@ const Languages = [
         content: "PHP",
     }
 ]
-const DataFormats  = [
+const DataFormats = [
     {
         content: "XML#",
     },
@@ -159,9 +202,9 @@ const DataFormats  = [
     }
 ]
 
-const CloudAndDataDatabase   = [
+const CloudAndDataDatabase = [
     {
-        content: "MS SQL#",
+        content: "MS SQL",
     },
     {
         content: "MY SQL",
@@ -170,7 +213,7 @@ const CloudAndDataDatabase   = [
         content: "Azure",
     }
 ]
-const ORM    = [
+const ORM = [
     {
         content: "XPO",
     },
@@ -178,7 +221,7 @@ const ORM    = [
         content: "Entity Framework",
     }
 ]
-const Frameworks    = [
+const Frameworks = [
     {
         content: ".NET Core",
     },
@@ -244,4 +287,18 @@ const ListData08 = [
     },
 ]
 
-export { ListData01, ListData02, ListData03, ListData04, ListData05, TechnologiesList, ListData07, ListData08,Languages, DataFormats, CloudAndDataDatabase, ORM, Frameworks }
+export {
+    ListData01,
+    ListData02,
+    ListData03,
+    ListData04,
+    ListData05,
+    TechnologiesList,
+    ListData07,
+    ListData08,
+    Languages,
+    DataFormats,
+    CloudAndDataDatabase,
+    ORM,
+    Frameworks
+}

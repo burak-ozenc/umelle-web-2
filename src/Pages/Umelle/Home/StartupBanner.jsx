@@ -71,7 +71,7 @@ const StartupPageBannerSlider = () => {
                                             <m.div initial={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)'}}
                                                    animate={{clipPath: activeSlide === i ? 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)' : 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)'}}
                                                    transition={{duration: 0.5, delay: 0.9, ease: "easeIn"}}>
-                                                <Link aria-label="started now" to="/page/contact-classic"
+                                                <Link aria-label="started now" to="/contact"
                                                       className="uppercase startup-link font-medium">
                                                     SCHEDULE A MEETING
                                                     <div>

@@ -23,7 +23,7 @@ import SideButtons from "../../Components/SideButtons";
 
 // Data
 import { blogData } from '../../Components/Blogs/BlogData'
-import { ClientData02 } from '../../Components/Clients/ClientsData'
+import { TechList } from '../../Components/Clients/ClientsData'
 import { portfolioScatteredData } from '../../Components/Portfolio/PortfolioData'
 import { ProcessStepData03 } from '../../Components/ProcessStep/ProcessStepData'
 import { TestimonialsCarouselData1 } from '../../Components/TestimonialCarousel/TestimonialsCarouselData'
@@ -261,7 +261,7 @@ const BrandingagencyPage = (props) => {
                 {/* Section Start */}
                 <section className="py-[200px] bg-white overflow-hidden lg:py-[160px] md:py-[110px] sm:py-[50px]">
                     <Container>
-                        <Clients grid="row-cols-1 row-cols-md-2 row-cols-sm-2 row-cols-lg-4" theme="client-logo-style-02" data={ClientData02} animation={fadeIn} />
+                        <Clients grid="row-cols-1 row-cols-md-2 row-cols-sm-2 row-cols-lg-4" theme="client-logo-style-02" data={TechList} animation={fadeIn} />
                     </Container>
                 </section>
                 {/* Section End */}

@@ -29,7 +29,7 @@ import { TiltBox } from '../../Components/FancyText/FancyText'
 // Data
 import { TestimonialsCarouselData2 } from "../../Components/TestimonialCarousel/TestimonialsCarouselData";
 import { portfolioSwitchImgMetroData } from "../../Components/Portfolio/PortfolioData";
-import { ClientData02 } from "../../Components/Clients/ClientsData";
+import { TechList } from "../../Components/Clients/ClientsData";
 
 const SocialIconDataForm = [
   {
@@ -298,7 +298,7 @@ const FreelancerPage = (props) => {
           <Clients
             grid="row-cols-1 row-cols-md-2 row-cols-sm-2 row-cols-lg-4 mt-32 xs:mt-24"
             theme="client-logo-style-02"
-            data={ClientData02}
+            data={TechList}
             animation={fadeIn} />
         </Container>
       </section>

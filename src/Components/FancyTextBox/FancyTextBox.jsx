@@ -60,12 +60,18 @@ const FancyTextBoxSwitch = (params, item, i) => {
         case "fancy-text-box-04":
             return (
                 <div className="text-box-content h-full p-16 bg-[#fff] relative shadow-[0_0_15px_rgba(0,0,0,0.1)] rounded-lg overflow-hidden lg:p-[2.5rem] md:p-16">
-                    <div className="feature-box-icon text-[20px] d-flex flex-row mr-[20px]">
-                        {item.icon.class && <i className={item.icon.class}></i>}
-                    </div>
-                    <div className="feature-box-content inline-block leading-[22px]">
-                        <div className="text-darkgray font-serif text-base font-medium leading-[16x]">{item.title}</div>
-                        <span className="text-sm font-serif">{item.subTitle}</span>
+                    <Row>
+                        <Col md={2} sm={2} lg={2} className="justify-center align-items-center mt-4">
+                            {item.icon.class && <i className={` text-[2.2em] ${item.icon.class}`}></i>}
+                        </Col>
+                        <Col md={10} sm={10} l={10}  className="justify-center align-items-center mt-3">
+                            <div
+                                className="text-darkgray font-serif text-base font-medium">{item.title}</div>
+                        </Col>
+                    </Row>
+                    <div className="feature-box-content inline-block leading-[22px] d-flex flex-row">
+                        
+                        
                     </div>
                     <div className="bg-[#ededed] mt-[25px] w-full h-[1px]"></div>
                     {item.description && <p className="mt-[25px]">{item.description}</p>}

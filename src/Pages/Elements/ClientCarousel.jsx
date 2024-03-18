@@ -9,7 +9,7 @@ import { fadeIn } from "../../Functions/GlobalAnimations";
 import Clients from '../../Components/Clients/Clients'
 
 // Data
-import { ClientData02 } from "../../Components/Clients/ClientsData";
+import { TechList } from "../../Components/Clients/ClientsData";
 
 const ClientCarouselPage = () => {
   return (
@@ -41,7 +41,7 @@ const ClientCarouselPage = () => {
               <Clients
                 theme="client-logo-style-03"
                 className="swiper-navigation-04 swiper-navigation-light"
-                data={ClientData02}
+                data={TechList}
                 animation={fadeIn}
                 carousel={true}
                 carouselOption={{

@@ -2,9 +2,9 @@ import React, {lazy} from 'react'
 
 // Libraries
 import {Link} from 'react-router-dom';
-import {Col, Container, Navbar, Row} from "react-bootstrap";
+import {Col, Container, Navbar, Row, Tab, Tabs} from "react-bootstrap";
 import * as Yup from 'yup';
-import {AnimatePresence, m} from 'framer-motion';
+import {AnimatePresence, domMax, LazyMotion, m} from 'framer-motion';
 import {Form, Formik} from 'formik';
 
 // Functions
@@ -20,15 +20,14 @@ import InViewPort from '../../../Components/InViewPort';
 import FooterData from '../../../Components/Footers/FooterData';
 import FancyTextBox from "../../../Components/FancyTextBox/FancyTextBox";
 import {fancyTextBox04} from "../../../Components/FancyTextBox/FancyTextBoxData";
-import Lists from "../../../Components/Lists/Lists";
+import Buttons from "../../../Components/Button/Buttons";
 import {
-    CloudAndDataDatabase,
-    DataFormats,
-    Frameworks,
-    Languages,
-    ORM,
-    TechnologiesList
-} from "../../../Components/Lists/ListsData";
+    CloudAndDataDatabaseList,
+    DataFormatList, FrameworksList,
+    LanguagesList, ORMList,
+    TechList
+} from "../../../Components/Clients/ClientsData";
+import Clients from "../../../Components/Clients/Clients";
 
 const HamburgerMenu = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.HamburgerMenu})))
 const Header = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Header})))
@@ -42,7 +41,6 @@ const MessageBox = lazy(() => import('../../../Components/MessageBox/MessageBox'
 const SocialIcons = lazy(() => import("../../../Components/SocialIcon/SocialIcons"))
 const SideButtons = lazy(() => import("../../../Components/SideButtons"))
 const StaticInstagram = lazy(() => import('../../../Components/Instagram/StaticInstagram'))
-const StartupPageBannerSlider = lazy(() => import('./StartupBanner'))
 
 // Filter the blog data category wise
 const SocialIconsData = [{
@@ -63,7 +61,7 @@ const HomeStartupPage = (props) => {
     return (<div style={props.style}>
         {/* Header Start */}
         <Header topSpace={{md: true}} type="reverse-scroll">
-            <HeaderNav fluid="fluid" theme="dark" expand="lg"
+            <HeaderNav fluid="fluid" theme="light" expand="lg"
                        className="py-[0px] px-[35px] md:px-[15px] md:py-[20px] sm:px-0">
                 <Col lg={2} sm={6} xs={"auto"} className="mr-auto ps-0">
                     <Link aria-label="header logo" className="flex items-center" to="/">
@@ -152,8 +150,43 @@ const HomeStartupPage = (props) => {
 
         <SideButtons/>
 
-        {/* Section Start */}
-        <StartupPageBannerSlider/>
+        {/* Section start */}
+        <section className="overflow-visible cover-background"
+                 style={{backgroundImage: `url("https://i.ibb.co/hHCtj1f/homeheader-v1-01.png")`}}>
+            <Container>
+                <LazyMotion strict features={domMax}>
+                    <Row
+                        className="full-screen md:h-[650px] sm:h-[350px] xs:h-[450px] align-items-center justify-center">
+                        <Col xs={6} lg={6} md={6}
+                             className="justify-center items-center my-0 mx-auto relative flex flex-col">
+                            <m.h4 initial={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)'}}
+                                  animate={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)'}}
+                                  transition={{duration: 0.5, delay: 0.5, ease: "easeIn"}}
+                                  className="font-serif font-semibold pb-[10px] text-[60px] tracking-[0px] text-black mb-[35px] lg:text-[55px] lg:leading-[20px] xs:text-[35px] xs:leading-[40px] xs:mb-[20px]">
+                                Custom Software That Meets Your Operational Goals
+                            </m.h4>
+                            <m.span initial={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)'}}
+                                    animate={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)'}}
+                                    transition={{duration: 0.5, delay: 0.8, ease: "easeIn"}}
+                                    className="font-serif block text-[19px] leading-[28px] mb-[35px] font-light text-black xs:text-base xs:mb-[20px]">
+                                We take care of everything with our full-cycle engineering services - all while optimizing the cost, timeframe, and scope of the work. Leaving you to focus on what matters most to you.
+                            </m.span>
+                        </Col>
+                        <Col xs={6} lg={6} md={6}
+                             className="justify-center items-center my-0 mx-auto relative flex flex-col">
+                            <div initial={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)'}}
+                                 animate={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)'}}
+                                 transition={{duration: 0.5, delay: 0.9, ease: "easeIn"}}>
+                                <Buttons ariaLabel="button" href="/contact"
+                                         className="mx-[10px] rounded-none font-medium font-serif uppercase bg-[#fff] hover:text-white"
+                                         themeColor="#000" size="lg" color="#000" icon="fas fa-arrow-right right-icon"
+                                         iconPosition="after" title="SCHEDULE A MEETING"/>
+                            </div>
+                        </Col>
+                    </Row>
+                </LazyMotion>
+            </Container>
+        </section>
         {/* Section End */}
 
         {/* Lazy Load HTML */}
@@ -184,68 +217,172 @@ const HomeStartupPage = (props) => {
                 </Container>
             </m.section>
             {/* Section End */}
-            
-            
+
             {/* Section Start */}
-
-            <m.section className="py-[160px] lg:py-[120px] md:py-[95px] sm:py-[80px] xs;py-[50px]" {...fadeIn}>
+            <m.section
+                className="py-[160px] bg-white lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px]"  {...fadeIn}>
                 <Container>
-                    <Row>
-                        <Col className="mb-[4%]">
-                            <h6 className="font-serif text-darkgray text-center font-medium mb-[25px] lg:mb-[15px]">
-                                Our Tech Stack
-                            </h6>
+                    <Row className="justify-center">
+                        <Col md={12} className="text-center mb-[6%]">
+                            <h6 className="font-serif text-darkgray font-medium">Our Tech Stack</h6>
                         </Col>
                     </Row>
-                    
-                    <Row>
-                        <Col lg={12} className="px-[15px] md:mb-[15px]">
-                            <Row>
-                                <Col lg={4} className="px-[15px] md:mb-[15px]">
-                                    <div className="bg-lightgray p-[40px] sm:p-[30px]">
-                                        <h5 className="text-darkgray lg:mb-[15px]">Technologies</h5>
-                                        <Lists theme="list-style-06" data={TechnologiesList} animation={fadeIn}/>
-                                    </div>
+                    <Tabs className="tab-style-01 font-serif mb-[7.4rem] flex bg-transparent border-b-0 font-medium text-center justify-center md:mb-[60px] sm:mb-[20px]">
+                        <Tab className="tab-style-01" key={1} eventKey={1} title={ "Technologies"}>
+                            <m.div className='row items-center' {...{ ...fadeIn, transition: { duration: 0.9 }, viewport: { once: false } }}>
+                                <Col lg={{ offset: 1, span: 11 }} md={12} className="md:px-[15px] sm:px-[15px] sm:text-start xs:text-center">
+                                    <Clients
+                                        theme="client-logo-style-03"
+                                        className="swiper-navigation-04 swiper-navigation-light"
+                                        data={TechList}
+                                        animation={fadeIn}
+                                        carousel={true}
+                                        carouselOption={{
+                                            slidesPerView: 1,
+                                            loop: true,
+                                            spaceBetween: 20,
+                                            autoplay: { delay: 3000, disableOnInteraction: false },
+                                            navigation: true,
+                                            breakpoints: { 1200: { slidesPerView: 4 }, 992: { slidesPerView: 3 }, 768: { slidesPerView: 3 } }
+                                        }}
+                                    />
                                 </Col>
-                                
-                                <Col lg={8} className="px-[15px] md:mb-[15px]">
-                                    <Row className="ml-3">
-                                        <Col lg={6} className="px-[15px] md:mb-[15px]">
-                                            <div className="bg-lightgray p-[40px] sm:p-[30px]">
-                                                <h5 className="text-dark lg:mb-[15px]">Languages</h5>
-                                                <Lists theme="list-style-06" data={Languages} animation={fadeIn}/>
-                                            </div>
-                                            <div className="bg-lightgray p-[40px] sm:p-[30px] mt-4">
-                                                <h5 className="text-dark lg:mb-[15px]">Frameworks</h5>
-                                                <Lists theme="list-style-06" data={Frameworks} animation={fadeIn}/>
-                                            </div>
-                                        </Col>
-                                        <Col lg={6} className="px-[15px] md:mb-[15px]">
-                                            <div className="bg-lightgray p-[40px] sm:p-[30px]">
-                                                <h5 className="text-dark lg:mb-[15px]">Data Formats</h5>
-                                                <Lists theme="list-style-06" data={DataFormats} animation={fadeIn}/>
-                                            </div>
-                                            <div className="bg-lightgray p-[40px] sm:p-[30px] mt-4">
-                                                <h5 className="text-dark lg:mb-[15px]">ORM</h5>
-                                                <Lists theme="list-style-06" data={ORM} animation={fadeIn}/>
-                                            </div>
-                                            <div className="bg-lightgray p-[40px] sm:p-[30px] mt-4">
-                                                <h5 className="text-dark lg:mb-[15px]">Cloud And Database</h5>
-                                                <Lists theme="list-style-06" data={CloudAndDataDatabase}
-                                                       animation={fadeIn}/>
-                                            </div>
-                                        </Col>
-                                    </Row>
+                            </m.div>
+                        </Tab>
+                        <Tab className="tab-style-01" key={2} eventKey={2} title={ "Languages"}>
+                            <m.div className='row items-center' {...{ ...fadeIn, transition: { duration: 0.9 }, viewport: { once: false } }}>
+                                <Col lg={{ offset: 1, span: 11 }} md={12} className="md:px-[15px] sm:px-[15px] sm:text-start xs:text-center">
+                                    <Clients
+                                        theme="client-logo-style-03"
+                                        className="swiper-navigation-04 swiper-navigation-light"
+                                        data={LanguagesList}
+                                        animation={fadeIn}
+                                        carousel={true}
+                                        carouselOption={{
+                                            slidesPerView: 1,
+                                            loop: true,
+                                            spaceBetween: 20,
+                                            autoplay: { delay: 3000, disableOnInteraction: false },
+                                            navigation: true,
+                                            breakpoints: { 1200: { slidesPerView: 4 }, 992: { slidesPerView: 3 }, 768: { slidesPerView: 3 } }
+                                        }}
+                                    />
                                 </Col>
-                            </Row>
-                        </Col>
-
-                    </Row>
+                            </m.div>
+                        </Tab>
+                        <Tab className="tab-style-01" key={3} eventKey={3} title={ "Data Formats"}>
+                            <m.div className='row items-center' {...{ ...fadeIn, transition: { duration: 0.9 }, viewport: { once: false } }}>
+                                <Col lg={{ offset: 1, span: 11 }} md={12} className="md:px-[15px] sm:px-[15px] sm:text-start xs:text-center">
+                                    <Clients
+                                        theme="client-logo-style-03"
+                                        className="swiper-navigation-04 swiper-navigation-light"
+                                        data={DataFormatList}
+                                        animation={fadeIn}
+                                        carousel={true}
+                                        carouselOption={{
+                                            slidesPerView: 1,
+                                            loop: true,
+                                            spaceBetween: 20,
+                                            autoplay: { delay: 3000, disableOnInteraction: false },
+                                            navigation: true,
+                                            breakpoints: { 1200: { slidesPerView: 3 }, 992: { slidesPerView: 3 }, 768: { slidesPerView: 3 } }
+                                        }}
+                                    />
+                                </Col>
+                            </m.div>
+                        </Tab>
+                        <Tab className="tab-style-01" key={4} eventKey={4} title={ "Cloud And Data Database"}>
+                            <m.div className='row items-center' {...{ ...fadeIn, transition: { duration: 0.9 }, viewport: { once: false } }}>
+                                <Col lg={{ offset: 1, span: 11 }} md={12} className="md:px-[15px] sm:px-[15px] sm:text-start xs:text-center">
+                                    <Clients
+                                        theme="client-logo-style-03"
+                                        className="swiper-navigation-04 swiper-navigation-light"
+                                        data={CloudAndDataDatabaseList}
+                                        animation={fadeIn}
+                                        carousel={true}
+                                        carouselOption={{
+                                            slidesPerView: 1,
+                                            loop: true,
+                                            spaceBetween: 20,
+                                            autoplay: { delay: 3000, disableOnInteraction: false },
+                                            navigation: true,
+                                            breakpoints: { 1200: { slidesPerView: 3 }, 992: { slidesPerView: 3 }, 768: { slidesPerView: 3 } }
+                                        }}
+                                    />
+                                </Col>
+                            </m.div>
+                        </Tab>
+                        <Tab className="tab-style-01" key={5} eventKey={5} title={ "ORM"}>
+                            <m.div className='row items-center' {...{ ...fadeIn, transition: { duration: 0.9 }, viewport: { once: false } }}>
+                                <Col lg={{ offset: 1, span: 11 }} md={12} className="md:px-[15px] sm:px-[15px] sm:text-start xs:text-center" >
+                                    <Clients
+                                        theme="client-logo-style-03"
+                                        className="swiper-navigation-04 swiper-navigation-light justify-content-center"
+                                        data={ORMList}
+                                        animation={fadeIn}
+                                        carousel={true}
+                                        carouselOption={{
+                                            slidesPerView: 1,
+                                            loop: true,
+                                            spaceBetween: 20,
+                                            autoplay: { delay: 3000, disableOnInteraction: false },
+                                            navigation: true,
+                                            breakpoints: { 1200: { slidesPerView: 2 }, 992: { slidesPerView: 2 }, 768: { slidesPerView: 2 } }
+                                        }}
+                                    />
+                                </Col>
+                            </m.div>
+                        </Tab>
+                        <Tab className="tab-style-01" key={6} eventKey={6} title={ "Frameworks"}>
+                            <m.div className='row items-center' {...{ ...fadeIn, transition: { duration: 0.9 }, viewport: { once: false } }}>
+                                <Col lg={{ offset: 1, span: 11 }} md={12} className="md:px-[15px] sm:px-[15px] sm:text-start xs:text-center">
+                                    <Clients
+                                        theme="client-logo-style-03"
+                                        className="swiper-navigation-04 swiper-navigation-light"
+                                        data={FrameworksList}
+                                        animation={fadeIn}
+                                        carousel={true}
+                                        carouselOption={{
+                                            slidesPerView: 1,
+                                            loop: true,
+                                            spaceBetween: 20,
+                                            autoplay: { delay: 3000, disableOnInteraction: false },
+                                            navigation: true,
+                                            breakpoints: { 1200: { slidesPerView: 4 }, 992: { slidesPerView: 3 }, 768: { slidesPerView: 3 } }
+                                        }}
+                                    />
+                                </Col>
+                            </m.div>
+                        </Tab>
+                    </Tabs>
                 </Container>
             </m.section>
+            {/* Section End */}
 
+
+            {/* CTA Banner Section Start */}
+            <section className="lg:pt-[160px] md:pt-[10px] sm:pt-[50px] ">
+                <Container fluid>
+                    <Row style={{backgroundImage: `url(https://iili.io/JWPWj3b.png)`}}
+                         className="cover-background relative cover-background lg:py-[90px] md:py-[75px] sm:py-[50px]">
+                        <Col xs={12} className="text-center my-[5rem] md:my-[7.5rem]">
+                            <Buttons ariaLabel="button"
+                                     href="/contact"
+                                     className="mx-[10px] font-medium font-serif uppercase rounded-none lg:mb-[15px] landscape:lg:mb-[15px] justify-center align-items-center"
+                                     themeColor={["#556fff", "#ff798e"]} size="md" color="#fff"
+                                     title="SCHEDULE A MEETING"/>
+                        </Col>
+                    </Row>
+                </Container>
+            </section>
+            {/* CTA Banner Section End */}
+
+
+            {/* Section Start */}
+            
+            
             <m.section className="py-[160px] lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px]" {...fadeIn}>
-            <Container>
+                <Container>
 
                 </Container>
             </m.section>

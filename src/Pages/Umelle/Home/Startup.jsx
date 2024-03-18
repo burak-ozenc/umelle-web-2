@@ -4,7 +4,7 @@ import React, {lazy, useRef} from 'react'
 import {Link} from 'react-router-dom';
 import {Col, Container, Navbar, Row, Tab, Tabs} from "react-bootstrap";
 import * as Yup from 'yup';
-import {AnimatePresence, domMax, LazyMotion, m} from 'framer-motion';
+import {AnimatePresence, m} from 'framer-motion';
 import {Form, Formik} from 'formik';
 
 // Functions
@@ -168,8 +168,7 @@ const HomeStartupPage = (props) => {
                 </Overlap>
             </section>
             {/* Section End */}
-
-
+            
             {/* Section Start */}
             <section id="test" className="pt-20 switch-tabs">
                 <Col className="text-center">
@@ -500,34 +499,49 @@ const HomeStartupPage = (props) => {
             </section>
             {/* Section End */}
 
-
-            {/* Section start */}
-            <section className="overflow-visible h-[225px]2"
-                     style={{backgroundImage: `url("https://i.ibb.co/XZsnq0w/homepage-bottompagebanner-CTA-v2-01.png")`}}>
-                <Container>
-                    <LazyMotion strict features={domMax}>
-                        <Row
-                            className="md:h-[450px] sm:h-[450px] xs:h-[450px] align-items-center justify-center "
-                        >
-                            <Col xs={6} lg={6} md={6}
-                                 className="justify-center align-items-center items-center my-0 mx-auto relative flex flex-col">
-                                <div initial={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)'}}
-                                     animate={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)'}}
-                                     transition={{duration: 0.5, delay: 0.9, ease: "easeIn"}}
-                                     className="justify-center m-[7rem] align-items-center"
-                                >
-                                    <Buttons ariaLabel="button"
-                                             href="/contact"
-                                             className="mx-[10px] font-medium font-serif uppercase rounded-none lg:mb-[15px] landscape:lg:mb-[15px] justify-center align-items-center"
-                                             themeColor={["#556fff", "#ff798e"]} size="md" color="#fff"
-                                             title="SCHEDULE A MEETING"/>
-                                </div>
-                            </Col>
-                        </Row>
-                    </LazyMotion>
+            {/* CTA Banner Section Start */}
+            <section className="lg:pt-[160px] md:pt-[10px] sm:pt-[50px] " >
+                <Container fluid>
+                    <Row  style={{ backgroundImage: `url(https://i.ibb.co/XZsnq0w/homepage-bottompagebanner-CTA-v2-01.png)` }} className="cover-background relative cover-background lg:py-[90px] md:py-[75px] sm:py-[50px]">
+                        <Col xs={12} className="text-center my-[5rem] md:my-[7.5rem]">
+                                                    <Buttons ariaLabel="button"
+                                                             href="/contact"
+                                                             className="mx-[10px] font-medium font-serif uppercase rounded-none lg:mb-[15px] landscape:lg:mb-[15px] justify-center align-items-center"
+                                                             themeColor={["#556fff", "#ff798e"]} size="md" color="#fff"
+                                                             title="SCHEDULE A MEETING"/>
+                        </Col>
+                    </Row>
                 </Container>
             </section>
-            {/* Section End */}
+            {/* CTA Banner Section End */}
+
+            {/*/!* Section start *!/*/}
+            {/*<section className="overflow-visible h-[225px]2"*/}
+            {/*         style={{backgroundImage: `url("https://i.ibb.co/XZsnq0w/homepage-bottompagebanner-CTA-v2-01.png")`}}>*/}
+            {/*    <Container>*/}
+            {/*        <LazyMotion strict features={domMax}>*/}
+            {/*            <Row*/}
+            {/*                className="md:h-[450px] sm:h-[450px] xs:h-[450px] align-items-center justify-center "*/}
+            {/*            >*/}
+            {/*                <Col xs={6} lg={6} md={6}*/}
+            {/*                     className="justify-center align-items-center items-center my-0 mx-auto relative flex flex-col">*/}
+            {/*                    <div initial={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)'}}*/}
+            {/*                         animate={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)'}}*/}
+            {/*                         transition={{duration: 0.5, delay: 0.9, ease: "easeIn"}}*/}
+            {/*                         className="justify-center m-[7rem] align-items-center"*/}
+            {/*                    >*/}
+            {/*                        <Buttons ariaLabel="button"*/}
+            {/*                                 href="/contact"*/}
+            {/*                                 className="mx-[10px] font-medium font-serif uppercase rounded-none lg:mb-[15px] landscape:lg:mb-[15px] justify-center align-items-center"*/}
+            {/*                                 themeColor={["#556fff", "#ff798e"]} size="md" color="#fff"*/}
+            {/*                                 title="SCHEDULE A MEETING"/>*/}
+            {/*                    </div>*/}
+            {/*                </Col>*/}
+            {/*            </Row>*/}
+            {/*        </LazyMotion>*/}
+            {/*    </Container>*/}
+            {/*</section>*/}
+            {/*/!* Section End *!/*/}
 
             {/* Footer Start */}
             <Footer className="startup-footer bg-no-repeat bg-right" theme="light"

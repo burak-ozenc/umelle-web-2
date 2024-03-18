@@ -1,4 +1,4 @@
-import React, {lazy, useRef} from 'react'
+import React, {lazy, useEffect, useRef, useState} from 'react'
 
 // Libraries
 import {Link} from 'react-router-dom';
@@ -9,7 +9,7 @@ import {Form, Formik} from 'formik';
 
 // Functions
 import {fadeIn} from '../../../Functions/GlobalAnimations';
-import {ScrollToAnchor} from '../../../Functions/Utilities';
+// import {ScrollToAnchor} from '../../../Functions/Utilities';
 
 // Components
 import {resetForm, sendEmail} from "../../../Functions/Utilities";
@@ -30,12 +30,12 @@ import AccordionSolutions from "../../../Components/Accordion/AccordionSolutions
 import Buttons from "../../../Components/Button/Buttons";
 import {ContactFormStyle02Schema} from "../../../Components/Form/FormSchema";
 import ReCAPTCHA from "react-google-recaptcha";
+import {AccordionDataSolutions} from "../../../Components/Accordion/AccordionData";
 
 const HamburgerMenu = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.HamburgerMenu})))
 const Header = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Header})))
 const HeaderNav = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.HeaderNav})))
 const Menu = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Menu})))
-const SearchBar = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.SearchBar})))
 
 const ProcessStep = lazy(() => import('../../../Components/ProcessStep/ProcessStep'))
 const Overlap = lazy(() => import('../../../Components/Overlap/Overlap'))
@@ -58,16 +58,92 @@ const SocialIconsData = [{
     color: "#0077b5", link: "https://www.linkedin.com/", icon: "fab fa-linkedin-in"
 },]
 
+
 const Footer_Data = [FooterData[0], FooterData[1], FooterData[4], FooterData[3]]
+
+// var hash = window.decodeURIComponent(window.location.hash);
 
 const HomeStartupPage = (props) => {
     const form1 = useRef(null)
     const recaptcha = useRef()
-    ScrollToAnchor();
+    const [anchorKey, setAnchorKey] = useState(0)
+    // ScrollToAnchor();
+    console.log(window.location.hash.split('#'))
+
+
+    // const hashParts = window.location.hash.split('#');
+    // if (hashParts.length > 1) {
+    //     const hash = hashParts.slice(-1)[0];
+    //     console.log(hash)
+    // }    
+
+    // const scrollToAnchor = () => {
+    //     const hashParts = window.location.hash.split('#');
+    //     if (hashParts.length > 1) {
+    //         const hash = hashParts.slice(-1)[0];
+    //
+    //
+    //         function searchByKey(array, id) {
+    //             for (let i = 0; i < array.length; i++) {
+    //                 if (array[i].id === id) {
+    //                     return array[i].key;
+    //                 }
+    //             }
+    //             // Return null if id is not found
+    //             return 0;
+    //         }
+    //
+    //         console.log(hash)
+    //         console.log(searchByKey(AccordionDataSolutions, hash))
+    //         setAnchorKey(searchByKey(AccordionDataSolutions, hash))
+    //         // document.querySelector(`#${hash}`).scrollIntoView();
+    //     }
+    // };
+    //
+    // scrollToAnchor();
+    // window.onhashchange = scrollToAnchor;
+
+
+    useEffect(() => {
+        // Decode entities in the URL
+        // Sometimes a URL like #/foo#bar will be encoded as #/foo%23bar
+        window.location.hash = window.decodeURIComponent(window.location.hash);
+        // const scrollToAnchor = () => {
+            const hashParts = window.location.hash.split('#');
+            if (hashParts.length > 1) {
+                const hash = hashParts.slice(-1)[0];
+
+
+                function searchByKey(array, id) {
+                    for (let i = 0; i < array.length; i++) {
+                        if (array[i].id === id) {
+                            return array[i].key;
+                        }
+                    }
+                    // Return null if id is not found
+                    return 0;
+                }
+
+                console.log('hash ', hash)
+                console.log('key ', searchByKey(AccordionDataSolutions, hash))
+                setAnchorKey(searchByKey(AccordionDataSolutions, hash))
+                // document.querySelector(`#${hash}`).scrollIntoView();
+            }
+        // };
+
+        // scrollToAnchor();
+        // window.onhashchange = scrollToAnchor;
+
+        // Cleanup function to remove event listener
+        return () => {
+            window.onhashchange = null;
+        };
+    }, []); // Empty dependency array to run only once after initial mount
+
     return (<div style={props.style}>
         {/* Header Start */}
         <Header topSpace={{md: true}} type="reverse-scroll">
-            <HeaderNav fluid="fluid" theme="dark" expand="lg"
+            <HeaderNav fluid="fluid" theme="white" expand="lg"
                        className="py-[0px] px-[35px] md:px-[15px] md:py-[20px] sm:px-0">
                 <Col lg={2} sm={6} xs={"auto"} className="mr-auto ps-0">
                     <Link aria-label="header logo" className="flex items-center" to="/">
@@ -94,7 +170,6 @@ const HomeStartupPage = (props) => {
                     <Menu {...props} />
                 </Navbar.Collapse>
                 <Col lg={2} xs={"auto"} className="justify-end pe-0 flex items-center">
-                    <SearchBar/>
                     <div className="md:hidden pl-[17px]">
                         <HamburgerMenu className="" theme="dark">
                             <Col
@@ -183,13 +258,10 @@ const HomeStartupPage = (props) => {
                             <div initial={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)'}}
                                  animate={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)'}}
                                  transition={{duration: 0.5, delay: 0.9, ease: "easeIn"}}>
-                                <Link aria-label="started now" to="/page/contact-classic"
-                                      className="uppercase startup-link font-medium">
-                                    SCHEDULE A MEETING
-                                    <div>
-                                        <i className="fas fa-play"></i>
-                                    </div>
-                                </Link>
+                                <Buttons ariaLabel="button" href="/contact"
+                                         className="mx-[10px] rounded-none font-medium font-serif uppercase bg-[#fff] hover:text-white"
+                                         themeColor="#000" size="lg" color="#000" icon="fas fa-arrow-right right-icon"
+                                         iconPosition="after" title="SCHEDULE A MEETING"/>
                             </div>
                         </Col>
                     </Row>
@@ -221,7 +293,13 @@ const HomeStartupPage = (props) => {
                         <Container>
                             <Row className="justify-center">
                                 <Col lg={10} md={10}>
-                                    <AccordionSolutions theme="accordion-style-03" animation={fadeIn}/>
+                                    {anchorKey !== 0 ?
+                                        (<AccordionSolutions theme="accordion-style-03" animation={fadeIn}
+                                                             activeKey={anchorKey}/>)
+                                        :
+                                        (<AccordionSolutions theme="accordion-style-03" animation={fadeIn}
+                                                             activeKey={9}/>)
+                                    }
                                 </Col>
                             </Row>
                         </Container>
@@ -365,7 +443,7 @@ const HomeStartupPage = (props) => {
                         <Col md={4}>
                             <div>
                                 <p>
-                                    <span className="font-bold">Client Name :</span> 
+                                    <span className="font-bold">Client Name :</span>
                                     ACWA JPIA
                                 </p>
                                 <br/>
@@ -377,7 +455,8 @@ const HomeStartupPage = (props) => {
                                 <p>
                                     <span className="font-bold">Client Overview:</span>
                                     ACWA JPIA is a pooled insurer providing insurance services to more than 350
-                                    members. Part of the larger JPIA group of like-minded Insurers and Service Providers,
+                                    members. Part of the larger JPIA group of like-minded Insurers and Service
+                                    Providers,
                                     they provide top-level services to their members and clients.
                                 </p>
                             </div>
@@ -778,33 +857,22 @@ const HomeStartupPage = (props) => {
             </m.section>
             {/* Section End */}
 
-            {/* Section start */}
-            <section className="h-[225px]2"
-                     style={{backgroundImage: `url("https://iili.io/JWPWj3b.png")`}}>
-                <Container>
-                    <LazyMotion strict features={domMax}>
-                        <Row
-                            className="md:h-[450px] sm:h-[450px] xs:h-[450px] align-items-center justify-center "
-                        >
-                            <Col xs={6} lg={6} md={6}
-                                 className="justify-center align-items-center items-center my-0 mx-auto relative flex flex-col">
-                                <div initial={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)'}}
-                                     animate={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)'}}
-                                     transition={{duration: 0.5, delay: 0.9, ease: "easeIn"}}
-                                     className="justify-center m-[7rem] align-items-center"
-                                >
-                                    <Buttons ariaLabel="button"
-                                             href="/contact"
-                                             className="mx-[10px] font-medium font-serif uppercase rounded-none lg:mb-[15px] landscape:lg:mb-[15px] justify-center align-items-center"
-                                             themeColor={["#556fff", "#ff798e"]} size="md" color="#fff"
-                                             title="SCHEDULE A MEETING"/>
-                                </div>
-                            </Col>
-                        </Row>
-                    </LazyMotion>
+            {/* CTA Banner Section Start */}
+            <section className="lg:pt-[160px] md:pt-[10px] sm:pt-[50px] ">
+                <Container fluid>
+                    <Row style={{backgroundImage: `url(https://iili.io/JWPWj3b.png)`}}
+                         className="cover-background relative cover-background lg:py-[90px] md:py-[75px] sm:py-[50px]">
+                        <Col xs={12} className="text-center my-[5rem] md:my-[7.5rem]">
+                            <Buttons ariaLabel="button"
+                                     href="/contact"
+                                     className="mx-[10px] font-medium font-serif uppercase rounded-none lg:mb-[15px] landscape:lg:mb-[15px] justify-center align-items-center"
+                                     themeColor={["#556fff", "#ff798e"]} size="md" color="#fff"
+                                     title="SCHEDULE A MEETING"/>
+                        </Col>
+                    </Row>
                 </Container>
             </section>
-            {/* Section End */}
+            {/* CTA Banner Section End */}
 
             {/* Footer Start */}
             <Footer className="startup-footer bg-no-repeat bg-right" theme="light"

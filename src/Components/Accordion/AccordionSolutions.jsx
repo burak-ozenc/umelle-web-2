@@ -18,7 +18,7 @@ const AccordionSolution = (props) => {
     // }, [id])
     return (
         <div className={`${props.theme} ${props.themeColor}${props.className ? ` ${props.className}` : ""}`}>
-            <Accordion defaultActiveKey={0}>
+            <Accordion defaultActiveKey={props.activeKey}>
                 {
                     props.data.map((item, key) => {
                         return (
@@ -26,7 +26,7 @@ const AccordionSolution = (props) => {
                                 key={key}
                                 {...{ ...props.animation, transition: { delay: key * props.animationDelay } }}
                             >
-                                <Accordion.Item  key={key} eventKey={key}>
+                                <Accordion.Item  key={item.key} eventKey={item.key}>
                                     {item.title && 
                                         <Accordion.Header >
                                             { item.icon && <i className={`text-[2em] m-2 ${item.icon}`}></i>}
@@ -50,7 +50,8 @@ AccordionSolution.defaultProps = {
     data: AccordionDataSolutions,
     animationDelay: 0.2,
     theme: "accordion-style-01",
-    themeColor: "light"
+    themeColor: "light",
+    activeKey: 0
 }
 
 Accordion.propTypes = {
@@ -60,13 +61,15 @@ Accordion.propTypes = {
             title: PropTypes.string,
             content: PropTypes.string,
             icon: PropTypes.string,
-            id: PropTypes.string
+            id: PropTypes.string,
+            key: PropTypes.number,
         })
     ),
     animation: PropTypes.object,
     animationDelay: PropTypes.number,
     theme: PropTypes.string,
     themeColor: PropTypes.string,
+    activeKey: PropTypes.number,
 }
 
 export default memo(AccordionSolution)

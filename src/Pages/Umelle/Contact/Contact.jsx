@@ -54,7 +54,7 @@ const HomeStartupPage = (props) => {
     return (<div style={props.style}>
         {/* Header Start */}
         <Header topSpace={{md: true}} type="reverse-scroll">
-            <HeaderNav fluid="fluid" theme="dark" expand="lg"
+            <HeaderNav fluid="fluid" theme="light" expand="lg"
                        className="py-[0px] px-[35px] md:px-[15px] md:py-[20px] sm:px-0">
                 <Col lg={2} sm={6} xs={"auto"} className="mr-auto ps-0">
                     <Link aria-label="header logo" className="flex items-center" to="/">

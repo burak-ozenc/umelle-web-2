@@ -11,7 +11,7 @@ import { fadeIn } from "../../Functions/GlobalAnimations";
 // Data
 import {
   ClientData01,
-  ClientData02,
+  TechList,
   ClientData03,
   ClientData04,
   ClientData05,
@@ -73,7 +73,7 @@ const ClientPage = () => {
           <Clients
             grid="row-cols-1 row-cols-md-2 row-cols-lg-4 gap-y-5"
             theme="client-logo-style-02"
-            data={ClientData02}
+            data={TechList}
             animation={fadeIn}
           />
         </Container>
