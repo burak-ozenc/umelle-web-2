@@ -9,7 +9,6 @@ import {Form, Formik} from 'formik';
 
 // Functions
 import {fadeIn} from '../../../Functions/GlobalAnimations';
-// import {ScrollToAnchor} from '../../../Functions/Utilities';
 
 // Components
 import {resetForm, sendEmail} from "../../../Functions/Utilities";
@@ -24,8 +23,6 @@ import {CounterData05} from "../../../Components/Counters/CounterData";
 import Services from "../../../Components/Services/Services";
 import {serviceData5} from "../../../Components/Services/ServicesData";
 import {ProcessStepData02} from "../../../Components/ProcessStep/ProcessStepData";
-import FancyTextBox from "../../../Components/FancyTextBox/FancyTextBox";
-import {fancyTextBox06} from "../../../Components/FancyTextBox/FancyTextBoxData";
 import AccordionSolutions from "../../../Components/Accordion/AccordionSolutions";
 import Buttons from "../../../Components/Button/Buttons";
 import {ContactFormStyle02Schema} from "../../../Components/Form/FormSchema";
@@ -38,7 +35,6 @@ const HeaderNav = React.lazy(() => import("../../../Components/Header/Header").t
 const Menu = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Menu})))
 
 const ProcessStep = lazy(() => import('../../../Components/ProcessStep/ProcessStep'))
-const Overlap = lazy(() => import('../../../Components/Overlap/Overlap'))
 const ReactCustomScrollbar = lazy(() => import("../../../Components/ReactCustomScrollbar"))
 const MessageBox = lazy(() => import('../../../Components/MessageBox/MessageBox'))
 const SocialIcons = lazy(() => import("../../../Components/SocialIcon/SocialIcons"))
@@ -237,15 +233,12 @@ const HomeStartupPage = (props) => {
             <Container>
                 <LazyMotion strict features={domMax}>
                     <Row
-                        className="full-screen md:h-[650px] sm:h-[350px] xs:h-[450px] align-items-center justify-center">
+                        className="full-screen  pt-20 md:h-[650px] sm:h-[350px] xs:h-[450px] align-items-center justify-center">
                         <Col xs={6} lg={6} md={6}
                              className="justify-center items-center my-0 mx-auto relative flex flex-col">
-                            <m.h4 initial={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)'}}
-                                  animate={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)'}}
-                                  transition={{duration: 0.5, delay: 0.5, ease: "easeIn"}}
-                                  className="font-serif font-semibold pb-[10px] text-[60px] tracking-[0px] text-black mb-[35px] lg:text-[55px] lg:leading-[20px] xs:text-[35px] xs:leading-[40px] xs:mb-[20px]">
+                            <h6 className="font-serif text-darkgray text-center font-medium mb-[5%]">
                                 Tailor-Made Insurance Data Software Designed Around Your Business Needs
-                            </m.h4>
+                            </h6>
                             <m.span initial={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)'}}
                                     animate={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)'}}
                                     transition={{duration: 0.5, delay: 0.8, ease: "easeIn"}}
@@ -271,12 +264,12 @@ const HomeStartupPage = (props) => {
         {/* Section End */}
 
         {/* Section Start */}
-        <section className="pt-20 switch-tabs">
+        <section className="bg-white pt-20 switch-tabs">
             <Col className="text-center">
                 <h6 className="font-serif text-darkgray text-center font-medium mb-[5%]">
                     Empowering Pooled Insurance with Tailor-Made Solutions
                 </h6>
-                <p className="m-[150px] text-[23px] mb-[100px]">
+                <p className="m-[50px] text-[23px] mb-[10px]">
                     Off-the-shelf software often falls short. Recognizing this gap, we offer solutions and experience to
                     help meet your precise needs by providing targeted benefits through our core competencies.
                 </p>
@@ -289,7 +282,7 @@ const HomeStartupPage = (props) => {
             >
                 {/* Accordion style 03 ( Light ) start */}
                 <Tab eventKey="light" title="LIGHT">
-                    <m.section className="py-20 bg-lightgray">
+                    <m.section className="py-20 white">
                         <Container>
                             <Row className="justify-center">
                                 <Col lg={10} md={10}>
@@ -312,44 +305,12 @@ const HomeStartupPage = (props) => {
 
         {/* Lazy Load HTML */}
         <InViewPort>
-            {/* Section Start */}
-            <section className="sm:pt-[50px] mb-[130px] md:mb-[50px] sm:mb-0 inline-block w-full">
-                <Overlap>
-
-                </Overlap>
-            </section>
-            {/* Section End */}
-
-
-            <m.section className="bg-white py-[160px] lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px]" {...fadeIn}>
-                <Container>
-                    <Row>
-                        <Col className="mb-[4%]">
-                            <h6 className="font-medium text-darkgray mb-[25px] lg:mb-[15px] font-serif xs:text-[20px]">
-                                Empowering Pooled Insurance with Tailor-Made Solutions
-                            </h6>
-                            <p>
-                                Off-the-shelf software often falls short. Recognizing this gap, we offer solutions and
-                                experience to help meet your precise needs by providing targeted benefits through our
-                                core competencies.
-                            </p>
-                        </Col>
-                    </Row>
-                    <FancyTextBox
-                        grid="row-cols-1 row-cols-lg-2 gap-y-10 justify-center"
-                        className="col-12 col-lg-4 col-md-6 col-md-9"
-                        theme="fancy-text-box-04"
-                        data={fancyTextBox06}
-                        animation={fadeIn}/>
-                </Container>
-            </m.section>
-            {/* Section End */}
 
             {/* Info Banner Style 07 */}
-            <section className="py-[160px] lg:py-[95px] md:py-[75px]  xs:py-[50px]">
+            <section className="bg-lightgray lg:py-[5px] md:py-[75px]  xs:py-[50px]">
                 <Container>
                     <Row className="justify-center">
-                        <Col md={12} className="text-center mb-[7%]">
+                        <Col md={12} className="text-center mt-5 mb-[7%]">
                             <h4 className="font-serif text-darkgray font-medium">Customization at Its Core</h4>
                         </Col>
                     </Row>
@@ -367,8 +328,6 @@ const HomeStartupPage = (props) => {
                         <m.div className="col-12 p-0 col-lg-6" {...{...fadeIn, transition: {delay: 0.36}}} >
                             <m.div
                                 className="bg-gradient-to-tr from-[#556fff] via-[#ff77dd] to-[#f767a6] px-24 py-28 lg:py-20 lg:px-16 md:p-20 text-white text-center">
-
-
                                 <h6 className="font-serif text-white font-medium mb-[40px]">
                                     What truly sets our solution apart is our custom architecture. Recognizing that no
                                     two insurance providers are the same, we offer the ultimate flexibility: you can add
@@ -386,12 +345,6 @@ const HomeStartupPage = (props) => {
             <m.section
                 className="bg-lightgray py-[160px] lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px]" {...fadeIn}>
                 <Container>
-                    <Row>
-                        <Col className="mb-[6%]">
-                            <h6 className="font-serif text-darkgray text-center font-medium mb-[25px] lg:mb-[15px]">Our
-                                Solutions:</h6>
-                        </Col>
-                    </Row>
                     <Counter
                         theme="counter-style-05"
                         grid="row-cols-1 row-cols-md-3 text-center gap-y-10"
@@ -407,11 +360,11 @@ const HomeStartupPage = (props) => {
 
             {/* Section Start */}
             <m.section
-                className="bg-lightgray border-t py-[160px] lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px]" {...fadeIn}>
+                className="bg-white border-t lg:py-[20px] md:py-[95px] sm:py-[80px] xs:py-[50px]" {...fadeIn}>
                 <Container>
                     <Row className="justify-center">
-                        <Col md={12} className="text-center mb-[7%]">
-                            <h6 className="font-serif text-darkgray font-medium">Crafted for Unmatched Efficiency</h6>
+                        <Col md={12} className="text-center m-5 mb-[7%]">
+                            <h6 className="font-serif text-black font-medium">Crafted for Unmatched Efficiency</h6>
                         </Col>
                     </Row>
                     <Row className="justify-center">
@@ -425,21 +378,25 @@ const HomeStartupPage = (props) => {
             </m.section>
             {/* Section End */}
 
-            {/* Section Start */}
-            <m.section className="py-[160px] lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px] bg-lightgray">
-                <h6 className="font-serif text-gray-900 text-center font-medium mb-24">Understand and apply the business
-                    process</h6>
+            {/*/!* Section Start *!/*/}
+            <m.section className="bg-lightgray py-[80px] lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px]">
+                <h6 className="font-serif text-gray-900 text-center font-medium mb-24">Let's redefine what's possible together</h6>
                 <Container>
                     <ProcessStep grid="row-cols-1 row-cols-sm-2 row-cols-lg-5 gap-y-10" className=""
                                  theme="process-step-style-03" data={ProcessStepData02} animation={fadeIn}/>
                 </Container>
             </m.section>
-            {/* Section End */}
+            {/*/!* Section End *!/*/}
 
             {/* Section Start */}
             <m.section>
                 <Container>
-                    <Row className="mt-[100px]">
+                    <Row>
+                        <h6 className="text-center text-black justify-center align-items-center m-5">
+                            Transforming Industries: Real-World Success Story
+                        </h6>
+                    </Row>
+                    <Row className="mt-[40px]">
                         <Col md={4}>
                             <div>
                                 <p>
@@ -633,7 +590,7 @@ const HomeStartupPage = (props) => {
             {/* Section Start */}
 
             {/* Section Start */}
-            <m.section className="py-[160px] lg:py-[120px] md:py-[80px] xs:py-[50px]" {...fadeIn}>
+            <m.section className="py-[60px] lg:py-[120px] md:py-[80px] xs:py-[50px] bg-lightgray" {...fadeIn}>
                 <Container>
                     <Row>
                         <Col className='mb-[6%]'>
@@ -860,7 +817,7 @@ const HomeStartupPage = (props) => {
             {/* CTA Banner Section Start */}
             <section className="lg:pt-[160px] md:pt-[10px] sm:pt-[50px] ">
                 <Container fluid>
-                    <Row style={{backgroundImage: `url(https://iili.io/JWPWj3b.png)`}}
+                    <Row style={{backgroundImage: `url(https://i.ibb.co/cNtVkT3/homepage-bottompagebanner-CTA-01.png)`}}
                          className="cover-background relative cover-background lg:py-[90px] md:py-[75px] sm:py-[50px]">
                         <Col xs={12} className="text-center my-[5rem] md:my-[7.5rem]">
                             <Buttons ariaLabel="button"

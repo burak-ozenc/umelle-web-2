@@ -13,7 +13,7 @@ const StartupPageBannerSlider = () => {
     const swiperData = [
         {
             img: "https://i.ibb.co/hHCtj1f/homeheader-v1-01.png",
-            title: "Customise Your Liability",
+            title: "",
             subTitle: "Pooled insurance management solutions tailored to your unique business logic"
         }
         ,

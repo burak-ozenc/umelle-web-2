@@ -30,25 +30,25 @@ const IconWithTextData_01 = [
         content: "Lorem ipsum is simply dummy text of the printing typesetting ipsum been text.",
     },
 ]
-
+// #3844F7","#902CFC"
 const IconWithTextData_02 = [
     {
-        icon: "line-icon-Light-Bulb text-gradient bg-gradient-to-r from-[#556fff] via-[#e05fc4] to-[#ff798e]",
+        icon: "line-icon-Light-Bulb text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC]",
         title: "Solution Consulting",
         content: "We're committed to delivering excellence. Our solution consultants are ready to equip you with innovative and time-tested strategies, ensuring technology solves your business challenges effectively.",
     },
     {
-        icon: "line-icon-Conference text-gradient bg-gradient-to-r from-[#556fff] via-[#e05fc4] to-[#ff798e]",
+        icon: "line-icon-Conference text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC]",
         title: "Dedicated Team",
         content: "Skip the hassle of recruitment and training. With us, you gain access to a dedicated team focused on delivering your solution only.  We ensure your project crosses the finish line on schedule.",
     },
     {
-        icon: "line-icon-Handshake text-gradient bg-gradient-to-r from-[#556fff] via-[#e05fc4] to-[#ff798e]",
+        icon: "line-icon-Handshake text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC]",
         title: "Collaborative Approach",
         content: "Communication is key, and we're always to update you on our latest progress. Our flexible communication framework is designed to adapt to your preferred updates and check-in schedule, ensuring you're always in the loop.",
     },
     {
-        icon: "line-icon-Resize text-gradient bg-gradient-to-r from-[#556fff] via-[#e05fc4] to-[#ff798e]",
+        icon: "line-icon-Resize text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC]",
         title: "Scalability",
         content: "Future-proof your operations with our cutting-edge modular architecture. We build systems that not only meet your current needs but also grow alongside your business, guaranteeing long-term scalability and adaptability.",
     },

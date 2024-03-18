@@ -111,7 +111,7 @@ const CounterData05 = [
     {
         number:{
             text: "1106",
-            class: "text-gradient bg-gradient-to-r from-[#556fff] to-[#e66176] inline-block"
+            class: "text-gradient text-[14em] bg-gradient-to-r from-[#556fff] to-[#e66176] inline-block"
         },
         title:" Auto-Generated Invoices",
         content:"",

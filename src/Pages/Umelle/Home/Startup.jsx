@@ -170,12 +170,12 @@ const HomeStartupPage = (props) => {
             {/* Section End */}
             
             {/* Section Start */}
-            <section id="test" className="pt-20 switch-tabs">
+            <section id="test" className="bg-lightgray pt-20 switch-tabs">
                 <Col className="text-center">
                     <h6 className="font-serif text-darkgray text-center font-medium mb-[5%]">
                         We understand the unique challenges and needs of pooled insurance providers
                     </h6>
-                    <p className="m-[150px] text-[23px] mb-[100px]">
+                    <p className="m-[50px] text-[23px] mb-[0px]">
                         That's why we've meticulously crafted a solution that not only meets these needs but exceeds
                         them, providing a blend of fiscal precision and superior member service.
                     </p>
@@ -205,7 +205,7 @@ const HomeStartupPage = (props) => {
 
             {/* Section Start */}
             <m.section
-                className="py-[120px] overflow-hidden lg:py-[90px] md:py-[75px] sm:py-[50px] bg-lightgray lg:px-0 md:px-0 sm:px-0 xs:px-0">
+                className="py-[120px] overflow-hidden lg:py-[90px] md:py-[75px] sm:py-[50px] bg-white lg:px-0 md:px-0 sm:px-0 xs:px-0">
                 <Container>
                     <h6 className="font-serif text-darkgray text-center font-medium mb-[94px] md:mb-[50px]">
                         Customer Satisfaction
@@ -218,7 +218,8 @@ const HomeStartupPage = (props) => {
                                 trailColor="#f7f7f7"
                                 height="8px"
                                 data={ProgressBarData02}
-                                color={["#2ed47c", "#e8bf47"]}/>
+                                color={[ "#3844F7","#902CFC"]}/>
+                                {/*color={[ "#902CFC", "#4423C4"]}/>*/}
                         </Col>
                     </Row>
                 </Container>
@@ -226,12 +227,14 @@ const HomeStartupPage = (props) => {
             {/* Section End */}
 
             {/* Section Start */}
-            <m.section className="py-[160px] lg:py-[120px] md:py-[80px] xs:py-[50px]" {...fadeIn}>
+            <m.section className="bg-lightgray py-[160px] lg:py-[120px] md:py-[80px] xs:py-[50px]" {...fadeIn}>
                 <Container>
                     <Row>
                         <Col className='mb-[6%]'>
                             <h6 className="font-serif text-gray-900 text-center font-medium mb-[25px] lg:mb-[15px]">
-                                Stop overpaying for superfluous features and never miss out on the functionalities you need. Experience the perfect balance of cost and utility.
+                                Stop overpaying for superfluous features and never miss out on the functionalities you need
+                                <br/>
+                                Experience the perfect balance of cost and utility
                             </h6>
                         </Col>
                     </Row>
@@ -254,7 +257,7 @@ const HomeStartupPage = (props) => {
                                     <Form ref={form1}>
                                         <Row>
                                             <Col xl={7} md={7} xs={7}>
-                                                <Row className="bg-lightgray p-3 m-2">
+                                                <Row className="bg-white p-3 m-2">
                                                     <h4 className="text-center">
                                                         Features
                                                     </h4>
@@ -352,11 +355,18 @@ const HomeStartupPage = (props) => {
                                                         Underwriting and Questionnaires 
                                                     </span>
                                                         </Checkbox>
+                                                        <Checkbox type="checkbox" name="checkbox_1_14"
+                                                                  className="inline-block"
+                                                                  labelClass="flex items-center mb-[5px]">
+                                                    <span className="ml-[10px] text-base">
+                                                        Other 
+                                                    </span>
+                                                        </Checkbox>
                                                     </Col>
                                                 </Row>
                                             </Col>
-                                            <Col className="bg-lightgray p-3 m-2" xl={4} md={4} xs={4}>
-                                                <h4>
+                                            <Col className="bg-white p-3 m-2" xl={4} md={4} xs={4}>
+                                                <h4 className="text-center">
                                                     Functions
                                                 </h4>
                                                 <Checkbox type="checkbox" name="checkbox_2_1" className="inline-block"
@@ -371,7 +381,7 @@ const HomeStartupPage = (props) => {
                                                         Program Management Wizard 
                                                     </span>
                                                 </Checkbox>
-                                                <Checkbox type="checkbox" name="checkbox_2_3" className="inline-block"
+                                                <Checkbox type="checkbox" name="checkbox_2_15" className="inline-block bg-[#3844F7]"
                                                           labelClass="flex items-center mb-[5px]">
                                                     <span className="ml-[10px] text-base">
                                                         Internal Chat 
@@ -502,13 +512,18 @@ const HomeStartupPage = (props) => {
             {/* CTA Banner Section Start */}
             <section className="lg:pt-[160px] md:pt-[10px] sm:pt-[50px] " >
                 <Container fluid>
-                    <Row  style={{ backgroundImage: `url(https://i.ibb.co/XZsnq0w/homepage-bottompagebanner-CTA-v2-01.png)` }} className="cover-background relative cover-background lg:py-[90px] md:py-[75px] sm:py-[50px]">
+
+                    <Row style={{backgroundImage: `url(https://i.ibb.co/cNtVkT3/homepage-bottompagebanner-CTA-01.png)`}}
+                         className="cover-background relative cover-background lg:py-[90px] md:py-[75px] sm:py-[50px] text-center">
+                        <h6 className="text-center bg-white m-3 w-25">
+                            Let's discuss your project
+                        </h6>
                         <Col xs={12} className="text-center my-[5rem] md:my-[7.5rem]">
-                                                    <Buttons ariaLabel="button"
-                                                             href="/contact"
-                                                             className="mx-[10px] font-medium font-serif uppercase rounded-none lg:mb-[15px] landscape:lg:mb-[15px] justify-center align-items-center"
-                                                             themeColor={["#556fff", "#ff798e"]} size="md" color="#fff"
-                                                             title="SCHEDULE A MEETING"/>
+                            <Buttons ariaLabel="button"
+                                     href="/contact"
+                                     className="mx-[10px] font-medium font-serif uppercase rounded-none lg:mb-[15px] landscape:lg:mb-[15px] justify-center align-items-center"
+                                     themeColor={["#3844F7", "#902CFC"]} size="md" color="#fff"
+                                     title="Schedule a meeting"/>
                         </Col>
                     </Row>
                 </Container>
