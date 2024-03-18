@@ -19,7 +19,7 @@ const FancyTextBoxSwitch = (params, item, i) => {
     switch (params.theme) {
         case "fancy-text-box-01":
             return (
-                <div className="text-box-content">
+                <div id={item.id} className="text-box-content">
                     <div className="text-box">
                         {item.icon.class && <i className={item.icon.class}></i>}
                         {item.title && <span>{item.title}</span>}
@@ -32,7 +32,7 @@ const FancyTextBoxSwitch = (params, item, i) => {
             )
         case "fancy-text-box-02":
             return (
-                <div className="text-box-content">
+                <div id={item.id} className="text-box-content">
                     <div className="text-box-wrapper">
                         {item.icon.class && <i className={item.icon.class}></i>}
                         <div className="text-box">
@@ -150,6 +150,7 @@ FancyTextBox.propTypes = {
             subTitle: PropTypes.string,
             backgroundText: PropTypes.string,
             hoverImg: PropTypes.string,
+            id: PropTypes.string,
         })
     ),
     animation: PropTypes.object,

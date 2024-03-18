@@ -105,26 +105,26 @@ const HomeStartupPage = (props) => {
         // Sometimes a URL like #/foo#bar will be encoded as #/foo%23bar
         window.location.hash = window.decodeURIComponent(window.location.hash);
         // const scrollToAnchor = () => {
-            const hashParts = window.location.hash.split('#');
-            if (hashParts.length > 1) {
-                const hash = hashParts.slice(-1)[0];
+        const hashParts = window.location.hash.split('#');
+        if (hashParts.length > 1) {
+            const hash = hashParts.slice(-1)[0];
 
 
-                function searchByKey(array, id) {
-                    for (let i = 0; i < array.length; i++) {
-                        if (array[i].id === id) {
-                            return array[i].key;
-                        }
+            function searchByKey(array, id) {
+                for (let i = 0; i < array.length; i++) {
+                    if (array[i].id === id) {
+                        return array[i].key;
                     }
-                    // Return null if id is not found
-                    return 0;
                 }
-
-                console.log('hash ', hash)
-                console.log('key ', searchByKey(AccordionDataSolutions, hash))
-                setAnchorKey(searchByKey(AccordionDataSolutions, hash))
-                // document.querySelector(`#${hash}`).scrollIntoView();
+                // Return null if id is not found
+                return 0;
             }
+
+            console.log('hash ', hash)
+            console.log('key ', searchByKey(AccordionDataSolutions, hash))
+            setAnchorKey(searchByKey(AccordionDataSolutions, hash))
+            // document.querySelector(`#${hash}`).scrollIntoView();
+        }
         // };
 
         // scrollToAnchor();
@@ -236,7 +236,7 @@ const HomeStartupPage = (props) => {
                         className="full-screen  pt-20 md:h-[650px] sm:h-[350px] xs:h-[450px] align-items-center justify-center">
                         <Col xs={6} lg={6} md={6}
                              className="justify-center items-center my-0 mx-auto relative flex flex-col">
-                            <h6 className="font-serif text-darkgray text-center font-medium mb-[5%]">
+                            <h6 className="font-serif block text-[42px] leading-[48px] mb-[35px] font-light text-black xs:text-base xs:mb-[40px]">
                                 Tailor-Made Insurance Data Software Designed Around Your Business Needs
                             </h6>
                             <m.span initial={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)'}}
@@ -248,14 +248,11 @@ const HomeStartupPage = (props) => {
                         </Col>
                         <Col xs={6} lg={6} md={6}
                              className="justify-center items-center my-0 mx-auto relative flex flex-col">
-                            <div initial={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)'}}
-                                 animate={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)'}}
-                                 transition={{duration: 0.5, delay: 0.9, ease: "easeIn"}}>
-                                <Buttons ariaLabel="button" href="/contact"
-                                         className="mx-[10px] rounded-none font-medium font-serif uppercase bg-[#fff] hover:text-white"
-                                         themeColor="#000" size="lg" color="#000" icon="fas fa-arrow-right right-icon"
-                                         iconPosition="after" title="SCHEDULE A MEETING"/>
-                            </div>
+                            <Buttons ariaLabel="button"
+                                     href="/contact"
+                                     className="mx-[10px] font-medium font-serif uppercase rounded-none lg:mb-[15px] landscape:lg:mb-[15px] justify-center align-items-center mt-4"
+                                     themeColor={["#3844F7", "#902CFC"]} size="md" color="#fff"
+                                     title="Schedule a meeting"/>
                         </Col>
                     </Row>
                 </LazyMotion>
@@ -321,13 +318,13 @@ const HomeStartupPage = (props) => {
                             transition: {delay: 0.2}
                         }} >
                             <m.h5
-                                className="font-medium text-darkgray mb-[25px] lg:mb-[15px] font-serif xs:text-[20px] m-[100px]">
+                                className="font-medium text-darkgray mb-[25px] lg:mb-[15px] font-serif xs:text-[30px] m-[100px]">
                                 Empowering Pooled Insurance with Tailor-Made Solutions
                             </m.h5>
                         </m.div>
                         <m.div className="col-12 p-0 col-lg-6" {...{...fadeIn, transition: {delay: 0.36}}} >
                             <m.div
-                                className="bg-gradient-to-tr from-[#556fff] via-[#ff77dd] to-[#f767a6] px-24 py-28 lg:py-20 lg:px-16 md:p-20 text-white text-center">
+                                className="bg-gradient-to-r from-[#3844F7]  to-[#902CFC] px-24 py-28 lg:py-20 lg:px-16 md:p-20 text-white text-center">
                                 <h6 className="font-serif text-white font-medium mb-[40px]">
                                     What truly sets our solution apart is our custom architecture. Recognizing that no
                                     two insurance providers are the same, we offer the ultimate flexibility: you can add
@@ -360,7 +357,7 @@ const HomeStartupPage = (props) => {
 
             {/* Section Start */}
             <m.section
-                className="bg-white border-t lg:py-[20px] md:py-[95px] sm:py-[80px] xs:py-[50px]" {...fadeIn}>
+                className="bg-white border-t lg:py-[20px] md:py-[95px] sm:py-[80px] xs:py-[50px] mb-5" {...fadeIn}>
                 <Container>
                     <Row className="justify-center">
                         <Col md={12} className="text-center m-5 mb-[7%]">
@@ -380,7 +377,8 @@ const HomeStartupPage = (props) => {
 
             {/*/!* Section Start *!/*/}
             <m.section className="bg-lightgray py-[80px] lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px]">
-                <h6 className="font-serif text-gray-900 text-center font-medium mb-24">Let's redefine what's possible together</h6>
+                <h6 className="font-serif text-gray-900 text-center font-medium mb-24">Let's redefine what's possible
+                    together</h6>
                 <Container>
                     <ProcessStep grid="row-cols-1 row-cols-sm-2 row-cols-lg-5 gap-y-10" className=""
                                  theme="process-step-style-03" data={ProcessStepData02} animation={fadeIn}/>
@@ -717,6 +715,13 @@ const HomeStartupPage = (props) => {
                                                         Underwriting and Questionnaires 
                                                     </span>
                                                         </Checkbox>
+                                                        <Checkbox type="checkbox" name="checkbox_1_14"
+                                                                  className="inline-block"
+                                                                  labelClass="flex items-center mb-[5px]">
+                                                    <span className="ml-[10px] text-base">
+                                                        Other
+                                                    </span>
+                                                        </Checkbox>
                                                     </Col>
                                                 </Row>
                                             </Col>
@@ -742,19 +747,19 @@ const HomeStartupPage = (props) => {
                                                         Internal Chat 
                                                     </span>
                                                 </Checkbox>
-                                                <Checkbox type="checkbox" name="checkbox_2_3" className="inline-block"
+                                                <Checkbox type="checkbox" name="checkbox_2_4" className="inline-block"
                                                           labelClass="flex items-center mb-[5px]">
                                                     <span className="ml-[10px] text-base">
                                                         Custom Business Settings 
                                                     </span>
                                                 </Checkbox>
-                                                <Checkbox type="checkbox" name="checkbox_2_4" className="inline-block"
+                                                <Checkbox type="checkbox" name="checkbox_2_5" className="inline-block"
                                                           labelClass="flex items-center mb-[5px]">
                                                     <span className="ml-[10px] text-base">
                                                         Discount Management 
                                                     </span>
                                                 </Checkbox>
-                                                <Checkbox type="checkbox" name="checkbox_2_5" className="inline-block"
+                                                <Checkbox type="checkbox" name="checkbox_2_6" className="inline-block"
                                                           labelClass="flex items-center mb-[5px]">
                                                     <span className="ml-[10px] text-base">
                                                         Automated Certificate Renewal 
@@ -762,7 +767,6 @@ const HomeStartupPage = (props) => {
                                                 </Checkbox>
                                             </Col>
                                         </Row>
-
                                         {process.env.REACT_APP_GRECAPTCHA_API_KEY && (
                                             <ReCAPTCHA
                                                 ref={recaptcha}

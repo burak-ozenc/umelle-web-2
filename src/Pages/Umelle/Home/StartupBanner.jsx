@@ -3,10 +3,10 @@ import {Swiper, SwiperSlide} from "swiper/react";
 import {Pagination, Navigation, EffectFade, Autoplay} from "swiper";
 import {LazyMotion, domMax, m} from 'framer-motion';
 import {Container, Row, Col} from 'react-bootstrap';
-import {Link} from 'react-router-dom';
 import {fadeIn} from "../../../Functions/GlobalAnimations";
 import Lists from "../../../Components/Lists/Lists";
 import {ListData01} from "../../../Components/Lists/ListsData";
+import Buttons from "../../../Components/Button/Buttons";
 
 const StartupPageBannerSlider = () => {
     const [activeSlide, setActiveSlide] = useState(0)
@@ -71,13 +71,11 @@ const StartupPageBannerSlider = () => {
                                             <m.div initial={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)'}}
                                                    animate={{clipPath: activeSlide === i ? 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)' : 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)'}}
                                                    transition={{duration: 0.5, delay: 0.9, ease: "easeIn"}}>
-                                                <Link aria-label="started now" to="/contact"
-                                                      className="uppercase startup-link font-medium">
-                                                    SCHEDULE A MEETING
-                                                    <div>
-                                                        <i className="fas fa-play"></i>
-                                                    </div>
-                                                </Link>
+                                                <Buttons ariaLabel="button"
+                                                         href="/contact"
+                                                         className="mx-[10px] font-medium font-serif uppercase rounded-none lg:mb-[15px] landscape:lg:mb-[15px] justify-center align-items-center mt-4"
+                                                         themeColor={["#3844F7", "#902CFC"]} size="md" color="#fff"
+                                                         title="Schedule a meeting"/>
                                             </m.div>
 
                                         </Col>

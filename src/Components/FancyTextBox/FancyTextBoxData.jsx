@@ -49,6 +49,7 @@ const fancyTextBox02 = [
             class: "line-icon-Mail-Read text-basecolor"
         },
         title: "Web & Desktop",
+        id: "webDesktop",
         description: "Crafting modern solutions for both web and desktop platforms, ensuring seamless functionality and captivating design for your online presence and desktop applications."
         // linkTitle: "Send us an email",
         // link: "mailto:info@yourdomain.com"
@@ -57,6 +58,7 @@ const fancyTextBox02 = [
         icon: {
             class: "line-icon-Phone-2 text-basecolor"
         },
+        id: "crossPlatformAndMobile",
         title: "Cross Platform and Mobile",
         description: "Developing versatile applications that seamlessly operate across iOS, Android, and Windows platforms, delivering a consistent and immersive user experience on smartphones, tablets, and more.",
         linkTitle: "",
@@ -66,6 +68,7 @@ const fancyTextBox02 = [
         icon: {
             class: "line-icon-Approved-Window text-basecolor"
         },
+        id: "dataIntegrationAndFormats",
         title: "Data Integration and Formats",
         description: "Expertly integrating diverse data sources and formats to optimize insights and decision-making, whether managing structured databases or unifying unstructured data for enhanced efficiency.",
         linkTitle: "",
@@ -75,6 +78,7 @@ const fancyTextBox02 = [
         icon: {
             class: "line-icon-Approved-Window text-basecolor"
         },
+        id: "contentManagement",
         title: "Content Management and Web APIs",
         description: "Streamlining content management and empowering secure interaction with third-party services through robust web APIs, offering scalable solutions for content distribution across various platforms.",
         linkTitle: "Describe your project",
@@ -84,6 +88,7 @@ const fancyTextBox02 = [
         icon: {
             class: "line-icon-Approved-Window text-basecolor"
         },
+        id: "cloudServices",
         title: "Cloud Services and Deployment",
         description: "Leveraging the flexibility and scalability of cloud computing for reliable performance, strengthened security, and cost-effective scalability, providing expert solutions for migration, optimization, and cloud technology utilization.",
         linkTitle: "",
@@ -93,6 +98,7 @@ const fancyTextBox02 = [
         icon: {
             class: "line-icon-Approved-Window text-basecolor"
         },
+        id: "uxUI",
         title: "UX/UI Design",
         description: "Enhancing digital experiences with intuitive and visually compelling design, blending user-centric principles with innovative creativity to deliver interfaces that drive satisfaction, loyalty, and business expansion.",
         linkTitle: "",

@@ -56,22 +56,22 @@ const HeaderDataAdjusted = [
         dropdown: [
             {
                 title: 'Web & Desktop',
-                link: '/services'
+                link: '/services#webDesktop'
             }, {
                 title: 'Mobile',
-                link: '/services'
+                link: '/services#crossPlatformAndMobile'
             }, {
                 title: 'Data Integration and Formats',
-                link: '/services'
+                link: '/services#dataIntegrationAndFormats'
             }, {
                 title: 'Content Management and Web APIs',
-                link: '/services'
+                link: '/services#contentManagement'
             }, {
                 title: 'Cloud Services and Deployment',
-                link: '/services'
+                link: '/services#cloudServices'
             }, {
                 title: 'UX/UI Design',
-                link: '/services'
+                link: '/services#uxUI'
             }
         ]
     }, {

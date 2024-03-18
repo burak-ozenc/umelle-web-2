@@ -47,7 +47,7 @@ const Counter = (props) => {
                   return (
                     <span key={i} className="vertical-counter-number font-serif tracking-[-0.5px]" data-to={item}>
                       <m.ul
-                        className="p-0 font-semibold"
+                        className="p-0 font-semibold text-[3em]"
                         initial={{ y: 0 }}
                         whileInView={{ y: `-${item * 10}%` }}
                         viewport={{ once: true }}

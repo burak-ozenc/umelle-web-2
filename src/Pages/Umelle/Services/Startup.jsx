@@ -11,7 +11,7 @@ import {Form, Formik} from 'formik';
 import {fadeIn} from '../../../Functions/GlobalAnimations';
 
 // Components
-import {resetForm, sendEmail} from "../../../Functions/Utilities";
+import {resetForm, ScrollToAnchor, sendEmail} from "../../../Functions/Utilities";
 import {Input} from '../../../Components/Form/Form'
 import FooterMenu, {Footer} from '../../../Components/Footers/Footer';
 import InViewPort from '../../../Components/InViewPort';
@@ -28,14 +28,14 @@ import {
     TechList
 } from "../../../Components/Clients/ClientsData";
 import Clients from "../../../Components/Clients/Clients";
+import IconWithText from "../../../Components/IconWithText/IconWithText";
+import {IconWithTextData_06} from "../../../Components/IconWithText/IconWithTextData";
 
 const HamburgerMenu = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.HamburgerMenu})))
 const Header = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Header})))
 const HeaderNav = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.HeaderNav})))
 const Menu = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Menu})))
-const SearchBar = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.SearchBar})))
 
-const Overlap = lazy(() => import('../../../Components/Overlap/Overlap'))
 const ReactCustomScrollbar = lazy(() => import("../../../Components/ReactCustomScrollbar"))
 const MessageBox = lazy(() => import('../../../Components/MessageBox/MessageBox'))
 const SocialIcons = lazy(() => import("../../../Components/SocialIcon/SocialIcons"))
@@ -58,6 +58,7 @@ const SocialIconsData = [{
 const Footer_Data = [FooterData[0], FooterData[1], FooterData[4], FooterData[3]]
 
 const HomeStartupPage = (props) => {
+    ScrollToAnchor();
     return (<div style={props.style}>
         {/* Header Start */}
         <Header topSpace={{md: true}} type="reverse-scroll">
@@ -88,7 +89,6 @@ const HomeStartupPage = (props) => {
                     <Menu {...props} />
                 </Navbar.Collapse>
                 <Col lg={2} xs={"auto"} className="justify-end pe-0 flex items-center">
-                    <SearchBar/>
                     <div className="md:hidden pl-[17px]">
                         <HamburgerMenu className="" theme="dark">
                             <Col
@@ -162,7 +162,7 @@ const HomeStartupPage = (props) => {
                             <m.h4 initial={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)'}}
                                   animate={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)'}}
                                   transition={{duration: 0.5, delay: 0.5, ease: "easeIn"}}
-                                  className="font-serif font-semibold pb-[10px] text-[60px] tracking-[0px] text-black mb-[35px] lg:text-[55px] lg:leading-[20px] xs:text-[35px] xs:leading-[40px] xs:mb-[20px]">
+                                  className="font-serif block text-[42px] leading-[48px] mb-[35px] font-light text-black xs:text-base xs:mb-[40px]">
                                 Custom Software That Meets Your Operational Goals
                             </m.h4>
                             <m.span initial={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)'}}
@@ -177,10 +177,11 @@ const HomeStartupPage = (props) => {
                             <div initial={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)'}}
                                  animate={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)'}}
                                  transition={{duration: 0.5, delay: 0.9, ease: "easeIn"}}>
-                                <Buttons ariaLabel="button" href="/contact"
-                                         className="mx-[10px] rounded-none font-medium font-serif uppercase bg-[#fff] hover:text-white"
-                                         themeColor="#000" size="lg" color="#000" icon="fas fa-arrow-right right-icon"
-                                         iconPosition="after" title="SCHEDULE A MEETING"/>
+                                <Buttons ariaLabel="button"
+                                         href="/contact"
+                                         className="mx-[10px] font-medium font-serif uppercase rounded-none lg:mb-[15px] landscape:lg:mb-[15px] justify-center align-items-center mt-4"
+                                         themeColor={["#3844F7", "#902CFC"]} size="md" color="#fff"
+                                         title="Schedule a meeting"/>
                             </div>
                         </Col>
                     </Row>
@@ -191,15 +192,9 @@ const HomeStartupPage = (props) => {
 
         {/* Lazy Load HTML */}
         <InViewPort>
+           
             {/* Section Start */}
-            <section className="sm:pt-[50px] mb-[130px] md:mb-[50px] sm:mb-0 inline-block w-full">
-                <Overlap>
-                </Overlap>
-            </section>
-            {/* Section End */}
-
-            {/* Section Start */}
-            <m.section className="bg-white py-[160px] lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px]" {...fadeIn}>
+            <m.section className="bg-lightgray py-[100px] lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px]" {...fadeIn}>
                 <Container>
                     <Row>
                         <Col className="mb-[7%]">
@@ -218,9 +213,42 @@ const HomeStartupPage = (props) => {
             </m.section>
             {/* Section End */}
 
+
+            {/* Section Start */}
+            <section className="bg-white py-[160px] lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px]">
+                <Container>
+                    <Row>
+                        <Col className="mb-[7%]">
+                            <h6 className="font-serif text-dark text-center font-medium mb-[25px] lg:mb-[15px]">
+                                Comprehensive Cloud Services Tailored to Your Needs:
+                            </h6>
+                        </Col>
+                    </Row>
+                    <Row className="justify-center">
+                        <Col className="mb-[7%]">
+                            <p className="font-serif text-dark text-center font-medium mb-[25px] lg:mb-[15px]">
+                                Our suite of cloud services encompasses every aspect of cloud technology, from initial assessment and migration to ongoing management and optimization. Discover how we can enhance your operations with our specialized offerings:
+                            </p>
+                        </Col>
+                    </Row>
+                    <Row className="justify-center">
+                        <Col xs={12} sm={8} md={12}>
+                            <IconWithText
+                                grid="row-cols-1 row-cols-lg-3 row-cols-md-2 row-col-sm-8 justify-center gap-y-10"
+                                theme="icon-with-text-06"
+                                data={IconWithTextData_06}
+                                animation={fadeIn}
+                                animationDelay={0.2}
+                            />
+                        </Col>
+                    </Row>
+                </Container>
+            </section>
+            {/* Section End */}
+
             {/* Section Start */}
             <m.section
-                className="py-[160px] bg-white lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px]"  {...fadeIn}>
+                className="py-[60px] bg-lightgray lg:py-[100px] md:py-[95px] sm:py-[80px] xs:py-[0px]"  {...fadeIn}>
                 <Container>
                     <Row className="justify-center">
                         <Col md={12} className="text-center mb-[6%]">
@@ -361,7 +389,7 @@ const HomeStartupPage = (props) => {
 
 
             {/* CTA Banner Section Start */}
-            <section className="lg:pt-[160px] md:pt-[10px] sm:pt-[50px] ">
+            <section className="lg:pt-[100px] md:pt-[10px] sm:pt-[50px] ">
                 <Container fluid>
                     <Row style={{backgroundImage: `url(https://i.ibb.co/cNtVkT3/homepage-bottompagebanner-CTA-01.png)`}}
                          className="cover-background relative cover-background lg:py-[90px] md:py-[75px] sm:py-[50px]">
@@ -376,16 +404,7 @@ const HomeStartupPage = (props) => {
                 </Container>
             </section>
             {/* CTA Banner Section End */}
-
-
-            {/* Section Start */}
             
-            
-            <m.section className="py-[160px] lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px]" {...fadeIn}>
-                <Container>
-
-                </Container>
-            </m.section>
 
             {/* Footer Start */}
             <Footer className="startup-footer bg-no-repeat bg-right" theme="light"

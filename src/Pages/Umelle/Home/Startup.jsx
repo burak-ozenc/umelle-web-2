@@ -32,10 +32,8 @@ const HamburgerMenu = React.lazy(() => import("../../../Components/Header/Header
 const Header = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Header})))
 const HeaderNav = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.HeaderNav})))
 const Menu = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Menu})))
-const SearchBar = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.SearchBar})))
 
 const Buttons = lazy(() => import('../../../Components/Button/Buttons'))
-const Overlap = lazy(() => import('../../../Components/Overlap/Overlap'))
 const ReactCustomScrollbar = lazy(() => import("../../../Components/ReactCustomScrollbar"))
 const MessageBox = lazy(() => import('../../../Components/MessageBox/MessageBox'))
 const SocialIcons = lazy(() => import("../../../Components/SocialIcon/SocialIcons"))
@@ -93,7 +91,6 @@ const HomeStartupPage = (props) => {
                     <Menu {...props} />
                 </Navbar.Collapse>
                 <Col lg={2} xs={"auto"} className="justify-end pe-0 flex items-center">
-                    <SearchBar/>
                     <div className="md:hidden pl-[17px]">
                         <HamburgerMenu className="" theme="dark">
                             <Col
@@ -162,14 +159,6 @@ const HomeStartupPage = (props) => {
         {/* Lazy Load HTML */}
         <InViewPort>
             {/* Section Start */}
-            <section className="sm:pt-[50px] mb-[130px] md:mb-[50px] sm:mb-0 inline-block w-full">
-                <Overlap>
-
-                </Overlap>
-            </section>
-            {/* Section End */}
-            
-            {/* Section Start */}
             <section id="test" className="bg-lightgray pt-20 switch-tabs">
                 <Col className="text-center">
                     <h6 className="font-serif text-darkgray text-center font-medium mb-[5%]">
@@ -218,8 +207,8 @@ const HomeStartupPage = (props) => {
                                 trailColor="#f7f7f7"
                                 height="8px"
                                 data={ProgressBarData02}
-                                color={[ "#3844F7","#902CFC"]}/>
-                                {/*color={[ "#902CFC", "#4423C4"]}/>*/}
+                                color={["#3844F7", "#902CFC"]}/>
+                            {/*color={[ "#902CFC", "#4423C4"]}/>*/}
                         </Col>
                     </Row>
                 </Container>
@@ -232,7 +221,8 @@ const HomeStartupPage = (props) => {
                     <Row>
                         <Col className='mb-[6%]'>
                             <h6 className="font-serif text-gray-900 text-center font-medium mb-[25px] lg:mb-[15px]">
-                                Stop overpaying for superfluous features and never miss out on the functionalities you need
+                                Stop overpaying for superfluous features and never miss out on the functionalities you
+                                need
                                 <br/>
                                 Experience the perfect balance of cost and utility
                             </h6>
@@ -381,7 +371,8 @@ const HomeStartupPage = (props) => {
                                                         Program Management Wizard 
                                                     </span>
                                                 </Checkbox>
-                                                <Checkbox type="checkbox" name="checkbox_2_15" className="inline-block bg-[#3844F7]"
+                                                <Checkbox type="checkbox" name="checkbox_2_15"
+                                                          className="inline-block bg-[#3844F7]"
                                                           labelClass="flex items-center mb-[5px]">
                                                     <span className="ml-[10px] text-base">
                                                         Internal Chat 
@@ -510,20 +501,21 @@ const HomeStartupPage = (props) => {
             {/* Section End */}
 
             {/* CTA Banner Section Start */}
-            <section className="lg:pt-[160px] md:pt-[10px] sm:pt-[50px] " >
+            <section className="lg:pt-[160px] md:pt-[10px] sm:pt-[50px] ">
                 <Container fluid>
-
                     <Row style={{backgroundImage: `url(https://i.ibb.co/cNtVkT3/homepage-bottompagebanner-CTA-01.png)`}}
                          className="cover-background relative cover-background lg:py-[90px] md:py-[75px] sm:py-[50px] text-center">
-                        <h6 className="text-center bg-white m-3 w-25">
-                            Let's discuss your project
-                        </h6>
                         <Col xs={12} className="text-center my-[5rem] md:my-[7.5rem]">
-                            <Buttons ariaLabel="button"
-                                     href="/contact"
-                                     className="mx-[10px] font-medium font-serif uppercase rounded-none lg:mb-[15px] landscape:lg:mb-[15px] justify-center align-items-center"
-                                     themeColor={["#3844F7", "#902CFC"]} size="md" color="#fff"
-                                     title="Schedule a meeting"/>
+                            <div className="justify-center align-items-center text-center d-flex flex-col">
+                                <h6 className="text-center bg-white m-3 w-[300px]">
+                                    Let's discuss your project
+                                </h6>
+                                <Buttons ariaLabel="button"
+                                         href="/contact"
+                                         className="mx-[10px] font-medium font-serif uppercase rounded-none lg:mb-[15px] landscape:lg:mb-[15px] justify-center align-items-center mt-4"
+                                         themeColor={["#3844F7", "#902CFC"]} size="md" color="#fff"
+                                         title="Schedule a meeting"/>
+                            </div>
                         </Col>
                     </Row>
                 </Container>

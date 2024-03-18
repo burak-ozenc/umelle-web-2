@@ -121,22 +121,22 @@ const IconWithTextData_05 = [
 const IconWithTextData_06 = [
     {
         icon: "line-icon-Android-Store text-fastblue",
-        title: "eCommerce development",
-        content: "Lorem ipsum dolor sit consectetur adipiscing elit eiusmod incididunt.",
+        title: "Cloud Migration",
+        content: "Smoothly transition to the cloud with our expert guidance, minimizing downtime and ensuring data integrity.",
         linkTitle: "READ MORE",
         link: "/page/what-we-offer"
     },
     {
         icon: "line-icon-Bakelite text-fastblue",
-        title: "Design and development",
-        content: "Lorem ipsum dolor sit consectetur adipiscing elit eiusmod incididunt.",
+        title: "Cloud Management",
+        content: "Optimize your cloud environment with our continuous monitoring, management, and cost-optimization strategies.",
         linkTitle: "READ MORE",
         link: "/page/what-we-offer"
     },
     {
         icon: "line-icon-Archery-2 text-fastblue",
-        title: "Social media marketing",
-        content: "Lorem ipsum dolor sit consectetur adipiscing elit eiusmod incididunt. ",
+        title: "Cloud Innovation",
+        content: "Stay ahead of the curve with our cutting-edge solutions that leverage the full potential of cloud technologies to fuel your innovation. ",
         linkTitle: "READ MORE",
         link: "/page/what-we-offer"
     },
