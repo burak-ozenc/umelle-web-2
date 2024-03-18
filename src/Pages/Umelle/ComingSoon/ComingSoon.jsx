@@ -8,7 +8,7 @@ import {AnimatePresence, m} from 'framer-motion';
 import {Form, Formik} from 'formik';
 
 // Functions
-import { fadeInDown} from '../../../Functions/GlobalAnimations';
+import {fadeInDown, fadeInUp, rotateInDown} from '../../../Functions/GlobalAnimations';
 
 // Components
 import {resetForm, ScrollToAnchor, sendEmail} from "../../../Functions/Utilities";
@@ -140,7 +140,7 @@ const ComingSoon = (props) => {
         {/* Section Start */}
         <div className="h-[100vh] md:landscape:h-auto flex flex-col">
             <section
-                className="p-[0px] md:landscape:py-[50px] overflow-hidden bg-[#f5f5f5] flex-1 flex items-center justify-center relative">
+                className="p-[0px] md:landscape:py-[50px] overflow-hidden bg-[#fff] flex-1 flex items-center justify-center relative">
                 <Row className="justify-center relative z-10">
                     <Col xs={12} className="text-center">
                         <m.h1 {...{...fadeInDown, transition: {delay: 1, ease: "easeOut", duration: 0.5}}}
@@ -154,17 +154,52 @@ const ComingSoon = (props) => {
                     </Col>
                 </Row>
 
+                {/* Elements */}
+                <div className="h-full w-full min-w-[1500px] absolute bottom-0 left-1/2 -translate-x-1/2">
+                    <m.img
+                        {...{...rotateInDown, transition: {delay: 3.5, ease: "easeOut", duration: 0.5}}}
+                        alt="stick"
+                        src="https://i.ibb.co/ss2LhDx/154x158.png"
+                        className="absolute top-1/4 left-[20%] max-w-[200px] w-[10%]"
+                    />
+                    <m.img
+                        {...{...rotateInDown, transition: {delay: 2.7, ease: "easeOut", duration: 0.5}}}
+                        alt="coffee-cup"
+                        src="https://i.ibb.co/0FGKr9D/207x199-01.png"
+                        className="absolute top-1/4 right-[20%]"
+                    />
+                    {/*<m.img*/}
+                    {/*    {...{...rotateInDown, transition: {delay: 2.5, ease: "easeOut", duration: 0.5}}}*/}
+                    {/*    alt="envelope"*/}
+                    {/*    src="https://i.ibb.co/4JMG5Fd/234x211-01.png"*/}
+                    {/*    className="absolute top-[calc(25%+100px)] right-[15%]"*/}
+                    {/*/>*/}
+                    <m.img
+                        {...{...fadeInUp, transition: {delay: 3, ease: "easeOut", duration: 0.5}}}
+                        alt="plant"
+                        src="https://i.ibb.co/Ht0cxFH/293x240-01.png"
+                        className="absolute bottom-[0px] left-[calc(15%-220px)] max-w-[300px] w-[15%]"
+                    />
+                    <m.img
+                        {...{...fadeInUp, transition: {delay: 3, ease: "easeOut", duration: 0.5}}}
+                        alt="alphabate"
+                        src="https://i.ibb.co/Gv3wvJR/400x400-01-01.png"
+                        className="absolute bottom-[65%] right-[0] max-w-[200px] w-[10%]"
+                        width="200"
+                        height="200"
+                    />
+                    <m.img
+                        initial={{opacity: 0, y: 50}}
+                        animate={{opacity: 1, y: 0}}
+                        transition={{duration: 0.5, delay: 2.5, ease: "easeOut"}}
+                        alt="brush"
+                        src="https://i.ibb.co/4JMG5Fd/234x211-01.png"
+                        className="absolute bottom-[0%] right-[0%]"
+                    />
+                </div>
 
-                {/* Big Coming Soon Text */}
-                <h2 className="text-white text-shadow-medium text-[150px] leading-none font-serif font-bold absolute -bottom-[60px] left-1/2 -translate-x-1/2 w-max uppercase mb-0 xl:text-[120px] md:bottom-[-50px] xs:text-[50px] xs:-bottom-[15px]">
-                    <m.span
-                        className="inline-block"
-                        initial={{opacity: 0, y: "100%"}}
-                        animate={{opacity: 1, y: "0"}}
-                        transition={{delay: 1, ease: "easeOut", duration: 1}}>
-                        Coming Soon
-                    </m.span>
-                </h2>
+
+             
             </section>
         </div>
         {/* Section End */}
