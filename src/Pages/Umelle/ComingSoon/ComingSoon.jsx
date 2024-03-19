@@ -183,7 +183,7 @@ const ComingSoon = (props) => {
                     <m.img
                         {...{...fadeInUp, transition: {delay: 3, ease: "easeOut", duration: 0.5}}}
                         alt="alphabate"
-                        src="https://i.ibb.co/Gv3wvJR/400x400-01-01.png"
+                        src="https://i.ibb.co/3MNpW6P/d027814f-af17-471b-a946-1f3646fd2604.png"
                         className="absolute bottom-[65%] right-[0] max-w-[200px] w-[10%]"
                         width="200"
                         height="200"
