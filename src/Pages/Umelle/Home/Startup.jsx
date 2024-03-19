@@ -193,39 +193,19 @@ const HomeStartupPage = (props) => {
             {/* Section End */}
 
             {/* Section Start */}
-            <m.section
-                className="py-[120px] overflow-hidden lg:py-[90px] md:py-[75px] sm:py-[50px] bg-white lg:px-0 md:px-0 sm:px-0 xs:px-0">
-                <Container>
-                    <h6 className="font-serif text-darkgray text-center font-medium mb-[94px] md:mb-[50px]">
-                        Customer Satisfaction
-                    </h6>
-                    <Row className="justify-center">
-                        <Col lg={6}>
-                            <ProgressBar
-                                theme="progressbar-style-02"
-                                className=""
-                                trailColor="#f7f7f7"
-                                height="8px"
-                                data={ProgressBarData02}
-                                color={["#3844F7", "#902CFC"]}/>
-                            {/*color={[ "#902CFC", "#4423C4"]}/>*/}
-                        </Col>
-                    </Row>
-                </Container>
-            </m.section>
-            {/* Section End */}
-
-            {/* Section Start */}
-            <m.section className="bg-lightgray py-[160px] lg:py-[120px] md:py-[80px] xs:py-[50px]" {...fadeIn}>
+            <m.section className="bg-white py-[160px] lg:py-[120px] md:py-[80px] xs:py-[50px]" {...fadeIn}>
                 <Container>
                     <Row>
                         <Col className='mb-[6%]'>
                             <h6 className="font-serif text-gray-900 text-center font-medium mb-[25px] lg:mb-[15px]">
                                 Stop overpaying for unused features and never miss out on the functionalities you
                                 need.
-                                <br/>
-                                We build your own solution by selecting the Features and Functions you need. Send your build to our solution team and we will get back to you:
                             </h6>
+                            <div>
+                                <p className="font-serif text-darkgray text-center font-medium mb-[5%] mt-[5%]">
+                                Shape your custom software experience now by checking the functions and features you need:
+                                </p>
+                            </div>
                         </Col>
                     </Row>
                     <Row className="m-auto">
@@ -458,6 +438,31 @@ const HomeStartupPage = (props) => {
 
             {/* Section Start */}
             <m.section
+                className="py-[120px] overflow-hidden lg:py-[90px] md:py-[75px] sm:py-[50px] bg-lightgray lg:px-0 md:px-0 sm:px-0 xs:px-0">
+                <Container>
+                    <h6 className="font-serif text-darkgray text-center font-medium mb-[94px] md:mb-[50px]">
+                        Customer Satisfaction
+                    </h6>
+                    <Row className="justify-center">
+                        <Col lg={6}>
+                            <ProgressBar
+                                theme="progressbar-style-02"
+                                className=""
+                                trailColor="#f7f7f7"
+                                height="8px"
+                                data={ProgressBarData02}
+                                color={["#3844F7", "#902CFC"]}/>
+                            {/*color={[ "#902CFC", "#4423C4"]}/>*/}
+                        </Col>
+                    </Row>
+                </Container>
+            </m.section>
+            {/* Section End */}
+
+            
+
+            {/* Section Start */}
+            {/* <m.section
                 className="py-[160px] lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px] bg-lightgray" {...fadeIn}>
                 <h6 className="font-serif text-gray-900 text-center font-medium mb-24 xs:mb-16"> Testimonials carousel
                     style 02 </h6>
@@ -477,7 +482,7 @@ const HomeStartupPage = (props) => {
                         />
                     </Row>
                 </Container>
-            </m.section>
+            </m.section> */}
             {/* Section End */}
 
 

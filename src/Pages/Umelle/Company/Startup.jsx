@@ -169,7 +169,7 @@ const HomeStartupPage = (props) => {
                     <Col md={6} sm={6} className="flex py-64">
                         <div className="flex font-serif items-center font-medium text-xmd text-darkgray mt-auto">
                             {/*<span className="flex-shrink-0 h-[2px] w-[20px] bg-darkgray item-center mr-[15px]"></span>*/}
-                            <div className="grow tracking-[-.5px] text-[24px]">We are a European-based company who
+                            <div className="grow tracking-[-.5px] text-[24px]">We are a European company who
                                 meticulously
                                 plans, designs, engineers, tests, refines, and delivers custom-built software to align
                                 with you, your business needs

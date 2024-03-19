@@ -594,8 +594,13 @@ const HomeStartupPage = (props) => {
                         <Col className='mb-[6%]'>
                             <h6 className="font-serif text-gray-900 text-center font-medium mb-[25px] lg:mb-[15px]">
                             Stop overpaying for unused features and never miss out on the functionalities you
-                                need. Build your own solution by selecting the Features and Functions you need. Send your build to our solution team and we will get back to you:
+                                need.
                             </h6>
+                            <div>
+                                <p className="font-serif text-darkgray text-center font-medium mb-[5%] mt-[5%]">
+                                Shape your custom software experience now by checking the functions and features you need:
+                                </p>
+                            </div>
                         </Col>
                     </Row>
                     <Row className="m-auto">

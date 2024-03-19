@@ -78,7 +78,7 @@ const HeaderDataAdjusted = [
         ]
     }, {
         title: 'PRODUCTS',
-        link: '/products',
+        link: '/comingsoon',
         dropdown: [
             {
                 title: 'Umelle Insurance Management Suite UI MS ',
