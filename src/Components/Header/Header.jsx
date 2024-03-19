@@ -107,7 +107,7 @@ export const Header = memo((props) => {
 
     return (
         <header
-            className={`${props.className ? props.className : ""}${scrollPos.y > 5 ? " sticky-header" : ""}${scrollPos.directionDown === false ? " header-appear" : ""}${props.type ? ` ${props.type}` : ""
+            className={`bg-white ${props.className ? props.className : ""}${scrollPos.y > 5 ? " sticky-header" : " sticky-header"}${scrollPos.directionDown === false ? " header-appear" : ""}${props.type ? ` ${props.type}` : ""
             }`}
         >
             {props.children}
