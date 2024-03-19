@@ -51,7 +51,7 @@ export const initializeIsotop = (item) => {
     })
 
     setTimeout(() => {
-        grid.arrange({ filter: `*` })
+        grid.arrange({filter: `*`})
     }, 1000);
 
     filter_menu && filter_menu.querySelectorAll("li").forEach((el) => {
@@ -61,7 +61,7 @@ export const initializeIsotop = (item) => {
 
             filter_menu.querySelectorAll("li").forEach((elm) => elm.classList.remove("active"))
             element.closest("li").classList.add("active");
-            grid.arrange({ filter: filtered_text === "*" ? "*" : `.${filtered_text}` })
+            grid.arrange({filter: filtered_text === "*" ? "*" : `.${filtered_text}`})
         })
     })
 
@@ -91,9 +91,10 @@ export const InputField = (value) => {
 }
 
 export const sendEmail = async (data) => {
-    const req = await fetch(`${process.env.REACT_APP_API_URL}/send`, {
+    console.log('data ',data)
+    const req = await fetch(`${process.env.REACT_APP_API_URL}/sendemail`, {
         method: 'post',
-        headers: { "Content-Type": "application/json" },
+        headers: {"Content-Type": "application/json", "Ocp-Apim-Subscription-Key": "d43da0ebf77f4e2db7bd5d9b84c455bd"},
         body: JSON.stringify(data)
     }).then(res => res.json()).then(data => data)
     return await req
@@ -115,11 +116,11 @@ export const resetForm = (actions, recaptcha) => {
 
 // Header Menu Position
 export const SetHeaderMenuPos = () => {
-    
+
     function setMegaMenuPos() {
         let menu = document.querySelectorAll(".megamenu");
         if (menu.length > 0) {
-            
+
             menu.forEach(item => {
                 let menuWidth = item.clientWidth,
                     menuLeftPos = item.getBoundingClientRect().left;
@@ -133,7 +134,7 @@ export const SetHeaderMenuPos = () => {
 
     function setSimpleMenuPos() {
         let menu = document.querySelectorAll(".simple-dropdown-menu");
-        
+
         if (typeof (menu) != 'undefined' && menu != null) {
             menu.forEach(item => {
                 let pos = item.getBoundingClientRect().left,
@@ -175,7 +176,6 @@ export const setDocumentFullHeight = () => {
 }
 
 
-
 export const ScrollToAnchor = () => {
     const location = useLocation();
     const lastHash = useRef('');
@@ -191,7 +191,7 @@ export const ScrollToAnchor = () => {
             setTimeout(() => {
                 document
                     .getElementById(lastHash.current)
-                    ?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    ?.scrollIntoView({behavior: 'smooth', block: 'start'});
                 lastHash.current = '';
             }, 100);
         }

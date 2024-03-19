@@ -165,22 +165,24 @@ const UmelleInsuranceManagementSuite = (props) => {
 
         {/* Section Start */}
         <section className="bg-cover bg-no-repeat overflow-visible bg-center"
-                 style={{backgroundImage: "url('https://via.placeholder.com/1920x1038')"}}>
+                 style={{backgroundImage: "url('https://i.ibb.co/YN74NbB/Header-Landing-Page-01.png')"}}>
             <Container>
                 <Row className="justify-center sm:text-center">
                     <Col lg={7} xl={7} md={7} sm={8}
                          className="h-[100vh] flex flex-col items-start justify-center pb-40 pt-24 lg:pt-40 lg:pb-32 md:pt-24 md:pb-40 sm:h-auto sm:pb-20 md:h-[650px]">
                         <span
-                            className="font-serif font-semibold text-md leading-[24px] tracking-[1px] text-gradient bg-gradient-to-r from-[#975ade] to-[#ff798e] border-b border-gradient-light-purple-light-red inline-block uppercase mb-[45px] sm:mt-0 sm:mx-auto sm:mb-[35px]">
+                            className="font-serif font-semibold text-md leading-[24px] tracking-[1px] text-white inline-block uppercase mb-[45px] sm:mt-0 sm:mx-auto sm:mb-[35px]">
                             EXPERIENCE THE FUTURE OF INSURANCE MANAGEMENT
                         </span>
-                        <h1 className="font-serif block text-[42px] leading-[48px] mb-[35px] font-light text-black xs:text-base xs:mb-[40px]">
+                        <h1 className="font-serif font-bold block text-[42px] leading-[48px] mb-[35px] text-white xs:text-base xs:mb-[40px] ">
                             INSURANCE AND OPERATIONS
-                            <br/>
-                            MANAGEMENT SOLUTION ALIGNED TO YOUR BUSINESS NEEDS
                         </h1>
+                        <h2 className="font-serif font-bold block text-[42px] leading-[48px] mb-[0px] text-white xs:text-base xs:mb-[10px]  text-[1.4em]">
+                            MANAGEMENT SOLUTION ALIGNED TO YOUR BUSINESS NEEDS
+                        </h2>
                         <br/>
-                        <p className="text-lg leading-[25px] text-white opacity-60 mb-[25px] font-light w-[95%] sm:w-full md:text-xmd sm:mb-[15px] xs:leading-[22px]">
+                        <br/>
+                        <p className="text-lg uppercase leading-[25px] text-white opacity-60 mb-[25px] w-[95%] sm:w-full md:text-xmd sm:mb-[15px] xs:leading-[22px]">
                             The premier choice for pooled insurance providers
                         </p>
                         {/*<ScrollTo href='#' to="download" offset={0} delay={0} spy={true} smooth={true} duration={800}*/}
@@ -188,14 +190,9 @@ const UmelleInsuranceManagementSuite = (props) => {
                             <Buttons ariaLabel="button"
                                      href="/solutions"
                                      className="mx-[10px] font-medium font-serif uppercase rounded-none lg:mb-[15px] landscape:lg:mb-[15px] justify-center align-items-center mt-4"
-                                     themeColor={["#3844F7", "#902CFC"]} size="md" color="#fff"
+                                     themeColor={["#fff", "#fff"]} size="md" color="#4423C4"
                                      title="LEARN MORE"/>
                         {/*</ScrollTo>*/}
-                    </Col>
-                    <Col xl={{offset: 1}} lg={4} md={3} className="z-0 text-left self-end md:self-center">
-                        <TiltBox className="bottom-[-95px] lg:-bottom-[65px]">
-                            <img alt="" src="https://via.placeholder.com/889x1644" height={1026} width={555}/>
-                        </TiltBox>
                     </Col>
                 </Row>
             </Container>

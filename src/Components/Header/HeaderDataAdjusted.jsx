@@ -83,6 +83,10 @@ const HeaderDataAdjusted = [
             {
                 title: 'Umelle Insurance Management Suite UI MS ',
                 link: '/coming-soon'
+            },
+            {
+                title: 'Landing Test',
+                link: '/aw-stg-landingp'
             }
         ]
     },
