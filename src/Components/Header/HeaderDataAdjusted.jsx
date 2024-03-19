@@ -1,6 +1,7 @@
 const HeaderDataAdjusted = [
     {
         title: 'SOLUTIONS',
+        link: '/solutions',
         megamenu: [
             {
                 title: 'Insurance Management',
@@ -53,6 +54,7 @@ const HeaderDataAdjusted = [
     },
     {
         title: 'SERVICES',
+        link: '/services',
         dropdown: [
             {
                 title: 'Web & Desktop',
@@ -76,6 +78,7 @@ const HeaderDataAdjusted = [
         ]
     }, {
         title: 'PRODUCTS',
+        link: '/products',
         dropdown: [
             {
                 title: 'Umelle Insurance Management Suite UI MS ',
@@ -85,6 +88,7 @@ const HeaderDataAdjusted = [
     },
     {
         title: 'COMPANY ',
+        link: '/company',
         dropdown: [
              {
                 title: 'About UMELLE',

@@ -221,10 +221,10 @@ const HomeStartupPage = (props) => {
                     <Row>
                         <Col className='mb-[6%]'>
                             <h6 className="font-serif text-gray-900 text-center font-medium mb-[25px] lg:mb-[15px]">
-                                Stop overpaying for superfluous features and never miss out on the functionalities you
-                                need
+                                Stop overpaying for unused features and never miss out on the functionalities you
+                                need.
                                 <br/>
-                                Experience the perfect balance of cost and utility
+                                We build your own solution by selecting the Features and Functions you need. Send your build to our solution team and we will get back to you:
                             </h6>
                         </Col>
                     </Row>
@@ -396,6 +396,12 @@ const HomeStartupPage = (props) => {
                                                         Automated Certificate Renewal 
                                                     </span>
                                                 </Checkbox>
+                                                <Checkbox type="checkbox" name="checkbox_2_6" className="inline-block"
+                                                          labelClass="flex items-center mb-[5px]">
+                                                    <span className="ml-[10px] text-base">
+                                                        Other
+                                                    </span>
+                                                </Checkbox>
                                             </Col>
                                         </Row>
 
@@ -429,7 +435,7 @@ const HomeStartupPage = (props) => {
                                                 <Buttons ariaLabel="form button" type="submit"
                                                          className={`font-medium font-serif rounded-none uppercase text-[11px]${isSubmitting ? " loading" : ""}`}
                                                          themeColor={["#0039e3", "#8600d4"]} size="md" color="#fff"
-                                                         title="send message"/>
+                                                         title="get feedback"/>
                                                 <AnimatePresence>
                                                     {status && <m.div initial={{opacity: 0}} animate={{opacity: 1}}
                                                                       exit={{opacity: 0}}><MessageBox

@@ -25,7 +25,7 @@ const StartupPageBannerSlider = () => {
         {
             img: "https://i.ibb.co/hHCtj1f/homeheader-v1-01.png",
             title: "",
-            subTitle: "Designed to streamline operations across all your programs and policies."
+            subTitle: "Designed to streamline operations across all your programs and policies"
         }
     ]
 

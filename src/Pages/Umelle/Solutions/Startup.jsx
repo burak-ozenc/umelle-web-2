@@ -398,17 +398,17 @@ const HomeStartupPage = (props) => {
                         <Col md={4}>
                             <div>
                                 <p>
-                                    <span className="font-bold">Client Name :</span>
+                                    <span className="font-bold">Client Name: </span>
                                     ACWA JPIA
                                 </p>
                                 <br/>
                                 <p>
-                                    <span className="font-bold">Industry:</span>
+                                    <span className="font-bold">Industry: </span>
                                     Pooled Insurer in the Water and Water Infrastructure
                                 </p>
                                 <br/>
                                 <p>
-                                    <span className="font-bold">Client Overview:</span>
+                                    <span className="font-bold">Client Overview: </span>
                                     ACWA JPIA is a pooled insurer providing insurance services to more than 350
                                     members. Part of the larger JPIA group of like-minded Insurers and Service
                                     Providers,
@@ -593,8 +593,8 @@ const HomeStartupPage = (props) => {
                     <Row>
                         <Col className='mb-[6%]'>
                             <h6 className="font-serif text-gray-900 text-center font-medium mb-[25px] lg:mb-[15px]">
-                                Stop overpaying for superfluous features and never miss out on the functionalities you
-                                need. Experience the perfect balance of cost and utility.
+                            Stop overpaying for unused features and never miss out on the functionalities you
+                                need. Build your own solution by selecting the Features and Functions you need. Send your build to our solution team and we will get back to you:
                             </h6>
                         </Col>
                     </Row>
@@ -765,6 +765,12 @@ const HomeStartupPage = (props) => {
                                                         Automated Certificate Renewal 
                                                     </span>
                                                 </Checkbox>
+                                                <Checkbox type="checkbox" name="checkbox_2_7" className="inline-block"
+                                                          labelClass="flex items-center mb-[5px]">
+                                                    <span className="ml-[10px] text-base">
+                                                        Other 
+                                                    </span>
+                                                </Checkbox>
                                             </Col>
                                         </Row>
                                         {process.env.REACT_APP_GRECAPTCHA_API_KEY && (
@@ -797,7 +803,7 @@ const HomeStartupPage = (props) => {
                                                 <Buttons ariaLabel="form button" type="submit"
                                                          className={`font-medium font-serif rounded-none uppercase text-[11px]${isSubmitting ? " loading" : ""}`}
                                                          themeColor={["#0039e3", "#8600d4"]} size="md" color="#fff"
-                                                         title="send message"/>
+                                                         title="get feedback"/>
                                                 <AnimatePresence>
                                                     {status && <m.div initial={{opacity: 0}} animate={{opacity: 1}}
                                                                       exit={{opacity: 0}}><MessageBox

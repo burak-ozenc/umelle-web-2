@@ -136,7 +136,7 @@ const IconWithTextData_06 = [
     {
         icon: "line-icon-Archery-2 text-fastblue",
         title: "Cloud Innovation",
-        content: "Stay ahead of the curve with our cutting-edge solutions that leverage the full potential of cloud technologies to fuel your innovation. ",
+        content: "Stay ahead of the curve with our cutting-edge solutions that leverage the full potential of cloud technologies. ",
         linkTitle: "READ MORE",
         link: "/page/what-we-offer"
     },
