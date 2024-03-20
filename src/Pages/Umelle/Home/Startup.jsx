@@ -22,8 +22,8 @@ import {IconWithTextData_02} from "../../../Components/IconWithText/IconWithText
 import Accordions from "../../../Components/Accordion/Accordion";
 import ProgressBar from "../../../Components/ProgressBar/ProgressBar";
 import {ProgressBarData02} from "../../../Components/ProgressBar/ProgressBarData";
-import TestimonialsCarousel02 from "../../../Components/TestimonialCarousel/TestimonialsCarousel02";
-import {TestimonialsCarouselData2} from "../../../Components/TestimonialCarousel/TestimonialsCarouselData";
+// import TestimonialsCarousel02 from "../../../Components/TestimonialCarousel/TestimonialsCarousel02";
+// import {TestimonialsCarouselData2} from "../../../Components/TestimonialCarousel/TestimonialsCarouselData";
 import {ContactFormStyle02Schema} from "../../../Components/Form/FormSchema";
 import ReCAPTCHA from "react-google-recaptcha"
 

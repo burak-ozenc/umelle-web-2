@@ -15,7 +15,7 @@ import InViewPort from '../../../Components/InViewPort';
 
 // Data
 import FooterData from '../../../Components/Footers/FooterData';
-import {TiltBox} from "../../../Components/FancyText/FancyText";
+// import {TiltBox} from "../../../Components/FancyText/FancyText";
 import {fadeIn} from "../../../Functions/GlobalAnimations";
 import IconWithText from "../../../Components/IconWithText/IconWithText";
 
