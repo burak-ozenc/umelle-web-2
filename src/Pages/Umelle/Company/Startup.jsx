@@ -34,7 +34,7 @@ const Menu = React.lazy(() => import("../../../Components/Header/Header").then((
 const SearchBar = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.SearchBar})))
 
 
-const Overlap = lazy(() => import('../../../Components/Overlap/Overlap'))
+// const Overlap = lazy(() => import('../../../Components/Overlap/Overlap'))
 const ReactCustomScrollbar = lazy(() => import("../../../Components/ReactCustomScrollbar"))
 const MessageBox = lazy(() => import('../../../Components/MessageBox/MessageBox'))
 const SocialIcons = lazy(() => import("../../../Components/SocialIcon/SocialIcons"))
@@ -281,7 +281,7 @@ const HomeStartupPage = (props) => {
             </section>
             {/* Section End */}
 
-            {/* Sextion Start */}
+            {/* Section Start */}
             <section className="pt-[120px] lg:pt-[95px] md:pt-[80px] sm:pt-[50px] switch-tabs">
                 <div className="text-center">
                     <h6 className='text-darkgray font-medium font-serif mb-16 xs:mb-20'>Our Team</h6>

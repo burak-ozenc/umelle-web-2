@@ -94,7 +94,7 @@ const HeaderDataAdjusted = [
         title: 'COMPANY ',
         link: '/company',
         dropdown: [
-             {
+            {
                 title: 'About UMELLE',
                 link: '/company'
             },
