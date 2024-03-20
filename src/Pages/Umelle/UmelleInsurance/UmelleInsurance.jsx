@@ -174,11 +174,11 @@ const UmelleInsuranceManagementSuite = (props) => {
                             className="font-serif font-semibold text-md leading-[24px] tracking-[1px] text-white inline-block uppercase mb-[45px] sm:mt-0 sm:mx-auto sm:mb-[35px]">
                             EXPERIENCE THE FUTURE OF INSURANCE MANAGEMENT
                         </span>
-                        <h1 className="font-serif font-bold block text-[42px] leading-[48px] mb-[35px] text-white xs:text-base xs:mb-[40px] ">
+                        <h1 className="font-serif font-bold block text-[42px] leading-[48px] mb-[1px] text-white xs:text-base xs:mb-[40px] ">
                             INSURANCE AND OPERATIONS
                         </h1>
-                        <h2 className="font-serif font-bold block text-[42px] leading-[48px] mb-[0px] text-white xs:text-base xs:mb-[10px]  text-[1.4em]">
-                            MANAGEMENT SOLUTION ALIGNED TO YOUR BUSINESS NEEDS
+                        <h2 className="font-serif font-bold block text-[24px] leading-[48px] mb-[0px] text-white xs:text-base xs:mb-[10px]  text-[1.4em]">
+                            Management Solution Aligned to your Business Needs 
                         </h2>
                         <br/>
                         <br/>
