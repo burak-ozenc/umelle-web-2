@@ -169,7 +169,7 @@ const HomeStartupPage = (props) => {
                     <Col md={6} sm={6} className="flex py-64">
                         <div className="flex font-serif items-center font-medium text-xmd text-darkgray mt-auto">
                             {/*<span className="flex-shrink-0 h-[2px] w-[20px] bg-darkgray item-center mr-[15px]"></span>*/}
-                            <div className="grow tracking-[-.5px] text-[24px]">We are a European-based company who
+                            <div className="grow tracking-[-.5px] text-[24px]">We are a European company who
                                 meticulously
                                 plans, designs, engineers, tests, refines, and delivers custom-built software to align
                                 with you, your business needs
@@ -184,14 +184,14 @@ const HomeStartupPage = (props) => {
         {/* Lazy Load HTML */}
         <InViewPort>
             {/* Section Start */}
-            <section className="sm:pt-[50px] mb-[130px] md:mb-[50px] sm:mb-0 inline-block w-full">
+            {/* <section className="sm:pt-[50px] mb-[130px] md:mb-[50px] sm:mb-0 inline-block w-full">
                 <Overlap>
                 </Overlap>
-            </section>
+            </section> */}
             {/* Section End */}
 
             {/* Section Start */}
-            <m.section className="py-[160px] lg:py-[120px] md:py-[95px] sm:py-[80px] xs;py-[50px]" {...fadeIn}>
+            <m.section className="py-[160px] lg:py-[120px] md:py-[95px] sm:py-[80px] xs;py-[50px] bg-lightgray" {...fadeIn}>
                 <Container>
                     <Row>
                         <Col className="mb-[4%]">
@@ -202,7 +202,7 @@ const HomeStartupPage = (props) => {
                     </Row>
                     <Row>
                         <Col lg={5} className="px-[15px] md:mb-[15px]">
-                            <div className="bg-lightgray p-[40px] sm:p-[30px]">
+                            <div className="bg-transparent p-[40px] sm:p-[30px]">
                                 <h6 className="text-darkgray lg:mb-[45px]">
                                     Empowering Businesses and Enriching Lives: Where Heart Meets Software for
                                     Transformational Growth.
@@ -262,7 +262,7 @@ const HomeStartupPage = (props) => {
             {/* Section End */}
 
             {/* Section Start */}
-            <section className="py-[160px] border-t lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px]">
+            <section className="py-[160px] border-t lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px] bg-lightgray">
                 <Container>
                     <Row>
                         <Col className="mb-[8%]">
