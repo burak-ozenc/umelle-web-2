@@ -193,42 +193,22 @@ const HomeStartupPage = (props) => {
             {/* Section End */}
 
             {/* Section Start */}
-            <m.section
-                className="py-[120px] overflow-hidden lg:py-[90px] md:py-[75px] sm:py-[50px] bg-white lg:px-0 md:px-0 sm:px-0 xs:px-0">
-                <Container>
-                    <h6 className="font-serif text-darkgray text-center font-medium mb-[94px] md:mb-[50px]">
-                        Customer Satisfaction
-                    </h6>
-                    <Row className="justify-center">
-                        <Col lg={6}>
-                            <ProgressBar
-                                theme="progressbar-style-02"
-                                className=""
-                                trailColor="#f7f7f7"
-                                height="8px"
-                                data={ProgressBarData02}
-                                color={["#3844F7", "#902CFC"]}/>
-                            {/*color={[ "#902CFC", "#4423C4"]}/>*/}
-                        </Col>
-                    </Row>
-                </Container>
-            </m.section>
-            {/* Section End */}
-
-            {/* Section Start */}
-            <m.section style={{backgroundImage: `url(https://i.ibb.co/hHCtj1f/homeheader-v1-01.png)`}} className="bg-lightgray py-[160px] lg:py-[120px] md:py-[80px] xs:py-[50px]" {...fadeIn}>
+            <m.section className="bg-white py-[160px] lg:py-[120px] md:py-[80px] xs:py-[50px]" {...fadeIn}>
                 <Container>
                     <Row>
                         <Col className='mb-[6%]'>
                             <h6 className="font-serif text-gray-900 text-center font-medium mb-[25px] lg:mb-[15px]">
                                 Stop overpaying for unused features and never miss out on the functionalities you
-                                need.
-                                <br/>
-                                We build your own solution by selecting the Features and Functions you need. Send your build to our solution team and we will get back to you:
+                                need
                             </h6>
+                            <div>
+                                <p className="font-serif text-gray-900 text-center font-medium mb-[25px] lg:mb-[15px]">
+                                Shape your custom software experience now by checking the functions and features you need:
+                                </p>
+                            </div>
                         </Col>
                     </Row>
-                    <Row className="m-auto" >
+                    <Row className="m-auto">
                         <Col xl={12} lg={12} md={12}>
                             <Formik
                                 initialValues={{name: '', email: '', phone: '', comment: '', recaptcha: ''}}
@@ -247,8 +227,8 @@ const HomeStartupPage = (props) => {
                                     <Form ref={form1}>
                                         <Row>
                                             <Col xl={7} md={7} xs={7}>
-                                                <Row className="bg-transparent p-3 m-2">
-                                                    <h4 className="text-center">
+                                                <Row className="bg-white p-3 m-2">
+                                                    <h4 className="text-center" style={{ color: '#902CFC' }}>
                                                         Features
                                                     </h4>
                                                     <Col xl={6} md={6} xs={6}>
@@ -355,8 +335,8 @@ const HomeStartupPage = (props) => {
                                                     </Col>
                                                 </Row>
                                             </Col>
-                                            <Col className="bg-transparent  p-3 m-2" xl={4} md={4} xs={4}>
-                                                <h4 className="text-center">
+                                            <Col className="bg-white p-3 m-2" xl={4} md={4} xs={4}>
+                                                <h4 className="text-center" style={{ color: '#902CFC' }}>
                                                     Functions
                                                 </h4>
                                                 <Checkbox type="checkbox" name="checkbox_2_1" className="inline-block"
@@ -458,6 +438,31 @@ const HomeStartupPage = (props) => {
 
             {/* Section Start */}
             <m.section
+                className="py-[60px] overflow-hidden lg:py-[90px] md:py-[75px] sm:py-[50px] bg-lightgray lg:px-0 md:px-0 sm:px-0 xs:px-0">
+                <Container>
+                    <h6 className="font-serif text-darkgray text-center font-medium mb-[94px] md:mb-[50px]">
+                        Customer Satisfaction
+                    </h6>
+                    <Row className="justify-center">
+                        <Col lg={6}>
+                            <ProgressBar
+                                theme="progressbar-style-02"
+                                className=""
+                                trailColor="#f7f7f7"
+                                height="8px"
+                                data={ProgressBarData02}
+                                color={["#3844F7", "#902CFC"]}/>
+                            {/*color={[ "#902CFC", "#4423C4"]}/>*/}
+                        </Col>
+                    </Row>
+                </Container>
+            </m.section>
+            {/* Section End */}
+
+            
+
+            {/* Section Start */}
+            {/* <m.section
                 className="py-[160px] lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px] bg-lightgray" {...fadeIn}>
                 <h6 className="font-serif text-gray-900 text-center font-medium mb-24 xs:mb-16"> Testimonials carousel
                     style 02 </h6>
@@ -477,12 +482,12 @@ const HomeStartupPage = (props) => {
                         />
                     </Row>
                 </Container>
-            </m.section>
+            </m.section> */}
             {/* Section End */}
 
 
             {/* Section Start */}
-            <section className="bg-lightgray py-[160px] lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px]">
+            <section className="bg-white py-[60px] lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px]">
                 <Container>
                     <Row>
                         <Col className="mb-[6%]">

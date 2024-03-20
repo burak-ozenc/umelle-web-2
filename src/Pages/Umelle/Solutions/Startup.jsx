@@ -590,14 +590,14 @@ const HomeStartupPage = (props) => {
             {/* Section Start */}
             <m.section className="py-[60px] lg:py-[120px] md:py-[80px] xs:py-[50px] bg-lightgray" {...fadeIn}>
                 <Container>
-                    <Row>
+                <Row>
                         <Col className='mb-[6%]'>
                             <h6 className="font-serif text-gray-900 text-center font-medium mb-[25px] lg:mb-[15px]">
-                            Stop overpaying for unused features and never miss out on the functionalities you
-                                need.
+                                Stop overpaying for unused features and never miss out on the functionalities you
+                                need
                             </h6>
                             <div>
-                                <p className="font-serif text-darkgray text-center font-medium mb-[5%] mt-[5%]">
+                                <p className="font-serif text-gray-900 text-center font-medium mb-[25px] lg:mb-[15px]">
                                 Shape your custom software experience now by checking the functions and features you need:
                                 </p>
                             </div>
