@@ -51,6 +51,26 @@ const Footer_Data = [FooterData[0], FooterData[1], FooterData[4], FooterData[3]]
 
 const HomeStartupPage = (props) => {
     ScrollToAnchor();
+
+    // const form = useRef();
+    //
+    // const sendEmail = (e) => {
+    //     e.preventDefault();
+    //
+    //     emailjs
+    //         .sendForm('service_8npz4gj', 'YOUR_TEMPLATE_ID', form.current, {
+    //             publicKey: 'BeAGpmxUx0nkMBMLr',
+    //         })
+    //         .then(
+    //             () => {
+    //                 console.log('SUCCESS!');
+    //             },
+    //             (error) => {
+    //                 console.log('FAILED...', error.text);
+    //             },
+    //         );
+    // };
+    
     return (<div style={props.style}>
         {/* Header Start */}
         <Header topSpace={{md: true}} type="reverse-scroll">
