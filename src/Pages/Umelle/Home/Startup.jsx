@@ -216,7 +216,7 @@ const HomeStartupPage = (props) => {
             {/* Section End */}
 
             {/* Section Start */}
-            <m.section className="bg-lightgray py-[160px] lg:py-[120px] md:py-[80px] xs:py-[50px]" {...fadeIn}>
+            <m.section style={{backgroundImage: `url(https://i.ibb.co/hHCtj1f/homeheader-v1-01.png)`}} className="bg-lightgray py-[160px] lg:py-[120px] md:py-[80px] xs:py-[50px]" {...fadeIn}>
                 <Container>
                     <Row>
                         <Col className='mb-[6%]'>
@@ -228,7 +228,7 @@ const HomeStartupPage = (props) => {
                             </h6>
                         </Col>
                     </Row>
-                    <Row className="m-auto">
+                    <Row className="m-auto" >
                         <Col xl={12} lg={12} md={12}>
                             <Formik
                                 initialValues={{name: '', email: '', phone: '', comment: '', recaptcha: ''}}
@@ -247,7 +247,7 @@ const HomeStartupPage = (props) => {
                                     <Form ref={form1}>
                                         <Row>
                                             <Col xl={7} md={7} xs={7}>
-                                                <Row className="bg-white p-3 m-2">
+                                                <Row className="bg-transparent p-3 m-2">
                                                     <h4 className="text-center">
                                                         Features
                                                     </h4>
@@ -355,7 +355,7 @@ const HomeStartupPage = (props) => {
                                                     </Col>
                                                 </Row>
                                             </Col>
-                                            <Col className="bg-white p-3 m-2" xl={4} md={4} xs={4}>
+                                            <Col className="bg-transparent  p-3 m-2" xl={4} md={4} xs={4}>
                                                 <h4 className="text-center">
                                                     Functions
                                                 </h4>
