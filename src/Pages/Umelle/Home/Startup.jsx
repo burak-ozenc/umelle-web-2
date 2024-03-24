@@ -22,8 +22,8 @@ import {IconWithTextData_02} from "../../../Components/IconWithText/IconWithText
 import Accordions from "../../../Components/Accordion/Accordion";
 import ProgressBar from "../../../Components/ProgressBar/ProgressBar";
 import {ProgressBarData02} from "../../../Components/ProgressBar/ProgressBarData";
-import TestimonialsCarousel02 from "../../../Components/TestimonialCarousel/TestimonialsCarousel02";
-import {TestimonialsCarouselData2} from "../../../Components/TestimonialCarousel/TestimonialsCarouselData";
+// import TestimonialsCarousel02 from "../../../Components/TestimonialCarousel/TestimonialsCarousel02";
+// import {TestimonialsCarouselData2} from "../../../Components/TestimonialCarousel/TestimonialsCarouselData";
 import {ContactFormStyle02Schema} from "../../../Components/Form/FormSchema";
 import ReCAPTCHA from "react-google-recaptcha"
 
@@ -199,16 +199,16 @@ const HomeStartupPage = (props) => {
                         <Col className='mb-[6%]'>
                             <h6 className="font-serif text-gray-900 text-center font-medium mb-[25px] lg:mb-[15px]">
                                 Stop overpaying for unused features and never miss out on the functionalities you
-                                need.
+                                need
                             </h6>
                             <div>
-                                <p className="font-serif text-darkgray text-center font-medium mb-[5%] mt-[5%]">
+                                <p className="font-serif text-gray-900 text-center font-medium mb-[25px] lg:mb-[15px]">
                                 Shape your custom software experience now by checking the functions and features you need:
                                 </p>
                             </div>
                         </Col>
                     </Row>
-                    <Row className="m-auto">
+                    <Row className="m-auto" >
                         <Col xl={12} lg={12} md={12}>
                             <Formik
                                 initialValues={{name: '', email: '', phone: '', comment: '', recaptcha: ''}}

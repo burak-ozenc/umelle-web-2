@@ -31,7 +31,7 @@ export const Header = memo((props) => {
     const [scrollPos, setScrollPos] = useState({
         y: 0,
         prevY: -1,
-        directionDown: true,
+        directionDown: false,
     });
     const location = useLocation()
 
@@ -97,7 +97,7 @@ export const Header = memo((props) => {
             }
 
             if (pos === 0) {
-                setScrollPos({...scrollPos, directionDown: true});
+                setScrollPos({...scrollPos, directionDown: false});
             }
             lastScrollTop = pos;
         });
@@ -107,7 +107,7 @@ export const Header = memo((props) => {
 
     return (
         <header
-            className={`${props.className ? props.className : ""}${scrollPos.y > 5 ? " sticky-header" : ""}${scrollPos.directionDown === false ? " header-appear" : ""}${props.type ? ` ${props.type}` : ""
+            className={`bg-white ${props.className ? props.className : ""}${scrollPos.y > 5 ? " sticky-header" : " sticky-header"} ${scrollPos.directionDown === false ? " header-appear" : ""} ${props.type ? ` ${props.type}` : ""
             }`}
         >
             {props.children}

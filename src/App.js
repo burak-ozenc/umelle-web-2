@@ -19,6 +19,7 @@ const UmelleServices = lazy(() => import("./Pages/Umelle/Services/Startup"))
 const UmelleCompany = lazy(() => import("./Pages/Umelle/Company/Startup"))
 const Contact = lazy(() => import("./Pages/Umelle/Contact/Contact"))
 const ComingSoon = lazy(() => import("./Pages/Umelle/ComingSoon/ComingSoon"))
+const UmelleInsurance = lazy(() => import("./Pages/Umelle/UmelleInsurance/UmelleInsurance"))
 
 function App() {
   const [headerHeight, setHeaderHeight] = useState(0);
@@ -91,7 +92,6 @@ function App() {
             <AnimatePresence exitBeforeEnter>
               <Suspense fallback={<></>}>
                 <Routes>
-                  
                   {/*UMELLE*/}
                   <Route path="/" element={<UmelleHome style={{ "--base-color": "#27ae60" }} />} />
                   <Route path="/solutions" element={<UmelleSolutions style={{ "--base-color": "#27ae60" }} />} />
@@ -99,6 +99,9 @@ function App() {
                   <Route path="/company" element={<UmelleCompany style={{ "--base-color": "#27ae60" }} />} />
                   <Route path="/contact" element={<Contact style={{ "--base-color": "#27ae60" }} />} />
                   <Route path="/coming-soon" element={<ComingSoon style={{ "--base-color": "#27ae60" }} />} />
+                  <Route path="/products" element={<ComingSoon style={{ "--base-color": "#27ae60" }} />} />
+                  <Route path="/umelle-insurance" element={<UmelleInsurance style={{ "--base-color": "#27ae60" }} />} />
+                  <Route path="/aw-stg-landingp" element={<UmelleInsurance style={{ "--base-color": "#27ae60" }} />} />
                 </Routes>
               </Suspense>
             </AnimatePresence>

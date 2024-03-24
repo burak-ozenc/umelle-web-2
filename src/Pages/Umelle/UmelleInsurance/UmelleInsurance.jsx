@@ -7,18 +7,18 @@ import * as Yup from 'yup';
 import {AnimatePresence, m} from 'framer-motion';
 import {Form, Formik} from 'formik';
 
-// Functions
-import {fadeIn} from '../../../Functions/GlobalAnimations';
-
 // Components
 import {resetForm, ScrollToAnchor, sendEmail} from "../../../Functions/Utilities";
-import {Checkbox, Input, TextArea} from '../../../Components/Form/Form'
+import {Input} from '../../../Components/Form/Form'
 import FooterMenu, {Footer} from '../../../Components/Footers/Footer';
 import InViewPort from '../../../Components/InViewPort';
 
 // Data
 import FooterData from '../../../Components/Footers/FooterData';
-import { ContactFormStyle03Schema} from "../../../Components/Form/FormSchema";
+// import {TiltBox} from "../../../Components/FancyText/FancyText";
+import {fadeIn} from "../../../Functions/GlobalAnimations";
+import IconWithText from "../../../Components/IconWithText/IconWithText";
+
 const HamburgerMenu = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.HamburgerMenu})))
 const Header = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Header})))
 const HeaderNav = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.HeaderNav})))
@@ -47,30 +47,29 @@ const SocialIconsData = [{
     color: "#0077b5", link: "https://www.linkedin.com/", icon: "fab fa-linkedin-in"
 },]
 
+const FeaturesData = [
+    {
+        icon: "line-icon-Add-UserStar text-basecolor text-[40px] text-gradient bg-gradient-to-r from-[#3844F7]  to-[#902CFC]",
+        title: "Member and User Services",
+        content: "Enhance security, reliability, and efficiency, simplifying user access, member management, and claims processing in one comprehensive, intuitive solution",
+    },
+    {
+        icon: "line-icon-Archery-2 text-basecolor text-[40px] text-gradient bg-gradient-to-r from-[#3844F7]  to-[#902CFC]",
+        title: "Seamless Compliance",
+        content: "Simplify compliance while ensuring operational consistency and hassle-free adherence to regulations through automated updates and alerts ",
+    },
+    {
+        icon: "line-icon-Monitor-Analytics text- text-[40px] text-gradient bg-gradient-to-r from-[#3844F7]  to-[#902CFC]",
+        title: "Advanced Analytics ",
+        content: "Gain crucial insights, discern trends, and make informed choices with our analytics suite, delivering the intelligence to refine strategies and reach your objectives ",
+    }
+]
+
+
 const Footer_Data = [FooterData[0], FooterData[1], FooterData[4], FooterData[3]]
 
-const HomeStartupPage = (props) => {
+const UmelleInsuranceManagementSuite = (props) => {
     ScrollToAnchor();
-
-    // const form = useRef();
-    //
-    // const sendEmail = (e) => {
-    //     e.preventDefault();
-    //
-    //     emailjs
-    //         .sendForm('service_8npz4gj', 'YOUR_TEMPLATE_ID', form.current, {
-    //             publicKey: 'BeAGpmxUx0nkMBMLr',
-    //         })
-    //         .then(
-    //             () => {
-    //                 console.log('SUCCESS!');
-    //             },
-    //             (error) => {
-    //                 console.log('FAILED...', error.text);
-    //             },
-    //         );
-    // };
-    
     return (<div style={props.style}>
         {/* Header Start */}
         <Header topSpace={{md: true}} type="reverse-scroll">
@@ -162,7 +161,120 @@ const HomeStartupPage = (props) => {
         {/* Header End */}
 
         <SideButtons/>
-        
+
+
+        {/* Section Start */}
+        <section className="bg-cover bg-no-repeat overflow-visible bg-center"
+                 style={{backgroundImage: "url('https://i.ibb.co/YN74NbB/Header-Landing-Page-01.png')"}}>
+            <Container>
+                <Row className="justify-center sm:text-center">
+                    <Col lg={7} xl={7} md={7} sm={8}
+                         className="h-[100vh] flex flex-col items-start justify-center pb-40 pt-24 lg:pt-40 lg:pb-32 md:pt-24 md:pb-40 sm:h-auto sm:pb-20 md:h-[650px]">
+                        <span
+                            className="font-serif font-semibold text-md leading-[24px] tracking-[1px] text-white inline-block uppercase mb-[45px] sm:mt-0 sm:mx-auto sm:mb-[35px]">
+                            EXPERIENCE THE FUTURE OF INSURANCE MANAGEMENT
+                        </span>
+                        <h1 className="font-serif font-bold block text-[42px] leading-[48px] mb-[1px] text-white xs:text-base xs:mb-[40px] ">
+                            INSURANCE AND OPERATIONS
+                        </h1>
+                        <h2 className="font-serif font-bold block text-[24px] leading-[48px] mb-[0px] text-white xs:text-base xs:mb-[10px]  text-[1.4em]">
+                            Management Solution Aligned to your Business Needs 
+                        </h2>
+                        <br/>
+                        <br/>
+                        <p className="text-lg uppercase leading-[25px] text-white opacity-60 mb-[25px] w-[95%] sm:w-full md:text-xmd sm:mb-[15px] xs:leading-[22px]">
+                            The premier choice for pooled insurance providers
+                        </p>
+                        {/*<ScrollTo href='#' to="download" offset={0} delay={0} spy={true} smooth={true} duration={800}*/}
+                        {/*          className="sm:contents">*/}
+                            <Link to="/solutions">
+                                <Buttons ariaLabel="button"
+                                     href="/solutions"
+                                     className="mx-[10px] font-medium font-serif uppercase rounded-none lg:mb-[15px] landscape:lg:mb-[15px] justify-center align-items-center mt-4"
+                                     themeColor={["#fff", "#fff"]} size="lg" color="#4423C4"
+                                     title="LEARN MORE"/>
+                            </Link>
+                        {/*</ScrollTo>*/}
+                    </Col>
+                </Row>
+            </Container>
+        </section>
+        {/* Section End*/}
+
+        {/* Section Start*/}
+        <m.section id="about" className="border-b border-mediumgray py-[130px] lg:py-[90px] sm:pb-[50px] md:pt-0 sm:pt-[50px]" {...fadeIn}>
+            <Container>
+                <Row className="justify-center">
+                    <Col lg={8} sm={8} className="text-center mb-24 md:mb-16 sm:mb-8 mt-14">
+                        <span className="font-serif font-medium text-md text-gradient bg-gradient-to-r from-[#975ade] via-[#e05fc4] to-[#ff798e] tracking-[.5px] uppercase inline-block mb-[20px] sm:mb-[10px]">
+                        WE CRAFTED A SOLUTION THAT NOT ONLY MEETS THESE NEEDS BUT EXCEEDS THEM, PROVIDING A BLEND OF FISCAL PERCISION AND SUPERIOR MEMBER SERVICES  
+                        </span>
+                        <h2 className="heading-4 font-serif font-light text-darkgray tracking-[-1px]">
+                        We understand the unique challenges and needs of pooled insurance providers                         </h2>
+                    </Col>
+                    <IconWithText grid="row-cols-1 row-cols-lg-3 row-cols-sm-2 text-center md:gap-y-[15px]" theme="icon-with-text-03" data={FeaturesData} animation={fadeIn} animationDelay={0.3} />
+                </Row>
+            </Container>
+        </m.section>
+        {/* Section End */}
+
+
+        {/* Section Start */}
+        <m.section className="py-[160px] lg:py-[120px] md:py-[95px] sm:py-[80px] xs;py-[50px]" {...fadeIn}>
+            <Container>
+                <Row>
+                    <Col className="mb-[4%]">
+                        <h4 className="font-serif text-dark text-center font-medium mb-[25px] lg:mb-[15px]">
+                            Transforming Challenges into Opportunities
+                        </h4>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col lg={5} className="px-[10px] md:mb-[15px]">
+                        <div className="bg-transparent p-[40px] sm:p-[30px]">
+                            <h6 className="lg:mb-[45px] text-[1.8em]" style={{color: '#4423C4'}}>
+                                Is your off-the-shelf software falling short? Are you overpaying for superfluous features and missing out on the functionalities you need?
+                            </h6>
+                        </div>
+                    </Col>
+                    <Col lg={7} className="px-[15px] md:mb-[15px]">
+                        <div className="bg-transparent p-[33px] sm:p-[34px] text-[1.5em] min-h-[230px]">
+                            <p>
+                                We offer the perfect balance of cost and utility, by delivering specialized solutions and expertise tailored to your exact requirements, ensuring you receive focused advantages through our key strengths.
+                            </p>
+                        </div>
+                    </Col>
+                </Row>
+
+            </Container>
+        </m.section>
+        {/* Section End */}
+
+
+        {/* Section Start */}
+        <m.section id="download" className="py-[160px] cover-background lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px]" style={{ backgroundImage: `url("https://via.placeholder.com/1920x388")` }} {...fadeIn}>
+            <Container>
+                <Row className="items-center">
+                    <Col lg={8} md={8} className="col-12 text-left font-serif uppercase sm:mb-[30px] sm:text-center">
+                        <span className="font-medium text-md text-gradient bg-gradient-to-r from-[#975ade] via-[#e05fc4] to-[#ff798e] tracking-[.5px] inline-block mb-[15px] sm:mb-[10px]">
+                            WE BUILD FOR YOUR BUSINESS NEEDS 
+                        </span>
+                        <h2 className="heading-4 font-semibold text-white -tracking-[1px] mb-0">
+                            DISCOVER THE FULL SET OF FUNCTIONALITIES AND FEATURES
+                        </h2>
+                    </Col>
+                    <Col lg={{ offset: 1 }} md={3} className="flex sm:justify-center ps-lg-0">
+                        <Buttons ariaLabel="button"
+                                 href="/solutions"
+                                 className="mx-[10px] font-medium font-serif uppercase rounded-none lg:mb-[15px] landscape:lg:mb-[15px] justify-center align-items-center mt-4"
+                                 themeColor={["#3844F7", "#902CFC"]} size="md" color="#fff"
+                                 title="LEARN MORE"/>
+                    </Col>
+                </Row>
+            </Container>
+        </m.section>
+        {/* Section End */}
+
 
         {/* Lazy Load HTML */}
         <InViewPort>
@@ -173,86 +285,7 @@ const HomeStartupPage = (props) => {
                 </Overlap>
             </section>
             {/* Section End */}
-            
-            {/* Section Start */}
-            <m.section
-                className="py-[160px] lg:py-[120px] md:py-[75px] sm:py-[50px] xs:py-[80px] xxs:py-[50px]"  {...fadeIn}>
-                <Container>
-                    <Row>
-                        <Col className='mb-[6%]'>
-                            <h6 className="font-serif text-gray-900 text-center font-medium mb-[25px] lg:mb-[15px]">
-                                Let's discuss your project
-                            </h6>
-                        </Col>
-                    </Row>
-                    <Row className="justify-center">
-                        <Col>
-                            <Formik
-                                initialValues={{name: '', email: '', phone: '', terms_condition: false}}
-                                validationSchema={ContactFormStyle03Schema}
-                                onSubmit={async (values, actions) => {
-                                    actions.setSubmitting(true)
-                                    const response = await sendEmail(values)
-                                    response.status === "success" && resetForm(actions)
-                                }}
-                            >
-                                {({isSubmitting, status}) => (
-                                    <Form>
-                                        <Row className="row-cols-1 row-cols-md-2">
-                                            <Col className="mb-16 lg:mb-[25px] sm:mb-0">
-                                                <Input showErrorMsg={false} type="text" name="name"
-                                                       className="py-[15px] px-[20px] text-md w-full border-[1px] border-solid border-[#dfdfdf]"
-                                                       labelClass="mb-[25px]" placeholder="Your name"/>
-                                                <Input showErrorMsg={false} type="text" name="company"
-                                                       className="py-[15px] px-[20px] text-md w-full border-[1px] border-solid border-[#dfdfdf]"
-                                                       labelClass="mb-[25px]" placeholder="Your company"/>
-                                                <Input showErrorMsg={false} type="email" name="email"
-                                                       className="py-[15px] px-[20px] w-full text-md border-[1px] border-solid border-[#dfdfdf]"
-                                                       labelClass="mb-[25px]" placeholder="Your email address"/>
-                                                <Input showErrorMsg={false} type="tel" name="phone"
-                                                       className="py-[15px] px-[20px] w-full text-md border-[1px] border-solid border-[#dfdfdf]"
-                                                       labelClass="sm:mb-[25px]" placeholder="Your position"/>
-                                            </Col>
-                                            <Col className="mb-16 lg:mb-[25px]">
-                                                <TextArea
-                                                    className="border-[1px] border-solid border-[#dfdfdf] w-full h-full py-[15px] px-[20px] text-md resize-none"
-                                                    name="comment" labelClass="h-full sm:h-[200px]"
-                                                    placeholder="Your message"></TextArea>
-                                            </Col>
-                                            <Col className="text-left sm:mb-[20px]">
-                                                <Checkbox type="checkbox" name="terms_condition"
-                                                          className="inline-block mt-[4px]"
-                                                          labelClass="flex items-start">
-                                                    <span className="ml-[10px] text-sm w-[85%] md:w-[90%] xs:w-[85%]">I accept the terms & conditions and I understand that my data will be hold securely in accordance with the&nbsp;
-                                                        <Link to="/privacy" target="_blank"
-                                                              className="text-darkgray underline hover:text-fastblue">privacy policy</Link>.</span>
-                                                </Checkbox>
-                                            </Col>
-                                            <Col className="text-right sm:text-center">
-                                                <Buttons ariaLabel="form button" type="submit"
-                                                         className={`text-xs tracking-[1px] rounded-none py-[12px] px-[28px] uppercase${isSubmitting ? " loading" : ""}`}
-                                                         themeColor={["#556fff", "#ff798e"]} size="md" color="#fff"
-                                                         title="Send Message"/>
-                                            </Col>
-                                        </Row>
-                                        <AnimatePresence>
-                                            {status && <Row><Col xs={12}>
-                                                <m.div initial={{opacity: 0}} animate={{opacity: 1}}
-                                                       exit={{opacity: 0}}><MessageBox className="mt-[20px] py-[10px]"
-                                                                                       theme="message-box01"
-                                                                                       variant="success"
-                                                                                       message="Your message has been sent successfully!"/>
-                                                </m.div>
-                                            </Col></Row>}
-                                        </AnimatePresence>
-                                    </Form>
-                                )}
-                            </Formik>
-                        </Col>
-                    </Row>
-                </Container>
-            </m.section>
-            {/* Section End */}
+
 
             {/* Footer Start */}
             <Footer className="startup-footer bg-no-repeat bg-right" theme="light"
@@ -294,4 +327,4 @@ const HomeStartupPage = (props) => {
     </div>)
 }
 
-export default HomeStartupPage
+export default UmelleInsuranceManagementSuite
