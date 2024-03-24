@@ -438,7 +438,7 @@ const HomeStartupPage = (props) => {
 
             {/* Section Start */}
             <m.section
-                className="py-[60px] overflow-hidden lg:py-[90px] md:py-[75px] sm:py-[50px] bg-lightgray lg:px-0 md:px-0 sm:px-0 xs:px-0">
+                className="py-[120px] overflow-hidden lg:py-[90px] md:py-[75px] sm:py-[50px] bg-lightgray lg:px-0 md:px-0 sm:px-0 xs:px-0">
                 <Container>
                     <h6 className="font-serif text-darkgray text-center font-medium mb-[94px] md:mb-[50px]">
                         Customer Satisfaction
@@ -482,7 +482,7 @@ const HomeStartupPage = (props) => {
                         />
                     </Row>
                 </Container>
-            </m.section>
+            </m.section> */}
             {/* Section End */}
 
 
