@@ -193,7 +193,9 @@ const HomeStartupPage = (props) => {
             {/* Section End */}
 
             {/* Section Start */}
-            <m.section className="bg-white py-[160px] lg:py-[120px] md:py-[80px] xs:py-[50px]" {...fadeIn}>
+            <m.section className="bg-transparent py-[160px] lg:py-[120px] md:py-[80px] xs:py-[50px]"
+                       style={{backgroundImage: `url(https://i.ibb.co/hHCtj1f/homeheader-v1-01.png)`}}
+                       {...fadeIn}>
                 <Container>
                     <Row>
                         <Col className='mb-[6%]'>
@@ -335,7 +337,7 @@ const HomeStartupPage = (props) => {
                                                     </Col>
                                                 </Row>
                                             </Col>
-                                            <Col className="bg-white p-3 m-2" xl={4} md={4} xs={4}>
+                                            <Col className="bg-transparent p-3 m-2" xl={4} md={4} xs={4}>
                                                 <h4 className="text-center">
                                                     Functions
                                                 </h4>
