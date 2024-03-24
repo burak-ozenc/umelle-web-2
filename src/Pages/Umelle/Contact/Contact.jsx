@@ -1,9 +1,8 @@
-import React, {lazy} from 'react'
+import React, {lazy, useRef} from 'react'
 
 // Libraries
 import {Link} from 'react-router-dom';
 import {Col, Container, Navbar, Row} from "react-bootstrap";
-import * as Yup from 'yup';
 import {AnimatePresence, m} from 'framer-motion';
 import {Form, Formik} from 'formik';
 
@@ -11,14 +10,17 @@ import {Form, Formik} from 'formik';
 import {fadeIn} from '../../../Functions/GlobalAnimations';
 
 // Components
-import {resetForm, ScrollToAnchor, sendEmail} from "../../../Functions/Utilities";
+import { ScrollToAnchor} from "../../../Functions/Utilities";
 import {Checkbox, Input, TextArea} from '../../../Components/Form/Form'
 import FooterMenu, {Footer} from '../../../Components/Footers/Footer';
 import InViewPort from '../../../Components/InViewPort';
 
 // Data
 import FooterData from '../../../Components/Footers/FooterData';
-import { ContactFormStyle03Schema} from "../../../Components/Form/FormSchema";
+import {ContactFormStyle03Schema} from "../../../Components/Form/FormSchema";
+import * as emailjs from "@emailjs/browser";
+import ReCAPTCHA from "react-google-recaptcha";
+
 const HamburgerMenu = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.HamburgerMenu})))
 const Header = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Header})))
 const HeaderNav = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.HeaderNav})))
@@ -51,26 +53,23 @@ const Footer_Data = [FooterData[0], FooterData[1], FooterData[4], FooterData[3]]
 
 const HomeStartupPage = (props) => {
     ScrollToAnchor();
+    const recaptcha = useRef()
 
-    // const form = useRef();
-    //
-    // const sendEmail = (e) => {
-    //     e.preventDefault();
-    //
-    //     emailjs
-    //         .sendForm('service_8npz4gj', 'YOUR_TEMPLATE_ID', form.current, {
-    //             publicKey: 'BeAGpmxUx0nkMBMLr',
-    //         })
-    //         .then(
-    //             () => {
-    //                 console.log('SUCCESS!');
-    //             },
-    //             (error) => {
-    //                 console.log('FAILED...', error.text);
-    //             },
-    //         );
-    // };
-    
+    const sendEmail = (values) => {
+        emailjs
+            .send(process.env.REACT_APP_EMAIL_SERVICE_ID, process.env.REACT_APP_EMAIL_CONTACT_TEMPLATE_ID, values, {
+                publicKey: process.env.REACT_APP_EMAIL_PUBLIC_KEY,
+            })
+            .then(
+                () => {
+                    console.log('SUCCESS!');
+                },
+                (error) => {
+                    console.log('FAILED...', error);
+                },
+            );
+    };
+
     return (<div style={props.style}>
         {/* Header Start */}
         <Header topSpace={{md: true}} type="reverse-scroll">
@@ -116,39 +115,6 @@ const HomeStartupPage = (props) => {
                                         </div>
                                         <p className="w-[70%] mb-12 text-darkgray leading-[26px] text-lg font-serif mx-auto inline-block">Get
                                             latest update for our trusted applications</p>
-                                        <Formik
-                                            initialValues={{email: ''}}
-                                            validationSchema={Yup.object().shape({email: Yup.string().email("Invalid email.").required("Field is required."),})}
-                                            onSubmit={async (values, actions) => {
-                                                actions.setSubmitting(true)
-                                                const response = await sendEmail(values)
-                                                response.status === "success" && resetForm(actions)
-                                            }}
-                                        >
-                                            {({isSubmitting, status}) => (
-                                                <div className="relative subscribe-style-05 mb-20">
-                                                    <Form className="relative">
-                                                        <Input showErrorMsg={false} type="email" name="email"
-                                                               className="border-[1px] medium-input rounded-[5px] border-solid border-[#dfdfdf]"
-                                                               placeholder="Enter your email address"/>
-                                                        <button aria-label="Subscribe" type="submit"
-                                                                className={`text-xs leading-[18px] py-[12px] px-[28px] uppercase xs:text-center${isSubmitting ? " loading" : ""}`}>
-                                                            <i className="far fa-envelope text-basecolor text-sm leading-none mr-[10px] xs:mr-0"></i>Subscribe
-                                                        </button>
-                                                    </Form>
-                                                    <AnimatePresence>
-                                                        {status &&
-                                                            <m.div initial={{opacity: 0}} animate={{opacity: 1}}
-                                                                   exit={{opacity: 0}}
-                                                                   className="mt-[25px] top-[115%] left-0 w-full">
-                                                                <MessageBox
-                                                                    className="rounded-[4px] text-md py-[10px] px-[22px] z-10"
-                                                                    theme="message-box01" variant="success"
-                                                                    message="Your message has been sent successfully subscribed to our email list!"/>
-                                                            </m.div>}
-                                                    </AnimatePresence>
-                                                </div>)}
-                                        </Formik>
                                         <SocialIcons theme="social-icon-style-05" size="sm" iconColor="dark"
                                                      data={SocialIconsData}/>
                                     </div>
@@ -162,7 +128,6 @@ const HomeStartupPage = (props) => {
         {/* Header End */}
 
         <SideButtons/>
-        
 
         {/* Lazy Load HTML */}
         <InViewPort>
@@ -173,7 +138,7 @@ const HomeStartupPage = (props) => {
                 </Overlap>
             </section>
             {/* Section End */}
-            
+
             {/* Section Start */}
             <m.section
                 className="py-[160px] lg:py-[120px] md:py-[75px] sm:py-[50px] xs:py-[80px] xxs:py-[50px]"  {...fadeIn}>
@@ -192,11 +157,10 @@ const HomeStartupPage = (props) => {
                                 validationSchema={ContactFormStyle03Schema}
                                 onSubmit={async (values, actions) => {
                                     actions.setSubmitting(true)
-                                    const response = await sendEmail(values)
-                                    response.status === "success" && resetForm(actions)
+                                    sendEmail(values)
                                 }}
                             >
-                                {({isSubmitting, status}) => (
+                                {({isSubmitting, status, setFieldValue}) => (
                                     <Form>
                                         <Row className="row-cols-1 row-cols-md-2">
                                             <Col className="mb-16 lg:mb-[25px] sm:mb-0">
@@ -219,6 +183,14 @@ const HomeStartupPage = (props) => {
                                                     name="comment" labelClass="h-full sm:h-[200px]"
                                                     placeholder="Your message"></TextArea>
                                             </Col>
+                                            {process.env.REACT_APP_GRECAPTCHA_API_KEY && (
+                                                <ReCAPTCHA
+                                                    ref={recaptcha}
+                                                    className="mb-[35px]"
+                                                    sitekey={process.env.REACT_APP_GRECAPTCHA_API_KEY}
+                                                    onChange={(response) => { setFieldValue("recaptcha", response) }}
+                                                />
+                                            )}
                                             <Col className="text-left sm:mb-[20px]">
                                                 <Checkbox type="checkbox" name="terms_condition"
                                                           className="inline-block mt-[4px]"
@@ -235,15 +207,18 @@ const HomeStartupPage = (props) => {
                                                          title="Send Message"/>
                                             </Col>
                                         </Row>
+                                        
                                         <AnimatePresence>
                                             {status && <Row><Col xs={12}>
                                                 <m.div initial={{opacity: 0}} animate={{opacity: 1}}
-                                                       exit={{opacity: 0}}><MessageBox className="mt-[20px] py-[10px]"
-                                                                                       theme="message-box01"
-                                                                                       variant="success"
-                                                                                       message="Your message has been sent successfully!"/>
+                                                       exit={{opacity: 0}}>
+                                                    <MessageBox className="mt-[20px] py-[10px]"
+                                                                theme="message-box01"
+                                                                variant="success"
+                                                                message="Your message has been sent successfully!"/>
                                                 </m.div>
-                                            </Col></Row>}
+                                            </Col>
+                                            </Row>}
                                         </AnimatePresence>
                                     </Form>
                                 )}
