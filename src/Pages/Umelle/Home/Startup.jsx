@@ -193,7 +193,9 @@ const HomeStartupPage = (props) => {
             {/* Section End */}
 
             {/* Section Start */}
-            <m.section className="bg-white py-[160px] lg:py-[120px] md:py-[80px] xs:py-[50px]" {...fadeIn}>
+            <m.section className="bg-transparent py-[160px] lg:py-[120px] md:py-[80px] xs:py-[50px]"
+                       style={{backgroundImage: `url(https://i.ibb.co/hHCtj1f/homeheader-v1-01.png)`}}
+                       {...fadeIn}>
                 <Container>
                     <Row>
                         <Col className='mb-[6%]'>
@@ -208,7 +210,7 @@ const HomeStartupPage = (props) => {
                             </div>
                         </Col>
                     </Row>
-                    <Row className="m-auto">
+                    <Row className="m-auto" >
                         <Col xl={12} lg={12} md={12}>
                             <Formik
                                 initialValues={{name: '', email: '', phone: '', comment: '', recaptcha: ''}}
@@ -228,7 +230,7 @@ const HomeStartupPage = (props) => {
                                         <Row>
                                             <Col xl={7} md={7} xs={7}>
                                                 <Row className="bg-white p-3 m-2">
-                                                    <h4 className="text-center" style={{ color: '#902CFC' }}>
+                                                    <h4 className="text-center">
                                                         Features
                                                     </h4>
                                                     <Col xl={6} md={6} xs={6}>
@@ -335,8 +337,8 @@ const HomeStartupPage = (props) => {
                                                     </Col>
                                                 </Row>
                                             </Col>
-                                            <Col className="bg-white p-3 m-2" xl={4} md={4} xs={4}>
-                                                <h4 className="text-center" style={{ color: '#902CFC' }}>
+                                            <Col className="bg-transparent p-3 m-2" xl={4} md={4} xs={4}>
+                                                <h4 className="text-center">
                                                     Functions
                                                 </h4>
                                                 <Checkbox type="checkbox" name="checkbox_2_1" className="inline-block"
@@ -438,7 +440,7 @@ const HomeStartupPage = (props) => {
 
             {/* Section Start */}
             <m.section
-                className="py-[60px] overflow-hidden lg:py-[90px] md:py-[75px] sm:py-[50px] bg-lightgray lg:px-0 md:px-0 sm:px-0 xs:px-0">
+                className="py-[120px] overflow-hidden lg:py-[90px] md:py-[75px] sm:py-[50px] bg-lightgray lg:px-0 md:px-0 sm:px-0 xs:px-0">
                 <Container>
                     <h6 className="font-serif text-darkgray text-center font-medium mb-[94px] md:mb-[50px]">
                         Customer Satisfaction
@@ -487,7 +489,7 @@ const HomeStartupPage = (props) => {
 
 
             {/* Section Start */}
-            <section className="bg-white py-[60px] lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px]">
+            <section className="bg-lightgray py-[160px] lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px]">
                 <Container>
                     <Row>
                         <Col className="mb-[6%]">
