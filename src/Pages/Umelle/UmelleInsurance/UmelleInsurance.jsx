@@ -15,7 +15,7 @@ import InViewPort from '../../../Components/InViewPort';
 
 // Data
 import FooterData from '../../../Components/Footers/FooterData';
-import {TiltBox} from "../../../Components/FancyText/FancyText";
+// import {TiltBox} from "../../../Components/FancyText/FancyText";
 import {fadeIn} from "../../../Functions/GlobalAnimations";
 import IconWithText from "../../../Components/IconWithText/IconWithText";
 
@@ -51,7 +51,7 @@ const FeaturesData = [
     {
         icon: "line-icon-Add-UserStar text-basecolor text-[40px] text-gradient bg-gradient-to-r from-[#3844F7]  to-[#902CFC]",
         title: "Member and User Services",
-        content: "Enhance security and efficiency, simplifying user access, member management, and claims processing in one intuitive solution",
+        content: "Enhance security, reliability, and efficiency, simplifying user access, member management, and claims processing in one comprehensive, intuitive solution",
     },
     {
         icon: "line-icon-Archery-2 text-basecolor text-[40px] text-gradient bg-gradient-to-r from-[#3844F7]  to-[#902CFC]",
@@ -174,11 +174,11 @@ const UmelleInsuranceManagementSuite = (props) => {
                             className="font-serif font-semibold text-md leading-[24px] tracking-[1px] text-white inline-block uppercase mb-[45px] sm:mt-0 sm:mx-auto sm:mb-[35px]">
                             EXPERIENCE THE FUTURE OF INSURANCE MANAGEMENT
                         </span>
-                        <h1 className="font-serif font-bold block text-[42px] leading-[48px] mb-[35px] text-white xs:text-base xs:mb-[40px] ">
+                        <h1 className="font-serif font-bold block text-[42px] leading-[48px] mb-[1px] text-white xs:text-base xs:mb-[40px] ">
                             INSURANCE AND OPERATIONS
                         </h1>
-                        <h2 className="font-serif font-bold block text-[42px] leading-[48px] mb-[0px] text-white xs:text-base xs:mb-[10px]  text-[1.4em]">
-                            MANAGEMENT SOLUTION ALIGNED TO YOUR BUSINESS NEEDS
+                        <h2 className="font-serif font-bold block text-[24px] leading-[48px] mb-[0px] text-white xs:text-base xs:mb-[10px]  text-[1.4em]">
+                            Management Solution Aligned to your Business Needs 
                         </h2>
                         <br/>
                         <br/>
@@ -187,11 +187,13 @@ const UmelleInsuranceManagementSuite = (props) => {
                         </p>
                         {/*<ScrollTo href='#' to="download" offset={0} delay={0} spy={true} smooth={true} duration={800}*/}
                         {/*          className="sm:contents">*/}
-                            <Buttons ariaLabel="button"
+                            <Link to="/solutions">
+                                <Buttons ariaLabel="button"
                                      href="/solutions"
                                      className="mx-[10px] font-medium font-serif uppercase rounded-none lg:mb-[15px] landscape:lg:mb-[15px] justify-center align-items-center mt-4"
-                                     themeColor={["#fff", "#fff"]} size="md" color="#4423C4"
+                                     themeColor={["#fff", "#fff"]} size="lg" color="#4423C4"
                                      title="LEARN MORE"/>
+                            </Link>
                         {/*</ScrollTo>*/}
                     </Col>
                 </Row>
@@ -205,11 +207,10 @@ const UmelleInsuranceManagementSuite = (props) => {
                 <Row className="justify-center">
                     <Col lg={8} sm={8} className="text-center mb-24 md:mb-16 sm:mb-8 mt-14">
                         <span className="font-serif font-medium text-md text-gradient bg-gradient-to-r from-[#975ade] via-[#e05fc4] to-[#ff798e] tracking-[.5px] uppercase inline-block mb-[20px] sm:mb-[10px]">
-                            WE UNDERSTAND THE UNIQUE CHALLENGES AND NEEDS OF POOLED INSURANCE PROVIDERS 
+                        WE CRAFTED A SOLUTION THAT NOT ONLY MEETS THESE NEEDS BUT EXCEEDS THEM, PROVIDING A BLEND OF FISCAL PERCISION AND SUPERIOR MEMBER SERVICES  
                         </span>
                         <h2 className="heading-4 font-serif font-light text-darkgray tracking-[-1px]">
-                            We Crafted a Solution That Not Only Meets These Needs but Exceeds Them, Providing A Blend of Fiscal Precision and Superior Member Service
-                        </h2>
+                        We understand the unique challenges and needs of pooled insurance providers                         </h2>
                     </Col>
                     <IconWithText grid="row-cols-1 row-cols-lg-3 row-cols-sm-2 text-center md:gap-y-[15px]" theme="icon-with-text-03" data={FeaturesData} animation={fadeIn} animationDelay={0.3} />
                 </Row>
@@ -229,15 +230,15 @@ const UmelleInsuranceManagementSuite = (props) => {
                     </Col>
                 </Row>
                 <Row>
-                    <Col lg={5} className="px-[15px] md:mb-[15px]">
-                        <div className="bg-lightgray p-[40px] sm:p-[30px]">
-                            <h6 className="text-darkgray lg:mb-[45px] text-[2em]">
+                    <Col lg={5} className="px-[10px] md:mb-[15px]">
+                        <div className="bg-transparent p-[40px] sm:p-[30px]">
+                            <h6 className="lg:mb-[45px] text-[1.8em]" style={{color: '#4423C4'}}>
                                 Is your off-the-shelf software falling short? Are you overpaying for superfluous features and missing out on the functionalities you need?
                             </h6>
                         </div>
                     </Col>
                     <Col lg={7} className="px-[15px] md:mb-[15px]">
-                        <div className="bg-lightgray p-[33px] sm:p-[34px] text-[2em] min-h-[280px]">
+                        <div className="bg-transparent p-[33px] sm:p-[34px] text-[1.5em] min-h-[230px]">
                             <p>
                                 We offer the perfect balance of cost and utility, by delivering specialized solutions and expertise tailored to your exact requirements, ensuring you receive focused advantages through our key strengths.
                             </p>

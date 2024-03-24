@@ -1,8 +1,8 @@
 const TestimonialsCarouselData1 = [
     {
-        firstname: "Alexander",
-        lastname: "harvard",
-        designation: "Creative director",
+        // firstname: "Alexander",
+        // lastname: "harvard",
+        // designation: "Creative director",
         content: "We're keenly aware of the risk and expense associated with technical depthbt and we know how to ensure that quality isn't compromised by speed, without adding additional costs.",
         list: [
             {
@@ -17,11 +17,11 @@ const TestimonialsCarouselData1 = [
         ]
     },
     {
-        firstname: "Jeremy",
-        lastname: "dupont",
-        designation: "Creative director",
+        // firstname: "Jeremy",
+        // lastname: "dupont",
+        // designation: "Creative director",
         content: "It takes a combination of teamwork and technical chops to deliver superior software. Our team comes to the table with both while offering complete visibility over our processes.",
-        img: "https://via.placeholder.com/131x131",
+        //img: "https://via.placeholder.com/131x131",
         list: [
             {
                 listMember : 'Expertise'
@@ -35,11 +35,11 @@ const TestimonialsCarouselData1 = [
         ]
     },
     {
-        firstname: "Lindsay",
-        lastname: "swanson",
-        designation: "Creative director",
+        // firstname: "Lindsay",
+        // lastname: "swanson",
+        // designation: "Creative director",
         content: "We’ll provide a team of developers perfectly suited to your project, ready to work hand-in-glove with your in-house team. ",
-        img: "https://via.placeholder.com/131x131",
+        //img: "https://via.placeholder.com/131x131",
         list: [
             {
                 listMember : 'Proven Process'

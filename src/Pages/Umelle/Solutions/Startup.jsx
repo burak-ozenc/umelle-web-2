@@ -590,13 +590,18 @@ const HomeStartupPage = (props) => {
             {/* Section Start */}
             <m.section className="py-[60px] lg:py-[120px] md:py-[80px] xs:py-[50px] bg-lightgray" {...fadeIn}>
                 <Container>
-                    <Row>
-                        <Col className='mb-[6%]'>
-                            <h6 className="font-serif text-gray-900 text-center font-medium mb-[25px] lg:mb-[15px]">
-                            Stop overpaying for unused features and never miss out on the functionalities you
-                                need. Build your own solution by selecting the Features and Functions you need. Send your build to our solution team and we will get back to you:
-                            </h6>
-                        </Col>
+                <Row>
+                    <Col className='mb-[6%]'>
+                        <h6 className="font-serif text-gray-900 text-center font-medium mb-[25px] lg:mb-[15px]">
+                                Stop overpaying for unused features and never miss out on the functionalities you
+                                need
+                        </h6>
+                        <div>
+                            <p className="font-serif text-gray-900 text-center font-medium mb-[25px] lg:mb-[15px]">
+                                Shape your custom software experience now by checking the functions and features you need:
+                            </p>
+                        </div>
+                    </Col>
                     </Row>
                     <Row className="m-auto">
                         <Col xl={12} lg={12} md={12}>
@@ -618,7 +623,7 @@ const HomeStartupPage = (props) => {
                                         <Row>
                                             <Col xl={7} md={7} xs={7}>
                                                 <Row className="bg-lightgray p-3 m-2">
-                                                    <h4 className="text-center">
+                                                    <h4 className="text-center" style={{ color: '#902CFC' }}>
                                                         Features
                                                     </h4>
                                                     <Col xl={6} md={6} xs={6}>
@@ -725,8 +730,8 @@ const HomeStartupPage = (props) => {
                                                     </Col>
                                                 </Row>
                                             </Col>
-                                            <Col className="bg-lightgray p-3 m-2" xl={4} md={4} xs={4}>
-                                                <h4>
+                                            <Col className="bg-lightgray p-3 m-2" xl={4} md={4} xs={4} >
+                                            <h4 className="text-center" style={{ color: '#902CFC' }}>
                                                     Functions
                                                 </h4>
                                                 <Checkbox type="checkbox" name="checkbox_2_1" className="inline-block"
