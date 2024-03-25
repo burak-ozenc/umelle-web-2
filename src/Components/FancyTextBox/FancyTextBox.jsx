@@ -123,7 +123,7 @@ const FancyTextBox = (props) => {
             {
                 props.data.map((item, i) => {
                     return (
-                        <m.div className={`col${props.themeColor ? ` ${props.themeColor}` : ""}${props.className ? ` ${props.className}` : ""}`} key={i} {...{ ...props.animation, transition: { delay: i * props.animationDelay } }}>
+                        <m.div id={item.id} className={`col${props.themeColor ? ` ${props.themeColor}` : ""}${props.className ? ` ${props.className}` : ""}`} key={i} {...{ ...props.animation, transition: { delay: i * props.animationDelay } }}>
                             {FancyTextBoxSwitch(props, item, i)}
                         </m.div>
                     )

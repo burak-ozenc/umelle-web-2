@@ -236,12 +236,12 @@ const HomeStartupPage = (props) => {
                                 {({isSubmitting, status, setFieldValue}) => (
                                     <Form ref={form1}>
                                         <Row>
-                                            <Col xl={7} md={7} xs={7}>
-                                                <Row className="bg-lightgray p-3 m-2">
+                                            <Col xl={7} md={7} xs={12}>
+                                                <Row className="p-3 m-2">
                                                     <h4 className="text-center" style={{color: '#902CFC'}}>
                                                         Features
                                                     </h4>
-                                                    <Col xl={6} md={6} xs={6}>
+                                                    <Col xl={6} md={6} xs={12}>
                                                         <Checkbox type="checkbox" name="certificatesOfCoverage"
                                                                   className="inline-block"
                                                                   labelClass="flex items-center mb-[5px]">
@@ -292,7 +292,7 @@ const HomeStartupPage = (props) => {
                                                     </span>
                                                         </Checkbox>
                                                     </Col>
-                                                    <Col xl={6} md={6} xs={6}>
+                                                    <Col xl={6} md={6} xs={12}>
                                                         <Checkbox type="checkbox" name="externalInternalCompliance"
                                                                   className="inline-block"
                                                                   labelClass="flex items-center mb-[5px]">
@@ -345,7 +345,7 @@ const HomeStartupPage = (props) => {
                                                     </Col>
                                                 </Row>
                                             </Col>
-                                            <Col className="bg-lightgray p-3 m-2" xl={4} md={4} xs={4}>
+                                            <Col className="p-3 m-2" xl={4} md={4} xs={12}>
                                                 <h4 className="text-center" style={{color: '#902CFC'}}>
                                                     Functions
                                                 </h4>
@@ -410,7 +410,7 @@ const HomeStartupPage = (props) => {
                                             </Col>
                                         </Row>
                                         <Row>
-                                            <Col xs={5}>
+                                            <Col xs={12}  md={5} lg={5}>
                                                 {process.env.REACT_APP_GRECAPTCHA_API_KEY && (
                                                     <ReCAPTCHA
                                                         ref={recaptcha}
@@ -422,7 +422,7 @@ const HomeStartupPage = (props) => {
                                                     />
                                                 )}
                                             </Col>
-                                            <Col xs={5}>
+                                            <Col xs={12} md={5} lg={5}>
                                                 <Buttons ariaLabel="form button" type="submit"
                                                          className={`font-medium font-serif rounded-none uppercase text-[11px]${isSubmitting ? " loading" : ""}`}
                                                          themeColor={["#0039e3", "#8600d4"]} size="md" color="#fff"

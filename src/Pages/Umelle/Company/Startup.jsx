@@ -4,14 +4,14 @@ import React, {lazy} from 'react'
 import {Link} from 'react-router-dom';
 import {Col, Container, Navbar, Row} from "react-bootstrap";
 import * as Yup from 'yup';
-import {AnimatePresence, m} from 'framer-motion';
+import {AnimatePresence, domMax, LazyMotion, m} from 'framer-motion';
 import {Form, Formik} from 'formik';
 
 // Functions
 import {fadeIn} from '../../../Functions/GlobalAnimations';
 
 // Components
-import {resetForm, sendEmail} from "../../../Functions/Utilities";
+import {resetForm, ScrollToAnchor, sendEmail} from "../../../Functions/Utilities";
 import {Input} from '../../../Components/Form/Form'
 import FooterMenu, {Footer} from '../../../Components/Footers/Footer';
 import InViewPort from '../../../Components/InViewPort';
@@ -22,8 +22,6 @@ import {
     TestimonialsCarouselData1
 } from "../../../Components/TestimonialCarousel/TestimonialsCarouselData";
 import TestimonialsCarousel01 from "../../../Components/TestimonialCarousel/TestimonialsCarousel01";
-import TextBox from "../../../Components/TextBox/TextBox";
-import {TextBoxData02} from "../../../Components/TextBox/TextBoxData";
 // import Team from "../../../Components/Team/Team";
 // import {TeamData01} from "../../../Components/Team/TeamData";
 
@@ -57,6 +55,7 @@ const SocialIconsData = [{
 const Footer_Data = [FooterData[0], FooterData[1], FooterData[4], FooterData[3]]
 
 const HomeStartupPage = (props) => {
+    ScrollToAnchor();
     return (<div style={props.style}>
         {/* Header Start */}
         <Header topSpace={{md: true}} type="reverse-scroll">
@@ -149,33 +148,37 @@ const HomeStartupPage = (props) => {
         <SideButtons/>
 
         {/* Section start */}
-        <section
-            className="overflow-visible cover-background"
-            style={{backgroundImage: `url(/assets/img/CompanyPage_header.png)`}}>
+        <section className="overflow-visible cover-background"
+                 style={{backgroundImage: `url(/assets/img/CompanyPage_header.png)`}}>
             <Container>
-                <Row className="full-screen md:h-[650px] sm:h-[350px] xs:h-[450px]">
-                    <Col md={6} sm={6} className="flex flex-col py-64">
-                        <h1 className="font-serif leading-[120px] font-semibold tracking-[0px] mb-0 mt-auto text-darkgray text-[3rem] md:leading-[90px] md:text-[9rem] sm:leading-[70px] sm:-tracking-[5px] xs:leading-[70px]">
-                            We are...
-                            <br></br>
-                            <span
-                                className="text-border text-[130px] text-border-width-2px fill-transparent inline-block tracking-[-6px] lg:text-[110px] md:text-[90px] md:leading-[85px] sm:text-[65px] sm:leading-[50px] sm:-tracking-[.5px]">
+                <LazyMotion strict features={domMax}>
+                    <Row
+                        className="full-screen md:h-[650px] sm:h-[350px] xs:h-[450px] align-items-center justify-center">
+                        <Col xs={12} lg={6} md={6}
+                             className="justify-center items-center">
+                            <h1 className="font-serif leading-[120px] font-semibold tracking-[0px] mb-0 mt-auto text-darkgray text-[3rem] md:leading-[90px] md:text-[9rem] sm:leading-[70px] sm:-tracking-[5px] xs:leading-[70px]">
+                                We are...
+                                <br/>
+                                <span
+                                    className="text-border text-[130px] text-border-width-2px fill-transparent inline-block tracking-[-6px] lg:text-[110px] md:text-[90px] md:leading-[85px] sm:text-[65px] sm:leading-[50px] sm:-tracking-[.5px]">
                                 UMELLE
                             </span>
-                        </h1>
-
-                    </Col>
-                    <Col md={6} sm={6} className="flex py-64">
-                        <div className="flex font-serif items-center font-medium text-xmd text-darkgray mt-auto">
-                            {/*<span className="flex-shrink-0 h-[2px] w-[20px] bg-darkgray item-center mr-[15px]"></span>*/}
-                            <div className="grow tracking-[-.5px] text-[24px]">We are a European company who
-                                meticulously
-                                plans, designs, engineers, tests, refines, and delivers custom-built software to align
-                                with you, your business needs
+                            </h1>
+                        </Col>
+                        <Col xs={12} lg={6} md={6}
+                             className="justify-center items-center my-0 mx-auto relative flex flex-col">
+                            <div className="flex font-serif items-center font-medium text-xmd text-darkgray mt-auto">
+                                {/*<span className="flex-shrink-0 h-[2px] w-[20px] bg-darkgray item-center mr-[15px]"></span>*/}
+                                <div className="grow tracking-[-.5px] text-[24px]">We are a European company who
+                                    meticulously
+                                    plans, designs, engineers, tests, refines, and delivers custom-built software to
+                                    align
+                                    with you, your business needs
+                                </div>
                             </div>
-                        </div>
-                    </Col>
-                </Row>
+                        </Col>
+                    </Row>
+                </LazyMotion>
             </Container>
         </section>
         {/* Section End */}
@@ -183,34 +186,26 @@ const HomeStartupPage = (props) => {
         {/* Lazy Load HTML */}
         <InViewPort>
             {/* Section Start */}
-            {/* <section className="sm:pt-[50px] mb-[130px] md:mb-[50px] sm:mb-0 inline-block w-full">
-                <Overlap>
-                </Overlap>
-            </section> */}
-            {/* Section End */}
-
-            {/* Section Start */}
             <m.section className="py-[160px] lg:py-[120px] md:py-[95px] sm:py-[80px] xs;py-[50px] bg-lightgray" {...fadeIn}>
                 <Container>
                     <Row>
                         <Col className="mb-[4%]">
-                            <h4 className="font-serif text-dark text-center font-medium mb-[25px] lg:mb-[15px]">
+                            <h4 className="font-serif text-dark text-center font-medium  lg:mb-[15px]">
                                 Our Mission?
                             </h4>
                         </Col>
                     </Row>
                     <Row>
-                        <Col lg={5} className="px-[15px] md:mb-[15px]">
-                            <div className="bg-transparent p-[40px] sm:p-[30px]">
+                        <Col lg={5} xs={12} className="px-[15px] md:mb-[15px]">
+                            <div className="bg-transparent  sm:p-[30px]">
                                 <h6 className="text-darkgray lg:mb-[45px]">
                                     Empowering Businesses and Enriching Lives: Where Heart Meets Software for
                                     Transformational Growth.
                                 </h6>
-
                             </div>
                         </Col>
-                        <Col lg={7} className="px-[15px] md:mb-[15px]">
-                            <div className="bg-lightgray p-[33px] sm:p-[34px]">
+                        <Col lg={7}  xs={12} className="px-[15px] md:mb-[15px]">
+                            <div className="bg-lightgray  sm:p-[34px]">
                                 <p>
                                     Our mission is to revolutionize business improvement through the infusion of heart
                                     into software solutions. We believe in harnessing the power of technology not just
@@ -222,7 +217,6 @@ const HomeStartupPage = (props) => {
                             </div>
                         </Col>
                     </Row>
-
                 </Container>
             </m.section>
             {/* Section End */}
@@ -260,8 +254,9 @@ const HomeStartupPage = (props) => {
 
             {/* Section End */}
 
+
             {/* Section Start */}
-            <section className="py-[160px] border-t lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px] bg-lightgray">
+            <m.section className="py-[160px] lg:py-[120px] md:py-[95px] sm:py-[80px] xs;py-[50px] bg-lightgray" {...fadeIn}>
                 <Container>
                     <Row>
                         <Col className="mb-[8%]">
@@ -270,14 +265,28 @@ const HomeStartupPage = (props) => {
                             </h6>
                         </Col>
                     </Row>
-                    <TextBox
-                        className=""
-                        grid="row-cols-1 row-cols-lg-2 row-cols-md-2 justify-center gap-y-10"
-                        theme="text-box-style-02 flex-wrap"
-                        data={TextBoxData02}
-                        animation={fadeIn}/>
+                    <Row>
+                        <Col lg={6} xs={12} className="px-[15px] md:mb-[15px]">
+                            <div className="bg-transparent  sm:p-[30px]">
+                                <p className="text-darkgray text-[1.2em] lg:mb-[45px]">
+                                    Transforming Challenges Into Opportunities
+                                    <br/>
+                                    Dedicated to bridging businesses with technological excellence, our mission is to deliver intuitive resource management software solutions that cater to both SMEs and enterprises, simplifying challenges into opportunities.
+                                </p>
+                            </div>
+                        </Col>
+                        <Col lg={6}  xs={12} className="px-[15px] md:mb-[15px]">
+                            <div className="text-darkgray text-[1.2em]  sm:p-[34px]">
+                                <p>
+                                    Empowering Growth Through Solutions
+                                    <br/>
+                                    Our vision is to empower businesses worldwide by turning their challenges into robust solutions, leveraging our diverse capabilities to serve the evolving needs of both SMEs and enterprises.
+                                </p>
+                            </div>
+                        </Col>
+                    </Row>
                 </Container>
-            </section>
+            </m.section>
             {/* Section End */}
 
             {/*/!* Section Start *!/*/}
@@ -319,8 +328,7 @@ const HomeStartupPage = (props) => {
             {/*/!* Section End *!/*/}
 
             {/* Footer Start */}
-            <Footer className="startup-footer bg-no-repeat bg-right" theme="light"
-                    style={{backgroundImage: "url(/assets/img/webp/home-startup-footer-down-bg.webp)"}}>
+            <Footer className="startup-footer bg-no-repeat bg-right" theme="light">
                 <Container fluid className="xs:opacity-0 xs:hidden">
                     <Row>
                         <Col className="h-[65px] lg:h-[30px] bg-top bg-no-repeat"
@@ -333,22 +341,6 @@ const HomeStartupPage = (props) => {
                         <Row md={4} className="justify-center gap-y-[25px]">
                             <FooterMenu data={Footer_Data} md={3} sm={6} className="xl:px-[15px]"
                                         titleClass="capitalize text-dark"/>
-                        </Row>
-                    </Container>
-                </div>
-                <div className="pt-[1%] pb-[6%] border-t border-[#ffffff1a]">
-                    <Container>
-                        <Row>
-                            <Link to="/"
-                                  className="col-sm-4 col-12 sm:mb-[20px] flex justify-start xs:justify-center">
-                                <img src="/assets/img/webp/logo-green-dark.webp" alt="logo" width="111"
-                                     height="36"/>
-                            </Link>
-                            <p className="col-sm-8 col-12 flex justify-end items-center sm:mb-[20px] xs:text-center xs:justify-center mb-0">© {new Date().getFullYear()} Litho
-                                is Proudly Powered by&nbsp;<a aria-label="ThemeZaa link"
-                                                              className="text-darkgray font-sans underline underline-offset-4 font-medium text-base inline-block hover:text-basecolor"
-                                                              href="https://www.themezaa.com/" target="_blank"
-                                                              rel="noreferrer">ThemeZaa</a></p>
                         </Row>
                     </Container>
                 </div>

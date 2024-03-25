@@ -18,7 +18,7 @@ const AccordionSolution = (props) => {
     // }, [id])
     return (
         <div className={`${props.theme} ${props.themeColor}${props.className ? ` ${props.className}` : ""}`}>
-            <Accordion defaultActiveKey={props.activeKey}>
+            <Accordion defaultActiveKey={0}>
                 {
                     props.data.map((item, key) => {
                         return (

@@ -293,20 +293,19 @@ export const Menu = memo((props) => {
                                     })}
                                 </ul>
                             )}
+                            
                             {(item.megamenu) && (
-                                <div className="flex megamenu d-flex  flex-col" ref={megamenu_ref}>
+                                <div className="flex megamenu flex-col" ref={megamenu_ref}>
                                     <div className="text-center mb-5 font-bold">
                                         <p>Custom Insurance & Operations Management</p>
                                     </div>
-
+                            
                                     <div className="flex flex-row">
                                        {item.megamenu.map((item, i) => {
                                             return (
                                                 <>
-
                                                     <ul className={`${(item.dropdown.filter(item => item.img).length > 0) ? "!pr-[30px] img-wrapper inline-block last:!pr-[0px] flex-row" : "inline-block"}`}
                                                         key={i}>
-
                                                         {item.title &&
                                                             <li className="title text-md font-medium mb-[15px] whitespace-nowrap">
                                                                 {item.title}

@@ -43,120 +43,140 @@ const ClientData01 = [
 
 const TechList = [
     {
-        img: 'https://via.placeholder.com/232x110',
+        img: '/assets/img/TechStack/Technologies/techStack-01.png',
         target: "_self",
         link: 'Blazor'
     },
     {
-        img: 'https://via.placeholder.com/232x110',
+        img: '/assets/img/TechStack/Technologies/techStack-02.png',
         target: "_self",
         link: 'ASP.NET'
     },
     {
-        img: 'https://via.placeholder.com/232x110',
+        img: '/assets/img/TechStack/Technologies/techStack-03.png',
         target: "_self",
         link: 'AJAX'
     },
     {
-        img: 'https://via.placeholder.com/232x110',
+        img: '/assets/img/TechStack/Technologies/techStack-04.png',
         target: "_self",
         link: 'HTML5'
     },
     {
-        img: 'https://via.placeholder.com/232x110',
+        img: '/assets/img/TechStack/Technologies/techStack-05.png',
         target: "_self",
         link: 'CSS'
     },
     {
-        img: 'https://via.placeholder.com/232x110',
-        target: "_self",
-        link: 'JavaScript'
-    },
-    {
-        img: 'https://via.placeholder.com/232x110',
+        img: '/assets/img/TechStack/Technologies/techStack-06.png',
         target: "_self",
         link: 'Silverlight'
     },
     {
-        img: 'https://via.placeholder.com/232x110',
+        img: '/assets/img/TechStack/Technologies/techStack-07.png',
         target: "_self",
         link: 'Windows Forms'
     },
     {
-        img: 'https://via.placeholder.com/232x110',
+        img: '/assets/img/TechStack/Technologies/techStack-08.png',
         target: "_self",
         link: 'WPF'
     },
     {
-        img: 'https://via.placeholder.com/232x110',
+        img: '/assets/img/TechStack/Technologies/techStack-08.png',
         target: "_self",
-        link: 'TypeScript'
+        link: 'XAML'
+    },
+    {
+        img: '/assets/img/TechStack/Technologies/techStack-09.png',
+        target: "_self",
+        link: 'XAF'
+    },
+    {
+        img: '/assets/img/TechStack/Technologies/techStack-10.png',
+        target: "_self",
+        link: 'SignalR'
+    },
+    {
+        img: '/assets/img/TechStack/Technologies/techStack-11.png',
+        target: "_self",
+        link: 'WebAPI'
+    },
+    {
+        img: '/assets/img/TechStack/Technologies/techStack-12.png',
+        target: "_self",
+        link: 'Restful Services'
     }
 ]
 const LanguagesList = [
     {
-        img: 'https://via.placeholder.com/232x110',
+        img: '/assets/img/TechStack/Languages/C-sharp-01.png',
         target: "_self",
         link: 'C#'
     },
     {
-        img: 'https://via.placeholder.com/232x110',
+        img: '/assets/img/TechStack/Languages/VB net-01.png',
         target: "_self",
         link: 'VB.NET'
     },
     {
-        img: 'https://via.placeholder.com/232x110',
+        img: '/assets/img/TechStack/Languages/JavaScript-01.png',
         target: "_self",
         link: 'JavaScript'
     },
     {
-        img: 'https://via.placeholder.com/232x110',
+        img: '/assets/img/TechStack/Languages/Untitled-1-01.png',
         target: "_self",
         link: 'PHP'
+    },
+    {
+        img: '/assets/img/TechStack/Languages/typescript.png',
+        target: "_self",
+        link: 'TypeScript'
     }
 ]
 const DataFormatList = [
     {
-        img: 'https://via.placeholder.com/232x110',
+        img: '/assets/img/TechStack/DataFormats/XML-01.png',
         target: "_self",
         link: 'XML'
     },
     {
-        img: 'https://via.placeholder.com/232x110',
+        img: '/assets/img/TechStack/DataFormats/xls-01.png',
         target: "_self",
         link: 'XLS'
     },
     {
-        img: 'https://via.placeholder.com/232x110',
+        img: '/assets/img/TechStack/DataFormats/json-01-01.png',
         target: "_self",
         link: 'JSON'
     }
 ]
 const CloudAndDataDatabaseList = [
     {
-        img: 'https://via.placeholder.com/232x110',
+        img: '/assets/img/techStack/CloudandData/cloud-ORM-framework-01.png',
         target: "_self",
         link: 'MS SQL'
     },
     {
-        img: 'https://via.placeholder.com/232x110',
+        img: '/assets/img/techStack/CloudandData/cloud-ORM-framework-02.png',
         target: "_self",
         link: 'MY SQL'
     },
     {
-        img: 'https://via.placeholder.com/232x110',
+        img: '/assets/img/techStack/CloudandData/cloud-ORM-framework-03.png',
         target: "_self",
         link: 'Azure'
     }
 ]
 const ORMList = [
     {
-        img: 'https://via.placeholder.com/232x110',
+        img: '/assets/img/techStack/ORM/cloud-ORM-framework-04.png',
         target: "_self",
         link: 'XPO'
     },
     {
-        img: 'https://via.placeholder.com/232x110',
+        img: '/assets/img/techStack/ORM/cloud-ORM-framework-05.png',
         target: "_self",
         link: 'Entity Framework'
     }
@@ -164,22 +184,22 @@ const ORMList = [
 
 const FrameworksList = [
     {
-        img: 'https://via.placeholder.com/232x110',
+        img: '/assets/img/techStack/Frameworks/cloud-ORM-framework-06.png',
         target: "_self",
         link: '.NET Core'
     },
     {
-        img: 'https://via.placeholder.com/232x110',
+        img: '/assets/img/techStack/Frameworks/cloud-ORM-framework-07.png',
         target: "_self",
         link: '.NET Framework'
     },
     {
-        img: 'https://via.placeholder.com/232x110',
+        img: '/assets/img/techStack/Frameworks/cloud-ORM-framework-08.png',
         target: "_self",
         link: 'React'
     },
     {
-        img: 'https://via.placeholder.com/232x110',
+        img: '/assets/img/techStack/Frameworks/cloud-ORM-framework-09.png',
         target: "_self",
         link: 'Gatsby'
     }

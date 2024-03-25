@@ -144,45 +144,51 @@ const fancyTextBox03 = [
 const fancyTextBox04 = [
     {
         icon: {
-            class: "line-icon-Gear-2 text-basecolor"
+            class: "line-icon-Computer-3  text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC]"
         },
         title: "Web & Desktop",
+        id:"webDesktop",
         // subTitle: "Easy installation theme",
         description: "Crafting modern solutions for both web and desktop platforms, ensuring seamless functionality and captivating design for your online presence and desktop applications."
         // backgroundText: " "
     },
     {
         icon: {
-            class: "line-icon-Transform text-basecolor"
+            class: "line-icon-Tablet-Phone  text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC]"
         },
+        id:"crossPlatformAndMobile",
         title: "Cross Platform and Mobile",
         description: "Developing versatile applications that seamlessly operate across iOS, Android, and Windows platforms, delivering a consistent and immersive user experience on smartphones, tablets, and more."
     },
     {
         icon: {
-            class: "line-icon-Heart text-basecolor"
+            class: "line-icon-Big-Data  text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC]"
         },
+        id:"dataIntegrationAndFormats",
         title: "Data Integration and Formats",
         description: "Expertly integrating diverse data sources and formats to optimize insights and decision-making, whether managing structured databases or unifying unstructured data for enhanced efficiency."
     },
     {
         icon: {
-            class: "line-icon-Heart text-basecolor"
+            class: "line-icon-Security-Block  text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC]"
         },
+        id:"contentManagement",
         title: "Content Management and Web APIs",
         description: "Streamlining content management and empowering secure interaction with third-party services through robust web APIs, offering scalable solutions for content distribution across various platforms."
     },
     {
         icon: {
-            class: "line-icon-Heart text-basecolor"
+            class: "line-icon-Cloud-Computer  text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC]"
         },
+        id:"cloudServices",
         title: "Cloud Services and Deployment",
         description: "Leveraging the flexibility and scalability of cloud computing for reliable performance, strengthened security, and cost-effective scalability, providing expert solutions for migration, optimization, and cloud technology utilization."
     },
     {
         icon: {
-            class: "line-icon-Heart text-basecolor"
+            class: "line-icon-Brush  text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC]"
         },
+        id:"uxUI",
         title: "UX/UI Design",
         description: "Enhancing digital experiences with intuitive and visually compelling design, blending user-centric principles with innovative creativity to deliver interfaces that drive satisfaction, loyalty, and business expansion."
     }

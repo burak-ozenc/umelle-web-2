@@ -157,7 +157,7 @@ const HomeStartupPage = (props) => {
                 <LazyMotion strict features={domMax}>
                     <Row
                         className="full-screen md:h-[650px] sm:h-[350px] xs:h-[450px] align-items-center justify-center">
-                        <Col xs={6} lg={6} md={6}
+                        <Col xs={12} lg={6} md={6}
                              className="justify-center items-center my-0 mx-auto relative flex flex-col">
                             <m.h4 initial={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)'}}
                                   animate={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)'}}
@@ -172,7 +172,7 @@ const HomeStartupPage = (props) => {
                                 We take care of everything with our full-cycle engineering services - all while optimizing the cost, timeframe, and scope of the work. Leaving you to focus on what matters most to you.
                             </m.span>
                         </Col>
-                        <Col xs={6} lg={6} md={6}
+                        <Col xs={12} lg={6} md={6}
                              className="justify-center items-center my-0 mx-auto relative flex flex-col">
                             <div initial={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)'}}
                                  animate={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)'}}
@@ -190,28 +190,30 @@ const HomeStartupPage = (props) => {
         </section>
         {/* Section End */}
 
+
+        {/* Section Start */}
+        <m.section className="bg-lightgray py-[100px] lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px]" {...fadeIn}>
+            <Container>
+                <Row>
+                    <Col className="mb-[7%]">
+                        <h4 className="font-serif text-black text-center font-medium mb-[25px] lg:mb-[15px]">
+                            What we Offer
+                        </h4>
+                    </Col>
+                </Row>
+                <FancyTextBox
+                    grid="row-cols-1 row-cols-lg-2 gap-y-10 justify-center"
+                    className="col-12 col-lg-4 col-md-6 col-md-9"
+                    theme="fancy-text-box-04"
+                    data={fancyTextBox04}
+                    animation={fadeIn}/>
+            </Container>
+        </m.section>
+        {/* Section End */}
+        
         {/* Lazy Load HTML */}
         <InViewPort>
            
-            {/* Section Start */}
-            <m.section className="bg-lightgray py-[100px] lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px]" {...fadeIn}>
-                <Container>
-                    <Row>
-                        <Col className="mb-[7%]">
-                            <h4 className="font-serif text-black text-center font-medium mb-[25px] lg:mb-[15px]">
-                                What we Offer
-                            </h4>
-                        </Col>
-                    </Row>
-                    <FancyTextBox
-                        grid="row-cols-1 row-cols-lg-2 gap-y-10 justify-center"
-                        className="col-12 col-lg-4 col-md-6 col-md-9"
-                        theme="fancy-text-box-04"
-                        data={fancyTextBox04}
-                        animation={fadeIn}/>
-                </Container>
-            </m.section>
-            {/* Section End */}
 
 
             {/* Section Start */}
@@ -255,12 +257,12 @@ const HomeStartupPage = (props) => {
                             <h6 className="font-serif text-darkgray font-medium">Our Tech Stack</h6>
                         </Col>
                     </Row>
-                    <Tabs className="tab-style-01 font-serif mb-[7.4rem] flex bg-transparent border-b-0 font-medium text-center justify-center md:mb-[60px] sm:mb-[20px]">
+                    <Tabs className="tab-style-01 font-serif mb-[7.4rem] flex border-b-0 font-medium text-center justify-center md:mb-[60px] sm:mb-[20px]">
                         <Tab className="tab-style-01" key={1} eventKey={1} title={ "Technologies"}>
                             <m.div className='row items-center' {...{ ...fadeIn, transition: { duration: 0.9 }, viewport: { once: false } }}>
                                 <Col lg={{ offset: 1, span: 11 }} md={12} className="md:px-[15px] sm:px-[15px] sm:text-start xs:text-center">
                                     <Clients
-                                        theme="client-logo-style-03"
+                                        theme="client-logo-"
                                         className="swiper-navigation-04 swiper-navigation-light"
                                         data={TechList}
                                         animation={fadeIn}
@@ -281,7 +283,7 @@ const HomeStartupPage = (props) => {
                             <m.div className='row items-center' {...{ ...fadeIn, transition: { duration: 0.9 }, viewport: { once: false } }}>
                                 <Col lg={{ offset: 1, span: 11 }} md={12} className="md:px-[15px] sm:px-[15px] sm:text-start xs:text-center">
                                     <Clients
-                                        theme="client-logo-style-03"
+                                        theme="client-logo-"
                                         className="swiper-navigation-04 swiper-navigation-light"
                                         data={LanguagesList}
                                         animation={fadeIn}
@@ -302,7 +304,7 @@ const HomeStartupPage = (props) => {
                             <m.div className='row items-center' {...{ ...fadeIn, transition: { duration: 0.9 }, viewport: { once: false } }}>
                                 <Col lg={{ offset: 1, span: 11 }} md={12} className="md:px-[15px] sm:px-[15px] sm:text-start xs:text-center">
                                     <Clients
-                                        theme="client-logo-style-03"
+                                        theme="client-logo-"
                                         className="swiper-navigation-04 swiper-navigation-light"
                                         data={DataFormatList}
                                         animation={fadeIn}
@@ -323,7 +325,7 @@ const HomeStartupPage = (props) => {
                             <m.div className='row items-center' {...{ ...fadeIn, transition: { duration: 0.9 }, viewport: { once: false } }}>
                                 <Col lg={{ offset: 1, span: 11 }} md={12} className="md:px-[15px] sm:px-[15px] sm:text-start xs:text-center">
                                     <Clients
-                                        theme="client-logo-style-03"
+                                        theme="client-logo-"
                                         className="swiper-navigation-04 swiper-navigation-light"
                                         data={CloudAndDataDatabaseList}
                                         animation={fadeIn}
@@ -344,7 +346,7 @@ const HomeStartupPage = (props) => {
                             <m.div className='row items-center' {...{ ...fadeIn, transition: { duration: 0.9 }, viewport: { once: false } }}>
                                 <Col lg={{ offset: 1, span: 11 }} md={12} className="md:px-[15px] sm:px-[15px] sm:text-start xs:text-center" >
                                     <Clients
-                                        theme="client-logo-style-03"
+                                        theme="client-logo-"
                                         className="swiper-navigation-04 swiper-navigation-light justify-content-center"
                                         data={ORMList}
                                         animation={fadeIn}
@@ -365,7 +367,7 @@ const HomeStartupPage = (props) => {
                             <m.div className='row items-center' {...{ ...fadeIn, transition: { duration: 0.9 }, viewport: { once: false } }}>
                                 <Col lg={{ offset: 1, span: 11 }} md={12} className="md:px-[15px] sm:px-[15px] sm:text-start xs:text-center">
                                     <Clients
-                                        theme="client-logo-style-03"
+                                        theme="client-logo-"
                                         className="swiper-navigation-04 swiper-navigation-light"
                                         data={FrameworksList}
                                         animation={fadeIn}
