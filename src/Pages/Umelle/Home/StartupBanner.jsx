@@ -58,7 +58,7 @@ const StartupPageBannerSlider = () => {
                                 <m.div className="opacity-0 absolute h-full w-full top-0 left-0 bg-darkgray"></m.div>
                                 <Container className="text-center">
                                     <Row className="full-screen items-center justify-center md:landscape:h-[500px]">
-                                        <Col xs={6} lg={6} md={6}
+                                        <Col xs={12} lg={6} md={6}
                                              className="justify-center items-center my-0 mx-auto relative flex flex-col">
                                             <m.h1 initial={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)'}}
                                                   animate={{clipPath: activeSlide === i ? 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)' : 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)'}}
@@ -79,7 +79,7 @@ const StartupPageBannerSlider = () => {
                                             </m.div>
 
                                         </Col>
-                                        <Col xs={6} lg={6} md={6}
+                                        <Col xs={12} lg={6} md={6}
                                              className="justify-center items-center my-0 mx-auto relative flex flex-col">
                                             
                                             <Row className='justify-center'>

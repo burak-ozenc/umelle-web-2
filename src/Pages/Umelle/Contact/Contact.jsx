@@ -10,8 +10,8 @@ import {Form, Formik} from 'formik';
 import {fadeIn} from '../../../Functions/GlobalAnimations';
 
 // Components
-import { ScrollToAnchor} from "../../../Functions/Utilities";
-import {Checkbox, Input, TextArea} from '../../../Components/Form/Form'
+import {ScrollToAnchor} from "../../../Functions/Utilities";
+import {Input, TextArea} from '../../../Components/Form/Form'
 import FooterMenu, {Footer} from '../../../Components/Footers/Footer';
 import InViewPort from '../../../Components/InViewPort';
 
@@ -153,7 +153,7 @@ const HomeStartupPage = (props) => {
                     <Row className="justify-center">
                         <Col>
                             <Formik
-                                initialValues={{name: '', email: '', phone: '', terms_condition: false}}
+                                initialValues={{name: '', email: '', phone: ''}}
                                 validationSchema={ContactFormStyle03Schema}
                                 onSubmit={async (values, actions) => {
                                     actions.setSubmitting(true)
@@ -183,23 +183,19 @@ const HomeStartupPage = (props) => {
                                                     name="comment" labelClass="h-full sm:h-[200px]"
                                                     placeholder="Your message"></TextArea>
                                             </Col>
-                                            {process.env.REACT_APP_GRECAPTCHA_API_KEY && (
-                                                <ReCAPTCHA
-                                                    ref={recaptcha}
-                                                    className="mb-[35px]"
-                                                    sitekey={process.env.REACT_APP_GRECAPTCHA_API_KEY}
-                                                    onChange={(response) => { setFieldValue("recaptcha", response) }}
-                                                />
-                                            )}
-                                            <Col className="text-left sm:mb-[20px]">
-                                                <Checkbox type="checkbox" name="terms_condition"
-                                                          className="inline-block mt-[4px]"
-                                                          labelClass="flex items-start">
-                                                    <span className="ml-[10px] text-sm w-[85%] md:w-[90%] xs:w-[85%]">I accept the terms & conditions and I understand that my data will be hold securely in accordance with the&nbsp;
-                                                        <Link to="/privacy" target="_blank"
-                                                              className="text-darkgray underline hover:text-fastblue">privacy policy</Link>.</span>
-                                                </Checkbox>
+                                            <Col>
+                                                {process.env.REACT_APP_GRECAPTCHA_API_KEY && (
+                                                    <ReCAPTCHA
+                                                        ref={recaptcha}
+                                                        className="mb-[35px]"
+                                                        sitekey={process.env.REACT_APP_GRECAPTCHA_API_KEY}
+                                                        onChange={(response) => {
+                                                            setFieldValue("recaptcha", response)
+                                                        }}
+                                                    />
+                                                )}
                                             </Col>
+
                                             <Col className="text-right sm:text-center">
                                                 <Buttons ariaLabel="form button" type="submit"
                                                          className={`text-xs tracking-[1px] rounded-none py-[12px] px-[28px] uppercase${isSubmitting ? " loading" : ""}`}
@@ -207,7 +203,7 @@ const HomeStartupPage = (props) => {
                                                          title="Send Message"/>
                                             </Col>
                                         </Row>
-                                        
+
                                         <AnimatePresence>
                                             {status && <Row><Col xs={12}>
                                                 <m.div initial={{opacity: 0}} animate={{opacity: 1}}

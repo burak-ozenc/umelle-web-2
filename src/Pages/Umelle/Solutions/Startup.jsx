@@ -11,7 +11,7 @@ import {Form, Formik} from 'formik';
 import {fadeIn} from '../../../Functions/GlobalAnimations';
 
 // Components
-import {resetForm, sendEmail} from "../../../Functions/Utilities";
+import {resetForm, ScrollToAnchor, sendEmail} from "../../../Functions/Utilities";
 import {Checkbox, Input} from '../../../Components/Form/Form'
 import FooterMenu, {Footer} from '../../../Components/Footers/Footer';
 import InViewPort from '../../../Components/InViewPort';
@@ -60,6 +60,7 @@ const Footer_Data = [FooterData[0], FooterData[1], FooterData[4], FooterData[3]]
 // var hash = window.decodeURIComponent(window.location.hash);
 
 const HomeStartupPage = (props) => {
+    ScrollToAnchor();
     const form1 = useRef(null)
     const recaptcha = useRef()
     const [anchorKey, setAnchorKey] = useState(0)
@@ -229,12 +230,12 @@ const HomeStartupPage = (props) => {
 
         {/* Section start */}
         <section className="overflow-visible cover-background"
-                 style={{backgroundImage: `url("src/Assets/img/umelle/CompanyPage_header.png)`}}>
+                 style={{backgroundImage: `url(/assets/img/SolutionsHeader_v1.png)`}}>
             <Container>
                 <LazyMotion strict features={domMax}>
                     <Row
                         className="full-screen  pt-20 md:h-[650px] sm:h-[350px] xs:h-[450px] align-items-center justify-center">
-                        <Col xs={6} lg={6} md={6}
+                        <Col xs={12} lg={6} md={6}
                              className="justify-center items-center my-0 mx-auto relative flex flex-col">
                             <h6 className="font-serif block text-[42px] leading-[48px] mb-[35px] font-light text-black xs:text-base xs:mb-[40px]">
                                 Tailor-Made Insurance Data Software Designed Around Your Business Needs
@@ -246,7 +247,7 @@ const HomeStartupPage = (props) => {
                                 The Premier Choice for Pooled Insurance Providers
                             </m.span>
                         </Col>
-                        <Col xs={6} lg={6} md={6}
+                        <Col xs={12} lg={6} md={6}
                              className="justify-center items-center my-0 mx-auto relative flex flex-col">
                             <Buttons ariaLabel="button"
                                      href="/contact"
@@ -390,12 +391,14 @@ const HomeStartupPage = (props) => {
             <m.section className="bg-white">
                 <Container>
                     <Row>
-                        <h6 className="text-center text-black justify-center align-items-center m-5">
-                            Transforming Industries: Real-World Success Story
-                        </h6>
+                        <Col>
+                            <h6 className="text-center text-black justify-center align-items-center m-5">
+                                Transforming Industries: Real-World Success Story
+                            </h6>
+                        </Col>
                     </Row>
                     <Row className="mt-[40px]">
-                        <Col md={4}>
+                        <Col md={4}  xs={12} className="mb-3">
                             <div>
                                 <p>
                                     <span className="font-bold">Client Name: </span>
@@ -589,9 +592,25 @@ const HomeStartupPage = (props) => {
 
 
             {/* Section Start */}
-            <section className="py-[60px] lg:py-[120px] md:py-[80px] xs:py-[50px] bg-transparent" {...fadeIn}
-                     style={{backgroundImage: `url("https://i.ibb.co/hHCtj1f/homeheader-v1-01.png")`}}>
+            <section
+                className="py-[60px] lg:py-[120px] md:py-[80px] xs:py-[50px] bg-transparent cover-background relative cover-background" {...fadeIn}
+                // style={{backgroundImage: `url("https://i.ibb.co/hHCtj1f/homeheader-v1-01.png")`}}
+            >
                 <Container>
+                    <Row>
+                        <Col className='mb-[6%]'>
+                            <h6 className="font-serif text-gray-900 text-center font-medium mb-[25px] lg:mb-[15px]">
+                                Stop overpaying for unused features and never miss out on the functionalities you
+                                need
+                            </h6>
+                            <div>
+                                <p className="font-serif text-gray-900 text-center font-medium mb-[25px] lg:mb-[15px]">
+                                    Shape your custom software experience now by checking the functions and features you
+                                    need:
+                                </p>
+                            </div>
+                        </Col>
+                    </Row>
                     <Row className="m-auto">
                         <Col xl={12} lg={12} md={12}>
                             <Formik
@@ -610,12 +629,12 @@ const HomeStartupPage = (props) => {
                                 {({isSubmitting, status, setFieldValue}) => (
                                     <Form ref={form1}>
                                         <Row>
-                                            <Col xl={7} md={7} xs={7}>
-                                                <Row className="bg-lightgray p-3 m-2">
+                                            <Col xl={7} md={7} xs={12}>
+                                                <Row className="p-3 m-2">
                                                     <h4 className="text-center" style={{color: '#902CFC'}}>
                                                         Features
                                                     </h4>
-                                                    <Col xl={6} md={6} xs={6}>
+                                                    <Col xl={6} md={6} xs={12}>
                                                         <Checkbox type="checkbox" name="certificatesOfCoverage"
                                                                   className="inline-block"
                                                                   labelClass="flex items-center mb-[5px]">
@@ -666,7 +685,7 @@ const HomeStartupPage = (props) => {
                                                     </span>
                                                         </Checkbox>
                                                     </Col>
-                                                    <Col xl={6} md={6} xs={6}>
+                                                    <Col xl={6} md={6} xs={12}>
                                                         <Checkbox type="checkbox" name="externalInternalCompliance"
                                                                   className="inline-block"
                                                                   labelClass="flex items-center mb-[5px]">
@@ -719,17 +738,19 @@ const HomeStartupPage = (props) => {
                                                     </Col>
                                                 </Row>
                                             </Col>
-                                            <Col className="bg-lightgray p-3 m-2" xl={4} md={4} xs={4}>
+                                            <Col className="p-3 m-2" xl={4} md={4} xs={12}>
                                                 <h4 className="text-center" style={{color: '#902CFC'}}>
                                                     Functions
                                                 </h4>
-                                                <Checkbox type="checkbox" name="automatedInvoicing " className="inline-block"
+                                                <Checkbox type="checkbox" name="automatedInvoicing "
+                                                          className="inline-block"
                                                           labelClass="flex items-center mb-[5px]">
                                                     <span className="ml-[10px] text-base">
                                                         Automated Invoicing 
                                                     </span>
                                                 </Checkbox>
-                                                <Checkbox type="checkbox" name="programManagementWizard " className="inline-block"
+                                                <Checkbox type="checkbox" name="programManagementWizard "
+                                                          className="inline-block"
                                                           labelClass="flex items-center mb-[5px]">
                                                     <span className="ml-[10px] text-base">
                                                         Program Management Wizard 
@@ -741,19 +762,22 @@ const HomeStartupPage = (props) => {
                                                         Internal Chat 
                                                     </span>
                                                 </Checkbox>
-                                                <Checkbox type="checkbox" name="customBusinessSettings " className="inline-block"
+                                                <Checkbox type="checkbox" name="customBusinessSettings "
+                                                          className="inline-block"
                                                           labelClass="flex items-center mb-[5px]">
                                                     <span className="ml-[10px] text-base">
                                                         Custom Business Settings 
                                                     </span>
                                                 </Checkbox>
-                                                <Checkbox type="checkbox" name="discountManagement " className="inline-block"
+                                                <Checkbox type="checkbox" name="discountManagement "
+                                                          className="inline-block"
                                                           labelClass="flex items-center mb-[5px]">
                                                     <span className="ml-[10px] text-base">
                                                         Discount Management 
                                                     </span>
                                                 </Checkbox>
-                                                <Checkbox type="checkbox" name="automatedCertificateRenewal " className="inline-block"
+                                                <Checkbox type="checkbox" name="automatedCertificateRenewal "
+                                                          className="inline-block"
                                                           labelClass="flex items-center mb-[5px]">
                                                     <span className="ml-[10px] text-base">
                                                         Automated Certificate Renewal 
@@ -784,7 +808,7 @@ const HomeStartupPage = (props) => {
                                             </Col>
                                         </Row>
                                         <Row>
-                                            <Col xs={5}>
+                                            <Col xs={12} md={5} lg={5}>
                                                 {process.env.REACT_APP_GRECAPTCHA_API_KEY && (
                                                     <ReCAPTCHA
                                                         ref={recaptcha}
@@ -796,7 +820,7 @@ const HomeStartupPage = (props) => {
                                                     />
                                                 )}
                                             </Col>
-                                            <Col xs={5}>
+                                            <Col xs={12} md={5} lg={5}>
                                                 <Buttons ariaLabel="form button" type="submit"
                                                          className={`font-medium font-serif rounded-none uppercase text-[11px]${isSubmitting ? " loading" : ""}`}
                                                          themeColor={["#0039e3", "#8600d4"]} size="md" color="#fff"
@@ -820,7 +844,7 @@ const HomeStartupPage = (props) => {
                 </Container>
             </section>
             {/* Section End */}
-            
+
             {/* CTA Banner Section Start */}
             <section className="lg:pt-[160px] md:pt-[10px] sm:pt-[50px] ">
                 <Container fluid>

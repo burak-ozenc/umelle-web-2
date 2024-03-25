@@ -86,7 +86,7 @@
   transition: var(--default-transition);
 
   img {
-    filter: grayscale(1);
+    filter: grayscale(0);
     transition-property: filter;
     transition-duration: 0.4s;
   }

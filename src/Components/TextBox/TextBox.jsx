@@ -12,12 +12,12 @@ import "../../Assets/scss/components/_textbox.scss"
 
 const TextBox = (props) => {
     return (
-        <Row className= {`${props.grid} ${props.theme} ${props.className}`}>
+        <Row className= {`justify-content-center ${props.grid} ${props.theme} ${props.className}`}>
             {
                 props.data.map((item, i) => {
                     return (
-                        <Col className={`feature-box${props.className ? ` ${props.className} ` : "" }`} key={i}>
-                            <m.div className="feature-box-content" {...{...props.animation,transition:{delay : i * props.animationDelay}}}>
+                        <Col className={`justify-center justify-content-center feature-box${props.className ? ` ${props.className} ` : "" }`} key={i}>
+                            <m.div className="justify-center m-auto " {...{...props.animation,transition:{delay : i * props.animationDelay}}}>
                                 {
                                     (props.theme === "text-box-style-01") ?
                                         <>

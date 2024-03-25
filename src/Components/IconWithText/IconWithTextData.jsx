@@ -120,21 +120,21 @@ const IconWithTextData_05 = [
 
 const IconWithTextData_06 = [
     {
-        icon: "line-icon-Android-Store text-fastblue",
+        icon: "line-icon-Cloud-  text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC]",
         title: "Cloud Migration",
         content: "Smoothly transition to the cloud with our expert guidance, minimizing downtime and ensuring data integrity.",
         linkTitle: "READ MORE",
         link: "/page/what-we-offer"
     },
     {
-        icon: "line-icon-Bakelite text-fastblue",
+        icon: "line-icon-Bakelite line-icon-Cloud-Computer text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC]",
         title: "Cloud Management",
         content: "Optimize your cloud environment with our continuous monitoring, management, and cost-optimization strategies.",
         linkTitle: "READ MORE",
         link: "/page/what-we-offer"
     },
     {
-        icon: "line-icon-Archery-2 text-fastblue",
+        icon: "line-icon-Cloud-Settings line-icon-Cloud-Computer text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC]",
         title: "Cloud Innovation",
         content: "Stay ahead of the curve with our cutting-edge solutions that leverage the full potential of cloud technologies. ",
         linkTitle: "READ MORE",
