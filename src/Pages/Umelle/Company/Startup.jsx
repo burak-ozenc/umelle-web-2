@@ -24,14 +24,13 @@ import {
 import TestimonialsCarousel01 from "../../../Components/TestimonialCarousel/TestimonialsCarousel01";
 import TextBox from "../../../Components/TextBox/TextBox";
 import {TextBoxData02} from "../../../Components/TextBox/TextBoxData";
-import Team from "../../../Components/Team/Team";
-import {TeamData01} from "../../../Components/Team/TeamData";
+// import Team from "../../../Components/Team/Team";
+// import {TeamData01} from "../../../Components/Team/TeamData";
 
 const HamburgerMenu = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.HamburgerMenu})))
 const Header = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Header})))
 const HeaderNav = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.HeaderNav})))
 const Menu = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Menu})))
-const SearchBar = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.SearchBar})))
 
 
 // const Overlap = lazy(() => import('../../../Components/Overlap/Overlap'))
@@ -88,7 +87,6 @@ const HomeStartupPage = (props) => {
                     <Menu {...props} />
                 </Navbar.Collapse>
                 <Col lg={2} xs={"auto"} className="justify-end pe-0 flex items-center">
-                    <SearchBar/>
                     <div className="md:hidden pl-[17px]">
                         <HamburgerMenu className="" theme="dark">
                             <Col
@@ -151,8 +149,9 @@ const HomeStartupPage = (props) => {
         <SideButtons/>
 
         {/* Section start */}
-        <section className="overflow-visible cover-background"
-                 style={{backgroundImage: `url("https://via.placeholder.com/1920x1080")`}}>
+        <section
+            className="overflow-visible cover-background"
+            style={{backgroundImage: `url(/assets/img/CompanyPage_header.png)`}}>
             <Container>
                 <Row className="full-screen md:h-[650px] sm:h-[350px] xs:h-[450px]">
                     <Col md={6} sm={6} className="flex flex-col py-64">
@@ -281,44 +280,43 @@ const HomeStartupPage = (props) => {
             </section>
             {/* Section End */}
 
-            {/* Section Start */}
-            <section className="pt-[120px] lg:pt-[95px] md:pt-[80px] sm:pt-[50px] switch-tabs">
-                <div className="text-center">
-                    <h6 className='text-darkgray font-medium font-serif mb-16 xs:mb-20'>Our Team</h6>
-                </div>
-                
-                        <section className="py-20">
-                            <Container>
-                                <Team
-                                    themeColor="dark"
-                                    theme="team-style-01"
-                                    className="text-white"
-                                    data={TeamData01}
-                                    grid="row-cols-1 row-cols-lg-4 row-cols-sm-2 landscape:row-cols-1 landscape:row-cols-lg-4 landscape:row-cols-sm-2 landscape:justify-center gap-y-10"
-                                    animation={fadeIn}
-                                    animationDelay={0.2}
-                                    carousel={false}
-                                    overlay={["#2ed47ce6", "#e8a626e6"]}
-                                    carouselOption={{
-                                        slidesPerView: 1,
-                                        spaceBetween: 30,
-                                        loop: true,
-                                        navigation: true,
-                                        autoplay: {delay: 3000, disableOnInteraction: false},
-                                        pagination: {dynamicBullets: true, clickable: true},
-                                        breakpoints: {
-                                            1200: {slidesPerView: 3},
-                                            992: {slidesPerView: 3},
-                                            768: {slidesPerView: 2}
-                                        }
-                                    }}
-                                />
-                            </Container>
-                        </section>
-                   
-            </section>
-
-            {/* Section End */}
+            {/*/!* Section Start *!/*/}
+            {/*<section className="pt-[120px] lg:pt-[95px] md:pt-[80px] sm:pt-[50px] switch-tabs">*/}
+            {/*    <div className="text-center">*/}
+            {/*        <h6 className='text-darkgray font-medium font-serif mb-16 xs:mb-20'>Our Team</h6>*/}
+            {/*    </div>*/}
+            {/*    */}
+            {/*            <section className="py-20">*/}
+            {/*                <Container>*/}
+            {/*                    <Team*/}
+            {/*                        themeColor="dark"*/}
+            {/*                        theme="team-style-01"*/}
+            {/*                        className="text-white"*/}
+            {/*                        data={TeamData01}*/}
+            {/*                        grid="row-cols-1 row-cols-lg-4 row-cols-sm-2 landscape:row-cols-1 landscape:row-cols-lg-4 landscape:row-cols-sm-2 landscape:justify-center gap-y-10"*/}
+            {/*                        animation={fadeIn}*/}
+            {/*                        animationDelay={0.2}*/}
+            {/*                        carousel={false}*/}
+            {/*                        overlay={["#2ed47ce6", "#e8a626e6"]}*/}
+            {/*                        carouselOption={{*/}
+            {/*                            slidesPerView: 1,*/}
+            {/*                            spaceBetween: 30,*/}
+            {/*                            loop: true,*/}
+            {/*                            navigation: true,*/}
+            {/*                            autoplay: {delay: 3000, disableOnInteraction: false},*/}
+            {/*                            pagination: {dynamicBullets: true, clickable: true},*/}
+            {/*                            breakpoints: {*/}
+            {/*                                1200: {slidesPerView: 3},*/}
+            {/*                                992: {slidesPerView: 3},*/}
+            {/*                                768: {slidesPerView: 2}*/}
+            {/*                            }*/}
+            {/*                        }}*/}
+            {/*                    />*/}
+            {/*                </Container>*/}
+            {/*            </section>*/}
+            {/*       */}
+            {/*</section>*/}
+            {/*/!* Section End *!/*/}
 
             {/* Footer Start */}
             <Footer className="startup-footer bg-no-repeat bg-right" theme="light"
