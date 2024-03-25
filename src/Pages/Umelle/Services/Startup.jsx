@@ -404,11 +404,10 @@ const HomeStartupPage = (props) => {
                 </Container>
             </section>
             {/* CTA Banner Section End */}
-            
+
 
             {/* Footer Start */}
-            <Footer className="startup-footer bg-no-repeat bg-right" theme="light"
-                    style={{backgroundImage: "url(/assets/img/webp/home-startup-footer-down-bg.webp)"}}>
+            <Footer className="startup-footer bg-no-repeat bg-right" theme="light">
                 <Container fluid className="xs:opacity-0 xs:hidden">
                     <Row>
                         <Col className="h-[65px] lg:h-[30px] bg-top bg-no-repeat"
@@ -424,24 +423,9 @@ const HomeStartupPage = (props) => {
                         </Row>
                     </Container>
                 </div>
-                <div className="pt-[1%] pb-[6%] border-t border-[#ffffff1a]">
-                    <Container>
-                        <Row>
-                            <Link to="/"
-                                  className="col-sm-4 col-12 sm:mb-[20px] flex justify-start xs:justify-center">
-                                <img src="/assets/img/webp/logo-green-dark.webp" alt="logo" width="111"
-                                     height="36"/>
-                            </Link>
-                            <p className="col-sm-8 col-12 flex justify-end items-center sm:mb-[20px] xs:text-center xs:justify-center mb-0">© {new Date().getFullYear()} Litho
-                                is Proudly Powered by&nbsp;<a aria-label="ThemeZaa link"
-                                                              className="text-darkgray font-sans underline underline-offset-4 font-medium text-base inline-block hover:text-basecolor"
-                                                              href="https://www.themezaa.com/" target="_blank"
-                                                              rel="noreferrer">ThemeZaa</a></p>
-                        </Row>
-                    </Container>
-                </div>
             </Footer>
             {/* Footer End */}
+            
         </InViewPort>
     </div>)
 }

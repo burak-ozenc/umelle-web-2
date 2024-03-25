@@ -177,29 +177,6 @@ const HomeStartupPage = (props) => {
             {/* Section End */}
 
             {/* Section Start */}
-            <m.section className="bg-transparent py-[160px] lg:py-[120px] md:py-[80px] xs:py-[50px]"
-                       style={{backgroundImage: `url(https://i.ibb.co/hHCtj1f/homeheader-v1-01.png)`}}
-                       {...fadeIn}>
-                <Container>
-                    <Row>
-                        <Col className='mb-[6%]'>
-                            <h6 className="font-serif text-gray-900 text-center font-medium mb-[25px] lg:mb-[15px]">
-                                Stop overpaying for unused features and never miss out on the functionalities you
-                                need
-                            </h6>
-                            <div>
-                                <p className="font-serif text-gray-900 text-center font-medium mb-[25px] lg:mb-[15px]">
-                                    Shape your custom software experience now by checking the functions and features you
-                                    need:
-                                </p>
-                            </div>
-                        </Col>
-                    </Row>
-                </Container>
-            </m.section>
-            {/* Section End */}
-
-            {/* Section Start */}
             <m.section
                 className="py-[120px] overflow-hidden lg:py-[90px] md:py-[75px] sm:py-[50px] bg-lightgray lg:px-0 md:px-0 sm:px-0 xs:px-0">
                 <Container>
@@ -223,9 +200,24 @@ const HomeStartupPage = (props) => {
 
 
             {/* Section Start */}
-            <section className="py-[60px] lg:py-[120px] md:py-[80px] xs:py-[50px] bg-transparent" {...fadeIn}
-                     style={{backgroundImage: `url("https://i.ibb.co/hHCtj1f/homeheader-v1-01.png")`}}>
+            <section className="py-[60px] lg:py-[120px] md:py-[80px] xs:py-[50px] bg-transparent cover-background relative cover-background" {...fadeIn}
+                     // style={{backgroundImage: `url("https://i.ibb.co/hHCtj1f/homeheader-v1-01.png")`}}
+            >
                 <Container>
+                    <Row>
+                        <Col className='mb-[6%]'>
+                            <h6 className="font-serif text-gray-900 text-center font-medium mb-[25px] lg:mb-[15px]">
+                                Stop overpaying for unused features and never miss out on the functionalities you
+                                need
+                            </h6>
+                            <div>
+                                <p className="font-serif text-gray-900 text-center font-medium mb-[25px] lg:mb-[15px]">
+                                    Shape your custom software experience now by checking the functions and features you
+                                    need:
+                                </p>
+                            </div>
+                        </Col>
+                    </Row>
                     <Row className="m-auto">
                         <Col xl={12} lg={12} md={12}>
                             <Formik
@@ -503,7 +495,7 @@ const HomeStartupPage = (props) => {
             </section>
             {/* CTA Banner Section End */}
 
-            {/*/!* Section start *!/*/}
+            {/*/!* Section start *!/*/} 
             {/*<section className="overflow-visible h-[225px]2"*/}
             {/*         style={{backgroundImage: `url("https://i.ibb.co/XZsnq0w/homepage-bottompagebanner-CTA-v2-01.png")`}}>*/}
             {/*    <Container>*/}
@@ -532,8 +524,7 @@ const HomeStartupPage = (props) => {
             {/*/!* Section End *!/*/}
 
             {/* Footer Start */}
-            <Footer className="startup-footer bg-no-repeat bg-right" theme="light"
-                    style={{backgroundImage: "url(/assets/img/webp/home-startup-footer-down-bg.webp)"}}>
+            <Footer className="startup-footer bg-no-repeat bg-right" theme="light">
                 <Container fluid className="xs:opacity-0 xs:hidden">
                     <Row>
                         <Col className="h-[65px] lg:h-[30px] bg-top bg-no-repeat"
@@ -546,22 +537,6 @@ const HomeStartupPage = (props) => {
                         <Row md={4} className="justify-center gap-y-[25px]">
                             <FooterMenu data={Footer_Data} md={3} sm={6} className="xl:px-[15px]"
                                         titleClass="capitalize text-dark"/>
-                        </Row>
-                    </Container>
-                </div>
-                <div className="pt-[1%] pb-[6%] border-t border-[#ffffff1a]">
-                    <Container>
-                        <Row>
-                            <Link to="/"
-                                  className="col-sm-4 col-12 sm:mb-[20px] flex justify-start xs:justify-center">
-                                <img src="/assets/img/webp/logo-green-dark.webp" alt="logo" width="111"
-                                     height="36"/>
-                            </Link>
-                            <p className="col-sm-8 col-12 flex justify-end items-center sm:mb-[20px] xs:text-center xs:justify-center mb-0">© {new Date().getFullYear()} Litho
-                                is Proudly Powered by&nbsp;<a aria-label="ThemeZaa link"
-                                                              className="text-darkgray font-sans underline underline-offset-4 font-medium text-base inline-block hover:text-basecolor"
-                                                              href="https://www.themezaa.com/" target="_blank"
-                                                              rel="noreferrer">ThemeZaa</a></p>
                         </Row>
                     </Container>
                 </div>
