@@ -78,16 +78,12 @@ const HeaderDataAdjusted = [
         ]
     }, {
         title: 'PRODUCTS',
-        link: '/comingsoon',
+        link: '/coming-soon',
         dropdown: [
             {
                 title: 'Umelle Insurance Management Suite UI MS ',
                 link: '/coming-soon'
             },
-            // {
-            //     title: 'Landing Test',
-            //     link: '/aw-stg-landingp'
-            // }
         ]
     },
     {

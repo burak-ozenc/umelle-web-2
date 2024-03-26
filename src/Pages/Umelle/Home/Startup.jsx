@@ -208,7 +208,7 @@ const HomeStartupPage = (props) => {
             {/* Section Start */}
             <section
                 className="py-[60px] lg:py-[120px] md:py-[80px] xs:py-[50px] bg-transparent cover-background relative cover-background" {...fadeIn}
-                // style={{backgroundImage: `url("https://i.ibb.co/hHCtj1f/homeheader-v1-01.png")`}}
+                style={{backgroundImage: `url(/assets/img/SolutionsHeader_v1.png)`}}
             >
                 {sent ?
                     (<Container>
