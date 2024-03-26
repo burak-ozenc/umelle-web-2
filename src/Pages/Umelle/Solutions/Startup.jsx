@@ -259,7 +259,7 @@ const HomeStartupPage = (props) => {
                     <Row
                         className="full-screen  pt-20 md:h-[650px] sm:h-[350px] xs:h-[450px] align-items-center justify-center">
                         <Col xs={12} lg={6} md={6}
-                             className="justify-center items-center my-0 mx-auto relative flex flex-col">
+                             className="justify-center items-center my-0 mx-auto relative">
                             <h6 className="font-serif block text-[42px] leading-[48px] mb-[35px] font-light text-black xs:text-base xs:mb-[40px]">
                                 Tailor-Made Insurance Data Software Designed Around Your Business Needs
                             </h6>
@@ -287,7 +287,7 @@ const HomeStartupPage = (props) => {
         {/* Section Start */}
         <section className="bg-white pt-20 switch-tabs">
             <Col className="text-center">
-                <h6 className="font-serif text-darkgray text-center font-medium mb-[5%]">
+                <h6 className="font-serif text-darkgray text-center font-medium mb-[2%]">
                     Empowering Pooled Insurance with Tailor-Made Solutions
                 </h6>
                 <p className="m-[50px] text-[23px] mb-[10px]">
@@ -331,7 +331,7 @@ const HomeStartupPage = (props) => {
             <section className="bg-lightgray lg:py-[5px] md:py-[75px]  xs:py-[50px]">
                 <Container>
                     <Row className="justify-center">
-                        <Col md={12} className="text-center mt-5 mb-[7%]">
+                        <Col md={12} className="text-center mt-5 mb-[3%]">
                             <h4 className="font-serif text-darkgray font-medium">Customization at Its Core</h4>
                         </Col>
                     </Row>
@@ -342,13 +342,13 @@ const HomeStartupPage = (props) => {
                             transition: {delay: 0.2}
                         }} >
                             <m.h5
-                                className="font-medium text-darkgray mb-[25px] lg:mb-[15px] font-serif xs:text-[30px] m-[100px]">
+                                className="font-medium text-darkgray mb-[100px] lg:mb-[15px] font-serif xs:text-[30px] m-[100px]">
                                 Empowering Pooled Insurance with Tailor-Made Solutions
                             </m.h5>
                         </m.div>
                         <m.div className="col-12 p-0 col-lg-6" {...{...fadeIn, transition: {delay: 0.36}}} >
                             <m.div
-                                className="bg-gradient-to-r from-[#3844F7]  to-[#902CFC] px-24 py-28 lg:py-20 lg:px-16 md:p-20 text-white text-center">
+                                className="bg-gradient-to-r from-[#3844F7]  to-[#902CFC] px-20 py-16 lg:py-20 lg:px-16 md:p-20 text-white text-center">
                                 <h6 className="font-serif text-white font-medium mb-[40px]">
                                     What truly sets our solution apart is our custom architecture. Recognizing that no
                                     two insurance providers are the same, we offer the ultimate flexibility: you can add
@@ -415,7 +415,7 @@ const HomeStartupPage = (props) => {
                 <Container>
                     <Row>
                         <Col>
-                            <h6 className="text-center text-black justify-center align-items-center m-5">
+                            <h6 className="font-serif text-center text-black justify-center align-items-center m-5">
                                 Transforming Industries: Real-World Success Story
                             </h6>
                         </Col>
@@ -424,18 +424,18 @@ const HomeStartupPage = (props) => {
                         <Col md={4}  xs={12} className="mb-3">
                             <div>
                                 <p>
-                                    <span className="font-bold">Client Name: </span>
+                                    <span className="font-bold text-black">Client Name: </span>
                                     ACWA JPIA
                                 </p>
                                 <br/>
                                 <p>
-                                    <span className="font-bold">Industry: </span>
-                                    Pooled Insurer in the Water and Water Infrastructure
+                                    <span className="font-bold text-black">Industry: </span>
+                                    Pooled Insurer for Water Supply and Infrastructure
                                 </p>
                                 <br/>
                                 <p>
-                                    <span className="font-bold">Client Overview: </span>
-                                    ACWA JPIA is a pooled insurer providing insurance services to more than 350
+                                    <span className="font-bold text-black">Client Overview: </span>
+                                    ACWA JPIA is a pooled insurer, providing insurance services to more than 350
                                     members. Part of the larger JPIA group of like-minded Insurers and Service
                                     Providers,
                                     they provide top-level services to their members and clients.
@@ -456,7 +456,7 @@ const HomeStartupPage = (props) => {
                                                      transition: {delay: 0 * props.animationDelay}
                                                  }}
                                             >
-                                                <Accordion.Item key={1} eventKey={1}>
+                                                <Accordion.Item key={1} eventKey={null}>
                                                     <Accordion.Header>
                                                         The Challenge
                                                     </Accordion.Header>

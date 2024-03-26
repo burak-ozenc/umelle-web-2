@@ -67,7 +67,7 @@ const StartupPageBannerSlider = () => {
                                             <m.span initial={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)'}}
                                                     animate={{clipPath: activeSlide === i ? 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)' : 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)'}}
                                                     transition={{duration: 0.5, delay: 0.8, ease: "easeIn"}}
-                                                    className="font-serif block text-[42px] leading-[48px] mb-[35px] font-light text-black xs:text-base xs:mb-[40px]">{item.subTitle}</m.span>
+                                                    className="font-serif block text-[42px] leading-[52px] mb-[35px] font-light text-black xs:text-base xs:mb-[40px]">{item.subTitle}</m.span>
                                             <m.div initial={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)'}}
                                                    animate={{clipPath: activeSlide === i ? 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)' : 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)'}}
                                                    transition={{duration: 0.5, delay: 0.9, ease: "easeIn"}}>

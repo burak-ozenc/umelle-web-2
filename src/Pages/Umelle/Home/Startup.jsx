@@ -149,12 +149,12 @@ const HomeStartupPage = (props) => {
         {/* Lazy Load HTML */}
         <InViewPort>
             {/* Section Start */}
-            <section id="test" className="bg-lightgray pt-20 switch-tabs">
+            <section id="test" className="bg-white pt-20 switch-tabs">
                 <Col className="text-center">
-                    <h6 className="font-serif text-darkgray text-center font-medium mb-[5%]">
+                    <h6 className="font-serif text-darkgray text-center font-medium mb-[1%]">
                         We understand the unique challenges and needs of pooled insurance providers
                     </h6>
-                    <p className="m-[50px] text-[23px] mb-[0px]">
+                    <p className="m-[30px] text-[23px] mb-[0px]">
                         That's why we've meticulously crafted a solution that not only meets these needs but exceeds
                         them, providing a blend of fiscal precision and superior member service.
                     </p>
@@ -167,7 +167,7 @@ const HomeStartupPage = (props) => {
                 >
                     {/* Accordion style 03 ( Light ) start */}
                     <Tab eventKey="light" title="LIGHT">
-                        <m.section className="py-20 bg-lightgray">
+                        <m.section className="py-[55px] bg-white">
                             <Container>
                                 <Row className="justify-center">
                                     <Col lg={10} md={10}>
@@ -184,9 +184,9 @@ const HomeStartupPage = (props) => {
 
             {/* Section Start */}
             <m.section
-                className="py-[120px] overflow-hidden lg:py-[90px] md:py-[75px] sm:py-[50px] bg-lightgray lg:px-0 md:px-0 sm:px-0 xs:px-0">
+                className="py-[55px] overflow-hidden lg:py-[90px] md:py-[75px] sm:py-[50px] bg-lightgray lg:px-0 md:px-0 sm:px-0 xs:px-0">
                 <Container>
-                    <h6 className="font-serif text-darkgray text-center font-medium mb-[94px] md:mb-[50px]">
+                    <h6 className="font-serif text-darkgray text-center font-medium mb-[60px] md:mb-[50px]">
                         Customer Satisfaction
                     </h6>
                     <Row className="justify-center">
@@ -207,7 +207,7 @@ const HomeStartupPage = (props) => {
 
             {/* Section Start */}
             <section
-                className="py-[60px] lg:py-[120px] md:py-[80px] xs:py-[50px] bg-transparent cover-background relative cover-background" {...fadeIn}
+                className="py-[55px] lg:py-[120px] md:py-[80px] xs:py-[50px] bg-transparent cover-background relative cover-background" {...fadeIn}
                 style={{backgroundImage: `url(/assets/img/SolutionsHeader_v1.png)`}}
             >
                 {sent ?
@@ -219,10 +219,9 @@ const HomeStartupPage = (props) => {
                                     need
                                 </h6>
                                 <div>
-                                    <p className="font-serif text-gray-900 text-center font-medium mb-[25px] lg:mb-[15px]">
+                                    <p className="font-serif text-gray-900 text-center font-medium mb-[1px] lg:mb-[15px]">
                                         Shape your custom software experience now by checking the functions and features
-                                        you
-                                        need:
+                                        you need:
                                     </p>
                                 </div>
                             </Col>
@@ -477,11 +476,11 @@ const HomeStartupPage = (props) => {
             {/* Section End */}
 
             {/* Section Start */}
-            <section className="bg-lightgray py-[160px] lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px]">
+            <section className="bg-lightgray py-[55px] lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px]">
                 <Container>
                     <Row>
-                        <Col className="mb-[6%]">
-                            <h6 className="font-serif text-dark text-center font-medium mb-[25px] lg:mb-[15px]">
+                        <Col className="mb-[55px]">
+                            <h6 className="font-serif text-dark text-center font-medium mb-[0px] lg:mb-[15px]">
                                 Transforming Challenges into Opportunities
                             </h6>
                         </Col>
