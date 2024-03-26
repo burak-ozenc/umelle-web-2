@@ -512,11 +512,12 @@ const HomeStartupPage = (props) => {
                                 <h6 className="text-center bg-white m-3 w-[300px]">
                                     Let's discuss your project
                                 </h6>
-                                <Buttons ariaLabel="button"
-                                         href="/contact"
-                                         className="mx-[10px] font-medium font-serif uppercase rounded-none lg:mb-[15px] landscape:lg:mb-[15px] justify-center align-items-center mt-4"
-                                         themeColor={["#3844F7", "#902CFC"]} size="md" color="#fff"
-                                         title="Schedule a meeting"/>
+                                <Link to="/contact">
+                                    <Buttons ariaLabel="button"
+                                             className="mx-[10px] font-medium font-serif uppercase rounded-none lg:mb-[15px] landscape:lg:mb-[15px] justify-center align-items-center mt-4"
+                                             themeColor={["#3844F7", "#902CFC"]} size="md" color="#fff"
+                                             title="Schedule a meeting"/>
+                                </Link>
                             </div>
                         </Col>
                     </Row>
