@@ -15,7 +15,7 @@ const Accordions = (props) => {
 
     return (
         <div className={`${props.theme} ${props.themeColor}${props.className ? ` ${props.className}` : ""}`}>
-            <Accordion defaultActiveKey={0}>
+            <Accordion defaultActiveKey={null}>
                 {
                     props.data.map((item, key) => {
                         return (
