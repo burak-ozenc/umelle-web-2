@@ -15,15 +15,15 @@ const Lists = (props) => {
                     return (
                         <m.li key={i}  {...{ ...props.animation, transition: { delay: (i+1) * props.animationDelay, initial: { opacity: 0, x: "100%" }, ease: [0.25, 1, 0.5, 1], duration: 1.2 } }}>
                             {item.icon && <i className={item.icon}></i>}
-                            {item.linkTitle && <a aria-label="list" href={item.link} >{item.linkTitle}</a>}
+                            {item.linkTitle && <a aria-label="list" href={item.id} >{item.linkTitle}</a>}
                             {item.title ?
                                 <div className='block'>
                                     {item.title && <span className='block list-title'>{item.title}</span>}
                                     <span className='list-content'>{item.content}</span>
                                 </div> : (
-                                    <span>{item.content}</span>
-                                )}
-                            {item.number && <span className='list-number'>{item.number}</span>}
+                                    <a aria-label="list" href={item.id} ><span>{item.content}</span></a>
+                                        )}
+                                        {item.number && <span className='list-number'>{item.number}</span>}
                         </m.li>
                     )
                 })
@@ -48,6 +48,7 @@ Lists.propTypes = {
             icon: PropTypes.string,
             linkTitle: PropTypes.string,
             number: PropTypes.string,
+            id: PropTypes.style
         })
     ),
     animation: PropTypes.object,
