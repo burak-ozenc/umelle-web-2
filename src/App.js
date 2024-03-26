@@ -92,7 +92,6 @@ function App() {
             <AnimatePresence exitBeforeEnter>
               <Suspense fallback={<></>}>
                 <Routes>
-                  {/*UMELLE*/}
                   <Route path="/" element={<UmelleHome style={{ "--base-color": "#27ae60" }} />} />
                   <Route path="/solutions" element={<UmelleSolutions style={{ "--base-color": "#27ae60" }} />} />
                   <Route path="/services" element={<UmelleServices style={{ "--base-color": "#27ae60" }} />} />
