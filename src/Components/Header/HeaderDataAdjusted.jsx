@@ -82,7 +82,7 @@ const HeaderDataAdjusted = [
         dropdown: [
             {
                 title: 'Umelle Insurance Management Suite UI MS ',
-                link: '/coming-soon'
+                link: '/aw-stg-landingp'
             },
         ]
     },
