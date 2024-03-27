@@ -165,16 +165,16 @@ const UmelleInsuranceManagementSuite = (props) => {
 
         {/* Section Start */}
         <section className="bg-cover bg-no-repeat overflow-visible bg-center"
-                 style={{backgroundImage: "url('https://i.ibb.co/YN74NbB/Header-Landing-Page-01.png')"}}>
+                 style={{backgroundImage: "url(/assets/img/Header_LandingPage_TESTT-01.png)"}}>
             <Container>
                 <Row className="justify-center sm:text-center">
                     <Col lg={7} xl={7} md={7} sm={8}
                          className="h-[100vh] flex flex-col items-start justify-center pb-40 pt-24 lg:pt-40 lg:pb-32 md:pt-24 md:pb-40 sm:h-auto sm:pb-20 md:h-[650px]">
                         <span
-                            className="font-serif font-semibold text-md leading-[24px] tracking-[1px] text-white inline-block uppercase mb-[45px] sm:mt-0 sm:mx-auto sm:mb-[35px]">
+                            className="font-serif font-semibold text-md leading-[24px] tracking-[1px] text-black inline-block uppercase mb-[45px] sm:mt-0 sm:mx-auto sm:mb-[35px]">
                             EXPERIENCE THE FUTURE OF INSURANCE MANAGEMENT
                         </span>
-                        <h1 className="font-serif font-bold block text-[42px] leading-[48px] mb-[1px] text-white xs:text-base xs:mb-[40px] ">
+                        <h1 className="font-serif font-bold block text-[42px] leading-[48px] mb-[1px] text-white xs:text-base xs:mb-[40px]">
                             INSURANCE AND OPERATIONS
                         </h1>
                         <h2 className="font-serif font-bold block text-[24px] leading-[48px] mb-[0px] text-white xs:text-base xs:mb-[10px]  text-[1.4em]">
@@ -182,9 +182,9 @@ const UmelleInsuranceManagementSuite = (props) => {
                         </h2>
                         <br/>
                         <br/>
-                        <p className="text-lg uppercase leading-[25px] text-white opacity-60 mb-[25px] w-[95%] sm:w-full md:text-xmd sm:mb-[15px] xs:leading-[22px]">
+                        <h2 className="font-serif text-lg uppercase leading-[25px] text-black mb-[25px] w-[95%] sm:w-full md:text-xmd sm:mb-[15px] xs:leading-[22px]">
                             The premier choice for pooled insurance providers
-                        </p>
+                        </h2>
                         {/*<ScrollTo href='#' to="download" offset={0} delay={0} spy={true} smooth={true} duration={800}*/}
                         {/*          className="sm:contents">*/}
                             <Link to="/solutions">
@@ -202,11 +202,11 @@ const UmelleInsuranceManagementSuite = (props) => {
         {/* Section End*/}
 
         {/* Section Start*/}
-        <m.section id="about" className="border-b border-mediumgray py-[130px] lg:py-[90px] sm:pb-[50px] md:pt-0 sm:pt-[50px]" {...fadeIn}>
+        <m.section id="about" className="border-b border-mediumgray py-[55px] lg:py-[90px] sm:pb-[50px] md:pt-0 sm:pt-[50px]" {...fadeIn}>
             <Container>
                 <Row className="justify-center">
-                    <Col lg={8} sm={8} className="text-center mb-24 md:mb-16 sm:mb-8 mt-14">
-                        <span className="font-serif font-medium text-md text-gradient bg-gradient-to-r from-[#975ade] via-[#e05fc4] to-[#ff798e] tracking-[.5px] uppercase inline-block mb-[20px] sm:mb-[10px]">
+                    <Col lg={8} sm={8} className="text-center mb-24 md:mb-16 sm:mb-8 mt-10">
+                        <span className="font-serif font-medium text-md text-gradient bg-gradient-to-r from-[#975ade] via-[#e05fc4] to-[#ff798e] tracking-[.5px] uppercase inline-block mb-[55px] sm:mb-[10px]">
                         WE CRAFTED A SOLUTION THAT NOT ONLY MEETS THESE NEEDS BUT EXCEEDS THEM, PROVIDING A BLEND OF FISCAL PERCISION AND SUPERIOR MEMBER SERVICES  
                         </span>
                         <h2 className="heading-4 font-serif font-light text-darkgray tracking-[-1px]">
@@ -220,7 +220,7 @@ const UmelleInsuranceManagementSuite = (props) => {
 
 
         {/* Section Start */}
-        <m.section className="py-[160px] lg:py-[120px] md:py-[95px] sm:py-[80px] xs;py-[50px]" {...fadeIn}>
+        <m.section className="py-[100px] lg:py-[120px] md:py-[95px] sm:py-[80px] xs;py-[50px]" {...fadeIn}>
             <Container>
                 <Row>
                     <Col className="mb-[4%]">
@@ -232,8 +232,8 @@ const UmelleInsuranceManagementSuite = (props) => {
                 <Row>
                     <Col lg={5} className="px-[10px] md:mb-[15px]">
                         <div className="bg-transparent p-[40px] sm:p-[30px]">
-                            <h6 className="lg:mb-[45px] text-[1.8em]" style={{color: '#4423C4'}}>
-                                Is your off-the-shelf software falling short? Are you overpaying for superfluous features and missing out on the functionalities you need?
+                            <h6 className="lg:mb-[45px] text-[1.8em] " style={{color: '#4423C4'}}>
+                                Is your off-the-shelf software falling short? <br/><br/> Are you overpaying for superfluous features and missing out on the functionalities you need?
                             </h6>
                         </div>
                     </Col>

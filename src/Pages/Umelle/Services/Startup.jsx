@@ -152,7 +152,7 @@ const HomeStartupPage = (props) => {
 
         {/* Section start */}
         <section className="overflow-visible cover-background"
-                 style={{backgroundImage: `url("https://i.ibb.co/hHCtj1f/homeheader-v1-01.png")`}}>
+                 style={{backgroundImage: `url(assets/img/servicespage_header_v2-01.png)`}}>
             <Container>
                 <LazyMotion strict features={domMax}>
                     <Row
