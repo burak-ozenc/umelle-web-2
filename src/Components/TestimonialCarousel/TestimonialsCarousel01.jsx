@@ -26,7 +26,7 @@ const TestimonialsCarousel01 = (props) => {
                                     <ol>
                                         {item?.list && item?.list.map((elem, ix) => {
                                             return (
-                                                <li className="font-bold text-[20px] font-black" key={ix}>
+                                                <li className="font-bold text-[20px] font-heavy text-black" key={ix}>
                                                     {elem?.listMember}
                                                 </li>
                                             )
@@ -35,7 +35,14 @@ const TestimonialsCarousel01 = (props) => {
                                 </Col>
                                 <Col lg={8} md={8} sm={8}>
                                     {item.content && <span
-                                        className="w-[95%] leading-[40px] font-serif font-light text-xlg mb-[49px] inline-block tracking-[-.5px] text-center lg:text-lg md:leading-[26px] md:w-[70%] lg:mb-[3.5rem] xs:w-[95%]"> {item.content} </span>}
+                                        className="w-[95%] leading-[40px] font-serif font-light text-black text-xlg mb-[49px] inline-block tracking-[-.5px] text-center lg:text-lg md:leading-[26px] md:w-[70%] lg:mb-[3.5rem] xs:w-[95%]" style={{
+                                            background: 'linear-gradient(to right, #3844F7, #902CFC)',
+                                            WebkitBackgroundClip: 'text',
+                                            WebkitTextFillColor: 'transparent'
+                                        }}
+                                        > 
+                                        {item.content} 
+                                        </span>}
                                 </Col>
                             </Row>
 
@@ -47,11 +54,11 @@ const TestimonialsCarousel01 = (props) => {
                 props.carouselOption.navigation && (
                     <div className="flex">
                         <div onClick={() => swiperRef.current.swiper.slidePrev()}
-                             className="btn-slider-next rounded-full flex justify-center items-center text-darkgray bg-white border-[1px] border-solid border-mediumgray h-[40px] w-[40px] cursor-pointer hover:shadow-xl transition-all duration-800 absolute top-[38%] left-[-90px] right-auto">
+                             className="btn-slider-next rounded-full flex justify-center items-center text-darkgray bg-white border-[1px] border-solid border-mediumgray h-[40px] w-[40px] cursor-pointer hover:shadow-xl transition-all duration-5000 absolute top-[38%] left-[-90px] right-auto">
                             <i className="feather-arrow-left text-xmd"></i>
                         </div>
                         <div onClick={() => swiperRef.current.swiper.slideNext()}
-                             className="btn-slider-prev rounded-full border-[1px] border-solid border-mediumgray bg-white text-darkgray flex justify-center items-center h-[40px] w-[40px] ml-[10px] cursor-pointer hover:shadow-xl transition-all duration-800 absolute top-[38%] right-[-90px] left-auto">
+                             className="btn-slider-prev rounded-full border-[1px] border-solid border-mediumgray bg-white text-darkgray flex justify-center items-center h-[40px] w-[40px] ml-[10px] cursor-pointer hover:shadow-xl transition-all duration-5000 absolute top-[38%] right-[-90px] left-auto">
                             <i className="feather-arrow-right text-xmd"></i>
                         </div>
                     </div>

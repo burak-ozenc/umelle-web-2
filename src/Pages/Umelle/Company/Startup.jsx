@@ -173,7 +173,7 @@ const HomeStartupPage = (props) => {
                                     meticulously
                                     plans, designs, engineers, tests, refines, and delivers custom-built software to
                                     align
-                                    with you, your business needs
+                                    with you and your business needs
                                 </div>
                             </div>
                         </Col>
@@ -183,29 +183,97 @@ const HomeStartupPage = (props) => {
         </section>
         {/* Section End */}
 
-        {/* Lazy Load HTML */}
-        <InViewPort>
+        {/* Section Start */}
+        <m.section
+                className="py-[100px] lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px] bg-no-repeat bg-center"
+                style={{background: 'white',}} {...fadeIn} >
+                <Container>
+                    <Row className="justify-center align-items-center">
+                        <Col md={9} className="text-center mb-[6%]">
+                            <h6 className="font-serif text-darkgray font-medium">
+                                We believe in Quality-driven custom software development
+                            </h6>
+                        </Col>
+                    </Row>
+                    <Row className="row-cols-lg-2 justify-center">
+                        <Col md={12} lg={12}>
+                            <TestimonialsCarousel01
+                                data={TestimonialsCarouselData1}
+                                className="swiper-navigation-04 swiper-navigation-light swiper-pagination-dark swiper-pagination-big black-move"
+                                carouselOption={{
+                                    slidesPerView: 1,
+                                    loop: true,
+                                    navigation: false,
+                                    autoplay: {delay: 5000, disableOnInteraction: false},
+                                    pagination: {dynamicBullets: false, clickable: true},
+                                    keyboard: {enabled: true, onlyInViewport: true},
+                                }}
+                            />
+                        </Col>
+                    </Row>
+                </Container>
+            </m.section>
+            {/* Section End */}
+
             {/* Section Start */}
-            <m.section className="py-[160px] lg:py-[120px] md:py-[95px] sm:py-[80px] xs;py-[50px] bg-lightgray" {...fadeIn}>
+            <m.section className="py-[100px] lg:py-[120px] md:py-[95px] sm:py-[80px] xs;py-[50px] bg-lightgray" {...fadeIn}>
                 <Container>
                     <Row>
                         <Col className="mb-[4%]">
-                            <h4 className="font-serif text-dark text-center font-medium  lg:mb-[15px]">
+                            <h6 className="font-serif text-darkgray text-center font-medium mb-[25px] lg:mb-[15px]">
+                                Our Commitment? Your success, powered by our software.
+                            </h6>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col lg={6} xs={12} className="px-[15px] md:mb-[15px]">
+                            <div className="bg-transparent  sm:p-[30px]">
+                                <p className="text-darkgray text-[1.2em] text-center lg:mb-[45px]">
+                                    Transforming Challenges Into Opportunities:
+                                    <br/>
+                                    <br/>
+                                    Dedicated to bridging businesses with technological excellence, our mission is to deliver intuitive resource management software solutions that cater to both SMEs and enterprises, simplifying challenges into opportunities.
+                                </p>
+                            </div>
+                        </Col>
+                        <Col lg={6}  xs={12} className="px-[15px] md:mb-[15px]">
+                            <div className="text-darkgray text-[1.2em] text-center sm:p-[34px]">
+                                <p>
+                                    Empowering Growth Through Solutions:
+                                    <br/>
+                                    <br/>
+                                    Our vision is to empower businesses worldwide by turning their challenges into robust solutions, leveraging our diverse capabilities to serve the evolving needs of both SMEs and enterprises.
+                                </p>
+                            </div>
+                        </Col>
+                    </Row>
+                </Container>
+            </m.section>
+            {/* Section End */}
+
+        {/* Lazy Load HTML */}
+        <InViewPort>
+            {/* Section Start */}
+            <m.section className="py-[100px] lg:py-[120px] md:py-[95px] sm:py-[80px] xs;py-[50px] bg-white" {...fadeIn}>
+                <Container>
+                    <Row>
+                        <Col className="mb-[4%]">
+                            <h4 className="font-serif text-dark text-center font-medium lg:mb-[15px]">
                                 Our Mission?
                             </h4>
                         </Col>
                     </Row>
                     <Row>
                         <Col lg={5} xs={12} className="px-[15px] md:mb-[15px]">
-                            <div className="bg-transparent  sm:p-[30px]">
-                                <h6 className="text-darkgray lg:mb-[45px]">
+                            <div className="bg-transparent sm:p-[30px]">
+                                <h6 className="text-black lg:mb-[45px]">
                                     Empowering Businesses and Enriching Lives: Where Heart Meets Software for
                                     Transformational Growth.
                                 </h6>
                             </div>
                         </Col>
                         <Col lg={7}  xs={12} className="px-[15px] md:mb-[15px]">
-                            <div className="bg-lightgray  sm:p-[34px]">
+                            <div className="bg-transparent text-black sm:p-[34px]">
                                 <p>
                                     Our mission is to revolutionize business improvement through the infusion of heart
                                     into software solutions. We believe in harnessing the power of technology not just
@@ -221,73 +289,12 @@ const HomeStartupPage = (props) => {
             </m.section>
             {/* Section End */}
 
-            {/* Section Start */}
-            <m.section
-                className="py-[160px] lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px] bg-no-repeat bg-center"
-                style={{background: 'white',}} {...fadeIn} >
-                <Container>
-                    <Row className="justify-center align-items-center">
-                        <Col md={9} className="text-center mb-[6%]">
-                            <h6 className="font-serif text-darkgray font-medium">
-                                What we believe in? Quality-driven custom software development
-                            </h6>
-                        </Col>
-                    </Row>
-                    <Row className="row-cols-lg-2 justify-center">
-                        <Col md={12} lg={12}>
-                            <TestimonialsCarousel01
-                                data={TestimonialsCarouselData1}
-                                className="swiper-navigation-04 swiper-navigation-light swiper-pagination-dark swiper-pagination-big black-move"
-                                carouselOption={{
-                                    slidesPerView: 1,
-                                    loop: true,
-                                    navigation: false,
-                                    autoplay: {delay: 4500, disableOnInteraction: false},
-                                    pagination: {dynamicBullets: false, clickable: true},
-                                    keyboard: {enabled: true, onlyInViewport: true},
-                                }}
-                            />
-                        </Col>
-                    </Row>
-                </Container>
-            </m.section>
+            
 
-            {/* Section End */}
+            
 
 
-            {/* Section Start */}
-            <m.section className="py-[160px] lg:py-[120px] md:py-[95px] sm:py-[80px] xs;py-[50px] bg-lightgray" {...fadeIn}>
-                <Container>
-                    <Row>
-                        <Col className="mb-[8%]">
-                            <h6 className="font-serif text-darkgray text-center font-medium mb-[25px] lg:mb-[15px]">
-                                Our Commitment? Your success, powered by our software.
-                            </h6>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col lg={6} xs={12} className="px-[15px] md:mb-[15px]">
-                            <div className="bg-transparent  sm:p-[30px]">
-                                <p className="text-darkgray text-[1.2em] lg:mb-[45px]">
-                                    Transforming Challenges Into Opportunities
-                                    <br/>
-                                    Dedicated to bridging businesses with technological excellence, our mission is to deliver intuitive resource management software solutions that cater to both SMEs and enterprises, simplifying challenges into opportunities.
-                                </p>
-                            </div>
-                        </Col>
-                        <Col lg={6}  xs={12} className="px-[15px] md:mb-[15px]">
-                            <div className="text-darkgray text-[1.2em]  sm:p-[34px]">
-                                <p>
-                                    Empowering Growth Through Solutions
-                                    <br/>
-                                    Our vision is to empower businesses worldwide by turning their challenges into robust solutions, leveraging our diverse capabilities to serve the evolving needs of both SMEs and enterprises.
-                                </p>
-                            </div>
-                        </Col>
-                    </Row>
-                </Container>
-            </m.section>
-            {/* Section End */}
+            
 
             {/*/!* Section Start *!/*/}
             {/*<section className="pt-[120px] lg:pt-[95px] md:pt-[80px] sm:pt-[50px] switch-tabs">*/}
