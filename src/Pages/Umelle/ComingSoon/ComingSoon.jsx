@@ -144,7 +144,7 @@ const ComingSoon = (props) => {
                 <Row className="justify-center relative z-10">
                     <Col xs={12} className="text-center">
                         <m.h1 {...{...fadeInDown, transition: {delay: 1, ease: "easeOut", duration: 0.5}}}
-                              className="inline-block font-serif text-gradient bg-gradient-to-r from-[#b783ff] to-[#ff85a6] font-semibold pb-[10px] xl:text-[50px] xl:leading-none xs:text-[38px]">We
+                              className="inline-block font-serif text-gradient bg-gradient-to-r from-[#2CBAFC] to-[#902CFC] font-semibold pb-[10px] xl:text-[50px] xl:leading-none xs:text-[38px]">We
                             are <br/>launching soon
                         </m.h1>
                         {/*<m.p {...{...fadeInDown, transition: {delay: 1.7, ease: "easeOut", duration: 0.5}}}*/}
