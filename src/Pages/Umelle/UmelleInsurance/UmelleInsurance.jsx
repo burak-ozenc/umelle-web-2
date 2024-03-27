@@ -220,7 +220,7 @@ const UmelleInsuranceManagementSuite = (props) => {
 
 
         {/* Section Start */}
-        <m.section className="py-[100px] lg:py-[120px] md:py-[95px] sm:py-[80px] xs;py-[50px]" {...fadeIn}>
+        <m.section className="py-[100px] lg:py-[120px] md:py-[95px] sm:py-[80px] xs;py-[50px] bg-lightgray" {...fadeIn}>
             <Container>
                 <Row>
                     <Col className="mb-[4%]">
@@ -232,13 +232,13 @@ const UmelleInsuranceManagementSuite = (props) => {
                 <Row>
                     <Col lg={5} className="px-[10px] md:mb-[15px]">
                         <div className="bg-transparent p-[40px] sm:p-[30px]">
-                            <h6 className="lg:mb-[45px] text-[1.8em] " style={{color: '#4423C4'}}>
+                            <h6 className="lg:mb-[45px] text-[1.8em]" style={{color: '#2CBAFC'}}>
                                 Is your off-the-shelf software falling short? <br/><br/> Are you overpaying for superfluous features and missing out on the functionalities you need?
                             </h6>
                         </div>
                     </Col>
                     <Col lg={7} className="px-[15px] md:mb-[15px]">
-                        <div className="bg-transparent p-[33px] sm:p-[34px] text-[1.5em] min-h-[230px]">
+                        <div className="bg-transparent text-black p-[33px] sm:p-[34px] text-[1.5em] min-h-[230px]">
                             <p>
                                 We offer the perfect balance of cost and utility, by delivering specialized solutions and expertise tailored to your exact requirements, ensuring you receive focused advantages through our key strengths.
                             </p>
@@ -252,11 +252,11 @@ const UmelleInsuranceManagementSuite = (props) => {
 
 
         {/* Section Start */}
-        <m.section id="download" className="py-[160px] cover-background lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px]" style={{ backgroundImage: `url("https://via.placeholder.com/1920x388")` }} {...fadeIn}>
+        <m.section id="download" className="py-[160px] cover-background lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px]" style={{ backgroundImage: `url(/assets/img/BottomCTABanner_LandingPage_TESTT-01-01.png)` }} {...fadeIn}>
             <Container>
                 <Row className="items-center">
                     <Col lg={8} md={8} className="col-12 text-left font-serif uppercase sm:mb-[30px] sm:text-center">
-                        <span className="font-medium text-md text-gradient bg-gradient-to-r from-[#975ade] via-[#e05fc4] to-[#ff798e] tracking-[.5px] inline-block mb-[15px] sm:mb-[10px]">
+                        <span className="font-medium text-md text-white bg-transparent tracking-[.5px] inline-block mb-[15px] sm:mb-[10px]">
                             WE BUILD FOR YOUR BUSINESS NEEDS 
                         </span>
                         <h2 className="heading-4 font-semibold text-white -tracking-[1px] mb-0">
