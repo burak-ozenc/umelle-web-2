@@ -165,13 +165,13 @@ const UmelleInsuranceManagementSuite = (props) => {
 
         {/* Section Start */}
         <section className="bg-cover bg-no-repeat overflow-visible bg-center"
-                 style={{backgroundImage: "url(/assets/img/Header_LandingPage_TESTT-01.png)"}}>
+                 style={{backgroundImage: "url(/assets/img/Header_LandingPage_TESTT-02-03-01.png)"}}>
             <Container>
                 <Row className="justify-center sm:text-center">
                     <Col lg={7} xl={7} md={7} sm={8}
                          className="h-[100vh] flex flex-col items-start justify-center pb-40 pt-24 lg:pt-40 lg:pb-32 md:pt-24 md:pb-40 sm:h-auto sm:pb-20 md:h-[650px]">
                         <span
-                            className="font-serif font-semibold text-md leading-[24px] tracking-[1px] text-black inline-block uppercase mb-[45px] sm:mt-0 sm:mx-auto sm:mb-[35px]">
+                            className="font-serif font-semibold text-md leading-[24px] tracking-[1px] text-white inline-block uppercase mb-[45px] sm:mt-0 sm:mx-auto sm:mb-[35px]">
                             EXPERIENCE THE FUTURE OF INSURANCE MANAGEMENT
                         </span>
                         <h1 className="font-serif font-bold block text-[42px] leading-[48px] mb-[1px] text-white xs:text-base xs:mb-[40px]">
@@ -182,7 +182,7 @@ const UmelleInsuranceManagementSuite = (props) => {
                         </h2>
                         <br/>
                         <br/>
-                        <h2 className="font-serif text-lg uppercase leading-[25px] text-black mb-[25px] w-[95%] sm:w-full md:text-xmd sm:mb-[15px] xs:leading-[22px]">
+                        <h2 className="font-serif text-lg uppercase leading-[25px] text-white mb-[25px] w-[95%] sm:w-full md:text-xmd sm:mb-[15px] xs:leading-[22px]">
                             The premier choice for pooled insurance providers
                         </h2>
                         {/*<ScrollTo href='#' to="download" offset={0} delay={0} spy={true} smooth={true} duration={800}*/}
@@ -220,7 +220,7 @@ const UmelleInsuranceManagementSuite = (props) => {
 
 
         {/* Section Start */}
-        <m.section className="py-[100px] lg:py-[120px] md:py-[95px] sm:py-[80px] xs;py-[50px] bg-lightgray" {...fadeIn}>
+        {/* <m.section className="py-[100px] lg:py-[120px] md:py-[95px] sm:py-[80px] xs;py-[50px] bg-lightgray" {...fadeIn}>
             <Container>
                 <Row>
                     <Col className="mb-[4%]">
@@ -247,8 +247,35 @@ const UmelleInsuranceManagementSuite = (props) => {
                 </Row>
 
             </Container>
-        </m.section>
+        </m.section> */}
         {/* Section End */}
+
+        {/* Section Start */}
+      <section className="py-[55px] lg:py-[95px] md:py-[70px] sm:py-[50px] relative overflow-visible">
+        <Container>
+          <Row className="items-center">
+            <m.div className="col-lg-6 relative mt-[70px] lg:mt-[30px] md:mb-[50px]" {...fadeIn}>
+              <div className="relative">
+                <img src="/assets/img/landing_page_section_front-01.png"></img>
+              </div>
+            </m.div>
+            <m.div className="col-lg-5 offset-lg-1" {...{ ...fadeIn, transition: { delay: 0.5 } }}>
+              <div className="font-serif text-xmd font-medium mb-[30px]">
+                <span className="w-[50px] h-[1px] bg-fastblue inline-block align-middle mr-[20px]"></span>
+                <span className="text-gradient bg-gradient-to-r from-[#556fff] via-[#e05fc4] to-[#ff798e] inline-block">Is your off-the-shelf software falling short?</span></div>
+              <h5 className="font-serif text-darkgray font-medium mb-[30px] w-full">Are you overpaying for useless features or missing out on the functionalities you need?</h5>
+              <p className="w-[95%] mb-[35px]">We offer the perfect balance of cost and utility, by delivering specialized solutions and expertise tailored to your exact requirements, ensuring you receive focused advantages through our key strengths.</p>
+              <div className="xs:flex">
+                <Buttons ariaLabel="button"
+                    href="/solutions"
+                    className="mx-[10px] font-medium font-serif uppercase rounded-none lg:mb-[15px] landscape:lg:mb-[15px] justify-center align-items-center mt-4"
+                    themeColor={["#3844F7", "#902CFC"]} size="md" color="#fff"
+                    title="LEARN MORE"/></div>
+            </m.div>
+          </Row>
+        </Container>
+      </section>
+      {/* Section End */}
 
 
         {/* Section Start */}
@@ -267,8 +294,9 @@ const UmelleInsuranceManagementSuite = (props) => {
                         <Buttons ariaLabel="button"
                                  href="/solutions"
                                  className="mx-[10px] font-medium font-serif uppercase rounded-none lg:mb-[15px] landscape:lg:mb-[15px] justify-center align-items-center mt-4"
-                                 themeColor={["#3844F7", "#902CFC"]} size="md" color="#fff"
-                                 title="LEARN MORE"/>
+                                 themeColor={["#3844F7", "#902CFC"]} size="xl" color="#fff"
+                                 title="LEARN MORE" 
+                                 />
                     </Col>
                 </Row>
             </Container>
