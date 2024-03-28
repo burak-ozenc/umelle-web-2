@@ -393,14 +393,14 @@ const HomeStartupPage = (props) => {
             {/* CTA Banner Section Start */}
             <section className="lg:pt-[100px] md:pt-[10px] sm:pt-[50px] ">
                 <Container fluid>
-                    <Row style={{backgroundImage: `url(https://i.ibb.co/cNtVkT3/homepage-bottompagebanner-CTA-01.png)`}}
+                    <Row style={{backgroundImage: `url('/assets/img/Untitled-6-01.png')`}}
                          className="cover-background relative cover-background lg:py-[90px] md:py-[75px] sm:py-[50px]">
                         <Col xs={12} className="text-center my-[5rem] md:my-[7.5rem]">
                             <Buttons ariaLabel="button"
                                      href="/contact"
                                      className="mx-[10px] font-medium font-serif uppercase rounded-none lg:mb-[15px] landscape:lg:mb-[15px] justify-center align-items-center"
                                      themeColor={["#556fff", "#ff798e"]} size="md" color="#fff"
-                                     title="SCHEDULE A MEETING"/>
+                                     title="Get a Quote"/>
                         </Col>
                     </Row>
                 </Container>
