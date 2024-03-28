@@ -256,7 +256,7 @@ const UmelleInsuranceManagementSuite = (props) => {
           <Row className="items-center">
             <m.div className="col-lg-6 relative mt-[70px] lg:mt-[30px] md:mb-[50px]" {...fadeIn}>
               <div className="relative">
-                <img src="/assets/img/landing_page_section_front-01.png"></img>
+                <img src="/assets/img/landing_page_section_front-01.png" alt=""></img>
               </div>
             </m.div>
             <m.div className="col-lg-5 offset-lg-1" {...{ ...fadeIn, transition: { delay: 0.5 } }}>
