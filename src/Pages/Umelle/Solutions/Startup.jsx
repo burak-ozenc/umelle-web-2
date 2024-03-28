@@ -893,7 +893,7 @@ const HomeStartupPage = (props) => {
                                      href="/contact"
                                      className="mx-[10px] font-medium font-serif uppercase rounded-none lg:mb-[15px] landscape:lg:mb-[15px] justify-center align-items-center"
                                      themeColor={["#556fff", "#ff798e"]} size="md" color="#fff"
-                                     title="SCHEDULE A MEETING"/>
+                                     title="Schedule a Meeting"/>
                         </Col>
                     </Row>
                 </Container>
