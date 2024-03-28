@@ -191,7 +191,7 @@ const HomeStartupPage = (props) => {
                     <Row className="justify-center align-items-center">
                         <Col md={9} className="text-center mb-[6%]">
                             <h6 className="font-serif text-darkgray font-medium">
-                                We believe in Quality-driven custom software development
+                                We believe in quality-driven custom software development
                             </h6>
                         </Col>
                     </Row>
