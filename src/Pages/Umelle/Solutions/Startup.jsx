@@ -865,7 +865,7 @@ const HomeStartupPage = (props) => {
 
             {/* Section Start */}
             <m.section
-                className="bg-white border-t lg:py-[20px] md:py-[95px] sm:py-[80px] xs:py-[50px] mb-5" {...fadeIn}>
+                className="bg-lightgray border-t lg:py-[20px] md:py-[95px] sm:py-[80px] xs:py-[50px] mb-5" {...fadeIn}>
                 <Container>
                     <Row className="justify-center">
                         <Col md={12} className="text-center m-5 mb-[7%]">
@@ -882,11 +882,11 @@ const HomeStartupPage = (props) => {
                 </Container>
             </m.section>
             {/* Section End */}
-            
+
             {/* CTA Banner Section Start */}
             <section className="lg:pt-[160px] md:pt-[10px] sm:pt-[50px] ">
                 <Container fluid>
-                    <Row style={{backgroundImage: `url(https://i.ibb.co/cNtVkT3/homepage-bottompagebanner-CTA-01.png)`}}
+                    <Row style={{backgroundImage: `url('/assets/img/Untitled-6-01.png')`}}
                          className="cover-background relative cover-background lg:py-[90px] md:py-[75px] sm:py-[50px]">
                         <Col xs={12} className="text-center my-[5rem] md:my-[7.5rem]">
                             <Buttons ariaLabel="button"
