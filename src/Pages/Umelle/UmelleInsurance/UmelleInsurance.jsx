@@ -12,6 +12,7 @@ import {resetForm, ScrollToAnchor, sendEmail} from "../../../Functions/Utilities
 import {Input} from '../../../Components/Form/Form'
 import FooterMenu, {Footer} from '../../../Components/Footers/Footer';
 import InViewPort from '../../../Components/InViewPort';
+import { Parallax } from 'react-scroll-parallax';
 
 // Data
 import FooterData from '../../../Components/Footers/FooterData';
@@ -256,7 +257,14 @@ const UmelleInsuranceManagementSuite = (props) => {
           <Row className="items-center">
             <m.div className="col-lg-6 relative mt-[70px] lg:mt-[30px] md:mb-[50px]" {...fadeIn}>
               <div className="relative">
-                <img src="/assets/img/landing_page_section_front-01.png" alt=""></img>
+              <Parallax className="lg-no-parallax w-[70%] rounded-[6px] lg:relative lg:!top-[-20px]" speed={0}>
+                  <div className="absolute top-0 left-0 w-full h-full rounded-[6px] opacity-50 bg-gradient-to-r from-purple-500 to-pink-500"></div>
+                  <img loading="lazy" src="/assets/img/landing_page_section_back-01.png" className="rounded-[6px] w-full" width="394.8" height="466.34" alt="our-process" />
+                </Parallax>
+                <Parallax className="lg-no-parallax flex rounded-[6px] justify-center items-center w-[70%] bg-no-repeat absolute bottom-0 right-[15px] lg:!top-0 lg:ml-auto" speed={20}>
+                  <img loading="lazy" src="/assets/img/landing_page_section_front-01.png" className="rounded-[6px] w-full" width="394.8" height="466.34" alt="our-process" />
+                </Parallax>
+                {/* <img src="/assets/img/landing_page_section_front-01.png" alt=""></img> */}
               </div>
             </m.div>
             <m.div className="col-lg-5 offset-lg-1" {...{ ...fadeIn, transition: { delay: 0.5 } }}>
@@ -276,7 +284,6 @@ const UmelleInsuranceManagementSuite = (props) => {
         </Container>
       </section>
       {/* Section End */}
-
 
         {/* Section Start */}
         <m.section id="download" className="py-[160px] cover-background lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px]" style={{ backgroundImage: `url(/assets/img/BottomCTABanner_LandingPage_TESTT-01-01.png)` }} {...fadeIn}>
