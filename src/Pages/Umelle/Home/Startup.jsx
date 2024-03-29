@@ -39,6 +39,8 @@ const SocialIcons = lazy(() => import("../../../Components/SocialIcon/SocialIcon
 const SideButtons = lazy(() => import("../../../Components/SideButtons"))
 const StaticInstagram = lazy(() => import('../../../Components/Instagram/StaticInstagram'))
 const StartupPageBannerSlider = lazy(() => import('./StartupBanner'))
+const SEO = lazy(() => import('../../../Components/Umelle/SEO'))
+
 
 // Filter the blog data category wise
 
@@ -84,6 +86,14 @@ const HomeStartupPage = (props) => {
             );
     };
     return (<div style={props.style}>
+        {/*SEO Starts*/}
+        <SEO
+            title='Test React Helmet'
+            description='Beginner friendly page for learning React Helmet.'
+            name='UMELLE'
+            type='article'/>
+        {/*SEO Ends*/}
+        
         {/* Header Start */}
         <Header topSpace={{md: true}} type="reverse-scroll">
             <HeaderNav fluid="fluid" theme="light" expand="lg"
@@ -246,7 +256,8 @@ const HomeStartupPage = (props) => {
                                             <Row>
                                                 <Col xl={7} md={7} xs={12}>
                                                     <Row className="p-1 m-2">
-                                                        <h4 className="text-center font-serif" style={{color: '#FFFFFF'}}>
+                                                        <h4 className="text-center font-serif"
+                                                            style={{color: '#FFFFFF'}}>
                                                             Features
                                                         </h4>
                                                         <Col xl={6} md={6} xs={12}>

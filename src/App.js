@@ -4,6 +4,7 @@ import React, { Suspense, useEffect, useState, lazy } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import retina from "retinajs";
 import { AnimatePresence } from "framer-motion";
+// import CookieConsent from "react-cookie-consent";
 
 // Context
 import GlobalContext from "./Context/Context";
@@ -11,6 +12,7 @@ import GlobalContext from "./Context/Context";
 // Components
 import ScrollToTopButton from "./Components/ScrollToTop"
 import {ScrollToAnchor} from "./Functions/Utilities";
+import { HelmetProvider} from "react-helmet-async";
 
 // Home
 const UmelleHome = lazy(() => import("./Pages/Umelle/Home/Startup"))
@@ -70,6 +72,8 @@ function App() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location]);
 
+  const helmetContext = {};
+
   ScrollToAnchor();
   
   return (
@@ -85,6 +89,8 @@ function App() {
         setCustomModal,
       }}
     >
+      <HelmetProvider context={helmetContext}>
+      
       <div className="App" style={{ "--header-height": `${headerHeight}px` }}>
         {
           <main style={{ marginTop: headerHeight, marginBottom: footerHeight }}>
@@ -107,6 +113,7 @@ function App() {
           </main>
         }
       </div>
+      </HelmetProvider>
     </GlobalContext.Provider>
   )
 }
