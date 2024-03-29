@@ -22,6 +22,7 @@ import {
     TestimonialsCarouselData1
 } from "../../../Components/TestimonialCarousel/TestimonialsCarouselData";
 import TestimonialsCarousel01 from "../../../Components/TestimonialCarousel/TestimonialsCarousel01";
+import SEO from "../../../Components/Umelle/SEO";
 // import Team from "../../../Components/Team/Team";
 // import {TeamData01} from "../../../Components/Team/TeamData";
 
@@ -57,6 +58,14 @@ const Footer_Data = [FooterData[0], FooterData[1], FooterData[4], FooterData[3]]
 const HomeStartupPage = (props) => {
     ScrollToAnchor();
     return (<div style={props.style}>
+        {/*SEO Starts*/}
+        <SEO
+            title='Test React Helmet'
+            description='Beginner friendly page for learning React Helmet.'
+            name='UMELLE'
+            type='article'/>
+        {/*SEO Ends*/}
+        
         {/* Header Start */}
         <Header topSpace={{md: true}} type="reverse-scroll">
             <HeaderNav fluid="fluid" theme="dark" expand="lg"

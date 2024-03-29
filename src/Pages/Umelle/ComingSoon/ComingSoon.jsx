@@ -14,6 +14,7 @@ import {fadeInDown, fadeInUp, rotateInDown} from '../../../Functions/GlobalAnima
 import {resetForm, ScrollToAnchor, sendEmail} from "../../../Functions/Utilities";
 import { Input} from '../../../Components/Form/Form'
 import InViewPort from '../../../Components/InViewPort';
+import SEO from "../../../Components/Umelle/SEO";
 
 // Data
 const HamburgerMenu = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.HamburgerMenu})))
@@ -45,6 +46,14 @@ const SocialIconsData = [{
 const ComingSoon = (props) => {
     ScrollToAnchor();
     return (<div style={props.style}>
+        {/*SEO Starts*/}
+        <SEO
+            title='Test React Helmet'
+            description='Beginner friendly page for learning React Helmet.'
+            name='UMELLE'
+            type='article'/>
+        {/*SEO Ends*/}
+        
         {/* Header Start */}
         <Header topSpace={{md: true}} type="reverse-scroll">
             <HeaderNav fluid="fluid" theme="light" expand="lg"
