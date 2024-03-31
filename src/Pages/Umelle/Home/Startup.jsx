@@ -63,7 +63,7 @@ const HomeStartupPage = (props) => {
 
     const form1 = useRef(null)
     const recaptcha = useRef()
-
+    
     const [sent, setSent] = useState(true)
     const [message, setMessage] = useState('')
 
@@ -149,8 +149,9 @@ const HomeStartupPage = (props) => {
         </Header>
         {/* Header End */}
 
+        
         <SideButtons/>
-
+        
         {/* Section Start */}
         <StartupPageBannerSlider/>
         {/* Section End */}
