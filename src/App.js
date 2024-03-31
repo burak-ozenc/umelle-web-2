@@ -4,7 +4,6 @@ import React, { Suspense, useEffect, useState, lazy } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import retina from "retinajs";
 import { AnimatePresence } from "framer-motion";
-// import CookieConsent from "react-cookie-consent";
 
 // Context
 import GlobalContext from "./Context/Context";
@@ -75,8 +74,7 @@ function App() {
   const helmetContext = {};
 
   ScrollToAnchor();
-  // const domainGroupId = '4a2500a0-20d7-4f34-9f31-a701c8bb0b2f';
-  // const [hasCookieBot, setHasCookieBot] = useState(undefined);
+  
   
   return (
     <GlobalContext.Provider
@@ -92,7 +90,7 @@ function App() {
       }}
     >
       <HelmetProvider context={helmetContext}>
-        {/*<CookieBot domainGroupId={domainGroupId} />*/}
+        
       <div className="App" style={{ "--header-height": `${headerHeight}px` }}>
         {
           <main style={{ marginTop: headerHeight, marginBottom: footerHeight }}>
