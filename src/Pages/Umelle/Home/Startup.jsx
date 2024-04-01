@@ -24,6 +24,7 @@ import {ProgressBarData02} from "../../../Components/ProgressBar/ProgressBarData
 import {ContactFormStyle02Schema} from "../../../Components/Form/FormSchema";
 import ReCAPTCHA from "react-google-recaptcha";
 import * as emailjs from "@emailjs/browser";
+import { useLocation } from 'react-router-dom';
 
 
 const IconWithText = lazy(() => import('../../../Components/IconWithText/IconWithText'))
@@ -67,6 +68,17 @@ const HomeStartupPage = (props) => {
     const [sent, setSent] = useState(true)
     const [message, setMessage] = useState('')
     const navigate = useNavigate();
+    const location = useLocation();
+    useEffect(() => {
+        // Your existing useEffect code for handling hash, if any, remains here
+
+        // Google Analytics page view tracking
+        if (window.gtag) {
+            window.gtag('config', 'G-3XCZ8B0MR9', {
+                'page_path': location.pathname + location.search,
+            });
+        }
+    }, [location]); // This ensures the tracking code runs every time the route changes
 
     const sendEmail = (values) => {
         emailjs
