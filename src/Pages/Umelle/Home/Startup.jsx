@@ -476,7 +476,7 @@ const HomeStartupPage = (props) => {
                     :
                     (
                         <Container>
-                            <Row md={12} className="justify-center align-items-center text-center m-5 min-w-5">
+                            <Row md={12} className="justify-center text-black font-[2em] align-items-center text-center m-5 min-w-5">
                                 <p> {message}</p>
                             </Row>
 
