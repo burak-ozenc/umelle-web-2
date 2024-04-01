@@ -48,8 +48,8 @@ const ComingSoon = (props) => {
     return (<div style={props.style}>
         {/*SEO Starts*/}
         <SEO
-            title='Test React Helmet'
-            description='Beginner friendly page for learning React Helmet.'
+            title='Umelle Insurance Management System UI MS | Coming Soon'
+            description='A revolutionary software created to cater to all insurance providers and with unmatched efficiency. Coming soon!'
             name='UMELLE'
             type='article'/>
         {/*SEO Ends*/}

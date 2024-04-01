@@ -63,8 +63,8 @@ const HomeStartupPage = (props) => {
     return (<div style={props.style}>
         {/*SEO Starts*/}
         <SEO
-            title='Test React Helmet'
-            description='Beginner friendly page for learning React Helmet.'
+            title='Quality-Driven Custom Software that Meets Your Operational Goals'
+            description='Our team handles everything, optimizing costs, time, and scope. Our comprehensive cloud services cover assessment, migration, management, and optimization.'
             name='UMELLE'
             type='article'/>
         {/*SEO Ends*/}
