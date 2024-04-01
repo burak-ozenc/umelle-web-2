@@ -1,25 +1,20 @@
-import React, {lazy, useRef, useState} from 'react'
+import React, {lazy} from 'react'
 
 // Libraries
 import {Link} from 'react-router-dom';
 import {Col, Container, Navbar, Row} from "react-bootstrap";
 import { m} from 'framer-motion';
-import {Form, Formik} from 'formik';
 
 // Functions
 import {fadeIn} from '../../../Functions/GlobalAnimations';
 
 // Components
-import {resetForm, ScrollToAnchor} from "../../../Functions/Utilities";
-import {Input, TextArea} from '../../../Components/Form/Form'
+import { ScrollToAnchor} from "../../../Functions/Utilities";
 import FooterMenu, {Footer} from '../../../Components/Footers/Footer';
 import InViewPort from '../../../Components/InViewPort';
 
 // Data
 import FooterData from '../../../Components/Footers/FooterData';
-import {ContactFormStyle03Schema} from "../../../Components/Form/FormSchema";
-import * as emailjs from "@emailjs/browser";
-import ReCAPTCHA from "react-google-recaptcha";
 import SEO from "../../../Components/Umelle/SEO";
 
 const HamburgerMenu = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.HamburgerMenu})))
@@ -51,32 +46,9 @@ const SocialIconsData = [{
 
 const Footer_Data = [FooterData[0], FooterData[1], FooterData[4], FooterData[3]]
 
-const HomeStartupPage = (props) => {
+const ContactSuccess = (props) => {
     ScrollToAnchor();
-    const recaptcha = useRef()
-
-    const sendEmail = (values) => {
-        emailjs
-            .send(process.env.REACT_APP_EMAIL_SERVICE_ID, process.env.REACT_APP_EMAIL_CONTACT_TEMPLATE_ID, values, {
-                publicKey: process.env.REACT_APP_EMAIL_PUBLIC_KEY,
-            })
-            .then(
-                () => {
-                    console.log('SUCCESS!');
-                    setSent(false)
-                    setMessage("We received your application. Thanks for submitting.")
-                },
-                (error) => {
-                    console.log('FAILED...', error);
-                    setSent(false)
-                    setMessage("An error occured while submitting. Please send email to admin@umelle.com")
-                },
-            );
-    };
-
-    const [sent, setSent] = useState(true)
-    const [message, setMessage] = useState('')
-
+    
     return (<div style={props.style}>
         {/*SEO Starts*/}
         <SEO
@@ -198,4 +170,4 @@ const HomeStartupPage = (props) => {
     </div>)
 }
 
-export default HomeStartupPage
+export default ContactSuccess

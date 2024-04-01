@@ -1,7 +1,7 @@
 import React, {lazy, useRef, useState} from 'react'
 
 // Libraries
-import {Link} from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
 import {Col, Container, Navbar, Row, Tab, Tabs} from "react-bootstrap";
 import {AnimatePresence, m} from 'framer-motion';
 import {Form, Formik} from 'formik';
@@ -66,6 +66,7 @@ const HomeStartupPage = (props) => {
     
     const [sent, setSent] = useState(true)
     const [message, setMessage] = useState('')
+    const navigate = useNavigate();
 
     const sendEmail = (values) => {
         emailjs
@@ -75,8 +76,7 @@ const HomeStartupPage = (props) => {
             .then(
                 () => {
                     console.log('SUCCESS!');
-                    setSent(false)
-                    setMessage("We received your application. Thanks for submitting.")
+                    navigate(`/contact-success`);
                 },
                 (error) => {
                     console.log('FAILED...', error);
