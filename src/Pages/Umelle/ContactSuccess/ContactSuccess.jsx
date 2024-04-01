@@ -52,10 +52,10 @@ const ContactSuccess = (props) => {
     return (<div style={props.style}>
         {/*SEO Starts*/}
         <SEO
-            title='Test React Helmet'
-            description='Beginner friendly page for learning React Helmet.'
+            title='Contact Success '
+            description=''
             name='UMELLE'
-            type='article'/>
+            type=''/>
         {/*SEO Ends*/}
         
         {/* Header Start */}
