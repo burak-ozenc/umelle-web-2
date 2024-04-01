@@ -3,7 +3,7 @@ const TestimonialsCarouselData1 = [
         // firstname: "Alexander",
         // lastname: "harvard",
         // designation: "Creative director",
-        content: "We're keenly aware of the risk and expense associated with technical depthbt and we know how to ensure that quality isn't compromised by speed, without adding additional costs.",
+        content: "We're keenly aware of the risk and expense associated with technical depth and we know how to ensure that quality isn't compromised by speed, without adding additional costs.",
         list: [
             {
                 listMember : 'On Budget'

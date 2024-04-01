@@ -298,13 +298,6 @@ const HomeStartupPage = (props) => {
             </m.section>
             {/* Section End */}
 
-            
-
-            
-
-
-            
-
             {/*/!* Section Start *!/*/}
             {/*<section className="pt-[120px] lg:pt-[95px] md:pt-[80px] sm:pt-[50px] switch-tabs">*/}
             {/*    <div className="text-center">*/}
