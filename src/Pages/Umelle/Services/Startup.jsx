@@ -31,6 +31,8 @@ import Clients from "../../../Components/Clients/Clients";
 import IconWithText from "../../../Components/IconWithText/IconWithText";
 import {IconWithTextData_06} from "../../../Components/IconWithText/IconWithTextData";
 import SEO from "../../../Components/Umelle/SEO";
+import { useLocation } from 'react-router-dom';
+
 
 const HamburgerMenu = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.HamburgerMenu})))
 const Header = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Header})))
@@ -59,6 +61,18 @@ const SocialIconsData = [{
 const Footer_Data = [FooterData[0], FooterData[1], FooterData[4], FooterData[3]]
 
 const HomeStartupPage = (props) => {
+    const location = useLocation();
+
+    useEffect(() => {
+        // Your existing useEffect code for handling hash, if any, remains here
+
+        // Google Analytics page view tracking
+        if (window.gtag) {
+            window.gtag('config', 'G-3XCZ8B0MR9', {
+                'page_path': location.pathname + location.search,
+            });
+        }
+    }, [location]); // This ensures the tracking code runs every time the route changes
     ScrollToAnchor();
     return (<div style={props.style}>
         {/*SEO Starts*/}
@@ -68,6 +82,8 @@ const HomeStartupPage = (props) => {
             name='UMELLE'
             type='article'/>
         {/*SEO Ends*/}
+
+        
         
         {/* Header Start */}
         <Header topSpace={{md: true}} type="reverse-scroll">
