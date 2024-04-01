@@ -56,7 +56,6 @@ const HomeStartupPage = (props) => {
     const recaptcha = useRef()
 
     const sendEmail = (values) => {
-        console.log('values =>',values)
         emailjs
             .send(process.env.REACT_APP_EMAIL_SERVICE_ID, process.env.REACT_APP_EMAIL_CONTACT_TEMPLATE_ID, values, {
                 publicKey: process.env.REACT_APP_EMAIL_PUBLIC_KEY,
