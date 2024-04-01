@@ -1,4 +1,4 @@
-import React, {lazy} from 'react'
+import React, {lazy, useEffect} from 'react'
 
 // Libraries
 import {Link} from 'react-router-dom';
@@ -6,13 +6,14 @@ import {Col, Container, Navbar, Row} from "react-bootstrap";
 import * as Yup from 'yup';
 import {AnimatePresence, m} from 'framer-motion';
 import {Form, Formik} from 'formik';
+import ReactGA from 'react-ga4';
 
 // Components
 import {resetForm, ScrollToAnchor, sendEmail} from "../../../Functions/Utilities";
 import {Input} from '../../../Components/Form/Form'
 import FooterMenu, {Footer} from '../../../Components/Footers/Footer';
 import InViewPort from '../../../Components/InViewPort';
-import { Parallax } from 'react-scroll-parallax';
+import {Parallax} from 'react-scroll-parallax';
 
 // Data
 import FooterData from '../../../Components/Footers/FooterData';
@@ -72,6 +73,13 @@ const Footer_Data = [FooterData[0], FooterData[1], FooterData[4], FooterData[3]]
 
 const UmelleInsuranceManagementSuite = (props) => {
     ScrollToAnchor();
+    
+    useEffect(() => {
+        ReactGA.initialize(process.env.REACT_APP_GOOGLE_LANDING_MEASUREMENT_ID);
+        // Send pageview with a custom path
+        ReactGA.send({hitType: "pageview", page: "/aw-stg-landingp", title: "Landing Page"});
+    }, [])
+    
     return (<div style={props.style}>
         {/*SEO Starts*/}
         <SEO
@@ -80,7 +88,7 @@ const UmelleInsuranceManagementSuite = (props) => {
             name='UMELLE'
             type='article'/>
         {/*SEO Ends*/}
-        
+
         {/* Header Start */}
         <Header topSpace={{md: true}} type="reverse-scroll">
             <HeaderNav fluid="fluid" theme="light" expand="lg"
@@ -188,7 +196,7 @@ const UmelleInsuranceManagementSuite = (props) => {
                             INSURANCE AND OPERATIONS
                         </h1>
                         <h2 className="font-serif font-bold block text-[24px] leading-[48px] mb-[0px] text-white xs:text-base xs:mb-[10px] text-[1.4em]">
-                            Management Solution Aligned to your Business Needs 
+                            Management Solution Aligned to your Business Needs
                         </h2>
                         <br/>
                         <br/>
@@ -197,13 +205,13 @@ const UmelleInsuranceManagementSuite = (props) => {
                         </h2>
                         {/*<ScrollTo href='#' to="download" offset={0} delay={0} spy={true} smooth={true} duration={800}*/}
                         {/*          className="sm:contents">*/}
-                            <Link to="/solutions">
-                                <Buttons ariaLabel="button"
+                        <Link to="/solutions">
+                            <Buttons ariaLabel="button"
                                      href="/solutions"
                                      className="mx-[10px] font-medium font-serif uppercase rounded-none lg:mb-[15px] landscape:lg:mb-[15px] justify-center align-items-center mt-4"
                                      themeColor={["#fff", "#fff"]} size="lg" color="#4423C4"
                                      title="LEARN MORE"/>
-                            </Link>
+                        </Link>
                         {/*</ScrollTo>*/}
                     </Col>
                 </Row>
@@ -212,17 +220,21 @@ const UmelleInsuranceManagementSuite = (props) => {
         {/* Section End*/}
 
         {/* Section Start*/}
-        <m.section id="about" className="border-b border-mediumgray py-[55px] lg:py-[90px] sm:pb-[50px] md:pt-0 sm:pt-[50px]" {...fadeIn}>
+        <m.section id="about"
+                   className="border-b border-mediumgray py-[55px] lg:py-[90px] sm:pb-[50px] md:pt-0 sm:pt-[50px]" {...fadeIn}>
             <Container>
                 <Row className="justify-center">
                     <Col lg={8} sm={8} className="text-center mb-24 md:mb-16 sm:mb-8 mt-10">
-                        <span className="font-serif font-medium text-md text-gradient bg-gradient-to-r from-[#975ade] via-[#e05fc4] to-[#ff798e] tracking-[.5px] uppercase inline-block mb-[55px] sm:mb-[10px]">
+                        <span
+                            className="font-serif font-medium text-md text-gradient bg-gradient-to-r from-[#975ade] via-[#e05fc4] to-[#ff798e] tracking-[.5px] uppercase inline-block mb-[55px] sm:mb-[10px]">
                         WE CRAFTED A SOLUTION THAT NOT ONLY MEETS THESE NEEDS BUT EXCEEDS THEM, PROVIDING A BLEND OF FISCAL PERCISION AND SUPERIOR MEMBER SERVICES  
                         </span>
                         <h2 className="heading-4 font-serif font-light text-darkgray tracking-[-1px]">
-                        We understand the unique challenges and needs of pooled insurance providers                         </h2>
+                            We understand the unique challenges and needs of pooled insurance providers </h2>
                     </Col>
-                    <IconWithText grid="row-cols-1 row-cols-lg-3 row-cols-sm-2 text-center md:gap-y-[15px]" theme="icon-with-text-03" data={FeaturesData} animation={fadeIn} animationDelay={0.3} />
+                    <IconWithText grid="row-cols-1 row-cols-lg-3 row-cols-sm-2 text-center md:gap-y-[15px]"
+                                  theme="icon-with-text-03" data={FeaturesData} animation={fadeIn}
+                                  animationDelay={0.3}/>
                 </Row>
             </Container>
         </m.section>
@@ -261,58 +273,72 @@ const UmelleInsuranceManagementSuite = (props) => {
         {/* Section End */}
 
         {/* Section Start */}
-      <section className="py-[55px] lg:py-[95px] md:py-[70px] sm:py-[50px] relative overflow-visible">
-        <Container>
-          <Row className="items-center">
-            <m.div className="col-lg-6 relative mt-[70px] lg:mt-[30px] md:mb-[50px]" {...fadeIn}>
-              <div className="relative">
-              <Parallax className="lg-no-parallax w-[70%] rounded-[6px] lg:relative lg:!top-[-20px]" speed={0}>
-                  <div className="absolute top-0 left-0 w-full h-full rounded-[6px] opacity-50 bg-gradient-to-r from-purple-500 to-pink-500"></div>
-                  <img loading="lazy" src="/assets/img/landing_page_section_back-01.png" className="rounded-[6px] w-full" width="394.8" height="466.34" alt="our-process" />
-                </Parallax>
-                <Parallax className="lg-no-parallax flex rounded-[6px] justify-center items-center w-[70%] bg-no-repeat absolute bottom-0 right-[15px] lg:!top-0 lg:ml-auto" speed={20}>
-                  <img loading="lazy" src="/assets/img/landing_page_section_front-01.png" className="rounded-[6px] w-full" width="394.8" height="466.34" alt="our-process" />
-                </Parallax>
-                {/* <img src="/assets/img/landing_page_section_front-01.png" alt=""></img> */}
-              </div>
-            </m.div>
-            <m.div className="col-lg-5 offset-lg-1" {...{ ...fadeIn, transition: { delay: 0.5 } }}>
-              <div className="font-serif text-xmd font-medium mb-[30px]">
-                <span className="w-[50px] h-[1px] bg-fastblue inline-block align-middle mr-[20px]"></span>
-                <span className="text-gradient bg-gradient-to-r from-[#556fff] via-[#e05fc4] to-[#ff798e] inline-block">Is your off-the-shelf software falling short?</span></div>
-              <h5 className="font-serif text-darkgray font-medium mb-[30px] w-full">Are you overpaying for useless features or missing out on the functionalities you need?</h5>
-              <p className="w-[95%] mb-[35px]">We offer the perfect balance of cost and utility, by delivering specialized solutions and expertise tailored to your exact requirements, ensuring you receive focused advantages through our key strengths.</p>
-              <div className="xs:flex">
-                <Buttons ariaLabel="button"
-                    href="/solutions"
-                    className="mx-[10px] font-medium font-serif uppercase rounded-none lg:mb-[15px] landscape:lg:mb-[15px] justify-center align-items-center mt-4"
-                    themeColor={["#3844F7", "#902CFC"]} size="md" color="#fff"
-                    title="LEARN MORE"/></div>
-            </m.div>
-          </Row>
-        </Container>
-      </section>
-      {/* Section End */}
+        <section className="py-[55px] lg:py-[95px] md:py-[70px] sm:py-[50px] relative overflow-visible">
+            <Container>
+                <Row className="items-center">
+                    <m.div className="col-lg-6 relative mt-[70px] lg:mt-[30px] md:mb-[50px]" {...fadeIn}>
+                        <div className="relative">
+                            <Parallax className="lg-no-parallax w-[70%] rounded-[6px] lg:relative lg:!top-[-20px]"
+                                      speed={0}>
+                                <div
+                                    className="absolute top-0 left-0 w-full h-full rounded-[6px] opacity-50 bg-gradient-to-r from-purple-500 to-pink-500"></div>
+                                <img loading="lazy" src="/assets/img/landing_page_section_back-01.png"
+                                     className="rounded-[6px] w-full" width="394.8" height="466.34" alt="our-process"/>
+                            </Parallax>
+                            <Parallax
+                                className="lg-no-parallax flex rounded-[6px] justify-center items-center w-[70%] bg-no-repeat absolute bottom-0 right-[15px] lg:!top-0 lg:ml-auto"
+                                speed={20}>
+                                <img loading="lazy" src="/assets/img/landing_page_section_front-01.png"
+                                     className="rounded-[6px] w-full" width="394.8" height="466.34" alt="our-process"/>
+                            </Parallax>
+                            {/* <img src="/assets/img/landing_page_section_front-01.png" alt=""></img> */}
+                        </div>
+                    </m.div>
+                    <m.div className="col-lg-5 offset-lg-1" {...{...fadeIn, transition: {delay: 0.5}}}>
+                        <div className="font-serif text-xmd font-medium mb-[30px]">
+                            <span className="w-[50px] h-[1px] bg-fastblue inline-block align-middle mr-[20px]"></span>
+                            <span
+                                className="text-gradient bg-gradient-to-r from-[#556fff] via-[#e05fc4] to-[#ff798e] inline-block">Is your off-the-shelf software falling short?</span>
+                        </div>
+                        <h5 className="font-serif text-darkgray font-medium mb-[30px] w-full">Are you overpaying for
+                            useless features or missing out on the functionalities you need?</h5>
+                        <p className="w-[95%] mb-[35px]">We offer the perfect balance of cost and utility, by delivering
+                            specialized solutions and expertise tailored to your exact requirements, ensuring you
+                            receive focused advantages through our key strengths.</p>
+                        <div className="xs:flex">
+                            <Buttons ariaLabel="button"
+                                     href="/solutions"
+                                     className="mx-[10px] font-medium font-serif uppercase rounded-none lg:mb-[15px] landscape:lg:mb-[15px] justify-center align-items-center mt-4"
+                                     themeColor={["#3844F7", "#902CFC"]} size="md" color="#fff"
+                                     title="LEARN MORE"/></div>
+                    </m.div>
+                </Row>
+            </Container>
+        </section>
+        {/* Section End */}
 
         {/* Section Start */}
-        <m.section id="download" className="py-[160px] cover-background lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px]" style={{ backgroundImage: `url(/assets/img/BottomCTABanner_LandingPage_TESTT-01-01.png)` }} {...fadeIn}>
+        <m.section id="download"
+                   className="py-[160px] cover-background lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px]"
+                   style={{backgroundImage: `url(/assets/img/BottomCTABanner_LandingPage_TESTT-01-01.png)`}} {...fadeIn}>
             <Container>
                 <Row className="items-center">
                     <Col lg={8} md={8} className="col-12 text-left font-serif uppercase sm:mb-[30px] sm:text-center">
-                        <span className="font-medium text-md text-white bg-transparent tracking-[.5px] inline-block mb-[15px] sm:mb-[10px]">
+                        <span
+                            className="font-medium text-md text-white bg-transparent tracking-[.5px] inline-block mb-[15px] sm:mb-[10px]">
                             WE BUILD FOR YOUR BUSINESS NEEDS 
                         </span>
                         <h2 className="heading-4 font-semibold text-white -tracking-[1px] mb-0">
                             DISCOVER THE FULL SET OF FUNCTIONALITIES AND FEATURES
                         </h2>
                     </Col>
-                    <Col lg={{ offset: 1 }} md={3} className="flex sm:justify-center ps-lg-0">
+                    <Col lg={{offset: 1}} md={3} className="flex sm:justify-center ps-lg-0">
                         <Buttons ariaLabel="button"
                                  href="/solutions"
                                  className="mx-[10px] font-medium font-serif uppercase rounded-none lg:mb-[15px] landscape:lg:mb-[15px] justify-center align-items-center mt-4"
                                  themeColor={["#3844F7", "#902CFC"]} size="xl" color="#fff"
-                                 title="LEARN MORE" 
-                                 />
+                                 title="LEARN MORE"
+                        />
                     </Col>
                 </Row>
             </Container>
