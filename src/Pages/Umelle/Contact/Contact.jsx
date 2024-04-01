@@ -1,16 +1,16 @@
-import React, {lazy, useRef} from 'react'
+import React, {lazy, useRef, useState} from 'react'
 
 // Libraries
 import {Link} from 'react-router-dom';
 import {Col, Container, Navbar, Row} from "react-bootstrap";
-import {AnimatePresence, m} from 'framer-motion';
+import { m} from 'framer-motion';
 import {Form, Formik} from 'formik';
 
 // Functions
 import {fadeIn} from '../../../Functions/GlobalAnimations';
 
 // Components
-import {ScrollToAnchor} from "../../../Functions/Utilities";
+import {resetForm, ScrollToAnchor} from "../../../Functions/Utilities";
 import {Input, TextArea} from '../../../Components/Form/Form'
 import FooterMenu, {Footer} from '../../../Components/Footers/Footer';
 import InViewPort from '../../../Components/InViewPort';
@@ -31,7 +31,6 @@ const SearchBar = React.lazy(() => import("../../../Components/Header/Header").t
 const Buttons = lazy(() => import('../../../Components/Button/Buttons'))
 const Overlap = lazy(() => import('../../../Components/Overlap/Overlap'))
 const ReactCustomScrollbar = lazy(() => import("../../../Components/ReactCustomScrollbar"))
-const MessageBox = lazy(() => import('../../../Components/MessageBox/MessageBox'))
 const SocialIcons = lazy(() => import("../../../Components/SocialIcon/SocialIcons"))
 const SideButtons = lazy(() => import("../../../Components/SideButtons"))
 const StaticInstagram = lazy(() => import('../../../Components/Instagram/StaticInstagram'))
@@ -57,6 +56,7 @@ const HomeStartupPage = (props) => {
     const recaptcha = useRef()
 
     const sendEmail = (values) => {
+        console.log('values =>',values)
         emailjs
             .send(process.env.REACT_APP_EMAIL_SERVICE_ID, process.env.REACT_APP_EMAIL_CONTACT_TEMPLATE_ID, values, {
                 publicKey: process.env.REACT_APP_EMAIL_PUBLIC_KEY,
@@ -64,12 +64,19 @@ const HomeStartupPage = (props) => {
             .then(
                 () => {
                     console.log('SUCCESS!');
+                    setSent(false)
+                    setMessage("We received your application. Thanks for submitting.")
                 },
                 (error) => {
                     console.log('FAILED...', error);
+                    setSent(false)
+                    setMessage("An error occured while submitting. Please send email to admin@umelle.com")
                 },
             );
     };
+
+    const [sent, setSent] = useState(true)
+    const [message, setMessage] = useState('')
 
     return (<div style={props.style}>
         {/*SEO Starts*/}
@@ -151,7 +158,8 @@ const HomeStartupPage = (props) => {
             {/* Section Start */}
             <m.section
                 className="py-[160px] lg:py-[120px] md:py-[75px] sm:py-[50px] xs:py-[80px] xxs:py-[50px]"  {...fadeIn}>
-                <Container>
+                {sent ?
+                    (<Container>
                     <Row>
                         <Col className='mb-[6%]'>
                             <h6 className="font-serif text-gray-900 text-center font-medium mb-[25px] lg:mb-[15px]">
@@ -162,11 +170,16 @@ const HomeStartupPage = (props) => {
                     <Row className="justify-center">
                         <Col>
                             <Formik
-                                initialValues={{name: '', email: '', phone: ''}}
+                                initialValues={{name: '', email: '', phone: '', recaptcha:''}}
                                 validationSchema={ContactFormStyle03Schema}
                                 onSubmit={async (values, actions) => {
                                     actions.setSubmitting(true)
-                                    sendEmail(values)
+                                    if (values.recaptcha !== '') {
+                                        const response = await sendEmail(values)
+                                        response.status === "success" && resetForm(actions, recaptcha);
+                                    } else {
+                                        recaptcha.current.captcha.classList.add("error")
+                                    }
                                 }}
                             >
                                 {({isSubmitting, status, setFieldValue}) => (
@@ -208,29 +221,26 @@ const HomeStartupPage = (props) => {
                                             <Col className="text-right sm:text-center">
                                                 <Buttons ariaLabel="form button" type="submit"
                                                          className={`text-xs tracking-[1px] rounded-none py-[12px] px-[28px] uppercase${isSubmitting ? " loading" : ""}`}
-                                                         themeColor={["#556fff", "#ff798e"]} size="md" color="#fff"
+                                                         themeColor={["#3844F7", "#902CFC"]} size="md" color="#fff"
                                                          title="Send Message"/>
                                             </Col>
                                         </Row>
-
-                                        <AnimatePresence>
-                                            {status && <Row><Col xs={12}>
-                                                <m.div initial={{opacity: 0}} animate={{opacity: 1}}
-                                                       exit={{opacity: 0}}>
-                                                    <MessageBox className="mt-[20px] py-[10px]"
-                                                                theme="message-box01"
-                                                                variant="success"
-                                                                message="Your message has been sent successfully!"/>
-                                                </m.div>
-                                            </Col>
-                                            </Row>}
-                                        </AnimatePresence>
                                     </Form>
                                 )}
                             </Formik>
                         </Col>
                     </Row>
-                </Container>
+                </Container>)
+                    :
+                    (
+                        <Container>
+                            <Row md={12} className="justify-center align-items-center text-center m-5 min-w-5">
+                                <p> {message}</p>
+                            </Row>
+
+                        </Container>
+                    )
+                }
             </m.section>
             {/* Section End */}
 

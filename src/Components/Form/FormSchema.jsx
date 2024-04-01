@@ -15,8 +15,7 @@ export const ContactFormStyle02Schema = Yup.object().shape({
 
 export const ContactFormStyle03Schema = Yup.object().shape({
     name: Yup.string().required("Field is required."),
-    email: Yup.string().email("Invalid email.").required("Field is required."),
-    terms_condition: Yup.boolean().oneOf([true],'Message').required()
+    email: Yup.string().email("Invalid email.").required("Field is required.")
 });
 
 export const ContactFormStyle04Schema = Yup.object().shape({
