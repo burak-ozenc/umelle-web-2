@@ -157,89 +157,21 @@ const HomeStartupPage = (props) => {
             {/* Section Start */}
             <m.section
                 className="py-[160px] lg:py-[120px] md:py-[75px] sm:py-[50px] xs:py-[80px] xxs:py-[50px]"  {...fadeIn}>
-                {sent ?
-                    (<Container>
-                    <Row>
+                <Row>
                         <Col className='mb-[6%]'>
                             <h6 className="font-serif text-gray-900 text-center font-medium mb-[25px] lg:mb-[15px]">
-                                Let's discuss your project
+                            Thank you for contacting us! We will get back to you.
                             </h6>
                         </Col>
-                    </Row>
-                    <Row className="justify-center">
-                        <Col xl={12} lg={12} md={12}>
-                            <Formik
-                                initialValues={{name: '', email: '', phone: '', recaptcha:''}}
-                                validationSchema={ContactFormStyle03Schema}
-                                onSubmit={async (values, actions) => {
-                                    actions.setSubmitting(true)
-                                    if (values.recaptcha !== '') {
-                                        const response = await sendEmail(values)
-                                        response.status === "success" && resetForm(actions, recaptcha);
-                                    } else {
-                                        recaptcha.current.captcha.classList.add("error")
-                                    }
-                                }}
-                            >
-                                {({isSubmitting, status, setFieldValue}) => (
-                                    <Form>
-                                        <Row className="row-cols-1 row-cols-md-2">
-                                            <Col className="mb-16 lg:mb-[25px] sm:mb-0">
-                                                <Input showErrorMsg={false} type="text" name="name"
-                                                       className="py-[15px] px-[20px] text-md w-full border-[1px] border-solid border-[#dfdfdf]"
-                                                       labelClass="mb-[25px]" placeholder="Your name"/>
-                                                <Input showErrorMsg={false} type="text" name="company"
-                                                       className="py-[15px] px-[20px] text-md w-full border-[1px] border-solid border-[#dfdfdf]"
-                                                       labelClass="mb-[25px]" placeholder="Your company"/>
-                                                <Input showErrorMsg={false} type="email" name="email"
-                                                       className="py-[15px] px-[20px] w-full text-md border-[1px] border-solid border-[#dfdfdf]"
-                                                       labelClass="mb-[25px]" placeholder="Your email address"/>
-                                                <Input showErrorMsg={false} type="tel" name="phone"
-                                                       className="py-[15px] px-[20px] w-full text-md border-[1px] border-solid border-[#dfdfdf]"
-                                                       labelClass="sm:mb-[25px]" placeholder="Your position"/>
-                                            </Col>
-                                            <Col className="mb-16 lg:mb-[25px]">
-                                                <TextArea
-                                                    className="border-[1px] border-solid border-[#dfdfdf] w-full h-full py-[15px] px-[20px] text-md resize-none"
-                                                    name="comment" labelClass="h-full sm:h-[200px]"
-                                                    placeholder="Your message"></TextArea>
-                                            </Col>
-                                            <Col>
-                                                {process.env.REACT_APP_GRECAPTCHA_API_KEY && (
-                                                    <ReCAPTCHA
-                                                        ref={recaptcha}
-                                                        className="mb-[35px]"
-                                                        sitekey={process.env.REACT_APP_GRECAPTCHA_API_KEY}
-                                                        onChange={(response) => {
-                                                            setFieldValue("recaptcha", response)
-                                                        }}
-                                                    />
-                                                )}
-                                            </Col>
-
-                                            <Col className="text-right sm:text-center">
-                                                <Buttons ariaLabel="form button" type="submit"
-                                                         className={`text-xs tracking-[1px] rounded-none py-[12px] px-[28px] uppercase${isSubmitting ? " loading" : ""}`}
-                                                         themeColor={["#3844F7", "#902CFC"]} size="md" color="#fff"
-                                                         title="Send Message"/>
-                                            </Col>
-                                        </Row>
-                                    </Form>
-                                )}
-                            </Formik>
+                        <Col className="text-right sm:text-center">
+                        <Link to="/Home">
+                                    <Buttons ariaLabel="button"
+                                             className="mx-[10px] font-medium font-serif uppercase rounded-none lg:mb-[15px] landscape:lg:mb-[15px] justify-center align-items-center mt-4"
+                                             themeColor={["#3844F7", "#902CFC"]} size="md" color="#fff"
+                                             title="Back to Home Page"/>
+                                </Link>
                         </Col>
-                    </Row>
-                </Container>)
-                    :
-                    (
-                        <Container>
-                            <Row md={12} className="justify-center align-items-center text-center m-5 min-w-5">
-                            <p style={{ color: 'black' }}> {message}</p>
-                            </Row>
-
-                        </Container>
-                    )
-                }
+                </Row>
             </m.section>
             {/* Section End */}
 

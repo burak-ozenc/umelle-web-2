@@ -387,6 +387,7 @@ const HomeStartupPage = (props) => {
                 </Container>
             </m.section>
             {/* Section End */}
+            
             {/* Section Start */}
             <section
                 className="py-[90px] lg:py-[120px] md:py-[80px] xs:py-[50px] bg-transparent cover-background relative cover-background" {...fadeIn}
