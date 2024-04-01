@@ -29,6 +29,7 @@
     "react-countdown": "^2.3.2",
     "react-countup": "^6.2.0",
     "react-dom": "^18.1.0",
+    "react-ga4": "^2.1.0",
     "react-google-recaptcha": "^2.1.0",
     "react-helmet-async": "^2.0.4",
     "react-in-viewport": "^1.0.0-alpha.30",

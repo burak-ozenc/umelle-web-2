@@ -135,7 +135,7 @@ const HomeStartupPage = (props) => {
             const hash = hashParts.slice(-1)[0];
 
 
-            function searchByKey(array, id) {
+            function searchByKey(array, id) {   
                 for (let i = 0; i < array.length; i++) {
                     if (array[i].id === id) {
                         return array[i].key;
@@ -144,9 +144,7 @@ const HomeStartupPage = (props) => {
                 // Return null if id is not found
                 return 0;
             }
-
-            console.log('hash ', hash)
-            console.log('key ', searchByKey(AccordionDataSolutions, hash))
+            
             setAnchorKey(searchByKey(AccordionDataSolutions, hash))
             // document.querySelector(`#${hash}`).scrollIntoView();
         }
