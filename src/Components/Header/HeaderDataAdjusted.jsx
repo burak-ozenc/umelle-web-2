@@ -100,7 +100,7 @@ const HeaderDataAdjusted = [
             },
             {
                 title: 'Contact Success',
-                link: '/ContactSuccess'
+                link: '/contact-success'
             }
         ]
     }    
