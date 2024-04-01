@@ -30,7 +30,6 @@ import ReCAPTCHA from "react-google-recaptcha";
 import {AccordionDataSolutions} from "../../../Components/Accordion/AccordionData";
 import * as emailjs from "@emailjs/browser";
 import SEO from "../../../Components/Umelle/SEO";
-import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
 
