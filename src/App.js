@@ -21,6 +21,7 @@ const UmelleCompany = lazy(() => import("./Pages/Umelle/Company/Startup"))
 const Contact = lazy(() => import("./Pages/Umelle/Contact/Contact"))
 const ComingSoon = lazy(() => import("./Pages/Umelle/ComingSoon/ComingSoon"))
 const UmelleInsurance = lazy(() => import("./Pages/Umelle/UmelleInsurance/UmelleInsurance"))
+const ContactSuccess = lazy(() => import("./Pages/Umelle/ContactSuccess/ContactSuccess"))
 
 function App() {
   const [headerHeight, setHeaderHeight] = useState(0);
