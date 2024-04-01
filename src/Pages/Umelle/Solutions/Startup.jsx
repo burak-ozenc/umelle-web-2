@@ -647,7 +647,7 @@ const HomeStartupPage = (props) => {
                     (
                         <Container>
                             <Row md={12} className="justify-center align-items-center text-center m-5 min-w-5">
-                                <p> {message}</p>
+                            <p style={{ color: 'white' }}> {message}</p>
                             </Row>
 
                         </Container>
