@@ -75,19 +75,6 @@ function App() {
 
   ScrollToAnchor();
 
-  const handleDeclineCookie = () => {
-    //remove google analytics cookies
-    Cookies.remove("_ga");
-    Cookies.remove("_gat");
-    Cookies.remove("_gid");
-  };
-
-  useEffect(() => {
-    const isConsent = getCookieConsentValue();
-    if (isConsent === "true") {
-      handleAcceptCookie();
-    }
-  }, []);
   
   return (
     <GlobalContext.Provider
