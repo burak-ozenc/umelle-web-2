@@ -33,6 +33,7 @@ import {IconWithTextData_06} from "../../../Components/IconWithText/IconWithText
 import SEO from "../../../Components/Umelle/SEO";
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import {IconWithTextData_02} from "../../../Components/IconWithText/IconWithTextData";
 
 const HamburgerMenu = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.HamburgerMenu})))
 const Header = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Header})))
@@ -273,8 +274,33 @@ const HomeStartupPage = (props) => {
             {/* Section End */}
 
             {/* Section Start */}
+            <section className="bg-lightgray py-[55px] lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px]">
+                <Container>
+                    <Row>
+                        <Col className="mb-[55px]">
+                            <h6 className="font-serif text-dark text-center font-medium mb-[0px] lg:mb-[15px]">
+                                Transforming Challenges into Opportunities
+                            </h6>
+                        </Col>
+                    </Row>
+                    <Row className="justify-center">
+                        <Col xs={12} lg={12} md={9}>
+                            <IconWithText
+                                grid="row-cols-1 row-cols-lg-2 gap-y-[30px] xs:gap-y-[15px]"
+                                theme="icon-with-text-02"
+                                data={IconWithTextData_02}
+                                animation={fadeIn}
+                                animationDelay={0.2}
+                            />
+                        </Col>
+                    </Row>
+                </Container>
+            </section>
+            {/* Section End */}
+
+            {/* Section Start */}
             <m.section
-                className="py-[60px] bg-lightgray lg:py-[100px] md:py-[95px] sm:py-[80px] xs:py-[0px]"  {...fadeIn}>
+                className="py-[60px] bg-white lg:py-[100px] md:py-[95px] sm:py-[80px] xs:py-[0px]"  {...fadeIn}>
                 <Container>
                     <Row className="justify-center">
                         <Col md={12} className="text-center mb-[6%]">
@@ -412,7 +438,6 @@ const HomeStartupPage = (props) => {
                 </Container>
             </m.section>
             {/* Section End */}
-
 
             {/* CTA Banner Section Start */}
             <section className="lg:pt-[100px] md:pt-[10px] sm:pt-[50px] ">
