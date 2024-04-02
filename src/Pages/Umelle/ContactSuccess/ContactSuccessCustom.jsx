@@ -136,8 +136,9 @@ const ContactSuccessCustom = (props) => {
                             </h6>
                         </Col>
                         <Col className="text-right sm:text-center">
-                        <Link to="/Home">
+                        <Link to="/">
                                     <Buttons ariaLabel="button"
+                                             href="/"
                                              className="mx-[10px] font-medium font-serif uppercase rounded-none lg:mb-[15px] landscape:lg:mb-[15px] justify-center align-items-center mt-4"
                                              themeColor={["#3844F7", "#902CFC"]} size="md" color="#fff"
                                              title="Back to Home Page"/>
