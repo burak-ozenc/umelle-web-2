@@ -30,6 +30,7 @@ import {AccordionDataSolutions} from "../../../Components/Accordion/AccordionDat
 import * as emailjs from "@emailjs/browser";
 import SEO from "../../../Components/Umelle/SEO";
 import { useLocation } from 'react-router-dom';
+import {Parallax} from 'react-scroll-parallax';
 
 
 const HamburgerMenu = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.HamburgerMenu})))
@@ -342,7 +343,7 @@ const HomeStartupPage = (props) => {
         <InViewPort>
 
             {/* Info Banner Style 07 */}
-            <section className="bg-lightgray lg:py-[5px] md:py-[75px]  xs:py-[50px]">
+            {/* <section className="bg-lightgray lg:py-[5px] md:py-[75px]  xs:py-[50px]">
                 <Container>
                     <Row className="justify-center">
                         <Col md={12} className="text-center mt-5 mb-[3%]">
@@ -373,8 +374,52 @@ const HomeStartupPage = (props) => {
                         </m.div>
                     </Row>
                 </Container>
-            </section>
+            </section> */}
             {/* Info Banner Style 07 */}
+
+            {/* Section Start */}
+        <section className="py-[55px] lg:py-[95px] md:py-[70px] sm:py-[50px] relative overflow-visible">
+            <Container>
+                <Row className="items-center">
+                    <m.div className="col-lg-6 relative mt-[70px] lg:mt-[30px] md:mb-[50px]" {...fadeIn}>
+                        <div className="relative">
+                            <Parallax className="lg-no-parallax w-[70%] rounded-[6px] lg:relative lg:!top-[-20px]"
+                                      speed={0}>
+                                <div
+                                    className="absolute top-0 left-0 w-full h-full rounded-[6px] opacity-50 bg-gradient-to-r from-purple-500 to-pink-500"></div>
+                                <img loading="lazy" src="/assets/img/landing_page_section_back-01.png"
+                                     className="rounded-[6px] w-full" width="394.8" height="466.34" alt="our-process"/>
+                            </Parallax>
+                            <Parallax
+                                className="lg-no-parallax flex rounded-[6px] justify-center items-center w-[70%] bg-no-repeat absolute bottom-0 right-[15px] lg:!top-0 lg:ml-auto"
+                                speed={20}>
+                                <img loading="lazy" src="/assets/img/landing_page_section_front-01.png"
+                                     className="rounded-[6px] w-full" width="394.8" height="466.34" alt="our-process"/>
+                            </Parallax>
+                            {/* <img src="/assets/img/landing_page_section_front-01.png" alt=""></img> */}
+                        </div>
+                    </m.div>
+                    <m.div className="col-lg-5 offset-lg-1" {...{...fadeIn, transition: {delay: 0.5}}}>
+                        <div className="font-serif text-xmd font-medium mb-[30px]">
+                            <span className="w-[50px] h-[1px] bg-fastblue inline-block align-middle mr-[20px]"></span>
+                            <span
+                                className="text-gradient bg-gradient-to-r from-[#556fff] via-[#e05fc4] to-[#ff798e] inline-block">Customization at Its Core</span>
+                        </div>
+                        <h5 className="font-serif text-darkgray font-medium mb-[30px] w-full">Empowering Pooled Insurance with Tailor-Made Solutions</h5>
+                        <p className="w-[95%] mb-[35px]">What truly sets our solution apart is our custom architecture. 
+                        Recognizing that no two insurance providers are the same, 
+                        we offer the ultimate flexibility: you can add features and functions based on your business needs and ensure your program fits nicely with your business requirements.</p>
+                        <div className="xs:flex">
+                            <Buttons ariaLabel="button"
+                                     href="/solutions"
+                                     className="mx-[10px] font-medium font-serif uppercase rounded-none lg:mb-[15px] landscape:lg:mb-[15px] justify-center align-items-center mt-4"
+                                     themeColor={["#3844F7", "#902CFC"]} size="md" color="#fff"
+                                     title="LEARN MORE"/></div>
+                    </m.div>
+                </Row>
+            </Container>
+        </section>
+        {/* Section End */}
 
             {/* Section Start */}
             <m.section
@@ -900,11 +945,16 @@ const HomeStartupPage = (props) => {
             {/* Section End */}
 
             {/* CTA Banner Section Start */}
-            <section className="lg:pt-[160px] md:pt-[10px] sm:pt-[50px] ">
+            <section className="lg:pt-[160px] md:pt-[10px] sm:pt-[50px]">
                 <Container fluid>
-                    <Row style={{backgroundImage: `url('/assets/img/Untitled-6-01.png')`}}
+                    <Row style={{backgroundImage: `url('/assets/img/HomePage_CTRBanner_LV-01.png')`}}
                          className="cover-background relative cover-background lg:py-[90px] md:py-[75px] sm:py-[50px]">
                         <Col xs={12} className="text-center my-[5rem] md:my-[7.5rem]">
+                            <div className="justify-center align-items-center text-center d-flex flex-col">
+                                <h6 className="text-center bg-white m-3 w-[300px]">
+                                Streamline Your Operations Now
+                                </h6>
+                            </div>
                             <Buttons ariaLabel="button"
                                      href="/contact"
                                      className="mx-[10px] font-medium font-serif uppercase rounded-none lg:mb-[15px] landscape:lg:mb-[15px] justify-center align-items-center"
