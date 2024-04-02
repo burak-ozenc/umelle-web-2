@@ -271,13 +271,16 @@ const HomeStartupPage = (props) => {
                         className="full-screen  pt-20 md:h-[650px] sm:h-[350px] xs:h-[450px] align-items-center justify-center">
                         <Col xs={12} lg={6} md={6}
                              className="justify-center items-center my-0 mx-auto relative">
-                            <h6 className="font-serif block text-[42px] leading-[48px] mb-[35px] font-light text-black xs:text-base xs:mb-[40px]">
+                            <h6 className="font-serif block leading-[48px] mb-[35px] font-light text-black xs:text-base xs:mb-[40px]"
+                                style={{fontSize:'2.2em'}}
+                            >
                                 Tailor-Made Insurance Data Software Designed Around Your Business Needs
                             </h6>
                             <m.span initial={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)'}}
                                     animate={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)'}}
                                     transition={{duration: 0.5, delay: 0.8, ease: "easeIn"}}
-                                    className="font-serif block text-[19px] leading-[28px] mb-[35px] font-light text-black xs:text-base xs:mb-[20px]">
+                                    style={{fontSize:'1.8em'}}
+                                    className="font-serif block leading-[28px] mb-[35px] font-light text-black xs:text-base xs:mb-[20px]">
                                 The Premier Choice for Pooled Insurance Providers
                             </m.span>
                         </Col>
