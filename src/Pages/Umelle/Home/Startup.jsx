@@ -89,7 +89,7 @@ const HomeStartupPage = (props) => {
             .then(
                 () => {
                     console.log('SUCCESS!');
-                    navigate(`/contact-success`);
+                    navigate(`/contact-success-custom`);
                 },
                 (error) => {
                     console.log('FAILED...', error);
