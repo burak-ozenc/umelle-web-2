@@ -82,8 +82,6 @@ const HomeStartupPage = (props) => {
             name='UMELLE'
             type='article'/>
         {/*SEO Ends*/}
-
-        
         
         {/* Header Start */}
         <Header topSpace={{md: true}} type="reverse-scroll">
@@ -419,9 +417,14 @@ const HomeStartupPage = (props) => {
             {/* CTA Banner Section Start */}
             <section className="lg:pt-[100px] md:pt-[10px] sm:pt-[50px] ">
                 <Container fluid>
-                    <Row style={{backgroundImage: `url('/assets/img/Untitled-6-01.png')`}}
+                    <Row style={{backgroundImage: `url('/assets/img/ServicesPage_CTRBanner_LV-01-01-01.png')`}}
                          className="cover-background relative cover-background lg:py-[90px] md:py-[75px] sm:py-[50px]">
                         <Col xs={12} className="text-center my-[5rem] md:my-[7.5rem]">
+                        <div className="justify-center align-items-center text-center d-flex flex-col">
+                                <h6 className="text-center bg-white m-3 w-[300px]">
+                                Connect with Our Experts and Get a Free Quote
+                                </h6>
+                            </div>
                             <Buttons ariaLabel="button"
                                      href="/contact"
                                      className="mx-[10px] font-medium font-serif uppercase rounded-none lg:mb-[15px] landscape:lg:mb-[15px] justify-center align-items-center"

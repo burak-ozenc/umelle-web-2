@@ -230,7 +230,7 @@ const HomeStartupPage = (props) => {
                     <Row>
                         <Col className="mb-[4%]">
                             <h6 className="font-serif text-darkgray text-center font-medium mb-[25px] lg:mb-[15px]">
-                                Our Commitment? Your success, powered by our software.
+                                Our Commitment? Your success, powered by our software
                             </h6>
                         </Col>
                     </Row>
@@ -238,7 +238,7 @@ const HomeStartupPage = (props) => {
                         <Col lg={6} xs={12} className="px-[15px] md:mb-[15px]">
                             <div className="bg-transparent  sm:p-[30px]">
                                 <p className="text-darkgray text-[1.2em] text-center lg:mb-[45px]">
-                                    Transforming Challenges Into Opportunities:
+                                    Transforming Challenges Into Opportunities
                                     <br/>
                                     <br/>
                                     Dedicated to bridging businesses with technological excellence, our mission is to deliver intuitive resource management software solutions that cater to both SMEs and enterprises, simplifying challenges into opportunities.
@@ -248,7 +248,7 @@ const HomeStartupPage = (props) => {
                         <Col lg={6}  xs={12} className="px-[15px] md:mb-[15px]">
                             <div className="text-darkgray text-[1.2em] text-center sm:p-[34px]">
                                 <p>
-                                    Empowering Growth Through Solutions:
+                                    Empowering Growth Through Solutions
                                     <br/>
                                     <br/>
                                     Our vision is to empower businesses worldwide by turning their challenges into robust solutions, leveraging our diverse capabilities to serve the evolving needs of both SMEs and enterprises.
@@ -277,7 +277,7 @@ const HomeStartupPage = (props) => {
                             <div className="bg-transparent sm:p-[30px]">
                                 <h6 className="text-black lg:mb-[45px]">
                                     Empowering Businesses and Enriching Lives: Where Heart Meets Software for
-                                    Transformational Growth.
+                                    Transformational Growth
                                 </h6>
                             </div>
                         </Col>
