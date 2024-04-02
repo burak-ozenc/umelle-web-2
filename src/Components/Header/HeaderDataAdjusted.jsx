@@ -97,10 +97,6 @@ const HeaderDataAdjusted = [
             {
                 title: 'Blog',
                 link: '/coming-soon'
-            },
-            {
-                title: 'Contact Success',
-                link: '/contact-success'
             }
         ]
     }    

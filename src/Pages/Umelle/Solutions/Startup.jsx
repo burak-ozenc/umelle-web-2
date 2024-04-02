@@ -1,9 +1,8 @@
 import React, {lazy, useEffect, useRef, useState} from 'react'
 
 // Libraries
-import {Link} from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
 import {Accordion, Col, Container, Navbar, Row, Tab, Tabs} from "react-bootstrap";
-import * as Yup from 'yup';
 import {AnimatePresence, domMax, LazyMotion, m} from 'framer-motion';
 import {Form, Formik} from 'formik';
 
@@ -65,7 +64,8 @@ const Footer_Data = [FooterData[0], FooterData[1], FooterData[4], FooterData[3]]
 
 const HomeStartupPage = (props) => {
     const location = useLocation();
-
+    const navigate = useNavigate();
+    
     useEffect(() => {
         // Your existing useEffect code for handling hash, if any, remains here
 
@@ -95,8 +95,7 @@ const HomeStartupPage = (props) => {
             .then(
                 () => {
                     console.log('SUCCESS!');
-                    setSent(false)
-                    setMessage("We received your application. Thanks for submitting.")
+                    navigate(`/contact-success-custom`);
                 },
                 (error) => {
                     console.log('FAILED...', error);
@@ -105,7 +104,30 @@ const HomeStartupPage = (props) => {
                 },
             );
     };
+    
+    
+    
+    // const sendEmail = (values) => {
+    //     emailjs
+    //         .send(process.env.REACT_APP_EMAIL_SERVICE_ID, process.env.REACT_APP_EMAIL_FEATURES_TEMPLATE_ID, values, {
+    //             publicKey: process.env.REACT_APP_EMAIL_PUBLIC_KEY,
+    //         })
+    //         .then(
+    //             () => {
+    //                 console.log('SUCCESS!');
+    //                 setSent(false)
+    //                 setMessage("We received your application. Thanks for submitting.")
+    //             },
+    //             (error) => {
+    //                 console.log('FAILED...', error);
+    //                 setSent(false)
+    //                 setMessage("An error occured while submitting. Please send email to admin@umelle.com")
+    //             },
+    //         );
+    // };
 
+    
+    
         // const hashParts = window.location.hash.split('#');
     // if (hashParts.length > 1) {
     //     const hash = hashParts.slice(-1)[0];
@@ -225,39 +247,7 @@ const HomeStartupPage = (props) => {
                                         </div>
                                         <p className="w-[70%] mb-12 text-darkgray leading-[26px] text-lg font-serif mx-auto inline-block">Get
                                             latest update for our trusted applications</p>
-                                        <Formik
-                                            initialValues={{email: ''}}
-                                            validationSchema={Yup.object().shape({email: Yup.string().email("Invalid email.").required("Field is required."),})}
-                                            onSubmit={async (values, actions) => {
-                                                actions.setSubmitting(true)
-                                                const response = await sendEmail(values)
-                                                response.status === "success" && resetForm(actions)
-                                            }}
-                                        >
-                                            {({isSubmitting, status}) => (
-                                                <div className="relative subscribe-style-05 mb-20">
-                                                    <Form className="relative">
-                                                        <Input showErrorMsg={false} type="email" name="email"
-                                                               className="border-[1px] medium-input rounded-[5px] border-solid border-[#dfdfdf]"
-                                                               placeholder="Enter your email address"/>
-                                                        <button aria-label="Subscribe" type="submit"
-                                                                className={`text-xs leading-[18px] py-[12px] px-[28px] uppercase xs:text-center${isSubmitting ? " loading" : ""}`}>
-                                                            <i className="far fa-envelope text-basecolor text-sm leading-none mr-[10px] xs:mr-0"></i>Subscribe
-                                                        </button>
-                                                    </Form>
-                                                    <AnimatePresence>
-                                                        {status &&
-                                                            <m.div initial={{opacity: 0}} animate={{opacity: 1}}
-                                                                   exit={{opacity: 0}}
-                                                                   className="mt-[25px] top-[115%] left-0 w-full">
-                                                                <MessageBox
-                                                                    className="rounded-[4px] text-md py-[10px] px-[22px] z-10"
-                                                                    theme="message-box01" variant="success"
-                                                                    message="Your message has been sent successfully subscribed to our email list!"/>
-                                                            </m.div>}
-                                                    </AnimatePresence>
-                                                </div>)}
-                                        </Formik>
+                                        
                                         <SocialIcons theme="social-icon-style-05" size="sm" iconColor="dark"
                                                      data={SocialIconsData}/>
                                     </div>
@@ -399,7 +389,7 @@ const HomeStartupPage = (props) => {
                 </Container>
             </m.section>
             {/* Section End */}
-            
+
             {/* Section Start */}
             <section
                 className="py-[90px] lg:py-[120px] md:py-[80px] xs:py-[50px] bg-transparent cover-background relative cover-background" {...fadeIn}
@@ -441,7 +431,8 @@ const HomeStartupPage = (props) => {
                                             <Row>
                                                 <Col xl={7} md={7} xs={12}>
                                                     <Row className="p-1 m-2">
-                                                        <h4 className="text-center font-serif" style={{color: '#FFFFFF'}}>
+                                                        <h4 className="text-center font-serif"
+                                                            style={{color: '#FFFFFF'}}>
                                                             Features
                                                         </h4>
                                                         <Col xl={6} md={6} xs={12}>
@@ -659,8 +650,8 @@ const HomeStartupPage = (props) => {
                     :
                     (
                         <Container>
-                            <Row md={12} className="justify-center align-items-center text-center m-5 min-w-5">
-                            <p style={{ color: 'white' }}> {message}</p>
+                            <Row md={12} className="justify-center text-black font-[2em] align-items-center text-center m-5 min-w-5">
+                                <p style={{ color: 'white' }}> {message}</p>
                             </Row>
 
                         </Container>

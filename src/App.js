@@ -22,6 +22,7 @@ const Contact = lazy(() => import("./Pages/Umelle/Contact/Contact"))
 const ComingSoon = lazy(() => import("./Pages/Umelle/ComingSoon/ComingSoon"))
 const UmelleInsurance = lazy(() => import("./Pages/Umelle/UmelleInsurance/UmelleInsurance"))
 const ContactSuccess = lazy(() => import("./Pages/Umelle/ContactSuccess/ContactSuccess"))
+const ContactSuccessCustom = lazy(() => import("./Pages/Umelle/ContactSuccess/ContactSuccessCustom"))
 
 function App() {
   const [headerHeight, setHeaderHeight] = useState(0);
@@ -109,6 +110,7 @@ function App() {
                   <Route path="/umelle-insurance" element={<UmelleInsurance style={{ "--base-color": "#27ae60" }} />} />
                   <Route path="/aw-stg-landingp" element={<UmelleInsurance style={{ "--base-color": "#27ae60" }} />} />
                   <Route path="/contact-success" element={<ContactSuccess style={{ "--base-color": "#27ae60" }} />} />
+                  <Route path="/contact-success-custom" element={<ContactSuccessCustom style={{ "--base-color": "#27ae60" }} />} />
                 </Routes>
               </Suspense>
             </AnimatePresence>
