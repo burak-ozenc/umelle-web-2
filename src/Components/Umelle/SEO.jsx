@@ -21,7 +21,6 @@ const SEO = ({title, description, name, type}) => {
             <meta name="twitter:description" content={description}/>
             { /* End Twitter tags */}
         </Helmet>
-        )
     </div>)
 }
 
