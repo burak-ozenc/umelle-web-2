@@ -421,14 +421,14 @@ const HomeStartupPage = (props) => {
                          className="cover-background relative cover-background lg:py-[90px] md:py-[75px] sm:py-[50px]">
                         <Col xs={12} className="text-center my-[5rem] md:my-[7.5rem]">
                         <div className="justify-center align-items-center text-center d-flex flex-col">
-                                <h6 className="text-center bg-white m-3 w-[300px]">
+                                <h6 className="text-center bg-trasparent text-black m-3 w-[300px]">
                                 Connect with Our Experts and Get a Free Quote
                                 </h6>
                             </div>
                             <Buttons ariaLabel="button"
                                      href="/contact"
                                      className="mx-[10px] font-medium font-serif uppercase rounded-none lg:mb-[15px] landscape:lg:mb-[15px] justify-center align-items-center"
-                                     themeColor={["#556fff", "#ff798e"]} size="md" color="#fff"
+                                     themeColor={["#3844F7", "#902CFC"]} size="md" color="#fff"
                                      title="Get a Quote"/>
                         </Col>
                     </Row>
