@@ -532,7 +532,7 @@ const HomeStartupPage = (props) => {
                          className="cover-background relative cover-background lg:py-[90px] md:py-[75px] sm:py-[50px] text-center">
                         <Col xs={12} className="text-center my-[5rem] md:my-[7.5rem]">
                             <div className="justify-center align-items-center text-center d-flex flex-col">
-                                <h6 className="text-center bg-white m-3 w-[300px]">
+                                <h6 className="bg-transparent text-center text-black m-3 w-[300px]">
                                     Let's discuss your project
                                 </h6>
                                 <Link to="/contact">

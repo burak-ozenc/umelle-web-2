@@ -409,12 +409,6 @@ const HomeStartupPage = (props) => {
                         <p className="w-[95%] mb-[35px]">What truly sets our solution apart is our custom architecture. 
                         Recognizing that no two insurance providers are the same, 
                         we offer the ultimate flexibility: you can add features and functions based on your business needs and ensure your program fits nicely with your business requirements.</p>
-                        <div className="xs:flex">
-                            <Buttons ariaLabel="button"
-                                     href="/solutions"
-                                     className="mx-[10px] font-medium font-serif uppercase rounded-none lg:mb-[15px] landscape:lg:mb-[15px] justify-center align-items-center mt-4"
-                                     themeColor={["#3844F7", "#902CFC"]} size="md" color="#fff"
-                                     title="LEARN MORE"/></div>
                     </m.div>
                 </Row>
             </Container>
@@ -951,14 +945,14 @@ const HomeStartupPage = (props) => {
                          className="cover-background relative cover-background lg:py-[90px] md:py-[75px] sm:py-[50px]">
                         <Col xs={12} className="text-center my-[5rem] md:my-[7.5rem]">
                             <div className="justify-center align-items-center text-center d-flex flex-col">
-                                <h6 className="text-center bg-white m-3 w-[300px]">
+                                <h6 className="text-center bg-transparent text-black m-3 w-[400px]">
                                 Streamline Your Operations Now
                                 </h6>
                             </div>
                             <Buttons ariaLabel="button"
                                      href="/contact"
                                      className="mx-[10px] font-medium font-serif uppercase rounded-none lg:mb-[15px] landscape:lg:mb-[15px] justify-center align-items-center"
-                                     themeColor={["#556fff", "#ff798e"]} size="md" color="#fff"
+                                     themeColor={["#3844F7", "#902CFC"]} size="md" color="#fff"
                                      title="Schedule a Meeting"/>
                         </Col>
                     </Row>
