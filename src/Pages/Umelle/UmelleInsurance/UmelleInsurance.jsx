@@ -26,7 +26,6 @@ const HamburgerMenu = React.lazy(() => import("../../../Components/Header/Header
 const Header = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Header})))
 const HeaderNav = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.HeaderNav})))
 const Menu = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Menu})))
-const SearchBar = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.SearchBar})))
 
 const Buttons = lazy(() => import('../../../Components/Button/Buttons'))
 const Overlap = lazy(() => import('../../../Components/Overlap/Overlap'))
