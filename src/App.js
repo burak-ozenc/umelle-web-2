@@ -90,7 +90,7 @@ function App() {
         customModal,
         setCustomModal,
       }}
-    >
+      >
       <HelmetProvider context={helmetContext}>
         
       <div className="App" style={{ "--header-height": `${headerHeight}px` }}>

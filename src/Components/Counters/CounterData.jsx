@@ -119,7 +119,7 @@ const CounterData05 = [
     {
         number:{
             text: "41995",
-            class: "text-gradient bg-gradient-to-r from-[#556fff] to-[#e66176] inline-block"
+            class: "text-gradient text-[14em] bg-gradient-to-r from-[#556fff] to-[#e66176] inline-block"
         },
         title:"Claims Assessed",
         content:"",
@@ -127,7 +127,7 @@ const CounterData05 = [
     {
         number:{
             text: "2834",
-            class: "text-gradient bg-gradient-to-r from-[#556fff] to-[#e66176] inline-block"
+            class: "text-gradient text-[14em] bg-gradient-to-r from-[#556fff] to-[#e66176] inline-block"
         },
         title:"Renewed Certificates of Coverage",
         content:"",
