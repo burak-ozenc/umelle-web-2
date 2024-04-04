@@ -416,8 +416,7 @@ const HomeStartupPage = (props) => {
         {/* Section End */}
 
             {/* Section Start */}
-            <m.section
-                className="bg-lightgray py-[160px] lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px]" {...fadeIn}>
+            <m.section className="bg-lightgray py-[160px] lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px]" {...fadeIn}>
                 <Container>
                     <Counter
                         theme="counter-style-05"
@@ -481,161 +480,166 @@ const HomeStartupPage = (props) => {
                                                             <Checkbox type="checkbox" name="certificatesOfCoverage"
                                                                       className="inline-block"
                                                                       labelClass="flex items-center mb-[5px]">
-                                                    <span className="ml-[10px] text-white font-serif">
-                                                        Certificates of Coverage
-                                                    </span>
+                                                            <span className="ml-[10px] text-white font-serif">
+                                                            Certificates of Coverage
+                                                            </span>
                                                             </Checkbox>
                                                             <Checkbox type="checkbox" name="policyManagement"
                                                                       className="inline-block"
                                                                       labelClass="flex items-center mb-[5px]">
-                                                    <span className="ml-[10px] text-white font-serif">
-                                                        Policy Management 
-                                                    </span>
+                                                            <span className="ml-[10px] text-white font-serif">
+                                                            Policy Management 
+                                                            </span>
                                                             </Checkbox>
                                                             <Checkbox type="checkbox" name="vendorManagement "
                                                                       className="inline-block"
                                                                       labelClass="flex items-center mb-[5px]">
-                                                    <span className="ml-[10px] text-white font-serif">
-                                                        Vendor Management 
-                                                    </span>
+                                                            <span className="ml-[10px] text-white font-serif">
+                                                            Vendor Management 
+                                                            </span>
                                                             </Checkbox>
                                                             <Checkbox type="checkbox" name="iabilityPayroll"
                                                                       className="inline-block"
                                                                       labelClass="flex items-center mb-[5px]">
-                                                    <span className="ml-[10px] text-white font-serif">
-                                                        Liability Payroll
-                                                    </span>
+                                                            <span className="ml-[10px] text-white font-serif">
+                                                            Liability Payroll
+                                                            </span>
                                                             </Checkbox>
                                                             <Checkbox type="checkbox" name="claims"
                                                                       className="inline-block"
                                                                       labelClass="flex items-center mb-[5px]">
-                                                    <span className="ml-[10px] text-white font-serif">
-                                                        Claims  
-                                                    </span>
+                                                            <span className="ml-[10px] text-white font-serif">
+                                                            Claims  
+                                                            </span>
                                                             </Checkbox>
                                                             <Checkbox type="checkbox" name="cntacts"
                                                                       className="inline-block"
                                                                       labelClass="flex items-center mb-[5px]">
-                                                    <span className="ml-[10px] text-white font-serif">
-                                                        Contacts  
-                                                    </span>
+                                                            <span className="ml-[10px] text-white font-serif">
+                                                            Contacts  
+                                                            </span>
                                                             </Checkbox>
                                                             <Checkbox type="checkbox" name="programs"
                                                                       className="inline-block"
                                                                       labelClass="flex items-center mb-[5px]">
-                                                    <span className="ml-[10px] text-white font-serif">
-                                                        Programs   
-                                                    </span>
+                                                            <span className="ml-[10px] text-white font-serif">
+                                                            Programs   
+                                                            </span>
                                                             </Checkbox>
                                                         </Col>
                                                         <Col xl={6} md={6} xs={12}>
                                                             <Checkbox type="checkbox" name="externalInternalCompliance"
                                                                       className="inline-block"
                                                                       labelClass="flex items-center mb-[5px]">
-                                                    <span className="ml-[10px] text-white font-serif">
-                                                        External/Internal Compliance 
-                                                    </span>
+                                                            <span className="ml-[10px] text-white font-serif">
+                                                            External/Internal Compliance 
+                                                            </span>
                                                             </Checkbox>
                                                             <Checkbox type="checkbox" name="property"
                                                                       className="inline-block"
                                                                       labelClass="flex items-center mb-[5px]">
-                                                    <span className="ml-[10px] text-white font-serif">
-                                                        Property   
-                                                    </span>
+                                                            <span className="ml-[10px] text-white font-serif">
+                                                            Property   
+                                                            </span>
                                                             </Checkbox>
                                                             <Checkbox type="checkbox" name="standAlonePrograms "
                                                                       className="inline-block"
                                                                       labelClass="flex items-center mb-[5px]">
-                                                    <span className="ml-[10px] text-white font-serif">
-                                                        Stand Alone Programs 
-                                                    </span>
+                                                            <span className="ml-[10px] text-white font-serif">
+                                                            Stand Alone Programs 
+                                                            </span>
                                                             </Checkbox>
                                                             <Checkbox type="checkbox" name="kPIsScorecards"
                                                                       className="inline-block"
                                                                       labelClass="flex items-center mb-[5px]">
-                                                    <span className="ml-[10px] text-white font-serif">
-                                                        KPIs/Scorecards 
-                                                    </span>
+                                                            <span className="ml-[10px] text-white font-serif">
+                                                            KPIs/Scorecards 
+                                                            </span>
                                                             </Checkbox>
                                                             <Checkbox type="checkbox"
                                                                       name="reportingAnalyticsDashboards "
                                                                       className="inline-block"
                                                                       labelClass="flex items-center mb-[5px]">
-                                                    <span className="ml-[10px] text-white font-serif">
-                                                        Reporting/Analytics/Dashboards 
-                                                    </span>
+                                                            <span className="ml-[10px] text-white font-serif">
+                                                            Reporting/Analytics/Dashboards 
+                                                            </span>
                                                             </Checkbox>
                                                             <Checkbox type="checkbox"
                                                                       name="underwritingAndQuestionnaires "
                                                                       className="inline-block"
                                                                       labelClass="flex items-center mb-[5px]">
-                                                    <span className="ml-[10px] text-white font-serif">
-                                                        Underwriting and Questionnaires 
-                                                    </span>
+                                                            <span className="ml-[10px] text-white font-serif">
+                                                            Underwriting and Questionnaires 
+                                                            </span>
                                                             </Checkbox>
                                                             <Checkbox type="checkbox" name="otherFeatures"
                                                                       className="inline-block"
                                                                       labelClass="flex items-center mb-[5px]">
-                                                    <span className="ml-[10px] text-white font-serif">
-                                                        Other
-                                                    </span>
+                                                            <span className="ml-[10px] text-white font-serif">
+                                                            Other
+                                                            </span>
                                                             </Checkbox>
                                                         </Col>
                                                     </Row>
                                                 </Col>
-                                                <Col className="p-1 m-2" xl={4} md={4} xs={12}>
-                                                    <h4 className="text-center font-serif" style={{color: '#FFFFFF'}}>
-                                                        Functions
-                                                    </h4>
-                                                    <Checkbox type="checkbox" name="automatedInvoicing "
-                                                              className="inline-block"
-                                                              labelClass="flex items-center mb-[5px]">
-                                                    <span className="ml-[10px] text-white font-serif">
-                                                        Automated Invoicing 
-                                                    </span>
-                                                    </Checkbox>
-                                                    <Checkbox type="checkbox" name="programManagementWizard "
-                                                              className="inline-block"
-                                                              labelClass="flex items-center mb-[5px]">
-                                                    <span className="ml-[10px] text-white font-serif">
-                                                        Program Management Wizard 
-                                                    </span>
-                                                    </Checkbox>
-                                                    <Checkbox type="checkbox" name="internalChat "
-                                                              className="inline-block"
-                                                              labelClass="flex items-center mb-[5px]">
-                                                    <span className="ml-[10px] text-white font-serif">
-                                                        Internal Chat 
-                                                    </span>
-                                                    </Checkbox>
-                                                    <Checkbox type="checkbox" name="customBusinessSettings "
-                                                              className="inline-block"
-                                                              labelClass="flex items-center mb-[5px]">
-                                                    <span className="ml-[10px] text-white font-serif">
-                                                        Custom Business Settings 
-                                                    </span>
-                                                    </Checkbox>
-                                                    <Checkbox type="checkbox" name="discountManagement "
-                                                              className="inline-block"
-                                                              labelClass="flex items-center mb-[5px]">
-                                                    <span className="ml-[10px] text-white font-serif">
-                                                        Discount Management 
-                                                    </span>
-                                                    </Checkbox>
-                                                    <Checkbox type="checkbox" name="automatedCertificateRenewal "
-                                                              className="inline-block"
-                                                              labelClass="flex items-center mb-[5px]">
-                                                    <span className="ml-[10px] text-white font-serif">
-                                                        Automated Certificate Renewal 
-                                                    </span>
-                                                    </Checkbox>
-                                                    <Checkbox type="checkbox" name="otherFunction"
-                                                              className="inline-block"
-                                                              labelClass="flex items-center mb-[5px]">
-                                                    <span className="ml-[10px] text-white font-serif">
-                                                        Other 
-                                                    </span>
-                                                    </Checkbox>
+                                                <Col>
+                                                    <Row className="p-1 m-2">
+                                                        <h4 className="text-center font-serif"
+                                                            style={{color: '#FFFFFF'}}>
+                                                            Functions
+                                                        </h4>
+                                                        <Col Col xl={10} md={10} xs={12}>
+                                                            <Checkbox type="checkbox" name="automatedInvoicing "
+                                                                className="inline-block"
+                                                                labelClass="flex items-center mb-[5px]">
+                                                            <span className="ml-[10px] text-white font-serif">
+                                                                Automated Invoicing 
+                                                            </span>
+                                                            </Checkbox>
+                                                            <Checkbox type="checkbox" name="programManagementWizard "
+                                                                className="inline-block"
+                                                                labelClass="flex items-center mb-[5px]">
+                                                            <span className="ml-[10px] text-white font-serif">
+                                                                Program Management Wizard 
+                                                            </span>
+                                                            </Checkbox>
+                                                            <Checkbox type="checkbox" name="internalChat "
+                                                                className="inline-block"
+                                                                labelClass="flex items-center mb-[5px]">
+                                                            <span className="ml-[10px] text-white font-serif">
+                                                                Internal Chat 
+                                                            </span>
+                                                            </Checkbox>
+                                                            <Checkbox type="checkbox" name="customBusinessSettings "
+                                                                className="inline-block"
+                                                                labelClass="flex items-center mb-[5px]">
+                                                            <span className="ml-[10px] text-white font-serif">
+                                                                Custom Business Settings 
+                                                            </span>
+                                                            </Checkbox>
+                                                            <Checkbox type="checkbox" name="discountManagement "
+                                                                className="inline-block"
+                                                                labelClass="flex items-center mb-[5px]">
+                                                            <span className="ml-[10px] text-white font-serif">
+                                                                Discount Management 
+                                                            </span>
+                                                            </Checkbox>
+                                                            <Checkbox type="checkbox" name="automatedCertificateRenewal "
+                                                                className="inline-block"
+                                                                labelClass="flex items-center mb-[5px]">
+                                                            <span className="ml-[10px] text-white font-serif">
+                                                                Automated Certificate Renewal 
+                                                            </span>
+                                                            </Checkbox>
+                                                            <Checkbox type="checkbox" name="otherFunction"
+                                                                className="inline-block"
+                                                                labelClass="flex items-center mb-[5px]">
+                                                            <span className="ml-[10px] text-white font-serif">
+                                                                Other 
+                                                            </span>
+                                                            </Checkbox>
+                                                        </Col>   
+                                                    </Row>
                                                 </Col>
                                             </Row>
                                             <Row className="row-cols-1 row-cols-md-1 mt-5">
@@ -693,7 +697,7 @@ const HomeStartupPage = (props) => {
                     (
                         <Container>
                             <Row md={12} className="justify-center text-black font-[2em] align-items-center text-center m-5 min-w-5">
-                                <p style={{ color: 'white' }}> {message}</p>
+                            <p style={{ color: 'white' }}> {message}</p>
                             </Row>
 
                         </Container>
@@ -920,11 +924,13 @@ const HomeStartupPage = (props) => {
 
             {/* Section Start */}
             <m.section
-                className="bg-lightgray border-t lg:py-[20px] md:py-[95px] sm:py-[80px] xs:py-[50px] mb-5" {...fadeIn}>
+                className="bg-lightgray py-[55px] border-t lg:py-[100px] md:py-[95px] sm:py-[80px] xs:py-[50px]" {...fadeIn}>
                 <Container>
                     <Row className="justify-center">
                         <Col md={12} className="text-center m-5 mb-[7%]">
-                            <h6 className="font-serif text-black font-medium">Crafted for Unmatched Efficiency</h6>
+                            <h6 className="font-serif text-black font-medium">
+                                Crafted for Unmatched Efficiency
+                            </h6>
                         </Col>
                     </Row>
                     <Row className="justify-center">
@@ -945,9 +951,9 @@ const HomeStartupPage = (props) => {
                          className="cover-background relative cover-background lg:py-[90px] md:py-[75px] sm:py-[50px]">
                         <Col xs={12} className="text-center my-[5rem] md:my-[7.5rem]">
                             <div className="justify-center align-items-center text-center d-flex flex-col">
-                                <h6 className="text-center bg-transparent text-black m-3 w-[400px]">
+                                <h3 className="text-center bg-transparent text-black m-3 w-[400px]">
                                 Streamline Your Operations Now
-                                </h6>
+                                </h3>
                             </div>
                             <Buttons ariaLabel="button"
                                      href="/contact"
