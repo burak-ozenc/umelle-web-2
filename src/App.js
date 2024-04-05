@@ -1,7 +1,7 @@
 import React, { Suspense, useEffect, useState, lazy } from "react";
 
 // Libraries
-import { Routes, Route, useLocation } from "react-router-dom";
+import {Routes, Route, useLocation, Navigate} from "react-router-dom";
 import retina from "retinajs";
 import { AnimatePresence } from "framer-motion";
 
@@ -100,7 +100,8 @@ function App() {
             <AnimatePresence exitBeforeEnter>
               <Suspense fallback={<></>}>
                 <Routes>
-                  <Route path="/" element={<UmelleHome style={{ "--base-color": "#27ae60" }} />} />
+                  <Route path="/" element={<Navigate to="/home" replace />}/>
+                  <Route path="/home" element={<UmelleHome style={{ "--base-color": "#27ae60" }} />} />
                   <Route path="/solutions" element={<UmelleSolutions style={{ "--base-color": "#27ae60" }} />} />
                   <Route path="/services" element={<UmelleServices style={{ "--base-color": "#27ae60" }} />} />
                   <Route path="/company" element={<UmelleCompany style={{ "--base-color": "#27ae60" }} />} />
