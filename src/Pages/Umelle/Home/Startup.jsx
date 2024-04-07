@@ -494,7 +494,7 @@ const HomeStartupPage = (props) => {
                                 theme="icon-with-text-02"
                                 data={IconWithTextData_02}
                                 animation={fadeIn}
-                                animationDelay={0.2}
+                                animationDelay={0}
                             />
                         </Col>
                     </Row>

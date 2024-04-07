@@ -39,7 +39,7 @@ const StartupPageBannerSlider = () => {
                     loop={true}
                     navigation={true}
                     pagination={true}
-                    autoplay={{delay: 5000, disableOnInteraction: false}}
+                    autoplay={{delay: 0, disableOnInteraction: false}}
                     fadeEffect={{crossFade: true}}
                     modules={[Pagination, Navigation, EffectFade, Autoplay]}
                     onSlideChange={(swiperCore) => {
@@ -62,16 +62,16 @@ const StartupPageBannerSlider = () => {
                                              className="justify-center items-center my-0 mx-auto relative flex flex-col">
                                             <m.h1 initial={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)'}}
                                                   animate={{clipPath: activeSlide === i ? 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)' : 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)'}}
-                                                  transition={{duration: 0.5, delay: 0.5, ease: "easeIn"}}
+                                                  transition={{duration: 0.5, delay: 0, ease: "easeIn"}}
                                                   className="font-serif font-semibold pb-[10px] text-[70px] tracking-[-2px] text-black mb-[35px] lg:text-[55px] lg:leading-[60px] xs:text-[35px] xs:leading-[40px] xs:mb-[20px]">{item.title}</m.h1>
                                             <m.span initial={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)'}}
                                                     animate={{clipPath: activeSlide === i ? 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)' : 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)'}}
-                                                    transition={{duration: 0.5, delay: 0.8, ease: "easeIn"}}
+                                                    transition={{duration: 0.5, delay: 0, ease: "easeIn"}}
                                                     style={{fontSize:'2em'}}
                                                     className="font-serif block text-[4em] leading-[52px] mb-[35px] font-light text-black xs:text-base xs:mb-[20px]">{item.subTitle}</m.span>
                                             <m.div initial={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)'}}
                                                    animate={{clipPath: activeSlide === i ? 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)' : 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)'}}
-                                                   transition={{duration: 0.5, delay: 0.9, ease: "easeIn"}}>
+                                                   transition={{duration: 0.5, delay: 0, ease: "easeIn"}}>
                                                 <Buttons ariaLabel="button"
                                                          href="/contact"
                                                          className="mx-[10px] font-medium font-serif uppercase rounded-none lg:mb-[15px] landscape:lg:mb-[15px] justify-center align-items-center mt-4"
