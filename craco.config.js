@@ -1,5 +1,6 @@
 const { whenProd } = require('@craco/craco');
 const Critters = require('critters-webpack-plugin');
+const purgecss = require("@fullhuman/postcss-purgecss");
 
 module.exports = {
   webpack: {
@@ -17,6 +18,9 @@ module.exports = {
             ],
             []
           ),
+          purgecss({
+            content: ["./src/**/*.html", "./src/**/*.tsx", "./src/**/*.ts"],
+          }),
         ],
         ignoreWarnings: [
           function ignoreSourcemapsloaderWarnings(warning) {
