@@ -26,6 +26,7 @@ import ReCAPTCHA from "react-google-recaptcha";
 import * as emailjs from "@emailjs/browser";
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import ReactPixel from "react-facebook-pixel";
 
 
 const IconWithText = lazy(() => import('../../../Components/IconWithText/IconWithText'))
@@ -98,6 +99,16 @@ const HomeStartupPage = (props) => {
                 },
             );
     };
+
+    const advancedMatching = { em: 'test@umelle.com' }; // optional, more info: https://developers.facebook.com/docs/facebook-pixel/advanced/advanced-matching
+    const options = {
+        autoConfig: true, // set pixel's autoConfig. More info: https://developers.facebook.com/docs/facebook-pixel/advanced/
+        debug: true, // enable logs
+    };
+
+    ReactPixel.init(process.env.REACT_APP_FACEBOOK_PIXEL_ID, advancedMatching, options);
+    ReactPixel.pageView(); // For tracking page vie
+    
     return (<div style={props.style}>
         {/*SEO Starts*/}
         <SEO
@@ -260,6 +271,7 @@ const HomeStartupPage = (props) => {
                                         if (values.recaptcha !== '') {
                                             const response = await sendEmail(values)
                                             response.status === "success" && resetForm(actions, recaptcha);
+                                            ReactPixel.track('featuresFormSubmit', values);
                                         } else {
                                             recaptcha.current.captcha.classList.add("error")
                                         }

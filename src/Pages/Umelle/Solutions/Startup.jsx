@@ -31,6 +31,7 @@ import * as emailjs from "@emailjs/browser";
 import SEO from "../../../Components/Umelle/SEO";
 import { useLocation } from 'react-router-dom';
 import {Parallax} from 'react-scroll-parallax';
+import ReactPixel from "react-facebook-pixel";
 
 
 const HamburgerMenu = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.HamburgerMenu})))
@@ -195,6 +196,15 @@ const HomeStartupPage = (props) => {
             window.onhashchange = null;
         };
     }, []); // Empty dependency array to run only once after initial mount
+
+    const advancedMatching = { em: 'test@umelle.com' }; // optional, more info: https://developers.facebook.com/docs/facebook-pixel/advanced/advanced-matching
+    const options = {
+        autoConfig: true, // set pixel's autoConfig. More info: https://developers.facebook.com/docs/facebook-pixel/advanced/
+        debug: true, // enable logs
+    };
+
+    ReactPixel.init(process.env.REACT_APP_FACEBOOK_PIXEL_ID, advancedMatching, options);
+    ReactPixel.pageView(); // For tracking page vie
 
     return (<div style={props.style}>
         {/*SEO Starts*/}
@@ -462,6 +472,7 @@ const HomeStartupPage = (props) => {
                                         if (values.recaptcha !== '') {
                                             const response = await sendEmail(values)
                                             response.status === "success" && resetForm(actions, recaptcha);
+                                            ReactPixel.track('featuresFormSubmit', values);
                                         } else {
                                             recaptcha.current.captcha.classList.add("error")
                                         }

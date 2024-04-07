@@ -21,6 +21,7 @@ import {ContactFormStyle03Schema} from "../../../Components/Form/FormSchema";
 import * as emailjs from "@emailjs/browser";
 import ReCAPTCHA from "react-google-recaptcha";
 import SEO from "../../../Components/Umelle/SEO";
+import ReactPixel from "react-facebook-pixel";
 
 const HamburgerMenu = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.HamburgerMenu})))
 const Header = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Header})))
@@ -177,6 +178,7 @@ const HomeStartupPage = (props) => {
                                     actions.setSubmitting(true)
                                     if (values.recaptcha !== '') {
                                         const response = await sendEmail(values)
+                                        ReactPixel.track('contactFormSubmit', values);
                                         response.status === "success" && resetForm(actions, recaptcha);
                                     } else {
                                         recaptcha.current.captcha.classList.add("error")

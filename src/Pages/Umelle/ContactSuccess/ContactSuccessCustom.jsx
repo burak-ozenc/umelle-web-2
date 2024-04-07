@@ -16,6 +16,7 @@ import InViewPort from '../../../Components/InViewPort';
 // Data
 import FooterData from '../../../Components/Footers/FooterData';
 import SEO from "../../../Components/Umelle/SEO";
+import ReactPixel from "react-facebook-pixel";
 
 const HamburgerMenu = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.HamburgerMenu})))
 const Header = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Header})))
@@ -45,6 +46,15 @@ const SocialIconsData = [{
 },]
 
 const Footer_Data = [FooterData[0], FooterData[1], FooterData[4], FooterData[3]]
+
+const advancedMatching = { em: 'test@umelle.com' }; // optional, more info: https://developers.facebook.com/docs/facebook-pixel/advanced/advanced-matching
+const options = {
+    autoConfig: true, // set pixel's autoConfig. More info: https://developers.facebook.com/docs/facebook-pixel/advanced/
+    debug: true, // enable logs
+};
+
+ReactPixel.init(process.env.REACT_APP_FACEBOOK_PIXEL_ID, advancedMatching, options);
+ReactPixel.pageView(); // For tracking page vie
 
 const ContactSuccessCustom = (props) => {
     ScrollToAnchor();

@@ -3,16 +3,14 @@ import React, {lazy} from 'react'
 // Libraries
 import {Link} from 'react-router-dom';
 import {Col, Container, Navbar, Row, Tab, Tabs} from "react-bootstrap";
-import * as Yup from 'yup';
-import {AnimatePresence, domMax, LazyMotion, m} from 'framer-motion';
-import {Form, Formik} from 'formik';
+import { domMax, LazyMotion, m} from 'framer-motion';
+
 
 // Functions
 import {fadeIn} from '../../../Functions/GlobalAnimations';
 
 // Components
-import {resetForm, ScrollToAnchor, sendEmail} from "../../../Functions/Utilities";
-import {Input} from '../../../Components/Form/Form'
+import { ScrollToAnchor } from "../../../Functions/Utilities";
 import FooterMenu, {Footer} from '../../../Components/Footers/Footer';
 import InViewPort from '../../../Components/InViewPort';
 
@@ -34,6 +32,7 @@ import SEO from "../../../Components/Umelle/SEO";
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import {IconWithTextData_02} from "../../../Components/IconWithText/IconWithTextData";
+import ReactPixel from "react-facebook-pixel";
 
 const HamburgerMenu = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.HamburgerMenu})))
 const Header = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Header})))
@@ -41,7 +40,6 @@ const HeaderNav = React.lazy(() => import("../../../Components/Header/Header").t
 const Menu = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Menu})))
 
 const ReactCustomScrollbar = lazy(() => import("../../../Components/ReactCustomScrollbar"))
-const MessageBox = lazy(() => import('../../../Components/MessageBox/MessageBox'))
 const SocialIcons = lazy(() => import("../../../Components/SocialIcon/SocialIcons"))
 const SideButtons = lazy(() => import("../../../Components/SideButtons"))
 const StaticInstagram = lazy(() => import('../../../Components/Instagram/StaticInstagram'))
@@ -75,6 +73,16 @@ const HomeStartupPage = (props) => {
         }
     }, [location]); // This ensures the tracking code runs every time the route changes
     ScrollToAnchor();
+
+    const advancedMatching = { em: 'test@umelle.com' }; // optional, more info: https://developers.facebook.com/docs/facebook-pixel/advanced/advanced-matching
+    const options = {
+        autoConfig: true, // set pixel's autoConfig. More info: https://developers.facebook.com/docs/facebook-pixel/advanced/
+        debug: true, // enable logs
+    };
+
+    ReactPixel.init(process.env.REACT_APP_FACEBOOK_PIXEL_ID, advancedMatching, options);
+    ReactPixel.pageView(); // For tracking page vie
+    
     return (<div style={props.style}>
         {/*SEO Starts*/}
         <SEO
@@ -127,39 +135,7 @@ const HomeStartupPage = (props) => {
                                         </div>
                                         <p className="w-[70%] mb-12 text-darkgray leading-[26px] text-lg font-serif mx-auto inline-block">Get
                                             latest update for our trusted applications</p>
-                                        <Formik
-                                            initialValues={{email: ''}}
-                                            validationSchema={Yup.object().shape({email: Yup.string().email("Invalid email.").required("Field is required."),})}
-                                            onSubmit={async (values, actions) => {
-                                                actions.setSubmitting(true)
-                                                const response = await sendEmail(values)
-                                                response.status === "success" && resetForm(actions)
-                                            }}
-                                        >
-                                            {({isSubmitting, status}) => (
-                                                <div className="relative subscribe-style-05 mb-20">
-                                                    <Form className="relative">
-                                                        <Input showErrorMsg={false} type="email" name="email"
-                                                               className="border-[1px] medium-input rounded-[5px] border-solid border-[#dfdfdf]"
-                                                               placeholder="Enter your email address"/>
-                                                        <button aria-label="Subscribe" type="submit"
-                                                                className={`text-xs leading-[18px] py-[12px] px-[28px] uppercase xs:text-center${isSubmitting ? " loading" : ""}`}>
-                                                            <i className="far fa-envelope text-basecolor text-sm leading-none mr-[10px] xs:mr-0"></i>Subscribe
-                                                        </button>
-                                                    </Form>
-                                                    <AnimatePresence>
-                                                        {status &&
-                                                            <m.div initial={{opacity: 0}} animate={{opacity: 1}}
-                                                                   exit={{opacity: 0}}
-                                                                   className="mt-[25px] top-[115%] left-0 w-full">
-                                                                <MessageBox
-                                                                    className="rounded-[4px] text-md py-[10px] px-[22px] z-10"
-                                                                    theme="message-box01" variant="success"
-                                                                    message="Your message has been sent successfully subscribed to our email list!"/>
-                                                            </m.div>}
-                                                    </AnimatePresence>
-                                                </div>)}
-                                        </Formik>
+                                        
                                         <SocialIcons theme="social-icon-style-05" size="sm" iconColor="dark"
                                                      data={SocialIconsData}/>
                                     </div>
