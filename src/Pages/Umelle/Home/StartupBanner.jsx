@@ -7,23 +7,23 @@ import {fadeIn} from "../../../Functions/GlobalAnimations";
 import Lists from "../../../Components/Lists/Lists";
 import {ListData01} from "../../../Components/Lists/ListsData";
 import Buttons from "../../../Components/Button/Buttons";
-
+// `url(/assets/img/SolutionsHeader_v1.png)`
 const StartupPageBannerSlider = () => {
     const [activeSlide, setActiveSlide] = useState(0)
     const swiperData = [
         {
-            img: "https://i.ibb.co/hHCtj1f/homeheader-v1-01.png",
+            img: "/assets/img/SolutionsHeader_v1.png",
             title: "",
             subTitle: "Pooled insurance management solutions tailored to your unique business logic"
         }
         ,
         {
-            img: "https://i.ibb.co/hHCtj1f/homeheader-v1-01.png",
+            img: "/assets/img/SolutionsHeader_v1.png",
             title: "",
             subTitle: "A blend of fiscal precision and superior member service"
         },
         {
-            img: "https://i.ibb.co/hHCtj1f/homeheader-v1-01.png",
+            img: "/assets/img/SolutionsHeader_v1.png",
             title: "",
             subTitle: "Designed to streamline operations across all your programs and policies"
         }
