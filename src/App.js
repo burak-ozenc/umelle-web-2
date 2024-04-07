@@ -1,9 +1,10 @@
-import React, { Suspense, useEffect, useState, lazy } from "react";
+import React, {Suspense, useEffect, useState, lazy} from "react";
 
 // Libraries
 import {Routes, Route, useLocation, Navigate} from "react-router-dom";
 import retina from "retinajs";
-import { AnimatePresence } from "framer-motion";
+import {AnimatePresence} from "framer-motion";
+import ReactPixel from 'react-facebook-pixel';
 
 // Context
 import GlobalContext from "./Context/Context";
@@ -11,7 +12,7 @@ import GlobalContext from "./Context/Context";
 // Components
 import ScrollToTopButton from "./Components/ScrollToTop"
 import {ScrollToAnchor} from "./Functions/Utilities";
-import { HelmetProvider} from "react-helmet-async";
+import {HelmetProvider} from "react-helmet-async";
 
 // Home
 const UmelleHome = lazy(() => import("./Pages/Umelle/Home/Startup"))
@@ -25,102 +26,124 @@ const ContactSuccess = lazy(() => import("./Pages/Umelle/ContactSuccess/ContactS
 const ContactSuccessCustom = lazy(() => import("./Pages/Umelle/ContactSuccess/ContactSuccessCustom"))
 
 function App() {
-  const [headerHeight, setHeaderHeight] = useState(0);
-  const [footerHeight, setFooterHeight] = useState(0);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [customModal, setCustomModal] = useState({
-    el: null,
-    isOpen: false
-  })
-  const location = useLocation();
-
-  // RetinaJS
-  useEffect(() => {
-    window.addEventListener('load', retina(document.querySelectorAll('img')));
-  }, [])
-
-  useEffect(() => {
-    setTimeout(() => {
-      import("./Functions/Utilities").then(module => {
-        module.SetHeaderMenuPos()
-        module.setDocumentFullHeight()
-      })
-    }, 1000);
-  }, [location])
-
-  useEffect(() => {
-    if (isModalOpen === true) {
-      document.querySelector("body").classList.add("overflow-hidden");
-    } else {
-      document.querySelector("body").classList.remove("overflow-hidden");
-    }
-  }, [isModalOpen]);
-
-  // Get the current location and set the window to top
-  useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: "instant",
-    });
-    setFooterHeight(0);
-    setCustomModal({
-      ...customModal,
-      el: null,
-      isOpen: false
+    const [headerHeight, setHeaderHeight] = useState(0);
+    const [footerHeight, setFooterHeight] = useState(0);
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [customModal, setCustomModal] = useState({
+        el: null,
+        isOpen: false
     })
+    const location = useLocation();
 
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [location]);
+    // RetinaJS
+    useEffect(() => {
+        window.addEventListener('load', retina(document.querySelectorAll('img')));
+    }, [])
 
-  const helmetContext = {};
+    useEffect(() => {
+        setTimeout(() => {
+            import("./Functions/Utilities").then(module => {
+                module.SetHeaderMenuPos()
+                module.setDocumentFullHeight()
+            })
+        }, 1000);
+    }, [location])
 
-  ScrollToAnchor();
-
-  
-  return (
-    <GlobalContext.Provider
-      value={{
-        headerHeight,
-        setHeaderHeight,
-        footerHeight,
-        setFooterHeight,
-        isModalOpen,
-        setIsModalOpen,
-        customModal,
-        setCustomModal,
-      }}
-      >
-      <HelmetProvider context={helmetContext}>
-        
-      <div className="App" style={{ "--header-height": `${headerHeight}px` }}>
-        {
-          <main style={{ marginTop: headerHeight, marginBottom: footerHeight }}>
-            <ScrollToTopButton />
-            <AnimatePresence exitBeforeEnter>
-              <Suspense fallback={<></>}>
-                <Routes>
-                  <Route path="/" element={<Navigate to="/home" replace />}/>
-                  <Route path="/home" element={<UmelleHome style={{ "--base-color": "#27ae60" }} />} />
-                  <Route path="/solutions" element={<UmelleSolutions style={{ "--base-color": "#27ae60" }} />} />
-                  <Route path="/services" element={<UmelleServices style={{ "--base-color": "#27ae60" }} />} />
-                  <Route path="/company" element={<UmelleCompany style={{ "--base-color": "#27ae60" }} />} />
-                  <Route path="/contact" element={<Contact style={{ "--base-color": "#27ae60" }} />} />
-                  <Route path="/coming-soon" element={<ComingSoon style={{ "--base-color": "#27ae60" }} />} />
-                  <Route path="/products" element={<ComingSoon style={{ "--base-color": "#27ae60" }} />} />
-                  <Route path="/umelle-insurance" element={<UmelleInsurance style={{ "--base-color": "#27ae60" }} />} />
-                  <Route path="/aw-stg-landingp" element={<UmelleInsurance style={{ "--base-color": "#27ae60" }} />} />
-                  <Route path="/contact-success" element={<ContactSuccess style={{ "--base-color": "#27ae60" }} />} />
-                  <Route path="/contact-success-custom" element={<ContactSuccessCustom style={{ "--base-color": "#27ae60" }} />} />
-                </Routes>
-              </Suspense>
-            </AnimatePresence>
-          </main>
+    useEffect(() => {
+        if (isModalOpen === true) {
+            document.querySelector("body").classList.add("overflow-hidden");
+        } else {
+            document.querySelector("body").classList.remove("overflow-hidden");
         }
-      </div>
-      </HelmetProvider>
-    </GlobalContext.Provider>
-  )
+    }, [isModalOpen]);
+
+    // Get the current location and set the window to top
+    useEffect(() => {
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: "instant",
+        });
+        setFooterHeight(0);
+        setCustomModal({
+            ...customModal,
+            el: null,
+            isOpen: false
+        })
+
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [location]);
+
+    const helmetContext = {};
+
+    const advancedMatching = {em: 'burakozenc@umelle.com'}; // optional, more info: https://developers.facebook.com/docs/facebook-pixel/advanced/advanced-matching
+    const options = {
+        autoConfig: true, // set pixel's autoConfig. More info: https://developers.facebook.com/docs/facebook-pixel/advanced/
+        debug: false, // enable logs
+    };
+
+    ReactPixel.init(process.env.REACT_APP_FACEBOOK_PIXEL_ID, advancedMatching, options);
+
+    ReactPixel.pageView(); // For tracking page view
+
+    ScrollToAnchor();
+
+
+    return (
+        <GlobalContext.Provider
+            value={{
+                headerHeight,
+                setHeaderHeight,
+                footerHeight,
+                setFooterHeight,
+                isModalOpen,
+                setIsModalOpen,
+                customModal,
+                setCustomModal,
+            }}
+        >
+            <HelmetProvider context={helmetContext}>
+
+
+                <div className="App" style={{"--header-height": `${headerHeight}px`}}>
+                    {
+                        <main style={{marginTop: headerHeight, marginBottom: footerHeight}}>
+                            <ScrollToTopButton/>
+                            <AnimatePresence exitBeforeEnter>
+                                <Suspense fallback={<></>}>
+                                    <Routes>
+                                        <Route path="/" element={<Navigate to="/home" replace/>}/>
+                                        <Route path="/home"
+                                               element={<UmelleHome style={{"--base-color": "#27ae60"}}/>}/>
+                                        <Route path="/solutions"
+                                               element={<UmelleSolutions style={{"--base-color": "#27ae60"}}/>}/>
+                                        <Route path="/services"
+                                               element={<UmelleServices style={{"--base-color": "#27ae60"}}/>}/>
+                                        <Route path="/company"
+                                               element={<UmelleCompany style={{"--base-color": "#27ae60"}}/>}/>
+                                        <Route path="/contact"
+                                               element={<Contact style={{"--base-color": "#27ae60"}}/>}/>
+                                        <Route path="/coming-soon"
+                                               element={<ComingSoon style={{"--base-color": "#27ae60"}}/>}/>
+                                        <Route path="/products"
+                                               element={<ComingSoon style={{"--base-color": "#27ae60"}}/>}/>
+                                        <Route path="/umelle-insurance"
+                                               element={<UmelleInsurance style={{"--base-color": "#27ae60"}}/>}/>
+                                        <Route path="/aw-stg-landingp"
+                                               element={<UmelleInsurance style={{"--base-color": "#27ae60"}}/>}/>
+                                        <Route path="/contact-success"
+                                               element={<ContactSuccess style={{"--base-color": "#27ae60"}}/>}/>
+                                        <Route path="/contact-success-custom"
+                                               element={<ContactSuccessCustom style={{"--base-color": "#27ae60"}}/>}/>
+                                    </Routes>
+                                </Suspense>
+                            </AnimatePresence>
+                        </main>
+                    }
+                </div>
+            </HelmetProvider>
+        </GlobalContext.Provider>
+    )
 }
 
 export default App;
