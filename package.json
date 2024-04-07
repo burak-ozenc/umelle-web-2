@@ -6,6 +6,7 @@
   "exports": "./index.js",
   "dependencies": {
     "@emailjs/browser": "^4.3.3",
+    "@fullhuman/postcss-purgecss": "^6.0.0",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.2.0",
     "@testing-library/user-event": "^13.5.0",
@@ -60,7 +61,8 @@
     "scss": "run-p sass tailwind pages",
     "sass": "sass src/Assets/scss:src/Assets/css --watch",
     "tailwind": "npx tailwindcss -i src/Assets/css/global.css -o src/Assets/css/global.css --watch --minify",
-    "pages": "npx tailwindcss -i src/Assets/css/pages.css -o src/Assets/css/pages.css --watch --minify"
+    "pages": "npx tailwindcss -i src/Assets/css/pages.css -o src/Assets/css/pages.css --watch --minify",
+    "postbuild": "purgecss --css build/static/css/*.css --content build/index.html build/static/js/*.js --output build/static/css"
   },
   "eslintConfig": {
     "extends": [
