@@ -37,7 +37,7 @@ const Menu = React.lazy(() => import("../../../Components/Header/Header").then((
 const Buttons = lazy(() => import('../../../Components/Button/Buttons'))
 const MessageBox = lazy(() => import('../../../Components/MessageBox/MessageBox'))
 const SideButtons = lazy(() => import("../../../Components/SideButtons"))
-const StartupPageBannerSlider = lazy(() => import('./StartupBanner'))
+// const StartupPageBannerSlider = lazy(() => import('./StartupBanner'))
 const SEO = lazy(() => import('../../../Components/Umelle/SEO'))
 
 
@@ -137,7 +137,7 @@ const HomeStartupPage = (props) => {
         <SideButtons/>
         
         {/* Section Start */}
-        <StartupPageBannerSlider/>
+        {/*<StartupPageBannerSlider/>*/}
         {/* Section End */}
 
 
