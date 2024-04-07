@@ -12,18 +12,18 @@ const StartupPageBannerSlider = () => {
     const [activeSlide, setActiveSlide] = useState(0)
     const swiperData = [
         {
-            img: "/assets/img/SolutionsHeader_v1.png",
+            img: "/assets/img/SolutionsHeader_v1.webp",
             title: "",
             subTitle: "Pooled insurance management solutions tailored to your unique business logic"
         }
         ,
         {
-            img: "/assets/img/SolutionsHeader_v1.png",
+            img: "/assets/img/SolutionsHeader_v1.webp",
             title: "",
             subTitle: "A blend of fiscal precision and superior member service"
         },
         {
-            img: "/assets/img/SolutionsHeader_v1.png",
+            img: "/assets/img/SolutionsHeader_v1.webp",
             title: "",
             subTitle: "Designed to streamline operations across all your programs and policies"
         }

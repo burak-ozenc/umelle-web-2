@@ -275,7 +275,7 @@ const HomeStartupPage = (props) => {
 
         {/* Section start */}
         <section className="overflow-visible cover-background"
-                 style={{backgroundImage: `url(/assets/img/SolutionsHeader_v1.png)`}}>
+                 style={{backgroundImage: `url(/assets/img/SolutionsHeader_v1.webp)`}}>
             <Container>
                 <LazyMotion strict features={domMax}>
                     <Row
@@ -397,13 +397,13 @@ const HomeStartupPage = (props) => {
                                       speed={0}>
                                 <div
                                     className="absolute top-0 left-0 w-full h-full rounded-[6px] opacity-50 bg-gradient-to-r from-purple-500 to-pink-500"></div>
-                                <img loading="lazy" src="/assets/img/landing_page_section_back-01.png"
+                                <img loading="lazy" src="/assets/img/landing_page_section_back-01.webp"
                                      className="rounded-[6px] w-full" width="394.8" height="466.34" alt="our-process"/>
                             </Parallax>
                             <Parallax
                                 className="lg-no-parallax flex rounded-[6px] justify-center items-center w-[70%] bg-no-repeat absolute bottom-0 right-[15px] lg:!top-0 lg:ml-auto"
                                 speed={20}>
-                                <img loading="lazy" src="/assets/img/landing_page_section_front-01.png"
+                                <img loading="lazy" src="/assets/img/landing_page_section_front-01.webp"
                                      className="rounded-[6px] w-full" width="394.8" height="466.34" alt="our-process"/>
                             </Parallax>
                             {/* <img src="/assets/img/landing_page_section_front-01.png" alt=""></img> */}
@@ -444,7 +444,7 @@ const HomeStartupPage = (props) => {
             {/* Section Start */}
             <section
                 className="py-[90px] lg:py-[120px] md:py-[80px] xs:py-[50px] bg-transparent cover-background relative cover-background" {...fadeIn}
-                style={{backgroundImage: `url(/assets/img/CheckBox4-01.png)`}}
+                style={{backgroundImage: `url(/assets/img/CheckBox4-01.webp)`}}
             >
                 {sent ?
                     (<Container>
@@ -958,7 +958,7 @@ const HomeStartupPage = (props) => {
             {/* CTA Banner Section Start */}
             <section className="lg:pt-[160px] md:pt-[10px] sm:pt-[50px]">
                 <Container fluid>
-                    <Row style={{backgroundImage: `url('/assets/img/HomePage_CTRBanner_LV-01.png')`}}
+                    <Row style={{backgroundImage: `url('/assets/img/HomePage_CTRBanner_LV-01.webp')`}}
                          className="cover-background relative cover-background lg:py-[90px] md:py-[75px] sm:py-[50px]">
                         <Col xs={12} className="text-center my-[5rem] md:my-[7.5rem]">
                             <div className="justify-center align-items-center text-center d-flex flex-col">

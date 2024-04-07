@@ -319,7 +319,7 @@ const UmelleInsuranceManagementSuite = (props) => {
         {/* Section Start */}
         <m.section id="download"
                    className="py-[160px] cover-background lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px]"
-                   style={{backgroundImage: `url(/assets/img/BottomCTABanner_LandingPage_TESTT-01-01.png)`}} {...fadeIn}>
+                   style={{backgroundImage: `url(/assets/img/BottomCTABanner_LandingPage_TESTT-01-01.webp)`}} {...fadeIn}>
             <Container>
                 <Row className="items-center">
                     <Col lg={8} md={8} className="col-12 text-left font-serif uppercase sm:mb-[30px] sm:text-center">

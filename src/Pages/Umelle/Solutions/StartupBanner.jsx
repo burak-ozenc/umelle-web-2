@@ -8,7 +8,7 @@ const StartupPageBannerSlider = () => {
     const [activeSlide, setActiveSlide] = useState(0)
     const swiperData = [
         {
-            img: "../../../Assets/img/umelle/homeheader_v2-01.png",
+            img: "../../../Assets/img/umelle/homeheader_v2-01.webp",
             title: "Tailor-Made Insurance Data Software Designed Around Your Business Needs",
             subTitle: "The Premier Choice for Pooled Insurance Providers"
         }
