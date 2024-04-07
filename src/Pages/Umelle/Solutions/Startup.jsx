@@ -33,33 +33,15 @@ import { useLocation } from 'react-router-dom';
 import {Parallax} from 'react-scroll-parallax';
 import ReactPixel from "react-facebook-pixel";
 
-
-const HamburgerMenu = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.HamburgerMenu})))
 const Header = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Header})))
 const HeaderNav = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.HeaderNav})))
 const Menu = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Menu})))
 
 const ProcessStep = lazy(() => import('../../../Components/ProcessStep/ProcessStep'))
-const ReactCustomScrollbar = lazy(() => import("../../../Components/ReactCustomScrollbar"))
 const MessageBox = lazy(() => import('../../../Components/MessageBox/MessageBox'))
-const SocialIcons = lazy(() => import("../../../Components/SocialIcon/SocialIcons"))
 const SideButtons = lazy(() => import("../../../Components/SideButtons"))
-const StaticInstagram = lazy(() => import('../../../Components/Instagram/StaticInstagram'))
 
 // Filter the blog data category wise
-const SocialIconsData = [{
-    color: "#3b5998", link: "https://www.facebook.com/", icon: "fab fa-facebook-f"
-}, {
-    color: "#ea4c89", link: "https://dribbble.com/", icon: "fab fa-dribbble"
-}, {
-    color: "#00aced", link: "https://twitter.com/", icon: "fab fa-twitter"
-}, {
-    color: "#fe1f49", link: "https://www.instagram.com/", icon: "fab fa-instagram"
-}, {
-    color: "#0077b5", link: "https://www.linkedin.com/", icon: "fab fa-linkedin-in"
-},]
-
-
 const Footer_Data = [FooterData[0], FooterData[1], FooterData[4], FooterData[3]]
 
 // var hash = window.decodeURIComponent(window.location.hash);
@@ -214,10 +196,10 @@ const HomeStartupPage = (props) => {
             name='UMELLE'
             type='article'/>
         {/*SEO Ends*/}
-        
+
         {/* Header Start */}
         <Header topSpace={{md: true}} type="reverse-scroll">
-            <HeaderNav fluid="fluid" theme="white" expand="lg"
+            <HeaderNav fluid="fluid" theme="light" expand="lg"
                        className="py-[0px] px-[35px] md:px-[15px] md:py-[20px] sm:px-0">
                 <Col lg={2} sm={6} xs={"auto"} className="mr-auto ps-0">
                     <Link aria-label="header logo" className="flex items-center" to="/">
@@ -243,30 +225,6 @@ const HomeStartupPage = (props) => {
                 <Navbar.Collapse className="justify-center col-auto col-lg-8">
                     <Menu {...props} />
                 </Navbar.Collapse>
-                <Col lg={2} xs={"auto"} className="justify-end pe-0 flex items-center">
-                    <div className="md:hidden pl-[17px]">
-                        <HamburgerMenu className="" theme="dark">
-                            <Col
-                                className="flex flex-col justify-center px-[50px] py-[70px] w-[500px] h-[100vh] shadow-[0_0_20px_rgba(0,0,0,0.3)] right-0 text-center bg-white">
-                                <ReactCustomScrollbar className="pl-[15px]" theme="dark">
-                                    <div>
-                                        <h1 className="mb-0 font-bold tracking-[-3px] text-darkgray font-serif uppercase">Hello</h1>
-                                        <p className="text-lg text-[#27ae60] font-serif uppercase block">Let's be
-                                            friends.</p>
-                                        <div className="my-20 w-full">
-                                            <StaticInstagram className=""/>
-                                        </div>
-                                        <p className="w-[70%] mb-12 text-darkgray leading-[26px] text-lg font-serif mx-auto inline-block">Get
-                                            latest update for our trusted applications</p>
-                                        
-                                        <SocialIcons theme="social-icon-style-05" size="sm" iconColor="dark"
-                                                     data={SocialIconsData}/>
-                                    </div>
-                                </ReactCustomScrollbar>
-                            </Col>
-                        </HamburgerMenu>
-                    </div>
-                </Col>
             </HeaderNav>
         </Header>
         {/* Header End */}

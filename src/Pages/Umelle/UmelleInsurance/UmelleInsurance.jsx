@@ -3,14 +3,11 @@ import React, {lazy, useEffect} from 'react'
 // Libraries
 import {Link} from 'react-router-dom';
 import {Col, Container, Navbar, Row} from "react-bootstrap";
-import * as Yup from 'yup';
-import {AnimatePresence, m} from 'framer-motion';
-import {Form, Formik} from 'formik';
+import {m} from 'framer-motion';
 import ReactGA from 'react-ga4';
 
 // Components
-import {resetForm, ScrollToAnchor, sendEmail} from "../../../Functions/Utilities";
-import {Input} from '../../../Components/Form/Form'
+import {ScrollToAnchor} from "../../../Functions/Utilities";
 import FooterMenu, {Footer} from '../../../Components/Footers/Footer';
 import InViewPort from '../../../Components/InViewPort';
 import {Parallax} from 'react-scroll-parallax';
@@ -21,33 +18,15 @@ import {fadeIn} from "../../../Functions/GlobalAnimations";
 import IconWithText from "../../../Components/IconWithText/IconWithText";
 import SEO from "../../../Components/Umelle/SEO";
 
-const HamburgerMenu = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.HamburgerMenu})))
 const Header = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Header})))
 const HeaderNav = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.HeaderNav})))
 const Menu = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Menu})))
 
 const Buttons = lazy(() => import('../../../Components/Button/Buttons'))
 const Overlap = lazy(() => import('../../../Components/Overlap/Overlap'))
-const ReactCustomScrollbar = lazy(() => import("../../../Components/ReactCustomScrollbar"))
-const MessageBox = lazy(() => import('../../../Components/MessageBox/MessageBox'))
-const SocialIcons = lazy(() => import("../../../Components/SocialIcon/SocialIcons"))
 const SideButtons = lazy(() => import("../../../Components/SideButtons"))
-const StaticInstagram = lazy(() => import('../../../Components/Instagram/StaticInstagram'))
 
 // Filter the blog data category wise
-
-const SocialIconsData = [{
-    color: "#3b5998", link: "https://www.facebook.com/", icon: "fab fa-facebook-f"
-}, {
-    color: "#ea4c89", link: "https://dribbble.com/", icon: "fab fa-dribbble"
-}, {
-    color: "#00aced", link: "https://twitter.com/", icon: "fab fa-twitter"
-}, {
-    color: "#fe1f49", link: "https://www.instagram.com/", icon: "fab fa-instagram"
-}, {
-    color: "#0077b5", link: "https://www.linkedin.com/", icon: "fab fa-linkedin-in"
-},]
-
 const FeaturesData = [
     {
         icon: "line-icon-Add-UserStar text-basecolor text-[40px] text-gradient bg-gradient-to-r from-[#3844F7]  to-[#902CFC]",
@@ -115,62 +94,6 @@ const UmelleInsuranceManagementSuite = (props) => {
                 <Navbar.Collapse className="justify-center col-auto col-lg-8">
                     <Menu {...props} />
                 </Navbar.Collapse>
-                <Col lg={2} xs={"auto"} className="justify-end pe-0 flex items-center">
-                    <div className="md:hidden pl-[17px]">
-                        <HamburgerMenu className="" theme="dark">
-                            <Col
-                                className="flex flex-col justify-center px-[50px] py-[70px] w-[500px] h-[100vh] shadow-[0_0_20px_rgba(0,0,0,0.3)] right-0 text-center bg-white">
-                                <ReactCustomScrollbar className="pl-[15px]" theme="dark">
-                                    <div>
-                                        <h1 className="mb-0 font-bold tracking-[-3px] text-darkgray font-serif uppercase">Hello</h1>
-                                        <p className="text-lg text-[#27ae60] font-serif uppercase block">Let's be
-                                            friends.</p>
-                                        <div className="my-20 w-full">
-                                            <StaticInstagram className=""/>
-                                        </div>
-                                        <p className="w-[70%] mb-12 text-darkgray leading-[26px] text-lg font-serif mx-auto inline-block">Get
-                                            latest update for our trusted applications</p>
-                                        <Formik
-                                            initialValues={{email: ''}}
-                                            validationSchema={Yup.object().shape({email: Yup.string().email("Invalid email.").required("Field is required."),})}
-                                            onSubmit={async (values, actions) => {
-                                                actions.setSubmitting(true)
-                                                const response = await sendEmail(values)
-                                                response.status === "success" && resetForm(actions)
-                                            }}
-                                        >
-                                            {({isSubmitting, status}) => (
-                                                <div className="relative subscribe-style-05 mb-20">
-                                                    <Form className="relative">
-                                                        <Input showErrorMsg={false} type="email" name="email"
-                                                               className="border-[1px] medium-input rounded-[5px] border-solid border-[#dfdfdf]"
-                                                               placeholder="Enter your email address"/>
-                                                        <button aria-label="Subscribe" type="submit"
-                                                                className={`text-xs leading-[18px] py-[12px] px-[28px] uppercase xs:text-center${isSubmitting ? " loading" : ""}`}>
-                                                            <i className="far fa-envelope text-basecolor text-sm leading-none mr-[10px] xs:mr-0"></i>Subscribe
-                                                        </button>
-                                                    </Form>
-                                                    <AnimatePresence>
-                                                        {status &&
-                                                            <m.div initial={{opacity: 0}} animate={{opacity: 1}}
-                                                                   exit={{opacity: 0}}
-                                                                   className="mt-[25px] top-[115%] left-0 w-full">
-                                                                <MessageBox
-                                                                    className="rounded-[4px] text-md py-[10px] px-[22px] z-10"
-                                                                    theme="message-box01" variant="success"
-                                                                    message="Your message has been sent successfully subscribed to our email list!"/>
-                                                            </m.div>}
-                                                    </AnimatePresence>
-                                                </div>)}
-                                        </Formik>
-                                        <SocialIcons theme="social-icon-style-05" size="sm" iconColor="dark"
-                                                     data={SocialIconsData}/>
-                                    </div>
-                                </ReactCustomScrollbar>
-                            </Col>
-                        </HamburgerMenu>
-                    </div>
-                </Col>
             </HeaderNav>
         </Header>
         {/* Header End */}
