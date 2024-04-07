@@ -4,6 +4,7 @@ import React, { Suspense, useEffect, useState, lazy } from "react";
 import {Routes, Route, useLocation, Navigate} from "react-router-dom";
 import retina from "retinajs";
 import { AnimatePresence } from "framer-motion";
+import ReactPixel from 'react-facebook-pixel';
 
 // Context
 import GlobalContext from "./Context/Context";
@@ -76,8 +77,13 @@ function App() {
   const helmetContext = {};
 
   ScrollToAnchor();
-
-  
+    const advancedMatching = { em: 'test@umelle.com' }; // optional, more info: https://developers.facebook.com/docs/facebook-pixel/advanced/advanced-matching
+    const options = {
+        autoConfig: true, // set pixel's autoConfig. More info: https://developers.facebook.com/docs/facebook-pixel/advanced/
+        debug: false, // enable logs
+    };
+    ReactPixel.init(process.env.REACT_APP_FACEBOOK_PIXEL_ID, advancedMatching, options);
+    ReactPixel.pageView(); // For tracking page vie
   return (
     <GlobalContext.Provider
       value={{
