@@ -372,9 +372,9 @@ const HomeStartupPage = (props) => {
                          className="cover-background relative cover-background lg:py-[90px] md:py-[75px] sm:py-[50px]">
                         <Col xs={12} className="text-center my-[5rem] md:my-[7.5rem]">
                         <div className="justify-center align-items-center text-center d-flex flex-col">
-                                <h3 className="text-center bg-trasparent text-black m-3 w-[400px]">
+                                <h6 className="text-center font-serif bg-trasparent text-black m-3 w-[400px]">
                                 Connect with Our Experts and Get a Free Quote
-                                </h3>
+                                </h6>
                             </div>
                             <Buttons ariaLabel="button"
                                      href="/contact"

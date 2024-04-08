@@ -94,24 +94,25 @@ const ContactSuccessCustom = (props) => {
             {/* Section End */}
 
             {/* Section Start */}
-            <m.section
-                className="py-[160px] lg:py-[120px] md:py-[75px] sm:py-[50px] xs:py-[80px] xxs:py-[50px]"  {...fadeIn}>
-                <Row>
-                        <Col className='mb-[6%]'>
-                            <h6 className="font-serif text-gray-900 text-center font-medium mb-[25px] lg:mb-[15px]">
-                                Thank you for filling our form! We will get back to you and begin your custom software experience.
-                            </h6>
-                        </Col>
-                        <Col className="text-right sm:text-center">
-                        <Link to="/">
-                                    <Buttons ariaLabel="button"
-                                             href="/"
-                                             className="mx-[10px] font-medium font-serif uppercase rounded-none lg:mb-[15px] landscape:lg:mb-[15px] justify-center align-items-center mt-4"
-                                             themeColor={["#3844F7", "#902CFC"]} size="md" color="#fff"
-                                             title="Back to Home Page"/>
+            <m.section className="py-[160px] lg:py-[120px] md:py-[75px] sm:py-[50px] xs:py-[80px] xxs:py-[50px]"  {...fadeIn}>
+                    <Container>    
+                        <Row className="justify-content-between align-items-center">
+                            <Col md={6} className="text-center text-md-left">
+                                <h6 className="font-serif text-gray-900 text-center font-medium mb-[25px] lg:mb-[15px]">
+                                    Thank you for filling our form! We will get back to you and begin your custom software experience.
+                                </h6>
+                            </Col>
+                            <Col md={6} className="d-flex justify-content-md-start justify-content-center">
+                                <Link to="/">
+                                        <Buttons ariaLabel="button"
+                                                href="/"
+                                                className="mx-[10px] font-medium font-serif uppercase rounded-none lg:mb-[15px] landscape:lg:mb-[15px] justify-center align-items-center mt-4"
+                                                themeColor={["#3844F7", "#902CFC"]} size="md" color="#fff"
+                                                title="Back to Home Page"/>
                                 </Link>
-                        </Col>
-                </Row>
+                            </Col>
+                        </Row>
+                    </Container>
             </m.section>
             {/* Section End */}
 
