@@ -1,4 +1,4 @@
-import React, {lazy} from 'react'
+import React, {lazy, useEffect} from 'react'
 
 // Libraries
 import {Link} from 'react-router-dom';
@@ -9,14 +9,13 @@ import { m} from 'framer-motion';
 import {fadeIn} from '../../../Functions/GlobalAnimations';
 
 // Components
-import { ScrollToAnchor} from "../../../Functions/Utilities";
+import {analyticsEvent, ScrollToAnchor} from "../../../Functions/Utilities";
 import FooterMenu, {Footer} from '../../../Components/Footers/Footer';
 import InViewPort from '../../../Components/InViewPort';
 
 // Data
 import FooterData from '../../../Components/Footers/FooterData';
 import SEO from "../../../Components/Umelle/SEO";
-import ReactPixel from "react-facebook-pixel";
 
 const Header = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Header})))
 const HeaderNav = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.HeaderNav})))
@@ -28,18 +27,13 @@ const SideButtons = lazy(() => import("../../../Components/SideButtons"))
 
 const Footer_Data = [FooterData[0], FooterData[1], FooterData[4], FooterData[3]]
 
-const advancedMatching = { em: 'test@umelle.com' }; // optional, more info: https://developers.facebook.com/docs/facebook-pixel/advanced/advanced-matching
-const options = {
-    autoConfig: true, // set pixel's autoConfig. More info: https://developers.facebook.com/docs/facebook-pixel/advanced/
-    debug: true, // enable logs
-};
-
-ReactPixel.init(process.env.REACT_APP_FACEBOOK_PIXEL_ID, advancedMatching, options);
-ReactPixel.pageView(); // For tracking page vie
 
 const ContactSuccessCustom = (props) => {
-    ScrollToAnchor();
+    useEffect(() => {
+        analyticsEvent('page_view',null);
+    },[])
     
+    ScrollToAnchor();
     return (<div style={props.style}>
         {/*SEO Starts*/}
         <SEO
@@ -77,6 +71,7 @@ const ContactSuccessCustom = (props) => {
                 <Navbar.Collapse className="justify-center col-auto col-lg-8">
                     <Menu {...props} />
                 </Navbar.Collapse>
+                <Col lg={2} xs={"auto"} className="justify-end pe-0 flex items-center"></Col>
             </HeaderNav>
         </Header>
         {/* Header End */}

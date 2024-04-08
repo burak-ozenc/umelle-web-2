@@ -1,4 +1,4 @@
-import React, {lazy} from 'react'
+import React, {lazy, useEffect} from 'react'
 
 // Libraries
 import {Link} from 'react-router-dom';
@@ -9,7 +9,7 @@ import { m} from 'framer-motion';
 import {fadeIn} from '../../../Functions/GlobalAnimations';
 
 // Components
-import { ScrollToAnchor} from "../../../Functions/Utilities";
+import {analyticsEvent, ScrollToAnchor} from "../../../Functions/Utilities";
 import FooterMenu, {Footer} from '../../../Components/Footers/Footer';
 import InViewPort from '../../../Components/InViewPort';
 
@@ -29,16 +29,14 @@ const SideButtons = lazy(() => import("../../../Components/SideButtons"))
 
 const Footer_Data = [FooterData[0], FooterData[1], FooterData[4], FooterData[3]]
 
-const advancedMatching = { em: 'test@umelle.com' }; // optional, more info: https://developers.facebook.com/docs/facebook-pixel/advanced/advanced-matching
-const options = {
-    autoConfig: true, // set pixel's autoConfig. More info: https://developers.facebook.com/docs/facebook-pixel/advanced/
-    debug: true, // enable logs
-};
 
-ReactPixel.init(process.env.REACT_APP_FACEBOOK_PIXEL_ID, advancedMatching, options);
 ReactPixel.pageView(); // For tracking page vie
 
 const ContactSuccess = (props) => {
+    useEffect(() => {
+        analyticsEvent('page_view',null);
+    },[])
+    
     ScrollToAnchor();
     
     return (<div style={props.style}>

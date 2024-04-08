@@ -29,7 +29,6 @@ const Features = (props) => {
     const recaptcha = useRef()
 
     const sendEmail = (values) => {
-        console.log('features values', values)
         emailjs
             .send(process.env.REACT_APP_EMAIL_SERVICE_ID, process.env.REACT_APP_EMAIL_FEATURES_TEMPLATE_ID, values, {
                 publicKey: process.env.REACT_APP_EMAIL_PUBLIC_KEY,
@@ -56,7 +55,7 @@ const Features = (props) => {
                             onSubmit={async (values, actions) => {
                                 actions.setSubmitting(true)
                                 const response = await sendEmail(values)
-                                console.log(response.status)
+                                
                                 // if (values.recaptcha !== '') {
                                 //     const response = await sendEmail(values)
                                 //     response.status === "success" && resetForm(actions, recaptcha);

@@ -22,8 +22,7 @@ exec(
     './node_modules/purgecss/bin/purgecss.js -css build/static/css/*.css --content build/index.html build/static/js/*.js -o build/static/css/',
     function (error, stdout, stderr) {
         console.log('PurgeCSS done');
-        console.log(data);
-
+        
         for (let d of data) {
 // get new file size
             const newSize = getFilesizeInKiloBytes('./build/static/css/' + d.file) + 'kb';

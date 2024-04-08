@@ -1,4 +1,4 @@
-import React, {lazy, useRef, useState} from 'react'
+import React, {lazy, useRef, useState, useEffect} from 'react'
 
 // Libraries
 import {Link, useNavigate} from 'react-router-dom';
@@ -24,9 +24,7 @@ import {ProgressBarData02} from "../../../Components/ProgressBar/ProgressBarData
 import {ContactFormStyle02Schema} from "../../../Components/Form/FormSchema";
 import ReCAPTCHA from "react-google-recaptcha";
 import * as emailjs from "@emailjs/browser";
-import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import ReactPixel from "react-facebook-pixel";
 
 
 const IconWithText = lazy(() => import('../../../Components/IconWithText/IconWithText'))
@@ -54,10 +52,12 @@ const HomeStartupPage = (props) => {
     const [message, setMessage] = useState('')
     const navigate = useNavigate();
     const location = useLocation();
+    
     useEffect(() => {
-        // Your existing useEffect code for handling hash, if any, remains here
         analyticsEvent('page_view',null);
-
+    },[])
+    
+    useEffect(() => {
         // Google Analytics page view tracking
         if (window.gtag) {
             window.gtag('config', 'G-3XCZ8B0MR9', {
@@ -84,14 +84,6 @@ const HomeStartupPage = (props) => {
             );
     };
 
-    const advancedMatching = { em: 'test@umelle.com' }; // optional, more info: https://developers.facebook.com/docs/facebook-pixel/advanced/advanced-matching
-    const options = {
-        autoConfig: true, // set pixel's autoConfig. More info: https://developers.facebook.com/docs/facebook-pixel/advanced/
-        debug: true, // enable logs
-    };
-
-    ReactPixel.init(process.env.REACT_APP_FACEBOOK_PIXEL_ID, advancedMatching, options);
-    ReactPixel.pageView(); // For tracking page vie
     
     return (<div style={props.style}>
         {/*SEO Starts*/}
@@ -232,8 +224,8 @@ const HomeStartupPage = (props) => {
                                         if (values.recaptcha !== '') {
                                             analyticsEvent('featuresFormSubmit',values);
                                             const response = await sendEmail(values);
+                                            response.status === "success" && analyticsEvent('FeaturesFunctions',values);
                                             response.status === "success" && resetForm(actions, recaptcha);
-                                            
                                         } else {
                                             recaptcha.current.captcha.classList.add("error")
                                         }

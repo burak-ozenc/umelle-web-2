@@ -7,7 +7,7 @@ import {m} from 'framer-motion';
 import ReactGA from 'react-ga4';
 
 // Components
-import {ScrollToAnchor} from "../../../Functions/Utilities";
+import {analyticsEvent, ScrollToAnchor} from "../../../Functions/Utilities";
 import FooterMenu, {Footer} from '../../../Components/Footers/Footer';
 import InViewPort from '../../../Components/InViewPort';
 import {Parallax} from 'react-scroll-parallax';
@@ -56,6 +56,10 @@ const UmelleInsuranceManagementSuite = (props) => {
         // Send pageview with a custom path
         ReactGA.send({hitType: "pageview", page: "/aw-stg-landingp", title: "Landing Page"});
     }, [])
+
+    useEffect(() => {
+        analyticsEvent('page_view',null);
+    },[])
     
     return (<div style={props.style}>
         {/*SEO Starts*/}

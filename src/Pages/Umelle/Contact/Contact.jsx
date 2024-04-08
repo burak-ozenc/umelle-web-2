@@ -55,14 +55,14 @@ const HomeStartupPage = (props) => {
                 (error) => {
                     console.log('FAILED...', error);
                     setSent(false)
-                    setMessage("An error occured while submitting. Please send email to admin@umelle.com")
+                    setMessage("An error occurred while submitting. Please send email to admin@umelle.com")
                 },
             );
     };
 
     const [sent, setSent] = useState(true)
     const [message, setMessage] = useState('')
-
+    
     return (<div style={props.style}>
         {/*SEO Starts*/}
         <SEO
@@ -100,6 +100,7 @@ const HomeStartupPage = (props) => {
                 <Navbar.Collapse className="justify-center col-auto col-lg-8">
                     <Menu {...props} />
                 </Navbar.Collapse>
+                <Col lg={2} xs={"auto"} className="justify-end pe-0 flex items-center"></Col>
             </HeaderNav>
         </Header>
         {/* Header End */}
@@ -138,6 +139,7 @@ const HomeStartupPage = (props) => {
                                     if (values.recaptcha !== '') {
                                         const response = await sendEmail(values)
                                         
+                                        response.status === "success" && analyticsEvent('contact',values);
                                         response.status === "success" && resetForm(actions, recaptcha);
                                     } else {
                                         recaptcha.current.captcha.classList.add("error")

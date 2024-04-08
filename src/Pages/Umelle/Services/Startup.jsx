@@ -43,9 +43,6 @@ const HomeStartupPage = (props) => {
     const location = useLocation();
 
     useEffect(() => {
-        // Your existing useEffect code for handling hash, if any, remains here
-        analyticsEvent('page_view',null);
-
         // Google Analytics page view tracking
         if (window.gtag) {
             window.gtag('config', 'G-3XCZ8B0MR9', {
@@ -55,6 +52,9 @@ const HomeStartupPage = (props) => {
     }, [location]); // This ensures the tracking code runs every time the route changes
     ScrollToAnchor();
 
+    useEffect(() => {
+        analyticsEvent('page_view',null);
+    },[])
     
     
     return (<div style={props.style}>

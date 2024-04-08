@@ -12,6 +12,7 @@ import GlobalContext from "./Context/Context";
 import ScrollToTopButton from "./Components/ScrollToTop"
 import {ScrollToAnchor} from "./Functions/Utilities";
 import { HelmetProvider} from "react-helmet-async";
+import ReactPixel from "react-facebook-pixel";
 
 // Home
 const UmelleHome = lazy(() => import("./Pages/Umelle/Home/Startup"))
@@ -33,6 +34,14 @@ function App() {
     isOpen: false
   })
   const location = useLocation();
+
+    const advancedMatching = { em: 'test@umelle.com' }; // optional, more info: https://developers.facebook.com/docs/facebook-pixel/advanced/advanced-matching
+    const options = {
+        autoConfig: true, // set pixel's autoConfig. More info: https://developers.facebook.com/docs/facebook-pixel/advanced/
+        debug: true, // enable logs
+    };
+
+    ReactPixel.init(process.env.REACT_APP_FACEBOOK_PIXEL_ID, advancedMatching, options);
 
   // RetinaJS
   useEffect(() => {

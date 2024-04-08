@@ -70,6 +70,7 @@ const HomeStartupPage = (props) => {
                 <Navbar.Collapse className="justify-center col-auto col-lg-8">
                     <Menu {...props} />
                 </Navbar.Collapse>
+                <Col lg={2} xs={"auto"} className="justify-end pe-0 flex items-center"></Col>
             </HeaderNav>
         </Header>
         {/* Header End */}

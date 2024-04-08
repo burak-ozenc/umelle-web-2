@@ -31,7 +31,6 @@ import * as emailjs from "@emailjs/browser";
 import SEO from "../../../Components/Umelle/SEO";
 import { useLocation } from 'react-router-dom';
 import {Parallax} from 'react-scroll-parallax';
-import ReactPixel from "react-facebook-pixel";
 
 const Header = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Header})))
 const HeaderNav = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.HeaderNav})))
@@ -51,9 +50,6 @@ const HomeStartupPage = (props) => {
     const navigate = useNavigate();
     
     useEffect(() => {
-        // Your existing useEffect code for handling hash, if any, remains here
-        analyticsEvent('page_view',null);
-
         // Google Analytics page view tracking
         if (window.gtag) {
             window.gtag('config', 'G-3XCZ8B0MR9', {
@@ -66,11 +62,14 @@ const HomeStartupPage = (props) => {
     const recaptcha = useRef()
     const [anchorKey, setAnchorKey] = useState(0)
     // ScrollToAnchor();
-    console.log(window.location.hash.split('#'))
 
 
     const [sent, setSent] = useState(true)
     const [message, setMessage] = useState('')
+
+    useEffect(() => {
+        analyticsEvent('page_view',null);
+    },[])
 
     const sendEmail = (values) => {
         emailjs
@@ -423,8 +422,8 @@ const HomeStartupPage = (props) => {
                                         actions.setSubmitting(true)
                                         if (values.recaptcha !== '') {
                                             const response = await sendEmail(values)
+                                            response.status === "success" && analyticsEvent('FeaturesFunctions',values);
                                             response.status === "success" && resetForm(actions, recaptcha);
-                                            ReactPixel.track('featuresFormSubmit', values);
                                         } else {
                                             recaptcha.current.captcha.classList.add("error")
                                         }
