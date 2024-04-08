@@ -507,7 +507,7 @@ const HomeStartupPage = (props) => {
             {/* CTA Banner Section Start */}
             <section className="lg:pt-[160px] md:pt-[10px] sm:pt-[50px] ">
                 <Container fluid>
-                    <Row style={{backgroundImage: `url('/assets/img/HomePage_CTRBanner_LV-01.webp')`}}
+                    <Row style={{backgroundImage: `url('/assets/img/Untitled-6-01.webp')`}}
                          className="cover-background relative cover-background lg:py-[90px] md:py-[75px] sm:py-[50px] text-center align-items-center">
                         <Col xs={12} md={6} className="my-[5rem] md:my-[7.5rem] d-flex justify-content-end align-items-center">
                             <h6 className="bg-transparent text-md-end text-center text-black m-0 w-[500px]">
