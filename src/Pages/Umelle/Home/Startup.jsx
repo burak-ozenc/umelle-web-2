@@ -10,7 +10,7 @@ import {Form, Formik} from 'formik';
 import {fadeIn} from '../../../Functions/GlobalAnimations';
 
 // Components
-import {resetForm, ScrollToAnchor} from "../../../Functions/Utilities";
+import {analyticsEvent, resetForm, ScrollToAnchor} from "../../../Functions/Utilities";
 import {Checkbox, Input} from '../../../Components/Form/Form'
 import FooterMenu, {Footer} from '../../../Components/Footers/Footer';
 import InViewPort from '../../../Components/InViewPort';
@@ -56,6 +56,7 @@ const HomeStartupPage = (props) => {
     const location = useLocation();
     useEffect(() => {
         // Your existing useEffect code for handling hash, if any, remains here
+        analyticsEvent('page_view',null);
 
         // Google Analytics page view tracking
         if (window.gtag) {
@@ -229,9 +230,10 @@ const HomeStartupPage = (props) => {
                                     onSubmit={async (values, actions) => {
                                         actions.setSubmitting(true)
                                         if (values.recaptcha !== '') {
-                                            const response = await sendEmail(values)
+                                            analyticsEvent('featuresFormSubmit',values);
+                                            const response = await sendEmail(values);
                                             response.status === "success" && resetForm(actions, recaptcha);
-                                            ReactPixel.track('featuresFormSubmit', values);
+                                            
                                         } else {
                                             recaptcha.current.captcha.classList.add("error")
                                         }

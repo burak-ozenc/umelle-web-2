@@ -2,6 +2,29 @@ import Isotope from "isotope-layout";
 import Swiper from "swiper"
 import {useLocation} from "react-router-dom";
 import {useEffect, useRef} from "react";
+import ReactPixel from "react-facebook-pixel";
+
+const pixelID = process.env.REACT_APP_FACEBOOK_PIXEL_ID
+
+export const analyticsEvent = (event_name, value) => {
+    const advancedMatching = {em: 'test@umelle.com'}; // optional, more info: https://developers.facebook.com/docs/facebook-pixel/advanced/advanced-matching
+    const options = {
+        autoConfig: true, // set pixel's autoConfig. More info: https://developers.facebook.com/docs/facebook-pixel/advanced/
+        debug: true, // enable logs
+    };
+    
+    if (pixelID) {
+        ReactPixel.init(pixelID, advancedMatching, options);
+        if (event_name === 'page_view') {
+            ReactPixel.pageView()
+        } else {
+            ReactPixel.track(event_name, value)
+        }
+    }
+
+    return null;
+}
+
 
 export const getCookie = (name) => {
     var cookieArr = document.cookie.split(";");
@@ -91,7 +114,7 @@ export const InputField = (value) => {
 }
 
 export const sendEmail = async (data) => {
-    console.log('data ',data)
+    console.log('data ', data)
     const req = await fetch(`${process.env.REACT_APP_API_URL}/sendemail`, {
         method: 'post',
         headers: {"Content-Type": "application/json", "Ocp-Apim-Subscription-Key": "d43da0ebf77f4e2db7bd5d9b84c455bd"},

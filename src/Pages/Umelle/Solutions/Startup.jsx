@@ -10,7 +10,7 @@ import {Form, Formik} from 'formik';
 import {fadeIn} from '../../../Functions/GlobalAnimations';
 
 // Components
-import {resetForm, ScrollToAnchor} from "../../../Functions/Utilities";
+import {analyticsEvent, resetForm, ScrollToAnchor} from "../../../Functions/Utilities";
 import {Checkbox, Input} from '../../../Components/Form/Form'
 import FooterMenu, {Footer} from '../../../Components/Footers/Footer';
 import InViewPort from '../../../Components/InViewPort';
@@ -52,6 +52,7 @@ const HomeStartupPage = (props) => {
     
     useEffect(() => {
         // Your existing useEffect code for handling hash, if any, remains here
+        analyticsEvent('page_view',null);
 
         // Google Analytics page view tracking
         if (window.gtag) {
@@ -178,15 +179,7 @@ const HomeStartupPage = (props) => {
             window.onhashchange = null;
         };
     }, []); // Empty dependency array to run only once after initial mount
-
-    const advancedMatching = { em: 'test@umelle.com' }; // optional, more info: https://developers.facebook.com/docs/facebook-pixel/advanced/advanced-matching
-    const options = {
-        autoConfig: true, // set pixel's autoConfig. More info: https://developers.facebook.com/docs/facebook-pixel/advanced/
-        debug: true, // enable logs
-    };
-
-    ReactPixel.init(process.env.REACT_APP_FACEBOOK_PIXEL_ID, advancedMatching, options);
-    ReactPixel.pageView(); // For tracking page vie
+    
 
     return (<div style={props.style}>
         {/*SEO Starts*/}

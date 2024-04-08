@@ -10,7 +10,7 @@ import {Form, Formik} from 'formik';
 import {fadeIn} from '../../../Functions/GlobalAnimations';
 
 // Components
-import {resetForm, ScrollToAnchor} from "../../../Functions/Utilities";
+import {analyticsEvent, resetForm, ScrollToAnchor} from "../../../Functions/Utilities";
 import {Input, TextArea} from '../../../Components/Form/Form'
 import FooterMenu, {Footer} from '../../../Components/Footers/Footer';
 import InViewPort from '../../../Components/InViewPort';
@@ -21,7 +21,6 @@ import {ContactFormStyle03Schema} from "../../../Components/Form/FormSchema";
 import * as emailjs from "@emailjs/browser";
 import ReCAPTCHA from "react-google-recaptcha";
 import SEO from "../../../Components/Umelle/SEO";
-import ReactPixel from "react-facebook-pixel";
 
 const Header = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Header})))
 const HeaderNav = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.HeaderNav})))
@@ -39,9 +38,10 @@ const HomeStartupPage = (props) => {
 
     const navigate = useNavigate();
 
+    
 
     const sendEmail = (values) => {
-        ReactPixel.track('TEST74787', values);
+        analyticsEvent('submitContactForm',values)
         
         emailjs
             .send(process.env.REACT_APP_EMAIL_SERVICE_ID, process.env.REACT_APP_EMAIL_CONTACT_TEMPLATE_ID, values, {

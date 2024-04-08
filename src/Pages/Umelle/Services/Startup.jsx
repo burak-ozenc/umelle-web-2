@@ -10,7 +10,7 @@ import { domMax, LazyMotion, m} from 'framer-motion';
 import {fadeIn} from '../../../Functions/GlobalAnimations';
 
 // Components
-import { ScrollToAnchor } from "../../../Functions/Utilities";
+import {analyticsEvent, ScrollToAnchor} from "../../../Functions/Utilities";
 import FooterMenu, {Footer} from '../../../Components/Footers/Footer';
 import InViewPort from '../../../Components/InViewPort';
 
@@ -32,7 +32,6 @@ import SEO from "../../../Components/Umelle/SEO";
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import {IconWithTextData_02} from "../../../Components/IconWithText/IconWithTextData";
-import ReactPixel from "react-facebook-pixel";
 const Header = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Header})))
 const HeaderNav = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.HeaderNav})))
 const Menu = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Menu})))
@@ -45,6 +44,7 @@ const HomeStartupPage = (props) => {
 
     useEffect(() => {
         // Your existing useEffect code for handling hash, if any, remains here
+        analyticsEvent('page_view',null);
 
         // Google Analytics page view tracking
         if (window.gtag) {
@@ -55,14 +55,7 @@ const HomeStartupPage = (props) => {
     }, [location]); // This ensures the tracking code runs every time the route changes
     ScrollToAnchor();
 
-    const advancedMatching = { em: 'test@umelle.com' }; // optional, more info: https://developers.facebook.com/docs/facebook-pixel/advanced/advanced-matching
-    const options = {
-        autoConfig: true, // set pixel's autoConfig. More info: https://developers.facebook.com/docs/facebook-pixel/advanced/
-        debug: true, // enable logs
-    };
-
-    ReactPixel.init(process.env.REACT_APP_FACEBOOK_PIXEL_ID, advancedMatching, options);
-    ReactPixel.pageView(); // For tracking page vie
+    
     
     return (<div style={props.style}>
         {/*SEO Starts*/}
