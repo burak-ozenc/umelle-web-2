@@ -103,7 +103,7 @@ const UmelleInsuranceManagementSuite = (props) => {
 
         {/* Section Start */}
         <section className="bg-cover bg-no-repeat overflow-visible bg-center"
-                 style={{backgroundImage: "url(/assets/img/Header_LandingPage_TESTT-02-03-01.png)"}}>
+                 style={{backgroundImage: "url(/assets/img/Header_LandingPage_TESTT-02-03-01.webp)"}}>
             <Container>
                 <Row className="justify-center sm:text-center">
                     <Col lg={7} xl={7} md={7} sm={8}
@@ -204,13 +204,13 @@ const UmelleInsuranceManagementSuite = (props) => {
                                       speed={0}>
                                 <div
                                     className="absolute top-0 left-0 w-full h-full rounded-[6px] opacity-50 bg-gradient-to-r from-purple-500 to-pink-500"></div>
-                                <img loading="lazy" src="/assets/img/landing_page_section_back-01.png"
+                                <img loading="lazy" src="/assets/img/landing_page_section_back-01.webp"
                                      className="rounded-[6px] w-full" width="394.8" height="466.34" alt="our-process"/>
                             </Parallax>
                             <Parallax
                                 className="lg-no-parallax flex rounded-[6px] justify-center items-center w-[70%] bg-no-repeat absolute bottom-0 right-[15px] lg:!top-0 lg:ml-auto"
                                 speed={20}>
-                                <img loading="lazy" src="/assets/img/landing_page_section_front-01.png"
+                                <img loading="lazy" src="/assets/img/landing_page_section_front-01.webp"
                                      className="rounded-[6px] w-full" width="394.8" height="466.34" alt="our-process"/>
                             </Parallax>
                             {/* <img src="/assets/img/landing_page_section_front-01.png" alt=""></img> */}
