@@ -2,7 +2,7 @@ import React, {lazy, useEffect} from 'react'
 
 // Libraries
 import {Link} from 'react-router-dom';
-import {Col, Container, Row} from "react-bootstrap";
+import {Col, Container, Navbar, Row} from "react-bootstrap";
 import {m} from 'framer-motion';
 import ReactGA from 'react-ga4';
 
@@ -17,8 +17,10 @@ import FooterData from '../../../Components/Footers/FooterData';
 import {fadeIn} from "../../../Functions/GlobalAnimations";
 import IconWithText from "../../../Components/IconWithText/IconWithText";
 import SEO from "../../../Components/Umelle/SEO";
-// import UmelleHeader from "../../../Components/Header/UmelleHeader";
-const UmelleHeader = lazy(() => import('../../../Components/Header/UmelleHeader'))
+
+const Header = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Header})))
+const HeaderNav = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.HeaderNav})))
+const Menu = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Menu})))
 
 const Buttons = lazy(() => import('../../../Components/Button/Buttons'))
 const Overlap = lazy(() => import('../../../Components/Overlap/Overlap'))
@@ -65,7 +67,36 @@ const UmelleInsuranceManagementSuite = (props) => {
         {/*SEO Ends*/}
 
         {/* Header Start */}
-        <UmelleHeader/>
+        <Header topSpace={{md: true}} type="reverse-scroll">
+            <HeaderNav fluid="fluid" theme="light" expand="lg"
+                       className="py-[0px] px-[35px] md:px-[15px] md:py-[20px] sm:px-0">
+                <Col lg={2} sm={6} xs={"auto"} className="mr-auto ps-0">
+                    <Link aria-label="header logo" className="flex items-center" to="/">
+                        <Navbar.Brand className="inline-block p-0 m-0">
+                            <img className="default-logo" width="111" height="36"
+                                 src='/assets/img/webp/umelle-logo.webp'
+                                 data-rjs='/assets/img/webp/umelle-logo.webp' alt='logo'/>
+                            <img className="alt-logo" width="111" height="36"
+                                 src='/assets/img/webp/umelle-logo.webp'
+                                 data-rjs='/assets/img/webp/umelle-logo.webp' alt='logo'/>
+                            <img className="mobile-logo" width="111" height="36"
+                                 src='/assets/img/webp/umelle-logo.webp'
+                                 data-rjs='/assets/img/webp/umelle-logo.webp' alt='logo'/>
+                        </Navbar.Brand>
+                    </Link>
+                </Col>
+                <Navbar.Toggle className="order-last md:ml-[17px] w-[25px] min-h-[15px] inline-block align-middle">
+                    <span className="navbar-toggler-line"></span>
+                    <span className="navbar-toggler-line"></span>
+                    <span className="navbar-toggler-line"></span>
+                    <span className="navbar-toggler-line"></span>
+                </Navbar.Toggle>
+                <Navbar.Collapse className="justify-center col-auto col-lg-8">
+                    <Menu {...props} />
+                </Navbar.Collapse>
+                <Col lg={2} xs={"auto"} className="justify-end pe-0 flex items-center"></Col>
+            </HeaderNav>
+        </Header>
         {/* Header End */}
 
         <SideButtons/>

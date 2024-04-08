@@ -1,8 +1,8 @@
 import React, {lazy, useEffect, useRef, useState} from 'react'
 
 // Libraries
-import {useNavigate} from 'react-router-dom';
-import {Accordion, Col, Container, Row, Tab, Tabs} from "react-bootstrap";
+import {Link, useNavigate} from 'react-router-dom';
+import {Accordion, Col, Container, Navbar, Row, Tab, Tabs} from "react-bootstrap";
 import {AnimatePresence, domMax, LazyMotion, m} from 'framer-motion';
 import {Form, Formik} from 'formik';
 
@@ -32,7 +32,11 @@ import SEO from "../../../Components/Umelle/SEO";
 import { useLocation } from 'react-router-dom';
 import {Parallax} from 'react-scroll-parallax';
 import ReactPixel from "react-facebook-pixel";
-import UmelleHeader from "../../../Components/Header/UmelleHeader";
+
+const Header = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Header})))
+const HeaderNav = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.HeaderNav})))
+const Menu = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Menu})))
+
 const ProcessStep = lazy(() => import('../../../Components/ProcessStep/ProcessStep'))
 const MessageBox = lazy(() => import('../../../Components/MessageBox/MessageBox'))
 const SideButtons = lazy(() => import("../../../Components/SideButtons"))
@@ -187,7 +191,36 @@ const HomeStartupPage = (props) => {
         {/*SEO Ends*/}
 
         {/* Header Start */}
-        <UmelleHeader/>
+        <Header topSpace={{md: true}} type="reverse-scroll">
+            <HeaderNav fluid="fluid" theme="light" expand="lg"
+                       className="py-[0px] px-[35px] md:px-[15px] md:py-[20px] sm:px-0">
+                <Col lg={2} sm={6} xs={"auto"} className="mr-auto ps-0">
+                    <Link aria-label="header logo" className="flex items-center" to="/">
+                        <Navbar.Brand className="inline-block p-0 m-0">
+                            <img className="default-logo" width="111" height="36"
+                                 src='/assets/img/webp/umelle-logo.webp'
+                                 data-rjs='/assets/img/webp/umelle-logo.webp' alt='logo'/>
+                            <img className="alt-logo" width="111" height="36"
+                                 src='/assets/img/webp/umelle-logo.webp'
+                                 data-rjs='/assets/img/webp/umelle-logo.webp' alt='logo'/>
+                            <img className="mobile-logo" width="111" height="36"
+                                 src='/assets/img/webp/umelle-logo.webp'
+                                 data-rjs='/assets/img/webp/umelle-logo.webp' alt='logo'/>
+                        </Navbar.Brand>
+                    </Link>
+                </Col>
+                <Navbar.Toggle className="order-last md:ml-[17px] w-[25px] min-h-[15px] inline-block align-middle">
+                    <span className="navbar-toggler-line"></span>
+                    <span className="navbar-toggler-line"></span>
+                    <span className="navbar-toggler-line"></span>
+                    <span className="navbar-toggler-line"></span>
+                </Navbar.Toggle>
+                <Navbar.Collapse className="justify-center col-auto col-lg-8">
+                    <Menu {...props} />
+                </Navbar.Collapse>
+                <Col lg={2} xs={"auto"} className="justify-end pe-0 flex items-center"></Col>
+            </HeaderNav>
+        </Header>
         {/* Header End */}
 
         <SideButtons/>
