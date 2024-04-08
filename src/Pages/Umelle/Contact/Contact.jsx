@@ -41,6 +41,8 @@ const HomeStartupPage = (props) => {
 
 
     const sendEmail = (values) => {
+        ReactPixel.track('TEST74787', values);
+        
         emailjs
             .send(process.env.REACT_APP_EMAIL_SERVICE_ID, process.env.REACT_APP_EMAIL_CONTACT_TEMPLATE_ID, values, {
                 publicKey: process.env.REACT_APP_EMAIL_PUBLIC_KEY,
@@ -135,7 +137,7 @@ const HomeStartupPage = (props) => {
                                     actions.setSubmitting(true)
                                     if (values.recaptcha !== '') {
                                         const response = await sendEmail(values)
-                                        ReactPixel.track('contactFormSubmit', values);
+                                        
                                         response.status === "success" && resetForm(actions, recaptcha);
                                     } else {
                                         recaptcha.current.captcha.classList.add("error")
