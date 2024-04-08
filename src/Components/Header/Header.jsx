@@ -107,7 +107,7 @@ export const Header = memo((props) => {
 
     return (
         <header
-            className={`bg-white ${props.className ? props.className : ""}${scrollPos.y > 5 ? " sticky-header" : " sticky-header"} ${scrollPos.directionDown === false ? " header-appear" : ""} ${props.type ? ` ${props.type}` : ""
+            className={`bg-white m-auto ${props.className ? props.className : ""}${scrollPos.y > 5 ? " sticky-header" : " sticky-header"} ${scrollPos.directionDown === false ? " header-appear" : ""} ${props.type ? ` ${props.type}` : ""
             }`}
         >
             {props.children}
@@ -160,23 +160,6 @@ export const HeaderNav = (props) => {
 };
 /* Headernav Component End */
 
-/* Topbar Component Start */
-export const Topbar = ({className, ...props}) => {
-    useEffect(() => {
-        let topbar = document.querySelector(".top-bar");
-        if (typeof topbar != "undefined" && topbar != null) {
-            let topbarHeight = `${topbar.clientHeight}px`;
-            topbar.style.setProperty("--topbar-height", topbarHeight);
-        }
-    }, []);
-
-    return (
-        <div className={`top-bar${className ? ` ${className}` : ""}`} {...props}>
-            {props.children}
-        </div>
-    );
-};
-/* Topbar Component End */
 
 /* Menu Component Start */
 export const Menu = memo((props) => {

@@ -78,6 +78,7 @@ const ContactSuccess = (props) => {
                 <Navbar.Collapse className="justify-center col-auto col-lg-8">
                     <Menu {...props} />
                 </Navbar.Collapse>
+                <Col lg={2} xs={"auto"} className="justify-end pe-0 flex items-center"></Col>
             </HeaderNav>
         </Header>
         {/* Header End */}
@@ -97,18 +98,18 @@ const ContactSuccess = (props) => {
             {/* Section Start */}
             <m.section
                 className="py-[160px] lg:py-[120px] md:py-[75px] sm:py-[50px] xs:py-[80px] xxs:py-[50px]"  {...fadeIn}>
-                <Row>
+                <Row style={{width:'98vw'}}>
                         <Col className='mb-[6%]'>
                             <h6 className="font-serif text-gray-900 text-center font-medium mb-[25px] lg:mb-[15px]">
                             Thank you for contacting us! We will get back to you.
                             </h6>
                         </Col>
-                        <Col className="text-right sm:text-center">
+                        <Col className="sm:text-center">
                         <Link to="/home">
                                     <Buttons ariaLabel="button"
                                              href="/home"
-                                             className="mx-[10px] font-medium font-serif uppercase rounded-none lg:mb-[15px] landscape:lg:mb-[15px] justify-center align-items-center mt-4"
-                                             themeColor={["#3844F7", "#902CFC"]} size="md" color="#fff"
+                                             className="mx-[10px] font-medium font-serif uppercase rounded-none lg:mb-[15px] landscape:lg:mb-[15px] justify-center align-items-center"
+                                             themeColor={["#3844F7", "#902CFC"]} size="lg" color="#fff"
                                              title="Back to Home Page"/>
                                 </Link>
                         </Col>
