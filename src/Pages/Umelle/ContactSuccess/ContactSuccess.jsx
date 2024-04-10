@@ -16,7 +16,6 @@ import InViewPort from '../../../Components/InViewPort';
 // Data
 import FooterData from '../../../Components/Footers/FooterData';
 import SEO from "../../../Components/Umelle/SEO";
-import ReactPixel from "react-facebook-pixel";
 
 const Header = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Header})))
 const HeaderNav = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.HeaderNav})))
@@ -29,8 +28,6 @@ const SideButtons = lazy(() => import("../../../Components/SideButtons"))
 
 const Footer_Data = [FooterData[0], FooterData[1], FooterData[4], FooterData[3]]
 
-
-ReactPixel.pageView(); // For tracking page vie
 
 const ContactSuccess = (props) => {
     useEffect(() => {

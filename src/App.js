@@ -13,6 +13,7 @@ import ScrollToTopButton from "./Components/ScrollToTop"
 import {ScrollToAnchor} from "./Functions/Utilities";
 import { HelmetProvider} from "react-helmet-async";
 import ReactPixel from "react-facebook-pixel";
+import ReactGA from "react-ga4";
 
 // Home
 const UmelleHome = lazy(() => import("./Pages/Umelle/Home/Startup"))
@@ -42,7 +43,7 @@ function App() {
     };
 
     ReactPixel.init(process.env.REACT_APP_FACEBOOK_PIXEL_ID, advancedMatching, options);
-
+    ReactGA.initialize(process.env.REACT_APP_GOOGLE_LANDING_MEASUREMENT_ID);
   // RetinaJS
   useEffect(() => {
     window.addEventListener('load', retina(document.querySelectorAll('img')));

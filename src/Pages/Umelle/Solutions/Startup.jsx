@@ -31,6 +31,7 @@ import * as emailjs from "@emailjs/browser";
 import SEO from "../../../Components/Umelle/SEO";
 import { useLocation } from 'react-router-dom';
 import {Parallax} from 'react-scroll-parallax';
+import ReactGA from "react-ga4";
 
 const Header = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Header})))
 const HeaderNav = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.HeaderNav})))
@@ -422,6 +423,7 @@ const HomeStartupPage = (props) => {
                                         actions.setSubmitting(true)
                                         if (values.recaptcha !== '') {
                                             const response = await sendEmail(values)
+                                            response.status === "success" && ReactGA.send({hitType: "pageview", page: "/contact-success-custom", title: "Contact Success Page"});
                                             response.status === "success" && analyticsEvent('FeaturesFunctions',values);
                                             response.status === "success" && resetForm(actions, recaptcha);
                                         } else {

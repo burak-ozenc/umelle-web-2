@@ -52,7 +52,6 @@ const UmelleInsuranceManagementSuite = (props) => {
     ScrollToAnchor();
     
     useEffect(() => {
-        ReactGA.initialize(process.env.REACT_APP_GOOGLE_LANDING_MEASUREMENT_ID);
         // Send pageview with a custom path
         ReactGA.send({hitType: "pageview", page: "/aw-stg-landingp", title: "Landing Page"});
     }, [])
