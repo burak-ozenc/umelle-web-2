@@ -16,7 +16,7 @@ import InViewPort from '../../../Components/InViewPort';
 // Data
 import FooterData from '../../../Components/Footers/FooterData';
 import SEO from "../../../Components/Umelle/SEO";
-import ReactGA from "react-ga4";
+// import ReactGA from "react-ga4";
 
 const Header = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Header})))
 const HeaderNav = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.HeaderNav})))
@@ -36,10 +36,10 @@ const ContactSuccess = (props) => {
     },[])
 
 
-    useEffect(() => {
-        // Send pageview with a custom path
-        ReactGA.send({hitType: "pageview", page: "/contact-success", title: "Contact Success Page"});
-    }, [])
+    // useEffect(() => {
+    //     // Send pageview with a custom path
+    //     ReactGA.send({hitType: "pageview", page: "/contact-success", title: "Contact Success Page"});
+    // }, [])
     
     ScrollToAnchor();
     

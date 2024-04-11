@@ -4,7 +4,7 @@ import React, {lazy, useEffect} from 'react'
 import {Link} from 'react-router-dom';
 import {Col, Container, Navbar, Row} from "react-bootstrap";
 import {m} from 'framer-motion';
-import ReactGA from 'react-ga4';
+
 
 // Components
 import {analyticsEvent, ScrollToAnchor} from "../../../Functions/Utilities";
@@ -51,10 +51,10 @@ const Footer_Data = [FooterData[0], FooterData[1], FooterData[4], FooterData[3]]
 const UmelleInsuranceManagementSuite = (props) => {
     ScrollToAnchor();
     
-    useEffect(() => {
-        // Send pageview with a custom path
-        ReactGA.send({hitType: "pageview", page: "/aw-stg-landingp", title: "Landing Page"});
-    }, [])
+    // useEffect(() => {
+    //     // Send pageview with a custom path
+    //     ReactGA.send({hitType: "pageview", page: "/aw-stg-landingp", title: "Landing Page"});
+    // }, [])
 
     useEffect(() => {
         analyticsEvent('page_view',null);
