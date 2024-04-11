@@ -1,7 +1,7 @@
 import React, {lazy, useEffect} from 'react'
 
 // Libraries
-import {Link} from 'react-router-dom';
+import {Link, useNavigate, useSearchParams} from 'react-router-dom';
 import {Col, Container, Navbar, Row} from "react-bootstrap";
 import { m} from 'framer-motion';
 
@@ -31,15 +31,24 @@ const Footer_Data = [FooterData[0], FooterData[1], FooterData[4], FooterData[3]]
 
 
 const ContactSuccess = (props) => {
+    const navigate = useNavigate();
+    const [queryParameters] = useSearchParams()
+    
     useEffect(() => {
         analyticsEvent('page_view',null);
     },[])
-
-
-    // useEffect(() => {
+    
+    useEffect(() => {
+        const type = queryParameters.get("formSubmitted");
+        if (type === 'true'){
+            navigate(`/contact-success`);
+        }
     //     // Send pageview with a custom path
     //     ReactGA.send({hitType: "pageview", page: "/contact-success", title: "Contact Success Page"});
-    // }, [])
+        // eslint-disable-next-line
+    }, [])
+    
+    
     
     ScrollToAnchor();
     

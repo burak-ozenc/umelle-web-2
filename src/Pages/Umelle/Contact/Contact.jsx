@@ -50,7 +50,7 @@ const HomeStartupPage = (props) => {
             .then(
                 () => {
                     console.log('SUCCESS!');
-                    navigate(`/contact-success`);
+                    navigate(`/contact-success?formSubmitted=true`);
                 },
                 (error) => {
                     console.log('FAILED...', error);
