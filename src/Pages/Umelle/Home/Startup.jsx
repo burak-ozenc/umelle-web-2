@@ -25,7 +25,6 @@ import {ContactFormStyle02Schema} from "../../../Components/Form/FormSchema";
 import ReCAPTCHA from "react-google-recaptcha";
 import * as emailjs from "@emailjs/browser";
 import { useLocation } from 'react-router-dom';
-import ReactGA from "react-ga4";
 
 
 const IconWithText = lazy(() => import('../../../Components/IconWithText/IconWithText'))
@@ -225,7 +224,6 @@ const HomeStartupPage = (props) => {
                                         if (values.recaptcha !== '') {
                                             analyticsEvent('featuresFormSubmit',values);
                                             const response = await sendEmail(values);
-                                            response.status === "success" && ReactGA.send({hitType: "pageview", page: "/contact-success-custom", title: "Contact Success Page"});
                                             response.status === "success" && analyticsEvent('FeaturesFunctions',values);
                                             response.status === "success" && resetForm(actions, recaptcha);
                                         } else {

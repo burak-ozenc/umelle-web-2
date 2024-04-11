@@ -21,7 +21,6 @@ import {ContactFormStyle03Schema} from "../../../Components/Form/FormSchema";
 import * as emailjs from "@emailjs/browser";
 import ReCAPTCHA from "react-google-recaptcha";
 import SEO from "../../../Components/Umelle/SEO";
-import ReactGA from "react-ga4";
 
 const Header = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Header})))
 const HeaderNav = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.HeaderNav})))
@@ -139,7 +138,6 @@ const HomeStartupPage = (props) => {
                                     actions.setSubmitting(true)
                                     if (values.recaptcha !== '') {
                                         const response = await sendEmail(values)
-                                        response.status === "success" && ReactGA.send({hitType: "pageview", page: "/contact-success", title: "Contact Success Page"});
                                         response.status === "success" && analyticsEvent('contact',values);
                                         response.status === "success" && resetForm(actions, recaptcha);
                                     } else {
