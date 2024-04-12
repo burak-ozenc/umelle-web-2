@@ -119,8 +119,8 @@ function App() {
                   <Route path="/products" element={<ComingSoon style={{ "--base-color": "#27ae60" }} />} />
                   <Route path="/umelle-insurance" element={<UmelleInsurance style={{ "--base-color": "#27ae60" }} />} />
                   <Route path="/aw-stg-landingp" element={<UmelleInsurance style={{ "--base-color": "#27ae60" }} />} />
-                  <Route path="/contact-success" element={<ContactSuccess style={{ "--base-color": "#27ae60" }} />} />
-                  <Route path="/contact-success-custom" element={<ContactSuccessCustom style={{ "--base-color": "#27ae60" }} />} />
+                  <Route path="/contact-success-1" element={<ContactSuccess style={{ "--base-color": "#27ae60" }} />} />
+                  <Route path="/contact-success-2" element={<ContactSuccessCustom style={{ "--base-color": "#27ae60" }} />} />
                 </Routes>
               </Suspense>
             </AnimatePresence>
