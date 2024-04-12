@@ -67,7 +67,7 @@ const ContactSuccessCustom = (props) => {
     return (<div style={props.style}>
         {/*SEO Starts*/}
         <SEO
-            title='Cutsom Form Success'
+            title='Custom Form Success'
             description=''
             name='UMELLE'
             type=''/>
