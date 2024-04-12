@@ -41,9 +41,19 @@ function App() {
         autoConfig: true, // set pixel's autoConfig. More info: https://developers.facebook.com/docs/facebook-pixel/advanced/
         debug: true, // enable logs
     };
+    
+
 
     ReactPixel.init(process.env.REACT_APP_FACEBOOK_PIXEL_ID, advancedMatching, options);
     // ReactGA.initialize(process.env.REACT_APP_GOOGLE_LANDING_MEASUREMENT_ID);
+    
+    // useEffect(() => {
+    //         // Assuming `window.gtag` exists and is correctly initialized in your index.html
+    //         window.gtag('config', process.env.REACT_APP_GOOGLE_LANDING_MEASUREMENT_ID, {
+    //             page_path: location.pathname + location.search,
+    //         })
+    //     },[location]);
+    
   // RetinaJS
   useEffect(() => {
     window.addEventListener('load', retina(document.querySelectorAll('img')));

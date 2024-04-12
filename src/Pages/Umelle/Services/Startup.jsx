@@ -30,7 +30,6 @@ import IconWithText from "../../../Components/IconWithText/IconWithText";
 import {IconWithTextData_06} from "../../../Components/IconWithText/IconWithTextData";
 import SEO from "../../../Components/Umelle/SEO";
 import { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
 import {IconWithTextData_02} from "../../../Components/IconWithText/IconWithTextData";
 const Header = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Header})))
 const HeaderNav = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.HeaderNav})))
@@ -40,16 +39,6 @@ const SideButtons = lazy(() => import("../../../Components/SideButtons"))
 const Footer_Data = [FooterData[0], FooterData[1], FooterData[4], FooterData[3]]
 
 const HomeStartupPage = (props) => {
-    const location = useLocation();
-
-    useEffect(() => {
-        // Google Analytics page view tracking
-        if (window.gtag) {
-            window.gtag('config', 'G-3XCZ8B0MR9', {
-                'page_path': location.pathname + location.search,
-            });
-        }
-    }, [location]); // This ensures the tracking code runs every time the route changes
     ScrollToAnchor();
 
     useEffect(() => {

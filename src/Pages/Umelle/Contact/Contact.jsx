@@ -1,7 +1,7 @@
 import React, {lazy, useRef, useState} from 'react'
 
 // Libraries
-import {Link, useNavigate} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import {Col, Container, Navbar, Row} from "react-bootstrap";
 import { m} from 'framer-motion';
 import {Form, Formik} from 'formik';
@@ -36,10 +36,6 @@ const HomeStartupPage = (props) => {
     ScrollToAnchor();
     const recaptcha = useRef()
 
-    const navigate = useNavigate();
-
-    
-
     const sendEmail = (values) => {
         analyticsEvent('submitContactForm',values)
         
@@ -50,7 +46,7 @@ const HomeStartupPage = (props) => {
             .then(
                 () => {
                     console.log('SUCCESS!');
-                    navigate(`/contact-success-1`);
+                    window.location.href = process.env.REACT_APP_CONTACT_SUCCESS_1
                 },
                 (error) => {
                     console.log('FAILED...', error);

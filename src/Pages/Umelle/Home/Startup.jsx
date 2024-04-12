@@ -1,7 +1,7 @@
 import React, {lazy, useRef, useState, useEffect} from 'react'
 
 // Libraries
-import {Link, useLocation, useNavigate} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import {Col, Container, Navbar, Row, Tab, Tabs} from "react-bootstrap";
 import {AnimatePresence, m} from 'framer-motion';
 import {Form, Formik} from 'formik';
@@ -49,25 +49,12 @@ const HomeStartupPage = (props) => {
     
     const [sent, setSent] = useState(true)
     const [message, setMessage] = useState('')
-    const navigate = useNavigate();
-    const location = useLocation();
     
     
     useEffect(() => {
         analyticsEvent('page_view',null);
     },[])
     
-    
-    // IVAN
-    useEffect(() => {
-        // Google Analytics page view tracking
-        if (window.gtag) {
-            window.gtag('config', 'GTM-KSK25W7Z', {
-                'page_path': location.pathname + location.search,
-            });
-        }
-    }, [location]); // This ensures the tracking code runs every time the route changes
-
     const sendEmail = (values) => {
         emailjs
             .send(process.env.REACT_APP_EMAIL_SERVICE_ID, process.env.REACT_APP_EMAIL_FEATURES_TEMPLATE_ID, values, {
@@ -76,7 +63,7 @@ const HomeStartupPage = (props) => {
             .then(
                 () => {
                     console.log('SUCCESS!');
-                    navigate(`/contact-success-2`);
+                    window.location.href = process.env.REACT_APP_CONTACT_SUCCESS_2
                 },
                 (error) => {
                     console.log('FAILED...', error);

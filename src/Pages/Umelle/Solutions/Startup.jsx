@@ -1,7 +1,7 @@
 import React, {lazy, useEffect, useRef, useState} from 'react'
 
 // Libraries
-import {Link, useNavigate} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import {Accordion, Col, Container, Navbar, Row, Tab, Tabs} from "react-bootstrap";
 import {AnimatePresence, domMax, LazyMotion, m} from 'framer-motion';
 import {Form, Formik} from 'formik';
@@ -29,7 +29,6 @@ import ReCAPTCHA from "react-google-recaptcha";
 import {AccordionDataSolutions} from "../../../Components/Accordion/AccordionData";
 import * as emailjs from "@emailjs/browser";
 import SEO from "../../../Components/Umelle/SEO";
-import { useLocation } from 'react-router-dom';
 import {Parallax} from 'react-scroll-parallax';
 
 const Header = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Header})))
@@ -46,17 +45,15 @@ const Footer_Data = [FooterData[0], FooterData[1], FooterData[4], FooterData[3]]
 // var hash = window.decodeURIComponent(window.location.hash);
 
 const HomeStartupPage = (props) => {
-    const location = useLocation();
-    const navigate = useNavigate();
     
-    useEffect(() => {
-        // Google Analytics page view tracking
-        if (window.gtag) {
-            window.gtag('config', 'G-3XCZ8B0MR9', {
-                'page_path': location.pathname + location.search,
-            });
-        }
-    }, [location]); // This ensures the tracking code runs every time the route changes
+    // useEffect(() => {
+    //     // Google Analytics page view tracking
+    //     if (window.gtag) {
+    //         window.gtag('config', 'G-3XCZ8B0MR9', {
+    //             'page_path': location.pathname + location.search,
+    //         });
+    //     }
+    // }, [location]); // This ensures the tracking code runs every time the route changes
     ScrollToAnchor();
     const form1 = useRef(null)
     const recaptcha = useRef()
@@ -79,7 +76,7 @@ const HomeStartupPage = (props) => {
             .then(
                 () => {
                     console.log('SUCCESS!');
-                    navigate(`/contact-success-2`);
+                    window.location.href = process.env.REACT_APP_CONTACT_SUCCESS_2
                 },
                 (error) => {
                     console.log('FAILED...', error);

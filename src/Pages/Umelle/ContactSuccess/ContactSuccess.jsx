@@ -16,7 +16,6 @@ import InViewPort from '../../../Components/InViewPort';
 // Data
 import FooterData from '../../../Components/Footers/FooterData';
 import SEO from "../../../Components/Umelle/SEO";
-// import ReactGA from "react-ga4";
 
 const Header = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Header})))
 const HeaderNav = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.HeaderNav})))
@@ -36,39 +35,6 @@ const ContactSuccess = (props) => {
         analyticsEvent('page_view',null);
     },[])
     
-    // useEffect(() => {
-    //     // const type = queryParameters.get("formSubmitted");
-    //     // if (type === 'true'){
-    //     //     navigate(`/contact-success`);
-    //     // }
-    // //     // Send pageview with a custom path
-    // //     ReactGA.send({hitType: "pageview", page: "/contact-success", title: "Contact Success Page"});
-    //     // eslint-disable-next-line
-    // }, [])
-
-
-    // const location = useLocation();
-    // useEffect(() => {
-    //     // Google Analytics page view tracking
-    //     if (window.gtag) {
-    //         window.gtag('config', 'GTM-KSK25W7Z', {
-    //             'page_path': location.pathname + location.search,
-    //         });
-    //     }
-    // }, [location]); // This ensures the tracking code runs every time the route changes
-    
-    // IVAN
-    useEffect(() => {
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            // eslint-disable-next-line
-            dataLayer.push(arguments);
-        }
-
-        gtag('js', new Date());
-        gtag('config', 'G-3XCZ8B0MR9');
-    },[])
     
     ScrollToAnchor();
     
