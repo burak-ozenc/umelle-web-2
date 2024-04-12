@@ -60,7 +60,7 @@ const HomeStartupPage = (props) => {
     useEffect(() => {
         // Google Analytics page view tracking
         if (window.gtag) {
-            window.gtag('config', 'G-3XCZ8B0MR9', {
+            window.gtag('config', 'GTM-KSK25W7Z', {
                 'page_path': location.pathname + location.search,
             });
         }
