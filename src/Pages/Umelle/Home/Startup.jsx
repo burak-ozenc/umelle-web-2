@@ -1,7 +1,7 @@
 import React, {lazy, useRef, useState, useEffect} from 'react'
 
 // Libraries
-import {Link, useNavigate} from 'react-router-dom';
+import {Link, useLocation, useNavigate} from 'react-router-dom';
 import {Col, Container, Navbar, Row, Tab, Tabs} from "react-bootstrap";
 import {AnimatePresence, m} from 'framer-motion';
 import {Form, Formik} from 'formik';
@@ -24,7 +24,6 @@ import {ProgressBarData02} from "../../../Components/ProgressBar/ProgressBarData
 import {ContactFormStyle02Schema} from "../../../Components/Form/FormSchema";
 import ReCAPTCHA from "react-google-recaptcha";
 import * as emailjs from "@emailjs/browser";
-import { useLocation } from 'react-router-dom';
 
 
 const IconWithText = lazy(() => import('../../../Components/IconWithText/IconWithText'))
@@ -53,10 +52,13 @@ const HomeStartupPage = (props) => {
     const navigate = useNavigate();
     const location = useLocation();
     
+    
     useEffect(() => {
         analyticsEvent('page_view',null);
     },[])
     
+    
+    // IVAN
     useEffect(() => {
         // Google Analytics page view tracking
         if (window.gtag) {

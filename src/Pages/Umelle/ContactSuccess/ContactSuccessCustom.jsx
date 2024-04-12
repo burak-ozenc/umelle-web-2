@@ -1,7 +1,7 @@
 import React, {lazy, useEffect} from 'react'
 
 // Libraries
-import {Link, useLocation} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import {Col, Container, Navbar, Row} from "react-bootstrap";
 import { m} from 'framer-motion';
 
@@ -39,15 +39,29 @@ const ContactSuccessCustom = (props) => {
     //     // ReactGA.send({hitType: "pageview", page: "/contact-success-custom", title: "Contact Success Page"});
     // }, [])
 
-    const location = useLocation();
+    // const location = useLocation();
+    // useEffect(() => {
+    //     // Google Analytics page view tracking
+    //     if (window.gtag) {
+    //         window.gtag('config', 'GTM-KSK25W7Z', {
+    //             'page_path': location.pathname + location.search,
+    //         });
+    //     }
+    // }, [location]); // This ensures the tracking code runs every time the route changes
+    
+    
+    // IVAN    
     useEffect(() => {
-        // Google Analytics page view tracking
-        if (window.gtag) {
-            window.gtag('config', 'GTM-KSK25W7Z', {
-                'page_path': location.pathname + location.search,
-            });
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            // eslint-disable-next-line
+            dataLayer.push(arguments);
         }
-    }, [location]); // This ensures the tracking code runs every time the route changes
+
+        gtag('js', new Date());
+        gtag('config', 'G-3XCZ8B0MR9');
+    },[])
     
     ScrollToAnchor();
     return (<div style={props.style}>
