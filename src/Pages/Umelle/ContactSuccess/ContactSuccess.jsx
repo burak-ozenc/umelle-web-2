@@ -1,7 +1,7 @@
 import React, {lazy, useEffect} from 'react'
 
 // Libraries
-import {Link, useNavigate, useSearchParams} from 'react-router-dom';
+import {Link, useLocation} from 'react-router-dom';
 import {Col, Container, Navbar, Row} from "react-bootstrap";
 import { m} from 'framer-motion';
 
@@ -31,23 +31,31 @@ const Footer_Data = [FooterData[0], FooterData[1], FooterData[4], FooterData[3]]
 
 
 const ContactSuccess = (props) => {
-    const navigate = useNavigate();
-    const [queryParameters] = useSearchParams()
-    
+       
     useEffect(() => {
         analyticsEvent('page_view',null);
     },[])
     
+    // useEffect(() => {
+    //     // const type = queryParameters.get("formSubmitted");
+    //     // if (type === 'true'){
+    //     //     navigate(`/contact-success`);
+    //     // }
+    // //     // Send pageview with a custom path
+    // //     ReactGA.send({hitType: "pageview", page: "/contact-success", title: "Contact Success Page"});
+    //     // eslint-disable-next-line
+    // }, [])
+
+
+    const location = useLocation();
     useEffect(() => {
-        const type = queryParameters.get("formSubmitted");
-        if (type === 'true'){
-            navigate(`/contact-success`);
+        // Google Analytics page view tracking
+        if (window.gtag) {
+            window.gtag('config', 'G-3XCZ8B0MR9', {
+                'page_path': location.pathname + location.search,
+            });
         }
-    //     // Send pageview with a custom path
-    //     ReactGA.send({hitType: "pageview", page: "/contact-success", title: "Contact Success Page"});
-        // eslint-disable-next-line
-    }, [])
-    
+    }, [location]); // This ensures the tracking code runs every time the route changes
     
     
     ScrollToAnchor();

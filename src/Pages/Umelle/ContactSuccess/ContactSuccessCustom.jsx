@@ -1,7 +1,7 @@
 import React, {lazy, useEffect} from 'react'
 
 // Libraries
-import {Link} from 'react-router-dom';
+import {Link, useLocation} from 'react-router-dom';
 import {Col, Container, Navbar, Row} from "react-bootstrap";
 import { m} from 'framer-motion';
 
@@ -34,10 +34,20 @@ const ContactSuccessCustom = (props) => {
         analyticsEvent('page_view',null);
     },[])
 
+    // useEffect(() => {
+    //     // Send pageview with a custom path
+    //     // ReactGA.send({hitType: "pageview", page: "/contact-success-custom", title: "Contact Success Page"});
+    // }, [])
+
+    const location = useLocation();
     useEffect(() => {
-        // Send pageview with a custom path
-        // ReactGA.send({hitType: "pageview", page: "/contact-success-custom", title: "Contact Success Page"});
-    }, [])
+        // Google Analytics page view tracking
+        if (window.gtag) {
+            window.gtag('config', 'G-3XCZ8B0MR9', {
+                'page_path': location.pathname + location.search,
+            });
+        }
+    }, [location]); // This ensures the tracking code runs every time the route changes
     
     ScrollToAnchor();
     return (<div style={props.style}>
