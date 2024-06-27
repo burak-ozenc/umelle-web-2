@@ -81,8 +81,8 @@ const HeaderDataAdjusted = [
         link: '/coming-soon',
         dropdown: [
             {
-                title: 'Umelle Insurance Management Suite U-IMS ',
-                link: '/coming-soon'
+                title: 'PRISM',
+                link: '/aw-stg-landingp'
             },
         ]
     },
