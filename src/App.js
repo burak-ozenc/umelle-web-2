@@ -25,6 +25,7 @@ const ComingSoon = lazy(() => import("./Pages/Umelle/ComingSoon/ComingSoon"))
 const UmelleInsurance = lazy(() => import("./Pages/Umelle/UmelleInsurance/UmelleInsurance"))
 const ContactSuccess = lazy(() => import("./Pages/Umelle/ContactSuccess/ContactSuccess"))
 const ContactSuccessCustom = lazy(() => import("./Pages/Umelle/ContactSuccess/ContactSuccessCustom"))
+const LandingPage = lazy(() => import("./Pages/Umelle/LandingPage/LandingPage"))
 
 function App() {
   const [headerHeight, setHeaderHeight] = useState(0);
@@ -128,7 +129,7 @@ function App() {
                   <Route path="/coming-soon" element={<ComingSoon style={{ "--base-color": "#27ae60" }} />} />
                   <Route path="/products" element={<ComingSoon style={{ "--base-color": "#27ae60" }} />} />
                   <Route path="/umelle-insurance" element={<UmelleInsurance style={{ "--base-color": "#27ae60" }} />} />
-                  <Route path="/aw-stg-landingp" element={<UmelleInsurance style={{ "--base-color": "#27ae60" }} />} />
+                  <Route path="/aw-stg-landingp" element={<LandingPage style={{ "--base-color": "#27ae60" }} />} />
                   <Route path="/contact-success-1" element={<ContactSuccess style={{ "--base-color": "#27ae60" }} />} />
                   <Route path="/contact-success-2" element={<ContactSuccessCustom style={{ "--base-color": "#27ae60" }} />} />
                 </Routes>
