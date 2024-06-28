@@ -18,6 +18,7 @@ import InViewPort from '../../../Components/InViewPort';
 import FooterData from '../../../Components/Footers/FooterData';
 import FancyTextBox from "../../../Components/FancyTextBox/FancyTextBox";
 import {fancyTextBox04} from "../../../Components/FancyTextBox/FancyTextBoxData";
+import {fancyTextBox02} from "../../../Components/FancyTextBox/FancyTextBoxData";
 import Buttons from "../../../Components/Button/Buttons";
 import {
     CloudAndDataDatabaseList,
@@ -131,7 +132,6 @@ const HomeStartupPage = (props) => {
         </section>
         {/* Section End */}
 
-
         {/* Section Start */}
         <m.section className="bg-lightgray py-[100px] lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px]" {...fadeIn}>
             <Container>
@@ -154,9 +154,6 @@ const HomeStartupPage = (props) => {
         
         {/* Lazy Load HTML */}
         <InViewPort>
-           
-
-
             {/* Section Start */}
             <section className="bg-white py-[160px] lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px]">
                 <Container>

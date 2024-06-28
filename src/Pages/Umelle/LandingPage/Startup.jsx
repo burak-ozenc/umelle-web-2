@@ -2,7 +2,7 @@ import React, {lazy, useEffect} from 'react'
 
 // Libraries
 import {Link} from 'react-router-dom';
-import {Col, Container, Navbar, Row} from "react-bootstrap";
+import {Col, Container, Row} from "react-bootstrap";
 import {m} from 'framer-motion';
 
 

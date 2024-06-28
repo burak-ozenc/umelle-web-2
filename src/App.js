@@ -28,6 +28,8 @@ const ContactSuccess = lazy(() => import("./Pages/Umelle/ContactSuccess/ContactS
 const ContactSuccessCustom = lazy(() => import("./Pages/Umelle/ContactSuccess/ContactSuccessCustom"))
 const LandingPage = lazy(() => import("./Pages/Umelle/LandingPage/Startup"))
 const UIMSProduct = lazy(() => import("./Pages/Umelle/UIMSProduct/Startup"))
+const WebDesktop = lazy(() => import("./Pages/Umelle/Solutions/WebDesktop"))
+const CrossPlatform = lazy(() => import("./Pages/Umelle/Solutions/CrossPlatform"))
 
 function App() {
   const [headerHeight, setHeaderHeight] = useState(0);
@@ -134,6 +136,8 @@ function App() {
                   <Route path="/aw-stg-landingp" element={<LandingPage style={{ "--base-color": "#27ae60" }} />} />
                   <Route path="/contact-success-1" element={<ContactSuccess style={{ "--base-color": "#27ae60" }} />} />
                   <Route path="/contact-success-2" element={<ContactSuccessCustom style={{ "--base-color": "#27ae60" }} />} />
+                  <Route path="/webdesktop" element={<WebDesktop style={{ "--base-color": "#27ae60" }} />} />
+                  <Route path="/crossplatform" element={<CrossPlatform style={{ "--base-color": "#27ae60" }} />} />
                 </Routes>
               </Suspense>
             </AnimatePresence>
