@@ -18,7 +18,6 @@ import InViewPort from '../../../Components/InViewPort';
 import FooterData from '../../../Components/Footers/FooterData';
 import FancyTextBox from "../../../Components/FancyTextBox/FancyTextBox";
 import {fancyTextBox04} from "../../../Components/FancyTextBox/FancyTextBoxData";
-import {fancyTextBox02} from "../../../Components/FancyTextBox/FancyTextBoxData";
 import Buttons from "../../../Components/Button/Buttons";
 import {
     CloudAndDataDatabaseList,
