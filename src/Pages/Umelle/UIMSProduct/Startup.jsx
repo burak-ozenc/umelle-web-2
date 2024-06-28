@@ -2,7 +2,7 @@ import React, {lazy, useEffect, useRef, useState} from 'react'
 
 // Libraries
 import {Link} from 'react-router-dom';
-import {Accordion, Col, Container, Navbar, Row, Tab, Tabs} from "react-bootstrap";
+import {Col, Container, Navbar, Row, Tab, Tabs} from "react-bootstrap";
 import {AnimatePresence, domMax, LazyMotion, m} from 'framer-motion';
 import {Form, Formik} from 'formik';
 
@@ -44,7 +44,7 @@ const Footer_Data = [FooterData[0], FooterData[1], FooterData[4], FooterData[3]]
 
 // var hash = window.decodeURIComponent(window.location.hash);
 
-const UIMSProduct = (props) => {
+const HomeStartupPage = (props) => {
     
     // useEffect(() => {
     //     // Google Analytics page view tracking
@@ -430,7 +430,7 @@ const UIMSProduct = (props) => {
                                         <Form ref={form1}>
                                             <Row>
                                                 <Col xl={7} md={7} xs={12}>
-                                                    <Row className="p-1 m-2">
+                                                    <Row className="p-1 m-0">
                                                         <h4 className="text-center font-serif"
                                                             style={{color: '#FFFFFF'}}>
                                                             Features
@@ -749,4 +749,4 @@ const UIMSProduct = (props) => {
     </div>)
 }
 
-export default UIMSProduct
+export default HomeStartupPage

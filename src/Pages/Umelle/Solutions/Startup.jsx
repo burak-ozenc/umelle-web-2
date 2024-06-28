@@ -430,7 +430,7 @@ const HomeStartupPage = (props) => {
                                         <Form ref={form1}>
                                             <Row>
                                                 <Col xl={7} md={7} xs={12}>
-                                                    <Row className="p-1 m-2">
+                                                    <Row className="p-1 m-0">
                                                         <h4 className="text-center font-serif"
                                                             style={{color: '#FFFFFF'}}>
                                                             Features
