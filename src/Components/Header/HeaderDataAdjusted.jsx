@@ -82,7 +82,7 @@ const HeaderDataAdjusted = [
         dropdown: [
             {
                 title: 'PRISM',
-                link: '/aw-stg-landingp'
+                link: '/products'
             },
         ]
     },
