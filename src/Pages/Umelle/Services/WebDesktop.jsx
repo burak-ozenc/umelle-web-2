@@ -2,55 +2,32 @@ import React, {lazy} from 'react'
 
 // Libraries
 import {Link} from 'react-router-dom';
-import {Col, Container, Navbar, Row, Tab, Tabs} from "react-bootstrap";
-import { domMax, LazyMotion, m} from 'framer-motion';
-
+import {Col, Navbar, Row} from "react-bootstrap";
+import { m} from 'framer-motion';
 
 // Functions
-import {fadeIn} from '../../../Functions/GlobalAnimations';
+import {fadeInDown, fadeInUp, rotateInDown} from '../../../Functions/GlobalAnimations';
 
 // Components
-import {analyticsEvent, ScrollToAnchor} from "../../../Functions/Utilities";
-import FooterMenu, {Footer} from '../../../Components/Footers/Footer';
+import { ScrollToAnchor} from "../../../Functions/Utilities";
 import InViewPort from '../../../Components/InViewPort';
+import SEO from "../../../Components/Umelle/SEO";
 
 // Data
-import FooterData from '../../../Components/Footers/FooterData';
-import FancyTextBox from "../../../Components/FancyTextBox/FancyTextBox";
-import {fancyTextBox04} from "../../../Components/FancyTextBox/FancyTextBoxData";
-import Buttons from "../../../Components/Button/Buttons";
-import {
-    CloudAndDataDatabaseList,
-    DataFormatList, FrameworksList,
-    LanguagesList, ORMList,
-    TechList
-} from "../../../Components/Clients/ClientsData";
-import Clients from "../../../Components/Clients/Clients";
-import IconWithText from "../../../Components/IconWithText/IconWithText";
-import {IconWithTextData_06} from "../../../Components/IconWithText/IconWithTextData";
-import SEO from "../../../Components/Umelle/SEO";
-import { useEffect } from 'react';
-import {IconWithTextData_02} from "../../../Components/IconWithText/IconWithTextData";
 const Header = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Header})))
 const HeaderNav = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.HeaderNav})))
 const Menu = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Menu})))
+
 const SideButtons = lazy(() => import("../../../Components/SideButtons"))
 
-const Footer_Data = [FooterData[0], FooterData[1], FooterData[4], FooterData[3]]
 
-const HomeStartupPage = (props) => {
+const ComingSoon = (props) => {
     ScrollToAnchor();
-
-    useEffect(() => {
-        analyticsEvent('page_view',null);
-    },[])
-    
-    
     return (<div style={props.style}>
         {/*SEO Starts*/}
         <SEO
-            title='Quality-Driven Custom Software that Meets Your Operational Goals'
-            description='Our team handles everything, optimizing costs, time, and scope. Our comprehensive cloud services cover assessment, migration, management, and optimization.'
+            title='Umelle Insurance Management System UI MS | Coming Soon'
+            description='A revolutionary software created to cater to all insurance providers and with unmatched efficiency. Coming soon!'
             name='UMELLE'
             type='article'/>
         {/*SEO Ends*/}
@@ -90,312 +67,81 @@ const HomeStartupPage = (props) => {
 
         <SideButtons/>
 
-        {/* Section start */}
-        <section className="overflow-visible cover-background"
-                 style={{backgroundImage: `url(assets/img/servicespage_header_v2-01.webp)`}}>
-            <Container>
-                <LazyMotion strict features={domMax}>
-                    <Row
-                        className="full-screen md:h-[650px] sm:h-[350px] xs:h-[450px] align-items-center justify-center">
-                        <Col xs={12} lg={6} md={6}
-                             className="justify-center items-center my-0 mx-auto relative flex flex-col">
-                            <m.h4 initial={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)'}}
-                                  animate={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)'}}
-                                  transition={{duration: 0.5, delay: 0.5, ease: "easeIn"}}
-                                  style={{fontSize:'2em'}}
-                                  className="font-serif block leading-[48px] mb-[35px] font-light text-black xs:text-base xs:mb-[40px]">
-                                Custom Software That Meets Your Operational Goals
-                            </m.h4>
-                            <m.span initial={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)'}}
-                                    animate={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)'}}
-                                    transition={{duration: 0.5, delay: 0.8, ease: "easeIn"}}
-                                    className="font-serif block text-[19px] leading-[28px] mb-[35px] font-light text-black xs:text-base xs:mb-[20px]">
-                                We take care of everything with our full-cycle engineering services - all while optimizing the cost, timeframe, and scope of the work. Leaving you to focus on what matters most to you.
-                            </m.span>
-                        </Col>
-                        <Col xs={12} lg={6} md={6}
-                             className="justify-center items-center my-0 mx-auto relative flex flex-col">
-                            <div initial={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)'}}
-                                 animate={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)'}}
-                                 transition={{duration: 0.5, delay: 0.9, ease: "easeIn"}}>
-                                <Buttons ariaLabel="button"
-                                         href="/contact"
-                                         className="mx-[10px] font-medium font-serif uppercase rounded-none lg:mb-[15px] landscape:lg:mb-[15px] justify-center align-items-center mt-4"
-                                         themeColor={["#3844F7", "#902CFC"]} size="md" color="#fff"
-                                         title="Schedule a meeting"/>
-                            </div>
-                        </Col>
-                    </Row>
-                </LazyMotion>
-            </Container>
-        </section>
-        {/* Section End */}
 
         {/* Section Start */}
-        <m.section className="bg-lightgray py-[100px] lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px]" {...fadeIn}>
-            <Container>
-                <Row>
-                    <Col className="mb-[7%]">
-                        <h4 className="font-serif text-black text-center font-medium mb-[25px] lg:mb-[15px]">
-                            What we Offer
-                        </h4>
+        <div className="h-[100vh] md:landscape:h-auto flex flex-col">
+            <section
+                className="p-[0px] md:landscape:py-[50px] overflow-hidden bg-[#fff] flex-1 flex items-center justify-center relative">
+                <Row className="justify-center relative z-10">
+                    <Col xs={12} className="text-center">
+                        <m.h1 {...{...fadeInDown, transition: {delay: 1, ease: "easeOut", duration: 0.5}}}
+                              className="inline-block font-serif text-gradient bg-gradient-to-r from-[#2CBAFC] to-[#902CFC] font-semibold pb-[10px] xl:text-[50px] xl:leading-none xs:text-[38px]">
+                                WebDesktop <br/>launching soon
+                        </m.h1>
+                        {/*<m.p {...{...fadeInDown, transition: {delay: 1.7, ease: "easeOut", duration: 0.5}}}*/}
+                        {/*     className="text-xmd w-2/5 mx-auto mb-[30px] xl:text-xs xs:w-[90%]">We're currently*/}
+                        {/*    working hard on this page. Subscribe our newsletter to get update when it'll be live.*/}
+                        {/*</m.p>*/}
                     </Col>
                 </Row>
-                <FancyTextBox
-                    grid="row-cols-1 row-cols-lg-2 gap-y-10 justify-center"
-                    className="col-12 col-lg-4 col-md-6 col-md-9"
-                    theme="fancy-text-box-04"
-                    data={fancyTextBox04}
-                    animation={fadeIn}/>
-            </Container>
-        </m.section>
+
+                {/* Elements */}
+                <div className="h-full w-full min-w-[1500px] absolute bottom-0 left-1/2 -translate-x-1/2">
+                    <m.img
+                        {...{...rotateInDown, transition: {delay: 3.5, ease: "easeOut", duration: 0.5}}}
+                        alt="stick"
+                        src="https://i.ibb.co/ss2LhDx/154x158.png"
+                        className="absolute top-1/4 left-[20%] max-w-[200px] w-[10%]"
+                    />
+                    <m.img
+                        {...{...rotateInDown, transition: {delay: 2.7, ease: "easeOut", duration: 0.5}}}
+                        alt="coffee-cup"
+                        src="https://i.ibb.co/0FGKr9D/207x199-01.png"
+                        className="absolute top-1/4 right-[20%]"
+                    />
+                    {/*<m.img*/}
+                    {/*    {...{...rotateInDown, transition: {delay: 2.5, ease: "easeOut", duration: 0.5}}}*/}
+                    {/*    alt="envelope"*/}
+                    {/*    src="https://i.ibb.co/4JMG5Fd/234x211-01.png"*/}
+                    {/*    className="absolute top-[calc(25%+100px)] right-[15%]"*/}
+                    {/*/>*/}
+                    <m.img
+                        {...{...fadeInUp, transition: {delay: 3, ease: "easeOut", duration: 0.5}}}
+                        alt="plant"
+                        src="https://i.ibb.co/Ht0cxFH/293x240-01.png"
+                        className="absolute bottom-[0px] left-[calc(15%-220px)] max-w-[300px] w-[15%]"
+                    />
+                    <m.img
+                        {...{...fadeInUp, transition: {delay: 3, ease: "easeOut", duration: 0.5}}}
+                        alt="alphabate"
+                        src="https://i.ibb.co/3MNpW6P/d027814f-af17-471b-a946-1f3646fd2604.png"
+                        className="absolute bottom-[65%] right-[0] max-w-[200px] w-[10%]"
+                        width="200"
+                        height="200"
+                    />
+                    <m.img
+                        initial={{opacity: 0, y: 50}}
+                        animate={{opacity: 1, y: 0}}
+                        transition={{duration: 0.5, delay: 2.5, ease: "easeOut"}}
+                        alt="brush"
+                        src="https://i.ibb.co/4JMG5Fd/234x211-01.png"
+                        className="absolute bottom-[0%] right-[0%]"
+                    />
+                </div>
+
+
+             
+            </section>
+        </div>
         {/* Section End */}
-        
+
         {/* Lazy Load HTML */}
         <InViewPort>
             {/* Section Start */}
-            <section className="bg-white py-[160px] lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px]">
-                <Container>
-                    <Row>
-                        <Col className="mb-[7%]">
-                            <h6 className="font-serif text-dark text-center font-medium mb-[25px] lg:mb-[15px]">
-                                Comprehensive Cloud Services Tailored to Your Needs:
-                            </h6>
-                        </Col>
-                    </Row>
-                    <Row className="justify-center">
-                        <Col className="mb-[7%]">
-                            <p className="font-serif text-dark text-center font-medium mb-[25px] lg:mb-[15px]">
-                                Our suite of cloud services encompasses every aspect of cloud technology, from initial assessment and migration to ongoing management and optimization. Discover how we can enhance your operations with our specialized offerings:
-                            </p>
-                        </Col>
-                    </Row>
-                    <Row className="justify-center">
-                        <Col xs={12} sm={8} md={12}>
-                            <IconWithText
-                                grid="row-cols-1 row-cols-lg-3 row-cols-md-2 row-col-sm-8 justify-center gap-y-10"
-                                theme="icon-with-text-06"
-                                data={IconWithTextData_06}
-                                animation={fadeIn}
-                                animationDelay={0.2}
-                            />
-                        </Col>
-                    </Row>
-                </Container>
-            </section>
-            {/* Section End */}
+           
 
-            {/* Section Start */}
-            <section className="bg-lightgray py-[55px] lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px]">
-                <Container>
-                    <Row>
-                        <Col className="mb-[55px]">
-                            <h6 className="font-serif text-dark text-center font-medium mb-[0px] lg:mb-[15px]">
-                                Transforming Challenges into Opportunities
-                            </h6>
-                        </Col>
-                    </Row>
-                    <Row className="justify-center">
-                        <Col xs={12} lg={12} md={9}>
-                            <IconWithText
-                                grid="row-cols-1 row-cols-lg-2 gap-y-[30px] xs:gap-y-[15px]"
-                                theme="icon-with-text-02"
-                                data={IconWithTextData_02}
-                                animation={fadeIn}
-                                animationDelay={0.2}
-                            />
-                        </Col>
-                    </Row>
-                </Container>
-            </section>
-            {/* Section End */}
-
-            {/* Section Start */}
-            <m.section
-                className="py-[60px] bg-white lg:py-[100px] md:py-[95px] sm:py-[80px] xs:py-[0px]"  {...fadeIn}>
-                <Container>
-                    <Row className="justify-center">
-                        <Col md={12} className="text-center mb-[6%]">
-                            <h6 className="font-serif text-darkgray font-medium">Our Tech Stack</h6>
-                        </Col>
-                    </Row>
-                    <Tabs className="tab-style-01 font-serif mb-[7.4rem] flex border-b-0 font-medium text-center justify-center md:mb-[60px] sm:mb-[20px]">
-                        <Tab className="tab-style-01" key={1} eventKey={1} title={ "Technologies"}>
-                            <m.div className='row items-center' {...{ ...fadeIn, transition: { duration: 0.9 }, viewport: { once: false } }}>
-                                <Col lg={{ offset: 1, span: 11 }} md={12} className="md:px-[15px] sm:px-[15px] sm:text-start xs:text-center">
-                                    <Clients
-                                        theme="client-logo-"
-                                        className="swiper-navigation-04 swiper-navigation-light"
-                                        data={TechList}
-                                        animation={fadeIn}
-                                        carousel={true}
-                                        carouselOption={{
-                                            slidesPerView: 1,
-                                            loop: true,
-                                            spaceBetween: 20,
-                                            autoplay: { delay: 3000, disableOnInteraction: false },
-                                            navigation: true,
-                                            breakpoints: { 1200: { slidesPerView: 4 }, 992: { slidesPerView: 3 }, 768: { slidesPerView: 3 } }
-                                        }}
-                                    />
-                                </Col>
-                            </m.div>
-                        </Tab>
-                        <Tab className="tab-style-01" key={2} eventKey={2} title={ "Languages"}>
-                            <m.div className='row items-center' {...{ ...fadeIn, transition: { duration: 0.9 }, viewport: { once: false } }}>
-                                <Col lg={{ offset: 1, span: 11 }} md={12} className="md:px-[15px] sm:px-[15px] sm:text-start xs:text-center">
-                                    <Clients
-                                        theme="client-logo-"
-                                        className="swiper-navigation-04 swiper-navigation-light"
-                                        data={LanguagesList}
-                                        animation={fadeIn}
-                                        carousel={true}
-                                        carouselOption={{
-                                            slidesPerView: 1,
-                                            loop: true,
-                                            spaceBetween: 20,
-                                            autoplay: { delay: 3000, disableOnInteraction: false },
-                                            navigation: true,
-                                            breakpoints: { 1200: { slidesPerView: 4 }, 992: { slidesPerView: 3 }, 768: { slidesPerView: 3 } }
-                                        }}
-                                    />
-                                </Col>
-                            </m.div>
-                        </Tab>
-                        <Tab className="tab-style-01" key={3} eventKey={3} title={ "Data Formats"}>
-                            <m.div className='row items-center' {...{ ...fadeIn, transition: { duration: 0.9 }, viewport: { once: false } }}>
-                                <Col lg={{ offset: 1, span: 11 }} md={12} className="md:px-[15px] sm:px-[15px] sm:text-start xs:text-center">
-                                    <Clients
-                                        theme="client-logo-"
-                                        className="swiper-navigation-04 swiper-navigation-light"
-                                        data={DataFormatList}
-                                        animation={fadeIn}
-                                        carousel={true}
-                                        carouselOption={{
-                                            slidesPerView: 1,
-                                            loop: true,
-                                            spaceBetween: 20,
-                                            autoplay: { delay: 3000, disableOnInteraction: false },
-                                            navigation: true,
-                                            breakpoints: { 1200: { slidesPerView: 3 }, 992: { slidesPerView: 3 }, 768: { slidesPerView: 3 } }
-                                        }}
-                                    />
-                                </Col>
-                            </m.div>
-                        </Tab>
-                        <Tab className="tab-style-01" key={4} eventKey={4} title={ "Cloud And Data Database"}>
-                            <m.div className='row items-center' {...{ ...fadeIn, transition: { duration: 0.9 }, viewport: { once: false } }}>
-                                <Col lg={{ offset: 1, span: 11 }} md={12} className="md:px-[15px] sm:px-[15px] sm:text-start xs:text-center">
-                                    <Clients
-                                        theme="client-logo-"
-                                        className="swiper-navigation-04 swiper-navigation-light"
-                                        data={CloudAndDataDatabaseList}
-                                        animation={fadeIn}
-                                        carousel={true}
-                                        carouselOption={{
-                                            slidesPerView: 1,
-                                            loop: true,
-                                            spaceBetween: 20,
-                                            autoplay: { delay: 3000, disableOnInteraction: false },
-                                            navigation: true,
-                                            breakpoints: { 1200: { slidesPerView: 3 }, 992: { slidesPerView: 3 }, 768: { slidesPerView: 3 } }
-                                        }}
-                                    />
-                                </Col>
-                            </m.div>
-                        </Tab>
-                        <Tab className="tab-style-01" key={5} eventKey={5} title={ "ORM"}>
-                            <m.div className='row items-center' {...{ ...fadeIn, transition: { duration: 0.9 }, viewport: { once: false } }}>
-                                <Col lg={{ offset: 1, span: 11 }} md={12} className="md:px-[15px] sm:px-[15px] sm:text-start xs:text-center" >
-                                    <Clients
-                                        theme="client-logo-"
-                                        className="swiper-navigation-04 swiper-navigation-light justify-content-center"
-                                        data={ORMList}
-                                        animation={fadeIn}
-                                        carousel={true}
-                                        carouselOption={{
-                                            slidesPerView: 1,
-                                            loop: true,
-                                            spaceBetween: 20,
-                                            autoplay: { delay: 3000, disableOnInteraction: false },
-                                            navigation: true,
-                                            breakpoints: { 1200: { slidesPerView: 2 }, 992: { slidesPerView: 2 }, 768: { slidesPerView: 2 } }
-                                        }}
-                                    />
-                                </Col>
-                            </m.div>
-                        </Tab>
-                        <Tab className="tab-style-01" key={6} eventKey={6} title={ "Frameworks"}>
-                            <m.div className='row items-center' {...{ ...fadeIn, transition: { duration: 0.9 }, viewport: { once: false } }}>
-                                <Col lg={{ offset: 1, span: 11 }} md={12} className="md:px-[15px] sm:px-[15px] sm:text-start xs:text-center">
-                                    <Clients
-                                        theme="client-logo-"
-                                        className="swiper-navigation-04 swiper-navigation-light"
-                                        data={FrameworksList}
-                                        animation={fadeIn}
-                                        carousel={true}
-                                        carouselOption={{
-                                            slidesPerView: 1,
-                                            loop: true,
-                                            spaceBetween: 20,
-                                            autoplay: { delay: 3000, disableOnInteraction: false },
-                                            navigation: true,
-                                            breakpoints: { 1200: { slidesPerView: 4 }, 992: { slidesPerView: 3 }, 768: { slidesPerView: 3 } }
-                                        }}
-                                    />
-                                </Col>
-                            </m.div>
-                        </Tab>
-                    </Tabs>
-                </Container>
-            </m.section>
-            {/* Section End */}
-
-            {/* CTA Banner Section Start */}
-            <section className="lg:pt-[100px] md:pt-[10px] sm:pt-[50px] ">
-                <Container fluid>
-                    <Row style={{backgroundImage: `url('/assets/img/ServicesPage_CTRBanner_LV-01-01-01.webp')`}}
-                         className="cover-background relative cover-background lg:py-[90px] md:py-[75px] sm:py-[50px]">
-                        <Col xs={12} className="text-center my-[5rem] md:my-[7.5rem]">
-                        <div className="justify-center align-items-center text-center d-flex flex-col">
-                                <h6 className="text-center font-serif bg-trasparent text-black m-3 w-[400px]">
-                                Connect with Our Experts and Get a Free Quote
-                                </h6>
-                            </div>
-                            <Buttons ariaLabel="button"
-                                     href="/contact"
-                                     className="mx-[10px] font-medium font-serif uppercase rounded-none lg:mb-[15px] landscape:lg:mb-[15px] justify-center align-items-center"
-                                     themeColor={["#3844F7", "#902CFC"]} size="md" color="#fff"
-                                     title="Get a Quote"/>
-                        </Col>
-                    </Row>
-                </Container>
-            </section>
-            {/* CTA Banner Section End */}
-
-
-            {/* Footer Start */}
-            <Footer className="startup-footer bg-no-repeat bg-right" theme="light">
-                <Container fluid className="xs:opacity-0 xs:hidden">
-                    <Row>
-                        <Col className="h-[65px] lg:h-[30px] bg-top bg-no-repeat"
-                             style={{backgroundImage: "url(/assets/img/webp/home-startup-footer-shadow.webp)"}}>
-                        </Col>
-                    </Row>
-                </Container>
-                <div className="py-[4%] lg:py-[7%] md:py-[50px]">
-                    <Container>
-                        <Row md={4} className="justify-center gap-y-[25px]">
-                            <FooterMenu data={Footer_Data} md={3} sm={6} className="xl:px-[15px]"
-                                        titleClass="capitalize text-dark"/>
-                        </Row>
-                    </Container>
-                </div>
-            </Footer>
-            {/* Footer End */}
-            
         </InViewPort>
     </div>)
 }
 
-export default HomeStartupPage
+export default ComingSoon
