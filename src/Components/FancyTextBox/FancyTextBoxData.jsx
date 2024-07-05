@@ -109,7 +109,7 @@ const fancyTextBox04 = [
         title: "Web & Desktop",
         id:"webDesktop",
         // subTitle: "Easy installation theme",
-        description: "Crafting modern solutions for both web and desktop platforms, ensuring seamless functionality and captivating design for your online presence and desktop applications.",
+        description: "Need a custom software solution? Umelle crafts exceptional systems tailored for both enterprise AMS/ERP needs and small businesses eager to take control of their data.",
         link: "/webdesktop"
     },
     {
@@ -117,7 +117,7 @@ const fancyTextBox04 = [
             class: "line-icon-Tablet-Phone  text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC]"
         },
         id:"crossPlatformAndMobile",
-        title: "Cross Platform and Mobile",
+        title: "Mobile/Cross Platform",
         description: "Developing versatile applications that seamlessly operate across iOS, Android, and Windows platforms, delivering a consistent and immersive user experience on smartphones, tablets, and more.",
         link: "/crossplatform"
     },
@@ -126,8 +126,8 @@ const fancyTextBox04 = [
             class: "line-icon-Big-Data  text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC]"
         },
         id:"dataIntegrationAndFormats",
-        title: "Data Integration and Formats",
-        description: "Expertly integrating diverse data sources and formats to optimize insights and decision-making, whether managing structured databases or unifying unstructured data for enhanced efficiency."
+        title: "Data Integration Solutions",
+        description: "Are you leveraging your data to its full potential? Seamlessly merge data from diverse sources, providing a unified view that enhances decision-making and operational efficiency, empowering your business with superior insights and a competitive edge."
     },
     {
         icon: {
@@ -150,8 +150,8 @@ const fancyTextBox04 = [
             class: "line-icon-Brush  text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC]"
         },
         id:"uxUI",
-        title: "UX/UI Design",
-        description: "Enhancing digital experiences with intuitive and visually compelling design, blending user-centric principles with innovative creativity to deliver interfaces that drive satisfaction, loyalty, and business expansion."
+        title: "Managed Services",
+        description: "Are your IT systems ready to support your growth? Our managed services take care of your IT infrastructure, ensuring everything runs smoothly and securely, so you can focus on driving your business forward without worrying about technical issues."
     }
 ]
 const fancyTextBox06 = [

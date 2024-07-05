@@ -137,7 +137,7 @@ const HomeStartupPage = (props) => {
                 <Row>
                     <Col className="mb-[7%]">
                         <h4 className="font-serif text-black text-center font-medium mb-[25px] lg:mb-[15px]">
-                            What we Offer
+                            Lets Get Started:
                         </h4>
                     </Col>
                 </Row>
