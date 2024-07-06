@@ -60,14 +60,14 @@ const HeaderDataAdjusted = [
                 title: 'Web & Desktop',
                 link: '/services#webDesktop'
             }, {
-                title: 'Mobile',
-                link: '/services#crossPlatformAndMobile'
+                title: 'Mobile/Cross Platform',
+                link: '/services#crossPlatform'
             }, {
-                title: 'Data Integration and Formats',
+                title: 'Data Solutions',
                 link: '/services#dataIntegrationAndFormats'
             }, {
-                title: 'Content Management and Web APIs',
-                link: '/services#contentManagement'
+                title: 'Network and Web APIs',
+                link: '/services#networkapi'
             }, {
                 title: 'Cloud Services and Deployment',
                 link: '/services#cloudServices'

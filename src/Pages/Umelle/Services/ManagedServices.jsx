@@ -52,7 +52,7 @@ const FeaturesData = [
     }
 ]
 
-const WebDesktop = (props) => {
+const ManagedServices = (props) => {
     ScrollToAnchor();
 
     useEffect(() => {
@@ -118,7 +118,7 @@ const WebDesktop = (props) => {
                                   transition={{duration: 0.5, delay: 0.5, ease: "easeIn"}}
                                   style={{fontSize:'2em'}}
                                   className="font-serif block leading-[48px] mb-[35px] font-light text-black xs:text-base xs:mb-[40px]">
-                                Web and Desktop Applications
+                                Managed Services
                             </m.h4>
                             <m.span initial={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)'}}
                                     animate={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)'}}
@@ -221,4 +221,4 @@ const WebDesktop = (props) => {
     </div>)
 }
 
-export default WebDesktop
+export default ManagedServices

@@ -8,6 +8,7 @@
     .nav-link {
       @apply font-serif border-0 relative text-[#828282] border-none p-0 font-medium uppercase bg-transparent;
       transition: all 0.5s ease-in-out;
+      margin-bottom: 50px;
 
       &::after {
         bottom: -5px;

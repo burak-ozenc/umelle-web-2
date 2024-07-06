@@ -126,16 +126,18 @@ const fancyTextBox04 = [
             class: "line-icon-Big-Data  text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC]"
         },
         id:"dataIntegrationAndFormats",
-        title: "Data Integration Solutions",
-        description: "Are you leveraging your data to its full potential? Seamlessly merge data from diverse sources, providing a unified view that enhances decision-making and operational efficiency, empowering your business with superior insights and a competitive edge."
+        title: "Data Solutions",
+        description: "Empower your business with superior insights and a competitive edge, Umelle provides comprehensive data solutions for a unified view that enhances decision-making and operational efficiency.",
+        link: "/datasolutions"
     },
     {
         icon: {
             class: "line-icon-Security-Block  text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC]"
         },
-        id:"contentManagement",
-        title: "Content Management and Web APIs",
-        description: "Streamlining content management and empowering secure interaction with third-party services through robust web APIs, offering scalable solutions for content distribution across various platforms."
+        id:"networkapi",
+        title: "Network and Web APIs",
+        description: "Revolutionize your business with Umelle's Network and Web API services, enabling seamless integration, real-time data exchange, and robust security. Embrace scalable, flexible solutions to stay ahead in a competitive digital landscape.",
+        link: "/networkapi"
     },
     {
         icon: {
@@ -143,7 +145,8 @@ const fancyTextBox04 = [
         },
         id:"cloudServices",
         title: "Cloud Services and Deployment",
-        description: "Leveraging the flexibility and scalability of cloud computing for reliable performance, strengthened security, and cost-effective scalability, providing expert solutions for migration, optimization, and cloud technology utilization."
+        description: "Leveraging the flexibility and scalability of cloud computing for reliable performance, strengthened security, and cost-effective scalability, providing expert solutions for migration, optimization, and cloud technology utilization.",
+        link: "/cloudservices"
     },
     {
         icon: {
@@ -151,7 +154,8 @@ const fancyTextBox04 = [
         },
         id:"uxUI",
         title: "Managed Services",
-        description: "Are your IT systems ready to support your growth? Our managed services take care of your IT infrastructure, ensuring everything runs smoothly and securely, so you can focus on driving your business forward without worrying about technical issues."
+        description: "Are your IT systems ready to support your growth? Our managed services take care of your IT infrastructure, ensuring everything runs smoothly and securely, so you can focus on driving your business forward without worrying about technical issues.",
+        link: "/managedservices"
     }
 ]
 const fancyTextBox06 = [

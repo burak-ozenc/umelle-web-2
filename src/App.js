@@ -30,6 +30,10 @@ const LandingPage = lazy(() => import("./Pages/Umelle/LandingPage/Startup"))
 const UIMSProduct = lazy(() => import("./Pages/Umelle/UIMSProduct/Startup"))
 const WebDesktop = lazy(() => import("./Pages/Umelle/Services/WebDesktop"))
 const CrossPlatform = lazy(() => import("./Pages/Umelle/Services/CrossPlatform"))
+const DataSolutions = lazy(() => import("./Pages/Umelle/Services/DataSolutions"))
+const NetworkAPI = lazy(() => import("./Pages/Umelle/Services/NetworkAPI"))
+const CloudServices = lazy(() => import("./Pages/Umelle/Services/CloudServices"))
+const ManagedServices = lazy(() => import("./Pages/Umelle/Services/ManagedServices"))
 
 function App() {
   const [headerHeight, setHeaderHeight] = useState(0);
@@ -138,6 +142,10 @@ function App() {
                   <Route path="/contact-success-2" element={<ContactSuccessCustom style={{ "--base-color": "#27ae60" }} />} />
                   <Route path="/webdesktop" element={<WebDesktop style={{ "--base-color": "#27ae60" }} />} />
                   <Route path="/crossplatform" element={<CrossPlatform style={{ "--base-color": "#27ae60" }} />} />
+                  <Route path="/datasolutions" element={<DataSolutions style={{ "--base-color": "#27ae60" }} />} />
+                  <Route path="/networkapi" element={<NetworkAPI style={{ "--base-color": "#27ae60" }} />} />
+                  <Route path="/cloudservices" element={<CloudServices style={{ "--base-color": "#27ae60" }} />} />
+                  <Route path="/managedservices" element={<ManagedServices style={{ "--base-color": "#27ae60" }} />} />
                 </Routes>
               </Suspense>
             </AnimatePresence>
