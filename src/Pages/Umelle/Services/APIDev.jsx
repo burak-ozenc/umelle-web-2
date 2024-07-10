@@ -14,7 +14,7 @@ import {analyticsEvent, ScrollToAnchor} from "../../../Functions/Utilities";
 import FooterMenu, {Footer} from '../../../Components/Footers/Footer';
 import InViewPort from '../../../Components/InViewPort';
 import InteractiveBanners04 from "../../../Components/InteractiveBanners/InteractiveBanners04";
-import {InteractiveBannersData04} from "../../../Components/InteractiveBanners/InteractiveBannersData";
+import {InteractiveBannersData20} from "../../../Components/InteractiveBanners/InteractiveBannersData";
 
 // Data
 import FooterData from '../../../Components/Footers/FooterData';
@@ -32,27 +32,27 @@ const Footer_Data = [FooterData[0], FooterData[1], FooterData[4], FooterData[3]]
 const FeaturesData = [
     {
         icon: "line-icon-Navigation-LeftWindow text-basecolor text-[40px] text-gradient bg-gradient-to-r from-[#975ade] via-[#af63d2] to-[#e6686f]",
-        title: "Tailored Solutions",
-        content: "We create custom applications that perfectly align with your business processes, ensuring seamless integration and optimal performance.",
+        title: "Expertise and Experience",
+        content: "Our team brings deep knowledge and expertise to manage your IT needs effectively. We stay ahead of technological trends to provide cutting-edge solutions.",
     },
     {
         icon: "line-icon-Cursor-Click2 text-basecolor text-[40px] text-gradient bg-gradient-to-r from-[#975ade] via-[#af63d2] to-[#e6686f]",
-        title: "Enhanced Security",
-        content: "Our applications are built with advanced security features, providing superior protection against data breaches.",
+        title: "Customized Approach",
+        content: "Our tailored services ensure that your specific requirements are met, providing personalized solutions that align with your business goals.",
     },
     {
         icon: "line-icon-Gear-2 text- text-[40px] text-gradient bg-gradient-to-r from-[#975ade] via-[#af63d2] to-[#e6686f]",
-        title: "Scalability",
-        content: "Our solutions are designed to grow with your business, offering flexibility to add new features as needed.",
+        title: "Proactive Support",
+        content: "Our proactive monitoring and maintenance prevent problems before they occur, ensuring smooth and uninterrupted operations.",
     },
     {
         icon: "line-icon-Talk-Man text-basecolor text-[40px] text-gradient bg-gradient-to-r from-[#975ade] via-[#af63d2] to-[#e6686f]",
-        title: "Expertise and Support",
-        content: "Our team provides ongoing support and maintenance, ensuring your application remains up-to-date and secure.",
+        title: "Cost Efficiency",
+        content: "Our competitive pricing and comprehensive services offer excellent value for your investment.",
     }
 ]
 
-const CrossPlatform = (props) => {
+const APIDev = (props) => {
     ScrollToAnchor();
 
     useEffect(() => {
@@ -118,13 +118,13 @@ const CrossPlatform = (props) => {
                                   transition={{duration: 0.5, delay: 0.5, ease: "easeIn"}}
                                   style={{fontSize:'2em'}}
                                   className="font-serif block leading-[48px] mb-[35px] font-light text-black xs:text-base xs:mb-[40px]">
-                                Mobile/Cross Platform
+                                Seamless Connectivity with Custom API Solutions
                             </m.h4>
                             <m.span initial={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)'}}
                                     animate={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)'}}
                                     transition={{duration: 0.5, delay: 0.8, ease: "easeIn"}}
                                     className="font-serif block text-[19px] leading-[28px] mb-[35px] font-light text-black xs:text-base xs:mb-[20px]">
-                                Transform your business with Umelle’s custom applications, designed to seamlessly integrate with your tools, enhance workflows, and provide robust, scalable solutions that evolve with your growth. Stay ahead with tailored software that boosts efficiency and security.
+                                We ensure secure, scalable, and efficient connectivity across all your applications. Leverage our expertise to streamline operations and improve functionality, using technologies like .NET Core and Azure API Management.
                             </m.span>
                         </Col>
                         <Col xs={12} lg={6} md={6}
@@ -153,7 +153,7 @@ const CrossPlatform = (props) => {
                         <Row className="justify-center">
                             <Col lg={6} sm={8} className="text-center mb-24 md:mb-16 sm:mb-8 mt-14">
                                 <span className="font-serif font-medium text-md text-gradient bg-gradient-to-r from-[#975ade] via-[#e05fc4] to-[#ff798e] tracking-[.5px] uppercase inline-block mb-[20px] sm:mb-[10px]">Why Work with Umelle?</span>
-                                <h2 className="heading-4 font-serif font-light text-darkgray tracking-[-1px]">You Grow We Build</h2>
+                                <h2 className="heading-4 font-serif font-light text-darkgray tracking-[-1px]">Connect Your Data</h2>
                             </Col>
                             <IconWithText grid="row-cols-1 row-cols-lg-4 row-cols-sm-2 text-center md:gap-y-[15px]" theme="icon-with-text-03" data={FeaturesData} animation={fadeIn} animationDelay={0.3} />
                         </Row>
@@ -168,7 +168,7 @@ const CrossPlatform = (props) => {
                 <InteractiveBanners04
                     grid="row-cols-12 gap-y-10 sm:justify-center"
                     overlay={["#0039e3cc", "#4132e0cc", "#5e28ddcc", "#741bd9cc", "#8600d4cc"]}
-                    data={InteractiveBannersData04}
+                    data={InteractiveBannersData20}
                     animation={fadeIn} />
                 </Container>
             </section>
@@ -221,4 +221,4 @@ const CrossPlatform = (props) => {
     </div>)
 }
 
-export default CrossPlatform
+export default APIDev

@@ -28,10 +28,10 @@ const ContactSuccess = lazy(() => import("./Pages/Umelle/ContactSuccess/ContactS
 const ContactSuccessCustom = lazy(() => import("./Pages/Umelle/ContactSuccess/ContactSuccessCustom"))
 const LandingPage = lazy(() => import("./Pages/Umelle/LandingPage/Startup"))
 const UIMSProduct = lazy(() => import("./Pages/Umelle/UIMSProduct/Startup"))
-const WebDesktop = lazy(() => import("./Pages/Umelle/Services/WebDesktop"))
-const CrossPlatform = lazy(() => import("./Pages/Umelle/Services/CrossPlatform"))
-const DataSolutions = lazy(() => import("./Pages/Umelle/Services/DataSolutions"))
-const NetworkAPI = lazy(() => import("./Pages/Umelle/Services/NetworkAPI"))
+const AISolutions = lazy(() => import("./Pages/Umelle/Services/AISolutions"))
+const CSDev = lazy(() => import("./Pages/Umelle/Services/CSDev"))
+const APIDev = lazy(() => import("./Pages/Umelle/Services/APIDev"))
+const BIA = lazy(() => import("./Pages/Umelle/Services/BIA"))
 const CloudServices = lazy(() => import("./Pages/Umelle/Services/CloudServices"))
 const ManagedServices = lazy(() => import("./Pages/Umelle/Services/ManagedServices"))
 
@@ -140,12 +140,12 @@ function App() {
                   <Route path="/aw-stg-landingp" element={<LandingPage style={{ "--base-color": "#27ae60" }} />} />
                   <Route path="/contact-success-1" element={<ContactSuccess style={{ "--base-color": "#27ae60" }} />} />
                   <Route path="/contact-success-2" element={<ContactSuccessCustom style={{ "--base-color": "#27ae60" }} />} />
-                  <Route path="/webdesktop" element={<WebDesktop style={{ "--base-color": "#27ae60" }} />} />
-                  <Route path="/crossplatform" element={<CrossPlatform style={{ "--base-color": "#27ae60" }} />} />
-                  <Route path="/datasolutions" element={<DataSolutions style={{ "--base-color": "#27ae60" }} />} />
-                  <Route path="/networkapi" element={<NetworkAPI style={{ "--base-color": "#27ae60" }} />} />
-                  <Route path="/cloudservices" element={<CloudServices style={{ "--base-color": "#27ae60" }} />} />
-                  <Route path="/managedservices" element={<ManagedServices style={{ "--base-color": "#27ae60" }} />} />
+                  <Route path="/ai-and-machine-learning-solutions" element={<AISolutions style={{ "--base-color": "#27ae60" }} />} />
+                  <Route path="/custom-software-development" element={<CSDev style={{ "--base-color": "#27ae60" }} />} />
+                  <Route path="/api-development-and-integration" element={<APIDev style={{ "--base-color": "#27ae60" }} />} />
+                  <Route path="/business-intelligence-and-analytics" element={<BIA style={{ "--base-color": "#27ae60" }} />} />
+                  <Route path="/cloud-services" element={<CloudServices style={{ "--base-color": "#27ae60" }} />} />
+                  <Route path="/managed-it-services" element={<ManagedServices style={{ "--base-color": "#27ae60" }} />} />
                 </Routes>
               </Suspense>
             </AnimatePresence>

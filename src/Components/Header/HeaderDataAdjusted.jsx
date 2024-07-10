@@ -57,23 +57,23 @@ const HeaderDataAdjusted = [
         link: '/services',
         dropdown: [
             {
-                title: 'Web & Desktop',
-                link: '/services#webDesktop'
+                title: 'AI and Machine Learning Solutions',
+                link: '/services#ai-and-machine-learning-solutions'
             }, {
-                title: 'Mobile/Cross Platform',
-                link: '/services#crossPlatform'
+                title: 'Custom Software Development',
+                link: '/services#custom-software-development'
             }, {
-                title: 'Data Solutions',
-                link: '/services#dataIntegrationAndFormats'
+                title: 'API Development and Integration',
+                link: '/services#api-development-and-integration'
             }, {
-                title: 'Network and Web APIs',
-                link: '/services#networkapi'
+                title: 'Business Intelligence and Analytics',
+                link: '/services#business-intelligence-and-analytics'
             }, {
-                title: 'Cloud Services and Deployment',
-                link: '/services#cloudServices'
+                title: 'Cloud Services',
+                link: '/services#cloud-services'
             }, {
-                title: 'UX/UI Design',
-                link: '/services#uxUI'
+                title: 'Managed Services',
+                link: '/services#managed-it-services'
             }
         ]
     }, {

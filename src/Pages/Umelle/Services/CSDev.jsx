@@ -14,7 +14,7 @@ import {analyticsEvent, ScrollToAnchor} from "../../../Functions/Utilities";
 import FooterMenu, {Footer} from '../../../Components/Footers/Footer';
 import InViewPort from '../../../Components/InViewPort';
 import InteractiveBanners04 from "../../../Components/InteractiveBanners/InteractiveBanners04";
-import {InteractiveBannersData04} from "../../../Components/InteractiveBanners/InteractiveBannersData";
+import {InteractiveBannersData16} from "../../../Components/InteractiveBanners/InteractiveBannersData";
 
 // Data
 import FooterData from '../../../Components/Footers/FooterData';
@@ -32,27 +32,27 @@ const Footer_Data = [FooterData[0], FooterData[1], FooterData[4], FooterData[3]]
 const FeaturesData = [
     {
         icon: "line-icon-Navigation-LeftWindow text-basecolor text-[40px] text-gradient bg-gradient-to-r from-[#975ade] via-[#af63d2] to-[#e6686f]",
-        title: "Tailored Solutions",
-        content: "We create custom applications that perfectly align with your business processes, ensuring seamless integration and optimal performance.",
+        title: "Proven Track Record",
+        content: "We have a history of successfully delivering custom software solutions that drive business growth and efficiency.",
     },
     {
         icon: "line-icon-Cursor-Click2 text-basecolor text-[40px] text-gradient bg-gradient-to-r from-[#975ade] via-[#af63d2] to-[#e6686f]",
-        title: "Enhanced Security",
-        content: "Our applications are built with advanced security features, providing superior protection against data breaches.",
+        title: "Collaborative Process",
+        content: "We work closely with you throughout the development process, from initial consultation to final deployment, ensuring the end product meets your expectations.",
     },
     {
         icon: "line-icon-Gear-2 text- text-[40px] text-gradient bg-gradient-to-r from-[#975ade] via-[#af63d2] to-[#e6686f]",
-        title: "Scalability",
-        content: "Our solutions are designed to grow with your business, offering flexibility to add new features as needed.",
+        title: "Quality Assurance",
+        content: "Our rigorous testing and quality assurance processes guarantee that the software we deliver is reliable, secure, and performs optimally.",
     },
     {
         icon: "line-icon-Talk-Man text-basecolor text-[40px] text-gradient bg-gradient-to-r from-[#975ade] via-[#af63d2] to-[#e6686f]",
-        title: "Expertise and Support",
-        content: "Our team provides ongoing support and maintenance, ensuring your application remains up-to-date and secure.",
+        title: "Ongoing Support",
+        content: "After deployment, we provide continuous support and maintenance to ensure your software remains up-to-date and functions smoothly, adapting to changes in your business environment.",
     }
 ]
 
-const WebDesktop = (props) => {
+const CSDev = (props) => {
     ScrollToAnchor();
 
     useEffect(() => {
@@ -112,19 +112,19 @@ const WebDesktop = (props) => {
                     <Row
                         className="full-screen md:h-[650px] sm:h-[350px] xs:h-[450px] align-items-center justify-center">
                         <Col xs={12} lg={6} md={6}
-                             className="justify-center items-left my-0 mx-auto relative flex flex-col">
+                             className="justify-center items-center my-0 mx-auto relative flex flex-col">
                             <m.h4 initial={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)'}}
                                   animate={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)'}}
                                   transition={{duration: 0.5, delay: 0.5, ease: "easeIn"}}
                                   style={{fontSize:'2em'}}
                                   className="font-serif block leading-[48px] mb-[35px] font-light text-black xs:text-base xs:mb-[40px]">
-                                Web and Desktop Applications
+                                Tailored Software Solutions for Unique Business Needs
                             </m.h4>
                             <m.span initial={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)'}}
                                     animate={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)'}}
                                     transition={{duration: 0.5, delay: 0.8, ease: "easeIn"}}
                                     className="font-serif block text-[19px] leading-[28px] mb-[35px] font-light text-black xs:text-base xs:mb-[20px]">
-                                Transform your business with Umelle’s custom applications, designed to seamlessly integrate with your tools, enhance workflows, and provide robust, scalable solutions that evolve with your growth. Stay ahead with tailored software that boosts efficiency and security.
+                                We deliver robust, responsive, and user-friendly applications tailored to meet your specific requirements. By leveraging the latest technologies such as .NET Core, Blazor and Azure DevOps we provide you with a competitive edge in your industry.
                             </m.span>
                         </Col>
                         <Col xs={12} lg={6} md={6}
@@ -153,7 +153,7 @@ const WebDesktop = (props) => {
                         <Row className="justify-center">
                             <Col lg={6} sm={8} className="text-center mb-24 md:mb-16 sm:mb-8 mt-14">
                                 <span className="font-serif font-medium text-md text-gradient bg-gradient-to-r from-[#975ade] via-[#e05fc4] to-[#ff798e] tracking-[.5px] uppercase inline-block mb-[20px] sm:mb-[10px]">Why Work with Umelle?</span>
-                                <h2 className="heading-4 font-serif font-light text-darkgray tracking-[-1px]">You Grow We Build</h2>
+                                <h2 className="heading-4 font-serif font-light text-darkgray tracking-[-1px]">Your Business Is Unique</h2>
                             </Col>
                             <IconWithText grid="row-cols-1 row-cols-lg-4 row-cols-sm-2 text-center md:gap-y-[15px]" theme="icon-with-text-03" data={FeaturesData} animation={fadeIn} animationDelay={0.3} />
                         </Row>
@@ -164,11 +164,11 @@ const WebDesktop = (props) => {
             {/* Section Start */}
             <section className="py-[60px] lg:py-[60px] md:py-[95px] sm:py-[80px] xs:py-[50px] bg-lightgray">
                 <Container fluid className="px-[30px] xs:px-[15px]">
-                <h6 className="font-serif text-gray-900 text-center font-medium mb-[91px] xl:mb-[105px] lg:mb-[74px] md:mb-[65px] sm:mb-[53px] xs:mb-[46px] xxs:mb-[40px]">Create Your Application With Umelle</h6>
+                <h6 className="font-serif text-gray-900 text-center font-medium mb-[91px] xl:mb-[105px] lg:mb-[74px] md:mb-[65px] sm:mb-[53px] xs:mb-[46px] xxs:mb-[40px]">Build Your Own Tools And Systems</h6>
                 <InteractiveBanners04
                     grid="row-cols-12 gap-y-10 sm:justify-center"
                     overlay={["#0039e3cc", "#4132e0cc", "#5e28ddcc", "#741bd9cc", "#8600d4cc"]}
-                    data={InteractiveBannersData04}
+                    data={InteractiveBannersData16}
                     animation={fadeIn} />
                 </Container>
             </section>
@@ -221,4 +221,4 @@ const WebDesktop = (props) => {
     </div>)
 }
 
-export default WebDesktop
+export default CSDev

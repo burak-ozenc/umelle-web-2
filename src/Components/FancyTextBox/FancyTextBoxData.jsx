@@ -106,56 +106,56 @@ const fancyTextBox04 = [
         icon: {
             class: "line-icon-Computer-3  text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC]"
         },
-        title: "Web & Desktop",
-        id:"webDesktop",
+        title: "AI and Machine Learning Solutions",
+        id:"ai-and-machine-learning-solutions",
         // subTitle: "Easy installation theme",
         description: "Need a custom software solution? Umelle crafts exceptional systems tailored for both enterprise AMS/ERP needs and small businesses eager to take control of their data.",
-        link: "/webdesktop"
+        link: "/ai-and-machine-learning-solutions"
     },
     {
         icon: {
             class: "line-icon-Tablet-Phone  text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC]"
         },
-        id:"crossPlatformAndMobile",
-        title: "Mobile/Cross Platform",
+        id:"custom-software-development",
+        title: "Custom Software Development",
         description: "Developing versatile applications that seamlessly operate across iOS, Android, and Windows platforms, delivering a consistent and immersive user experience on smartphones, tablets, and more.",
-        link: "/crossplatform"
+        link: "/custom-software-development"
     },
     {
         icon: {
             class: "line-icon-Big-Data  text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC]"
         },
-        id:"dataIntegrationAndFormats",
-        title: "Data Solutions",
+        id:"api-development-and-integration",
+        title: "API Development and Integration",
         description: "Empower your business with superior insights and a competitive edge, Umelle provides comprehensive data solutions for a unified view that enhances decision-making and operational efficiency.",
-        link: "/datasolutions"
+        link: "/api-development-and-integration"
     },
     {
         icon: {
             class: "line-icon-Security-Block  text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC]"
         },
-        id:"networkapi",
-        title: "Network and Web APIs",
+        id:"business-intelligence-and-analytics",
+        title: "Business Intelligence and Analytics",
         description: "Revolutionize your business with Umelle's Network and Web API services, enabling seamless integration, real-time data exchange, and robust security. Embrace scalable, flexible solutions to stay ahead in a competitive digital landscape.",
-        link: "/networkapi"
+        link: "/business-intelligence-and-analytics"
     },
     {
         icon: {
             class: "line-icon-Cloud-Computer  text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC]"
         },
-        id:"cloudServices",
-        title: "Cloud Services and Deployment",
+        id:"cloud-services",
+        title: "Cloud Services",
         description: "Leveraging the flexibility and scalability of cloud computing for reliable performance, strengthened security, and cost-effective scalability, providing expert solutions for migration, optimization, and cloud technology utilization.",
-        link: "/cloudservices"
+        link: "/cloud-services"
     },
     {
         icon: {
             class: "line-icon-Brush  text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC]"
         },
-        id:"uxUI",
-        title: "Managed Services",
+        id:"managed-it-services",
+        title: "Managed IT Services",
         description: "Are your IT systems ready to support your growth? Our managed services take care of your IT infrastructure, ensuring everything runs smoothly and securely, so you can focus on driving your business forward without worrying about technical issues.",
-        link: "/managedservices"
+        link: "/managed-it-services"
     }
 ]
 const fancyTextBox06 = [

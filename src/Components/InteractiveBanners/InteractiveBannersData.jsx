@@ -126,32 +126,32 @@ const InteractiveBannersData03 = [
 
 const InteractiveBannersData04 = [
     {
-        title: 'Optimization and Efficiency',
-        content: "Our custom applications streamline your business processes, reducing manual tasks and improving accuracy, allowing your team to focus on strategic initiatives.",
+        title: '24/7 Monitoring',
+        content: "Our dedicated team provides continuous monitoring to ensure your IT infrastructure runs smoothly and efficiently at all times. This reduces downtime and enhances operational stability.",
         img: "https://via.placeholder.com/464x610",
         //btnTitle: "Explore services",
         //btnLink: "/page/our-services",
         //icon: "line-icon-Add-Window"
     },
     {
-        title: "Improving your Customer Experience",
-        content: "By providing a user-friendly interface and seamless integration with existing systems, we help enhance customer satisfaction and engagement.",
+        title: "Advanced Cybersecurity",
+        content: "We implement state-of-the-art cybersecurity measures to protect your business from threats and vulnerabilities. Our proactive approach ensures your data and systems are secure.",
         img: "https://via.placeholder.com/464x610",
         //btnTitle: "Explore services",
         //btnLink: "/page/our-services",
         //icon: "line-icon-Add-Bag"
     },
     {
-        title: "Cost-Effective",
-        content: "We hand pick our team to comprise of the most talented individuals to dedicate to our project. This way we keep our headcount small and efficient while you save.",
+        title: "Seamless IT Infrastructure Management",
+        content: "From network management to server maintenance, we handle all aspects of your IT infrastructure. Our comprehensive services ensure your systems are optimized and running at peak performance.",
         img: "https://via.placeholder.com/464x610",
         //btnTitle: "Explore services",
         //btnLink: "/page/our-services",
         //icon: "line-icon-Android-Store"
     },
     {
-        title: "Competitive Advantage",
-        content: "With a custom solution, your business stands out in the market, offering unique features and functionalities that off-the-shelf products can't match.",
+        title: "Scalable Solutions",
+        content: "As your business grows, our IT services scale with you. Whether you're expanding your operations or need additional support, our flexible solutions adapt to meet your evolving needs.",
         img: "https://via.placeholder.com/464x610",
         //btnTitle: "Explore services",
         //btnLink: "/page/our-services",
@@ -462,5 +462,174 @@ const InteractiveBannersData15 = [
         btnLink: "/portfolio/portfolio-boxed-metro"
     },
 ]
-
-export { InteractiveBannersData01, InteractiveBannersData02, InteractiveBannersData03, InteractiveBannersData04, InteractiveBannersData05, InteractiveBannersData06, InteractiveBannersData07, InteractiveBannersData08, InteractiveBannersData09, InteractiveBannersData10, InteractiveBannersData12, InteractiveBannersData13, InteractiveBannersData14, InteractiveBannersData15 }
+const InteractiveBannersData16 = [
+    {
+        title: 'Tailored Solutions',
+        content: "We design and develop software tailored to your unique business needs, ensuring it aligns perfectly with your operational goals and processes.",
+        img: "https://via.placeholder.com/464x610",
+        //btnTitle: "Explore services",
+        //btnLink: "/page/our-services",
+        //icon: "line-icon-Add-Window"
+    },
+    {
+        title: "Cutting-Edge Technologies",
+        content: "Utilizing the latest technologies, we create robust and responsive applications that give you a competitive edge in your industry.",
+        img: "https://via.placeholder.com/464x610",
+        //btnTitle: "Explore services",
+        //btnLink: "/page/our-services",
+        //icon: "line-icon-Add-Bag"
+    },
+    {
+        title: "User-Friendly Design",
+        content: "Our applications are designed with user experience in mind, ensuring they are intuitive, easy to navigate, and enhance productivity.",
+        img: "https://via.placeholder.com/464x610",
+        //btnTitle: "Explore services",
+        //btnLink: "/page/our-services",
+        //icon: "line-icon-Android-Store"
+    },
+    {
+        title: "Scalable and Flexible",
+        content: "Our software solutions are built to scale with your business, allowing for easy updates and expansions as your needs grow and evolve.",
+        img: "https://via.placeholder.com/464x610",
+        //btnTitle: "Explore services",
+        //btnLink: "/page/our-services",
+        //icon: "line-icon-Cursor-Click2"
+    }
+]
+const InteractiveBannersData17 = [
+    {
+        title: 'Seamless Migration',
+        content: "We ensure a smooth transition to the cloud with minimal disruption to your operations, leveraging our expertise in Microsoft Azure.",
+        img: "https://via.placeholder.com/464x610",
+        //btnTitle: "Explore services",
+        //btnLink: "/page/our-services",
+        //icon: "line-icon-Add-Window"
+    },
+    {
+        title: "Efficient Management",
+        content: "Our cloud management services optimize resource utilization, ensuring cost-effectiveness and operational efficiency.",
+        img: "https://via.placeholder.com/464x610",
+        //btnTitle: "Explore services",
+        //btnLink: "/page/our-services",
+        //icon: "line-icon-Add-Bag"
+    },
+    {
+        title: "Scalable Cloud Solutions",
+        content: "We design cloud-native applications that scale with your business needs, providing flexibility and agility.",
+        img: "https://via.placeholder.com/464x610",
+        //btnTitle: "Explore services",
+        //btnLink: "/page/our-services",
+        //icon: "line-icon-Android-Store"
+    },
+    {
+        title: "Enhanced Security",
+        content: "Our cloud solutions include advanced security measures to protect your data and maintain compliance with industry standards.",
+        img: "https://via.placeholder.com/464x610",
+        //btnTitle: "Explore services",
+        //btnLink: "/page/our-services",
+        //icon: "line-icon-Cursor-Click2"
+    }
+]
+const InteractiveBannersData18 = [
+    {
+        title: 'Predictive Analytics',
+        content: "Utilize AI to forecast trends and make data-driven decisions that enhance your business strategies.",
+        img: "https://via.placeholder.com/464x610",
+        //btnTitle: "Explore services",
+        //btnLink: "/page/our-services",
+        //icon: "line-icon-Add-Window"
+    },
+    {
+        title: "Process Automation",
+        content: "Automate routine tasks with AI to increase efficiency and reduce operational costs.",
+        img: "https://via.placeholder.com/464x610",
+        //btnTitle: "Explore services",
+        //btnLink: "/page/our-services",
+        //icon: "line-icon-Add-Bag"
+    },
+    {
+        title: "Enhanced Customer Insights",
+        content: "Leverage natural language processing to gain deeper insights into customer behavior and preferences.",
+        img: "https://via.placeholder.com/464x610",
+        //btnTitle: "Explore services",
+        //btnLink: "/page/our-services",
+        //icon: "line-icon-Android-Store"
+    },
+    {
+        title: "Real-Time Decision Making",
+        content: "Implement AI solutions that provide real-time data analysis and support rapid, informed decision-making.",
+        img: "https://via.placeholder.com/464x610",
+        //btnTitle: "Explore services",
+        //btnLink: "/page/our-services",
+        //icon: "line-icon-Cursor-Click2"
+    }
+]
+const InteractiveBannersData19 = [
+    {
+        title: 'Advanced Reporting',
+        content: "Create comprehensive and customizable reports that provide deep insights into your business performance.",
+        img: "https://via.placeholder.com/464x610",
+        //btnTitle: "Explore services",
+        //btnLink: "/page/our-services",
+        //icon: "line-icon-Add-Window"
+    },
+    {
+        title: "Interactive Dashboards",
+        content: "Develop interactive dashboards that visualize data in an intuitive and actionable format.",
+        img: "https://via.placeholder.com/464x610",
+        //btnTitle: "Explore services",
+        //btnLink: "/page/our-services",
+        //icon: "line-icon-Add-Bag"
+    },
+    {
+        title: "Real-Time Analytics",
+        content: "Implement real-time analytics to monitor and respond to business metrics as they happen.",
+        img: "https://via.placeholder.com/464x610",
+        //btnTitle: "Explore services",
+        //btnLink: "/page/our-services",
+        //icon: "line-icon-Android-Store"
+    },
+    {
+        title: "Data Integration",
+        content: "Integrate data from multiple sources for a unified view, enabling more informed decision-making.",
+        img: "https://via.placeholder.com/464x610",
+        //btnTitle: "Explore services",
+        //btnLink: "/page/our-services",
+        //icon: "line-icon-Cursor-Click2"
+    }
+]
+const InteractiveBannersData20 = [
+    {
+        title: 'Custom API Development',
+        content: "Develop APIs tailored to your business needs, ensuring seamless integration and enhanced functionality.",
+        img: "https://via.placeholder.com/464x610",
+        //btnTitle: "Explore services",
+        //btnLink: "/page/our-services",
+        //icon: "line-icon-Add-Window"
+    },
+    {
+        title: "Secure and Scalable",
+        content: "Build secure and scalable APIs that support your business growth and protect your data.",
+        img: "https://via.placeholder.com/464x610",
+        //btnTitle: "Explore services",
+        //btnLink: "/page/our-services",
+        //icon: "line-icon-Add-Bag"
+    },
+    {
+        title: "Efficient Connectivity",
+        content: "Ensure efficient connectivity between your applications, improving overall system performance.",
+        img: "https://via.placeholder.com/464x610",
+        //btnTitle: "Explore services",
+        //btnLink: "/page/our-services",
+        //icon: "line-icon-Android-Store"
+    },
+    {
+        title: "Comprehensive Integration",
+        content: "Integrate with various third-party services and platforms to expand your system capabilities.",
+        img: "https://via.placeholder.com/464x610",
+        //btnTitle: "Explore services",
+        //btnLink: "/page/our-services",
+        //icon: "line-icon-Cursor-Click2"
+    }
+]
+export { InteractiveBannersData20, InteractiveBannersData19, InteractiveBannersData18, InteractiveBannersData17, InteractiveBannersData01, InteractiveBannersData02, InteractiveBannersData03, InteractiveBannersData04, InteractiveBannersData05, InteractiveBannersData06, InteractiveBannersData07, InteractiveBannersData08, InteractiveBannersData09, InteractiveBannersData10, InteractiveBannersData12, InteractiveBannersData13, InteractiveBannersData14, InteractiveBannersData15, InteractiveBannersData16 }
