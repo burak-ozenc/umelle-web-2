@@ -2,18 +2,20 @@ import React, {lazy, useEffect, useRef, useState} from 'react'
 
 // Libraries
 import {Link} from 'react-router-dom';
-import {Accordion, Col, Container, Navbar, Row, Tab, Tabs} from "react-bootstrap";
+import {Accordion, Col, Container, Navbar, Row,} from "react-bootstrap";
 import {AnimatePresence, domMax, LazyMotion, m} from 'framer-motion';
 import {Form, Formik} from 'formik';
 
 // Functions
-import {fadeIn} from '../../../Functions/GlobalAnimations';
+import {fadeIn, fadeInLeft} from '../../../Functions/GlobalAnimations';
 
 // Components
 import {analyticsEvent, resetForm, ScrollToAnchor} from "../../../Functions/Utilities";
 import {Checkbox, Input} from '../../../Components/Form/Form'
 import FooterMenu, {Footer} from '../../../Components/Footers/Footer';
 import InViewPort from '../../../Components/InViewPort';
+import CustomModal from '../../../Components/CustomModal';
+
 
 // Data
 import FooterData from '../../../Components/Footers/FooterData';
@@ -21,8 +23,7 @@ import Counter from "../../../Components/Counters/Counter";
 import {CounterData05} from "../../../Components/Counters/CounterData";
 import Services from "../../../Components/Services/Services";
 import {serviceData5} from "../../../Components/Services/ServicesData";
-import {ProcessStepData02} from "../../../Components/ProcessStep/ProcessStepData";
-import AccordionSolutions from "../../../Components/Accordion/AccordionSolutions";
+import {ProcessStepData03} from "../../../Components/ProcessStep/ProcessStepData";
 import Buttons from "../../../Components/Button/Buttons";
 import {ContactFormStyle02Schema} from "../../../Components/Form/FormSchema";
 import ReCAPTCHA from "react-google-recaptcha";
@@ -30,6 +31,7 @@ import {AccordionDataSolutions} from "../../../Components/Accordion/AccordionDat
 import * as emailjs from "@emailjs/browser";
 import SEO from "../../../Components/Umelle/SEO";
 import {Parallax} from 'react-scroll-parallax';
+import productImage from "../../../Assets/img/umelle/UIMS_P.png";
 
 const Header = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Header})))
 const HeaderNav = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.HeaderNav})))
@@ -86,62 +88,6 @@ const HomeStartupPage = (props) => {
             );
     };
     
-    
-    
-    // const sendEmail = (values) => {
-    //     emailjs
-    //         .send(process.env.REACT_APP_EMAIL_SERVICE_ID, process.env.REACT_APP_EMAIL_FEATURES_TEMPLATE_ID, values, {
-    //             publicKey: process.env.REACT_APP_EMAIL_PUBLIC_KEY,
-    //         })
-    //         .then(
-    //             () => {
-    //                 console.log('SUCCESS!');
-    //                 setSent(false)
-    //                 setMessage("We received your application. Thanks for submitting.")
-    //             },
-    //             (error) => {
-    //                 console.log('FAILED...', error);
-    //                 setSent(false)
-    //                 setMessage("An error occured while submitting. Please send email to admin@umelle.com")
-    //             },
-    //         );
-    // };
-
-    
-    
-        // const hashParts = window.location.hash.split('#');
-    // if (hashParts.length > 1) {
-    //     const hash = hashParts.slice(-1)[0];
-    //     console.log(hash)
-    // }    
-
-    // const scrollToAnchor = () => {
-    //     const hashParts = window.location.hash.split('#');
-    //     if (hashParts.length > 1) {
-    //         const hash = hashParts.slice(-1)[0];
-    //
-    //
-    //         function searchByKey(array, id) {
-    //             for (let i = 0; i < array.length; i++) {
-    //                 if (array[i].id === id) {
-    //                     return array[i].key;
-    //                 }
-    //             }
-    //             // Return null if id is not found
-    //             return 0;
-    //         }
-    //
-    //         console.log(hash)
-    //         console.log(searchByKey(AccordionDataSolutions, hash))
-    //         setAnchorKey(searchByKey(AccordionDataSolutions, hash))
-    //         // document.querySelector(`#${hash}`).scrollIntoView();
-    //     }
-    // };
-    //
-    // scrollToAnchor();
-    // window.onhashchange = scrollToAnchor;
-
-
     useEffect(() => {
         // Decode entities in the URL
         // Sometimes a URL like #/foo#bar will be encoded as #/foo%23bar
@@ -257,83 +203,52 @@ const HomeStartupPage = (props) => {
         </section>
         {/* Section End */}
 
-        {/* Section Start */}
-        <section className="bg-white pt-20 switch-tabs">
-            <Col className="text-center">
-                <h6 className="font-serif text-darkgray text-center font-medium mb-[2%]">
-                    Empowering Pooled Insurance with Tailor-Made Solutions
-                </h6>
-                <p className="m-[50px] text-[23px] mb-[10px]">
-                    Off-the-shelf software often falls short. Recognizing this gap, we offer solutions and experience to
-                    help meet your precise needs by providing targeted benefits through our core competencies.
-                </p>
-            </Col>
-            <Tabs
-                defaultActiveKey="light"
-                id="uncontrolled-tab-example"
-                className="justify-center"
-                style={{display: 'none'}}
-            >
-                {/* Accordion style 03 ( Light ) start */}
-                <Tab eventKey="light" title="LIGHT">
-                    <m.section className="py-20 white">
-                        <Container>
-                            <Row className="justify-center">
-                                <Col lg={10} md={10}>
-                                    {anchorKey !== 0 ?
-                                        (<AccordionSolutions theme="accordion-style-03" animation={fadeIn}
-                                                             activeKey={anchorKey}/>)
-                                        :
-                                        (<AccordionSolutions theme="accordion-style-03" animation={fadeIn}
-                                                             activeKey={9}/>)
-                                    }
-                                </Col>
-                            </Row>
-                        </Container>
-                    </m.section>
-                </Tab>
-                {/* Accordion style 03 ( Light ) end */}
-            </Tabs>
-        </section>
-        {/* Section End */}
-
         {/* Lazy Load HTML */}
         <InViewPort>
-
-            {/* Info Banner Style 07 */}
-            {/* <section className="bg-lightgray lg:py-[5px] md:py-[75px]  xs:py-[50px]">
-                <Container>
-                    <Row className="justify-center">
-                        <Col md={12} className="text-center mt-5 mb-[3%]">
-                            <h4 className="font-serif text-darkgray font-medium">Customization at Its Core</h4>
-                        </Col>
-                    </Row>
-                    <Row className="gx-0">
-                        <m.div className="col-12 col-lg-6 bg-cover bg-center md:h-[400px] m-auto justify-center m-3"
-                               style={{margin: '0px'}} {...{
-                            ...fadeIn,
-                            transition: {delay: 0.2}
-                        }} >
-                            <m.h5
-                                className="font-medium text-darkgray mb-[100px] lg:mb-[15px] font-serif xs:text-[30px] m-[100px]">
-                                Empowering Pooled Insurance with Tailor-Made Solutions
-                            </m.h5>
-                        </m.div>
-                        <m.div className="col-12 p-0 col-lg-6" {...{...fadeIn, transition: {delay: 0.36}}} >
-                            <m.div
-                                className="bg-gradient-to-r from-[#3844F7]  to-[#902CFC] px-20 py-16 lg:py-20 lg:px-16 md:p-20 text-white text-center">
-                                <h6 className="font-serif text-white font-medium mb-[40px]">
-                                    What truly sets our solution apart is our custom architecture. Recognizing that no
-                                    two insurance providers are the same, we offer the ultimate flexibility: you can add
-                                    features and functions based on your business needs and ensure your program fits
-                                    nicely with your business requirements.
-                                </h6>
+            {/* Section Start */}
+            <section className="cover-background py-[130px] relative cover-background lg:py-[90px] md:py-[75px] sm:py-[50px]" style={{ backgroundImage: `url(/assets/img/webp/application-banner-img-02.webp)` }}>
+                    <Container>
+                        <Row className="items-center justify-center">
+                            <Col xs={10} lg={5} xl={4} className="md:mb-[70px] sm:mb-[50px] sm:text-center">
+                                <m.h2 className="heading-5 font-serif font-light text-[#262b35] -tracking-[1px] mb-16 md:text-center" {...{ ...fadeIn, transition: { delay: 0.2 } }}>Transforming Insurance Management</m.h2>
+                                <div className="row flex-col items-start md:text-center">
+                                    <m.div className="col" {...{ ...fadeIn, transition: { delay: 0.4 } }}>
+                                        <span className="font-serif font-medium text-[#262b35] block mb-[10px]">Revolutionizing Pooled Insurance Solutions</span>
+                                        <p className="w-[90%] inline-block xs:w-full">Umelle’s AMS delivers tailor-made solutions for pooled insurers, enhancing risk management, policy administration, and compliance. We offer seamless integration and superior data security tailored to your unique needs.</p>
+                                    </m.div>
+                                    <m.div className="col" {...{ ...fadeIn, transition: { delay: 0.6 } }}><div className="h-[1px] w-full bg-mediumgray my-[40px] xs:my-[30px]"></div></m.div>
+                                    <m.div className="col" {...{ ...fadeIn, transition: { delay: 0.7 } }}>
+                                        <span className="font-serif font-medium text-[#262b35] block mb-[10px]">Empowering SaaS for Insurance Agencies</span>
+                                        <p className="w-[90%] inline-block xs:w-full">Our SaaS platform offers unmatched flexibility, scalability, and cost-efficiency, empowering insurance agencies to streamline operations and enhance customer satisfaction. Benefit from automatic updates, robust security, and expert support.</p>
+                                    </m.div>
+                                    <m.div className="col mt-[4.5rem] flex md:justify-center" {...{ ...fadeIn, transition: { delay: 1 } }}>
+                                        {/* Modal Component Start */}
+                                        <CustomModal.Wrapper
+                                            modalBtn={
+                                                <span className="inline-flex flex-row items-center justify-center">
+                                                    <Buttons ariaLabel="modal button" type="submit" className="btn-sonar border-0 mr-[15px]" themeColor={["#bb85f9", "#fb9398"]} color="#fff" size="md" title={<i className="icon-control-play text-lg" />} />
+                                                    <span className="relative font-semibold text-darkgray text-base font-serif uppercase inline-block align-middle border-b cursor-pointer border-darkgray"> How it works </span>
+                                                </span>
+                                            } >
+                                            <div className="w-[1020px] max-w-full relative rounded mx-auto">
+                                                <div className="fit-video">
+                                                    <iframe width="100%" height="100%" className="shadow-[0_0_8px_rgba(0,0,0,0.06)]" controls src="https://www.youtube.com/embed/g0f_BRYJLJE?autoplay=1" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen ></iframe>
+                                                </div>
+                                            </div>
+                                        </CustomModal.Wrapper>
+                                        {/* Modal Component End */}
+                                    </m.div>
+                                </div>
+                            </Col>
+                            <m.div className="col-xl-5 col-lg-6 offset-xl-3 offset-lg-1" {...fadeInLeft}>
+                                <div className="mr-[-30vw] md:mr-0" >
+                                    <img src={productImage} alt="" height={680} width={947}/>
+                                </div>
                             </m.div>
-                        </m.div>
-                    </Row>
-                </Container>
-            </section> */}
-            {/* Info Banner Style 07 */}
+                        </Row>
+                    </Container>
+                </section>
+                {/* section End */}
 
             {/* Section Start */}
         <section className="py-[55px] lg:py-[95px] md:py-[70px] sm:py-[50px] relative overflow-visible">
@@ -361,12 +276,10 @@ const HomeStartupPage = (props) => {
                         <div className="font-serif text-xmd font-medium mb-[30px]">
                             <span className="w-[50px] h-[1px] bg-fastblue inline-block align-middle mr-[20px]"></span>
                             <span
-                                className="text-gradient bg-gradient-to-r from-[#556fff] via-[#e05fc4] to-[#ff798e] inline-block">Customization at Its Core</span>
+                                className="text-gradient bg-gradient-to-r from-[#556fff] via-[#e05fc4] to-[#ff798e] inline-block">You Comprehensive AMS</span>
                         </div>
-                        <h5 className="font-serif text-darkgray font-medium mb-[30px] w-full">Empowering Pooled Insurance with Tailor-Made Solutions</h5>
-                        <p className="w-[95%] mb-[35px]">What truly sets our solution apart is our custom architecture. 
-                        Recognizing that no two insurance providers are the same, 
-                        we offer the ultimate flexibility: you can add features and functions based on your business needs and ensure your program fits nicely with your business requirements.</p>
+                        <h5 className="font-serif text-darkgray font-medium mb-[30px] w-full">The Ultimate Agency Management Solution</h5>
+                        <p className="w-[95%] mb-[35px]">Umelle’s AMS is a cutting-edge solution designed to meet the specific needs of insurance providers and pooled insurers. From contact and member management to policy administration and advanced analytics, our platform ensures your operations are efficient, compliant, and customer-centric. Leveraging the latest technology, we provide robust security, seamless integrations, and continuous support to keep your business ahead of the curve.</p>
                     </m.div>
                 </Row>
             </Container>
@@ -669,11 +582,10 @@ const HomeStartupPage = (props) => {
             
             {/*/!* Section Start *!/*/}
             <m.section className="bg-lightgray py-[80px] lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px]">
-                <h6 className="font-serif text-gray-900 text-center font-medium mb-24">Let's redefine what's possible
-                    together</h6>
+                <h6 className="font-serif text-gray-900 text-center font-medium mb-24">Our Process</h6>
                 <Container>
                     <ProcessStep grid="row-cols-1 row-cols-sm-2 row-cols-lg-5 gap-y-10" className=""
-                                 theme="process-step-style-03" data={ProcessStepData02} animation={fadeIn}/>
+                                 theme="process-step-style-03" data={ProcessStepData03} animation={fadeIn}/>
                 </Container>
             </m.section>
             {/*/!* Section End *!/*/}

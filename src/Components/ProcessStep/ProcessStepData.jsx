@@ -46,20 +46,24 @@ const ProcessStepData02 = [
 
 const ProcessStepData03 = [
     {
-        title: "RESEARCH",
-        content: "Lorem ipsum dolor consectetur adipiscing eiusmod tempor",
+        title: "Initial Consultation",
+        content: "Understanding your specific needs and challenges.",
     },
     {
-        title: "SKETCHES",
-        content: "Lorem ipsum dolor consectetur adipiscing eiusmod tempor",
+        title: "Customized Solution Design",
+        content: "Crafting a tailored AMS solution to fit your business.",
     },
     {
-        title: "CONCEPT",
-        content: "Lorem ipsum dolor consectetur adipiscing eiusmod tempor",
+        title: "Integration",
+        content: "Ensuring smooth integration with your existing systems.",
     },
     {
-        title: "PRESENTATION",
-        content: "Lorem ipsum dolor consectetur adipiscing eiusmod tempor",
+        title: "Training",
+        content: "Providing thorough training for your team.",
+    },
+    {
+        title: "Ongoing Support and Optimization",
+        content: "Continuous support and regular updates to keep your system running smoothly.",
     },
 ]
 
