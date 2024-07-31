@@ -36,8 +36,8 @@ const FeaturesData = [
     },
     {
         icon: "line-icon-Archery-2 text-basecolor text-[40px] text-gradient bg-gradient-to-r from-[#3844F7]  to-[#902CFC]",
-        title: "Seamless Compliance",
-        content: "Simplify compliance while ensuring operational consistency and hassle-free adherence to regulations through automated updates and alerts ",
+        title: "Seamless Integration",
+        content: "Our UIMS application ensures seamless integration with existing and third-party systems, enabling efficient data flow and enhanced functionality across your entire IT ecosystem.",
     },
     {
         icon: "line-icon-Monitor-Analytics text- text-[40px] text-gradient bg-gradient-to-r from-[#3844F7]  to-[#902CFC]",

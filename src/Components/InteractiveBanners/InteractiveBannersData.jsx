@@ -127,23 +127,23 @@ const InteractiveBannersData03 = [
 const InteractiveBannersData04 = [
     {
         title: '24/7 Monitoring',
-        content: "Our dedicated team provides continuous monitoring to ensure your IT infrastructure runs smoothly and efficiently at all times. This reduces downtime and enhances operational stability.",
+        content: "Our dedicated team provides continuous monitoring to ensure your IT infrastructure runs smoothly and efficiently at all times.",
         img: "https://via.placeholder.com/464x610",
         //btnTitle: "Explore services",
         //btnLink: "/page/our-services",
         //icon: "line-icon-Add-Window"
     },
     {
-        title: "Advanced Cybersecurity",
-        content: "We implement state-of-the-art cybersecurity measures to protect your business from threats and vulnerabilities. Our proactive approach ensures your data and systems are secure.",
+        title: "Advanced Security",
+        content: "State-of-the-art cybersecurity measures to protect your business from threats and vulnerabilities.",
         img: "https://via.placeholder.com/464x610",
         //btnTitle: "Explore services",
         //btnLink: "/page/our-services",
         //icon: "line-icon-Add-Bag"
     },
     {
-        title: "Seamless IT Infrastructure Management",
-        content: "From network management to server maintenance, we handle all aspects of your IT infrastructure. Our comprehensive services ensure your systems are optimized and running at peak performance.",
+        title: "IT Management",
+        content: "Our comprehensive services ensure your systems are optimized and running at peak performance.",
         img: "https://via.placeholder.com/464x610",
         //btnTitle: "Explore services",
         //btnLink: "/page/our-services",
@@ -151,7 +151,7 @@ const InteractiveBannersData04 = [
     },
     {
         title: "Scalable Solutions",
-        content: "As your business grows, our IT services scale with you. Whether you're expanding your operations or need additional support, our flexible solutions adapt to meet your evolving needs.",
+        content: "As your business grows, our IT services scale with you to meet your evolving needs.",
         img: "https://via.placeholder.com/464x610",
         //btnTitle: "Explore services",
         //btnLink: "/page/our-services",
@@ -465,7 +465,7 @@ const InteractiveBannersData15 = [
 const InteractiveBannersData16 = [
     {
         title: 'Tailored Solutions',
-        content: "We design and develop software tailored to your unique business needs, ensuring it aligns perfectly with your operational goals and processes.",
+        content: "Software tailored to your unique business needs, ensuring it aligns perfectly with your operational goals and processes.",
         img: "https://via.placeholder.com/464x610",
         //btnTitle: "Explore services",
         //btnLink: "/page/our-services",
@@ -473,7 +473,7 @@ const InteractiveBannersData16 = [
     },
     {
         title: "Cutting-Edge Technologies",
-        content: "Utilizing the latest technologies, we create robust and responsive applications that give you a competitive edge in your industry.",
+        content: "We create robust and responsive applications that give you a competitive edge in your industry.",
         img: "https://via.placeholder.com/464x610",
         //btnTitle: "Explore services",
         //btnLink: "/page/our-services",
@@ -481,7 +481,7 @@ const InteractiveBannersData16 = [
     },
     {
         title: "User-Friendly Design",
-        content: "Our applications are designed with user experience in mind, ensuring they are intuitive, easy to navigate, and enhance productivity.",
+        content: "Designed with user experience in mind, our apps are intuitive, easy to navigate, and enhance productivity.",
         img: "https://via.placeholder.com/464x610",
         //btnTitle: "Explore services",
         //btnLink: "/page/our-services",
@@ -489,7 +489,7 @@ const InteractiveBannersData16 = [
     },
     {
         title: "Scalable and Flexible",
-        content: "Our software solutions are built to scale with your business, allowing for easy updates and expansions as your needs grow and evolve.",
+        content: "Our software solutions are built to scale with your business as your needs grow and evolve.",
         img: "https://via.placeholder.com/464x610",
         //btnTitle: "Explore services",
         //btnLink: "/page/our-services",
@@ -499,7 +499,7 @@ const InteractiveBannersData16 = [
 const InteractiveBannersData17 = [
     {
         title: 'Seamless Migration',
-        content: "We ensure a smooth transition to the cloud with minimal disruption to your operations, leveraging our expertise in Microsoft Azure.",
+        content: "We ensure a smooth transition to the cloud with minimal disruption to your operations.",
         img: "https://via.placeholder.com/464x610",
         //btnTitle: "Explore services",
         //btnLink: "/page/our-services",
@@ -514,7 +514,7 @@ const InteractiveBannersData17 = [
         //icon: "line-icon-Add-Bag"
     },
     {
-        title: "Scalable Cloud Solutions",
+        title: "Scaled Cloud Solutions",
         content: "We design cloud-native applications that scale with your business needs, providing flexibility and agility.",
         img: "https://via.placeholder.com/464x610",
         //btnTitle: "Explore services",
@@ -523,7 +523,7 @@ const InteractiveBannersData17 = [
     },
     {
         title: "Enhanced Security",
-        content: "Our cloud solutions include advanced security measures to protect your data and maintain compliance with industry standards.",
+        content: "Advanced cloud security measures to protect your data and maintain compliance with industry standards.",
         img: "https://via.placeholder.com/464x610",
         //btnTitle: "Explore services",
         //btnLink: "/page/our-services",
@@ -548,7 +548,7 @@ const InteractiveBannersData18 = [
         //icon: "line-icon-Add-Bag"
     },
     {
-        title: "Enhanced Customer Insights",
+        title: "Enhanced Insights",
         content: "Leverage natural language processing to gain deeper insights into customer behavior and preferences.",
         img: "https://via.placeholder.com/464x610",
         //btnTitle: "Explore services",
@@ -556,8 +556,8 @@ const InteractiveBannersData18 = [
         //icon: "line-icon-Android-Store"
     },
     {
-        title: "Real-Time Decision Making",
-        content: "Implement AI solutions that provide real-time data analysis and support rapid, informed decision-making.",
+        title: "Decision Making",
+        content: "AI solutions that provide real-time data analysis to support informed decision-making.",
         img: "https://via.placeholder.com/464x610",
         //btnTitle: "Explore services",
         //btnLink: "/page/our-services",
@@ -624,7 +624,7 @@ const InteractiveBannersData20 = [
         //icon: "line-icon-Android-Store"
     },
     {
-        title: "Comprehensive Integration",
+        title: "Seemless Integration",
         content: "Integrate with various third-party services and platforms to expand your system capabilities.",
         img: "https://via.placeholder.com/464x610",
         //btnTitle: "Explore services",

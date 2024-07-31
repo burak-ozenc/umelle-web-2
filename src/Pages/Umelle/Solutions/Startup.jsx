@@ -634,7 +634,7 @@ const HomeStartupPage = (props) => {
                                                     <Buttons ariaLabel="form button" type="submit"
                                                              className={`font-medium font-serif rounded-none uppercase text-[11px]${isSubmitting ? " loading" : ""}`}
                                                              themeColor={["#0039e3", "#8600d4"]} size="md" color="#fff"
-                                                             title="get feedback"/>
+                                                             title="Free Quote"/>
                                                     <AnimatePresence>
                                                         {status && <m.div initial={{opacity: 0}} animate={{opacity: 1}}
                                                                           exit={{opacity: 0}}><MessageBox

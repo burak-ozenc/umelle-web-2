@@ -3,18 +3,21 @@ import React, {lazy, useEffect, useRef, useState} from 'react'
 // Libraries
 import {Link} from 'react-router-dom';
 import {Accordion, Col, Container, Navbar, Row,} from "react-bootstrap";
-import {AnimatePresence, domMax, LazyMotion, m} from 'framer-motion';
+import {AnimatePresence, m} from 'framer-motion';
 import {Form, Formik} from 'formik';
+import { Link as ScrollTo } from "react-scroll";
+
 
 // Functions
 import {fadeIn, fadeInLeft} from '../../../Functions/GlobalAnimations';
 
 // Components
 import {analyticsEvent, resetForm, ScrollToAnchor} from "../../../Functions/Utilities";
-import {Checkbox, Input} from '../../../Components/Form/Form'
+import {Checkbox, Input} from '../../../Components/Form/Form';
 import FooterMenu, {Footer} from '../../../Components/Footers/Footer';
 import InViewPort from '../../../Components/InViewPort';
 import CustomModal from '../../../Components/CustomModal';
+import Tab07 from '../../../Components/Tab';
 
 
 // Data
@@ -32,6 +35,9 @@ import * as emailjs from "@emailjs/browser";
 import SEO from "../../../Components/Umelle/SEO";
 import {Parallax} from 'react-scroll-parallax';
 import productImage from "../../../Assets/img/umelle/UIMS_P.png";
+import FancyTextBox from "../../../Components/FancyTextBox/FancyTextBox";
+import {fancyTextBox07} from "../../../Components/FancyTextBox/FancyTextBoxData";
+import {TabData07} from "../../../Components/Tab/TabData";
 
 const Header = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Header})))
 const HeaderNav = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.HeaderNav})))
@@ -167,41 +173,79 @@ const HomeStartupPage = (props) => {
 
         <SideButtons/>
 
-        {/* Section start */}
-        <section className="overflow-visible cover-background"
-                 style={{backgroundImage: `url(/assets/img/SolutionsHeader_v1.webp)`}}>
-            <Container>
-                <LazyMotion strict features={domMax}>
-                    <Row
-                        className="full-screen  pt-20 md:h-[650px] sm:h-[350px] xs:h-[450px] align-items-center justify-center">
-                        <Col xs={12} lg={6} md={6}
-                             className="justify-center items-center my-0 mx-auto relative">
-                            <h6 className="font-serif block leading-[48px] mb-[35px] font-light text-black xs:text-base xs:mb-[40px]"
-                                style={{fontSize:'2.2em'}}
-                            >
-                                Tailor-Made Insurance Data Software Designed Around Your Business Needs
-                            </h6>
-                            <m.span initial={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)'}}
-                                    animate={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)'}}
-                                    transition={{duration: 0.5, delay: 0.8, ease: "easeIn"}}
-                                    style={{fontSize:'1.8em'}}
-                                    className="font-serif block leading-[28px] mb-[35px] font-light text-black xs:text-base xs:mb-[20px]">
-                                The Premier Choice for Pooled Insurance Providers
-                            </m.span>
-                        </Col>
-                        <Col xs={12} lg={6} md={6}
-                             className="justify-center items-center my-0 mx-auto relative flex flex-col">
-                            <Buttons ariaLabel="button"
-                                     href="/contact"
-                                     className="mx-[10px] font-medium font-serif uppercase rounded-none lg:mb-[15px] landscape:lg:mb-[15px] justify-center align-items-center mt-4"
-                                     themeColor={["#3844F7", "#902CFC"]} size="md" color="#fff"
-                                     title="Schedule a meeting"/>
+        {/* Parallax Section Start */}
+      <div className="overflow-hidden relative">
+        <Parallax
+          className="lg-no-parallax bg-cover absolute top-[0px] left-0 w-full h-[100vh] md:h-[90vh] sm:h-[500px]"
+          translateY={[-40, 40]}
+          style={{
+            backgroundImage: `url(/assets/img/SolutionsHeader_v1.webp)`,
+          }}
+        ></Parallax>
+        <Container className="relative">
+          <Row className="items-center h-[100vh] md:h-[650px] sm:h-[450px]">
+            <Col lg={5} md={6} sm={8}>
+              <span className="text-xmd font-serif font-medium uppercase text-[#8bb867] block mb-[35px] xs:mb-[15px]">
+                Financial planning
+              </span>
+              <h1 className="font-serif font-bold text-[#2f2f2f] uppercase mb-[2.5rem] tracking-[-2px] sm:mb-[20px] xs:mb-[15px]">
+                Talented solutions
+              </h1>
+              <p className="text-xmd leading-[30px] w-[73%] mb-12 lg:w-[90%] md:w-full xs:mb-[15px]">
+                Transforming distribution with key capabilities in customer
+                insight and analytics.
+              </p>
+              <ScrollTo href="#" to="call-request" offset={0} delay={0} spy={true} smooth={true} duration={800} className="cursor-pointer">
+                <Buttons
+                  type="submit"
+                  className="btn-fill tracking-[1px] font-medium font-serif rounded-none uppercase md:mb-[15px] btn-fancy"
+                  themeColor="#8bb867"
+                  color="#ffffff"
+                  size="lg"
+                  title="Get started now"
+                />
+              </ScrollTo>
+            </Col>
+          </Row>
+          <ScrollTo to="about" offset={0} delay={0} spy={true} smooth={true} duration={800} className="w-full absolute bottom-[50px] left-0 right-0 z-[1] flex justify-center items-center xs:hidden cursor-pointer">
+            <i className="fas fa-arrow-down text-[#2f2f2f] bg-white shadow-[0_0_25px_rgba(0,0,0,0.08)] w-[45px] h-[45px] leading-[46px] rounded-full flex justify-center items-center"></i>
+          </ScrollTo>
+        </Container>
+      </div>
+      {/* Parallax Section End */}
+
+      {/* Section Start */}
+      <m.section {...fadeIn}>
+        <Container fluid className="px-0">
+          <FancyTextBox
+            grid="row-cols-1 row-cols-xl-6 row-cols-md-3 row-cols-sm-2 gx-0"
+            theme="fancy-text-box-01"
+            data={fancyTextBox07}
+            themeColor="light"
+            animation={fadeIn}
+          />
+        </Container>
+      </m.section>
+      {/* Section End */}
+
+      {/* Section Start */}
+      <m.section className="py-[60px] lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px] border-b border-solid" {...fadeIn}>
+                <Container>
+                    <Row className="row-cols-1 justify-center">
+                        <Col xl={8} lg={10} className="text-center">
+                            <div className="w-[40px] h-[2px] bg-gradient-to-tr from-[#ff6557] via-[#ff4271] to-[#ff367c] transform rotate-90 my-[30px] inline-block"></div>
+                            <h3 className="font-serif font-medium text-darkgray -tracking-[1px]">Tailor-made for <span className="text-gradient bg-gradient-to-tr from-[#ff6052] to-[#ff367c] font-semibold">Insurance Pools</span></h3>
                         </Col>
                     </Row>
-                </LazyMotion>
-            </Container>
-        </section>
+                </Container>
+            </m.section>
         {/* Section End */}
+
+         {/* Tab Section Start */}
+         <section className="py-[160px] pt-0 border-t border-lightgray overflow-hidden lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px]">
+                    <Tab07 data={TabData07} />
+                </section>
+                {/* Tab Section End */}
 
         {/* Lazy Load HTML */}
         <InViewPort>
@@ -547,7 +591,7 @@ const HomeStartupPage = (props) => {
                                                     <Buttons ariaLabel="form button" type="submit"
                                                              className={`font-medium font-serif rounded-none uppercase text-[11px]${isSubmitting ? " loading" : ""}`}
                                                              themeColor={["#0039e3", "#8600d4"]} size="md" color="#fff"
-                                                             title="get feedback"/>
+                                                             title="Free Quote"/>
                                                     <AnimatePresence>
                                                         {status && <m.div initial={{opacity: 0}} animate={{opacity: 1}}
                                                                           exit={{opacity: 0}}><MessageBox

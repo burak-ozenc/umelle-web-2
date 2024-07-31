@@ -15,8 +15,8 @@ const HeaderDataAdjusted = [
                         link: '/solutions#financeManagement'
                     },
                     {
-                        title: 'Internal and Governmental Compliance',
-                        link: '/solutions#internalAndGovernmentalCompliance'
+                        title: 'Certificate Management',
+                        link: '/solutions#certificateManagement'
                     },
                     {
                         title: 'Risk Management',
@@ -42,11 +42,7 @@ const HeaderDataAdjusted = [
                     {
                         title: 'KPIs and Analytics',
                         link: '/solutions#kPIsAndAnalytics'
-                    },
-                    {
-                        title: 'Certificate Management',
-                        link: '/solutions#certificateManagement'
-                    }
+                    },    
                 ]
             }
             

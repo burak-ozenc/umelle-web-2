@@ -5,8 +5,8 @@ const AccordionData = [
         icon: 'line-icon-Add-UserStar text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC]'
     },
     {
-        title: "Seamless Compliance",
-        content: "We make navigating the complex landscape of compliance easier than ever. Our platform is designed to integrate with the latest external regulations or add your own for operational consistency, ensuring your operations remain compliant without the hassle. With automated updates and alerts, you can focus on what you do best - serving your members and growing your business.",
+        title: "Seamless Integration",
+        content: "Our UIMS application ensures seamless integration with existing and third-party systems, enabling efficient data flow and enhanced functionality across your entire IT ecosystem.",
         icon: 'line-icon-Alarm  text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC]'
     },
     {
@@ -34,9 +34,9 @@ const AccordionDataClientSolutions = [
     },
     {
         icon: "line-icon-Folder-WithDocument text-basecolor",
-        title: "Internal and Government Compliance",
+        title: "Flexibility, Reliability and Scalability",
         id: 'internalAndGovernmentalCompliance',
-        content: "Stay compliant with government regulations and align your organization in one place. Our solution allows you to combine your business logic and government regulations to streamline your operational integrity and reduce the risk non-compliance. We allow you to plan for the future by building flexible and interactive tools to keep your organization compliant."
+        content: "Experience peace of mind with our robust infrastructure, ensuring that your operations remain adaptable and reliable at all times. Our scalable framework enables quick builds and deployments, allowing you to go to market faster."
     },
     {
         icon: "line-icon-Umbrella-2",
@@ -90,13 +90,6 @@ const AccordionDataSolutions = [
         id: 'financeManagement',
         key: 1,
         content: "Be in full control with our financial management solutions. By integrating your business logic with your financials we can provide stability and reliability to your bottom line. With integrated financial management tools you will never make a mistake and get accurate reporting and analytics data."
-    },
-    {
-        icon: "line-icon-Folder-WithDocument  text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC]",
-        title: "Internal and Government Compliance",
-        id: 'internalAndGovernmentalCompliance',
-        key: 2,
-        content: "Stay compliant with government regulations and align your organization in one place. Our solution allows you to combine your business logic and government regulations to streamline your operational integrity and reduce the risk non-compliance. We allow you to plan for the future by building flexible and interactive tools to keep your organization compliant."
     },
     {
         icon: "line-icon-Umbrella-2 text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC]",

@@ -34,7 +34,7 @@ const InteractiveBanners04 = (props) => {
                                     </div>
                                     {(item.content || item.btnLink || item.btnTitle) && <div className="interactive-banners-hover-action items-end flex">
                                         <div className="px-16 py-20 lg:p-16 xl:p-12 xs:p-20">
-                                            {item.content && <p className="interactive-banners-action-content w-[80%] text-white opacity-60 lg:w-[70%] xs:w-full">{item.content}</p>}
+                                            {item.content && <p className="interactive-banners-action-content w-[80%] text-white opacity-60 lg:w-[70%] xs:w-full text-base sm:text-base md:text-lg lg:text-xl xl:text-xl">{item.content}</p>}
                                             {(item.btnTitle || item.btnLink) &&
                                                 <Buttons ariaLabel="interactive button" to={item.btnLink} title={item.btnTitle} className="font-medium font-serif uppercase btn-link after:h-[2px] md:mb-[15px] after:bg-[#fff] hover:text-white" size="xl" color="#fff" />
                                             }

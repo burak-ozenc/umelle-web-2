@@ -227,29 +227,86 @@ const fancyTextBox06 = [
 
 const fancyTextBox05 = [
     {
-        title: "INTERIOR DESIGN IS A BUSINESS OF TRUST",
+        title: "CORE PLATFORM",
         description: "Lorem ipsum dolor consectetur adipiscing dolor incididunt.",
         hoverImg: "https://via.placeholder.com/1920x1000",
         link:"#"
     },
     {
-        title: "WE BELIEVE IN THE POWER OF DESIGN",
+        title: "REPORTING",
         description: "Lorem ipsum dolor consectetur adipiscing dolor incididunt.",
         hoverImg: "https://via.placeholder.com/1920x1000",
         link:"#"
     },
     {
-        title: "DESIGN IS A PROCESS OF DISCOVERY",
+        title: "PORTAL",
         description: "Lorem ipsum dolor consectetur adipiscing dolor incididunt.",
         hoverImg: "https://via.placeholder.com/1920x1000",
         link:"#"
     },
     {
-        title: "WE WANT TO BRING INTERIOR DESIGN",
+        title: "INTEGRATIONS",
         description: "Lorem ipsum dolor consectetur adipiscing dolor incididunt.",
         hoverImg: "https://via.placeholder.com/1920x1000",
         link:"#"
     },
+    {
+        title: "SUPPORT",
+        description: "Lorem ipsum dolor consectetur adipiscing dolor incididunt.",
+        hoverImg: "https://via.placeholder.com/1920x1000",
+        link:"#"
+    },
+    {
+        title: "PRICING",
+        description: "Lorem ipsum dolor consectetur adipiscing dolor incididunt.",
+        hoverImg: "https://via.placeholder.com/1920x1000",
+        link:"#"
+    }
+]
+    const fancyTextBox07 = [
+        {
+            icon: {
+                class: "line-icon-Management text-basecolor"
+            },
+            title: "CORE PLATFORM",
+            // subTitle: "Easy installation theme",
+            description: "No matter your business line we can help you create custom business flows to help manage your business with efficiency. With a wide range of knowledge in Property, Workers Compensation, General Liability, Benefits such as dental and medical, Cyber Liability and others, we can help you craft the perfect system."
+            // backgroundText: " "
+        },
+        {
+            icon: {
+                class: "line-icon-Financial text-basecolor"
+            },
+            title: "PRICING",
+            description: "Be in full control with our financial management solutions. By integrating your business logic with your financials we can provide stability and reliability to your bottom line. With integrated financial management tools you will never make a mistake and get accurate reporting and analytics data."
+        },{
+            icon: {
+                class: "line-icon-Folder-WithDocument text-basecolor"
+            },
+            title: "INTEGRATIONS",
+            description: "Stay compliant with government regulations and align your organization in one place. Our solution allows you to combine your business logic and government regulations to streamline your operational integrity and reduce the risk non-compliance. We allow you to plan for the future by building flexible and interactive tools to keep your organization compliant."
+        },
+        {
+            icon: {
+                class: "line-icon-Add-UserStar text-basecolor"
+            },
+            title: "SUPPORT",
+            description: "Streamline your organizational processes with integrated Member and User Management. This unified platform allows for efficient tracking, updating, and analyzing of member data, while also offering robust tools for defining user roles and permissions. Enhance member engagement and data security through a system that aligns with your organizational structure, simplifying administrative tasks and improving operational efficiency."
+        },
+        {
+            icon: {
+                class: "line-icon-Speach-BubbleDialog text-basecolor"
+            },
+            title: "PORTAL",
+            description: "Communicate and share documents with clients and members reliably and internally. Reduce the need for sending sensitive data through third party channels."
+        },
+        {
+            icon: {
+                class: "line-icon-Bar-Chart text-basecolor"
+            },
+            title: "REPORTING",
+            description: "Track KPIs and get active reporting and analytics on what matters most to your business. Our interactive systems allow you to change your KPIs as your business changes. Combined with our reporting and analytics solutions you will always be informed."
+        },
 ]
 
-export { fancyTextBox01, fancyTextBox02, fancyTextBox03, fancyTextBox04, fancyTextBox05, fancyTextBox06 }
+export { fancyTextBox01, fancyTextBox02, fancyTextBox03, fancyTextBox04, fancyTextBox05, fancyTextBox06, fancyTextBox07 }
