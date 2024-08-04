@@ -866,86 +866,96 @@ const TabData06 = [
 
 const TabData07 = [
     {
-        tabTitle: 'Turnaround consulting',
+        tabTitle: 'MEMBER PORTAL',
         featurebox: [
             {
                 icon: "line-icon-Bakelite text-[#bf8c4c] text-[50px]",
-                title: "Operational excellence",
-                content: "Lorem ipsum is simply dummy text of the printing typesetting ipsum been text."
+                title: "Download essential documents",
+                content: "Easily access and customize essential documents including invoices, coverage certificates, reports, and more."
             },
             {
                 icon: "line-icon-Medal-2 text-[#bf8c4c] text-[50px]",
-                title: "Innovative solutions",
-                content: "Lorem ipsum is simply dummy text of the printing typesetting ipsum been text."
+                title: "Efficient data entry",
+                content: "Input crucial data enabling precise estimates and calculations for more accurate invoicing."
             }
         ],
-        title: 'Turnaround consulting',
-        subtitle: "Can your business become better with new technology?",
+        title: 'MEMBER PORTAL',
+        subtitle: "A Comprehensive Member Portal",
         img: "https://via.placeholder.com/456x481",
-        buttonTitle: "Discover service",
+        buttonTitle: "Learn More",
         buttonLink: "/page/our-services",
         tabicons: "",
     },
     {
-        tabTitle: 'Strategic planning',
-        featurebox: [
-            {
-                icon: "line-icon-Archery-2 text-[#bf8c4c] text-[50px]",
-                title: "Consulting strategies",
-                content: "Lorem ipsum is simply dummy text of the printing typesetting ipsum been text."
-            },
-            {
-                icon: "line-icon-Bar-Chart2 text-[#bf8c4c] text-[50px]",
-                title: "Customer satisfaction",
-                content: "Lorem ipsum is simply dummy text of the printing typesetting ipsum been text."
-            }
-        ],
-        title: 'Strategic planning',
-        subtitle: "We work to ensure that your business prospers and brings",
-        img: "https://via.placeholder.com/456x481",
-        buttonTitle: "Discover service",
-        buttonLink: "/page/our-services",
-        tabicons: "",
-    },
-    {
-        tabTitle: 'Investment planning',
+        tabTitle: 'SECURITY',
         featurebox: [
             {
                 icon: "line-icon-Coins text-[#bf8c4c] text-[50px]",
-                title: "Finance and restructuring",
-                content: "Lorem ipsum is simply dummy text of the printing typesetting ipsum been text."
+                title: "Robust security measures",
+                content: "Our comprehensive security framework ensures that your data remains protected."
             },
             {
                 icon: "line-icon-Coins-3 text-[#bf8c4c] text-[50px]",
-                title: "Strategy and planning",
-                content: "Lorem ipsum is simply dummy text of the printing typesetting ipsum been text."
+                title: "Advanced security tools",
+                content: "We utilize Multi-Factor Authentication (MFA), cloud-native encryption, secure data storage, and advanced threat detection to safeguard your information from emerging threats."
             }
         ],
-        title: 'Investment planning',
-        subtitle: "Can your business become better with new technology?",
+        title: 'SECURITY',
+        subtitle: "Comprehensive Protection For Your Data",
         img: "https://via.placeholder.com/456x481",
-        buttonTitle: "Discover service",
+        buttonTitle: "Learn More",
         buttonLink: "/page/our-services",
         tabicons: "",
     },
     {
-        tabTitle: 'Expense reporting',
+        tabTitle: 'RELIABILITY',
+        featurebox: [
+            {
+                icon: "line-icon-Archery-2 text-[#bf8c4c] text-[50px]",
+                title: "Seamless flexibility",
+                content: "Our APIs and flexible infrastructure guarantee you retain essential functions seamlessly, ensuring a smooth, adaptable experience."
+            },
+            {
+                icon: "line-icon-Bar-Chart2 text-[#bf8c4c] text-[50px]",
+                title: "Unwavering reliability",
+                content: "We provide a robust and reliable infrastructure, creating a solid foundation that supports and enhances our adaptable technology."
+            },
+            {
+                icon: "line-icon-Bar-Chart2 text-[#bf8c4c] text-[50px]",
+                title: "Rapid scalability",
+                content: "Aligned with our agile infrastructure, our scalable framework enables swift development and deployment, accelerating your market entry and growth."
+            }
+        ],
+        title: 'RELIABILITY',
+        subtitle: "Flexibility, Reliability, and Scalability ",
+        img: "https://via.placeholder.com/456x481",
+        buttonTitle: "Learn More",
+        buttonLink: "/page/our-services",
+        tabicons: "",
+    },
+    {
+        tabTitle: 'SUPPORT',
         featurebox: [
             {
                 icon: "line-icon-Idea-5 text-[#bf8c4c] text-[50px]",
-                title: "Business consulting",
-                content: "Lorem ipsum is simply dummy text of the printing typesetting ipsum been text."
+                title: "Enhanced access & expertise",
+                content: "Enjoy full access to key information, training, and support with our AI-assisted services, designed to boost your proficiency with our tools. "
             },
             {
                 icon: "line-icon-Globe text-[#bf8c4c] text-[50px]",
-                title: "Innovative solutions",
-                content: "Lorem ipsum is simply dummy text of the printing typesetting ipsum been text."
+                title: "Smart Support",
+                content: "Our AI assistanted support staff enhance your support experience by giving you access to 24/7 support."
+            },
+            {
+                icon: "line-icon-Globe text-[#bf8c4c] text-[50px]",
+                title: "AI-Enabled Navigation",
+                content: "Access AI-driven guidance to effortlessly explore and understand our client support documentation, enhancing your user experience and operational efficiency."
             }
         ],
-        title: 'Expense reporting',
-        subtitle: "We work to ensure that your business prospers and brings",
+        title: 'SUPPORT',
+        subtitle: "Reliable AI-Assisted Support & Training",
         img: "https://via.placeholder.com/456x481",
-        buttonTitle: "Discover service",
+        buttonTitle: "Learn More",
         buttonLink: "/page/our-services",
         tabicons: "",
     }

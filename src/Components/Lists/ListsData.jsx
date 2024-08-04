@@ -29,19 +29,15 @@ const ListData01 = [
 const ListData02 = [
     {
         icon: "feather-arrow-right-circle",
-        content: "Let's collaborate make an impact in the business",
+        content: "Lisences",
     },
     {
         icon: "feather-arrow-right-circle",
-        content: "A satisfied customer is the best business starts",
+        content: "Integration",
     },
     {
         icon: "feather-arrow-right-circle",
-        content: "Expertise to build the things that matter for you",
-    },
-    {
-        icon: "feather-arrow-right-circle",
-        content: "Expertise to build the things that matter for you",
+        content: "Support",
     },
 ]
 

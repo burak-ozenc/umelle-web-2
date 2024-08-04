@@ -145,22 +145,22 @@ const IconWithTextData_06 = [
 const IconWithTextData_07 = [
     {
         icon: "line-icon-Money-Bag text-[#2ed47c]",
-        title: "Effective strategy",
-        content: "Lorem ipsum dolor sit amet consectetur adipiscing eiusmod tempor incididunt labore et dolore magna tempor.",
+        title: "Core Platform",
+        content: "Get a comprehensive core platform, offering essential functions like Workers Compensation, Property Management, Financial Management and more, to streamline your insurance operations.",
         linkTitle: "LEARN MORE",
         link: "/page/our-services"
     },
     {
         icon: "line-icon-Talk-Man text-[#2ed47c]",
-        title: "Customer satisfaction",
-        content: "Lorem ipsum dolor sit amet consectetur adipiscing eiusmod tempor incididunt labore et dolore magna tempor.",
+        title: "Support",
+        content: "Get AI-assisted, dedicated customer support and training to ensure you maximize your tool's potential.",
         linkTitle: "LEARN MORE",
         link: "/page/our-services"
     },
     {
         icon: "line-icon-Gear-2 text-[#2ed47c]",
-        title: "Powerfull customize",
-        content: "Lorem ipsum dolor sit amet consectetur adipiscing eiusmod tempor incididunt labore et dolore magna tempor. ",
+        title: "Member Portal",
+        content: "Empower members with our intuitive Member Portal, enabling seamless access to essential documents and data entry for enhanced transparency and data management practices.",
         linkTitle: "LEARN MORE",
         link: "/page/our-services"
     },

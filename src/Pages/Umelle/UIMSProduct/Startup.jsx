@@ -1,50 +1,42 @@
-import React, {lazy, useEffect, useRef, useState} from 'react'
+import React, {lazy, useEffect, useState} from 'react'
 
 // Libraries
 import {Link} from 'react-router-dom';
-import {Accordion, Col, Container, Navbar, Row,} from "react-bootstrap";
-import {AnimatePresence, m} from 'framer-motion';
-import {Form, Formik} from 'formik';
+import {Col, Container, Navbar, Row,} from "react-bootstrap";
+import {m} from 'framer-motion';
 import { Link as ScrollTo } from "react-scroll";
 
 
 // Functions
-import {fadeIn, fadeInLeft} from '../../../Functions/GlobalAnimations';
+import {fadeIn} from '../../../Functions/GlobalAnimations';
 
 // Components
-import {analyticsEvent, resetForm, ScrollToAnchor} from "../../../Functions/Utilities";
-import {Checkbox, Input} from '../../../Components/Form/Form';
+import {analyticsEvent, ScrollToAnchor} from "../../../Functions/Utilities";
 import FooterMenu, {Footer} from '../../../Components/Footers/Footer';
 import InViewPort from '../../../Components/InViewPort';
 import CustomModal from '../../../Components/CustomModal';
-import Tab07 from '../../../Components/Tab';
+import Tab07 from '../../../Components/Tab/Tab07';
+import IconWithText from '../../../Components/IconWithText/IconWithText';
+import Lists from '../../../Components/Lists/Lists';
 
 
 // Data
 import FooterData from '../../../Components/Footers/FooterData';
-import Counter from "../../../Components/Counters/Counter";
-import {CounterData05} from "../../../Components/Counters/CounterData";
-import Services from "../../../Components/Services/Services";
-import {serviceData5} from "../../../Components/Services/ServicesData";
-import {ProcessStepData03} from "../../../Components/ProcessStep/ProcessStepData";
 import Buttons from "../../../Components/Button/Buttons";
-import {ContactFormStyle02Schema} from "../../../Components/Form/FormSchema";
-import ReCAPTCHA from "react-google-recaptcha";
 import {AccordionDataSolutions} from "../../../Components/Accordion/AccordionData";
-import * as emailjs from "@emailjs/browser";
 import SEO from "../../../Components/Umelle/SEO";
 import {Parallax} from 'react-scroll-parallax';
 import productImage from "../../../Assets/img/umelle/UIMS_P.png";
 import FancyTextBox from "../../../Components/FancyTextBox/FancyTextBox";
 import {fancyTextBox07} from "../../../Components/FancyTextBox/FancyTextBoxData";
 import {TabData07} from "../../../Components/Tab/TabData";
+import { IconWithTextData_07 } from '../../../Components/IconWithText/IconWithTextData';
+import { ListData02 } from '../../../Components/Lists/ListsData';
 
 const Header = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Header})))
 const HeaderNav = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.HeaderNav})))
 const Menu = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Menu})))
 
-const ProcessStep = lazy(() => import('../../../Components/ProcessStep/ProcessStep'))
-const MessageBox = lazy(() => import('../../../Components/MessageBox/MessageBox'))
 const SideButtons = lazy(() => import("../../../Components/SideButtons"))
 
 // Filter the blog data category wise
@@ -54,45 +46,14 @@ const Footer_Data = [FooterData[0], FooterData[1], FooterData[4], FooterData[3]]
 
 const HomeStartupPage = (props) => {
     
-    // useEffect(() => {
-    //     // Google Analytics page view tracking
-    //     if (window.gtag) {
-    //         window.gtag('config', 'G-3XCZ8B0MR9', {
-    //             'page_path': location.pathname + location.search,
-    //         });
-    //     }
-    // }, [location]); // This ensures the tracking code runs every time the route changes
     ScrollToAnchor();
-    const form1 = useRef(null)
-    const recaptcha = useRef()
-    const [anchorKey, setAnchorKey] = useState(0)
+    const [,setAnchorKey] = useState(0)
     // ScrollToAnchor();
 
-
-    const [sent, setSent] = useState(true)
-    const [message, setMessage] = useState('')
 
     useEffect(() => {
         analyticsEvent('page_view',null);
     },[])
-
-    const sendEmail = (values) => {
-        emailjs
-            .send(process.env.REACT_APP_EMAIL_SERVICE_ID, process.env.REACT_APP_EMAIL_FEATURES_TEMPLATE_ID, values, {
-                publicKey: process.env.REACT_APP_EMAIL_PUBLIC_KEY,
-            })
-            .then(
-                () => {
-                    console.log('SUCCESS!');
-                    window.location.href = process.env.REACT_APP_CONTACT_SUCCESS_2
-                },
-                (error) => {
-                    console.log('FAILED...', error);
-                    setSent(false)
-                    setMessage("An error occured while submitting. Please send email to admin@umelle.com")
-                },
-            );
-    };
     
     useEffect(() => {
         // Decode entities in the URL
@@ -186,30 +147,26 @@ const HomeStartupPage = (props) => {
           <Row className="items-center h-[100vh] md:h-[650px] sm:h-[450px]">
             <Col lg={5} md={6} sm={8}>
               <span className="text-xmd font-serif font-medium uppercase text-[#8bb867] block mb-[35px] xs:mb-[15px]">
-                Financial planning
+              THE PERFECT FIT
               </span>
               <h1 className="font-serif font-bold text-[#2f2f2f] uppercase mb-[2.5rem] tracking-[-2px] sm:mb-[20px] xs:mb-[15px]">
-                Talented solutions
+              DEDICATED SOFTWARE FOR POOLED INSURERS
               </h1>
               <p className="text-xmd leading-[30px] w-[73%] mb-12 lg:w-[90%] md:w-full xs:mb-[15px]">
-                Transforming distribution with key capabilities in customer
-                insight and analytics.
+              Maximize efficiency and productivity with software that understands your industry.
               </p>
-              <ScrollTo href="#" to="call-request" offset={0} delay={0} spy={true} smooth={true} duration={800} className="cursor-pointer">
-                <Buttons
-                  type="submit"
-                  className="btn-fill tracking-[1px] font-medium font-serif rounded-none uppercase md:mb-[15px] btn-fancy"
-                  themeColor="#8bb867"
-                  color="#ffffff"
-                  size="lg"
-                  title="Get started now"
-                />
-              </ScrollTo>
+              <Link to = "/contact" offset={0} delay={0} spy={true} smooth={true} duration={800} className="cursor-pointer">
+              <Buttons ariaLabel="button"
+                                     href="/contact"
+                                     className="mx-[10px] font-medium font-serif uppercase rounded-none lg:mb-[15px] landscape:lg:mb-[15px] justify-center align-items-center"
+                                     themeColor={["#3844F7", "#902CFC"]} size="md" color="#fff"
+                                     title="Shecule Demo"/>
+              </Link>
             </Col>
           </Row>
-          <ScrollTo to="about" offset={0} delay={0} spy={true} smooth={true} duration={800} className="w-full absolute bottom-[50px] left-0 right-0 z-[1] flex justify-center items-center xs:hidden cursor-pointer">
+          {/* <ScrollTo to="about" offset={0} delay={0} spy={true} smooth={true} duration={800} className="w-full absolute bottom-[50px] left-0 right-0 z-[1] flex justify-center items-center xs:hidden cursor-pointer">
             <i className="fas fa-arrow-down text-[#2f2f2f] bg-white shadow-[0_0_25px_rgba(0,0,0,0.08)] w-[45px] h-[45px] leading-[46px] rounded-full flex justify-center items-center"></i>
-          </ScrollTo>
+          </ScrollTo> */}
         </Container>
       </div>
       {/* Parallax Section End */}
@@ -234,7 +191,7 @@ const HomeStartupPage = (props) => {
                     <Row className="row-cols-1 justify-center">
                         <Col xl={8} lg={10} className="text-center">
                             <div className="w-[40px] h-[2px] bg-gradient-to-tr from-[#ff6557] via-[#ff4271] to-[#ff367c] transform rotate-90 my-[30px] inline-block"></div>
-                            <h3 className="font-serif font-medium text-darkgray -tracking-[1px]">Tailor-made for <span className="text-gradient bg-gradient-to-tr from-[#ff6052] to-[#ff367c] font-semibold">Insurance Pools</span></h3>
+                            <h3 className="font-serif font-medium text-darkgray -tracking-[1px]">Tailor-made for <span className="text-gradient bg-gradient-to-tr from-[#ff6052] to-[#ff367c] font-semibold">Pooled Insurance Data Management</span></h3>
                         </Col>
                     </Row>
                 </Container>
@@ -250,638 +207,80 @@ const HomeStartupPage = (props) => {
         {/* Lazy Load HTML */}
         <InViewPort>
             {/* Section Start */}
-            <section className="cover-background py-[130px] relative cover-background lg:py-[90px] md:py-[75px] sm:py-[50px]" style={{ backgroundImage: `url(/assets/img/webp/application-banner-img-02.webp)` }}>
-                    <Container>
-                        <Row className="items-center justify-center">
-                            <Col xs={10} lg={5} xl={4} className="md:mb-[70px] sm:mb-[50px] sm:text-center">
-                                <m.h2 className="heading-5 font-serif font-light text-[#262b35] -tracking-[1px] mb-16 md:text-center" {...{ ...fadeIn, transition: { delay: 0.2 } }}>Transforming Insurance Management</m.h2>
-                                <div className="row flex-col items-start md:text-center">
-                                    <m.div className="col" {...{ ...fadeIn, transition: { delay: 0.4 } }}>
-                                        <span className="font-serif font-medium text-[#262b35] block mb-[10px]">Revolutionizing Pooled Insurance Solutions</span>
-                                        <p className="w-[90%] inline-block xs:w-full">Umelle’s AMS delivers tailor-made solutions for pooled insurers, enhancing risk management, policy administration, and compliance. We offer seamless integration and superior data security tailored to your unique needs.</p>
-                                    </m.div>
-                                    <m.div className="col" {...{ ...fadeIn, transition: { delay: 0.6 } }}><div className="h-[1px] w-full bg-mediumgray my-[40px] xs:my-[30px]"></div></m.div>
-                                    <m.div className="col" {...{ ...fadeIn, transition: { delay: 0.7 } }}>
-                                        <span className="font-serif font-medium text-[#262b35] block mb-[10px]">Empowering SaaS for Insurance Agencies</span>
-                                        <p className="w-[90%] inline-block xs:w-full">Our SaaS platform offers unmatched flexibility, scalability, and cost-efficiency, empowering insurance agencies to streamline operations and enhance customer satisfaction. Benefit from automatic updates, robust security, and expert support.</p>
-                                    </m.div>
-                                    <m.div className="col mt-[4.5rem] flex md:justify-center" {...{ ...fadeIn, transition: { delay: 1 } }}>
-                                        {/* Modal Component Start */}
-                                        <CustomModal.Wrapper
-                                            modalBtn={
-                                                <span className="inline-flex flex-row items-center justify-center">
-                                                    <Buttons ariaLabel="modal button" type="submit" className="btn-sonar border-0 mr-[15px]" themeColor={["#bb85f9", "#fb9398"]} color="#fff" size="md" title={<i className="icon-control-play text-lg" />} />
-                                                    <span className="relative font-semibold text-darkgray text-base font-serif uppercase inline-block align-middle border-b cursor-pointer border-darkgray"> How it works </span>
-                                                </span>
-                                            } >
-                                            <div className="w-[1020px] max-w-full relative rounded mx-auto">
-                                                <div className="fit-video">
-                                                    <iframe width="100%" height="100%" className="shadow-[0_0_8px_rgba(0,0,0,0.06)]" controls src="https://www.youtube.com/embed/g0f_BRYJLJE?autoplay=1" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen ></iframe>
-                                                </div>
-                                            </div>
-                                        </CustomModal.Wrapper>
-                                        {/* Modal Component End */}
-                                    </m.div>
-                                </div>
-                            </Col>
-                            <m.div className="col-xl-5 col-lg-6 offset-xl-3 offset-lg-1" {...fadeInLeft}>
-                                <div className="mr-[-30vw] md:mr-0" >
-                                    <img src={productImage} alt="" height={680} width={947}/>
-                                </div>
-                            </m.div>
-                        </Row>
-                    </Container>
-                </section>
-                {/* section End */}
-
-            {/* Section Start */}
-        <section className="py-[55px] lg:py-[95px] md:py-[70px] sm:py-[50px] relative overflow-visible">
-            <Container>
-                <Row className="items-center">
-                    <m.div className="col-lg-6 relative mt-[70px] lg:mt-[30px] md:mb-[50px]" {...fadeIn}>
-                        <div className="relative">
-                            <Parallax className="lg-no-parallax w-[70%] rounded-[6px] lg:relative lg:!top-[-20px]"
-                                      speed={0}>
-                                <div
-                                    className="absolute top-0 left-0 w-full h-full rounded-[6px] opacity-50 bg-gradient-to-r from-purple-500 to-pink-500"></div>
-                                <img loading="lazy" src="/assets/img/landing_page_section_back-01.webp"
-                                     className="rounded-[6px] w-full" width="394.8" height="466.34" alt="our-process"/>
-                            </Parallax>
-                            <Parallax
-                                className="lg-no-parallax flex rounded-[6px] justify-center items-center w-[70%] bg-no-repeat absolute bottom-0 right-[15px] lg:!top-0 lg:ml-auto"
-                                speed={20}>
-                                <img loading="lazy" src="/assets/img/landing_page_section_front-01.webp"
-                                     className="rounded-[6px] w-full" width="394.8" height="466.34" alt="our-process"/>
-                            </Parallax>
-                            {/* <img src="/assets/img/landing_page_section_front-01.png" alt=""></img> */}
-                        </div>
-                    </m.div>
-                    <m.div className="col-lg-5 offset-lg-1" {...{...fadeIn, transition: {delay: 0.5}}}>
-                        <div className="font-serif text-xmd font-medium mb-[30px]">
-                            <span className="w-[50px] h-[1px] bg-fastblue inline-block align-middle mr-[20px]"></span>
-                            <span
-                                className="text-gradient bg-gradient-to-r from-[#556fff] via-[#e05fc4] to-[#ff798e] inline-block">You Comprehensive AMS</span>
-                        </div>
-                        <h5 className="font-serif text-darkgray font-medium mb-[30px] w-full">The Ultimate Agency Management Solution</h5>
-                        <p className="w-[95%] mb-[35px]">Umelle’s AMS is a cutting-edge solution designed to meet the specific needs of insurance providers and pooled insurers. From contact and member management to policy administration and advanced analytics, our platform ensures your operations are efficient, compliant, and customer-centric. Leveraging the latest technology, we provide robust security, seamless integrations, and continuous support to keep your business ahead of the curve.</p>
-                    </m.div>
-                </Row>
-            </Container>
+        <section className="bg-lightgray py-[160px] lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px]">
+          <Container>
+            <Row className="justify-center">
+              <Col lg={6} md={7} sm={8} className="text-center mb-24">
+                <m.h2 className="heading-4 font-semibold -tracking-[1px] text-darkgray font-serif" {...fadeIn} >
+                  Manage All Of Your Data With One Tool
+                </m.h2>
+              </Col>
+            </Row>
+            <IconWithText
+              grid="row-cols-1 row-cols-lg-3 row-cols-sm-2 justify-center"
+              theme="icon-with-text-07"
+              data={IconWithTextData_07}
+              animation={fadeIn}
+            />
+          </Container>
         </section>
         {/* Section End */}
-
-            {/* Section Start */}
-            <m.section className="bg-lightgray py-[160px] lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px]" {...fadeIn}>
+        {/* About section Start */}
+        <section className="py-[160px] overflow-hidden cover-background lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px]" style={{ backgroundImage: `url('/assets/img/webp/home-consulting-about-bg.webp')` }}>
                 <Container>
-                    <Counter
-                        theme="counter-style-05"
-                        grid="row-cols-1 row-cols-md-3 text-center gap-y-10"
-                        className="text-black"
-                        duration={2}
-                        data={CounterData05}
-                        animation={fadeIn}
-                        animationDelay={0.2}
-                    />
-                </Container>
-            </m.section>
-            {/* Section End */}
-
-            {/* Section Start */}
-            <section
-                className="py-[90px] lg:py-[120px] md:py-[80px] xs:py-[50px] bg-transparent cover-background relative cover-background" {...fadeIn}
-                style={{backgroundImage: `url(/assets/img/CheckBox4-01.webp)`}}
-            >
-                {sent ?
-                    (<Container>
-                        <Row>
-                            <Col className='mb-[6%]'>
-                                <h6 className="font-serif text-white text-center font-medium mb-[25px] lg:mb-[15px]">
-                                    Stop overpaying for unused features and never miss out on the functionalities you
-                                    need
-                                </h6>
-                                <div>
-                                    <p className="font-serif text-white text-center font-medium mb-[1px] lg:mb-[15px]">
-                                        Shape your custom software experience now by checking the functions and features
-                                        you need
-                                    </p>
-                                </div>
-                            </Col>
-                        </Row>
-                        <Row className="m-auto">
-                            <Col xl={12} lg={12} md={12}>
-                                <Formik
-                                    initialValues={{name: '', email: '', phone: '', comment: '', recaptcha: ''}}
-                                    validationSchema={ContactFormStyle02Schema}
-                                    onSubmit={async (values, actions) => {
-                                        actions.setSubmitting(true)
-                                        if (values.recaptcha !== '') {
-                                            const response = await sendEmail(values)
-                                            response.status === "success" && analyticsEvent('FeaturesFunctions',values);
-                                            response.status === "success" && resetForm(actions, recaptcha);
-                                        } else {
-                                            recaptcha.current.captcha.classList.add("error")
-                                        }
-                                    }}
-                                >
-                                    {({isSubmitting, status, setFieldValue}) => (
-                                        <Form ref={form1}>
-                                            <Row>
-                                                <Col xl={7} md={7} xs={12}>
-                                                    <Row className="p-1 m-0">
-                                                        <h4 className="text-center font-serif"
-                                                            style={{color: '#FFFFFF'}}>
-                                                            Features
-                                                        </h4>
-                                                        <Col xl={6} md={6} xs={12}>
-                                                            <Checkbox type="checkbox" name="certificatesOfCoverage"
-                                                                      className="inline-block"
-                                                                      labelClass="flex items-center mb-[5px]">
-                                                            <span className="ml-[10px] text-white font-serif">
-                                                            Certificates of Coverage
-                                                            </span>
-                                                            </Checkbox>
-                                                            <Checkbox type="checkbox" name="policyManagement"
-                                                                      className="inline-block"
-                                                                      labelClass="flex items-center mb-[5px]">
-                                                            <span className="ml-[10px] text-white font-serif">
-                                                            Policy Management 
-                                                            </span>
-                                                            </Checkbox>
-                                                            <Checkbox type="checkbox" name="vendorManagement "
-                                                                      className="inline-block"
-                                                                      labelClass="flex items-center mb-[5px]">
-                                                            <span className="ml-[10px] text-white font-serif">
-                                                            Vendor Management 
-                                                            </span>
-                                                            </Checkbox>
-                                                            <Checkbox type="checkbox" name="iabilityPayroll"
-                                                                      className="inline-block"
-                                                                      labelClass="flex items-center mb-[5px]">
-                                                            <span className="ml-[10px] text-white font-serif">
-                                                            Liability Payroll
-                                                            </span>
-                                                            </Checkbox>
-                                                            <Checkbox type="checkbox" name="claims"
-                                                                      className="inline-block"
-                                                                      labelClass="flex items-center mb-[5px]">
-                                                            <span className="ml-[10px] text-white font-serif">
-                                                            Claims  
-                                                            </span>
-                                                            </Checkbox>
-                                                            <Checkbox type="checkbox" name="cntacts"
-                                                                      className="inline-block"
-                                                                      labelClass="flex items-center mb-[5px]">
-                                                            <span className="ml-[10px] text-white font-serif">
-                                                            Contacts  
-                                                            </span>
-                                                            </Checkbox>
-                                                            <Checkbox type="checkbox" name="programs"
-                                                                      className="inline-block"
-                                                                      labelClass="flex items-center mb-[5px]">
-                                                            <span className="ml-[10px] text-white font-serif">
-                                                            Programs   
-                                                            </span>
-                                                            </Checkbox>
-                                                        </Col>
-                                                        <Col xl={6} md={6} xs={12}>
-                                                            <Checkbox type="checkbox" name="externalInternalCompliance"
-                                                                      className="inline-block"
-                                                                      labelClass="flex items-center mb-[5px]">
-                                                            <span className="ml-[10px] text-white font-serif">
-                                                            External/Internal Compliance 
-                                                            </span>
-                                                            </Checkbox>
-                                                            <Checkbox type="checkbox" name="property"
-                                                                      className="inline-block"
-                                                                      labelClass="flex items-center mb-[5px]">
-                                                            <span className="ml-[10px] text-white font-serif">
-                                                            Property   
-                                                            </span>
-                                                            </Checkbox>
-                                                            <Checkbox type="checkbox" name="standAlonePrograms "
-                                                                      className="inline-block"
-                                                                      labelClass="flex items-center mb-[5px]">
-                                                            <span className="ml-[10px] text-white font-serif">
-                                                            Stand Alone Programs 
-                                                            </span>
-                                                            </Checkbox>
-                                                            <Checkbox type="checkbox" name="kPIsScorecards"
-                                                                      className="inline-block"
-                                                                      labelClass="flex items-center mb-[5px]">
-                                                            <span className="ml-[10px] text-white font-serif">
-                                                            KPIs/Scorecards 
-                                                            </span>
-                                                            </Checkbox>
-                                                            <Checkbox type="checkbox"
-                                                                      name="reportingAnalyticsDashboards "
-                                                                      className="inline-block"
-                                                                      labelClass="flex items-center mb-[5px]">
-                                                            <span className="ml-[10px] text-white font-serif">
-                                                            Reporting/Analytics/Dashboards 
-                                                            </span>
-                                                            </Checkbox>
-                                                            <Checkbox type="checkbox"
-                                                                      name="underwritingAndQuestionnaires "
-                                                                      className="inline-block"
-                                                                      labelClass="flex items-center mb-[5px]">
-                                                            <span className="ml-[10px] text-white font-serif">
-                                                            Underwriting and Questionnaires 
-                                                            </span>
-                                                            </Checkbox>
-                                                            <Checkbox type="checkbox" name="otherFeatures"
-                                                                      className="inline-block"
-                                                                      labelClass="flex items-center mb-[5px]">
-                                                            <span className="ml-[10px] text-white font-serif">
-                                                            Other
-                                                            </span>
-                                                            </Checkbox>
-                                                        </Col>
-                                                    </Row>
-                                                </Col>
-                                                <Col>
-                                                    <Row className="p-1 m-2">
-                                                        <h4 className="text-center font-serif"
-                                                            style={{color: '#FFFFFF'}}>
-                                                            Functions
-                                                        </h4>
-                                                        <Col Col xl={10} md={10} xs={12}>
-                                                            <Checkbox type="checkbox" name="automatedInvoicing "
-                                                                className="inline-block"
-                                                                labelClass="flex items-center mb-[5px]">
-                                                            <span className="ml-[10px] text-white font-serif">
-                                                                Automated Invoicing 
-                                                            </span>
-                                                            </Checkbox>
-                                                            <Checkbox type="checkbox" name="programManagementWizard "
-                                                                className="inline-block"
-                                                                labelClass="flex items-center mb-[5px]">
-                                                            <span className="ml-[10px] text-white font-serif">
-                                                                Program Management Wizard 
-                                                            </span>
-                                                            </Checkbox>
-                                                            <Checkbox type="checkbox" name="internalChat "
-                                                                className="inline-block"
-                                                                labelClass="flex items-center mb-[5px]">
-                                                            <span className="ml-[10px] text-white font-serif">
-                                                                Internal Chat 
-                                                            </span>
-                                                            </Checkbox>
-                                                            <Checkbox type="checkbox" name="customBusinessSettings "
-                                                                className="inline-block"
-                                                                labelClass="flex items-center mb-[5px]">
-                                                            <span className="ml-[10px] text-white font-serif">
-                                                                Custom Business Settings 
-                                                            </span>
-                                                            </Checkbox>
-                                                            <Checkbox type="checkbox" name="discountManagement "
-                                                                className="inline-block"
-                                                                labelClass="flex items-center mb-[5px]">
-                                                            <span className="ml-[10px] text-white font-serif">
-                                                                Discount Management 
-                                                            </span>
-                                                            </Checkbox>
-                                                            <Checkbox type="checkbox" name="automatedCertificateRenewal "
-                                                                className="inline-block"
-                                                                labelClass="flex items-center mb-[5px]">
-                                                            <span className="ml-[10px] text-white font-serif">
-                                                                Automated Certificate Renewal 
-                                                            </span>
-                                                            </Checkbox>
-                                                            <Checkbox type="checkbox" name="otherFunction"
-                                                                className="inline-block"
-                                                                labelClass="flex items-center mb-[5px]">
-                                                            <span className="ml-[10px] text-white font-serif">
-                                                                Other 
-                                                            </span>
-                                                            </Checkbox>
-                                                        </Col>   
-                                                    </Row>
-                                                </Col>
-                                            </Row>
-                                            <Row className="row-cols-1 row-cols-md-1 mt-5">
-                                                <Col className="mb-16 lg:mb-[25px] sm:mb-0">
-                                                    <Input showErrorMsg={false} type="text" name="name"
-                                                           className="py-[15px] px-[20px] text-md w-full border-[1px] border-solid border-[#dfdfdf]"
-                                                           labelClass="mb-[25px]" placeholder="Your name"/>
-                                                    <Input showErrorMsg={false} type="text" name="company"
-                                                           className="py-[15px] px-[20px] text-md w-full border-[1px] border-solid border-[#dfdfdf]"
-                                                           labelClass="mb-[25px]" placeholder="Your company"/>
-                                                    <Input showErrorMsg={false} type="email" name="email"
-                                                           className="py-[15px] px-[20px] w-full text-md border-[1px] border-solid border-[#dfdfdf]"
-                                                           labelClass="mb-[25px]" placeholder="Your email address"/>
-                                                    <Input showErrorMsg={false} type="tel" name="phone"
-                                                           className="py-[15px] px-[20px] w-full text-md border-[1px] border-solid border-[#dfdfdf]"
-                                                           labelClass="sm:mb-[25px]" placeholder="Your position"/>
-                                                </Col>
-                                            </Row>
-                                            <Row>
-                                                <Col xs={12} md={5} lg={5}>
-                                                    {process.env.REACT_APP_GRECAPTCHA_API_KEY && (
-                                                        <ReCAPTCHA
-                                                            ref={recaptcha}
-                                                            className="mb-[35px]"
-                                                            sitekey={process.env.REACT_APP_GRECAPTCHA_API_KEY}
-                                                            onChange={(response) => {
-                                                                setFieldValue("recaptcha", response)
-                                                            }}
-                                                        />
-                                                    )}
-                                                </Col>
-                                                <Col xs={12} md={5} lg={5}>
-                                                    <Buttons ariaLabel="form button" type="submit"
-                                                             className={`font-medium font-serif rounded-none uppercase text-[11px]${isSubmitting ? " loading" : ""}`}
-                                                             themeColor={["#0039e3", "#8600d4"]} size="md" color="#fff"
-                                                             title="Free Quote"/>
-                                                    <AnimatePresence>
-                                                        {status && <m.div initial={{opacity: 0}} animate={{opacity: 1}}
-                                                                          exit={{opacity: 0}}><MessageBox
-                                                            className="mt-[35px] py-[10px] tracking-[1px]"
-                                                            theme="message-box01"
-                                                            variant="success"
-                                                            message="Your message has been sent successfully!"/>
-                                                        </m.div>}
-                                                    </AnimatePresence>
-                                                </Col>
-                                            </Row>
-                                        </Form>
-                                    )}
-                                </Formik>
-                            </Col>
-                        </Row>
-                    </Container>)
-                    :
-                    (
-                        <Container>
-                            <Row md={12} className="justify-center text-black font-[2em] align-items-center text-center m-5 min-w-5">
-                            <p style={{ color: 'white' }}> {message}</p>
-                            </Row>
-
-                        </Container>
-                    )
-                }
-
-            </section>
-            {/* Section End */}
-
-            
-            {/*/!* Section Start *!/*/}
-            <m.section className="bg-lightgray py-[80px] lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px]">
-                <h6 className="font-serif text-gray-900 text-center font-medium mb-24">Our Process</h6>
-                <Container>
-                    <ProcessStep grid="row-cols-1 row-cols-sm-2 row-cols-lg-5 gap-y-10" className=""
-                                 theme="process-step-style-03" data={ProcessStepData03} animation={fadeIn}/>
-                </Container>
-            </m.section>
-            {/*/!* Section End *!/*/}
-
-            {/* Section Start */}
-            <m.section className="bg-white">
-                <Container>
-                    <Row>
-                        <Col>
-                            <h6 className="font-serif text-center text-black justify-center align-items-center m-5">
-                                Transforming Industries: Real-World Success Story
-                            </h6>
-                        </Col>
-                    </Row>
-                    <Row className="mt-[40px]">
-                        <Col md={4}  xs={12} className="mb-3">
-                            <div>
-                                <p>
-                                    <span className="font-bold text-black">Client Name: </span>
-                                    ACWA JPIA
-                                </p>
-                                <br/>
-                                <p>
-                                    <span className="font-bold text-black">Industry: </span>
-                                    Pooled Insurer for Water Supply and Infrastructure
-                                </p>
-                                <br/>
-                                <p>
-                                    <span className="font-bold text-black">Client Overview: </span>
-                                    ACWA JPIA is a pooled insurer, providing insurance services to more than 350
-                                    members. Part of the larger JPIA group of like-minded Insurers and Service
-                                    Providers,
-                                    they provide top-level services to their members and clients.
-                                </p>
+                    <Row className="items-center justify-center">
+                        <m.div className="col-lg-6 col-md-10 md:mb-20 consulting-about" {...fadeIn}>
+                            <h2 className="heading-4 font-serif font-medium text-darkgray tracking-[-1px] mb-16 w-[80%] lg:w-[90%] md:mb-12 xs:mb-16 xs:w-full">Predictable <span className="text-[#bf8c4c] font-semibold text-decoration-line-bottom-thick">Pricing</span></h2>
+                            <p className="w-[70%] mb-[40px] lg:w-[90%] md:mb-[45px] xs:mb-[25px]">No unnecessary expense. No hidden costs. Our pricing plans are designed to get you up and running fast.  </p>
+                            <Lists theme="list-style-01" data={ListData02} />
+                            <div className="mt-[50px] md:mt-[25px] xs:mt-[35px] landscape:md:mt-[40px]">
+                                <Buttons to="/page/about-us" className="mr-[35px] btn-fill btn-fancy rounded-none font-medium font-serif uppercase md:mb-[15px] xs:mb-0" themeColor="#232323" color="#fff" size="sm" title="About company" />
+                                <Buttons to="/page/what-we-offer" className="font-medium pt-0 font-serif uppercase btn-link after:h-[2px] md:text-md md:mb-[15px] after:bg-darkgray hover:text-darkgray xs:mb-0" size="xl" color="#232323" title="Discover tour" />
                             </div>
-                        </Col>
-                        <Col md={8}>
-                            <Row className="justify-center">
-                                <Col lg={10} md={10}>
-                                    <div
-                                        id="testx"
-                                        className={`accordion-style-03 ${props.themeColor}${props.className ? ` ${props.className}` : ""}`}>
-                                        <Accordion defaultActiveKey={1}>
-                                            <div id={1} className={`accordion-item-wrapper`}
-                                                 key={1}
-                                                 {...{
-                                                     ...props.animation,
-                                                     transition: {delay: 0 * props.animationDelay}
-                                                 }}
-                                            >
-                                                <Accordion.Item key={1} eventKey={null}>
-                                                    <Accordion.Header>
-                                                        The Challenge
-                                                    </Accordion.Header>
+                        </m.div>
+                        <m.div className="col-lg-5 offset-lg-1 col-md-10" {...fadeIn}>
+                            <div className="relative">
+                                <div className="bg-darkslateblue absolute h-full w-full top-0 left-0 opacity-20"></div>
+                                <img className="w-full" alt="" src="https://via.placeholder.com/457x607" width="457.5px" height="607.66px" />
 
-                                                    <Accordion.Body>
-                                                        <div>
-                                                            <p>
-                                                                ACWA JPIA saw the opportunity to optimize and modernize
-                                                                their operations and business management software.
-                                                            </p>
-                                                            <br/>
-                                                            <p>
-                                                                Canned products were dragging the organization down with
-                                                                undue cost and complex procedures that didn't meet their
-                                                                standards.
-                                                            </p>
-                                                            <br/>
-                                                            <p>
-                                                                Using several vendors to provide services created
-                                                                issues, as some services were not meeting scalability
-                                                                and flexibility standards.
-                                                            </p>
-                                                        </div>
-                                                    </Accordion.Body>
-                                                </Accordion.Item>
-                                            </div>
-                                            <div id={2} className={`accordion-item-wrapper`}
-                                                 key={2}
-                                                 {...{
-                                                     ...props.animation,
-                                                     transition: {delay: 0 * props.animationDelay}
-                                                 }}
-                                            >
-                                                <Accordion.Item key={2} eventKey={2}>
-                                                    <Accordion.Header>
-                                                        The Solution
-                                                    </Accordion.Header>
-
-                                                    <Accordion.Body>
-                                                        <div>
-                                                            <p>
-                                                                We crafted an end-to-end member and resource management
-                                                                system aimed solely at solving the problems of the
-                                                                company and their members. The system offers a full host
-                                                                of features, including:
-                                                            </p>
-                                                            <br/>
-                                                            <ol>
-                                                                <li>Business Intelligence, Reporting and Analytics</li>
-                                                                <li>Custom Wizzard</li>
-                                                                <li>User Management</li>
-                                                                <li>Member Management and Services</li>
-                                                                <li>Data Repositories and Templates</li>
-                                                                <li>Automated Invoicing</li>
-                                                                <li>Liability</li>
-                                                                <li>Workers Compensation</li>
-                                                                <li>Property</li>
-                                                                <li>Incident and Claims Management</li>
-                                                                <li>Dashboard</li>
-                                                                <li>Contact Management</li>
-                                                                <li>Finance Management</li>
-                                                            </ol>
-                                                        </div>
-                                                    </Accordion.Body>
-                                                </Accordion.Item>
-                                            </div>
-
-                                            <div id={3} className={`accordion-item-wrapper`}
-                                                 key={3}
-                                                 {...{
-                                                     ...props.animation,
-                                                     transition: {delay: 0 * props.animationDelay}
-                                                 }}
-                                            >
-                                                <Accordion.Item key={3} eventKey={3}>
-                                                    <Accordion.Header>
-                                                        Process and Collaboration:
-                                                    </Accordion.Header>
-
-                                                    <Accordion.Body>
-                                                        <div>
-                                                            <p>
-                                                                Our collaboration used the strengths of the Agile
-                                                                methodology to maximize feedback and allow for
-                                                                successful module iterations that ultimately delivered
-                                                                on the organization's needs.
-                                                            </p>
-                                                        </div>
-                                                    </Accordion.Body>
-                                                </Accordion.Item>
-                                            </div>
-
-                                            <div id={4} className={`accordion-item-wrapper`}
-                                                 key={4}
-                                                 {...{
-                                                     ...props.animation,
-                                                     transition: {delay: 0 * props.animationDelay}
-                                                 }}
-                                            >
-                                                <Accordion.Item key={4} eventKey={4}>
-                                                    <Accordion.Header>
-                                                        The Impact
-                                                    </Accordion.Header>
-
-                                                    <Accordion.Body>
-                                                        <div>
-                                                            <p>
-                                                                This process also allowed our team to understand the
-                                                                business in more detail, which led to many breakthroughs
-                                                                and innovations in the way the solution was delivered.
-                                                                Through a robust relationship and collaboration, UMELLE
-                                                                was able to deploy this experience to develop a unique
-                                                                solution and optimize the operations of several key
-                                                                functions; allowing the organization to focus on new
-                                                                horizons.
-                                                            </p>
-                                                        </div>
-                                                    </Accordion.Body>
-                                                </Accordion.Item>
-                                            </div>
-
-
-                                            {/*<div id={item.id} className={`accordion-item-wrapper`}*/}
-                                            {/*     key={key}*/}
-                                            {/*     {...{*/}
-                                            {/*         ...props.animation,*/}
-                                            {/*         transition: {delay: key * props.animationDelay}*/}
-                                            {/*     }}*/}
-                                            {/*>*/}
-                                            {/*    <Accordion.Item key={key} eventKey={key}>*/}
-                                            {/*        {item.title &&*/}
-                                            {/*            <Accordion.Header>*/}
-                                            {/*                {item.icon &&*/}
-                                            {/*                    <i className={`text-[2em] m-2 ${item.icon}`}></i>}*/}
-                                            {/*                {item.time && <span*/}
-                                            {/*                    className="panel-time">{item.time}</span>}*/}
-                                            {/*                {item.title && <span*/}
-                                            {/*                    className="panel-title">{item.title}</span>}*/}
-                                            {/*                {item.author && <span*/}
-                                            {/*                    className="panel-speaker">{item.author}</span>}*/}
-                                            {/*            </Accordion.Header>*/}
-                                            {/*        }*/}
-                                            {/*        {item.content &&*/}
-                                            {/*            <Accordion.Body> {item.content} </Accordion.Body>}*/}
-                                            {/*    </Accordion.Item>*/}
-                                            {/*</div>*/}
-                                        </Accordion>
+                                {/* Modal Component Start */}
+                                <CustomModal.Wrapper
+                                    className="absolute top-0 items-center flex h-full left-[-50px] md:right-0 md:justify-center md:w-full md:left-0"
+                                    modalBtn={<Buttons ariaLabel="modal button" type="submit" className="btn-sonar border-0 shadow-[0_0_15px_rgba(0,0,0,0.1)]" themeColor="#fff" color="#bf8c4c" size="xxl" title={<i className="feather-play text-[35px]" />} />} >
+                                    <div className="w-[1020px] max-w-full relative rounded mx-auto">
+                                        <div className="fit-video">
+                                            <iframe width="100%" height="100%" className="shadow-[0_0_8px_rgba(0,0,0,0.06)]" controls src="https://www.youtube.com/embed/g0f_BRYJLJE?autoplay=1" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen ></iframe>
+                                        </div>
                                     </div>
-                                </Col>
-                            </Row>
-                        </Col>
-                    </Row>
-                </Container>
-            </m.section>
-            {/* Section Start */}
-
-            {/* Section Start */}
-            <m.section
-                className="bg-lightgray py-[55px] border-t lg:py-[100px] md:py-[95px] sm:py-[80px] xs:py-[50px]" {...fadeIn}>
-                <Container>
-                    <Row className="justify-center">
-                        <Col md={12} className="text-center m-5 mb-[7%]">
-                            <h6 className="font-serif text-black font-medium">
-                                Crafted for Unmatched Efficiency
-                            </h6>
-                        </Col>
-                    </Row>
-                    <Row className="justify-center">
-                        <Col lg={12} md={11} xs={12} className="md:px-0">
-                            <Services grid="row-cols-lg-3 row-cols-1 md:my-0 md:mx-auto gap-y-10 justify-center"
-                                      theme='service-style-05' className="col-md-10" data={serviceData5}
-                                      animation={fadeIn}/>
-                        </Col>
-                    </Row>
-                </Container>
-            </m.section>
-            {/* Section End */}
-
-            {/* CTA Banner Section Start */}
-            <section className="lg:pt-[160px] md:pt-[10px] sm:pt-[50px]">
-                <Container fluid>
-                    <Row style={{backgroundImage: `url('/assets/img/Untitled-6-01.webp')`}}
-                         className="cover-background relative cover-background lg:py-[90px] md:py-[75px] sm:py-[50px]">
-                        <Col xs={12} className="text-center my-[5rem] md:my-[7.5rem]">
-                            <div className="justify-center align-items-center text-center d-flex flex-col">
-                                <h6 className="text-center font-serif bg-transparent text-black m-3 w-[400px]">
-                                Streamline Your Operations Now
-                                </h6>
+                                </CustomModal.Wrapper>
+                                {/* Modal Component End */}
                             </div>
-                            <Buttons ariaLabel="button"
-                                     href="/contact"
-                                     className="mx-[10px] font-medium font-serif uppercase rounded-none lg:mb-[15px] landscape:lg:mb-[15px] justify-center align-items-center"
-                                     themeColor={["#3844F7", "#902CFC"]} size="md" color="#fff"
-                                     title="Schedule a Meeting"/>
-                        </Col>
+                        </m.div>
                     </Row>
                 </Container>
             </section>
-            {/* CTA Banner Section End */}
+            {/* About section End */}
 
-            {/* Footer Start */}
+            {/* Section start */}
+      <m.section className="pt-0 pb-[10%] px-[10%] xl:px-[3%] md:px-[30px] sm:px-0 xs:px-0" {...fadeIn}>
+        <div className="bg-gradient-to-tr from-[#f5bb8d] via-[#ffaea8] to-[#f3aaca] rounded-[5px] overflow-hidden pt-[126px] md:pt-[72px]">
+          <Container>
+            <Row className="justify-center items-center">
+              <Col xl={5} lg={{ span: 6, order: 2 }} className="font-medium text-darkgray font-serif pb-[100px] ml-[97px] lg:ml-[0px] md:text-center md:pb-24">
+                <span className="mb-[35px] text-lg -tracking-[.5px] inline-block relative whitespace-nowrap border-b border-solid border-darkgray md:text-xmd">Ready to see where PoolInsure AMS can take you?</span>
+                <h4 className="-tracking-[1px] mb-[45px] xs:w-[99%]">Shedule a <span className="font-semibold">Demo</span><span className = "-tracking-[1px] mb-[45px] xs:w-[99%]"> and get a Free Quote! </span></h4>
+                <Buttons ariaLabel="button link" href="/contact" className="font-medium font-serif uppercase btn-expand" size="lg" color="#fff" themeColor="#902CFC" title="Schedule Demo" />
+              </Col>
+              <Col xl={{ offset: 1, span: 5 }} lg={{ span: 5, order: 1 }} className="p-[0px] xs:px-[15px]">
+                <img width="" height="" src='https://via.placeholder.com/406x506' alt="Our Team" className="md:mx-auto" />
+              </Col>
+            </Row>
+          </Container>
+        </div>
+      </m.section>
+    {/* Section end */}
+
+    {/* Footer Start */}
             <Footer className="startup-footer bg-no-repeat bg-right" theme="light">
                 <Container fluid className="xs:opacity-0 xs:hidden">
                     <Row>
@@ -899,7 +298,7 @@ const HomeStartupPage = (props) => {
                     </Container>
                 </div>
             </Footer>
-            {/* Footer End */}
+    {/* Footer End */}
         </InViewPort>
         <div id="test-sol"
         ></div>
