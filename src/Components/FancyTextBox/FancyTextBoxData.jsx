@@ -277,8 +277,8 @@ const fancyTextBox05 = [
             icon: {
                 class: "line-icon-Financial text-basecolor"
             },
-            title: "PRICING",
-            description: "Be in full control with our financial management solutions. By integrating your business logic with your financials we can provide stability and reliability to your bottom line. With integrated financial management tools you will never make a mistake and get accurate reporting and analytics data."
+            title: "FINANCE",
+            description: "financial control and stability with UIMS's integrated tools, ensuring accurate reporting, analytics, and seamless management of your financials."
         },{
             icon: {
                 class: "line-icon-Folder-WithDocument text-basecolor"
