@@ -270,7 +270,7 @@ const fancyTextBox05 = [
             },
             title: "CORE PLATFORM",
             // subTitle: "Easy installation theme",
-            description: "No matter your business line we can help you create custom business flows to help manage your business with efficiency. With a wide range of knowledge in Property, Workers Compensation, General Liability, Benefits such as dental and medical, Cyber Liability and others, we can help you craft the perfect system."
+            description: "Streamline insurance processes with robust features for efficient operations."
             // backgroundText: " "
         },
         {
@@ -278,34 +278,34 @@ const fancyTextBox05 = [
                 class: "line-icon-Financial text-basecolor"
             },
             title: "FINANCE",
-            description: "financial control and stability with UIMS's integrated tools, ensuring accurate reporting, analytics, and seamless management of your financials."
+            description: "Achieve precise financial oversight with advanced tools for comprehensive management."
         },{
             icon: {
                 class: "line-icon-Folder-WithDocument text-basecolor"
             },
             title: "INTEGRATIONS",
-            description: "Stay compliant with government regulations and align your organization in one place. Our solution allows you to combine your business logic and government regulations to streamline your operational integrity and reduce the risk non-compliance. We allow you to plan for the future by building flexible and interactive tools to keep your organization compliant."
+            description: "Seamlessly align business processes with flexible integration capabilities."
         },
         {
             icon: {
                 class: "line-icon-Add-UserStar text-basecolor"
             },
             title: "SUPPORT",
-            description: "Streamline your organizational processes with integrated Member and User Management. This unified platform allows for efficient tracking, updating, and analyzing of member data, while also offering robust tools for defining user roles and permissions. Enhance member engagement and data security through a system that aligns with your organizational structure, simplifying administrative tasks and improving operational efficiency."
+            description: "Boost efficiency with dedicated, AI-assisted support and comprehensive training."
         },
         {
             icon: {
                 class: "line-icon-Speach-BubbleDialog text-basecolor"
             },
             title: "PORTAL",
-            description: "Communicate and share documents with clients and members reliably and internally. Reduce the need for sending sensitive data through third party channels."
+            description: "Enhance member experience with secure document access and data entry."
         },
         {
             icon: {
                 class: "line-icon-Bar-Chart text-basecolor"
             },
             title: "REPORTING",
-            description: "Track KPIs and get active reporting and analytics on what matters most to your business. Our interactive systems allow you to change your KPIs as your business changes. Combined with our reporting and analytics solutions you will always be informed."
+            description: "Gain insights with dynamic reporting and KPI tracking."
         },
 ]
 

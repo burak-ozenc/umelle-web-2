@@ -4,7 +4,7 @@ import React, {lazy, useEffect, useState} from 'react'
 import {Link} from 'react-router-dom';
 import {Col, Container, Navbar, Row,} from "react-bootstrap";
 import {m} from 'framer-motion';
-import { Link as ScrollTo } from "react-scroll";
+// import { Link as ScrollTo } from "react-scroll";
 
 
 // Functions
@@ -26,7 +26,7 @@ import Buttons from "../../../Components/Button/Buttons";
 import {AccordionDataSolutions} from "../../../Components/Accordion/AccordionData";
 import SEO from "../../../Components/Umelle/SEO";
 import {Parallax} from 'react-scroll-parallax';
-import productImage from "../../../Assets/img/umelle/UIMS_P.png";
+// import productImage from "../../../Assets/img/umelle/UIMS_P.png";
 import FancyTextBox from "../../../Components/FancyTextBox/FancyTextBox";
 import {fancyTextBox07} from "../../../Components/FancyTextBox/FancyTextBoxData";
 import {TabData07} from "../../../Components/Tab/TabData";
