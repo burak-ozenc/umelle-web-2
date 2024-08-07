@@ -19,7 +19,15 @@ const Services = (props) => {
                     return (
                         <m.div key={i} className={`col px-[15px]${props.className ? ` ${props.className}` : ""}`} {...{ ...props.animation, transition: { delay: i * props.animationDelay } }}>
                             <div className={props.theme}>
-                                <div className='service-style min-h-[22rem]'>
+                            <div className="img-wrapper">
+                                    {item.img && <img src={item.img} alt={item.title} className="service-image" />}
+                                    <div className="services-box-hover">
+                                        <a href={item.link}>
+                                            <i className={item.icon}></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div className='service-style min-h-[18rem]'>
                                     {props.theme === "service-style-03" && <span className='verticalline'></span>}
                                     {item.title && <span className="title font-medium text-darkgray block font-serif mb-[10px]">{item.title}</span>}
                                     {item.content && <p>{item.content}</p>}

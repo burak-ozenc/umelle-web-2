@@ -2,24 +2,17 @@ const serviceData1 = [
     {
         img: "https://via.placeholder.com/800x618",
         icon: "fas fa-arrow-right",
-        title: "FINANCE SERVICES",
-        content: "Lorem ipsum consectetur adipiscing elit do eiusmod tempor incididunt.",
-        link: "/page/our-story"
+        title: "MANAGE YOUR DATA",
+        content: "Outside of our native operations, PoolInsure enables third-party data integration, making it flexible and reliable",
+        link: "services"
     },
     {
         img: "https://via.placeholder.com/800x618",
         icon: "fas fa-arrow-right",
-        title: "BUSINESS PLANNING",
-        content: "Lorem ipsum consectetur adipiscing elit do eiusmod tempor incididunt.",
-        link: "/page/our-story"
+        title: "SIMPLIFY YOUR WORKFLOW ",
+        content: "From Member Management to finance and operations—all within a single application for enhanced ease of use",
+        link: "/services"
     },
-    {
-        img: "https://via.placeholder.com/800x618",
-        icon: "fas fa-arrow-right",
-        title: "MARKETING STRATEGY",
-        content: "Lorem ipsum consectetur adipiscing elit do eiusmod tempor incididunt.",
-        link: "/page/our-story"
-    }
 ]
 
 const serviceData2 = [

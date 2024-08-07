@@ -4,7 +4,7 @@ import React, {memo, useRef} from "react";
 import {Col, Row} from "react-bootstrap";
 import {m} from "framer-motion";
 import {Swiper, SwiperSlide} from "swiper/react";
-import {Autoplay, Navigation, Pagination} from "swiper";
+import {Autoplay, Navigation, Pagination} from "swiper/modules";
 import {PropTypes} from "prop-types";
 
 // Data

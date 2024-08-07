@@ -270,42 +270,48 @@ const fancyTextBox05 = [
             },
             title: "CORE PLATFORM",
             // subTitle: "Easy installation theme",
-            description: "Streamline insurance processes with robust features for efficient operations."
+            description: "Streamline insurance processes with robust features for efficient operations.",
             // backgroundText: " "
+            link: "/coreplatform",
         },
         {
             icon: {
                 class: "line-icon-Financial text-basecolor"
             },
-            title: "FINANCE",
-            description: "Achieve precise financial oversight with advanced tools for comprehensive management."
+            title: "Pricing",
+            description: "Achieve precise financial oversight with advanced tools for comprehensive management.",
+            link: "/uims-pricing",
         },{
             icon: {
                 class: "line-icon-Folder-WithDocument text-basecolor"
             },
             title: "INTEGRATIONS",
-            description: "Seamlessly align business processes with flexible integration capabilities."
+            description: "Seamlessly align business processes with flexible integration capabilities.",
+            link: "/productintegrations",
         },
         {
             icon: {
                 class: "line-icon-Add-UserStar text-basecolor"
             },
             title: "SUPPORT",
-            description: "Boost efficiency with dedicated, AI-assisted support and comprehensive training."
+            description: "Boost efficiency with dedicated, AI-assisted support and comprehensive training.",
+            link: "/uims-support",
         },
         {
             icon: {
                 class: "line-icon-Speach-BubbleDialog text-basecolor"
             },
             title: "PORTAL",
-            description: "Enhance member experience with secure document access and data entry."
+            description: "Enhance member experience with secure document access and data entry.",
+            link: "/uims-portal",
         },
         {
             icon: {
                 class: "line-icon-Bar-Chart text-basecolor"
             },
             title: "REPORTING",
-            description: "Gain insights with dynamic reporting and KPI tracking."
+            description: "Gain insights with dynamic reporting and KPI tracking.",
+            link: "/uims-reporting",
         },
 ]
 

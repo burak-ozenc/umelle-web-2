@@ -41,22 +41,26 @@ const ListData02 = [
     },
 ]
 
-const ListData03 = [
+const ListDataCorePlatform = [
     {
         icon: "feather-check",
-        content: "GREAT ENVIRONMENT",
+        content: "Integrated Insurance Operations",
     },
     {
         icon: "feather-check",
-        content: "FREE BREAKFAST",
+        content: "Robust Data Management",
     },
     {
         icon: "feather-check",
-        content: "CLEAN ROOM EVERYDAY",
+        content: "Single Interface Convenience",
     },
     {
         icon: "feather-check",
-        content: "NO BOOKING FEE",
+        content: "Data Integration and Reporting",
+    },
+    {
+        icon: "feather-check",
+        content: "Operational Time Savings ",
     },
 ]
 
@@ -291,7 +295,7 @@ const ListData08 = [
 export {
     ListData01,
     ListData02,
-    ListData03,
+    ListDataCorePlatform,
     ListData04,
     ListData05,
     TechnologiesList,

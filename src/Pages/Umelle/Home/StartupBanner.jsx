@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import {Swiper, SwiperSlide} from "swiper/react";
-import {Pagination, Navigation, EffectFade, Autoplay} from "swiper";
+import {Pagination, Navigation, EffectFade, Autoplay} from "swiper/modules";
 import {LazyMotion, domMax, m} from 'framer-motion';
 import {Container, Row, Col} from 'react-bootstrap';
 import {fadeIn} from "../../../Functions/GlobalAnimations";

@@ -34,6 +34,12 @@ const APIDev = lazy(() => import("./Pages/Umelle/Services/APIDev"))
 const BIA = lazy(() => import("./Pages/Umelle/Services/BIA"))
 const CloudServices = lazy(() => import("./Pages/Umelle/Services/CloudServices"))
 const ManagedServices = lazy(() => import("./Pages/Umelle/Services/ManagedServices"))
+const CorePlatform = lazy(() => import("./Pages/Umelle/UIMSProduct/CorePlatform"))
+const ProductPricing = lazy(() => import("./Pages/Umelle/UIMSProduct/ProductPricing"))
+const ProductIntegrations = lazy(() => import("./Pages/Umelle/UIMSProduct/ProductIntegrations"))
+const ProductSupport = lazy(() => import("./Pages/Umelle/UIMSProduct/ProductSupport"))
+const ProductPortal = lazy(() => import("./Pages/Umelle/UIMSProduct/ProductPortal"))
+const ProductReporting = lazy(() => import("./Pages/Umelle/UIMSProduct/ProductReporting"))
 
 function App() {
   const [headerHeight, setHeaderHeight] = useState(0);
@@ -146,6 +152,12 @@ function App() {
                   <Route path="/business-intelligence-and-analytics" element={<BIA style={{ "--base-color": "#27ae60" }} />} />
                   <Route path="/cloud-services" element={<CloudServices style={{ "--base-color": "#27ae60" }} />} />
                   <Route path="/managed-it-services" element={<ManagedServices style={{ "--base-color": "#27ae60" }} />} />
+                  <Route path="/coreplatform" element={<CorePlatform style={{ "--base-color": "#27ae60" }} />} />
+                  <Route path="/uims-pricing" element={<ProductPricing style={{ "--base-color": "#27ae60" }} />} />
+                  <Route path="/productintegrations" element={<ProductIntegrations style={{ "--base-color": "#27ae60" }} />} />
+                  <Route path="/uims-support" element={<ProductSupport style={{ "--base-color": "#27ae60" }} />} />
+                  <Route path="/uims-portal" element={<ProductPortal style={{ "--base-color": "#27ae60" }} />} />
+                  <Route path="/uims-reporting" element={<ProductReporting style={{ "--base-color": "#27ae60" }} />} />
                 </Routes>
               </Suspense>
             </AnimatePresence>
