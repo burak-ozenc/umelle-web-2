@@ -15,6 +15,40 @@ const serviceData1 = [
     },
 ]
 
+const serviceDataPortal = [
+    {
+        img: "https://via.placeholder.com/800x618",
+        icon: "fas fa-arrow-right",
+        title: "CENTRALIZED DATA ACCESS",
+        content: "Provide seamless access to all necessary documentation and records in one central location, enhancing operational efficiency for members.",
+        link: "services"
+    },
+    {
+        img: "https://via.placeholder.com/800x618",
+        icon: "fas fa-arrow-right",
+        title: "DOCUMENT MANAGEMENT",
+        content: "Consolidate and distribute key documents, reducing manual handling and improving response times for member inquiries.",
+        link: "/services"
+    },
+]
+
+const serviceDataIntegrations = [
+    {
+        img: "https://via.placeholder.com/800x618",
+        icon: "fas fa-arrow-right",
+        title: "THIRD-PARTY CONNECTIVITY",
+        content: "Leverage our robust APIs and flexible infrastructure to integrate essential external data and applications effortlessly.",
+        link: "services"
+    },
+    {
+        img: "https://via.placeholder.com/800x618",
+        icon: "fas fa-arrow-right",
+        title: "BUILT FOR GROWTH",
+        content: "Our platform's scalable architecture is ready to grow with you, allowing for rapid development and deployment that matches your pace of expansion.",
+        link: "/services"
+    },
+]
+
 const serviceData2 = [
     {
         img: "https://via.placeholder.com/800x548",
@@ -220,4 +254,4 @@ const serviceData7 = [
     },
 ]
 
-export { serviceData1, serviceData2, serviceData3, serviceData4, serviceData5, serviceData6, serviceData7 }
+export { serviceData1, serviceDataIntegrations, serviceDataPortal, serviceData2, serviceData3, serviceData4, serviceData5, serviceData6, serviceData7 }

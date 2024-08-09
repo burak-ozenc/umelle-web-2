@@ -29,8 +29,8 @@ import {AccordionDataSolutions} from "../../../Components/Accordion/AccordionDat
 import SEO from "../../../Components/Umelle/SEO";
 import {Parallax} from 'react-scroll-parallax';
 // import productImage from "../../../Assets/img/umelle/UIMS_P.png";
-import { ListDataCorePlatform } from '../../../Components/Lists/ListsData';
-import {serviceData1} from '../../../Components/Services/ServicesData';
+import {ListDataPortal} from '../../../Components/Lists/ListsData';
+import {serviceDataPortal} from '../../../Components/Services/ServicesData';
 import { fancyTextBox07 } from '../../../Components/FancyTextBox/FancyTextBoxData';
 
 const Header = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Header})))
@@ -47,24 +47,24 @@ const Footer_Data = [FooterData[0], FooterData[1], FooterData[4], FooterData[3]]
   const TestimonialsCarouselData = [
     {
       img: "https://via.placeholder.com/800x622",
-      title: "COMPREHENSIVE INSURANCE SYSTEM MANAGEMENT",
+      title: "MEMBER SELF-SERVICE INTERFACE",
       number: "01",
       content:
-        "Seamlessly integrate property, workers' compensation, and liability operations into a single, efficient platform.",
+        "Reduce administrative workload and enhances member satisfaction by empowering users with control over their interactions.",
     },
     {
       img: "https://via.placeholder.com/800x622",
-      title: "ADVANCED DATA MANAGEMENT CAPABILITIES",
+      title: "AUTOMATED DOCUMENT HANDLING",
       number: "02",
       content:
-        "Execute essential CRUD (Create, Read, Update, and Delete) operations with a history log , with specialized features for non-editable records.",
+        "Ensure that documents are always up-to-date and available for all parties without manual intervention.",
     },
     {
       img: "https://via.placeholder.com/800x622",
-      title: "END-TO-END OPERATIONAL EFFICIENCY",
+      title: "DATA ENTRY AND VALIDATION",
       number: "03",
       content:
-        "Streamline all insurance processes and data management in one unified application, saving time and enhancing client service.",
+        "Provide validation checks to ensure data accuracy and integrity, preventing errors that can arise from manual data entry.",
     },
   ];
   
@@ -172,13 +172,13 @@ const ProductPortal = (props) => {
           <Row className="items-center h-[100vh] md:h-[650px] sm:h-[450px]">
             <Col lg={5} md={6} sm={8}>
               <span className="text-xmd font-serif font-medium uppercase text-[#8bb867] block mb-[35px] xs:mb-[15px]">
-              DATA MANAGEMENT MADE EASY 
+              STREAMLINED MEMBER ACCESS 
               </span>
-              <h1 className="font-serif font-bold text-[#2f2f2f] uppercase mb-[2.5rem] tracking-[-2px] sm:mb-[20px] xs:mb-[15px]">
-              UNIFIED PLATFORM FOR END-TO-END INSURANCE DATA MANAGEMENT 
+              <h1 className="font-serif font-bold text-[#2f2f2f] uppercase mb-[2.5rem] tracking-[-5px] sm:mb-[20px] xs:mb-[15px]">
+              CENTRALIZED DOCUMENT MANAGEMENT
               </h1>
               <p className="text-xmd leading-[30px] w-[73%] mb-12 lg:w-[90%] md:w-full xs:mb-[15px]">
-              Manage and access large, complicated data sets, while easily navigating native and third-party data integrations.
+              A central hub where all member-generated documents are automatically consolidated and made available for immediate access.
               </p>
               <Link to = "/contact" offset={0} delay={0} spy={true} smooth={true} duration={800} className="cursor-pointer">
               <Buttons ariaLabel="button"
@@ -225,13 +225,12 @@ const ProductPortal = (props) => {
                 THE PREMIUM CHOICE FOR POOLED INSURERS
                 </span>
                 <h2 className="heading-5 font-serif text-[#2f2f2f] font-bold uppercase tracking-[-1px] w-[80%] mb-[20px] lg:w-[90%] md:w-full">
-                STREAMLINE OPERATIONS WITH OUR ALL-IN-ONE DATA INSURANCE PLATFORM 
+                OPTIMIZED MEMBER PORTAL 
                 </h2>
                 <p className="w-[80%] mb-[35px] lg:w-full">
-                PoolInsure reduces time on manual data entry and spreadsheet imports, and allows 
-                to edit, correct and update data all in one place. Complete core operations such as 
-                Member Management, Property, Workers Compensation, and Liability natively, 
-                ensuring complete data integrity. 
+                Effortlessly manage large member groups and simplify essential insurance processes through our 
+                specialized portal designed for pooled insurers. Streamline data entry, document management, 
+                and premium calculations, making administration smooth and error-free. 
                 </p>
                 <Link to = "/contact" offset={0} delay={0} spy={true} smooth={true} duration={800} className="cursor-pointer">
               <Buttons ariaLabel="button"
@@ -245,7 +244,7 @@ const ProductPortal = (props) => {
                 <Services
                   grid="row-cols-1 row-cols-md-2 justify-center text-left gap-y-10 md:gap-y-[45px]"
                   theme="service-style-01"
-                  data={serviceData1}
+                  data={serviceDataPortal}
                   animation={fadeIn}
                   animationDelay={0.5}
                 />
@@ -330,7 +329,7 @@ const ProductPortal = (props) => {
                     color="#232323"
                     className="font-semibold animated-text-black"
                     animation="slide"
-                    data={["COMPREHENSIVE INSURANCE SYSTEM MANAGEMENT", "ADVANCED DATA MANAGEMENT CAPABILITIES", "END-TO-END OPERATIONAL EFFICIENCY"]}
+                    data={["MEMBER INTERFACE", "DOCUMENT HANDLING", "DATA TRANSPARENCY"]}
                   />
                 </h2>
                 <p className="w-[90%] mb-[30px] xs:w-full">
@@ -342,7 +341,7 @@ const ProductPortal = (props) => {
                   <Lists
                     className="font-medium"
                     theme="list-style-01"
-                    data={ListDataCorePlatform}
+                    data={ListDataPortal}
                   />
                 </m.div>
               </m.div>
@@ -358,7 +357,7 @@ const ProductPortal = (props) => {
             <Row className="justify-center items-center">
               <Col xl={5} lg={{ span: 6, order: 2 }} className="font-medium text-darkgray font-serif pb-[100px] ml-[97px] lg:ml-[0px] md:text-center md:pb-24">
                 <span className="mb-[35px] text-lg -tracking-[.5px] inline-block relative whitespace-nowrap border-b border-solid border-darkgray md:text-xmd">Ready to see where PoolInsure AMS can take you?</span>
-                <h4 className="-tracking-[1px] mb-[45px] xs:w-[99%]">Shedule a <span className="font-semibold">Demo</span><span className = "-tracking-[1px] mb-[45px] xs:w-[99%]"> and get a Free Quote! </span></h4>
+                <h4 className="-tracking-[1px] mb-[45px] xs:w-[99%]">GET<span className="font-semibold"> STARTED</span><span className = "-tracking-[1px] mb-[45px] xs:w-[99%]"> NOW</span></h4>
                 <Buttons ariaLabel="button link" href="/contact" className="font-medium font-serif uppercase btn-expand" size="lg" color="#fff" themeColor="#902CFC" title="Schedule Demo" />
               </Col>
               <Col xl={{ offset: 1, span: 5 }} lg={{ span: 5, order: 1 }} className="p-[0px] xs:px-[15px]">

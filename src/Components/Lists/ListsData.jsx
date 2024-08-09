@@ -64,6 +64,44 @@ const ListDataCorePlatform = [
     },
 ]
 
+const ListDataPortal = [
+    {
+        icon: "feather-check",
+        content: "Member Data Entry",
+    },
+    {
+        icon: "feather-check",
+        content: "Transparent Record Keeping",
+    },
+    {
+        icon: "feather-check",
+        content: "Optimized Calculations ",
+    },
+    {
+        icon: "feather-check",
+        content: "Streamlined Member Access",
+    },
+]
+
+const ListDataIntegrations = [
+    {
+        icon: "feather-check",
+        content: "Enhances operational efficiency",
+    },
+    {
+        icon: "feather-check",
+        content: "Supports secure data collaboration",
+    },
+    {
+        icon: "feather-check",
+        content: "Scales with business growth",
+    },
+    {
+        icon: "feather-check",
+        content: "Streamlines workflow automation",
+    },
+]
+
 const ListData04 = [
     {
         content: "Do I need a regular license or an extended license",
@@ -305,5 +343,7 @@ export {
     DataFormats,
     CloudAndDataDatabase,
     ORM,
-    Frameworks
+    Frameworks,
+    ListDataPortal,
+    ListDataIntegrations,
 }

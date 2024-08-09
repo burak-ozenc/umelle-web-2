@@ -882,8 +882,8 @@ const TabData07 = [
         title: 'MEMBER PORTAL',
         subtitle: "A Comprehensive Member Portal",
         img: "https://via.placeholder.com/456x481",
-        buttonTitle: "Learn More",
-        buttonLink: "/page/our-services",
+        buttonTitle: "Schedule Demo",
+        buttonLink: "/contact",
         tabicons: "",
     },
     {
@@ -903,8 +903,8 @@ const TabData07 = [
         title: 'SECURITY',
         subtitle: "Comprehensive Protection For Your Data",
         img: "https://via.placeholder.com/456x481",
-        buttonTitle: "Learn More",
-        buttonLink: "/page/our-services",
+        buttonTitle: "Schedule Demo",
+        buttonLink: "/contact",
         tabicons: "",
     },
     {
@@ -929,8 +929,8 @@ const TabData07 = [
         title: 'RELIABILITY',
         subtitle: "Flexibility, Reliability, and Scalability ",
         img: "https://via.placeholder.com/456x481",
-        buttonTitle: "Learn More",
-        buttonLink: "/page/our-services",
+        buttonTitle: "Schedule Demo",
+        buttonLink: "/contact",
         tabicons: "",
     },
     {
@@ -955,8 +955,8 @@ const TabData07 = [
         title: 'SUPPORT',
         subtitle: "Reliable AI-Assisted Support & Training",
         img: "https://via.placeholder.com/456x481",
-        buttonTitle: "Learn More",
-        buttonLink: "/page/our-services",
+        buttonTitle: "Schedule Demo",
+        buttonLink: "/contact",
         tabicons: "",
     }
 ]

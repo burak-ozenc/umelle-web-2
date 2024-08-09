@@ -174,8 +174,8 @@ const CorePlatform = (props) => {
               <span className="text-xmd font-serif font-medium uppercase text-[#8bb867] block mb-[35px] xs:mb-[15px]">
               DATA MANAGEMENT MADE EASY 
               </span>
-              <h1 className="font-serif font-bold text-[#2f2f2f] uppercase mb-[2.5rem] tracking-[-2px] sm:mb-[20px] xs:mb-[15px]">
-              UNIFIED PLATFORM FOR END-TO-END INSURANCE DATA MANAGEMENT 
+              <h1 className="font-serif font-bold text-[#2f2f2f] uppercase mb-[2.5rem] tracking-[-5px] sm:mb-[20px] xs:mb-[15px]">
+              UNIFIED INSURANCE DATA MANAGEMENT 
               </h1>
               <p className="text-xmd leading-[30px] w-[73%] mb-12 lg:w-[90%] md:w-full xs:mb-[15px]">
               Manage and access large, complicated data sets, while easily navigating native and third-party data integrations.
@@ -330,7 +330,7 @@ const CorePlatform = (props) => {
                     color="#232323"
                     className="font-semibold animated-text-black"
                     animation="slide"
-                    data={["COMPREHENSIVE INSURANCE SYSTEM MANAGEMENT", "ADVANCED DATA MANAGEMENT CAPABILITIES", "END-TO-END OPERATIONAL EFFICIENCY"]}
+                    data={["INSURANCE MANAGEMENT", "DATA CAPABILITIES", "OPERATIONAL EFFICIENCY "]}
                   />
                 </h2>
                 <p className="w-[90%] mb-[30px] xs:w-full">
@@ -358,7 +358,7 @@ const CorePlatform = (props) => {
             <Row className="justify-center items-center">
               <Col xl={5} lg={{ span: 6, order: 2 }} className="font-medium text-darkgray font-serif pb-[100px] ml-[97px] lg:ml-[0px] md:text-center md:pb-24">
                 <span className="mb-[35px] text-lg -tracking-[.5px] inline-block relative whitespace-nowrap border-b border-solid border-darkgray md:text-xmd">Ready to see where PoolInsure AMS can take you?</span>
-                <h4 className="-tracking-[1px] mb-[45px] xs:w-[99%]">Shedule a <span className="font-semibold">Demo</span><span className = "-tracking-[1px] mb-[45px] xs:w-[99%]"> and get a Free Quote! </span></h4>
+                <h4 className="-tracking-[1px] mb-[45px] xs:w-[99%]">GET<span className="font-semibold"> STARTED</span><span className = "-tracking-[1px] mb-[45px] xs:w-[99%]"> NOW</span></h4>
                 <Buttons ariaLabel="button link" href="/contact" className="font-medium font-serif uppercase btn-expand" size="lg" color="#fff" themeColor="#902CFC" title="Schedule Demo" />
               </Col>
               <Col xl={{ offset: 1, span: 5 }} lg={{ span: 5, order: 1 }} className="p-[0px] xs:px-[15px]">

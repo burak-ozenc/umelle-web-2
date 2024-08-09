@@ -153,7 +153,7 @@ const HomeStartupPage = (props) => {
               DEDICATED SOFTWARE FOR POOLED INSURERS
               </h1>
               <p className="text-xmd leading-[30px] w-[73%] mb-12 lg:w-[90%] md:w-full xs:mb-[15px]">
-              Maximize efficiency and productivity with software that understands your industry.
+              Unified platform for end-to-end insurance data management.
               </p>
               <Link to = "/contact" offset={0} delay={0} spy={true} smooth={true} duration={800} className="cursor-pointer">
               <Buttons ariaLabel="button"
@@ -191,7 +191,7 @@ const HomeStartupPage = (props) => {
                     <Row className="row-cols-1 justify-center">
                         <Col xl={8} lg={10} className="text-center">
                             <div className="w-[40px] h-[2px] bg-gradient-to-tr from-[#ff6557] via-[#ff4271] to-[#ff367c] transform rotate-90 my-[30px] inline-block"></div>
-                            <h3 className="font-serif font-medium text-darkgray -tracking-[1px]">Tailor-made for <span className="text-gradient bg-gradient-to-tr from-[#ff6052] to-[#ff367c] font-semibold">Pooled Insurance Data Management</span></h3>
+                            <h3 className="font-serif font-medium text-darkgray -tracking-[1px]">PoolInsure AMS aligns with your <span className="text-gradient bg-gradient-to-tr from-[#ff6052] to-[#ff367c] font-semibold">needs and challenges</span></h3>
                         </Col>
                     </Row>
                 </Container>
@@ -234,8 +234,8 @@ const HomeStartupPage = (props) => {
                             <p className="w-[70%] mb-[40px] lg:w-[90%] md:mb-[45px] xs:mb-[25px]">No unnecessary expense. No hidden costs. Our pricing plans are designed to get you up and running fast.  </p>
                             <Lists theme="list-style-01" data={ListData02} />
                             <div className="mt-[50px] md:mt-[25px] xs:mt-[35px] landscape:md:mt-[40px]">
-                                <Buttons to="/page/about-us" className="mr-[35px] btn-fill btn-fancy rounded-none font-medium font-serif uppercase md:mb-[15px] xs:mb-0" themeColor="#232323" color="#fff" size="sm" title="About company" />
-                                <Buttons to="/page/what-we-offer" className="font-medium pt-0 font-serif uppercase btn-link after:h-[2px] md:text-md md:mb-[15px] after:bg-darkgray hover:text-darkgray xs:mb-0" size="xl" color="#232323" title="Discover tour" />
+                                <Buttons to="/contact" className="mr-[35px] btn-fill btn-fancy rounded-none font-medium font-serif uppercase md:mb-[15px] xs:mb-0" themeColor="#232323" color="#fff" size="sm" title="REQUEST PRICING" />
+                                <Buttons to="/contact" className="font-medium pt-0 font-serif uppercase btn-link after:h-[2px] md:text-md md:mb-[15px] after:bg-darkgray hover:text-darkgray xs:mb-0" size="xl" color="#232323" title="REQUEST DEMO" />
                             </div>
                         </m.div>
                         <m.div className="col-lg-5 offset-lg-1 col-md-10" {...fadeIn}>
@@ -268,7 +268,7 @@ const HomeStartupPage = (props) => {
             <Row className="justify-center items-center">
               <Col xl={5} lg={{ span: 6, order: 2 }} className="font-medium text-darkgray font-serif pb-[100px] ml-[97px] lg:ml-[0px] md:text-center md:pb-24">
                 <span className="mb-[35px] text-lg -tracking-[.5px] inline-block relative whitespace-nowrap border-b border-solid border-darkgray md:text-xmd">Ready to see where PoolInsure AMS can take you?</span>
-                <h4 className="-tracking-[1px] mb-[45px] xs:w-[99%]">Shedule a <span className="font-semibold">Demo</span><span className = "-tracking-[1px] mb-[45px] xs:w-[99%]"> and get a Free Quote! </span></h4>
+                <h4 className="-tracking-[1px] mb-[45px] xs:w-[99%]">GET<span className="font-semibold"> STARTED</span><span className = "-tracking-[1px] mb-[45px] xs:w-[99%]"> NOW</span></h4>
                 <Buttons ariaLabel="button link" href="/contact" className="font-medium font-serif uppercase btn-expand" size="lg" color="#fff" themeColor="#902CFC" title="Schedule Demo" />
               </Col>
               <Col xl={{ offset: 1, span: 5 }} lg={{ span: 5, order: 1 }} className="p-[0px] xs:px-[15px]">

@@ -3,17 +3,22 @@ import React, {lazy, useEffect} from 'react'
 // Libraries
 import {Link} from 'react-router-dom';
 import {Col, Container, Navbar, Row,} from "react-bootstrap";
-import {m} from 'framer-motion';
+import {m, AnimatePresence} from 'framer-motion';
 
 // Functions
 import {fadeIn, fadeInLeft} from '../../../Functions/GlobalAnimations';
+import { sendEmail, resetForm } from '../../../Functions/Utilities';
+import { Input } from '../../../Components/Form/Form';
+import {ContactFormStyle02Schema} from '../../../Components/Form/FormSchema';
 
 // Components
 import {analyticsEvent} from "../../../Functions/Utilities";
 import FooterMenu, {Footer} from '../../../Components/Footers/Footer';
 import InViewPort from '../../../Components/InViewPort';
-import Lists from '../../../Components/Lists/Lists';
+import { Formik, Form } from 'formik';
+import MessageBox from '../../../Components/MessageBox/MessageBox';
 import Accordion from '../../../Components/Accordion/Accordion';
+import FancyTextBox from '../../../Components/FancyTextBox/FancyTextBox';
 
 // Data
 import FooterData from '../../../Components/Footers/FooterData';
@@ -21,7 +26,7 @@ import Buttons from "../../../Components/Button/Buttons";
 import {AccordionData} from "../../../Components/Accordion/AccordionData";
 import SEO from "../../../Components/Umelle/SEO";
 // import productImage from "../../../Assets/img/umelle/UIMS_P.png";
-import { ListData01} from '../../../Components/Lists/ListsData';
+import { fancyTextBox07 } from '../../../Components/FancyTextBox/FancyTextBoxData';
 
 const Header = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Header})))
 const HeaderNav = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.HeaderNav})))
@@ -86,53 +91,54 @@ const ProductPricing = (props) => {
         {/* Lazy Load HTML */}
         <InViewPort>
         {/* Section Start */}
-        <section
-          className="bg-no-repeat bg-cover overflow-hidden relative bg-center border-mediumgray py-[130px] lg:py-[90px] md:py-[75px] sm:py-[50px] xs:py-0 xs:border-y"
-          style={{
-            backgroundImage: `url('https://via.placeholder.com/1920x857')`,
-          }}
-        >
-          <Container className="xs:px-0">
-            <Row className="justify-end md:justify-center xs:gx-0">
-              <m.div
-                className="col col-xl-6 col-lg-7 col-md-9 col-sm-11"
-                {...fadeIn}
-              >
-                <div className="w-full bg-white py-[6rem] px-[7rem] xs:px-[4rem] xs:py-[6rem] box-shadow-large">
-                  <m.h2 className="heading-5 font-serif text-[#2f2f2f] font-bold uppercase tracking-[-1px] mb-[45px]" {...{ ...fadeIn, transition: { delay: 0.3 } }}>
-                    Litho specializes in insurance policy
-                  </m.h2>
-                  <Lists
-                    theme="list-style-07"
-                    data={ListData01}
-                    animation={fadeIn}
-                    animationDelay={0.5}
-                  />
-                  <m.div className="mt-[20px] inline-block xs:text-center" {...{ ...fadeIn, transition: { delay: 0.7 } }}>
-                    <Buttons
-                      aria-label="about company"
-                      to="/page/about-us"
-                      className="btn-fill btn-fancy rounded-none font-medium font-serif tracking-[1px] uppercase mr-[35px] xs:mt-0 xs:mb-[20px] xs:mx-[40px]"
-                      themeColor="#232323"
-                      color="#fff"
-                      size="sm"
-                      title="About company"
-                    />
-                    <Buttons
-                      aria-label="company button"
-                      to="/"
-                      className="font-medium font-serif uppercase btn-link after:h-[2px] md:text-md md:mb-[15px] after:bg-darkgray hover:text-darkgray top-[-5px]"
-                      color="#232323"
-                      title="Discover tour"
-                      size="xl"
-                    />
-                  </m.div>
-                </div>
-              </m.div>
-            </Row>
-          </Container>
-        </section>
+        <m.section className="py-[160px] bg-cover	bg-no-repeat overflow-hidden relative bg-center lg:py-[120px] md:py-[95px] xs:py-[80px] xxs:py-[50px]" style={{ backgroundImage: "url('https://via.placeholder.com/1920x857')" }} {...fadeIn}>
+        <Container className="xs:px-0">
+          <Row className="justify-end md:justify-center">
+            <Col xl={7} lg={7} md={9} sm={11}>
+              <div className="px-[7rem] py-[5rem] rounded-md shadow-[0_0_30px_rgb(0,0,0,0.08)] bg-white sm:p-20 xs:rounded-none xs:px-[3.5rem] xs:py-[6rem]">
+                <span className="mb-[15px] font-medium text-center text-[#8bb867] text-md font-serif uppercase block sm:mb-[10px]">REQUEST PRICING </span>
+                <h5 className="w-[80%] mb-[40px] font-bold text-center	tracking-[-1px] text-black font-serif uppercase mx-auto xs:w-full">OUR EXPERTS WILL GET IN TOUCH WITH YOU </h5>
+                <Formik
+                  initialValues={{ name: '', email: '' }}
+                  validationSchema={ContactFormStyle02Schema}
+                  onSubmit={async (values, actions) => {
+                    actions.setSubmitting(true)
+                    const response = await sendEmail(values)
+                    response.status === "success" && resetForm(actions)
+                  }}
+                >
+                  {({ isSubmitting, status }) => (
+                    <Form className="mb-[30px]">
+                      <Input showErrorMsg={false} type="text" name="name" labelClass="mb-[25px]" className="rounded-[5px] text-md py-[15px] px-[20px] w-full border-[1px] border-solid border-[#dfdfdf]" placeholder="Your name" />
+                      <Input showErrorMsg={false} type="email" name="email" labelClass="mb-[25px]" className="rounded-[5px] text-md py-[15px] px-[20px] w-full border-[1px] border-solid border-[#dfdfdf]" placeholder="Your email address" />
+                      <Buttons ariaLabel="form button" type="submit" className={`btn-fill text-sm leading-none font-medium tracking-[1px] py-[13px] px-[32px] rounded-[4px] w-full uppercase mb-[5px]${isSubmitting ? " loading" : ""}`} themeColor="#8bb867" color="#fff" size="lg" title="Request a call schedule" />
+                      <AnimatePresence>
+                        {status && <m.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}><MessageBox className="mt-[20px] text-center py-[10px]" theme="message-box01" variant="success" message="Your message has been sent successfully!" /></m.div>}
+                      </AnimatePresence>
+                    </Form>
+                  )}
+                </Formik>
+                <p className="w-[80%] text-xs leading-6 mx-auto xs:w-full text-center">We are committed to protecting your privacy. We will never collect information about you without your explicit consent.</p>
+              </div>
+            </Col>
+          </Row>
+        </Container>
+      </m.section>
         {/* Section End*/}
+
+        {/* Section Start */}
+      <m.section {...fadeIn}>
+        <Container fluid className="px-0">
+          <FancyTextBox
+            grid="row-cols-1 row-cols-xl-6 row-cols-md-3 row-cols-sm-2 gx-0"
+            theme="fancy-text-box-01"
+            data={fancyTextBox07}
+            themeColor="light"
+            animation={fadeIn}
+          />
+        </Container>
+      </m.section>
+      {/* Section End */}
 
         {/* Section Start */}
         <section className="py-[160px] overflow-hidden lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px]">
@@ -143,13 +149,18 @@ const ProductPricing = (props) => {
                 {...fadeIn}
               >
                 <h2 className="heading-5 font-serif text-[#2f2f2f] font-bold uppercase tracking-[-1px]">
-                  What is business annual conference
+                PRICING MODEL
                 </h2>
-                <blockquote className="border-l-[4px] text-darkgray font-medium border-[#8bb867] text-xmd pl-[25px] pr-0 mt-[40px] mb-[30px] lg:w-[95%]"> We work to ensure that your business prospers and brings you sufficient profit
+                <blockquote className="border-l-[4px] text-darkgray font-medium border-[#8bb867] text-xmd pl-[25px] pr-0 mt-[40px] mb-[30px] lg:w-[95%]"> Our pricing model is simple.
                 </blockquote>
-                <p className="w-[90%] mb-[25px] md:w-full">
-                  Lorem ipsum dolor sit consectetur adipiscing eiusmod tempor
-                  incididunt ut labore et dolore magna ut enim ad minim veniam.
+                <p className="w-[100%] mb-[5px] md:w-full">
+                1. Purchase the licenses and permissions you need  
+                </p>
+                <p className="w-[100%] mb-[5px] md:w-full">
+                2. Choose the support plan that best suits you  
+                </p>
+                <p className="w-[100%] mb-[5px] md:w-full">
+                3. A one-time payment for transition and transformation
                 </p>
                 <Buttons
                   to="/"
@@ -157,7 +168,7 @@ const ProductPricing = (props) => {
                   color="#232323"
                   size="sm"
                   themeColor="#232323"
-                  title="Discover litho"
+                  title="REQUEST PRICING"
                 />
               </m.div>
               <m.div
