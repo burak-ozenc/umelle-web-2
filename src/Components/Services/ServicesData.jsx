@@ -66,6 +66,23 @@ const serviceDataSupport = [
     },
 ]
 
+const serviceDataReporting = [
+    {
+        img: "https://via.placeholder.com/800x618",
+        icon: "fas fa-arrow-right",
+        title: "REPORTS",
+        content: "Gain access to our pre-built reports to get a quick overview of your business. Or, build custom reports to gain unique visibility and insight into your data.",
+        link: "services"
+    },
+    {
+        img: "https://via.placeholder.com/800x618",
+        icon: "fas fa-arrow-right",
+        title: "DASHBOARDS",
+        content: "Review all your metrics in one place with our interactive dashboards and dig deep into data points you want to investigate.",
+        link: "/services"
+    },
+]
+
 const serviceData2 = [
     {
         img: "https://via.placeholder.com/800x548",
@@ -271,4 +288,4 @@ const serviceData7 = [
     },
 ]
 
-export { serviceData1, serviceDataIntegrations, serviceDataSupport, serviceDataPortal, serviceData2, serviceData3, serviceData4, serviceData5, serviceData6, serviceData7 }
+export { serviceData1, serviceDataReporting, serviceDataIntegrations, serviceDataSupport, serviceDataPortal, serviceData2, serviceData3, serviceData4, serviceData5, serviceData6, serviceData7 }

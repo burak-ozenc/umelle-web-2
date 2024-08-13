@@ -146,7 +146,7 @@ const HomeStartupPage = (props) => {
         <Container className="relative">
           <Row className="items-center h-[100vh] md:h-[650px] sm:h-[450px]">
             <Col lg={5} md={6} sm={8}>
-              <span className="text-xmd font-serif font-medium uppercase text-[#8bb867] block mb-[35px] xs:mb-[15px]">
+              <span className="text-xmd font-serif font-medium uppercase text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC] block mb-[35px] xs:mb-[15px]">
               THE PERFECT FIT
               </span>
               <h1 className="font-serif font-bold text-[#2f2f2f] uppercase mb-[2.5rem] tracking-[-2px] sm:mb-[20px] xs:mb-[15px]">

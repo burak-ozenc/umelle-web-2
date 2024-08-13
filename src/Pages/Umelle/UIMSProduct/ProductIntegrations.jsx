@@ -171,7 +171,7 @@ const ProductIntegrations = (props) => {
         <Container className="relative">
           <Row className="items-center h-[100vh] md:h-[650px] sm:h-[450px]">
             <Col lg={5} md={6} sm={8}>
-              <span className="text-xmd font-serif font-medium uppercase text-[#8bb867] block mb-[35px] xs:mb-[15px]">
+              <span className="text-xmd font-serif font-medium uppercase text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC] block mb-[35px] xs:mb-[15px]">
               FAST AND RELIABLE 
               </span>
               <h1 className="font-serif font-bold text-[#2f2f2f] uppercase mb-[2.5rem] tracking-[-5px] sm:mb-[20px] xs:mb-[15px]">
@@ -221,7 +221,7 @@ const ProductIntegrations = (props) => {
           <Container>
             <Row className="items-center md:justify-center">
               <Col lg={4} md={8} className="md:text-center md:mb-24">
-                <span className="font-serif text-md text-[#8bb867] uppercase font-medium mb-[25px] inline-block sm:mb-[10px]">
+                <span className="font-serif text-md text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC] uppercase font-medium mb-[25px] inline-block sm:mb-[10px]">
                 THE PREMIUM CHOICE FOR POOLED INSURERS
                 </span>
                 <h2 className="heading-5 font-serif text-[#2f2f2f] font-bold uppercase tracking-[-1px] w-[80%] mb-[20px] lg:w-[90%] md:w-full">

@@ -102,6 +102,25 @@ const ListDataIntegrations = [
     },
 ]
 
+const ListDataReporting = [
+    {
+        icon: "feather-check",
+        content: "Adaptive Data Visualizations",
+    },
+    {
+        icon: "feather-check",
+        content: "Seamless Data Integration",
+    },
+    {
+        icon: "feather-check",
+        content: "Effortless Navigation",
+    },
+    {
+        icon: "feather-check",
+        content: "Enhanced Reporting",
+    },
+]
+
 const ListData04 = [
     {
         content: "Do I need a regular license or an extended license",
@@ -346,4 +365,5 @@ export {
     Frameworks,
     ListDataPortal,
     ListDataIntegrations,
+    ListDataReporting,
 }
