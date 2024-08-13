@@ -29,7 +29,7 @@ import {AccordionDataSolutions} from "../../../Components/Accordion/AccordionDat
 import SEO from "../../../Components/Umelle/SEO";
 import {Parallax} from 'react-scroll-parallax';
 // import productImage from "../../../Assets/img/umelle/UIMS_P.png";
-import { ListDataIntegrations} from '../../../Components/Lists/ListsData';
+import {ListDataIntegrations} from '../../../Components/Lists/ListsData';
 import {serviceDataIntegrations} from '../../../Components/Services/ServicesData';
 import { fancyTextBox07 } from '../../../Components/FancyTextBox/FancyTextBoxData';
 

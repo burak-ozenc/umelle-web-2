@@ -30,7 +30,7 @@ import SEO from "../../../Components/Umelle/SEO";
 import {Parallax} from 'react-scroll-parallax';
 // import productImage from "../../../Assets/img/umelle/UIMS_P.png";
 import { ListDataCorePlatform } from '../../../Components/Lists/ListsData';
-import {serviceData1} from '../../../Components/Services/ServicesData';
+import {serviceDataSupport} from '../../../Components/Services/ServicesData';
 import { fancyTextBox07 } from '../../../Components/FancyTextBox/FancyTextBoxData';
 
 const Header = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Header})))
@@ -172,13 +172,13 @@ const ProductSupport = (props) => {
           <Row className="items-center h-[100vh] md:h-[650px] sm:h-[450px]">
             <Col lg={5} md={6} sm={8}>
               <span className="text-xmd font-serif font-medium uppercase text-[#8bb867] block mb-[35px] xs:mb-[15px]">
-              DATA MANAGEMENT MADE EASY 
+              VALUE-DRIVEN 
               </span>
-              <h1 className="font-serif font-bold text-[#2f2f2f] uppercase mb-[2.5rem] tracking-[-2px] sm:mb-[20px] xs:mb-[15px]">
-              UNIFIED PLATFORM FOR END-TO-END INSURANCE DATA MANAGEMENT 
+              <h1 className="font-serif font-bold text-[#2f2f2f] uppercase mb-[2.5rem] tracking-[-5px] sm:mb-[20px] xs:mb-[15px]">
+              UNMATCHED SUPPORT 
               </h1>
               <p className="text-xmd leading-[30px] w-[73%] mb-12 lg:w-[90%] md:w-full xs:mb-[15px]">
-              Manage and access large, complicated data sets, while easily navigating native and third-party data integrations.
+              Ensure your insurance operations run smoothly with our commitment to minimizing downtime and providing rapid issue resolution.
               </p>
               <Link to = "/contact" offset={0} delay={0} spy={true} smooth={true} duration={800} className="cursor-pointer">
               <Buttons ariaLabel="button"
@@ -225,13 +225,12 @@ const ProductSupport = (props) => {
                 THE PREMIUM CHOICE FOR POOLED INSURERS
                 </span>
                 <h2 className="heading-5 font-serif text-[#2f2f2f] font-bold uppercase tracking-[-1px] w-[80%] mb-[20px] lg:w-[90%] md:w-full">
-                STREAMLINE OPERATIONS WITH OUR ALL-IN-ONE DATA INSURANCE PLATFORM 
+                VALUE-DRIVEN SUPPORT 
                 </h2>
                 <p className="w-[80%] mb-[35px] lg:w-full">
-                PoolInsure reduces time on manual data entry and spreadsheet imports, and allows 
-                to edit, correct and update data all in one place. Complete core operations such as 
-                Member Management, Property, Workers Compensation, and Liability natively, 
-                ensuring complete data integrity. 
+                Experience top-notch support with transparent and competitive pricing, 
+                offering high-quality assistance without compromising your budget, 
+                ensuring you get the best value for your investment. 
                 </p>
                 <Link to = "/contact" offset={0} delay={0} spy={true} smooth={true} duration={800} className="cursor-pointer">
               <Buttons ariaLabel="button"
@@ -245,7 +244,7 @@ const ProductSupport = (props) => {
                 <Services
                   grid="row-cols-1 row-cols-md-2 justify-center text-left gap-y-10 md:gap-y-[45px]"
                   theme="service-style-01"
-                  data={serviceData1}
+                  data={serviceDataSupport}
                   animation={fadeIn}
                   animationDelay={0.5}
                 />

@@ -1,3 +1,8 @@
+import memberPortal from '../../Assets/img/Product/Artboard 1.png';
+import Security from '../../Assets/img/Product/Artboard 2.png';
+import Reliability from '../../Assets/img/Product/Artboard 3.png';
+import Support from '../../Assets/img/Product/Artboard 4.png';
+
 const TabData01 = [
     {
         tabTitle: 'PLANNING',
@@ -881,7 +886,7 @@ const TabData07 = [
         ],
         title: 'MEMBER PORTAL',
         subtitle: "A Comprehensive Member Portal",
-        img: "https://via.placeholder.com/456x481",
+        img: memberPortal,
         buttonTitle: "Schedule Demo",
         buttonLink: "/contact",
         tabicons: "",
@@ -902,7 +907,7 @@ const TabData07 = [
         ],
         title: 'SECURITY',
         subtitle: "Comprehensive Protection For Your Data",
-        img: "https://via.placeholder.com/456x481",
+        img: Security,
         buttonTitle: "Schedule Demo",
         buttonLink: "/contact",
         tabicons: "",
@@ -928,7 +933,7 @@ const TabData07 = [
         ],
         title: 'RELIABILITY',
         subtitle: "Flexibility, Reliability, and Scalability ",
-        img: "https://via.placeholder.com/456x481",
+        img: Reliability,
         buttonTitle: "Schedule Demo",
         buttonLink: "/contact",
         tabicons: "",
@@ -954,7 +959,7 @@ const TabData07 = [
         ],
         title: 'SUPPORT',
         subtitle: "Reliable AI-Assisted Support & Training",
-        img: "https://via.placeholder.com/456x481",
+        img: Support,
         buttonTitle: "Schedule Demo",
         buttonLink: "/contact",
         tabicons: "",

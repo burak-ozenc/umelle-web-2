@@ -26,7 +26,7 @@ import Buttons from "../../../Components/Button/Buttons";
 import {AccordionDataSolutions} from "../../../Components/Accordion/AccordionData";
 import SEO from "../../../Components/Umelle/SEO";
 import {Parallax} from 'react-scroll-parallax';
-// import productImage from "../../../Assets/img/umelle/UIMS_P.png";
+import productImage from "../../../Assets/img/umelle/ProductPage_Overview-01.png";
 import FancyTextBox from "../../../Components/FancyTextBox/FancyTextBox";
 import {fancyTextBox07} from "../../../Components/FancyTextBox/FancyTextBoxData";
 import {TabData07} from "../../../Components/Tab/TabData";
@@ -140,7 +140,7 @@ const HomeStartupPage = (props) => {
           className="lg-no-parallax bg-cover absolute top-[0px] left-0 w-full h-[100vh] md:h-[90vh] sm:h-[500px]"
           translateY={[-40, 40]}
           style={{
-            backgroundImage: `url(/assets/img/SolutionsHeader_v1.webp)`,
+            backgroundImage: `url(${productImage})`,
           }}
         ></Parallax>
         <Container className="relative">

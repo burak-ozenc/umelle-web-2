@@ -49,6 +49,23 @@ const serviceDataIntegrations = [
     },
 ]
 
+const serviceDataSupport = [
+    {
+        img: "https://via.placeholder.com/800x618",
+        icon: "fas fa-arrow-right",
+        title: "UNINTERRUPTED PERFORMANCE",
+        content: "Our support team ensures rapid issue resolution and proactive monitoring, keeping your business running smoothly.",
+        link: "services"
+    },
+    {
+        img: "https://via.placeholder.com/800x618",
+        icon: "fas fa-arrow-right",
+        title: "24/7 EXPERT ASSISTANCE",
+        content: "Leverage our AI-powered support system for continuous access to essential information and expert guidance.",
+        link: "/services"
+    },
+]
+
 const serviceData2 = [
     {
         img: "https://via.placeholder.com/800x548",
@@ -254,4 +271,4 @@ const serviceData7 = [
     },
 ]
 
-export { serviceData1, serviceDataIntegrations, serviceDataPortal, serviceData2, serviceData3, serviceData4, serviceData5, serviceData6, serviceData7 }
+export { serviceData1, serviceDataIntegrations, serviceDataSupport, serviceDataPortal, serviceData2, serviceData3, serviceData4, serviceData5, serviceData6, serviceData7 }
