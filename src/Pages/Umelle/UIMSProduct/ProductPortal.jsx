@@ -304,7 +304,12 @@ const ProductPortal = (props) => {
                                   {item.number}
                                 </h2>
                               </div>
-                              <div className="overflow-hidden max-w-full pl-[40px] border-basecolor border-l-[2px] text-left xs:pl-[15px]">
+                              <div className="overflow-hidden max-w-full pl-[40px] border-basecolor border-l-[2px] text-left xs:pl-[15px]"
+                              style={{
+                                borderLeft: "2px solid transparent",
+                                borderImage: "linear-gradient(180deg, #3844F7, #902CFC) 1",
+                              }}
+                              >
                                 <span className="mb-[5px] font-medium text-darkgray text-xmd font-serif block">
                                   {item.title}
                                 </span>

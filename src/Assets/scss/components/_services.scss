@@ -49,8 +49,12 @@
   .service-style {
     background-color: #fff;
     padding: 3rem 3.5rem;
-    border-bottom: 4px solid;
-    border-color: var(--base-color);
+    border-bottom: 4px solid transparent; /* Set the border to transparent initially */
+    border-image: linear-gradient(90deg, #3844F7, #902CFC) 1; /* Apply gradient to the border */
+    border-image-slice: 1; /* Ensure the gradient is applied across the entire border */
+
+    //border-bottom: 4px solid; -old css
+    //border-color: var(--base-color); -old css
 
     @media (max-width:var(--sm)) {
       padding: 33px 39px;
