@@ -41,7 +41,7 @@ const Tab07 = (props) => {
                                                     <Col key={i} md={6} className='tab-data items-center landscape:px-[15px]'>
                                                         <div className="relative md:mb-[30px]">
                                                             {item.img && <img height={481} width={456} className="w-full ml-auto" src={item.img} alt="tab" />}
-                                                            {item.subtitle && <div className="bg-gradient-to-tr from-[#bf8c4c] to-[#445a58] text-white font-serif text-xlg w-[300px] absolute top-[60px] left-[-15px] py-12 px-14 lg:text-lg md:w-[250px] md:p-[24px] md:left-[-15px] md:leading-[26px]">{item.subtitle}</div>}
+                                                            {item.subtitle && <div className="bg-gradient-to-tr from-[#902CFC] to-[#3844F7] text-white font-serif text-xlg w-[300px] absolute top-[60px] left-[-15px] py-12 px-14 lg:text-lg md:w-[250px] md:p-[24px] md:left-[-15px] md:leading-[26px]">{item.subtitle}</div>}
                                                         </div>
                                                     </Col>
                                                     <Col className="content landscape:px-[15px]" lg={{ span: 5, offset: 1 }} md={6}>

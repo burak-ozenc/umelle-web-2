@@ -225,12 +225,13 @@ const HomeStartupPage = (props) => {
           </Container>
         </section>
         {/* Section End */}
+
         {/* About section Start */}
         <section className="py-[160px] overflow-hidden cover-background lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px]" style={{ backgroundImage: `url('/assets/img/webp/home-consulting-about-bg.webp')` }}>
                 <Container>
                     <Row className="items-center justify-center">
                         <m.div className="col-lg-6 col-md-10 md:mb-20 consulting-about" {...fadeIn}>
-                            <h2 className="heading-4 font-serif font-medium text-darkgray tracking-[-1px] mb-16 w-[80%] lg:w-[90%] md:mb-12 xs:mb-16 xs:w-full">Predictable <span className="text-[#bf8c4c] font-semibold text-decoration-line-bottom-thick">Pricing</span></h2>
+                            <h2 className="heading-4 font-serif font-medium text-darkgray tracking-[-1px] mb-16 w-[80%] lg:w-[90%] md:mb-12 xs:mb-16 xs:w-full">Predictable <span className="text-[#902CFC] font-semibold text-decoration-line-bottom-thick">Pricing</span></h2>
                             <p className="w-[70%] mb-[40px] lg:w-[90%] md:mb-[45px] xs:mb-[25px]">No unnecessary expense. No hidden costs. Our pricing plans are designed to get you up and running fast.  </p>
                             <Lists theme="list-style-01" data={ListData02} />
                             <div className="mt-[50px] md:mt-[25px] xs:mt-[35px] landscape:md:mt-[40px]">
@@ -246,7 +247,7 @@ const HomeStartupPage = (props) => {
                                 {/* Modal Component Start */}
                                 <CustomModal.Wrapper
                                     className="absolute top-0 items-center flex h-full left-[-50px] md:right-0 md:justify-center md:w-full md:left-0"
-                                    modalBtn={<Buttons ariaLabel="modal button" type="submit" className="btn-sonar border-0 shadow-[0_0_15px_rgba(0,0,0,0.1)]" themeColor="#fff" color="#bf8c4c" size="xxl" title={<i className="feather-play text-[35px]" />} />} >
+                                    modalBtn={<Buttons ariaLabel="modal button" type="submit" className="btn-sonar border-0 shadow-[0_0_15px_rgba(0,0,0,0.1)]" themeColor="#fff" color="#902CFC" size="xxl" title={<i className="feather-play text-[35px]" />} />} >
                                     <div className="w-[1020px] max-w-full relative rounded mx-auto">
                                         <div className="fit-video">
                                             <iframe width="100%" height="100%" className="shadow-[0_0_8px_rgba(0,0,0,0.06)]" controls src="https://www.youtube.com/embed/g0f_BRYJLJE?autoplay=1" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen ></iframe>

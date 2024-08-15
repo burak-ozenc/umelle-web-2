@@ -874,12 +874,12 @@ const TabData07 = [
         tabTitle: 'MEMBER PORTAL',
         featurebox: [
             {
-                icon: "line-icon-Bakelite text-[#bf8c4c] text-[50px]",
+                icon: "line-icon-Bakelite text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC] text-[50px]",
                 title: "Download essential documents",
                 content: "Easily access and customize essential documents including invoices, coverage certificates, reports, and more."
             },
             {
-                icon: "line-icon-Medal-2 text-[#bf8c4c] text-[50px]",
+                icon: "line-icon-Medal-2 text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC] text-[50px]",
                 title: "Efficient data entry",
                 content: "Input crucial data enabling precise estimates and calculations for more accurate invoicing."
             }
@@ -895,18 +895,18 @@ const TabData07 = [
         tabTitle: 'SECURITY',
         featurebox: [
             {
-                icon: "line-icon-Coins text-[#bf8c4c] text-[50px]",
+                icon: "line-icon-Coins text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC] text-[50px]",
                 title: "Robust security measures",
                 content: "Our comprehensive security framework ensures that your data remains protected."
             },
             {
-                icon: "line-icon-Coins-3 text-[#bf8c4c] text-[50px]",
+                icon: "line-icon-Coins-3 text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC] text-[50px]",
                 title: "Advanced security tools",
                 content: "We utilize Multi-Factor Authentication (MFA), cloud-native encryption, secure data storage, and advanced threat detection to safeguard your information from emerging threats."
             }
         ],
         title: 'SECURITY',
-        subtitle: "Comprehensive Protection For Your Data",
+        subtitle: "Comprehensive Data Protection",
         img: Security,
         buttonTitle: "Schedule Demo",
         buttonLink: "/contact",
@@ -916,17 +916,17 @@ const TabData07 = [
         tabTitle: 'RELIABILITY',
         featurebox: [
             {
-                icon: "line-icon-Archery-2 text-[#bf8c4c] text-[50px]",
+                icon: "line-icon-Archery-2 text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC] text-[50px]",
                 title: "Seamless flexibility",
                 content: "Our APIs and flexible infrastructure guarantee you retain essential functions seamlessly, ensuring a smooth, adaptable experience."
             },
             {
-                icon: "line-icon-Bar-Chart2 text-[#bf8c4c] text-[50px]",
+                icon: "line-icon-Bar-Chart2 text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC] text-[50px]",
                 title: "Unwavering reliability",
                 content: "We provide a robust and reliable infrastructure, creating a solid foundation that supports and enhances our adaptable technology."
             },
             {
-                icon: "line-icon-Bar-Chart2 text-[#bf8c4c] text-[50px]",
+                icon: "line-icon-Bar-Chart2 text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC] text-[50px]",
                 title: "Rapid scalability",
                 content: "Aligned with our agile infrastructure, our scalable framework enables swift development and deployment, accelerating your market entry and growth."
             }
@@ -942,17 +942,17 @@ const TabData07 = [
         tabTitle: 'SUPPORT',
         featurebox: [
             {
-                icon: "line-icon-Idea-5 text-[#bf8c4c] text-[50px]",
+                icon: "line-icon-Idea-5 text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC] text-[50px]",
                 title: "Enhanced access & expertise",
                 content: "Enjoy full access to key information, training, and support with our AI-assisted services, designed to boost your proficiency with our tools. "
             },
             {
-                icon: "line-icon-Globe text-[#bf8c4c] text-[50px]",
+                icon: "line-icon-Globe text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC] text-[50px]",
                 title: "Smart Support",
                 content: "Our AI assistanted support staff enhance your support experience by giving you access to 24/7 support."
             },
             {
-                icon: "line-icon-Globe text-[#bf8c4c] text-[50px]",
+                icon: "line-icon-Globe text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC] text-[50px]",
                 title: "AI-Enabled Navigation",
                 content: "Access AI-driven guidance to effortlessly explore and understand our client support documentation, enhancing your user experience and operational efficiency."
             }

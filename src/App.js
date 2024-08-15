@@ -135,29 +135,29 @@ function App() {
               <Suspense fallback={<></>}>
                 <Routes>
                   <Route path="/" element={<Navigate to="/home" replace />}/>
-                  <Route path="/home" element={<UmelleHome style={{ "--base-color": "#27ae60" }} />} />
-                  <Route path="/solutions" element={<UmelleSolutions style={{ "--base-color": "#27ae60" }} />} />
-                  <Route path="/services" element={<UmelleServices style={{ "--base-color": "#27ae60" }} />} />
-                  <Route path="/company" element={<UmelleCompany style={{ "--base-color": "#27ae60" }} />} />
-                  <Route path="/contact" element={<Contact style={{ "--base-color": "#27ae60" }} />} />
-                  <Route path="/coming-soon" element={<ComingSoon style={{ "--base-color": "#27ae60" }} />} />
-                  <Route path="/products" element={<UIMSProduct style={{ "--base-color": "#27ae60" }} />} />
-                  <Route path="/umelle-insurance" element={<UmelleInsurance style={{ "--base-color": "#27ae60" }} />} />
-                  <Route path="/aw-stg-landingp" element={<LandingPage style={{ "--base-color": "#27ae60" }} />} />
-                  <Route path="/contact-success-1" element={<ContactSuccess style={{ "--base-color": "#27ae60" }} />} />
-                  <Route path="/contact-success-2" element={<ContactSuccessCustom style={{ "--base-color": "#27ae60" }} />} />
-                  <Route path="/ai-and-machine-learning-solutions" element={<AISolutions style={{ "--base-color": "#27ae60" }} />} />
-                  <Route path="/custom-software-development" element={<CSDev style={{ "--base-color": "#27ae60" }} />} />
-                  <Route path="/api-development-and-integration" element={<APIDev style={{ "--base-color": "#27ae60" }} />} />
-                  <Route path="/business-intelligence-and-analytics" element={<BIA style={{ "--base-color": "#27ae60" }} />} />
-                  <Route path="/cloud-services" element={<CloudServices style={{ "--base-color": "#27ae60" }} />} />
-                  <Route path="/managed-it-services" element={<ManagedServices style={{ "--base-color": "#27ae60" }} />} />
-                  <Route path="/coreplatform" element={<CorePlatform style={{ "--base-color": "#27ae60" }} />} />
-                  <Route path="/uims-pricing" element={<ProductPricing style={{ "--base-color": "#27ae60" }} />} />
-                  <Route path="/productintegrations" element={<ProductIntegrations style={{ "--base-color": "#27ae60" }} />} />
-                  <Route path="/uims-support" element={<ProductSupport style={{ "--base-color": "#27ae60" }} />} />
-                  <Route path="/uims-portal" element={<ProductPortal style={{ "--base-color": "#27ae60" }} />} />
-                  <Route path="/uims-reporting" element={<ProductReporting style={{ "--base-color": "#27ae60" }} />} />
+                  <Route path="/home" element={<UmelleHome style={{ "--base-color": "#3844F7" }} />} />
+                  <Route path="/solutions" element={<UmelleSolutions style={{ "--base-color": "#3844F7" }} />} />
+                  <Route path="/services" element={<UmelleServices style={{ "--base-color": "#3844F7" }} />} />
+                  <Route path="/company" element={<UmelleCompany style={{ "--base-color": "#3844F7" }} />} />
+                  <Route path="/contact" element={<Contact style={{ "--base-color": "#3844F7" }} />} />
+                  <Route path="/coming-soon" element={<ComingSoon style={{ "--base-color": "#3844F7" }} />} />
+                  <Route path="/products" element={<UIMSProduct style={{ "--base-color": "#3844F7" }} />} />
+                  <Route path="/umelle-insurance" element={<UmelleInsurance style={{ "--base-color": "#3844F7" }} />} />
+                  <Route path="/aw-stg-landingp" element={<LandingPage style={{ "--base-color": "#3844F7" }} />} />
+                  <Route path="/contact-success-1" element={<ContactSuccess style={{ "--base-color": "#3844F7" }} />} />
+                  <Route path="/contact-success-2" element={<ContactSuccessCustom style={{ "--base-color": "#3844F7" }} />} />
+                  <Route path="/ai-and-machine-learning-solutions" element={<AISolutions style={{ "--base-color": "#3844F7" }} />} />
+                  <Route path="/custom-software-development" element={<CSDev style={{ "--base-color": "#3844F7" }} />} />
+                  <Route path="/api-development-and-integration" element={<APIDev style={{ "--base-color": "#3844F7" }} />} />
+                  <Route path="/business-intelligence-and-analytics" element={<BIA style={{ "--base-color": "#3844F7" }} />} />
+                  <Route path="/cloud-services" element={<CloudServices style={{ "--base-color": "#3844F7" }} />} />
+                  <Route path="/managed-it-services" element={<ManagedServices style={{ "--base-color": "#3844F7" }} />} />
+                  <Route path="/coreplatform" element={<CorePlatform style={{ "--base-color": "#3844F7" }} />} />
+                  <Route path="/uims-pricing" element={<ProductPricing style={{ "--base-color": "#3844F7" }} />} />
+                  <Route path="/productintegrations" element={<ProductIntegrations style={{ "--base-color": "#3844F7" }} />} />
+                  <Route path="/uims-support" element={<ProductSupport style={{ "--base-color": "#3844F7" }} />} />
+                  <Route path="/uims-portal" element={<ProductPortal style={{ "--base-color": "#3844F7" }} />} />
+                  <Route path="/uims-reporting" element={<ProductReporting style={{ "--base-color": "#3844F7" }} />} />
                 </Routes>
               </Suspense>
             </AnimatePresence>
