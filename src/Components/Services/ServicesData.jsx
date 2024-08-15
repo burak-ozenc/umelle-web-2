@@ -1,13 +1,28 @@
+import coreProductImage1 from '../../Assets/img/Product/coreplatform/Section2 Artboard 1.png';
+import coreProductImage2 from '../../Assets/img/Product/coreplatform/Section2 Artboard 2.png';
+
+import portalImage1 from '../../Assets/img/Product/portal/Section2 Artboard 1.png';
+import portalImage2 from '../../Assets/img/Product/portal/Section2 Artboard 2.png';
+
+import reportingImage1 from '../../Assets/img/Product/reporting/Section 2 Artboard1.png';
+import reportingImage2 from '../../Assets/img/Product/reporting/Section 2 Artboard2.png';
+
+import integrationImage1 from '../../Assets/img/Product/integrations/Section2 Artboard 1.png';
+import integrationImage2 from '../../Assets/img/Product/integrations/Section2 Artboard 2.png';
+
+import supportImage1 from '../../Assets/img/Product/support/Section2 Artboard 1.png';
+import supportImage2 from '../../Assets/img/Product/support/Section2 Artboard 2.png';
+
 const serviceData1 = [
     {
-        img: "https://via.placeholder.com/800x618",
+        img: coreProductImage1,
         icon: "fas fa-arrow-right",
         title: "MANAGE YOUR DATA",
         content: "Outside of our native operations, PoolInsure enables third-party data integration, making it flexible and reliable",
         link: "services"
     },
     {
-        img: "https://via.placeholder.com/800x618",
+        img: coreProductImage2,
         icon: "fas fa-arrow-right",
         title: "SIMPLIFY YOUR WORKFLOW ",
         content: "From Member Management to finance and operations—all within a single application for enhanced ease of use",
@@ -17,14 +32,14 @@ const serviceData1 = [
 
 const serviceDataPortal = [
     {
-        img: "https://via.placeholder.com/800x618",
+        img: portalImage1,
         icon: "fas fa-arrow-right",
         title: "CENTRALIZED DATA ACCESS",
         content: "Provide seamless access to all necessary documentation and records in one central location, enhancing operational efficiency for members.",
         link: "services"
     },
     {
-        img: "https://via.placeholder.com/800x618",
+        img: portalImage2,
         icon: "fas fa-arrow-right",
         title: "DOCUMENT MANAGEMENT",
         content: "Consolidate and distribute key documents, reducing manual handling and improving response times for member inquiries.",
@@ -34,14 +49,14 @@ const serviceDataPortal = [
 
 const serviceDataIntegrations = [
     {
-        img: "https://via.placeholder.com/800x618",
+        img: integrationImage1,
         icon: "fas fa-arrow-right",
         title: "THIRD-PARTY CONNECTIVITY",
         content: "Leverage our robust APIs and flexible infrastructure to integrate essential external data and applications effortlessly.",
         link: "services"
     },
     {
-        img: "https://via.placeholder.com/800x618",
+        img: integrationImage2,
         icon: "fas fa-arrow-right",
         title: "BUILT FOR GROWTH",
         content: "Our platform's scalable architecture is ready to grow with you, allowing for rapid development and deployment that matches your pace of expansion.",
@@ -51,14 +66,14 @@ const serviceDataIntegrations = [
 
 const serviceDataSupport = [
     {
-        img: "https://via.placeholder.com/800x618",
+        img: supportImage1,
         icon: "fas fa-arrow-right",
         title: "UNINTERRUPTED PERFORMANCE",
         content: "Our support team ensures rapid issue resolution and proactive monitoring, keeping your business running smoothly.",
         link: "services"
     },
     {
-        img: "https://via.placeholder.com/800x618",
+        img: supportImage2,
         icon: "fas fa-arrow-right",
         title: "24/7 EXPERT ASSISTANCE",
         content: "Leverage our AI-powered support system for continuous access to essential information and expert guidance.",
@@ -68,14 +83,14 @@ const serviceDataSupport = [
 
 const serviceDataReporting = [
     {
-        img: "https://via.placeholder.com/800x618",
+        img: reportingImage1,
         icon: "fas fa-arrow-right",
         title: "REPORTS",
         content: "Gain access to our pre-built reports to get a quick overview of your business. Or, build custom reports to gain unique visibility and insight into your data.",
         link: "services"
     },
     {
-        img: "https://via.placeholder.com/800x618",
+        img: reportingImage2,
         icon: "fas fa-arrow-right",
         title: "DASHBOARDS",
         content: "Review all your metrics in one place with our interactive dashboards and dig deep into data points you want to investigate.",

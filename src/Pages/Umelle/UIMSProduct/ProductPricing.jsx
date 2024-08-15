@@ -25,7 +25,8 @@ import FooterData from '../../../Components/Footers/FooterData';
 import Buttons from "../../../Components/Button/Buttons";
 import {AccordionData} from "../../../Components/Accordion/AccordionData";
 import SEO from "../../../Components/Umelle/SEO";
-// import productImage from "../../../Assets/img/umelle/UIMS_P.png";
+import pricingtitleImage from "../../../Assets/img/Product/pricing/ProductPricing_Header-01.png";
+import pricingSection2Image from '../../../Assets/img/Product/pricing/ProductPriCing_sECTION2-01.png';
 import { fancyTextBox07 } from '../../../Components/FancyTextBox/FancyTextBoxData';
 
 const Header = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Header})))
@@ -91,7 +92,7 @@ const ProductPricing = (props) => {
         {/* Lazy Load HTML */}
         <InViewPort>
         {/* Section Start */}
-        <m.section className="py-[160px] bg-cover	bg-no-repeat overflow-hidden relative bg-center lg:py-[120px] md:py-[95px] xs:py-[80px] xxs:py-[50px]" style={{ backgroundImage: "url('https://via.placeholder.com/1920x857')" }} {...fadeIn}>
+        <m.section className="py-[160px] bg-cover	bg-no-repeat overflow-hidden relative bg-center lg:py-[120px] md:py-[95px] xs:py-[80px] xxs:py-[50px]" style={{ backgroundImage: `url(${pricingtitleImage})` }} {...fadeIn}>
         <Container className="xs:px-0">
           <Row className="justify-end md:justify-center">
             <Col xl={7} lg={7} md={9} sm={11}>
@@ -182,7 +183,7 @@ const ProductPricing = (props) => {
                   height=""
                   width=""
                   alt="..."
-                  src="https://via.placeholder.com/800x496"
+                  src= {pricingSection2Image}
                 />
               </m.div>
             </Row>

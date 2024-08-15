@@ -92,12 +92,13 @@ const HomeStartupPage = (props) => {
 
     return (<div style={props.style}>
         {/*SEO Starts*/}
-        <SEO
-            title='Insurance and Operations Management for Pooled Insurance Providers'
-            description='Our custom architecture allows ultimate flexibility from superior member and user management to fully customizable features and functionalities.'
-            name='UMELLE'
-            type='article'/>
-        {/*SEO Ends*/}
+<SEO
+    title="Unified Data Management Software for Pooled Insurance Providers"
+    description="PoolInsure AMS offers an all-in-one data management solution specifically designed for pooled insurance providers. Enhance your operations with accurate data management, risk assessment, and streamlined claims processing."
+    name="UMELLE"
+    type="article"
+/>
+{/*SEO Ends*/}
 
         {/* Header Start */}
         <Header topSpace={{md: true}} type="reverse-scroll">
