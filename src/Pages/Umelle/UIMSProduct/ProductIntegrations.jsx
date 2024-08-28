@@ -47,24 +47,24 @@ const Footer_Data = [FooterData[0], FooterData[1], FooterData[4], FooterData[3]]
   const TestimonialsCarouselData = [
     {
       img: "https://via.placeholder.com/800x622",
-      title: "COMPREHENSIVE INSURANCE SYSTEM MANAGEMENT",
+      title: "API FLEXIBILITY",
       number: "01",
       content:
-        "Seamlessly integrate property, workers' compensation, and liability operations into a single, efficient platform.",
+        "Utilizes APIs that allow easy integration with a variety of third-party services and data sources.",
     },
     {
       img: "https://via.placeholder.com/800x622",
-      title: "ADVANCED DATA MANAGEMENT CAPABILITIES",
+      title: "SECURE DATA EXCHANGE",
       number: "02",
       content:
-        "Execute essential CRUD (Create, Read, Update, and Delete) operations with a history log , with specialized features for non-editable records.",
+        "Implements robust security protocols to ensure that all data exchanged between systems is protected against unauthorized access.",
     },
     {
       img: "https://via.placeholder.com/800x622",
-      title: "END-TO-END OPERATIONAL EFFICIENCY",
+      title: "SCALABLE INFRASTRUCTURE",
       number: "03",
       content:
-        "Streamline all insurance processes and data management in one unified application, saving time and enhancing client service.",
+        "Supports scaling up or down based on business needs without disrupting existing integrations or performance.",
     },
   ];
   

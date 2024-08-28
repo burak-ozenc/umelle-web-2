@@ -86,19 +86,19 @@ const ListDataPortal = [
 const ListDataIntegrations = [
     {
         icon: "feather-check",
-        content: "Enhances operational efficiency",
+        content: "Efficient Data Integration",
     },
     {
         icon: "feather-check",
-        content: "Supports secure data collaboration",
+        content: "Direct Data Entry",
     },
     {
         icon: "feather-check",
-        content: "Scales with business growth",
+        content: "Transparent Record Keeping",
     },
     {
         icon: "feather-check",
-        content: "Streamlines workflow automation",
+        content: "Simplified Premium Calculations",
     },
 ]
 

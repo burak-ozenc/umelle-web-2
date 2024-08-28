@@ -85,62 +85,6 @@ const HomeStartupPage = (props) => {
                 },
             );
     };
-    
-    
-    
-    // const sendEmail = (values) => {
-    //     emailjs
-    //         .send(process.env.REACT_APP_EMAIL_SERVICE_ID, process.env.REACT_APP_EMAIL_FEATURES_TEMPLATE_ID, values, {
-    //             publicKey: process.env.REACT_APP_EMAIL_PUBLIC_KEY,
-    //         })
-    //         .then(
-    //             () => {
-    //                 console.log('SUCCESS!');
-    //                 setSent(false)
-    //                 setMessage("We received your application. Thanks for submitting.")
-    //             },
-    //             (error) => {
-    //                 console.log('FAILED...', error);
-    //                 setSent(false)
-    //                 setMessage("An error occured while submitting. Please send email to admin@umelle.com")
-    //             },
-    //         );
-    // };
-
-    
-    
-        // const hashParts = window.location.hash.split('#');
-    // if (hashParts.length > 1) {
-    //     const hash = hashParts.slice(-1)[0];
-    //     console.log(hash)
-    // }    
-
-    // const scrollToAnchor = () => {
-    //     const hashParts = window.location.hash.split('#');
-    //     if (hashParts.length > 1) {
-    //         const hash = hashParts.slice(-1)[0];
-    //
-    //
-    //         function searchByKey(array, id) {
-    //             for (let i = 0; i < array.length; i++) {
-    //                 if (array[i].id === id) {
-    //                     return array[i].key;
-    //                 }
-    //             }
-    //             // Return null if id is not found
-    //             return 0;
-    //         }
-    //
-    //         console.log(hash)
-    //         console.log(searchByKey(AccordionDataSolutions, hash))
-    //         setAnchorKey(searchByKey(AccordionDataSolutions, hash))
-    //         // document.querySelector(`#${hash}`).scrollIntoView();
-    //     }
-    // };
-    //
-    // scrollToAnchor();
-    // window.onhashchange = scrollToAnchor;
-
 
     useEffect(() => {
         // Decode entities in the URL
@@ -299,41 +243,6 @@ const HomeStartupPage = (props) => {
 
         {/* Lazy Load HTML */}
         <InViewPort>
-
-            {/* Info Banner Style 07 */}
-            {/* <section className="bg-lightgray lg:py-[5px] md:py-[75px]  xs:py-[50px]">
-                <Container>
-                    <Row className="justify-center">
-                        <Col md={12} className="text-center mt-5 mb-[3%]">
-                            <h4 className="font-serif text-darkgray font-medium">Customization at Its Core</h4>
-                        </Col>
-                    </Row>
-                    <Row className="gx-0">
-                        <m.div className="col-12 col-lg-6 bg-cover bg-center md:h-[400px] m-auto justify-center m-3"
-                               style={{margin: '0px'}} {...{
-                            ...fadeIn,
-                            transition: {delay: 0.2}
-                        }} >
-                            <m.h5
-                                className="font-medium text-darkgray mb-[100px] lg:mb-[15px] font-serif xs:text-[30px] m-[100px]">
-                                Empowering Pooled Insurance with Tailor-Made Solutions
-                            </m.h5>
-                        </m.div>
-                        <m.div className="col-12 p-0 col-lg-6" {...{...fadeIn, transition: {delay: 0.36}}} >
-                            <m.div
-                                className="bg-gradient-to-r from-[#3844F7]  to-[#902CFC] px-20 py-16 lg:py-20 lg:px-16 md:p-20 text-white text-center">
-                                <h6 className="font-serif text-white font-medium mb-[40px]">
-                                    What truly sets our solution apart is our custom architecture. Recognizing that no
-                                    two insurance providers are the same, we offer the ultimate flexibility: you can add
-                                    features and functions based on your business needs and ensure your program fits
-                                    nicely with your business requirements.
-                                </h6>
-                            </m.div>
-                        </m.div>
-                    </Row>
-                </Container>
-            </section> */}
-            {/* Info Banner Style 07 */}
 
             {/* Section Start */}
         <section className="py-[55px] lg:py-[95px] md:py-[70px] sm:py-[50px] relative overflow-visible">
