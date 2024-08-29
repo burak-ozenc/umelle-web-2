@@ -266,7 +266,7 @@ const fancyTextBox05 = [
     const fancyTextBox07 = [
         {
             icon: {
-                class: "line-icon-Management text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC]"
+                class: "line-icon-Suitcase text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC]"
             },
             title: "CORE PLATFORM",
             // subTitle: "Easy installation theme",
@@ -276,7 +276,7 @@ const fancyTextBox05 = [
         },
         {
             icon: {
-                class: "line-icon-Speach-BubbleDialog text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC]"
+                class: "line-icon-Conference text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC]"
             },
             title: "PORTAL",
             description: "Learn More",
@@ -284,7 +284,7 @@ const fancyTextBox05 = [
         },
         {
             icon: {
-                class: "line-icon-Bar-Chart text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC]"
+                class: "line-icon-Monitor-Analytics text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC]"
             },
             title: "REPORTING",
             description: "Learn More",
@@ -292,7 +292,7 @@ const fancyTextBox05 = [
         },
         {
             icon: {
-                class: "line-icon-Folder-WithDocument text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC]"
+                class: "line-icon-Puzzle text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC]"
             },
             title: "INTEGRATIONS",
             description: "Learn More",
@@ -300,7 +300,7 @@ const fancyTextBox05 = [
         },
         {
             icon: {
-                class: "line-icon-Add-UserStar text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC]"
+                class: "line-icon-Umbrella-2 text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC]"
             },
             title: "SUPPORT",
             description: "Learn More",
@@ -308,7 +308,7 @@ const fancyTextBox05 = [
         },
         {
             icon: {
-                class: "line-icon-Financial text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC]"
+                class: "line-icon-Quill-2 text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC]"
             },
             title: "Pricing",
             description: "Learn More",

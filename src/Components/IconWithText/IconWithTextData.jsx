@@ -144,21 +144,21 @@ const IconWithTextData_06 = [
 
 const IconWithTextData_07 = [
     {
-        icon: "line-icon-Money-Bag text-[#3844F7]",
+        icon: "line-icon-Suitcase text-[#3844F7]",
         title: "CORE PLATFORM",
         content: "Seamlessly integrate complex insurance operations, enhancing efficiency and accuracy",
         linkTitle: "LEARN MORE",
         link: "/page/our-services"
     },
     {
-        icon: "line-icon-Talk-Man text-[#3844F7]",
+        icon: "line-icon-Conference text-[#3844F7]",
         title: "PORTAL",
         content: "Empower members with secure, direct access to essential data and tools",
         linkTitle: "LEARN MORE",
         link: "/page/our-services"
     },
     {
-        icon: "line-icon-Gear-2 text-[#3844F7]",
+        icon: "line-icon-Monitor-Analytics text-[#3844F7]",
         title: "REPORTING",
         content: "Access tailored, real-time reporting capabilities designed to meet your unique needs",
         linkTitle: "LEARN MORE",

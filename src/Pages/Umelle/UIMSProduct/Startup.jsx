@@ -32,6 +32,7 @@ import {fancyTextBox07} from "../../../Components/FancyTextBox/FancyTextBoxData"
 import {TabData07} from "../../../Components/Tab/TabData";
 import { IconWithTextData_07 } from '../../../Components/IconWithText/IconWithTextData';
 import { ListData02 } from '../../../Components/Lists/ListsData';
+import bannerbot1 from '../../../Assets/img/Product/banner-01.jpg';
 
 const Header = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Header})))
 const HeaderNav = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.HeaderNav})))
@@ -265,16 +266,16 @@ const HomeStartupPage = (props) => {
 
             {/* Section start */}
       <m.section className="pt-0 pb-[10%] px-[10%] xl:px-[3%] md:px-[30px] sm:px-0 xs:px-0" {...fadeIn}>
-        <div className="bg-gradient-to-tr from-[#f5bb8d] via-[#ffaea8] to-[#f3aaca] rounded-[5px] overflow-hidden pt-[126px] md:pt-[72px]">
+        <div className="bg-gradient-to-tr from-[#902CFC] via-[#3844F7] to-[#4423C4] rounded-[5px] overflow-hidden pt-[126px] md:pt-[72px]">
           <Container>
             <Row className="justify-center items-center">
-              <Col xl={5} lg={{ span: 6, order: 2 }} className="font-medium text-darkgray font-serif pb-[100px] ml-[97px] lg:ml-[0px] md:text-center md:pb-24">
-                <span className="mb-[35px] text-lg -tracking-[.5px] inline-block relative whitespace-nowrap border-b border-solid border-darkgray md:text-xmd">Ready to see where PoolInsure AMS can take you?</span>
-                <h4 className="-tracking-[1px] mb-[45px] xs:w-[99%]">GET<span className="font-semibold"> STARTED</span><span className = "-tracking-[1px] mb-[45px] xs:w-[99%]"> NOW</span></h4>
-                <Buttons ariaLabel="button link" href="/contact" className="font-medium font-serif uppercase btn-expand" size="lg" color="#fff" themeColor="#902CFC" title="Schedule Demo" />
+              <Col xl={5} lg={{ span: 6, order: 2 }} className="font-medium text-white font-serif pb-[100px] ml-[97px] lg:ml-[0px] md:text-center md:pb-24">
+                <span className="mb-[35px] text-lg -tracking-[.5px] inline-block relative whitespace-nowrap border-b border-solid border-white md:text-xmd">TAKE THE NEXT STEP TOWARDS SUCCESS</span>
+                <h4 className="-tracking-[1px] mb-[45px] xs:w-[99%]">READY TO SEE WHERE WE CAN TAKE YOU? </h4>
+                <Buttons ariaLabel="button link" href="/contact" className="font-medium font-serif uppercase btn-expand" size="lg" color="#fff" themeColor="#2cbafc" title="Schedule Demo" />
               </Col>
               <Col xl={{ offset: 1, span: 5 }} lg={{ span: 5, order: 1 }} className="p-[0px] xs:px-[15px]">
-                <img width="" height="" src='https://via.placeholder.com/406x506' alt="Our Team" className="md:mx-auto" />
+                <img width="" height="" src= {bannerbot1} alt="Our Team" className="md:mx-auto" />
               </Col>
             </Row>
           </Container>

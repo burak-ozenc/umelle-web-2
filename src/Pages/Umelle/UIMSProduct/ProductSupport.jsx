@@ -328,7 +328,7 @@ const ProductSupport = (props) => {
                 className="col-lg-5 col-md-9 offset-lg-1"
                 {...fadeInLeft}
               >
-                <h2 className="heading-4 mb-[40px] leading-[40px] font-semibold tracking-[-1px] text-darkgray font-serif xs:mb-[20px]">
+                <h2 className="heading-4 mb-[40px] leading-[40px] font-semibold tracking-[-2px] text-darkgray font-serif xs:mb-[20px]">
                   <span className="p-0 block">PoolInsure PROVIDES</span>
                   <TextAnime
                     duration={3000}
@@ -362,9 +362,9 @@ const ProductSupport = (props) => {
           <Container>
             <Row className="justify-center items-center">
               <Col xl={5} lg={{ span: 6, order: 2 }} className="font-medium text-white font-serif pb-[100px] ml-[97px] lg:ml-[0px] md:text-center md:pb-24">
-                <span className="mb-[35px] text-lg -tracking-[.5px] inline-block relative whitespace-nowrap border-b border-solid border-white md:text-xmd">LETS TALK</span>
+                <span className="mb-[35px] text-lg -tracking-[.5px] inline-block relative whitespace-nowrap border-b border-solid border-white md:text-xmd">TAKE THE NEXT STEP TOWARDS SUCCESS</span>
                 <h4 className="-tracking-[1px] mb-[45px] xs:w-[99%]">READY TO SEE WHERE WE CAN TAKE YOU? </h4>
-                <Buttons ariaLabel="button link" href="/contact" className="font-medium font-serif uppercase btn-expand" size="lg" color="#fff" themeColor="#902CFC" title="Schedule Demo" />
+                <Buttons ariaLabel="button link" href="/contact" className="font-medium font-serif uppercase btn-expand" size="lg" color="#fff" themeColor="#2cbafc" title="Schedule Demo" />
               </Col>
               <Col xl={{ offset: 1, span: 5 }} lg={{ span: 5, order: 1 }} className="p-[0px] xs:px-[15px]">
                 <img width="" height="" src= {bannerbot1} alt="Our Team" className="md:mx-auto" />
