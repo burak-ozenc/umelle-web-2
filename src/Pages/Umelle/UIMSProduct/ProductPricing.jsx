@@ -25,7 +25,7 @@ import FooterData from '../../../Components/Footers/FooterData';
 import Buttons from "../../../Components/Button/Buttons";
 import {AccordionData} from "../../../Components/Accordion/AccordionData";
 import SEO from "../../../Components/Umelle/SEO";
-import pricingtitleImage from "../../../Assets/img/Product/pricing/ProductPricing_Header-01.png";
+import pricingtitleImage from "../../../Assets/img/Product/pricing/PricingHeaderImg.png";
 import pricingSection2Image from '../../../Assets/img/Product/pricing/ProductPriCing_sECTION2-01.png';
 import { fancyTextBox07 } from '../../../Components/FancyTextBox/FancyTextBoxData';
 

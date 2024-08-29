@@ -20,8 +20,6 @@ import Services from '../../../Components/Services/Services';
 import { TextAnime } from '../../../Components/FancyText/FancyText';
 import FancyTextBox from '../../../Components/FancyTextBox/FancyTextBox';
 
-
-
 // Data
 import FooterData from '../../../Components/Footers/FooterData';
 import Buttons from "../../../Components/Button/Buttons";
@@ -31,6 +29,9 @@ import {Parallax} from 'react-scroll-parallax';
 import { ListDataCorePlatform } from '../../../Components/Lists/ListsData';
 import {serviceData1} from '../../../Components/Services/ServicesData';
 import { fancyTextBox07 } from '../../../Components/FancyTextBox/FancyTextBoxData';
+import cpimage1 from '../../../Assets/img/Product/coreplatform/COMPREHENSIVE INSURANCE SYSTEM MANAGEMENT.png';
+import cpimage2 from '../../../Assets/img/Product/coreplatform/ADVANCED DATA MANAGEMENT CAPABILITIES.png';
+import cpimage3 from '../../../Assets/img/Product/coreplatform/END-TO-END OPERATIONAL EFFICIENCY.png';
 
 const Header = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Header})))
 const HeaderNav = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.HeaderNav})))
@@ -45,21 +46,21 @@ const Footer_Data = [FooterData[0], FooterData[1], FooterData[4], FooterData[3]]
 
   const TestimonialsCarouselData = [
     {
-      img: "https://via.placeholder.com/800x622",
+      img: cpimage1,
       title: "COMPREHENSIVE INSURANCE SYSTEM MANAGEMENT",
       number: "01",
       content:
         "Seamlessly integrate property, workers' compensation, and liability operations into a single, efficient platform.",
     },
     {
-      img: "https://via.placeholder.com/800x622",
+      img: cpimage2,
       title: "ADVANCED DATA MANAGEMENT CAPABILITIES",
       number: "02",
       content:
         "Execute essential CRUD (Create, Read, Update, and Delete) operations with a history log , with specialized features for non-editable records.",
     },
     {
-      img: "https://via.placeholder.com/800x622",
+      img: cpimage3,
       title: "END-TO-END OPERATIONAL EFFICIENCY",
       number: "03",
       content:

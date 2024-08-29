@@ -20,18 +20,18 @@ import Services from '../../../Components/Services/Services';
 import { TextAnime } from '../../../Components/FancyText/FancyText';
 import FancyTextBox from '../../../Components/FancyTextBox/FancyTextBox';
 
-
-
 // Data
 import FooterData from '../../../Components/Footers/FooterData';
 import Buttons from "../../../Components/Button/Buttons";
 import {AccordionDataSolutions} from "../../../Components/Accordion/AccordionData";
 import SEO from "../../../Components/Umelle/SEO";
 import {Parallax} from 'react-scroll-parallax';
-// import productImage from "../../../Assets/img/umelle/UIMS_P.png";
 import {ListDataPortal} from '../../../Components/Lists/ListsData';
 import {serviceDataPortal} from '../../../Components/Services/ServicesData';
 import { fancyTextBox07 } from '../../../Components/FancyTextBox/FancyTextBoxData';
+import portalimage1 from "../../../Assets/img/Product/portal/MEMBER SELF-SERVICE INTERFACE.png";
+import portalimage2 from "../../../Assets/img/Product/portal/AUTOMATED DOCUMENT HANDLING.png";
+import portalimage3 from "../../../Assets/img/Product/portal/DATA ENTRY AND VALIDATION.png";
 
 const Header = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Header})))
 const HeaderNav = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.HeaderNav})))
@@ -46,21 +46,21 @@ const Footer_Data = [FooterData[0], FooterData[1], FooterData[4], FooterData[3]]
 
   const TestimonialsCarouselData = [
     {
-      img: "https://via.placeholder.com/800x622",
+      img: portalimage1,
       title: "MEMBER SELF-SERVICE INTERFACE",
       number: "01",
       content:
         "Reduce administrative workload and enhances member satisfaction by empowering users with control over their interactions.",
     },
     {
-      img: "https://via.placeholder.com/800x622",
+      img: portalimage2,
       title: "AUTOMATED DOCUMENT HANDLING",
       number: "02",
       content:
         "Ensure that documents are always up-to-date and available for all parties without manual intervention.",
     },
     {
-      img: "https://via.placeholder.com/800x622",
+      img: portalimage3,
       title: "DATA ENTRY AND VALIDATION",
       number: "03",
       content:

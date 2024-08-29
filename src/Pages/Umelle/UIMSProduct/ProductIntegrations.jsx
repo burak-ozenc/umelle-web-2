@@ -28,10 +28,13 @@ import Buttons from "../../../Components/Button/Buttons";
 import {AccordionDataSolutions} from "../../../Components/Accordion/AccordionData";
 import SEO from "../../../Components/Umelle/SEO";
 import {Parallax} from 'react-scroll-parallax';
-// import productImage from "../../../Assets/img/umelle/UIMS_P.png";
 import {ListDataIntegrations} from '../../../Components/Lists/ListsData';
 import {serviceDataIntegrations} from '../../../Components/Services/ServicesData';
 import { fancyTextBox07 } from '../../../Components/FancyTextBox/FancyTextBoxData';
+import intimage1 from "../../../Assets/img/Product/integrations/API FLEXIBILITY.png";
+import intimage2 from "../../../Assets/img/Product/integrations/SECURE DATA EXCHANGE.png";
+import intimage3 from "../../../Assets/img/Product/integrations/SCALABLE INFRASTRUCTURE.png";
+
 
 const Header = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Header})))
 const HeaderNav = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.HeaderNav})))
@@ -46,21 +49,21 @@ const Footer_Data = [FooterData[0], FooterData[1], FooterData[4], FooterData[3]]
 
   const TestimonialsCarouselData = [
     {
-      img: "https://via.placeholder.com/800x622",
+      img: intimage1,
       title: "API FLEXIBILITY",
       number: "01",
       content:
         "Utilizes APIs that allow easy integration with a variety of third-party services and data sources.",
     },
     {
-      img: "https://via.placeholder.com/800x622",
+      img: intimage2,
       title: "SECURE DATA EXCHANGE",
       number: "02",
       content:
         "Implements robust security protocols to ensure that all data exchanged between systems is protected against unauthorized access.",
     },
     {
-      img: "https://via.placeholder.com/800x622",
+      img: intimage3,
       title: "SCALABLE INFRASTRUCTURE",
       number: "03",
       content:

@@ -20,18 +20,18 @@ import Services from '../../../Components/Services/Services';
 import { TextAnime } from '../../../Components/FancyText/FancyText';
 import FancyTextBox from '../../../Components/FancyTextBox/FancyTextBox';
 
-
-
 // Data
 import FooterData from '../../../Components/Footers/FooterData';
 import Buttons from "../../../Components/Button/Buttons";
 import {AccordionDataSolutions} from "../../../Components/Accordion/AccordionData";
 import SEO from "../../../Components/Umelle/SEO";
 import {Parallax} from 'react-scroll-parallax';
-// import productImage from "../../../Assets/img/umelle/UIMS_P.png";
 import { ListDataReporting } from '../../../Components/Lists/ListsData';
 import {serviceDataReporting} from '../../../Components/Services/ServicesData';
 import { fancyTextBox07 } from '../../../Components/FancyTextBox/FancyTextBoxData';
+import reportingimage1 from "../../../Assets/img/Product/reporting/DYNAMIC REPORTING.png";
+import reportingimage2 from "../../../Assets/img/Product/reporting/INTERACTIVE DASHBOARDS.png";
+import reportingimage3 from "../../../Assets/img/Product/reporting/CUSTOMIZABLE INSIGHTS.png";
 
 const Header = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Header})))
 const HeaderNav = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.HeaderNav})))
@@ -46,21 +46,21 @@ const Footer_Data = [FooterData[0], FooterData[1], FooterData[4], FooterData[3]]
 
   const TestimonialsCarouselData = [
     {
-      img: "https://via.placeholder.com/800x622",
+      img: reportingimage1,
       title: "DYNAMIC REPORTING",
       number: "01",
       content:
         "Experience dynamic reporting that adapts to your business needs, delivering tailored insights for informed decision-making.",
     },
     {
-      img: "https://via.placeholder.com/800x622",
+      img: reportingimage2,
       title: "INTERACTIVE DASHBOARDS",
       number: "02",
       content:
         "Access interactive dashboards where data meets real-time analytics, making it easy to stay on top of critical metrics.",
     },
     {
-      img: "https://via.placeholder.com/800x622",
+      img: reportingimage3,
       title: "CUSTOMIZABLE INSIGHTS",
       number: "03",
       content:

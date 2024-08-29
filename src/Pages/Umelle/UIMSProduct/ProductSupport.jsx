@@ -20,18 +20,19 @@ import Services from '../../../Components/Services/Services';
 import { TextAnime } from '../../../Components/FancyText/FancyText';
 import FancyTextBox from '../../../Components/FancyTextBox/FancyTextBox';
 
-
-
 // Data
 import FooterData from '../../../Components/Footers/FooterData';
 import Buttons from "../../../Components/Button/Buttons";
 import {AccordionDataSolutions} from "../../../Components/Accordion/AccordionData";
 import SEO from "../../../Components/Umelle/SEO";
 import {Parallax} from 'react-scroll-parallax';
-// import productImage from "../../../Assets/img/umelle/UIMS_P.png";
 import { ListDataCorePlatform } from '../../../Components/Lists/ListsData';
 import {serviceDataSupport} from '../../../Components/Services/ServicesData';
 import { fancyTextBox07 } from '../../../Components/FancyTextBox/FancyTextBoxData';
+import supportimg1 from "../../../Assets/img/Product/support/COMPREHENSIVE INSURANCE SYSTEM MANAGEMENT.png";
+import supportimg2 from "../../../Assets/img/Product/support/ADVANCED DATA MANAGEMENT CAPABILITIES.png";
+import supportimg3 from "../../../Assets/img/Product/support/END-TO-END OPERATIONAL EFFICIENCY.png";
+import bannerbot1 from "../../../Assets/img/Product/banner-01.jpg";
 
 const Header = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Header})))
 const HeaderNav = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.HeaderNav})))
@@ -46,21 +47,21 @@ const Footer_Data = [FooterData[0], FooterData[1], FooterData[4], FooterData[3]]
 
   const TestimonialsCarouselData = [
     {
-      img: "https://via.placeholder.com/800x622",
+      img: supportimg1,
       title: "COMPREHENSIVE INSURANCE SYSTEM MANAGEMENT",
       number: "01",
       content:
         "Seamlessly integrate property, workers' compensation, and liability operations into a single, efficient platform.",
     },
     {
-      img: "https://via.placeholder.com/800x622",
+      img: supportimg2,
       title: "ADVANCED DATA MANAGEMENT CAPABILITIES",
       number: "02",
       content:
         "Execute essential CRUD (Create, Read, Update, and Delete) operations with a history log , with specialized features for non-editable records.",
     },
     {
-      img: "https://via.placeholder.com/800x622",
+      img: supportimg3,
       title: "END-TO-END OPERATIONAL EFFICIENCY",
       number: "03",
       content:
@@ -357,16 +358,16 @@ const ProductSupport = (props) => {
 
         {/* Section start */}
       <m.section className="pt-0 pb-[10%] px-[10%] xl:px-[3%] md:px-[30px] sm:px-0 xs:px-0" {...fadeIn}>
-        <div className="bg-gradient-to-tr from-[#f5bb8d] via-[#ffaea8] to-[#f3aaca] rounded-[5px] overflow-hidden pt-[126px] md:pt-[72px]">
+        <div className="bg-gradient-to-tr from-[#902CFC] via-[#3844F7] to-[#4423C4] rounded-[5px] overflow-hidden pt-[126px] md:pt-[72px]">
           <Container>
             <Row className="justify-center items-center">
-              <Col xl={5} lg={{ span: 6, order: 2 }} className="font-medium text-darkgray font-serif pb-[100px] ml-[97px] lg:ml-[0px] md:text-center md:pb-24">
-                <span className="mb-[35px] text-lg -tracking-[.5px] inline-block relative whitespace-nowrap border-b border-solid border-darkgray md:text-xmd">Ready to see where PoolInsure AMS can take you?</span>
-                <h4 className="-tracking-[1px] mb-[45px] xs:w-[99%]">Shedule a <span className="font-semibold">Demo</span><span className = "-tracking-[1px] mb-[45px] xs:w-[99%]"> and get a Free Quote! </span></h4>
+              <Col xl={5} lg={{ span: 6, order: 2 }} className="font-medium text-white font-serif pb-[100px] ml-[97px] lg:ml-[0px] md:text-center md:pb-24">
+                <span className="mb-[35px] text-lg -tracking-[.5px] inline-block relative whitespace-nowrap border-b border-solid border-white md:text-xmd">LETS TALK</span>
+                <h4 className="-tracking-[1px] mb-[45px] xs:w-[99%]">READY TO SEE WHERE WE CAN TAKE YOU? </h4>
                 <Buttons ariaLabel="button link" href="/contact" className="font-medium font-serif uppercase btn-expand" size="lg" color="#fff" themeColor="#902CFC" title="Schedule Demo" />
               </Col>
               <Col xl={{ offset: 1, span: 5 }} lg={{ span: 5, order: 1 }} className="p-[0px] xs:px-[15px]">
-                <img width="" height="" src='https://via.placeholder.com/406x506' alt="Our Team" className="md:mx-auto" />
+                <img width="" height="" src= {bannerbot1} alt="Our Team" className="md:mx-auto" />
               </Col>
             </Row>
           </Container>

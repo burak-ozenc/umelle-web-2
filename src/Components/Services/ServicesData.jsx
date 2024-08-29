@@ -1,7 +1,7 @@
 import coreProductImage1 from '../../Assets/img/Product/coreplatform/Section2 Artboard 1.png';
 import coreProductImage2 from '../../Assets/img/Product/coreplatform/Section2 Artboard 2.png';
 
-import portalImage1 from '../../Assets/img/Product/portal/Section2 Artboard 1.png';
+import portalImage1 from '../../Assets/img/Product/portal/CENTRALIZED DATA ACCESS.png';
 import portalImage2 from '../../Assets/img/Product/portal/Section2 Artboard 2.png';
 
 import reportingImage1 from '../../Assets/img/Product/reporting/Section 2 Artboard1.png';
