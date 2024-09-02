@@ -40,6 +40,7 @@ const ProductIntegrations = lazy(() => import("./Pages/Umelle/UIMSProduct/Produc
 const ProductSupport = lazy(() => import("./Pages/Umelle/UIMSProduct/ProductSupport"))
 const ProductPortal = lazy(() => import("./Pages/Umelle/UIMSProduct/ProductPortal"))
 const ProductReporting = lazy(() => import("./Pages/Umelle/UIMSProduct/ProductReporting"))
+const CustomSolution = lazy(() => import("./Pages/Umelle/CustomSolution/Startup"))
 
 function App() {
   const [headerHeight, setHeaderHeight] = useState(0);
@@ -158,6 +159,7 @@ function App() {
                   <Route path="/uims-support" element={<ProductSupport style={{ "--base-color": "#3844F7" }} />} />
                   <Route path="/uims-portal" element={<ProductPortal style={{ "--base-color": "#3844F7" }} />} />
                   <Route path="/uims-reporting" element={<ProductReporting style={{ "--base-color": "#3844F7" }} />} />
+                  <Route path="/custom-solution" element={<CustomSolution style={{ "--base-color": "#3844F7" }} />} />
                 </Routes>
               </Suspense>
             </AnimatePresence>

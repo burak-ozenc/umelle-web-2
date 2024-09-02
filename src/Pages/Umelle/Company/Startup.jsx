@@ -12,6 +12,8 @@ import {fadeIn} from '../../../Functions/GlobalAnimations';
 import { ScrollToAnchor} from "../../../Functions/Utilities";
 import FooterMenu, {Footer} from '../../../Components/Footers/Footer';
 import InViewPort from '../../../Components/InViewPort';
+import ProgressBar from "../../../Components/ProgressBar/ProgressBar";
+import {ProgressBarData02} from "../../../Components/ProgressBar/ProgressBarData";
 
 // Data
 import FooterData from '../../../Components/Footers/FooterData';
@@ -108,6 +110,28 @@ const HomeStartupPage = (props) => {
             </Container>
         </section>
         {/* Section End */}
+
+        {/* Section Start */}
+        <m.section
+                className="py-[55px] overflow-hidden lg:py-[90px] md:py-[75px] sm:py-[50px] bg-lightgray lg:px-0 md:px-0 sm:px-0 xs:px-0">
+                <Container>
+                    <h6 className="font-serif text-darkgray text-center font-medium mb-[60px] md:mb-[50px]">
+                        Customer Satisfaction
+                    </h6>
+                    <Row className="justify-center">
+                        <Col lg={6}>
+                            <ProgressBar
+                                theme="progressbar-style-02"
+                                className=""
+                                trailColor="#f7f7f7"
+                                height="8px"
+                                data={ProgressBarData02}
+                                color={["#3844F7", "#902CFC"]}/>
+                        </Col>
+                    </Row>
+                </Container>
+            </m.section>
+            {/* Section End */}
 
         {/* Section Start */}
         <m.section

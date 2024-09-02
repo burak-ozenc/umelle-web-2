@@ -1,19 +1,19 @@
-import React, {lazy, useEffect, useRef, useState} from 'react'
+import React, {lazy, useEffect, useState} from 'react'
 
 // Libraries
 import {Link} from 'react-router-dom';
-import {Accordion, Col, Container, Navbar, Row, Tab, Tabs} from "react-bootstrap";
-import {AnimatePresence, domMax, LazyMotion, m} from 'framer-motion';
-import {Form, Formik} from 'formik';
+import {Accordion, Col, Container, Navbar, Row} from "react-bootstrap";
+import {m} from 'framer-motion';
 
 // Functions
 import {fadeIn} from '../../../Functions/GlobalAnimations';
 
 // Components
-import {analyticsEvent, resetForm, ScrollToAnchor} from "../../../Functions/Utilities";
-import {Checkbox, Input} from '../../../Components/Form/Form'
+import {analyticsEvent, ScrollToAnchor} from "../../../Functions/Utilities";
 import FooterMenu, {Footer} from '../../../Components/Footers/Footer';
 import InViewPort from '../../../Components/InViewPort';
+import IconWithText from '../../../Components/IconWithText/IconWithText';
+import {IconWithTextData_13, IconWithTextData_12} from '../../../Components/IconWithText/IconWithTextData';
 
 // Data
 import FooterData from '../../../Components/Footers/FooterData';
@@ -22,12 +22,8 @@ import {CounterData05} from "../../../Components/Counters/CounterData";
 import Services from "../../../Components/Services/Services";
 import {serviceData5} from "../../../Components/Services/ServicesData";
 import {ProcessStepData02} from "../../../Components/ProcessStep/ProcessStepData";
-import AccordionSolutions from "../../../Components/Accordion/AccordionSolutions";
 import Buttons from "../../../Components/Button/Buttons";
-import {ContactFormStyle02Schema} from "../../../Components/Form/FormSchema";
-import ReCAPTCHA from "react-google-recaptcha";
 import {AccordionDataSolutions} from "../../../Components/Accordion/AccordionData";
-import * as emailjs from "@emailjs/browser";
 import SEO from "../../../Components/Umelle/SEO";
 import {Parallax} from 'react-scroll-parallax';
 
@@ -35,8 +31,8 @@ const Header = React.lazy(() => import("../../../Components/Header/Header").then
 const HeaderNav = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.HeaderNav})))
 const Menu = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Menu})))
 
+const StartupPageBannerSlider = lazy(() => import('../Home/StartupBanner'))
 const ProcessStep = lazy(() => import('../../../Components/ProcessStep/ProcessStep'))
-const MessageBox = lazy(() => import('../../../Components/MessageBox/MessageBox'))
 const SideButtons = lazy(() => import("../../../Components/SideButtons"))
 
 // Filter the blog data category wise
@@ -55,36 +51,13 @@ const HomeStartupPage = (props) => {
     //     }
     // }, [location]); // This ensures the tracking code runs every time the route changes
     ScrollToAnchor();
-    const form1 = useRef(null)
-    const recaptcha = useRef()
     const [anchorKey, setAnchorKey] = useState(0)
     // ScrollToAnchor();
-
-
-    const [sent, setSent] = useState(true)
-    const [message, setMessage] = useState('')
 
     useEffect(() => {
         analyticsEvent('page_view',null);
     },[])
 
-    const sendEmail = (values) => {
-        emailjs
-            .send(process.env.REACT_APP_EMAIL_SERVICE_ID, process.env.REACT_APP_EMAIL_FEATURES_TEMPLATE_ID, values, {
-                publicKey: process.env.REACT_APP_EMAIL_PUBLIC_KEY,
-            })
-            .then(
-                () => {
-                    console.log('SUCCESS!');
-                    window.location.href = process.env.REACT_APP_CONTACT_SUCCESS_2
-                },
-                (error) => {
-                    console.log('FAILED...', error);
-                    setSent(false)
-                    setMessage("An error occured while submitting. Please send email to admin@umelle.com")
-                },
-            );
-    };
 
     useEffect(() => {
         // Decode entities in the URL
@@ -164,9 +137,15 @@ const HomeStartupPage = (props) => {
         {/* Header End */}
 
         <SideButtons/>
+        
+        {/* Section Start */}
+        <StartupPageBannerSlider/>
+        {/* Section End */}
 
+        
+        
         {/* Section start */}
-        <section className="overflow-visible cover-background"
+        {/*<section className="overflow-visible cover-background"
                  style={{backgroundImage: `url(/assets/img/SolutionsHeader_v1.webp)`}}>
             <Container>
                 <LazyMotion strict features={domMax}>
@@ -199,9 +178,12 @@ const HomeStartupPage = (props) => {
                 </LazyMotion>
             </Container>
         </section>
+        */}
         {/* Section End */}
 
+        
         {/* Section Start */}
+        {/*
         <section className="bg-white pt-20 switch-tabs">
             <Col className="text-center">
                 <h6 className="font-serif text-darkgray text-center font-medium mb-[2%]">
@@ -218,7 +200,6 @@ const HomeStartupPage = (props) => {
                 className="justify-center"
                 style={{display: 'none'}}
             >
-                {/* Accordion style 03 ( Light ) start */}
                 <Tab eventKey="light" title="LIGHT">
                     <m.section className="py-20 white">
                         <Container>
@@ -229,17 +210,75 @@ const HomeStartupPage = (props) => {
                                                              activeKey={anchorKey}/>)
                                         :
                                         (<AccordionSolutions theme="accordion-style-03" animation={fadeIn}
-                                                             activeKey={9}/>)
+                                            activeKey={9}/>)
                                     }
                                 </Col>
                             </Row>
                         </Container>
                     </m.section>
                 </Tab>
-                {/* Accordion style 03 ( Light ) end */}
             </Tabs>
         </section>
         {/* Section End */}
+
+        {/* Section Start */}
+      <section className="py-[160px] overflow-hidden lg:py-[60px] md:py-[95px] sm:py-[80px] xs:py-[50px]">
+        <Container>
+          <Row className="justify-center">
+          <Col xl={{ span: 7, offset: 2 }} lg={8}>
+              <IconWithText grid="row-cols-1 row-cols-lg-2 row-cols-sm-2 gap-y-[40px]" theme="icon-with-text-01" data={IconWithTextData_12} animation={fadeIn} animationDelay={0.2} />
+            </Col>
+            <m.div className="col-xl-3 col-lg-4 col-sm-7 flex flex-col md:mb-24" {...{ ...fadeIn, transition: { delay: 0.2 } }}>
+              <div className="mb-[20px] md:text-center sm:mb-[10px]">
+                <span className="font-serif text-md uppercase font-medium text-gradient bg-gradient-to-r from-[#556fff] via-[#e05fc4] to-[#ff798e]">About company</span>
+              </div>
+              <h3 className="alt-font text-darkgray font-semibold mb-[20px] font-serif md:text-center md:mb-[30px] heading-5">Insurance Management</h3>
+              <div className="mt-auto mx-auto mx-lg-0">
+                <Buttons href="/" className="font-medium font-serif uppercase bg-[#fff] hover:bg-black rounded-none md:mb-[15px] text-xxs btn-fancy xs:mb-0" color="#000" size="sm" themeColor="#000" title="Discover litho" />
+              </div>
+            </m.div>    
+          </Row>
+        </Container>
+      </section>
+      {/* Section End */}
+
+      {/* Section start */}
+      <m.div className="relative overflow-hidden py-[130px] lg:py-[90px] md:py-[75px] sm:py-[50px] sm:px-[15px]" {...fadeIn}>
+        <Parallax className="lg-no-parallax bg-cover cover-background absolute top-[-30px] left-0 h-[100vh] lg:h-[64vh] lg:top-[-75px] lg:!translate-y-0 md:h-[60vh] md:-top-[30px] sm:top-0 sm:h-[56vh] xs:h-[50vh] w-full" translateY={[-40, 40]} style={{ backgroundImage: `url(https://via.placeholder.com/1920x1100)` }}></Parallax>
+        <div className="left-0 top-0 h-full w-full absolute bg-darkslateblue opacity-75"></div>
+        <Container className="relative">
+          <Row className="justify-center items-center">
+            <Col xl={7} md={8} sm={10} className="md:mb-[30px] sm:mb-[30px]">
+              <h4 className="font-serif font-semibold text-white mb-0 sm:text-center">Build your own Solution!</h4>
+            </Col>
+            <Col xl={5} md={4} className="md:flex md:justify-center text-end">
+              <Buttons ariaLabel="button" to="/custom-solution" className="font-medium font-serif uppercase rounded-none lg:mb-[15px] landscape:lg:mb-[15px]" themeColor={["#902cfc", "#4423c4"]} size="lg" color="#fff" title="Get Started" />
+            </Col>
+          </Row>
+        </Container>
+      </m.div>
+      {/* Section end */ }
+
+      {/* Section Start */}
+      <section className="py-[160px] overflow-hidden lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px]">
+        <Container>
+          <Row className="justify-center">
+            <m.div className="col-xl-3 col-lg-4 col-sm-7 flex flex-col md:mb-24" {...{ ...fadeIn, transition: { delay: 0.2 } }}>
+              <div className="mb-[20px] md:text-center sm:mb-[10px]">
+                <span className="font-serif text-md uppercase font-medium text-gradient bg-gradient-to-r from-[#556fff] via-[#e05fc4] to-[#ff798e]">About company</span>
+              </div>
+              <h3 className="alt-font text-darkgray font-semibold mb-[20px] font-serif md:text-center md:mb-[30px] heading-5">Operations Management</h3>
+              <div className="mt-auto mx-auto mx-lg-0">
+                <Buttons href="/" className="font-medium font-serif uppercase bg-[#fff] hover:bg-black rounded-none md:mb-[15px] text-xxs btn-fancy xs:mb-0" color="#000" size="sm" themeColor="#000" title="Discover litho" />
+              </div>
+            </m.div>
+            <Col xl={{ span: 7, offset: 2 }} lg={8}>
+              <IconWithText grid="row-cols-1 row-cols-lg-2 row-cols-sm-2 gap-y-[40px]" theme="icon-with-text-01" data={IconWithTextData_13} animation={fadeIn} animationDelay={0.2} />
+            </Col>
+          </Row>
+        </Container>
+      </section>
+      {/* Section End */}
 
         {/* Lazy Load HTML */}
         <InViewPort>
@@ -297,284 +336,6 @@ const HomeStartupPage = (props) => {
                 </Container>
             </m.section>
             {/* Section End */}
-
-            {/* Section Start */}
-            <section
-                className="py-[90px] lg:py-[120px] md:py-[80px] xs:py-[50px] bg-transparent cover-background relative cover-background" {...fadeIn}
-                style={{backgroundImage: `url(/assets/img/CheckBox4-01.webp)`}}
-            >
-                {sent ?
-                    (<Container>
-                        <Row>
-                            <Col className='mb-[6%]'>
-                                <h6 className="font-serif text-white text-center font-medium mb-[25px] lg:mb-[15px]">
-                                    Stop overpaying for unused features and never miss out on the functionalities you
-                                    need
-                                </h6>
-                                <div>
-                                    <p className="font-serif text-white text-center font-medium mb-[1px] lg:mb-[15px]">
-                                        Shape your custom software experience now by checking the functions and features
-                                        you need
-                                    </p>
-                                </div>
-                            </Col>
-                        </Row>
-                        <Row className="m-auto">
-                            <Col xl={12} lg={12} md={12}>
-                                <Formik
-                                    initialValues={{name: '', email: '', phone: '', comment: '', recaptcha: ''}}
-                                    validationSchema={ContactFormStyle02Schema}
-                                    onSubmit={async (values, actions) => {
-                                        actions.setSubmitting(true)
-                                        if (values.recaptcha !== '') {
-                                            const response = await sendEmail(values)
-                                            response.status === "success" && analyticsEvent('FeaturesFunctions',values);
-                                            response.status === "success" && resetForm(actions, recaptcha);
-                                        } else {
-                                            recaptcha.current.captcha.classList.add("error")
-                                        }
-                                    }}
-                                >
-                                    {({isSubmitting, status, setFieldValue}) => (
-                                        <Form ref={form1}>
-                                            <Row>
-                                                <Col xl={7} md={7} xs={12}>
-                                                    <Row className="p-1 m-0">
-                                                        <h4 className="text-center font-serif"
-                                                            style={{color: '#FFFFFF'}}>
-                                                            Features
-                                                        </h4>
-                                                        <Col xl={6} md={6} xs={12}>
-                                                            <Checkbox type="checkbox" name="certificatesOfCoverage"
-                                                                      className="inline-block"
-                                                                      labelClass="flex items-center mb-[5px]">
-                                                            <span className="ml-[10px] text-white font-serif">
-                                                            Certificates of Coverage
-                                                            </span>
-                                                            </Checkbox>
-                                                            <Checkbox type="checkbox" name="policyManagement"
-                                                                      className="inline-block"
-                                                                      labelClass="flex items-center mb-[5px]">
-                                                            <span className="ml-[10px] text-white font-serif">
-                                                            Policy Management 
-                                                            </span>
-                                                            </Checkbox>
-                                                            <Checkbox type="checkbox" name="vendorManagement "
-                                                                      className="inline-block"
-                                                                      labelClass="flex items-center mb-[5px]">
-                                                            <span className="ml-[10px] text-white font-serif">
-                                                            Vendor Management 
-                                                            </span>
-                                                            </Checkbox>
-                                                            <Checkbox type="checkbox" name="iabilityPayroll"
-                                                                      className="inline-block"
-                                                                      labelClass="flex items-center mb-[5px]">
-                                                            <span className="ml-[10px] text-white font-serif">
-                                                            Liability Payroll
-                                                            </span>
-                                                            </Checkbox>
-                                                            <Checkbox type="checkbox" name="claims"
-                                                                      className="inline-block"
-                                                                      labelClass="flex items-center mb-[5px]">
-                                                            <span className="ml-[10px] text-white font-serif">
-                                                            Claims  
-                                                            </span>
-                                                            </Checkbox>
-                                                            <Checkbox type="checkbox" name="cntacts"
-                                                                      className="inline-block"
-                                                                      labelClass="flex items-center mb-[5px]">
-                                                            <span className="ml-[10px] text-white font-serif">
-                                                            Contacts  
-                                                            </span>
-                                                            </Checkbox>
-                                                            <Checkbox type="checkbox" name="programs"
-                                                                      className="inline-block"
-                                                                      labelClass="flex items-center mb-[5px]">
-                                                            <span className="ml-[10px] text-white font-serif">
-                                                            Programs   
-                                                            </span>
-                                                            </Checkbox>
-                                                        </Col>
-                                                        <Col xl={6} md={6} xs={12}>
-                                                            <Checkbox type="checkbox" name="externalInternalCompliance"
-                                                                      className="inline-block"
-                                                                      labelClass="flex items-center mb-[5px]">
-                                                            <span className="ml-[10px] text-white font-serif">
-                                                            External/Internal Compliance 
-                                                            </span>
-                                                            </Checkbox>
-                                                            <Checkbox type="checkbox" name="property"
-                                                                      className="inline-block"
-                                                                      labelClass="flex items-center mb-[5px]">
-                                                            <span className="ml-[10px] text-white font-serif">
-                                                            Property   
-                                                            </span>
-                                                            </Checkbox>
-                                                            <Checkbox type="checkbox" name="standAlonePrograms "
-                                                                      className="inline-block"
-                                                                      labelClass="flex items-center mb-[5px]">
-                                                            <span className="ml-[10px] text-white font-serif">
-                                                            Stand Alone Programs 
-                                                            </span>
-                                                            </Checkbox>
-                                                            <Checkbox type="checkbox" name="kPIsScorecards"
-                                                                      className="inline-block"
-                                                                      labelClass="flex items-center mb-[5px]">
-                                                            <span className="ml-[10px] text-white font-serif">
-                                                            KPIs/Scorecards 
-                                                            </span>
-                                                            </Checkbox>
-                                                            <Checkbox type="checkbox"
-                                                                      name="reportingAnalyticsDashboards "
-                                                                      className="inline-block"
-                                                                      labelClass="flex items-center mb-[5px]">
-                                                            <span className="ml-[10px] text-white font-serif">
-                                                            Reporting/Analytics/Dashboards 
-                                                            </span>
-                                                            </Checkbox>
-                                                            <Checkbox type="checkbox"
-                                                                      name="underwritingAndQuestionnaires "
-                                                                      className="inline-block"
-                                                                      labelClass="flex items-center mb-[5px]">
-                                                            <span className="ml-[10px] text-white font-serif">
-                                                            Underwriting and Questionnaires 
-                                                            </span>
-                                                            </Checkbox>
-                                                            <Checkbox type="checkbox" name="otherFeatures"
-                                                                      className="inline-block"
-                                                                      labelClass="flex items-center mb-[5px]">
-                                                            <span className="ml-[10px] text-white font-serif">
-                                                            Other
-                                                            </span>
-                                                            </Checkbox>
-                                                        </Col>
-                                                    </Row>
-                                                </Col>
-                                                <Col>
-                                                    <Row className="p-1 m-2">
-                                                        <h4 className="text-center font-serif"
-                                                            style={{color: '#FFFFFF'}}>
-                                                            Functions
-                                                        </h4>
-                                                        <Col Col xl={10} md={10} xs={12}>
-                                                            <Checkbox type="checkbox" name="automatedInvoicing "
-                                                                className="inline-block"
-                                                                labelClass="flex items-center mb-[5px]">
-                                                            <span className="ml-[10px] text-white font-serif">
-                                                                Automated Invoicing 
-                                                            </span>
-                                                            </Checkbox>
-                                                            <Checkbox type="checkbox" name="programManagementWizard "
-                                                                className="inline-block"
-                                                                labelClass="flex items-center mb-[5px]">
-                                                            <span className="ml-[10px] text-white font-serif">
-                                                                Program Management Wizard 
-                                                            </span>
-                                                            </Checkbox>
-                                                            <Checkbox type="checkbox" name="internalChat "
-                                                                className="inline-block"
-                                                                labelClass="flex items-center mb-[5px]">
-                                                            <span className="ml-[10px] text-white font-serif">
-                                                                Internal Chat 
-                                                            </span>
-                                                            </Checkbox>
-                                                            <Checkbox type="checkbox" name="customBusinessSettings "
-                                                                className="inline-block"
-                                                                labelClass="flex items-center mb-[5px]">
-                                                            <span className="ml-[10px] text-white font-serif">
-                                                                Custom Business Settings 
-                                                            </span>
-                                                            </Checkbox>
-                                                            <Checkbox type="checkbox" name="discountManagement "
-                                                                className="inline-block"
-                                                                labelClass="flex items-center mb-[5px]">
-                                                            <span className="ml-[10px] text-white font-serif">
-                                                                Discount Management 
-                                                            </span>
-                                                            </Checkbox>
-                                                            <Checkbox type="checkbox" name="automatedCertificateRenewal "
-                                                                className="inline-block"
-                                                                labelClass="flex items-center mb-[5px]">
-                                                            <span className="ml-[10px] text-white font-serif">
-                                                                Automated Certificate Renewal 
-                                                            </span>
-                                                            </Checkbox>
-                                                            <Checkbox type="checkbox" name="otherFunction"
-                                                                className="inline-block"
-                                                                labelClass="flex items-center mb-[5px]">
-                                                            <span className="ml-[10px] text-white font-serif">
-                                                                Other 
-                                                            </span>
-                                                            </Checkbox>
-                                                        </Col>   
-                                                    </Row>
-                                                </Col>
-                                            </Row>
-                                            <Row className="row-cols-1 row-cols-md-1 mt-5">
-                                                <Col className="mb-16 lg:mb-[25px] sm:mb-0">
-                                                    <Input showErrorMsg={false} type="text" name="name"
-                                                           className="py-[15px] px-[20px] text-md w-full border-[1px] border-solid border-[#dfdfdf]"
-                                                           labelClass="mb-[25px]" placeholder="Your name"/>
-                                                    <Input showErrorMsg={false} type="text" name="company"
-                                                           className="py-[15px] px-[20px] text-md w-full border-[1px] border-solid border-[#dfdfdf]"
-                                                           labelClass="mb-[25px]" placeholder="Your company"/>
-                                                    <Input showErrorMsg={false} type="email" name="email"
-                                                           className="py-[15px] px-[20px] w-full text-md border-[1px] border-solid border-[#dfdfdf]"
-                                                           labelClass="mb-[25px]" placeholder="Your email address"/>
-                                                    <Input showErrorMsg={false} type="tel" name="phone"
-                                                           className="py-[15px] px-[20px] w-full text-md border-[1px] border-solid border-[#dfdfdf]"
-                                                           labelClass="sm:mb-[25px]" placeholder="Your position"/>
-                                                </Col>
-                                            </Row>
-                                            <Row>
-                                                <Col xs={12} md={5} lg={5}>
-                                                    {process.env.REACT_APP_GRECAPTCHA_API_KEY && (
-                                                        <ReCAPTCHA
-                                                            ref={recaptcha}
-                                                            className="mb-[35px]"
-                                                            sitekey={process.env.REACT_APP_GRECAPTCHA_API_KEY}
-                                                            onChange={(response) => {
-                                                                setFieldValue("recaptcha", response)
-                                                            }}
-                                                        />
-                                                    )}
-                                                </Col>
-                                                <Col xs={12} md={5} lg={5}>
-                                                    <Buttons ariaLabel="form button" type="submit"
-                                                             className={`font-medium font-serif rounded-none uppercase text-[11px]${isSubmitting ? " loading" : ""}`}
-                                                             themeColor={["#0039e3", "#8600d4"]} size="md" color="#fff"
-                                                             title="Free Quote"/>
-                                                    <AnimatePresence>
-                                                        {status && <m.div initial={{opacity: 0}} animate={{opacity: 1}}
-                                                                          exit={{opacity: 0}}><MessageBox
-                                                            className="mt-[35px] py-[10px] tracking-[1px]"
-                                                            theme="message-box01"
-                                                            variant="success"
-                                                            message="Your message has been sent successfully!"/>
-                                                        </m.div>}
-                                                    </AnimatePresence>
-                                                </Col>
-                                            </Row>
-                                        </Form>
-                                    )}
-                                </Formik>
-                            </Col>
-                        </Row>
-                    </Container>)
-                    :
-                    (
-                        <Container>
-                            <Row md={12} className="justify-center text-black font-[2em] align-items-center text-center m-5 min-w-5">
-                            <p style={{ color: 'white' }}> {message}</p>
-                            </Row>
-
-                        </Container>
-                    )
-                }
-
-            </section>
-            {/* Section End */}
-
             
             {/*/!* Section Start *!/*/}
             <m.section className="bg-lightgray py-[80px] lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px]">
@@ -754,32 +515,6 @@ const HomeStartupPage = (props) => {
                                                     </Accordion.Body>
                                                 </Accordion.Item>
                                             </div>
-
-
-                                            {/*<div id={item.id} className={`accordion-item-wrapper`}*/}
-                                            {/*     key={key}*/}
-                                            {/*     {...{*/}
-                                            {/*         ...props.animation,*/}
-                                            {/*         transition: {delay: key * props.animationDelay}*/}
-                                            {/*     }}*/}
-                                            {/*>*/}
-                                            {/*    <Accordion.Item key={key} eventKey={key}>*/}
-                                            {/*        {item.title &&*/}
-                                            {/*            <Accordion.Header>*/}
-                                            {/*                {item.icon &&*/}
-                                            {/*                    <i className={`text-[2em] m-2 ${item.icon}`}></i>}*/}
-                                            {/*                {item.time && <span*/}
-                                            {/*                    className="panel-time">{item.time}</span>}*/}
-                                            {/*                {item.title && <span*/}
-                                            {/*                    className="panel-title">{item.title}</span>}*/}
-                                            {/*                {item.author && <span*/}
-                                            {/*                    className="panel-speaker">{item.author}</span>}*/}
-                                            {/*            </Accordion.Header>*/}
-                                            {/*        }*/}
-                                            {/*        {item.content &&*/}
-                                            {/*            <Accordion.Body> {item.content} </Accordion.Body>}*/}
-                                            {/*    </Accordion.Item>*/}
-                                            {/*</div>*/}
                                         </Accordion>
                                     </div>
                                 </Col>

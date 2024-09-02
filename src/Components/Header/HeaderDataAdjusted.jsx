@@ -80,6 +80,10 @@ const HeaderDataAdjusted = [
                 title: 'PRISM',
                 link: '/products'
             },
+            {
+                title: 'Custom Solutions',
+                link: '/custom-solution'
+            },
         ]
     },
     {
