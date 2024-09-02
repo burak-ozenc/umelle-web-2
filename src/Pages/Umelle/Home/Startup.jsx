@@ -18,8 +18,14 @@ import PortfolioBordered from '../../../Components/Portfolio/PortfolioBordered';
 import FooterData from '../../../Components/Footers/FooterData';
 import {IconWithTextData_02} from "../../../Components/IconWithText/IconWithTextData";
 import Accordions from "../../../Components/Accordion/Accordion";
-
 import { FilterData } from '../../../Components/Portfolio/PortfolioData';
+import portimg1 from '../../../Assets/img/HomePage/Artboard 1.png';
+import portimg2 from '../../../Assets/img/HomePage/Artboard 2.png';
+import portimg3 from '../../../Assets/img/HomePage/Artboard 3.png';
+import portimg4 from '../../../Assets/img/HomePage/Artboard 4.png';
+import portimg5 from '../../../Assets/img/HomePage/Artboard 5.png';
+import portimg6 from '../../../Assets/img/HomePage/Artboard 6.png';
+import portimg7 from '../../../Assets/img/HomePage/Artboard 7.png';
 
 
 const IconWithText = lazy(() => import('../../../Components/IconWithText/IconWithText'))
@@ -35,7 +41,7 @@ const SEO = lazy(() => import('../../../Components/Umelle/SEO'))
 const PortfolioData = [
     {
         title: "MOTION",
-        img: "https://via.placeholder.com/800x800",
+        img: portimg1,
         category: ["Branding", "Logo"],
         subtitle: "Identity",
         link: "/portfolio/single-project-page-01",
@@ -43,7 +49,7 @@ const PortfolioData = [
     },
     {
         title: "BIOLATOR",
-        img: "https://via.placeholder.com/800x1600",
+        img: portimg2,
         category: ["Graphics", "Logo"],
         subtitle: "Branding",
         link: "/portfolio/single-project-page-02",
@@ -51,7 +57,7 @@ const PortfolioData = [
     },
     {
         title: "OSLANDS",
-        img: "https://via.placeholder.com/800x800",
+        img: portimg3,
         category: ["Branding", "Photography"],
         subtitle: "Branding",
         link: "/portfolio/single-project-page-03",
@@ -59,7 +65,7 @@ const PortfolioData = [
     },
     {
         title: "FINANCIAL",
-        img: "https://via.placeholder.com/800x800",
+        img: portimg4,
         category: ["Graphics", "Photography"],
         subtitle: "Photography",
         link: "/portfolio/single-project-page-04",
@@ -67,7 +73,7 @@ const PortfolioData = [
     },
     {
         title: "DUPONT",
-        img: "https://via.placeholder.com/800x800",
+        img: portimg5,
         category: ["Branding", "Graphics", "Logo"],
         subtitle: "Branding",
         link: "/portfolio/single-project-page-05",
@@ -75,7 +81,7 @@ const PortfolioData = [
     },
     {
         title: "GARDNER",
-        img: "https://via.placeholder.com/800x800",
+        img: portimg6,
         category: ["Logo", "Photography"],
         subtitle: "Branding",
         link: "/portfolio/single-project-page-01",
@@ -83,7 +89,7 @@ const PortfolioData = [
     },
     {
         title: "TRUENORTH",
-        img: "https://via.placeholder.com/800x800",
+        img: portimg7,
         category: ["Branding", "Graphics", "Photography"],
         subtitle: "Photography",
         link: "/portfolio/single-project-page-02",
@@ -145,6 +151,18 @@ const HomeStartupPage = (props) => {
             </HeaderNav>
         </Header>
         {/* Header End */}
+
+        {/* Section Start */}
+        <section className="py-[160px] border-t border-mediumgray pb-0 lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px]">
+                    <PortfolioBordered
+                        title="Amazing work"
+                        className="design-agency-portfolio-bordered"
+                        grid="grid grid-4col xl-grid-4col lg-grid-2col md-grid-2col sm-grid-2col xs-grid-1col"
+                        data={PortfolioData}
+                        filterData={FilterData}
+                    />
+                </section>
+                {/* Section End */}
         
         <SideButtons/>
         
@@ -188,20 +206,6 @@ const HomeStartupPage = (props) => {
                 </Tabs>
             </section>
             {/* Section End */}
-
-            {/* Section Start */}
-        <section className="py-[160px] border-t border-mediumgray pb-0 lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px]">
-                    <PortfolioBordered
-                        title="Amazing work"
-                        className="design-agency-portfolio-bordered"
-                        grid="grid grid-4col xl-grid-4col lg-grid-2col md-grid-2col sm-grid-2col xs-grid-1col"
-                        data={PortfolioData}
-                        filterData={FilterData}
-                    />
-                </section>
-                {/* Section End */}
-
-            
 
             {/* Section Start */}
             <section className="bg-lightgray py-[55px] lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px]">
