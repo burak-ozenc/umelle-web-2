@@ -252,7 +252,7 @@ const HomeStartupPage = (props) => {
               <h4 className="font-serif font-semibold text-white mb-0 sm:text-center">Build your own Solution!</h4>
             </Col>
             <Col xl={5} md={4} className="md:flex md:justify-center text-end">
-              <Buttons ariaLabel="button" to="/custom-solution" className="font-medium font-serif uppercase rounded-none lg:mb-[15px] landscape:lg:mb-[15px]" themeColor={["#902cfc", "#4423c4"]} size="lg" color="#fff" title="Get Started" />
+              <Buttons ariaLabel="button" to="/custom-solution" className="font-medium font-serif uppercase rounded-none lg:mb-[15px] landscape:lg:mb-[15px]" themeColor={["#902cfc", "#4423c4"]} size="xl" color="#fff" title="Get Started" />
             </Col>
           </Row>
         </Container>

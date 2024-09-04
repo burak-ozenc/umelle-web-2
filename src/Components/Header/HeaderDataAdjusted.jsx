@@ -56,7 +56,7 @@ const HeaderDataAdjusted = [
                 title: 'AI and Machine Learning Solutions',
                 link: '/services#ai-and-machine-learning-solutions'
             }, {
-                title: 'Custom Software Development',
+                title: 'Custom Software',
                 link: '/services#custom-software-development'
             }, {
                 title: 'API Development and Integration',

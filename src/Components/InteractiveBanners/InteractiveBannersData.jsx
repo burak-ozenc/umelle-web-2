@@ -1,3 +1,28 @@
+import ai_img1 from '../../Assets/img/Services/AI/Predictive Analytics.png';
+import ai_img2 from '../../Assets/img/Services/AI/Process Automation.png';
+import ai_img3 from '../../Assets/img/Services/AI/Enhanced Insights.png';
+import ai_img4 from '../../Assets/img/Services/AI/Decision Making.png';
+import cs_img1 from '../../Assets/img/Services/Custom SW/Tailored Solutions.png';
+import cs_img2 from '../../Assets/img/Services/Custom SW/Cutting-Edge Tech.png';
+import cs_img3 from '../../Assets/img/Services/Custom SW/User-Friendly Design.png';
+import cs_img4 from '../../Assets/img/Services/Custom SW/Scalable and Flexible.png';
+import api_img1 from '../../Assets/img/Services/API Development and Integration/Custom API Dev.png';
+import api_img2 from '../../Assets/img/Services/API Development and Integration/Secure and Scalable.png';
+import api_img3 from '../../Assets/img/Services/API Development and Integration/Efficient Connectivity.png';
+import api_img4 from '../../Assets/img/Services/API Development and Integration/Seemless Integration.png';
+import bi_img1 from '../../Assets/img/Services/BI and Analytics/Advanced Reporting.png';
+import bi_img2 from '../../Assets/img/Services/BI and Analytics/Interactive Dashboards.png';
+import bi_img3 from '../../Assets/img/Services/BI and Analytics/Real-Time Analytics.png';
+import bi_img4 from '../../Assets/img/Services/BI and Analytics/Data Integration.png';
+import cloud_img1 from '../../Assets/img/Services/Cloud Services/Seamless Migration.png';
+import cloud_img2 from '../../Assets/img/Services/Cloud Services/Efficient Management.png';
+import cloud_img3 from '../../Assets/img/Services/Cloud Services/Scaled Cloud Solutions.png';
+import cloud_img4 from '../../Assets/img/Services/Cloud Services/Enhanced Security.png';
+import mit_img1 from '../../Assets/img/Services/Managed IT Services/247 Monitoring.png';
+import mit_img2 from '../../Assets/img/Services/Managed IT Services/Advanced Security.png';
+import mit_img3 from '../../Assets/img/Services/Managed IT Services/IT Management.png';
+import mit_img4 from '../../Assets/img/Services/Managed IT Services/Scalable Solutions.png';
+
 const InteractiveBannersData01 = [
     {
         subtitle: "Branding",
@@ -128,34 +153,22 @@ const InteractiveBannersData04 = [
     {
         title: '24/7 Monitoring',
         content: "Our dedicated team provides continuous monitoring to ensure your IT infrastructure runs smoothly and efficiently at all times.",
-        img: "https://via.placeholder.com/464x610",
-        //btnTitle: "Explore services",
-        //btnLink: "/page/our-services",
-        //icon: "line-icon-Add-Window"
+        img: mit_img1,
     },
     {
         title: "Advanced Security",
         content: "State-of-the-art cybersecurity measures to protect your business from threats and vulnerabilities.",
-        img: "https://via.placeholder.com/464x610",
-        //btnTitle: "Explore services",
-        //btnLink: "/page/our-services",
-        //icon: "line-icon-Add-Bag"
+        img: mit_img2,
     },
     {
         title: "IT Management",
         content: "Our comprehensive services ensure your systems are optimized and running at peak performance.",
-        img: "https://via.placeholder.com/464x610",
-        //btnTitle: "Explore services",
-        //btnLink: "/page/our-services",
-        //icon: "line-icon-Android-Store"
+        img: mit_img3,
     },
     {
         title: "Scalable Solutions",
         content: "As your business grows, our IT services scale with you to meet your evolving needs.",
-        img: "https://via.placeholder.com/464x610",
-        //btnTitle: "Explore services",
-        //btnLink: "/page/our-services",
-        //icon: "line-icon-Cursor-Click2"
+        img: mit_img4,
     }
 ]
 
@@ -466,170 +479,110 @@ const InteractiveBannersData16 = [
     {
         title: 'Tailored Solutions',
         content: "Software tailored to your unique business needs, ensuring it aligns perfectly with your operational goals and processes.",
-        img: "https://via.placeholder.com/464x610",
-        //btnTitle: "Explore services",
-        //btnLink: "/page/our-services",
-        //icon: "line-icon-Add-Window"
+        img: cs_img1,
     },
     {
         title: "Cutting-Edge Technologies",
         content: "We create robust and responsive applications that give you a competitive edge in your industry.",
-        img: "https://via.placeholder.com/464x610",
-        //btnTitle: "Explore services",
-        //btnLink: "/page/our-services",
-        //icon: "line-icon-Add-Bag"
+        img: cs_img2,
     },
     {
         title: "User-Friendly Design",
         content: "Designed with user experience in mind, our apps are intuitive, easy to navigate, and enhance productivity.",
-        img: "https://via.placeholder.com/464x610",
-        //btnTitle: "Explore services",
-        //btnLink: "/page/our-services",
-        //icon: "line-icon-Android-Store"
+        img: cs_img3,
     },
     {
         title: "Scalable and Flexible",
         content: "Our software solutions are built to scale with your business as your needs grow and evolve.",
-        img: "https://via.placeholder.com/464x610",
-        //btnTitle: "Explore services",
-        //btnLink: "/page/our-services",
-        //icon: "line-icon-Cursor-Click2"
+        img: cs_img4,
     }
 ]
 const InteractiveBannersData17 = [
     {
         title: 'Seamless Migration',
         content: "We ensure a smooth transition to the cloud with minimal disruption to your operations.",
-        img: "https://via.placeholder.com/464x610",
-        //btnTitle: "Explore services",
-        //btnLink: "/page/our-services",
-        //icon: "line-icon-Add-Window"
+        img: cloud_img1,
     },
     {
         title: "Efficient Management",
         content: "Our cloud management services optimize resource utilization, ensuring cost-effectiveness and operational efficiency.",
-        img: "https://via.placeholder.com/464x610",
-        //btnTitle: "Explore services",
-        //btnLink: "/page/our-services",
-        //icon: "line-icon-Add-Bag"
+        img: cloud_img2,
     },
     {
         title: "Scaled Cloud Solutions",
         content: "We design cloud-native applications that scale with your business needs, providing flexibility and agility.",
-        img: "https://via.placeholder.com/464x610",
-        //btnTitle: "Explore services",
-        //btnLink: "/page/our-services",
-        //icon: "line-icon-Android-Store"
+        img: cloud_img3,
     },
     {
         title: "Enhanced Security",
         content: "Advanced cloud security measures to protect your data and maintain compliance with industry standards.",
-        img: "https://via.placeholder.com/464x610",
-        //btnTitle: "Explore services",
-        //btnLink: "/page/our-services",
-        //icon: "line-icon-Cursor-Click2"
+        img: cloud_img4,
     }
 ]
 const InteractiveBannersData18 = [
     {
         title: 'Predictive Analytics',
         content: "Utilize AI to forecast trends and make data-driven decisions that enhance your business strategies.",
-        img: "https://via.placeholder.com/464x610",
-        //btnTitle: "Explore services",
-        //btnLink: "/page/our-services",
-        //icon: "line-icon-Add-Window"
+        img: ai_img1,
     },
     {
         title: "Process Automation",
         content: "Automate routine tasks with AI to increase efficiency and reduce operational costs.",
-        img: "https://via.placeholder.com/464x610",
-        //btnTitle: "Explore services",
-        //btnLink: "/page/our-services",
-        //icon: "line-icon-Add-Bag"
+        img: ai_img2,
     },
     {
         title: "Enhanced Insights",
         content: "Leverage natural language processing to gain deeper insights into customer behavior and preferences.",
-        img: "https://via.placeholder.com/464x610",
-        //btnTitle: "Explore services",
-        //btnLink: "/page/our-services",
-        //icon: "line-icon-Android-Store"
+        img: ai_img3,
     },
     {
         title: "Decision Making",
         content: "AI solutions that provide real-time data analysis to support informed decision-making.",
-        img: "https://via.placeholder.com/464x610",
-        //btnTitle: "Explore services",
-        //btnLink: "/page/our-services",
-        //icon: "line-icon-Cursor-Click2"
+        img: ai_img4,
     }
 ]
 const InteractiveBannersData19 = [
     {
         title: 'Advanced Reporting',
         content: "Create comprehensive and customizable reports that provide deep insights into your business performance.",
-        img: "https://via.placeholder.com/464x610",
-        //btnTitle: "Explore services",
-        //btnLink: "/page/our-services",
-        //icon: "line-icon-Add-Window"
+        img: bi_img1,
     },
     {
         title: "Interactive Dashboards",
         content: "Develop interactive dashboards that visualize data in an intuitive and actionable format.",
-        img: "https://via.placeholder.com/464x610",
-        //btnTitle: "Explore services",
-        //btnLink: "/page/our-services",
-        //icon: "line-icon-Add-Bag"
+        img: bi_img2,
     },
     {
         title: "Real-Time Analytics",
         content: "Implement real-time analytics to monitor and respond to business metrics as they happen.",
-        img: "https://via.placeholder.com/464x610",
-        //btnTitle: "Explore services",
-        //btnLink: "/page/our-services",
-        //icon: "line-icon-Android-Store"
+        img: bi_img3,
     },
     {
         title: "Data Integration",
         content: "Integrate data from multiple sources for a unified view, enabling more informed decision-making.",
-        img: "https://via.placeholder.com/464x610",
-        //btnTitle: "Explore services",
-        //btnLink: "/page/our-services",
-        //icon: "line-icon-Cursor-Click2"
+        img: bi_img4,
     }
 ]
 const InteractiveBannersData20 = [
     {
         title: 'Custom API Development',
         content: "Develop APIs tailored to your business needs, ensuring seamless integration and enhanced functionality.",
-        img: "https://via.placeholder.com/464x610",
-        //btnTitle: "Explore services",
-        //btnLink: "/page/our-services",
-        //icon: "line-icon-Add-Window"
+        img: api_img1,
     },
     {
         title: "Secure and Scalable",
         content: "Build secure and scalable APIs that support your business growth and protect your data.",
-        img: "https://via.placeholder.com/464x610",
-        //btnTitle: "Explore services",
-        //btnLink: "/page/our-services",
-        //icon: "line-icon-Add-Bag"
+        img: api_img2,
     },
     {
         title: "Efficient Connectivity",
         content: "Ensure efficient connectivity between your applications, improving overall system performance.",
-        img: "https://via.placeholder.com/464x610",
-        //btnTitle: "Explore services",
-        //btnLink: "/page/our-services",
-        //icon: "line-icon-Android-Store"
+        img: api_img3,
     },
     {
         title: "Seemless Integration",
         content: "Integrate with various third-party services and platforms to expand your system capabilities.",
-        img: "https://via.placeholder.com/464x610",
-        //btnTitle: "Explore services",
-        //btnLink: "/page/our-services",
-        //icon: "line-icon-Cursor-Click2"
+        img: api_img4,
     }
 ]
 export { InteractiveBannersData20, InteractiveBannersData19, InteractiveBannersData18, InteractiveBannersData17, InteractiveBannersData01, InteractiveBannersData02, InteractiveBannersData03, InteractiveBannersData04, InteractiveBannersData05, InteractiveBannersData06, InteractiveBannersData07, InteractiveBannersData08, InteractiveBannersData09, InteractiveBannersData10, InteractiveBannersData12, InteractiveBannersData13, InteractiveBannersData14, InteractiveBannersData15, InteractiveBannersData16 }

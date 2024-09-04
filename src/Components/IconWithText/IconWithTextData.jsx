@@ -256,7 +256,7 @@ const IconWithTextData_11 = [
 
 const IconWithTextData_12 = [
     {
-        icon: "line-icon-Management  text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC]",
+        icon: "line-icon-Management text-[40px] text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC]",
         title: "Policy and Program Management",
         id: 'policyAndProgramManagement',
         key: 9,
@@ -264,20 +264,20 @@ const IconWithTextData_12 = [
         // backgroundText: " "
     },
     {
-        icon: "line-icon-Add-User text-basecolor",
+        icon: "line-icon-Add-User text-[40px] text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC]",
         title: "Certificate Management",
         id: 'certificateManagement',
         content: "Automaticlly issue, renew and send certificates of coverage to every member."
     },
     {
-        icon: "line-icon-Financial  text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC]",
+        icon: "line-icon-Financial text-[40px] text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC]",
         title: "Finance Management",
         id: 'financeManagement',
         key: 1,
         content: "Integrate your business logic and be in full control with our financial management solutions."
     },
     {
-        icon: "line-icon-Umbrella-2 text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC]",
+        icon: "line-icon-Umbrella-2 text-[40px] text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC]",
         title: "Risk management",
         id: 'riskManagement',
         key: 3,
@@ -288,28 +288,28 @@ const IconWithTextData_12 = [
 
 const IconWithTextData_13 = [
     {
-        icon: "line-icon-Add-UserStar  text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC]",
+        icon: "line-icon-Add-UserStar text-[40px] text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC]",
         title: "Member and User Management",
         id: 'memberAndUserManagement',
         key: 4,
         content: "A unified platform for efficient tracking, updating, and analyzing of all member data."
     },
     {
-        icon: "line-icon-Profile  text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC]",
+        icon: "line-icon-Profile text-[40px] text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC]",
         title: "Vendor Management",
         id: 'vendorManagement',
         key: 6,
         content: "Manage vendors and integrate business data more reliably."
     },
     {
-        icon: "line-icon-Bar-Chart  text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC]",
+        icon: "line-icon-Bar-Chart text-[40px] text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC]",
         title: "KPIs and Analytics",
         id: 'kPIsAndAnalytics',
         key: 7,
         content: "Track KPIs and get active reporting and analytics on what matters most to your business."
     },
     {
-        icon: "line-icon-Speach-BubbleDialog  text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC]",
+        icon: "line-icon-Speach-BubbleDialog text-[40px] text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC]",
         title: "Communication Management",
         id: 'communicationManagement',
         key: 5,
