@@ -1,9 +1,10 @@
-import React, {lazy} from 'react'
+import React, {lazy} from 'react';
 
 // Libraries
 import {Link} from 'react-router-dom';
 import {Col, Container, Navbar, Row} from "react-bootstrap";
-import {domMax, LazyMotion, m} from 'framer-motion';
+import Atropos from "atropos/react";
+import {m} from 'framer-motion';
 
 // Functions
 import {fadeIn} from '../../../Functions/GlobalAnimations';
@@ -14,6 +15,9 @@ import FooterMenu, {Footer} from '../../../Components/Footers/Footer';
 import InViewPort from '../../../Components/InViewPort';
 import ProgressBar from "../../../Components/ProgressBar/ProgressBar";
 import {ProgressBarData02} from "../../../Components/ProgressBar/ProgressBarData";
+import Overlap from '../../../Components/Overlap/Overlap';
+import ProcessStep from '../../../Components/ProcessStep/ProcessStep';
+import {ProcessStepData06} from '../../../Components/ProcessStep/ProcessStepData';
 
 // Data
 import FooterData from '../../../Components/Footers/FooterData';
@@ -22,8 +26,9 @@ import {
 } from "../../../Components/TestimonialCarousel/TestimonialsCarouselData";
 import TestimonialsCarousel01 from "../../../Components/TestimonialCarousel/TestimonialsCarousel01";
 import SEO from "../../../Components/Umelle/SEO";
-// import Team from "../../../Components/Team/Team";
-// import {TeamData01} from "../../../Components/Team/TeamData";
+import { Parallax } from 'react-scroll-parallax';
+
+
 const Header = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Header})))
 const HeaderNav = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.HeaderNav})))
 const Menu = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Menu})))
@@ -77,39 +82,50 @@ const HomeStartupPage = (props) => {
         </Header>
         {/* Header End */}
 
-        <SideButtons/>
+        {/* Parallax Scrolling Start */}
+      <div className="pt-[130px] pb-[632px] lg:pt-[95px] lg:pb-[600px] md:pt-[70px] md:pb-[400px] sm:pt-[50px] sm:py-[70px] overflow-hidden relative">
+        <Parallax className="lg-no-parallax bg-cover cover-background absolute top-[100px] left-0 md:-top-[30px] w-full h-[100vh]" translateY={[-40, 40]} style={{ backgroundImage: `url(/assets/img/webp/our-story-bg.webp)` }}></Parallax>
+        <Container>
+          <Row xs={1} className="justify-center">
+            <Col xl={8} lg={10} className="text-center">
+              <div className="w-[40px] h-[2px] bg-gradient-to-tr from-[#ff6557] to-[#ff367c] transform rotate-90 my-[30px] inline-block"></div>
+              <h3 className="font-serif font-medium text-darkgray -tracking-[1px] relative mb-0">We focus on creative and <span className="text-gradient bg-gradient-to-tr from-[#ff6557] to-[#ff367c] font-semibold">strategically</span> driven <span className="text-gradient bg-gradient-to-tr from-[#ff6557] to-[#ff367c] font-semibold">innovative</span></h3>
+            </Col>
+          </Row>
+        </Container>
+      </div>
+      {/* Parallax Scrolling End */}
+      
+      {/* Section Start */}
+      <section className="pb-[130px] lg:pb-[95px] md:pb-[70px] sm:py-[50px] bg-gradient-to-tr from-[#556fff] via-[#e05fc4] to-[#f767a6]">
+        <Container className="md:mb-[70px] sm:mb-20">
+          <Row className="justify-center">
+            <Overlap value={70} className="row">
+              <Col className="col-12 col-md-12 z-0 p-[0px] lg:p-[15px] md:p-[0px] text-center">
+                <span className="mb-[-60px] relative uppercase text-[11rem] leading-[11rem] md:text-[9rem] sm:hidden font-serif text-center none md:block font-bold opacity-10 -z-[1]">our story</span>
+                <Atropos
+                  highlight={false}
+                  stretchX={0}
+                  stretchY={0}
+                  rotateTouch={false}
+                  className={`my-atropos -top-[7%] md:top-0 w-full`}
+                >
+                  <img loading="lazy" src="https://via.placeholder.com/1170x650" className="relative z-10 rounded-[6px]" alt="" data-no-retina="" />
+                </Atropos>
+              </Col>
+            </Overlap>
+          </Row>
+        </Container>
+        <Container>
+          <Row className="justify-center">
+            <Col md={12} sm={8}>
+              <ProcessStep theme="process-step-style-05 md:px-0 sm:mb-8" className="our-story-process-step-style overflow-hidden sm:inline-block text-center text-[#fff]" data={ProcessStepData06} animation={fadeIn} />
+            </Col>
+          </Row>
+        </Container>
+      </section>
+      {/* Section End */}
 
-        {/* Section start */}
-        <section className="overflow-visible cover-background"
-                 style={{backgroundImage: `url(/assets/img/CompanyPage_header.webp)`}}>
-            <Container>
-                <LazyMotion strict features={domMax}>
-                    <Row
-                        className="full-screen md:h-[650px] sm:h-[350px] xs:h-[450px] align-items-center justify-center">
-                        <Col xs={12} lg={6} md={6}
-                             className="justify-center items-center">
-                            <h1 className="font-serif leading-[120px] font-semibold tracking-[0px] mb-0 mt-auto text-darkgray text-[3rem] md:leading-[90px] md:text-[9rem] sm:leading-[70px] sm:-tracking-[5px] xs:leading-[70px]">
-                                We are...
-                                <br/>
-                                <span
-                                    className="text-border text-[130px] text-border-width-2px fill-transparent inline-block tracking-[-6px] lg:text-[110px] md:text-[90px] md:leading-[85px] sm:text-[65px] sm:leading-[50px] sm:-tracking-[.5px]">
-                                UMELLE
-                            </span>
-                            </h1>
-                        </Col>
-                        <Col xs={12} lg={6} md={6}
-                             className="justify-center items-center my-0 mx-auto relative flex flex-col">
-                            <div className="flex font-serif items-center font-medium text-xmd text-darkgray mt-auto">
-                                {/*<span className="flex-shrink-0 h-[2px] w-[20px] bg-darkgray item-center mr-[15px]"></span>*/}
-                                <div className="grow tracking-[-.5px] text-[24px]">Committed to delivering top-notch, custom software solutions with precision and artistry.
-                                </div>
-                            </div>
-                        </Col>
-                    </Row>
-                </LazyMotion>
-            </Container>
-        </section>
-        {/* Section End */}
 
         {/* Section Start */}
         <m.section

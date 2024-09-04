@@ -1,4 +1,4 @@
-import React, {lazy} from 'react'
+import React, {lazy} from 'react';
 
 // Libraries
 import {Link} from 'react-router-dom';
@@ -32,7 +32,7 @@ import SEO from "../../../Components/Umelle/SEO";
 import { useEffect } from 'react';
 import {IconWithTextData_02} from "../../../Components/IconWithText/IconWithTextData";
 import {Parallax} from 'react-scroll-parallax';
-import ownSolution from '../../../Assets/img/umelle/homepage_bottompagebanner_CTA_v2-01.png';
+import ownSolution from '../../../Assets/img/umelle/ProductPage_Overview-01.png';
 
 const Header = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Header})))
 const HeaderNav = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.HeaderNav})))
@@ -154,14 +154,18 @@ const HomeStartupPage = (props) => {
         </m.section>
         {/* Section End */}
 
-        {/* Section start */}
+        
+        
+        {/* Lazy Load HTML */}
+        <InViewPort>
+            {/* Section start */}
       <m.div className="relative overflow-hidden py-[130px] lg:py-[90px] md:py-[75px] sm:py-[50px] sm:px-[15px]" {...fadeIn}>
         <Parallax className="lg-no-parallax bg-cover cover-background absolute top-[-30px] left-0 h-[100vh] lg:h-[64vh] lg:top-[-75px] lg:!translate-y-0 md:h-[60vh] md:-top-[30px] sm:top-0 sm:h-[56vh] xs:h-[50vh] w-full" translateY={[-40, 40]} style={{ backgroundImage: `url(${ownSolution})` }}></Parallax>
         <div className="left-0 top-0 h-full w-full absolute bg-darkslateblue opacity-75"></div>
         <Container className="relative">
           <Row className="justify-center items-center">
             <Col xl={7} md={8} sm={10} className="md:mb-[30px] sm:mb-[30px]">
-              <h4 className="font-serif font-semibold text-white mb-0 sm:text-center">Build your own Solution!</h4>
+              <h4 className="font-serif font-semibold text-white mb-0 sm:text-center">Build your own Solution:</h4>
             </Col>
             <Col xl={5} md={4} className="md:flex md:justify-center text-end">
               <Buttons ariaLabel="button" to="/custom-solution" className="font-medium font-serif uppercase rounded-none lg:mb-[15spx] landscape:lg:mb-[15px]" themeColor={["#902cfc", "#4423c4"]} size="xl" color="#fff" title="Get Started" />
@@ -170,9 +174,7 @@ const HomeStartupPage = (props) => {
         </Container>
       </m.div>
       {/* Section end */ }
-        
-        {/* Lazy Load HTML */}
-        <InViewPort>
+      
             {/* Section Start */}
             <section className="bg-white py-[160px] lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px]">
                 <Container>
