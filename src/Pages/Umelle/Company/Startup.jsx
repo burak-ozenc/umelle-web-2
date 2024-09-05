@@ -1,4 +1,4 @@
-import React, {lazy} from 'react';
+import React from 'react';
 
 // Libraries
 import {Link} from 'react-router-dom';
@@ -8,6 +8,7 @@ import {m} from 'framer-motion';
 
 // Functions
 import {fadeIn} from '../../../Functions/GlobalAnimations';
+import Buttons from '../../../Components/Button/Buttons';
 
 // Components
 import { ScrollToAnchor} from "../../../Functions/Utilities";
@@ -17,7 +18,9 @@ import ProgressBar from "../../../Components/ProgressBar/ProgressBar";
 import {ProgressBarData02} from "../../../Components/ProgressBar/ProgressBarData";
 import Overlap from '../../../Components/Overlap/Overlap';
 import ProcessStep from '../../../Components/ProcessStep/ProcessStep';
-import {ProcessStepData06} from '../../../Components/ProcessStep/ProcessStepData';
+import {ProcessStepDataAbout} from '../../../Components/ProcessStep/ProcessStepData';
+import FancyTextBox from '../../../Components/FancyTextBox/FancyTextBox';
+import {fancyTextBoxAbout} from '../../../Components/FancyTextBox/FancyTextBoxData';
 
 // Data
 import FooterData from '../../../Components/Footers/FooterData';
@@ -33,8 +36,6 @@ const Header = React.lazy(() => import("../../../Components/Header/Header").then
 const HeaderNav = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.HeaderNav})))
 const Menu = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Menu})))
 
-
-const SideButtons = lazy(() => import("../../../Components/SideButtons"))
 
 const Footer_Data = [FooterData[0], FooterData[1], FooterData[4], FooterData[3]]
 
@@ -82,216 +83,170 @@ const HomeStartupPage = (props) => {
         </Header>
         {/* Header End */}
 
-        {/* Parallax Scrolling Start */}
-      <div className="pt-[130px] pb-[632px] lg:pt-[95px] lg:pb-[600px] md:pt-[70px] md:pb-[400px] sm:pt-[50px] sm:py-[70px] overflow-hidden relative">
-        <Parallax className="lg-no-parallax bg-cover cover-background absolute top-[100px] left-0 md:-top-[30px] w-full h-[100vh]" translateY={[-40, 40]} style={{ backgroundImage: `url(/assets/img/webp/our-story-bg.webp)` }}></Parallax>
-        <Container>
-          <Row xs={1} className="justify-center">
-            <Col xl={8} lg={10} className="text-center">
-              <div className="w-[40px] h-[2px] bg-gradient-to-tr from-[#ff6557] to-[#ff367c] transform rotate-90 my-[30px] inline-block"></div>
-              <h3 className="font-serif font-medium text-darkgray -tracking-[1px] relative mb-0">We focus on creative and <span className="text-gradient bg-gradient-to-tr from-[#ff6557] to-[#ff367c] font-semibold">strategically</span> driven <span className="text-gradient bg-gradient-to-tr from-[#ff6557] to-[#ff367c] font-semibold">innovative</span></h3>
-            </Col>
-          </Row>
-        </Container>
-      </div>
-      {/* Parallax Scrolling End */}
-      
-      {/* Section Start */}
-      <section className="pb-[130px] lg:pb-[95px] md:pb-[70px] sm:py-[50px] bg-gradient-to-tr from-[#556fff] via-[#e05fc4] to-[#f767a6]">
-        <Container className="md:mb-[70px] sm:mb-20">
-          <Row className="justify-center">
-            <Overlap value={70} className="row">
-              <Col className="col-12 col-md-12 z-0 p-[0px] lg:p-[15px] md:p-[0px] text-center">
-                <span className="mb-[-60px] relative uppercase text-[11rem] leading-[11rem] md:text-[9rem] sm:hidden font-serif text-center none md:block font-bold opacity-10 -z-[1]">our story</span>
-                <Atropos
-                  highlight={false}
-                  stretchX={0}
-                  stretchY={0}
-                  rotateTouch={false}
-                  className={`my-atropos -top-[7%] md:top-0 w-full`}
-                >
-                  <img loading="lazy" src="https://via.placeholder.com/1170x650" className="relative z-10 rounded-[6px]" alt="" data-no-retina="" />
-                </Atropos>
-              </Col>
-            </Overlap>
-          </Row>
-        </Container>
-        <Container>
-          <Row className="justify-center">
-            <Col md={12} sm={8}>
-              <ProcessStep theme="process-step-style-05 md:px-0 sm:mb-8" className="our-story-process-step-style overflow-hidden sm:inline-block text-center text-[#fff]" data={ProcessStepData06} animation={fadeIn} />
-            </Col>
-          </Row>
-        </Container>
-      </section>
-      {/* Section End */}
-
-
-        {/* Section Start */}
-        <m.section
-                className="py-[55px] overflow-hidden lg:py-[90px] md:py-[75px] sm:py-[50px] bg-lightgray lg:px-0 md:px-0 sm:px-0 xs:px-0">
-                <Container>
-                    <h6 className="font-serif text-darkgray text-center font-medium mb-[60px] md:mb-[50px]">
-                        Customer Satisfaction
-                    </h6>
-                    <Row className="justify-center">
-                        <Col lg={6}>
-                            <ProgressBar
-                                theme="progressbar-style-02"
-                                className=""
-                                trailColor="#f7f7f7"
-                                height="8px"
-                                data={ProgressBarData02}
-                                color={["#3844F7", "#902CFC"]}/>
-                        </Col>
-                    </Row>
-                </Container>
-            </m.section>
-            {/* Section End */}
-
-        {/* Section Start */}
-        <m.section
-                className="py-[100px] lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px] bg-no-repeat bg-center"
-                style={{background: 'white',}} {...fadeIn} >
-                <Container>
-                    <Row className="justify-center align-items-center">
-                        <Col md={9} className="text-center mb-[6%]">
-                            <h6 className="font-serif text-darkgray font-medium">
-                                We believe in quality-driven custom software development
-                            </h6>
-                        </Col>
-                    </Row>
-                    <Row className="row-cols-lg-2 justify-center">
-                        <Col md={12} lg={12}>
-                            <TestimonialsCarousel01
-                                data={TestimonialsCarouselData1}
-                                className="swiper-navigation-04 swiper-navigation-light swiper-pagination-dark swiper-pagination-big black-move"
-                                carouselOption={{
-                                    slidesPerView: 1,
-                                    loop: true,
-                                    navigation: false,
-                                    autoplay: {delay: 5000, disableOnInteraction: false},
-                                    pagination: {dynamicBullets: false, clickable: true},
-                                    keyboard: {enabled: true, onlyInViewport: true},
-                                }}
-                            />
-                        </Col>
-                    </Row>
-                </Container>
-            </m.section>
-            {/* Section End */}
-
-            {/* Section Start */}
-            <m.section className="py-[100px] lg:py-[120px] md:py-[95px] sm:py-[80px] xs;py-[50px] bg-lightgray" {...fadeIn}>
-                <Container>
-                    <Row>
-                        <Col className="mb-[4%]">
-                            <h6 className="font-serif text-darkgray text-center font-medium mb-[25px] lg:mb-[15px]">
-                                Our Commitment? Your success, powered by our software
-                            </h6>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col lg={6} xs={12} className="px-[15px] md:mb-[15px]">
-                            <div className="bg-transparent  sm:p-[30px]">
-                                <p className="text-darkgray text-[1.2em] text-center lg:mb-[45px]">
-                                    Transforming Challenges Into Opportunities
-                                    <br/>
-                                    <br/>
-                                    Dedicated to bridging businesses with technological excellence, our mission is to deliver intuitive resource management software solutions that cater to both SMEs and enterprises, simplifying challenges into opportunities.
-                                </p>
-                            </div>
-                        </Col>
-                        <Col lg={6}  xs={12} className="px-[15px] md:mb-[15px]">
-                            <div className="text-darkgray text-[1.2em] text-center sm:p-[34px]">
-                                <p>
-                                    Empowering Growth Through Solutions
-                                    <br/>
-                                    <br/>
-                                    Our vision is to empower businesses worldwide by turning their challenges into robust solutions, leveraging our diverse capabilities to serve the evolving needs of both SMEs and enterprises.
-                                </p>
-                            </div>
-                        </Col>
-                    </Row>
-                </Container>
-            </m.section>
-            {/* Section End */}
-
         {/* Lazy Load HTML */}
         <InViewPort>
-            {/* Section Start */}
-            <m.section className="py-[100px] lg:py-[120px] md:py-[95px] sm:py-[80px] xs;py-[50px] bg-white" {...fadeIn}>
+                {/* Parallax Scrolling Start */}
+            <div className="pt-[130px] pb-[632px] lg:pt-[95px] lg:pb-[600px] md:pt-[70px] md:pb-[400px] sm:pt-[50px] sm:py-[70px] overflow-hidden relative">
+                <Parallax className="lg-no-parallax bg-cover cover-background absolute top-[100px] left-0 md:-top-[30px] w-full h-[100vh]" translateY={[-40, 40]} style={{ backgroundImage: `url(/assets/img/webp/our-story-bg.webp)` }}></Parallax>
                 <Container>
-                    <Row>
-                        <Col className="mb-[4%]">
-                            <h4 className="font-serif text-dark text-center font-medium lg:mb-[15px]">
-                                Our Mission?
-                            </h4>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col lg={5} xs={12} className="px-[15px] md:mb-[15px]">
-                            <div className="bg-transparent sm:p-[30px]">
-                                <h6 className="text-black lg:mb-[45px]">
-                                    Empowering Businesses and Enriching Lives: Where Heart Meets Software for
-                                    Transformational Growth
-                                </h6>
-                            </div>
-                        </Col>
-                        <Col lg={7}  xs={12} className="px-[15px] md:mb-[15px]">
-                            <div className="bg-transparent text-black sm:p-[34px]">
-                                <p>
-                                    Our mission is to revolutionize business improvement through the infusion of heart
-                                    into software solutions. We believe in harnessing the power of technology not just
-                                    for efficiency, but for fostering genuine connections, empathy, trust, and
-                                    understanding within organizations. By putting heart into software, we aim to create
-                                    transformative experiences that empower businesses to thrive, enriching the lives of
-                                    both employees and customers alike.
-                                </p>
-                            </div>
-                        </Col>
-                    </Row>
+                <Row xs={1} className="justify-center">
+                    <Col xl={8} lg={10} className="text-center">
+                    <div className="w-[40px] h-[2px] bg-gradient-to-tr from-[#ff6557] to-[#ff367c] transform rotate-90 my-[30px] inline-block"></div>
+                    <h3 className="font-serif font-medium text-darkgray -tracking-[1px] relative mb-0">We are a <span className="text-gradient bg-gradient-to-tr from-[#ff6557] to-[#ff367c] font-semibold">software company</span> that specializes in enterprise level insurance <span className="text-gradient bg-gradient-to-tr from-[#ff6557] to-[#ff367c] font-semibold">applications and solutions </span></h3>
+                    </Col>
+                </Row>
+                </Container>
+            </div>
+            {/* Parallax Scrolling End */}
+            
+            {/* Section Start */}
+            <section className="pb-[130px] lg:pb-[95px] md:pb-[70px] sm:py-[50px] bg-gradient-to-tr from-[#556fff] via-[#e05fc4] to-[#f767a6]">
+                <Container className="md:mb-[70px] sm:mb-20">
+                <Row className="justify-center">
+                    <Overlap value={70} className="row">
+                    <Col className="col-12 col-md-12 z-0 p-[0px] lg:p-[15px] md:p-[0px] text-center">
+                        <span className="mb-[-60px] relative uppercase text-[11rem] leading-[11rem] md:text-[9rem] sm:hidden font-serif text-center none md:block font-bold opacity-10 -z-[1]">our story</span>
+                        <Atropos
+                        highlight={false}
+                        stretchX={0}
+                        stretchY={0}
+                        rotateTouch={false}
+                        className={`my-atropos -top-[7%] md:top-0 w-full`}
+                        >
+                        <img loading="lazy" src="https://via.placeholder.com/1170x650" className="relative z-10 rounded-[6px]" alt="" data-no-retina="" />
+                        </Atropos>
+                    </Col>
+                    </Overlap>
+                </Row>
+                </Container>
+                <Container>
+                <Row className="justify-center">
+                    <Col md={12} sm={8}>
+                    <ProcessStep theme="process-step-style-05 md:px-0 sm:mb-8" className="our-story-process-step-style overflow-hidden sm:inline-block text-center text-[#fff]" data={ProcessStepDataAbout} animation={fadeIn} />
+                    </Col>
+                </Row>
+                </Container>
+            </section>
+            {/* Section End */}
+
+            {/* Section Start */}
+            <section className="bg-lightgray py-[130px] lg:py-[95px] md:py-[70px] sm:py-[50px] our-story-fancy-text-box">
+                <Container>
+                <Row className="text-center justify-center">
+                    <Col md={6} className="col-12 text-center mb-[4.5rem]">
+                    <span className="font-serif mb-[10px] block uppercase text-md font-medium">RAPID DELIVERY AND GROWTH</span>
+                    <h5 className="font-serif text-darkgray font-medium mb-[25px] -tracking-[1px] xs:mb-[15px]">Our Story</h5>
+                    </Col>
+                </Row>
+                <FancyTextBox
+                    grid="row-cols-1 row-cols-lg-2 gap-y-10 lg:gap-y-[30px] xs:gap-y-[15px]"
+                    className="col-12 col-lg-6 col-md-9 col-sm-10"
+                    theme="fancy-text-box-03"
+                    data={fancyTextBoxAbout}
+                    animation={fadeIn} />
+                </Container>
+            </section>
+            {/* Section End */}
+
+
+                {/* Section Start */}
+                <m.section
+                        className="py-[55px] overflow-hidden lg:py-[90px] md:py-[75px] sm:py-[50px] bg-white lg:px-0 md:px-0 sm:px-0 xs:px-0">
+                        <Container>
+                            <h6 className="font-serif text-darkgray text-center font-medium mb-[60px] md:mb-[50px]">
+                                Customer Satisfaction
+                            </h6>
+                            <Row className="justify-center">
+                                <Col lg={6}>
+                                    <ProgressBar
+                                        theme="progressbar-style-02"
+                                        className=""
+                                        trailColor="#f7f7f7"
+                                        height="8px"
+                                        data={ProgressBarData02}
+                                        color={["#3844F7", "#902CFC"]}/>
+                                </Col>
+                            </Row>
+                        </Container>
+                    </m.section>
+                    {/* Section End */}
+
+                {/* Section Start */}
+                <m.section
+                        className="py-[100px] lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px] bg-no-repeat bg-lightgray bg-center" {...fadeIn} >
+                        <Container>
+                            <Row className="justify-center align-items-center">
+                                <Col md={9} className="text-center mb-[6%]">
+                                    <h6 className="font-serif text-darkgray font-medium">
+                                    WE BELIEVE IN QUALITY DRIVEN SOFTWARE DEVELOPMENT
+                                    </h6>
+                                </Col>
+                            </Row>
+                            <Row className="row-cols-lg-2 justify-center">
+                                <Col md={12} lg={12}>
+                                    <TestimonialsCarousel01
+                                        data={TestimonialsCarouselData1}
+                                        className="swiper-navigation-04 swiper-navigation-light swiper-pagination-dark swiper-pagination-big black-move"
+                                        carouselOption={{
+                                            slidesPerView: 1,
+                                            loop: true,
+                                            navigation: false,
+                                            autoplay: {delay: 6000, disableOnInteraction: false},
+                                            pagination: {dynamicBullets: false, clickable: true},
+                                            keyboard: {enabled: true, onlyInViewport: true},
+                                        }}
+                                    />
+                                </Col>
+                            </Row>
+                        </Container>
+                    </m.section>
+                    {/* Section End */}
+
+                    {/* Section Start */}
+            <section className="py-[130px] lg:py-[95px] md:py-[70px] sm:py-[50px] relative overflow-visible">
+                <Container>
+                <Row className="items-center">
+                    <m.div className="col-lg-6 relative mt-[70px] lg:mt-[30px] md:mb-[50px]" {...fadeIn}>
+                    <div className="relative">
+                        <Parallax className="lg-no-parallax w-[70%] rounded-[6px] lg:relative lg:!top-[-20px]" speed={0}>
+                        <div className="absolute top-0 left-0 w-full h-full rounded-[6px] opacity-50 bg-gradient-to-r from-purple-500 to-pink-500"></div>
+                        <img loading="lazy" src="https://via.placeholder.com/800x945" className="rounded-[6px] w-full" width="394.8" height="466.34" alt="our-process" />
+                        </Parallax>
+                        <Parallax className="lg-no-parallax flex rounded-[6px] justify-center items-center w-[70%] bg-no-repeat absolute bottom-0 right-[15px] lg:!top-[20px] lg:ml-auto" speed={20}>
+                        <img loading="lazy" src="https://via.placeholder.com/800x945" className="rounded-[6px]" width="394.8" height="466.34" alt="our-process" />
+                        </Parallax>
+                    </div>
+                    </m.div>
+                    <m.div className="col-lg-5 offset-lg-1" {...{ ...fadeIn, transition: { delay: 0.5 } }}>
+                    <div className="font-serif text-xmd font-medium mb-[30px]">
+                        <span className="w-[50px] h-[1px] bg-fastblue inline-block align-middle mr-[20px]"></span>
+                        <span className="text-gradient bg-gradient-to-r from-[#556fff] via-[#e05fc4] to-[#ff798e] inline-block">ONE SIZE DOES NOT FIT ALL</span></div>
+                    <h5 className="font-serif text-darkgray font-medium mb-[30px] w-full">TAILORED APPROACH TO UNDERSTAND AND MEET YOUR UNIQUE NEEDS</h5>
+                    <p className="w-[95%] mb-[35px]">We combine cutting-edge innovation with a deep commitment to understanding your specific challenges in the insurance sector, delivering solutions that are both forward-thinking and perfectly aligned with your objectives.</p>
+                    <div className="xs:flex">
+                        <Buttons to="/solutions" className="mr-[20px] xs:mr-[10px] font-medium rounded-none font-serif uppercase hover:text-darkgray btn-slide-filling-right bg-gradient-to-r from-darkgray to-darkgray" size="md" color="#fff" themeColor="#fff" title="EXPLORE SOLUTIONS" />
+                        <Buttons to="/services" className="font-medium rounded-none font-serif uppercase hover:text-white bg-transparent btn-slide-right" color="#232323" size="md" themeColor="#232323" title="EXPLORE SERVICES" />
+                    </div>
+                    </m.div>
+                </Row>
+                </Container>
+            </section>
+            {/* Section End */}
+
+            {/* Section Start */}
+            <m.section className="py-[8%] xs:py-[50px] relative bg-cover overflow-hidden bg-fixed bg-no-repeat bg-center lg:bg-local" style={{ backgroundImage: "url(https://via.placeholder.com/1920x1120)" }}>
+                <div className="absolute h-full w-full opacity-75 top-0 left-0 bg-gradient-to-tr from-[#0039e3] via-[#5e28dd] to-[#8600d4]"></div>
+                <Container>
+                <Row className="row justify-center">
+                    <Col xl={7} lg={8} md={10} className="relative text-center">
+                    <h3 className="font-serif text-white font-semibold mb-[35px]">REACH OUT</h3>
+                    <p className="text-white opacity-70 font-serif text-lg md:text-xmd md:leading-[22px] w-[80%] mx-auto leading-[32px] mb-[45px] sm:w-full">Whether you have questions, have something on your mind, or wish to collaborate.</p>
+                    <Buttons to="/contact" className="btn-fill drop-shadow-md font-medium font-serif uppercase rounded-[50px] btn-shadow text-[15px] md:mb-[15px]" size="lg" themeColor="#fff" color="#000" title="GET IN TOUCH" />
+                    </Col>
+                </Row>
                 </Container>
             </m.section>
             {/* Section End */}
-
-            {/*/!* Section Start *!/*/}
-            {/*<section className="pt-[120px] lg:pt-[95px] md:pt-[80px] sm:pt-[50px] switch-tabs">*/}
-            {/*    <div className="text-center">*/}
-            {/*        <h6 className='text-darkgray font-medium font-serif mb-16 xs:mb-20'>Our Team</h6>*/}
-            {/*    </div>*/}
-            {/*    */}
-            {/*            <section className="py-20">*/}
-            {/*                <Container>*/}
-            {/*                    <Team*/}
-            {/*                        themeColor="dark"*/}
-            {/*                        theme="team-style-01"*/}
-            {/*                        className="text-white"*/}
-            {/*                        data={TeamData01}*/}
-            {/*                        grid="row-cols-1 row-cols-lg-4 row-cols-sm-2 landscape:row-cols-1 landscape:row-cols-lg-4 landscape:row-cols-sm-2 landscape:justify-center gap-y-10"*/}
-            {/*                        animation={fadeIn}*/}
-            {/*                        animationDelay={0.2}*/}
-            {/*                        carousel={false}*/}
-            {/*                        overlay={["#2ed47ce6", "#e8a626e6"]}*/}
-            {/*                        carouselOption={{*/}
-            {/*                            slidesPerView: 1,*/}
-            {/*                            spaceBetween: 30,*/}
-            {/*                            loop: true,*/}
-            {/*                            navigation: true,*/}
-            {/*                            autoplay: {delay: 3000, disableOnInteraction: false},*/}
-            {/*                            pagination: {dynamicBullets: true, clickable: true},*/}
-            {/*                            breakpoints: {*/}
-            {/*                                1200: {slidesPerView: 3},*/}
-            {/*                                992: {slidesPerView: 3},*/}
-            {/*                                768: {slidesPerView: 2}*/}
-            {/*                            }*/}
-            {/*                        }}*/}
-            {/*                    />*/}
-            {/*                </Container>*/}
-            {/*            </section>*/}
-            {/*       */}
-            {/*</section>*/}
-            {/*/!* Section End *!/*/}
 
             {/* Footer Start */}
             <Footer className="startup-footer bg-no-repeat bg-right" theme="light">

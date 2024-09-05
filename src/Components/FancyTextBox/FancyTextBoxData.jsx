@@ -316,4 +316,38 @@ const fancyTextBox05 = [
         },    
 ]
 
-export { fancyTextBox01, fancyTextBox02, fancyTextBox03, fancyTextBox04, fancyTextBox05, fancyTextBox06, fancyTextBox07 }
+const fancyTextBoxAbout = [
+    {
+        icon: {
+            text: "2023",
+            class: "text-gradient bg-gradient-to-r from-[#556fff] to-[#e65f9a]"
+        },
+        title: "UMELLE WAS FOUNDED"
+    },
+    {
+        icon: {
+            text: "2023",
+            class: "text-gradient bg-gradient-to-r from-[#556fff] to-[#e65f9a]"
+        },
+        title: "LANDED OUR FIRST CLIENT",
+        //description: "in apple developer",
+    },
+    {
+        icon: {
+            text: "2024",
+            class: "text-gradient bg-gradient-to-r from-[#556fff] to-[#e65f9a]"
+        },
+        title: "DELIVERED ENTERPRISE SOLUTION",
+        //description: "for apple designing",
+    },
+    {
+        icon: {
+            text: "2024",
+            class: "text-gradient bg-gradient-to-r from-[#556fff] to-[#e65f9a]"
+        },
+        title: "DEVELOPED OUR FIRST PRODUCT",
+        //description: "award in new york",
+    }
+]
+
+export {fancyTextBoxAbout, fancyTextBox01, fancyTextBox02, fancyTextBox03, fancyTextBox04, fancyTextBox05, fancyTextBox06, fancyTextBox07 }

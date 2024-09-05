@@ -70,21 +70,21 @@ const HeaderDataAdjusted = [
             }, {
                 title: 'Managed Services',
                 link: '/services#managed-it-services'
-            }
-        ]
-    }, {
-        title: 'PRODUCTS',
-        link: '/coming-soon',
-        dropdown: [
-            {
-                title: 'PRISM',
-                link: '/products'
             },
             {
                 title: 'Custom Solutions',
                 link: '/custom-solution'
             },
         ]
+    }, {
+        title: 'PRODUCTS',
+        link: '/products',
+        //dropdown: [
+        //    {
+        //        title: 'PRISM',
+        //        link: '/products'
+        //    },
+        //]
     },
     {
         title: 'COMPANY ',

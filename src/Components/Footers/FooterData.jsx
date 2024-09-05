@@ -3,23 +3,23 @@ const FooterData = [
         title: "Services",
         submenu: [
             {
-                title: 'Web & Desktop',
-                link: '/services#webDesktop'
+                title: 'AI and Machine Learning',
+                link: '/ai-and-machine-learning-solutions'
             }, {
-                title: 'Mobile',
-                link: '/services#crossPlatformAndMobile'
+                title: 'Custom Software Development',
+                link: '/custom-software-development'
             }, {
-                title: 'Data Integration and Formats',
-                link: '/services#dataIntegrationAndFormats'
+                title: 'API Development and Integration',
+                link: '/api-development-and-integration'
             }, {
-                title: 'Content Management and Web APIs',
-                link: '/services#contentManagement'
+                title: 'Business Intelligence and Analytics',
+                link: '/business-intelligence-and-analytics'
             }, {
-                title: 'Cloud Services and Deployment',
-                link: '/services#cloudServices'
+                title: 'Cloud Services',
+                link: '/cloud-services'
             }, {
-                title: 'UX/UI Design',
-                link: '/services#uxUI'
+                title: 'Managed IT Services',
+                link: '/managed-it-services'
             },
         ]
     },
@@ -48,8 +48,32 @@ const FooterData = [
         title: "Products",
         submenu: [
             {
-                title: 'Umelle Insurance Management Suite UI MS ',
-                link: '/coming-soon'
+                title: 'DataPilot',
+                link: '/products'
+            },
+            {
+                title: 'Core Platform',
+                link: '/coreplatform'
+            },
+            {
+                title: 'Portal',
+                link: '/uims-portal'
+            },
+            {
+                title: 'Reporting',
+                link: '/uims-reporting'
+            },
+            {
+                title: 'Integrations',
+                link: '/productintegrations'
+            },
+            {
+                title: 'Support',
+                link: '/uims-support'
+            },
+            {
+                title: 'Pricing',
+                link: '/uims-pricing'
             },
         ]
     },
@@ -70,55 +94,35 @@ const FooterData = [
         title: "Products",
         submenu: [
             {
-                title: 'Umelle Insurance Management Suite UI MS ',
-                link: '/coming-soon'
+                title: 'DataPilot',
+                link: '/products'
+            },
+            {
+                title: 'Core Platform',
+                link: '/coreplatform'
+            },
+            {
+                title: 'Portal',
+                link: '/uims-portal'
+            },
+            {
+                title: 'Reporting',
+                link: '/uims-reporting'
+            },
+            {
+                title: 'Integrations',
+                link: '/productintegrations'
+            },
+            {
+                title: 'Support',
+                link: '/uims-support'
+            },
+            {
+                title: 'Pricing',
+                link: '/uims-pricing'
             },
         ]
     },
-    
-    // {
-    //     title: "Additional",
-    //     submenu: [
-    //         {
-    //             title: "Our story",
-    //             link: "/page/our-story"
-    //         },
-    //         {
-    //             title: "Who we are",
-    //             link: "/page/who-we-are"
-    //         },
-    //         {
-    //             title: "Our process",
-    //             link: "/page/our-process"
-    //         },
-    //         {
-    //             title: "Latest news",
-    //             link: "/page/latest-news"
-    //         },
-    //     ]
-    // },
-    
-    // {
-    //     title: "Adavantages",
-    //     submenu: [
-    //         {
-    //             title: "Free delivery",
-    //             link: "/page/faq-s"
-    //         },
-    //         {
-    //             title: "100 days refund",
-    //             link: "/page/faq-s"
-    //         },
-    //         {
-    //             title: "Multiple payments",
-    //             link: "/page/faq-s"
-    //         },
-    //         {
-    //             title: "Sustainable",
-    //             link: "/page/faq-s"
-    //         },
-    //     ]
-    // },
 ]
 
 export default FooterData

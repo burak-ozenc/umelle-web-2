@@ -116,5 +116,20 @@ const ProcessStepData06 = [
     }
 ]
 
+const ProcessStepDataAbout = [
+    {
+        title: "YOUNG AND READY TO GROW",
+        content: "Driven by innovation and eager to evolve with the insurance industry's needs",
+    },
+    {
+        title: "DIVERSE TALENT",
+        content: "Bringing together a rich blend of skills and perspectives to craft cutting-edge solutions ",
+    },
+    {
+        title: "CUSTOMER FOCUSED",
+        content: "Committed to delivering personalized, high-impact solutions tailored to our clients’ unique needs",
+    }
+]
 
-export { ProcessStepData01, ProcessStepData02, ProcessStepData03, ProcessStepData04, ProcessStepData05, ProcessStepData06 }
+
+export { ProcessStepDataAbout, ProcessStepData01, ProcessStepData02, ProcessStepData03, ProcessStepData04, ProcessStepData05, ProcessStepData06 }

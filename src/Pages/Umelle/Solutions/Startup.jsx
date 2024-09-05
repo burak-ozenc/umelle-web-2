@@ -143,85 +143,6 @@ const HomeStartupPage = (props) => {
         <StartupPageBannerSlider/>
         {/* Section End */}
 
-        
-        
-        {/* Section start */}
-        {/*<section className="overflow-visible cover-background"
-                 style={{backgroundImage: `url(/assets/img/SolutionsHeader_v1.webp)`}}>
-            <Container>
-                <LazyMotion strict features={domMax}>
-                    <Row
-                        className="full-screen  pt-20 md:h-[650px] sm:h-[350px] xs:h-[450px] align-items-center justify-center">
-                        <Col xs={12} lg={6} md={6}
-                             className="justify-center items-center my-0 mx-auto relative">
-                            <h6 className="font-serif block leading-[48px] mb-[35px] font-light text-black xs:text-base xs:mb-[40px]"
-                                style={{fontSize:'2.2em'}}
-                            >
-                                Tailor-Made Insurance Data Software Designed Around Your Business Needs
-                            </h6>
-                            <m.span initial={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)'}}
-                                    animate={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)'}}
-                                    transition={{duration: 0.5, delay: 0.8, ease: "easeIn"}}
-                                    style={{fontSize:'1.8em'}}
-                                    className="font-serif block leading-[28px] mb-[35px] font-light text-black xs:text-base xs:mb-[20px]">
-                                The Premier Choice for Pooled Insurance Providers
-                            </m.span>
-                        </Col>
-                        <Col xs={12} lg={6} md={6}
-                             className="justify-center items-center my-0 mx-auto relative flex flex-col">
-                            <Buttons ariaLabel="button"
-                                     href="/contact"
-                                     className="mx-[10px] font-medium font-serif uppercase rounded-none lg:mb-[15px] landscape:lg:mb-[15px] justify-center align-items-center mt-4"
-                                     themeColor={["#3844F7", "#902CFC"]} size="md" color="#fff"
-                                     title="Schedule a meeting"/>
-                        </Col>
-                    </Row>
-                </LazyMotion>
-            </Container>
-        </section>
-        */}
-        {/* Section End */}
-
-        
-        {/* Section Start */}
-        {/*
-        <section className="bg-white pt-20 switch-tabs">
-            <Col className="text-center">
-                <h6 className="font-serif text-darkgray text-center font-medium mb-[2%]">
-                    Empowering Pooled Insurance with Tailor-Made Solutions
-                </h6>
-                <p className="m-[50px] text-[23px] mb-[10px]">
-                    Off-the-shelf software often falls short. Recognizing this gap, we offer solutions and experience to
-                    help meet your precise needs by providing targeted benefits through our core competencies.
-                </p>
-            </Col>
-            <Tabs
-                defaultActiveKey="light"
-                id="uncontrolled-tab-example"
-                className="justify-center"
-                style={{display: 'none'}}
-            >
-                <Tab eventKey="light" title="LIGHT">
-                    <m.section className="py-20 white">
-                        <Container>
-                            <Row className="justify-center">
-                                <Col lg={10} md={10}>
-                                    {anchorKey !== 0 ?
-                                        (<AccordionSolutions theme="accordion-style-03" animation={fadeIn}
-                                                             activeKey={anchorKey}/>)
-                                        :
-                                        (<AccordionSolutions theme="accordion-style-03" animation={fadeIn}
-                                            activeKey={9}/>)
-                                    }
-                                </Col>
-                            </Row>
-                        </Container>
-                    </m.section>
-                </Tab>
-            </Tabs>
-        </section>
-        {/* Section End */}
-
         {/* Section Start */}
       <section className="py-[160px] overflow-hidden lg:py-[60px] md:py-[95px] sm:py-[80px] xs:py-[50px]">
         <Container>
@@ -235,7 +156,7 @@ const HomeStartupPage = (props) => {
               </div>
               <h3 className="alt-font text-darkgray font-semibold mb-[20px] font-serif md:text-center md:mb-[30px] heading-5">Insurance Management</h3>
               <div className="mt-auto mx-auto mx-lg-0">
-                <Buttons href="/" className="font-medium font-serif uppercase bg-[#fff] hover:bg-black rounded-none md:mb-[15px] text-xxs btn-fancy xs:mb-0" color="#000" size="sm" themeColor="#000" title="Discover litho" />
+                <Buttons href="/contact" className="font-medium font-serif uppercase bg-[#fff] hover:bg-black rounded-none md:mb-[15px] text-xxs btn-fancy xs:mb-0" color="#000" size="sm" themeColor="#000" title="GET FREE QUOTE" />
               </div>
             </m.div>    
           </Row>
@@ -270,7 +191,7 @@ const HomeStartupPage = (props) => {
               </div>
               <h3 className="alt-font text-darkgray font-semibold mb-[20px] font-serif md:text-center md:mb-[30px] heading-5">Operations Management</h3>
               <div className="mt-auto mx-auto mx-lg-0">
-                <Buttons href="/" className="font-medium font-serif uppercase bg-[#fff] hover:bg-black rounded-none md:mb-[15px] text-xxs btn-fancy xs:mb-0" color="#000" size="sm" themeColor="#000" title="Discover litho" />
+                <Buttons href="/contact" className="font-medium font-serif uppercase bg-[#fff] hover:bg-black rounded-none md:mb-[15px] text-xxs btn-fancy xs:mb-0" color="#000" size="sm" themeColor="#000" title="GET FREE QUOTE" />
               </div>
             </m.div>
             <Col xl={{ span: 7, offset: 2 }} lg={8}>
@@ -285,7 +206,7 @@ const HomeStartupPage = (props) => {
         <InViewPort>
 
             {/* Section Start */}
-        <section className="py-[55px] lg:py-[95px] md:py-[70px] sm:py-[50px] relative overflow-visible">
+        <section className="py-[55px] lg:py-[95px] md:py-[70px] sm:py-[50px] relative overflow-visible bg-lightgray">
             <Container>
                 <Row className="items-center">
                     <m.div className="col-lg-6 relative mt-[70px] lg:mt-[30px] md:mb-[50px]" {...fadeIn}>
@@ -323,7 +244,7 @@ const HomeStartupPage = (props) => {
         {/* Section End */}
 
             {/* Section Start */}
-            <m.section className="bg-lightgray py-[160px] lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px]" {...fadeIn}>
+            <m.section className="bg-white py-[160px] lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px]" {...fadeIn}>
                 <Container>
                     <Counter
                         theme="counter-style-05"
@@ -349,7 +270,7 @@ const HomeStartupPage = (props) => {
             </m.section>
             {/*/!* Section End *!/*/}
 
-            {/* Section Start */}
+            {/* Section Start 
             <m.section className="bg-white">
                 <Container>
                     <Row>
@@ -528,7 +449,7 @@ const HomeStartupPage = (props) => {
 
             {/* Section Start */}
             <m.section
-                className="bg-lightgray py-[55px] border-t lg:py-[100px] md:py-[95px] sm:py-[80px] xs:py-[50px]" {...fadeIn}>
+                className="bg-white py-[55px] border-t lg:py-[100px] md:py-[95px] sm:py-[80px] xs:py-[50px]" {...fadeIn}>
                 <Container>
                     <Row className="justify-center">
                         <Col md={12} className="text-center m-5 mb-[7%]">

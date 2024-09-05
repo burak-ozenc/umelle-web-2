@@ -241,8 +241,8 @@ const HomeStartupPage = (props) => {
                             <h6 className="font-serif text-darkgray font-medium">Our Tech Stack</h6>
                         </Col>
                     </Row>
-                    <Tabs className="tab-style-01 font-serif mb-[7.4rem] flex border-b-0 font-medium text-center justify-center md:mb-[60px] sm:mb-[20px]">
-                        <Tab className="tab-style-01" key={1} eventKey={1} title={ "Technologies"}>
+                    <Tabs className="tab-style-01 font-serif mb-[7.4rem] flex border-b-0 font-medium text-center md:mb-[60px] sm:mb-[20px]">
+                        <Tab className="tab-style-01 mb-[7.4rem]" key={1} eventKey={1} title={ "Technologies"}>
                             <m.div className='row items-center' {...{ ...fadeIn, transition: { duration: 0.9 }, viewport: { once: false } }}>
                                 <Col lg={{ offset: 1, span: 11 }} md={12} className="md:px-[15px] sm:px-[15px] sm:text-start xs:text-center">
                                     <Clients
@@ -263,7 +263,7 @@ const HomeStartupPage = (props) => {
                                 </Col>
                             </m.div>
                         </Tab>
-                        <Tab className="tab-style-01" key={2} eventKey={2} title={ "Languages"}>
+                        <Tab className="tab-style-01 mb-[7.4rem]" key={2} eventKey={2} title={ "Languages"}>
                             <m.div className='row items-center' {...{ ...fadeIn, transition: { duration: 0.9 }, viewport: { once: false } }}>
                                 <Col lg={{ offset: 1, span: 11 }} md={12} className="md:px-[15px] sm:px-[15px] sm:text-start xs:text-center">
                                     <Clients
@@ -284,7 +284,7 @@ const HomeStartupPage = (props) => {
                                 </Col>
                             </m.div>
                         </Tab>
-                        <Tab className="tab-style-01" key={3} eventKey={3} title={ "Data Formats"}>
+                        <Tab className="tab-style-01 mb-[7.4rem]" key={3} eventKey={3} title={ "Data Formats"}>
                             <m.div className='row items-center' {...{ ...fadeIn, transition: { duration: 0.9 }, viewport: { once: false } }}>
                                 <Col lg={{ offset: 1, span: 11 }} md={12} className="md:px-[15px] sm:px-[15px] sm:text-start xs:text-center">
                                     <Clients

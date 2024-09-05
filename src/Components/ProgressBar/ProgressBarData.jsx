@@ -15,15 +15,15 @@ const ProgressBarData01 = [
 
 const ProgressBarData02 = [
     {
-        title:"Member&User Management",
+        title:"Timely Delivery",
         value:"96",
     },
     {
-        title:"Custom Reports&Analytics",
+        title:"Subject Matter Expertise",
         value:"94",
     },
     {
-        title:"Invoice Generation",
+        title:"Flexibility on Change Requests",
         value:"100",
     },
 ]
