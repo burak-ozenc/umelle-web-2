@@ -44,10 +44,10 @@ const HomeStartupPage = (props) => {
     return (<div style={props.style}>
         {/*SEO Starts*/}
         <SEO
-            title='Umelle Software | Quality-driven Custom Software Development'
-            description='It takes a combination of teamwork and technical chops to deliver superior software. Our team comes to the table with both while offering complete visibility over our processes.'
-            name='UMELLE'
-            type='article'/>
+            title="Umelle Software: Enterprise Solutions for Insurance Management"
+            description="Discover Umelle Software's enterprise-level insurance applications, specializing in custom, quality-driven software development for pooled insurance providers. Learn how our tailored solutions enhance operations, integrate seamlessly, and drive business growth with advanced analytics and superior customer service."
+            name="UMELLE"
+            type="article"/>
         {/*SEO Ends*/}
 
         {/* Header Start */}
