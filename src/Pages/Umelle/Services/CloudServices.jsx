@@ -63,8 +63,8 @@ const CloudServices = (props) => {
     return (<div style={props.style}>
         {/*SEO Starts*/}
         <SEO
-            title='Quality-Driven Custom Software that Meets Your Operational Goals'
-            description='Our team handles everything, optimizing costs, time, and scope. Our comprehensive cloud services cover assessment, migration, management, and optimization.'
+            title='Empowering Your Business with Cloud Technology | UMELLE'
+            description='Unlock the potential of cloud technology with UMELLE’s comprehensive services, including seamless migration, efficient management, and scalable cloud-native development. Benefit from expert solutions that provide flexibility, efficiency, and cost savings.'
             name='UMELLE'
             type='article'/>
         {/*SEO Ends*/}

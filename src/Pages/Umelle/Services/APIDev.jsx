@@ -63,8 +63,8 @@ const APIDev = (props) => {
     return (<div style={props.style}>
         {/*SEO Starts*/}
         <SEO
-            title='Quality-Driven Custom Software that Meets Your Operational Goals'
-            description='Our team handles everything, optimizing costs, time, and scope. Our comprehensive cloud services cover assessment, migration, management, and optimization.'
+            title='Seamless Connectivity with Custom API Solutions | UMELLE'
+            description='Ensure secure, scalable, and efficient connectivity across your applications with UMELLE’s custom API development services. Leverage technologies like .NET Core and Azure API Management to streamline operations and enhance functionality.'
             name='UMELLE'
             type='article'/>
         {/*SEO Ends*/}

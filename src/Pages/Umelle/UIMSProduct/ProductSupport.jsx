@@ -119,8 +119,8 @@ const ProductSupport = (props) => {
     return (<div style={props.style}>
         {/*SEO Starts*/}
         <SEO
-            title='Insurance and Operations Management for Pooled Insurance Providers'
-            description='Our custom architecture allows ultimate flexibility from superior member and user management to fully customizable features and functionalities.'
+            title='Comprehensive Support for Insurance Operations | UMELLE'
+            description='UMELLE offers unmatched support services for pooled insurance providers, ensuring seamless operations with minimal downtime and rapid resolution of issues.'
             name='UMELLE'
             type='article'/>
         {/*SEO Ends*/}

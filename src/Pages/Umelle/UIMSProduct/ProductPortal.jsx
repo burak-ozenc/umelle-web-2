@@ -119,8 +119,8 @@ const ProductPortal = (props) => {
     return (<div style={props.style}>
         {/*SEO Starts*/}
         <SEO
-            title='Insurance and Operations Management for Pooled Insurance Providers'
-            description='Our custom architecture allows ultimate flexibility from superior member and user management to fully customizable features and functionalities.'
+            title='Optimized Member Portal for Pooled Insurance Providers | UMELLE'
+            description='Streamline member management, automate document handling, and ensure data accuracy with UMELLE’s centralized portal, designed for pooled insurance providers to enhance operational efficiency.'
             name='UMELLE'
             type='article'/>
         {/*SEO Ends*/}

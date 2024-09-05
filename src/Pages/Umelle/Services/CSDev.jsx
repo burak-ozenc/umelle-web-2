@@ -63,8 +63,8 @@ const CSDev = (props) => {
     return (<div style={props.style}>
         {/*SEO Starts*/}
         <SEO
-            title='Quality-Driven Custom Software that Meets Your Operational Goals'
-            description='Our team handles everything, optimizing costs, time, and scope. Our comprehensive cloud services cover assessment, migration, management, and optimization.'
+            title='Tailored Software Solutions for Unique Business Needs | UMELLE'
+            description='Develop robust, responsive, and user-friendly applications with UMELLE’s custom software development services. Leverage cutting-edge technologies like .NET Core, Blazor, and Azure DevOps to achieve a competitive edge in your industry.'
             name='UMELLE'
             type='article'/>
         {/*SEO Ends*/}

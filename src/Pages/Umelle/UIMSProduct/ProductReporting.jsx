@@ -119,8 +119,8 @@ const ProductReporting = (props) => {
     return (<div style={props.style}>
         {/*SEO Starts*/}
         <SEO
-            title='Insurance and Operations Management for Pooled Insurance Providers'
-            description='Our custom architecture allows ultimate flexibility from superior member and user management to fully customizable features and functionalities.'
+            title='Dynamic Reporting & Data Insights for Pooled Insurance Providers | UMELLE'
+            description='Gain real-time insights with our customizable reporting tools. Our dynamic dashboards help you visualize critical data to stay ahead in the insurance industry.'
             name='UMELLE'
             type='article'/>
         {/*SEO Ends*/}

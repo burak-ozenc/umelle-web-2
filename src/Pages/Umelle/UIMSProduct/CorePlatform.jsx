@@ -119,8 +119,8 @@ const CorePlatform = (props) => {
     return (<div style={props.style}>
         {/*SEO Starts*/}
         <SEO
-            title='Insurance and Operations Management for Pooled Insurance Providers'
-            description='Our custom architecture allows ultimate flexibility from superior member and user management to fully customizable features and functionalities.'
+            title='Insurance and Operations Management for Pooled Insurance Providers | UMELLE'
+            description='Discover UMELLE’s custom platform offering unparalleled flexibility for pooled insurance providers with superior member and user management, customizable features, and comprehensive data capabilities.'
             name='UMELLE'
             type='article'/>
         {/*SEO Ends*/}

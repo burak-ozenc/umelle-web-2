@@ -113,10 +113,10 @@ const HomeStartupPage = (props) => {
     return (<div style={props.style}>
         {/*SEO Starts*/}
         <SEO
-            title='Insurance and Operations Management Solutions and Software '
-            description='Specializing in insurance, we create custom software solutions tailored to your business needs, combining cost efficiency with cutting-edge modular architecture.'
+            title='UMELLE | Custom Software Solutions for Pooled Insurance Providers'
+            description='UMELLE offers innovative custom software solutions to streamline operations and enhance management for pooled insurance providers. Discover how our tailored technology can optimize your business.'
             name='UMELLE'
-            type='article'/>
+            type='website'/>
         {/*SEO Ends*/}
         
         {/* Header Start */}

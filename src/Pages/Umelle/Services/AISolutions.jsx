@@ -63,8 +63,8 @@ const AISolutions = (props) => {
     return (<div style={props.style}>
         {/*SEO Starts*/}
         <SEO
-            title='Quality-Driven Custom Software that Meets Your Operational Goals'
-            description='Our team handles everything, optimizing costs, time, and scope. Our comprehensive cloud services cover assessment, migration, management, and optimization.'
+            title='Unlock Business Potential with AI and Machine Learning | UMELLE'
+            description='Drive smarter decisions and automate processes with Umelle’s AI and machine learning solutions. Harness predictive analytics, natural language processing, and real-time automation to enhance efficiency and foster innovation within your organization.'
             name='UMELLE'
             type='article'/>
         {/*SEO Ends*/}

@@ -122,8 +122,8 @@ const ProductIntegrations = (props) => {
     return (<div style={props.style}>
         {/*SEO Starts*/}
         <SEO
-            title='Insurance and Operations Management for Pooled Insurance Providers'
-            description='Our custom architecture allows ultimate flexibility from superior member and user management to fully customizable features and functionalities.'
+            title='Seamless Integration for Pooled Insurance Providers | UMELLE'
+            description='UMELLE offers flexible APIs, secure data exchange, and scalable infrastructure to ensure seamless integration with third-party systems, optimizing performance and enhancing capabilities for pooled insurance providers.'
             name='UMELLE'
             type='article'/>
         {/*SEO Ends*/}

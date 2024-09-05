@@ -49,8 +49,8 @@ const ProductPricing = (props) => {
     return (<div style={props.style}>
         {/*SEO Starts*/}
         <SEO
-            title='Insurance and Operations Management for Pooled Insurance Providers'
-            description='Our custom architecture allows ultimate flexibility from superior member and user management to fully customizable features and functionalities.'
+            title='Customizable Pricing for Pooled Insurance Providers | UMELLE'
+            description='Discover flexible and tailored pricing plans for our comprehensive insurance management solutions. Get in touch with our experts to find the right package for your needs.'
             name='UMELLE'
             type='article'/>
         {/*SEO Ends*/}

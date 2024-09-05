@@ -64,10 +64,10 @@ const LandingPage = (props) => {
     return (<div style={props.style}>
         {/*SEO Starts*/}
         <SEO
-            title='Landing Page'
-            description=''
-            name='UMELLE'
-            type=''/>
+            title="Landing Page"
+            description="Experience the future of insurance management with UMELLE's comprehensive solutions tailored to meet your unique needs. Our platform offers seamless integration, advanced analytics, and member services for pooled insurance providers."
+            name="UMELLE"
+            type="article"/>
         {/*SEO Ends*/}
         
         {/* Header Start */}

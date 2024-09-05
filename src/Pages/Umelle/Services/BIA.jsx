@@ -63,8 +63,8 @@ const BIA = (props) => {
     return (<div style={props.style}>
         {/*SEO Starts*/}
         <SEO
-            title='Quality-Driven Custom Software that Meets Your Operational Goals'
-            description='Our team handles everything, optimizing costs, time, and scope. Our comprehensive cloud services cover assessment, migration, management, and optimization.'
+            title='Data-Driven Insights for Strategic Decisions | UMELLE'
+            description='Empower your business with advanced reporting, interactive dashboards, and real-time analytics. Leverage UMELLE’s expertise for comprehensive data integration and visualization solutions that drive strategic decisions.'
             name='UMELLE'
             type='article'/>
         {/*SEO Ends*/}

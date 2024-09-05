@@ -63,8 +63,8 @@ const ManagedServices = (props) => {
     return (<div style={props.style}>
         {/*SEO Starts*/}
         <SEO
-            title='Quality-Driven Custom Software that Meets Your Operational Goals'
-            description='Our team handles everything, optimizing costs, time, and scope. Our comprehensive cloud services cover assessment, migration, management, and optimization.'
+            title='Comprehensive IT Solutions for Your Business | UMELLE'
+            description='Optimize your IT operations with UMELLE’s managed services, ensuring smooth and secure functionality while you focus on core business activities. Our expertise and proactive support keep your business running efficiently.'
             name='UMELLE'
             type='article'/>
         {/*SEO Ends*/}
