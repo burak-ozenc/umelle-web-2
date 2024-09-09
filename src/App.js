@@ -156,7 +156,7 @@ function App() {
                   <Route path="/managed-it-services" element={<ManagedServices style={{ "--base-color": "#3844F7" }} />} />
                   <Route path="/coreplatform" element={<CorePlatform style={{ "--base-color": "#3844F7" }} />} />
                   <Route path="/Orion-Dataworks-pricing" element={<ProductPricing style={{ "--base-color": "#3844F7" }} />} />
-                  <Route path="/productintegrations" element={<ProductIntegrations style={{ "--base-color": "#3844F7" }} />} />
+                  <Route path="/Orion-Dataworks-integrations" element={<ProductIntegrations style={{ "--base-color": "#3844F7" }} />} />
                   <Route path="/Orion-Dataworks-support" element={<ProductSupport style={{ "--base-color": "#3844F7" }} />} />
                   <Route path="/Orion-Dataworks-portal" element={<ProductPortal style={{ "--base-color": "#3844F7" }} />} />
                   <Route path="/Orion-Dataworks-reporting" element={<ProductReporting style={{ "--base-color": "#3844F7" }} />} />

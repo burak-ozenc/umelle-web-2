@@ -246,7 +246,7 @@ const HomeStartupPage = (props) => {
                                 <div className="bg-darkslateblue absolute h-full w-full top-0 left-0 opacity-20"></div>
                                 <img className="w-full" alt="" src="https://via.placeholder.com/457x607" width="457.5px" height="607.66px" />
 
-                                {/* Modal Component Start */}
+                                {/* Modal Component Start 
                                 <CustomModal.Wrapper
                                     className="absolute top-0 items-center flex h-full left-[-50px] md:right-0 md:justify-center md:w-full md:left-0"
                                     modalBtn={<Buttons ariaLabel="modal button" type="submit" className="btn-sonar border-0 shadow-[0_0_15px_rgba(0,0,0,0.1)]" themeColor="#fff" color="#902CFC" size="xxl" title={<i className="feather-play text-[35px]" />} />} >

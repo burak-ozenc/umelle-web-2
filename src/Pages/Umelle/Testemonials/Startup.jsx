@@ -120,110 +120,110 @@ const Testemonials = (props) => {
         <InViewPort>
             
             {/* Section Start */}
-      <m.section className="py-[60px] lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px] border-b border-solid" {...fadeIn}>
-                <Container>
-                    <Row className="row-cols-1 justify-center">
-                        <Col xl={8} lg={10} className="text-center">
-                            <div className="w-[40px] h-[2px] bg-gradient-to-tr from-[#ff6557] via-[#ff4271] to-[#ff367c] transform rotate-90 my-[30px] inline-block"></div>
-                            <h3 className="font-serif font-medium text-darkgray -tracking-[1px]">Explore how we drive <span className="text-gradient bg-gradient-to-tr from-[#ff6052] to-[#ff367c] font-semibold">client success</span></h3>
+                <m.section className="py-[60px] lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px] border-b border-solid" {...fadeIn}>
+                    <Container>
+                        <Row className="row-cols-1 justify-center">
+                            <Col xl={8} lg={10} className="text-center">
+                                <div className="w-[40px] h-[2px] bg-gradient-to-tr from-[#ff6557] via-[#ff4271] to-[#ff367c] transform rotate-90 my-[30px] inline-block"></div>
+                                <h3 className="font-serif font-medium text-darkgray -tracking-[1px]">Explore how we drive <span className="text-gradient bg-gradient-to-tr from-[#ff6052] to-[#ff367c] font-semibold">client success</span></h3>
+                            </Col>
+                        </Row>
+                    </Container>
+                </m.section>
+            {/* Section End */}
+
+            {/* Section Start */}
+                <m.section className="bg-lightgray py-[130px] lg:py-[90px] md:py-[75px] xs:py-[50px]"{...fadeIn}>
+                    <Container>
+                    <Row>
+                        <Col>
+                        <TestimonialTab data={TabData} className="about-me-page-tab"/>
                         </Col>
                     </Row>
-                </Container>
-            </m.section>
-        {/* Section End */}
+                    </Container>
+                </m.section>
+            {/* Section End */}
 
-        {/* Section Start */}
-      <m.section className="bg-lightgray py-[130px] lg:py-[90px] md:py-[75px] xs:py-[50px]"{...fadeIn}>
-        <Container>
-          <Row>
-            <Col>
-              <TestimonialTab data={TabData} className="about-me-page-tab"/>
-            </Col>
-          </Row>
-        </Container>
-      </m.section>
-      {/* Section End */}
-
-      {/* Section Start */}
-      <m.section
-        className="py-[55px] overflow-hidden lg:py-[90px] md:py-[75px] sm:py-[50px] bg-white lg:px-0 md:px-0 sm:px-0 xs:px-0">
-            <Container>
-                <h6 className="font-serif text-darkgray text-center font-medium mb-[60px] md:mb-[50px]">
-                    Customer Satisfaction
-                </h6>
-                <Row className="justify-center">
-                    <Col lg={6}>
-                        <ProgressBar
-                            theme="progressbar-style-02"
-                            className=""
-                            trailColor="#f7f7f7"
-                            height="8px"
-                            data={ProgressBarData02}
-                            color={["#3844F7", "#902CFC"]}/>
-                    </Col>
-                </Row>
-            </Container>
-        </m.section>
-        {/* Section End */}
-
-        {/* Section Start */}
-        <m.section className="py-[95px] lg:py-[95px] md:py-[95px] sm:py-[80px] xs:py-[50px] bg-black" {...fadeIn} >
-                <h6 className="font-serif text-white text-center font-medium mb-16 xs:mb-16">
-                    Testimonials
-                </h6>
-                <Container>
-                    <Row className="justify-center">
-                        <Col xl={6} md={9}>
-                            <TestimonialsCarousel03
-                                data={TestimonialsCarouselData3}
-                                className="white-move"
-                                carouselOption={{
-                                    slidesPerView: 1,
-                                    loop: true,
-                                    navigation: false,
-                                    autoplay: { delay: 6000, disableOnInteraction: false },
-                                }}
-                            />
-                        </Col>
-                    </Row>
-                </Container>
+            {/* Section Start */}
+            <m.section
+                className="py-[55px] overflow-hidden lg:py-[90px] md:py-[75px] sm:py-[50px] bg-white lg:px-0 md:px-0 sm:px-0 xs:px-0">
+                    <Container>
+                        <h6 className="font-serif text-darkgray text-center font-medium mb-[60px] md:mb-[50px]">
+                            Customer Satisfaction
+                        </h6>
+                        <Row className="justify-center">
+                            <Col lg={6}>
+                                <ProgressBar
+                                    theme="progressbar-style-02"
+                                    className=""
+                                    trailColor="#f7f7f7"
+                                    height="8px"
+                                    data={ProgressBarData02}
+                                    color={["#3844F7", "#902CFC"]}/>
+                            </Col>
+                        </Row>
+                    </Container>
             </m.section>
             {/* Section End */}
 
             {/* Section Start */}
-            <m.section className="py-[8%] xs:py-[50px] relative bg-cover overflow-hidden bg-fixed bg-no-repeat bg-center lg:bg-local" style={{backgroundImage: `url(${reachOut})` }}>
-                <div className="absolute h-full w-full opacity-75 top-0 left-0 bg-gradient-to-tr from-[#0039e3] via-[#5e28dd] to-[#8600d4]"></div>
-                <Container>
-                <Row className="row justify-center">
-                    <Col xl={7} lg={8} md={10} className="relative text-center">
-                    <h3 className="font-serif text-white font-semibold mb-[35px]">REACH OUT</h3>
-                    <p className="text-white opacity-70 font-serif text-lg md:text-xmd md:leading-[22px] w-[80%] mx-auto leading-[32px] mb-[45px] sm:w-full">Whether you have questions, have something on your mind, or wish to collaborate.</p>
-                    <Buttons to="/contact" className="btn-fill drop-shadow-md font-medium font-serif uppercase rounded-[50px] btn-shadow text-[15px] md:mb-[15px]" size="lg" themeColor="#fff" color="#000" title="GET IN TOUCH" />
-                    </Col>
-                </Row>
-                </Container>
-            </m.section>
-            {/* Section End */}
-
-            {/* Footer Start */}
-            <Footer className="startup-footer bg-no-repeat bg-right" theme="light">
-                <Container fluid className="xs:opacity-0 xs:hidden">
-                    <Row>
-                        <Col className="h-[65px] lg:h-[30px] bg-top bg-no-repeat"
-                             style={{backgroundImage: "url(/assets/img/webp/home-startup-footer-shadow.webp)"}}>
-                        </Col>
-                    </Row>
-                </Container>
-                <div className="py-[4%] lg:py-[7%] md:py-[50px]">
+            <m.section className="py-[95px] lg:py-[95px] md:py-[95px] sm:py-[80px] xs:py-[50px] bg-black" {...fadeIn} >
+                    <h6 className="font-serif text-white text-center font-medium mb-16 xs:mb-16">
+                        Testimonials
+                    </h6>
                     <Container>
-                        <Row md={4} className="justify-center gap-y-[25px]">
-                            <FooterMenu data={Footer_Data} md={3} sm={6} className="xl:px-[15px]"
-                                        titleClass="capitalize text-dark"/>
+                        <Row className="justify-center">
+                            <Col xl={6} md={9}>
+                                <TestimonialsCarousel03
+                                    data={TestimonialsCarouselData3}
+                                    className="white-move"
+                                    carouselOption={{
+                                        slidesPerView: 1,
+                                        loop: true,
+                                        navigation: false,
+                                        autoplay: { delay: 6000, disableOnInteraction: false },
+                                    }}
+                                />
+                            </Col>
                         </Row>
                     </Container>
-                </div>
-            </Footer>
-            {/* Footer End */}
+                </m.section>
+                {/* Section End */}
+
+                {/* Section Start */}
+                <m.section className="py-[8%] xs:py-[50px] relative bg-cover overflow-hidden bg-fixed bg-no-repeat bg-center lg:bg-local" style={{backgroundImage: `url(${reachOut})` }}>
+                    <div className="absolute h-full w-full opacity-75 top-0 left-0 bg-gradient-to-tr from-[#0039e3] via-[#5e28dd] to-[#8600d4]"></div>
+                    <Container>
+                    <Row className="row justify-center">
+                        <Col xl={7} lg={8} md={10} className="relative text-center">
+                        <h3 className="font-serif text-white font-semibold mb-[35px]">REACH OUT</h3>
+                        <p className="text-white opacity-70 font-serif text-lg md:text-xmd md:leading-[22px] w-[80%] mx-auto leading-[32px] mb-[45px] sm:w-full">Whether you have questions, have something on your mind, or wish to collaborate.</p>
+                        <Buttons to="/contact" className="btn-fill drop-shadow-md font-medium font-serif uppercase rounded-[50px] btn-shadow text-[15px] md:mb-[15px]" size="lg" themeColor="#fff" color="#000" title="GET IN TOUCH" />
+                        </Col>
+                    </Row>
+                    </Container>
+                </m.section>
+                {/* Section End */}
+
+                {/* Footer Start */}
+                <Footer className="startup-footer bg-no-repeat bg-right" theme="light">
+                    <Container fluid className="xs:opacity-0 xs:hidden">
+                        <Row>
+                            <Col className="h-[65px] lg:h-[30px] bg-top bg-no-repeat"
+                                style={{backgroundImage: "url(/assets/img/webp/home-startup-footer-shadow.webp)"}}>
+                            </Col>
+                        </Row>
+                    </Container>
+                    <div className="py-[4%] lg:py-[7%] md:py-[50px]">
+                        <Container>
+                            <Row md={4} className="justify-center gap-y-[25px]">
+                                <FooterMenu data={Footer_Data} md={3} sm={6} className="xl:px-[15px]"
+                                            titleClass="capitalize text-dark"/>
+                            </Row>
+                        </Container>
+                    </div>
+                </Footer>
+                {/* Footer End */}
         </InViewPort>
     </div>)
 }

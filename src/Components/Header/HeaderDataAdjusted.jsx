@@ -79,12 +79,36 @@ const HeaderDataAdjusted = [
     }, {
         title: 'PRODUCTS',
         link: '/products',
-        //dropdown: [
-        //    {
-        //        title: 'PRISM',
-        //        link: '/products'
-        //    },
-        //]
+        dropdown: [
+            {
+                title: 'Orion-Dataworks',
+                link: '/products'
+            },
+            {
+                title: 'Core Platform',
+                link: '/coreplatform'
+            },
+            {
+                title: 'Portal',
+                link: '/Orion-Dataworks-portal'
+            },
+            {
+                title: 'Reporting',
+                link: '/Orion-Dataworks-reporting'
+            },
+            {
+                title: 'Integrations',
+                link: '/Orion-Dataworks-integrations'
+            },
+            {
+                title: 'Support',
+                link: '/Orion-Dataworks-support'
+            },
+            {
+                title: 'Pricing',
+                link: '/Orion-Dataworks-pricing'
+            },
+        ]
     },
     {
         title: 'COMPANY ',
