@@ -31,6 +31,9 @@ import TestimonialsCarousel01 from "../../../Components/TestimonialCarousel/Test
 import SEO from "../../../Components/Umelle/SEO";
 import { Parallax } from 'react-scroll-parallax';
 import ourStory from '../../../Assets/img/umelle/About/our story-01.png';
+import reachOut from '../../../Assets/img/Product/pricing/ProductPricing_Header-01.png';
+import aboutPar1 from '../../../Assets/img/About/AboutPar1.png';
+import aboutPar2 from '../../../Assets/img/About/AboutPar2.png';
 
 const Header = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Header})))
 const HeaderNav = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.HeaderNav})))
@@ -86,47 +89,47 @@ const HomeStartupPage = (props) => {
         {/* Lazy Load HTML */}
         <InViewPort>
                 {/* Parallax Scrolling Start */}
-            <div className="pt-[130px] pb-[632px] lg:pt-[95px] lg:pb-[600px] md:pt-[70px] md:pb-[400px] sm:pt-[50px] sm:py-[70px] overflow-hidden relative">
-                <Parallax className="lg-no-parallax bg-cover cover-background absolute top-[100px] left-0 md:-top-[30px] w-full h-[100vh]" translateY={[-40, 40]} style={{ backgroundImage: `url(/assets/img/webp/our-story-bg.webp)` }}></Parallax>
-                <Container>
-                <Row xs={1} className="justify-center">
-                    <Col xl={8} lg={10} className="text-center">
-                    <div className="w-[40px] h-[2px] bg-gradient-to-tr from-[#ff6557] to-[#ff367c] transform rotate-90 my-[30px] inline-block"></div>
-                    <h3 className="font-serif font-medium text-darkgray -tracking-[1px] relative mb-0">We are a <span className="text-gradient bg-gradient-to-tr from-[#ff6557] to-[#ff367c] font-semibold">software company</span> that specializes in enterprise level insurance <span className="text-gradient bg-gradient-to-tr from-[#ff6557] to-[#ff367c] font-semibold">applications and solutions </span></h3>
-                    </Col>
-                </Row>
-                </Container>
-            </div>
+                <div className="pt-[130px] pb-[632px] lg:pt-[95px] lg:pb-[600px] md:pt-[70px] md:pb-[400px] sm:pt-[50px] sm:py-[70px] overflow-hidden relative">
+                    <Parallax className="lg-no-parallax bg-cover cover-background absolute top-[100px] left-0 md:-top-[30px] w-full h-[100vh]" translateY={[-40, 40]} style={{ backgroundImage: `url(/assets/img/webp/our-story-bg.webp)` }}></Parallax>
+                    <Container>
+                    <Row xs={1} className="justify-center">
+                        <Col xl={8} lg={10} className="text-center">
+                        <div className="w-[40px] h-[2px] bg-gradient-to-tr from-[#ff6557] to-[#ff367c] transform rotate-90 my-[30px] inline-block"></div>
+                        <h3 className="font-serif font-medium text-darkgray -tracking-[1px] relative mb-0">We specialize in enterprise level insurance <span className="text-gradient bg-gradient-to-tr from-[#ff6557] to-[#ff367c] font-semibold">applications and solutions </span></h3>
+                        </Col>
+                    </Row>
+                    </Container>
+                </div>
             {/* Parallax Scrolling End */}
             
             {/* Section Start */}
-            <section className="pb-[130px] lg:pb-[95px] md:pb-[70px] sm:py-[50px] bg-gradient-to-tr from-[#556fff] via-[#e05fc4] to-[#f767a6]">
-                <Container className="md:mb-[70px] sm:mb-20">
-                <Row className="justify-center">
-                    <Overlap value={70} className="row">
-                    <Col className="col-12 col-md-12 z-0 p-[0px] lg:p-[15px] md:p-[0px] text-center">
-                        <span className="mb-[-60px] relative uppercase text-[11rem] leading-[11rem] md:text-[9rem] sm:hidden font-serif text-center none md:block font-bold opacity-10 -z-[1]">our story</span>
-                        <Atropos
-                        highlight={false}
-                        stretchX={0}
-                        stretchY={0}
-                        rotateTouch={false}
-                        className={`my-atropos -top-[7%] md:top-0 w-full`}
-                        >
-                        <img loading="lazy" src={ourStory} className="relative z-10 rounded-[6px]" alt="" data-no-retina="" />
-                        </Atropos>
-                    </Col>
-                    </Overlap>
-                </Row>
-                </Container>
-                <Container>
-                <Row className="justify-center">
-                    <Col md={12} sm={8}>
-                    <ProcessStep theme="process-step-style-05 md:px-0 sm:mb-8" className="our-story-process-step-style overflow-hidden sm:inline-block text-center text-[#fff]" data={ProcessStepDataAbout} animation={fadeIn} />
-                    </Col>
-                </Row>
-                </Container>
-            </section>
+                <section className="pb-[130px] lg:pb-[95px] md:pb-[70px] sm:py-[50px] bg-gradient-to-tr from-[#fbb03b] via-[#ed1e79] to-[#0071bc]">
+                    <Container className="md:mb-[70px] sm:mb-20">
+                    <Row className="justify-center">
+                        <Overlap value={70} className="row">
+                        <Col className="col-12 col-md-12 z-0 p-[0px] lg:p-[15px] md:p-[0px] text-center">
+                            <span className="mb-[-60px] relative uppercase text-[11rem] leading-[11rem] md:text-[9rem] sm:hidden font-serif text-center none md:block font-bold opacity-10 -z-[1]">our story</span>
+                            <Atropos
+                            highlight={false}
+                            stretchX={0}
+                            stretchY={0}
+                            rotateTouch={false}
+                            className={`my-atropos -top-[7%] md:top-0 w-full`}
+                            >
+                            <img loading="lazy" src={ourStory} className="relative z-10 rounded-[6px]" alt="" data-no-retina="" />
+                            </Atropos>
+                        </Col>
+                        </Overlap>
+                    </Row>
+                    </Container>
+                    <Container>
+                    <Row className="justify-center">
+                        <Col md={12} sm={8}>
+                        <ProcessStep theme="process-step-style-05 md:px-0 sm:mb-8" className="our-story-process-step-style overflow-hidden sm:inline-block text-center text-[#fff]" data={ProcessStepDataAbout} animation={fadeIn} />
+                        </Col>
+                    </Row>
+                    </Container>
+                </section>
             {/* Section End */}
 
             {/* Section Start */}
@@ -149,9 +152,9 @@ const HomeStartupPage = (props) => {
             {/* Section End */}
 
 
-                {/* Section Start */}
+            {/* Section Start */}
                 <m.section
-                        className="py-[55px] overflow-hidden lg:py-[90px] md:py-[75px] sm:py-[50px] bg-white lg:px-0 md:px-0 sm:px-0 xs:px-0">
+                    className="py-[55px] overflow-hidden lg:py-[90px] md:py-[75px] sm:py-[50px] bg-white lg:px-0 md:px-0 sm:px-0 xs:px-0">
                         <Container>
                             <h6 className="font-serif text-darkgray text-center font-medium mb-[60px] md:mb-[50px]">
                                 Customer Satisfaction
@@ -168,10 +171,10 @@ const HomeStartupPage = (props) => {
                                 </Col>
                             </Row>
                         </Container>
-                    </m.section>
-                    {/* Section End */}
+                </m.section>
+            {/* Section End */}
 
-                {/* Section Start */}
+            {/* Section Start */}
                 <m.section
                         className="py-[100px] lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px] bg-no-repeat bg-lightgray bg-center" {...fadeIn} >
                         <Container>
@@ -200,41 +203,41 @@ const HomeStartupPage = (props) => {
                             </Row>
                         </Container>
                     </m.section>
-                    {/* Section End */}
+                {/* Section End */}
 
-                    {/* Section Start */}
-            <section className="py-[130px] lg:py-[95px] md:py-[70px] sm:py-[50px] relative overflow-visible">
-                <Container>
-                <Row className="items-center">
-                    <m.div className="col-lg-6 relative mt-[70px] lg:mt-[30px] md:mb-[50px]" {...fadeIn}>
-                    <div className="relative">
-                        <Parallax className="lg-no-parallax w-[70%] rounded-[6px] lg:relative lg:!top-[-20px]" speed={0}>
-                        <div className="absolute top-0 left-0 w-full h-full rounded-[6px] opacity-50 bg-gradient-to-r from-purple-500 to-pink-500"></div>
-                        <img loading="lazy" src="https://via.placeholder.com/800x945" className="rounded-[6px] w-full" width="394.8" height="466.34" alt="our-process" />
-                        </Parallax>
-                        <Parallax className="lg-no-parallax flex rounded-[6px] justify-center items-center w-[70%] bg-no-repeat absolute bottom-0 right-[15px] lg:!top-[20px] lg:ml-auto" speed={20}>
-                        <img loading="lazy" src="https://via.placeholder.com/800x945" className="rounded-[6px]" width="394.8" height="466.34" alt="our-process" />
-                        </Parallax>
-                    </div>
-                    </m.div>
-                    <m.div className="col-lg-5 offset-lg-1" {...{ ...fadeIn, transition: { delay: 0.5 } }}>
-                    <div className="font-serif text-xmd font-medium mb-[30px]">
-                        <span className="w-[50px] h-[1px] bg-fastblue inline-block align-middle mr-[20px]"></span>
-                        <span className="text-gradient bg-gradient-to-r from-[#556fff] via-[#e05fc4] to-[#ff798e] inline-block">ONE SIZE DOES NOT FIT ALL</span></div>
-                    <h5 className="font-serif text-darkgray font-medium mb-[30px] w-full">TAILORED APPROACH TO UNDERSTAND AND MEET YOUR UNIQUE NEEDS</h5>
-                    <p className="w-[95%] mb-[35px]">We combine cutting-edge innovation with a deep commitment to understanding your specific challenges in the insurance sector, delivering solutions that are both forward-thinking and perfectly aligned with your objectives.</p>
-                    <div className="xs:flex">
-                        <Buttons to="/solutions" className="mr-[20px] xs:mr-[10px] font-medium rounded-none font-serif uppercase hover:text-darkgray btn-slide-filling-right bg-gradient-to-r from-darkgray to-darkgray" size="md" color="#fff" themeColor="#fff" title="EXPLORE SOLUTIONS" />
-                        <Buttons to="/services" className="font-medium rounded-none font-serif uppercase hover:text-white bg-transparent btn-slide-right" color="#232323" size="md" themeColor="#232323" title="EXPLORE SERVICES" />
-                    </div>
-                    </m.div>
-                </Row>
-                </Container>
-            </section>
+                {/* Section Start */}
+                <section className="py-[130px] lg:py-[95px] md:py-[70px] sm:py-[50px] relative overflow-visible">
+                    <Container>
+                    <Row className="items-center">
+                        <m.div className="col-lg-6 relative mt-[70px] lg:mt-[30px] md:mb-[50px]" {...fadeIn}>
+                        <div className="relative">
+                            <Parallax className="lg-no-parallax w-[70%] rounded-[6px] lg:relative lg:!top-[-20px]" speed={0}>
+                            <div className="absolute top-0 left-0 w-full h-full rounded-[6px] opacity-50 bg-gradient-to-r from-purple-500 to-pink-500"></div>
+                            <img loading="lazy" src={aboutPar2} className="rounded-[6px] w-full" width="394.8" height="466.34" alt="our-process" />
+                            </Parallax>
+                            <Parallax className="lg-no-parallax flex rounded-[6px] justify-center items-center w-[70%] bg-no-repeat absolute bottom-0 right-[15px] lg:!top-[20px] lg:ml-auto" speed={20}>
+                            <img loading="lazy" src={aboutPar1} className="rounded-[6px]" width="394.8" height="466.34" alt="our-process" />
+                            </Parallax>
+                        </div>
+                        </m.div>
+                        <m.div className="col-lg-5 offset-lg-1" {...{ ...fadeIn, transition: { delay: 0.5 } }}>
+                        <div className="font-serif text-xmd font-medium mb-[30px]">
+                            <span className="w-[50px] h-[1px] bg-fastblue inline-block align-middle mr-[20px]"></span>
+                            <span className="text-gradient bg-gradient-to-r from-[#556fff] via-[#e05fc4] to-[#ff798e] inline-block">ONE SIZE DOES NOT FIT ALL</span></div>
+                        <h5 className="font-serif text-darkgray font-medium mb-[30px] w-full">TAILORED APPROACH TO UNDERSTAND AND MEET YOUR UNIQUE NEEDS</h5>
+                        <p className="w-[95%] mb-[35px]">We combine cutting-edge innovation with a deep commitment to understanding your specific challenges in the insurance sector, delivering solutions that are both forward-thinking and perfectly aligned with your objectives.</p>
+                        <div className="xs:flex">
+                            <Buttons to="/solutions" className="mr-[20px] xs:mr-[10px] font-medium rounded-none font-serif uppercase hover:text-darkgray btn-slide-filling-right bg-gradient-to-r from-darkgray to-darkgray" size="md" color="#fff" themeColor="#fff" title="EXPLORE SOLUTIONS" />
+                            <Buttons to="/services" className="font-medium rounded-none font-serif uppercase hover:text-white bg-transparent btn-slide-right" color="#232323" size="md" themeColor="#232323" title="EXPLORE SERVICES" />
+                        </div>
+                        </m.div>
+                    </Row>
+                    </Container>
+                </section>
             {/* Section End */}
 
             {/* Section Start */}
-            <m.section className="py-[8%] xs:py-[50px] relative bg-cover overflow-hidden bg-fixed bg-no-repeat bg-center lg:bg-local" style={{ backgroundImage: "url(https://via.placeholder.com/1920x1120)" }}>
+            <m.section className="py-[8%] xs:py-[50px] relative bg-cover overflow-hidden bg-fixed bg-no-repeat bg-center lg:bg-local" style={{backgroundImage: `url(${reachOut})` }}>
                 <div className="absolute h-full w-full opacity-75 top-0 left-0 bg-gradient-to-tr from-[#0039e3] via-[#5e28dd] to-[#8600d4]"></div>
                 <Container>
                 <Row className="row justify-center">

@@ -2,7 +2,7 @@ import React, { memo } from 'react'
 
 // Libraries
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination } from "swiper";
+import { Autoplay, Pagination } from "swiper/modules";
 import { PropTypes } from "prop-types";
 
 // Data
@@ -20,8 +20,8 @@ const TestimonialsCarousel03 = (props) => {
                     props.data.map((item, i) => {
                         return (
                             <SwiperSlide key={i}>
-                                {item.content && <h6 className="font-serif text-center mb-14 leading-[44px] sm:leading-[34px]">{item.content}</h6>}
-                                {(item.firstname || item.lastname) && <h6 className="name font-serif text-center mb-[5px] font-light"><span className="font-semibold">{item.firstname}</span> {item.lastname}</h6>}
+                                {item.content && <h7 className="font-serif text-center mb-14 leading-[34px] sm:leading-[34px]">{item.content}</h7>}
+                                {(item.firstname || item.lastname) && <h6 className="name font-serif text-center mb-[5px] font-light text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC]"><span className="font-semibold">{item.firstname}</span> {item.lastname}</h6>}
                                 {item.designation && <span className="text-center block">{item.designation}</span>}
                             </SwiperSlide>
                         )

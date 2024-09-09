@@ -80,28 +80,10 @@ const TestimonialsCarouselData2 = [
 
 const TestimonialsCarouselData3 = [
     {
-        firstname: "Alexander ",
-        lastname: "harvard",
-        designation: "Creative director",
-        content: "This theme has a wide variety of options and a really good customer support. Some of the customizations are limited but even so the theme still gives a lot of features."
-    },
-    {
-        firstname: "Herman",
-        lastname: "miller",
-        designation: "Creative director",
-        content: "There are design companies and then there are user experience, design, consulting, interface design. I wanted to hire the best and after looking at several other companies."
-    },
-    {
-        firstname: "Lindsay",
-        lastname: "swanson",
-        designation: "Creative director",
-        content: "Absolutely amazing theme, flexible and awesome design with possibilities. It's so easy to use and to customize. Simply the great designs and best theme for WooCommerce."
-    },
-    {
-        firstname: "Jeremy",
-        lastname: "dupont",
-        designation: "Creative director",
-        content: "I wanted to hire the best and after looking at several other companies, I knew Jacob was the perfect guy. I wanted to hire the best and after looking at several other companies."
+        firstname: "Andy ",
+        lastname: "Sells",
+        designation: "ex-CEO ACWA JPIA",
+        content: "I want to express my appreciation for the exceptional collaboration on the IDMS project. Your expertise and commitment to innovation helped us navigate evolving requirements and seamlessly integrate new ideas. Your understanding of insurance business logic was crucial in developing the comprehensive enterprise-level systems that overcame challenges and delivered success. I look forward to our continued partnership and future achievements."
     },
 ]
 
