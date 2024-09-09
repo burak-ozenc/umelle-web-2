@@ -29,6 +29,7 @@ import pricingtitleImage from "../../../Assets/img/Product/pricing/PricingHeader
 import pricingSection2Image from '../../../Assets/img/Product/pricing/ProductPriCing_sECTION2-01.png';
 import { fancyTextBox07 } from '../../../Components/FancyTextBox/FancyTextBoxData';
 import bannerbot1 from '../../../Assets/img/Product/banner-01.jpg';
+import pricingFAQ from '../../../Assets/img/Product/pricing/pricing_FAQ.png';
 
 const Header = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Header})))
 const HeaderNav = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.HeaderNav})))
@@ -193,7 +194,7 @@ const ProductPricing = (props) => {
         {/* Section End */}
 
         {/* Section Start */}
-        <section className="overflow-hidden bg-[#f9f6f3] md:py-[75px] sm:py-[50px]">
+        <section className="overflow-hidden bg-white md:py-[75px] sm:py-[50px]">
                     <Container>
                         <Row className="justify-center">
                             <Col xl={5} lg={6} md={10} className="flex flex-col justify-center md:py-0 md:mb-20">
@@ -205,7 +206,7 @@ const ProductPricing = (props) => {
                             </Col>
                             <Col xl={{ offset: 1 }} lg={6} md={10}>
                                 <m.div className="mr-[-30vw] relative md:mr-0" {...fadeInLeft}>
-                                    <img className="w-full" src="https://via.placeholder.com/944x805" alt="contatc" width={944} height={805} />
+                                    <img className="w-full" src={pricingFAQ} alt="contatc" width={944} height={805} />
                                 </m.div>
                             </Col>
                         </Row>
@@ -214,7 +215,7 @@ const ProductPricing = (props) => {
         {/* Section End */}
 
         {/* Section start */}
-      <m.section className="pt-0 pb-[10%] px-[10%] xl:px-[3%] md:px-[30px] sm:px-0 xs:px-0" {...fadeIn}>
+      <m.section className="pt-5 pb-0 px-[10%] xl:px-[3%] md:px-[30px] sm:px-0 xs:px-0" {...fadeIn}>
         <div className="bg-gradient-to-tr from-[#902CFC] via-[#3844F7] to-[#4423C4] rounded-[5px] overflow-hidden pt-[126px] md:pt-[72px]">
           <Container>
             <Row className="justify-center items-center">

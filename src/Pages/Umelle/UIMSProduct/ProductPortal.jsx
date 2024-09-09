@@ -357,7 +357,7 @@ const ProductPortal = (props) => {
         {/* Section End */}
 
         {/* Section start */}
-      <m.section className="pt-0 pb-[10%] px-[10%] xl:px-[3%] md:px-[30px] sm:px-0 xs:px-0" {...fadeIn}>
+      <m.section className="pt-5 pb-0 px-[10%] xl:px-[3%] md:px-[30px] sm:px-0 xs:px-0" {...fadeIn}>
         <div className="bg-gradient-to-tr from-[#902CFC] via-[#3844F7] to-[#4423C4] rounded-[5px] overflow-hidden pt-[126px] md:pt-[72px]">
           <Container>
             <Row className="justify-center items-center">

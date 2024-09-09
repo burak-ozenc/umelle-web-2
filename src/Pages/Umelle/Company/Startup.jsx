@@ -30,7 +30,7 @@ import {
 import TestimonialsCarousel01 from "../../../Components/TestimonialCarousel/TestimonialsCarousel01";
 import SEO from "../../../Components/Umelle/SEO";
 import { Parallax } from 'react-scroll-parallax';
-
+import ourStory from '../../../Assets/img/umelle/About/our story-01.png';
 
 const Header = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Header})))
 const HeaderNav = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.HeaderNav})))
@@ -113,7 +113,7 @@ const HomeStartupPage = (props) => {
                         rotateTouch={false}
                         className={`my-atropos -top-[7%] md:top-0 w-full`}
                         >
-                        <img loading="lazy" src="https://via.placeholder.com/1170x650" className="relative z-10 rounded-[6px]" alt="" data-no-retina="" />
+                        <img loading="lazy" src={ourStory} className="relative z-10 rounded-[6px]" alt="" data-no-retina="" />
                         </Atropos>
                     </Col>
                     </Overlap>
