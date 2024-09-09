@@ -280,7 +280,7 @@ const fancyTextBox05 = [
             },
             title: "PORTAL",
             description: "Learn More",
-            link: "/uims-portal",
+            link: "/Orion-Dataworks-portal",
         },
         {
             icon: {
@@ -288,7 +288,7 @@ const fancyTextBox05 = [
             },
             title: "REPORTING",
             description: "Learn More",
-            link: "/uims-reporting",
+            link: "/Orion-Dataworks-reporting",
         },
         {
             icon: {
@@ -304,7 +304,7 @@ const fancyTextBox05 = [
             },
             title: "SUPPORT",
             description: "Learn More",
-            link: "/uims-support",
+            link: "/Orion-Dataworks-support",
         },
         {
             icon: {
@@ -312,7 +312,7 @@ const fancyTextBox05 = [
             },
             title: "Pricing",
             description: "Learn More",
-            link: "/uims-pricing",
+            link: "/Orion-Dataworks-pricing",
         },    
 ]
 

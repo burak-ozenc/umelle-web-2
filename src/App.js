@@ -154,11 +154,11 @@ function App() {
                   <Route path="/cloud-services" element={<CloudServices style={{ "--base-color": "#3844F7" }} />} />
                   <Route path="/managed-it-services" element={<ManagedServices style={{ "--base-color": "#3844F7" }} />} />
                   <Route path="/coreplatform" element={<CorePlatform style={{ "--base-color": "#3844F7" }} />} />
-                  <Route path="/uims-pricing" element={<ProductPricing style={{ "--base-color": "#3844F7" }} />} />
+                  <Route path="/Orion-Dataworks-pricing" element={<ProductPricing style={{ "--base-color": "#3844F7" }} />} />
                   <Route path="/productintegrations" element={<ProductIntegrations style={{ "--base-color": "#3844F7" }} />} />
-                  <Route path="/uims-support" element={<ProductSupport style={{ "--base-color": "#3844F7" }} />} />
-                  <Route path="/uims-portal" element={<ProductPortal style={{ "--base-color": "#3844F7" }} />} />
-                  <Route path="/uims-reporting" element={<ProductReporting style={{ "--base-color": "#3844F7" }} />} />
+                  <Route path="/Orion-Dataworks-support" element={<ProductSupport style={{ "--base-color": "#3844F7" }} />} />
+                  <Route path="/Orion-Dataworks-portal" element={<ProductPortal style={{ "--base-color": "#3844F7" }} />} />
+                  <Route path="/Orion-Dataworks-reporting" element={<ProductReporting style={{ "--base-color": "#3844F7" }} />} />
                   <Route path="/custom-solution" element={<CustomSolution style={{ "--base-color": "#3844F7" }} />} />
                 </Routes>
               </Suspense>

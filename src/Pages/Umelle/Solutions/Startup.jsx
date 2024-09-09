@@ -2,7 +2,7 @@ import React, {lazy, useEffect, useState} from 'react'
 
 // Libraries
 import {Link} from 'react-router-dom';
-import {Accordion, Col, Container, Navbar, Row} from "react-bootstrap";
+import {Col, Container, Navbar, Row} from "react-bootstrap";
 import {m} from 'framer-motion';
 
 // Functions
@@ -14,6 +14,9 @@ import FooterMenu, {Footer} from '../../../Components/Footers/Footer';
 import InViewPort from '../../../Components/InViewPort';
 import IconWithText from '../../../Components/IconWithText/IconWithText';
 import {IconWithTextData_13, IconWithTextData_12} from '../../../Components/IconWithText/IconWithTextData';
+import InteractiveBanners04 from "../../../Components/InteractiveBanners/InteractiveBanners04";
+import {InteractiveBannersData21,InteractiveBannersData22} from "../../../Components/InteractiveBanners/InteractiveBannersData";
+
 
 // Data
 import FooterData from '../../../Components/Footers/FooterData';
@@ -270,203 +273,23 @@ const HomeStartupPage = (props) => {
             </m.section>
             {/*/!* Section End *!/*/}
 
-            {/* Section Start 
-            <m.section className="bg-white">
-                <Container>
-                    <Row>
-                        <Col>
-                            <h6 className="font-serif text-center text-black justify-center align-items-center m-5">
-                                Transforming Industries: Real-World Success Story
-                            </h6>
-                        </Col>
-                    </Row>
-                    <Row className="mt-[40px]">
-                        <Col md={4}  xs={12} className="mb-3">
-                            <div>
-                                <p>
-                                    <span className="font-bold text-black">Client Name: </span>
-                                    ACWA JPIA
-                                </p>
-                                <br/>
-                                <p>
-                                    <span className="font-bold text-black">Industry: </span>
-                                    Pooled Insurer for Water Supply and Infrastructure
-                                </p>
-                                <br/>
-                                <p>
-                                    <span className="font-bold text-black">Client Overview: </span>
-                                    ACWA JPIA is a pooled insurer, providing insurance services to more than 350
-                                    members. Part of the larger JPIA group of like-minded Insurers and Service
-                                    Providers,
-                                    they provide top-level services to their members and clients.
-                                </p>
-                            </div>
-                        </Col>
-                        <Col md={8}>
-                            <Row className="justify-center">
-                                <Col lg={10} md={10}>
-                                    <div
-                                        id="testx"
-                                        className={`accordion-style-03 ${props.themeColor}${props.className ? ` ${props.className}` : ""}`}>
-                                        <Accordion defaultActiveKey={1}>
-                                            <div id={1} className={`accordion-item-wrapper`}
-                                                 key={1}
-                                                 {...{
-                                                     ...props.animation,
-                                                     transition: {delay: 0 * props.animationDelay}
-                                                 }}
-                                            >
-                                                <Accordion.Item key={1} eventKey={null}>
-                                                    <Accordion.Header>
-                                                        The Challenge
-                                                    </Accordion.Header>
-
-                                                    <Accordion.Body>
-                                                        <div>
-                                                            <p>
-                                                                ACWA JPIA saw the opportunity to optimize and modernize
-                                                                their operations and business management software.
-                                                            </p>
-                                                            <br/>
-                                                            <p>
-                                                                Canned products were dragging the organization down with
-                                                                undue cost and complex procedures that didn't meet their
-                                                                standards.
-                                                            </p>
-                                                            <br/>
-                                                            <p>
-                                                                Using several vendors to provide services created
-                                                                issues, as some services were not meeting scalability
-                                                                and flexibility standards.
-                                                            </p>
-                                                        </div>
-                                                    </Accordion.Body>
-                                                </Accordion.Item>
-                                            </div>
-                                            <div id={2} className={`accordion-item-wrapper`}
-                                                 key={2}
-                                                 {...{
-                                                     ...props.animation,
-                                                     transition: {delay: 0 * props.animationDelay}
-                                                 }}
-                                            >
-                                                <Accordion.Item key={2} eventKey={2}>
-                                                    <Accordion.Header>
-                                                        The Solution
-                                                    </Accordion.Header>
-
-                                                    <Accordion.Body>
-                                                        <div>
-                                                            <p>
-                                                                We crafted an end-to-end member and resource management
-                                                                system aimed solely at solving the problems of the
-                                                                company and their members. The system offers a full host
-                                                                of features, including:
-                                                            </p>
-                                                            <br/>
-                                                            <ol>
-                                                                <li>Business Intelligence, Reporting and Analytics</li>
-                                                                <li>Custom Wizzard</li>
-                                                                <li>User Management</li>
-                                                                <li>Member Management and Services</li>
-                                                                <li>Data Repositories and Templates</li>
-                                                                <li>Automated Invoicing</li>
-                                                                <li>Liability</li>
-                                                                <li>Workers Compensation</li>
-                                                                <li>Property</li>
-                                                                <li>Incident and Claims Management</li>
-                                                                <li>Dashboard</li>
-                                                                <li>Contact Management</li>
-                                                                <li>Finance Management</li>
-                                                            </ol>
-                                                        </div>
-                                                    </Accordion.Body>
-                                                </Accordion.Item>
-                                            </div>
-
-                                            <div id={3} className={`accordion-item-wrapper`}
-                                                 key={3}
-                                                 {...{
-                                                     ...props.animation,
-                                                     transition: {delay: 0 * props.animationDelay}
-                                                 }}
-                                            >
-                                                <Accordion.Item key={3} eventKey={3}>
-                                                    <Accordion.Header>
-                                                        Process and Collaboration:
-                                                    </Accordion.Header>
-
-                                                    <Accordion.Body>
-                                                        <div>
-                                                            <p>
-                                                                Our collaboration used the strengths of the Agile
-                                                                methodology to maximize feedback and allow for
-                                                                successful module iterations that ultimately delivered
-                                                                on the organization's needs.
-                                                            </p>
-                                                        </div>
-                                                    </Accordion.Body>
-                                                </Accordion.Item>
-                                            </div>
-
-                                            <div id={4} className={`accordion-item-wrapper`}
-                                                 key={4}
-                                                 {...{
-                                                     ...props.animation,
-                                                     transition: {delay: 0 * props.animationDelay}
-                                                 }}
-                                            >
-                                                <Accordion.Item key={4} eventKey={4}>
-                                                    <Accordion.Header>
-                                                        The Impact
-                                                    </Accordion.Header>
-
-                                                    <Accordion.Body>
-                                                        <div>
-                                                            <p>
-                                                                This process also allowed our team to understand the
-                                                                business in more detail, which led to many breakthroughs
-                                                                and innovations in the way the solution was delivered.
-                                                                Through a robust relationship and collaboration, UMELLE
-                                                                was able to deploy this experience to develop a unique
-                                                                solution and optimize the operations of several key
-                                                                functions; allowing the organization to focus on new
-                                                                horizons.
-                                                            </p>
-                                                        </div>
-                                                    </Accordion.Body>
-                                                </Accordion.Item>
-                                            </div>
-                                        </Accordion>
-                                    </div>
-                                </Col>
-                            </Row>
-                        </Col>
-                    </Row>
-                </Container>
-            </m.section>
             {/* Section Start */}
-
-            {/* Section Start */}
-            <m.section
-                className="bg-white py-[55px] border-t lg:py-[100px] md:py-[95px] sm:py-[80px] xs:py-[50px]" {...fadeIn}>
-                <Container>
-                    <Row className="justify-center">
-                        <Col md={12} className="text-center m-5 mb-[7%]">
-                            <h6 className="font-serif text-black font-medium">
-                                Crafted for Unmatched Efficiency
-                            </h6>
-                        </Col>
-                    </Row>
-                    <Row className="justify-center">
-                        <Col lg={12} md={11} xs={12} className="md:px-0">
-                            <Services grid="row-cols-lg-3 row-cols-1 md:my-0 md:mx-auto gap-y-10 justify-center"
-                                      theme='service-style-05' className="col-md-10" data={serviceData5}
-                                      animation={fadeIn}/>
-                        </Col>
-                    </Row>
+            <section className="py-[60px] lg:py-[60px] md:py-[95px] sm:py-[80px] xs:py-[50px] bg-white">
+                <Container fluid className="px-[30px] xs:px-[15px]">
+                <h6 className="font-serif text-gray-900 text-center font-medium mb-[91px] xl:mb-[105px] lg:mb-[74px] md:mb-[65px] sm:mb-[53px] xs:mb-[46px] xxs:mb-[40px]">Crafted for Unmatched Efficiency</h6>
+                <InteractiveBanners04
+                    grid="row-cols-12 gap-y-10 sm:justify-center"
+                    overlay={["#0039e3cc", "#4132e0cc", "#5e28ddcc", "#741bd9cc", "#8600d4cc"]}
+                    data={InteractiveBannersData21}
+                    animation={fadeIn} />
+                    <InteractiveBanners04
+                    grid="row-cols-12 gap-y-10 sm:justify-center py-7"
+                    overlay={["#0039e3cc", "#4132e0cc", "#5e28ddcc", "#741bd9cc", "#8600d4cc"]}
+                    data={InteractiveBannersData22}
+                    animation={fadeIn} />
                 </Container>
-            </m.section>
+                
+            </section>
             {/* Section End */}
 
             {/* CTA Banner Section Start */}

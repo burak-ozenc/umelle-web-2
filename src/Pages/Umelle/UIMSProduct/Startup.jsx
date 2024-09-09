@@ -95,7 +95,7 @@ const HomeStartupPage = (props) => {
         {/*SEO Starts*/}
         <SEO
             title="Unified Data Management Software for Pooled Insurance Providers"
-            description="PoolInsure AMS offers an all-in-one data management solution specifically designed for pooled insurance providers. Enhance your operations with accurate data management, risk assessment, and streamlined claims processing."
+            description="Orion-Dataworks offers an all-in-one data management solution specifically designed for pooled insurance providers. Enhance your operations with accurate data management, risk assessment, and streamlined claims processing."
             name="UMELLE"
             type="article"
         />
@@ -193,7 +193,7 @@ const HomeStartupPage = (props) => {
                     <Row className="row-cols-1 justify-center">
                         <Col xl={8} lg={10} className="text-center">
                             <div className="w-[40px] h-[2px] bg-gradient-to-tr from-[#ff6557] via-[#ff4271] to-[#ff367c] transform rotate-90 my-[30px] inline-block"></div>
-                            <h3 className="font-serif font-medium text-darkgray -tracking-[1px]">PoolInsure AMS aligns with your <span className="text-gradient bg-gradient-to-tr from-[#ff6052] to-[#ff367c] font-semibold">needs and challenges</span></h3>
+                            <h3 className="font-serif font-medium text-darkgray -tracking-[1px]">Orion-Dataworks aligns with your <span className="text-gradient bg-gradient-to-tr from-[#ff6052] to-[#ff367c] font-semibold">needs and challenges</span></h3>
                         </Col>
                     </Row>
                 </Container>

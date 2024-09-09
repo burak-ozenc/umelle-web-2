@@ -329,7 +329,7 @@ const ProductPortal = (props) => {
                 {...fadeInLeft}
               >
                 <h2 className="heading-4 mb-[40px] leading-[40px] font-semibold tracking-[-2px] text-darkgray font-serif xs:mb-[20px]">
-                  <span className="p-0 block">PoolInsure PROVIDES</span>
+                  <span className="p-0 block">Orion-Dataworks PROVIDES</span>
                   <TextAnime
                     duration={3000}
                     color="#232323"

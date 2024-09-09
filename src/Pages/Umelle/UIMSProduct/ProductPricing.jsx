@@ -98,7 +98,7 @@ const ProductPricing = (props) => {
           <Row className="justify-end md:justify-center">
             <Col xl={7} lg={7} md={9} sm={11}>
               <div className="px-[7rem] py-[5rem] rounded-md shadow-[0_0_30px_rgb(0,0,0,0.08)] bg-white sm:p-20 xs:rounded-none xs:px-[3.5rem] xs:py-[6rem]">
-                <span className="mb-[15px] font-medium text-center text-[#8bb867] text-md font-serif uppercase block sm:mb-[10px]">REQUEST PRICING </span>
+                <span className="mb-[15px] font-medium text-center text-[#902CFC] text-md font-serif uppercase block sm:mb-[10px]">REQUEST PRICING </span>
                 <h5 className="w-[80%] mb-[40px] font-bold text-center	tracking-[-1px] text-black font-serif uppercase mx-auto xs:w-full">OUR EXPERTS WILL GET IN TOUCH WITH YOU </h5>
                 <Formik
                   initialValues={{ name: '', email: '' }}
@@ -113,7 +113,7 @@ const ProductPricing = (props) => {
                     <Form className="mb-[30px]">
                       <Input showErrorMsg={false} type="text" name="name" labelClass="mb-[25px]" className="rounded-[5px] text-md py-[15px] px-[20px] w-full border-[1px] border-solid border-[#dfdfdf]" placeholder="Your name" />
                       <Input showErrorMsg={false} type="email" name="email" labelClass="mb-[25px]" className="rounded-[5px] text-md py-[15px] px-[20px] w-full border-[1px] border-solid border-[#dfdfdf]" placeholder="Your email address" />
-                      <Buttons ariaLabel="form button" type="submit" className={`btn-fill text-sm leading-none font-medium tracking-[1px] py-[13px] px-[32px] rounded-[4px] w-full uppercase mb-[5px]${isSubmitting ? " loading" : ""}`} themeColor="#8bb867" color="#fff" size="lg" title="Request a call schedule" />
+                      <Buttons ariaLabel="form button" type="submit" className={`btn-fill text-sm leading-none font-medium tracking-[1px] py-[13px] px-[32px] rounded-[4px] w-full uppercase mb-[5px]${isSubmitting ? " loading" : ""}`} themeColor="#902CFC" color="#fff" size="lg" title="Request a call schedule" />
                       <AnimatePresence>
                         {status && <m.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}><MessageBox className="mt-[20px] text-center py-[10px]" theme="message-box01" variant="success" message="Your message has been sent successfully!" /></m.div>}
                       </AnimatePresence>
@@ -153,7 +153,7 @@ const ProductPricing = (props) => {
                 <h2 className="heading-5 font-serif text-[#2f2f2f] font-bold uppercase tracking-[-2px]">
                 PRICING MODEL
                 </h2>
-                <blockquote className="border-l-[4px] text-darkgray font-medium border-[#8bb867] text-xmd pl-[25px] pr-0 mt-[40px] mb-[30px] lg:w-[95%]"> Our pricing model is simple.
+                <blockquote className="border-l-[4px] text-darkgray font-medium border-[#902CFC] text-xmd pl-[25px] pr-0 mt-[40px] mb-[30px] lg:w-[95%]"> Our pricing model is simple.
                 </blockquote>
                 <p className="w-[100%] mb-[5px] md:w-full">
                 1. Purchase the licenses and permissions you need  
@@ -197,10 +197,10 @@ const ProductPricing = (props) => {
                     <Container>
                         <Row className="justify-center">
                             <Col xl={5} lg={6} md={10} className="flex flex-col justify-center md:py-0 md:mb-20">
-                                <h2 className="heading-5 font-serif font-medium text-darkgray tracking-[-1px] mb-[4.5rem] w-[75%] md:mb-16 md:w-full">We provide solutions to grow your business</h2>
+                                <h2 className="heading-5 font-serif font-medium text-darkgray tracking-[-1px] mb-[4.5rem] w-[75%] md:mb-16 md:w-full">Frequently asked questions</h2>
                                 <Accordion theme="accordion-style-03" animation={fadeIn} data={AccordionData} className="consulting-accordion" />
-                                <p className="mt-12">Looking for someone in particular?
-                                    <Link aria-label="link contatc classic" to="/page/contact-classic" className="text-darkgray font-medium underline underline-offset-4 hover:text-[#BF8C4C] ml-[5px]">Get in touch</Link>
+                                <p className="mt-12">Have more questions?
+                                    <Link aria-label="link contatc classic" to="/contact" className="text-darkgray font-medium underline underline-offset-4 hover:text-[#BF8C4C] ml-[5px]">Get in touch</Link>
                                 </p>
                             </Col>
                             <Col xl={{ offset: 1 }} lg={6} md={10}>

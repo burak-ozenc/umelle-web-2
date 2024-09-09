@@ -18,7 +18,6 @@ import PortfolioBordered from '../../../Components/Portfolio/PortfolioBordered';
 import FooterData from '../../../Components/Footers/FooterData';
 import {IconWithTextData_02} from "../../../Components/IconWithText/IconWithTextData";
 import Accordions from "../../../Components/Accordion/Accordion";
-import { FilterData } from '../../../Components/Portfolio/PortfolioData';
 import portimg1 from '../../../Assets/img/HomePage/Artboard 1.png';
 import portimg2 from '../../../Assets/img/HomePage/Artboard 2.png';
 import portimg3 from '../../../Assets/img/HomePage/Artboard 3.png';
@@ -34,8 +33,6 @@ const HeaderNav = React.lazy(() => import("../../../Components/Header/Header").t
 const Menu = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Menu})))
 
 const Buttons = lazy(() => import('../../../Components/Button/Buttons'))
-const SideButtons = lazy(() => import("../../../Components/SideButtons"))
-const StartupPageBannerSlider = lazy(() => import('./StartupBanner'))
 const SEO = lazy(() => import('../../../Components/Umelle/SEO'))
 
 const PortfolioData = [
@@ -153,23 +150,14 @@ const HomeStartupPage = (props) => {
         {/* Header End */}
 
         {/* Section Start */}
-        <section className="py-[160px] border-t border-mediumgray pb-0 lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px]">
+        <section className=" border-t border-mediumgray pb-0 ">
                     <PortfolioBordered
-                        title="Amazing work"
                         className="design-agency-portfolio-bordered"
                         grid="grid grid-4col xl-grid-4col lg-grid-2col md-grid-2col sm-grid-2col xs-grid-1col"
                         data={PortfolioData}
-                        filterData={FilterData}
                     />
                 </section>
                 {/* Section End */}
-        
-        <SideButtons/>
-        
-        {/* Section Start */}
-        <StartupPageBannerSlider/>
-        {/* Section End */}
-
         
         {/* Lazy Load HTML */}
         <InViewPort>

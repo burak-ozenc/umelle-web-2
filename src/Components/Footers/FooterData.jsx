@@ -48,7 +48,7 @@ const FooterData = [
         title: "Products",
         submenu: [
             {
-                title: 'DataPilot',
+                title: 'Orion-Dataworks',
                 link: '/products'
             },
             {
@@ -57,11 +57,11 @@ const FooterData = [
             },
             {
                 title: 'Portal',
-                link: '/uims-portal'
+                link: '/Orion-Dataworks-portal'
             },
             {
                 title: 'Reporting',
-                link: '/uims-reporting'
+                link: '/Orion-Dataworks-reporting'
             },
             {
                 title: 'Integrations',
@@ -69,11 +69,11 @@ const FooterData = [
             },
             {
                 title: 'Support',
-                link: '/uims-support'
+                link: '/Orion-Dataworks-support'
             },
             {
                 title: 'Pricing',
-                link: '/uims-pricing'
+                link: '/Orion-Dataworks-pricing'
             },
         ]
     },
@@ -94,7 +94,7 @@ const FooterData = [
         title: "Products",
         submenu: [
             {
-                title: 'DataPilot',
+                title: 'Orion-Dataworks',
                 link: '/products'
             },
             {
@@ -103,11 +103,11 @@ const FooterData = [
             },
             {
                 title: 'Portal',
-                link: '/uims-portal'
+                link: '/Orion-Dataworks-portal'
             },
             {
                 title: 'Reporting',
-                link: '/uims-reporting'
+                link: '/Orion-Dataworks-reporting'
             },
             {
                 title: 'Integrations',
@@ -115,11 +115,11 @@ const FooterData = [
             },
             {
                 title: 'Support',
-                link: '/uims-support'
+                link: '/Orion-Dataworks-support'
             },
             {
                 title: 'Pricing',
-                link: '/uims-pricing'
+                link: '/Orion-Dataworks-pricing'
             },
         ]
     },

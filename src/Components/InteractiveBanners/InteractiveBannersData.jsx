@@ -585,4 +585,48 @@ const InteractiveBannersData20 = [
         img: api_img4,
     }
 ]
-export { InteractiveBannersData20, InteractiveBannersData19, InteractiveBannersData18, InteractiveBannersData17, InteractiveBannersData01, InteractiveBannersData02, InteractiveBannersData03, InteractiveBannersData04, InteractiveBannersData05, InteractiveBannersData06, InteractiveBannersData07, InteractiveBannersData08, InteractiveBannersData09, InteractiveBannersData10, InteractiveBannersData12, InteractiveBannersData13, InteractiveBannersData14, InteractiveBannersData15, InteractiveBannersData16 }
+const InteractiveBannersData21 = [
+    {
+        title: 'Seamless Integration',
+        content: "Engineered to seamlessly integrate into your existing workflows, ensuring a smooth transition and immediate efficiency gains without disrupting your daily operations.",
+        img: api_img1,
+    },
+    {
+        title: "Customizable Dashboards",
+        content: "With fully customizable dashboards, you can gain instant access to the insights that matter most. Tailor your view to monitor real-time data, track performance metrics, and make informed decisions with ease.",
+        img: api_img2,
+    },
+    {
+        title: "Advanced Analytics",
+        content: "Unlock the power of your data with advanced analytics capabilities. From predictive modelling to trend analysis, we build tools to help you anticipate market shifts and stay ahead of the curve.",
+        img: api_img3,
+    },
+    {
+        title: "Robust Security",
+        content: "Security isn't just a feature; it's foundational to the solutions we build. With end-to-end encryption, regular audits, and compliance with industry standards, your data's integrity and confidentiality are our top priority.",
+        img: api_img4,
+    }
+]
+const InteractiveBannersData22 = [
+    {
+        title: 'Flexible User Management',
+        content: "Empower your team with flexible user management options. From granular access controls to custom user roles, ensure the right people have the right access at the right time.",
+        img: api_img1,
+    },
+    {
+        title: "Scalable Architecture",
+        content: "Designed with growth in mind, our scalable architecture ensures that as your business expands, your capabilities can too, without the need for costly overhauls or downtime.",
+        img: api_img2,
+    },
+    {
+        title: "Collaboration Tools",
+        content: "We build collaborative tools to enhance teamwork and streamline communication. Share insights, delegate tasks, and maintain alignment across teams easily.",
+        img: api_img3,
+    },
+    {
+        title: "Automated Reporting",
+        content: "Say goodbye to manual report generation. We build automated reporting tools to deliver accurate, comprehensive reports, saving you time and providing insights at a glance.",
+        img: api_img4,
+    }
+]
+export {InteractiveBannersData22, InteractiveBannersData21, InteractiveBannersData20, InteractiveBannersData19, InteractiveBannersData18, InteractiveBannersData17, InteractiveBannersData01, InteractiveBannersData02, InteractiveBannersData03, InteractiveBannersData04, InteractiveBannersData05, InteractiveBannersData06, InteractiveBannersData07, InteractiveBannersData08, InteractiveBannersData09, InteractiveBannersData10, InteractiveBannersData12, InteractiveBannersData13, InteractiveBannersData14, InteractiveBannersData15, InteractiveBannersData16 }
