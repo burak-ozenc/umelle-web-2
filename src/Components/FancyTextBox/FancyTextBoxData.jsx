@@ -350,4 +350,55 @@ const fancyTextBoxAbout = [
     }
 ]
 
-export {fancyTextBoxAbout, fancyTextBox01, fancyTextBox02, fancyTextBox03, fancyTextBox04, fancyTextBox05, fancyTextBox06, fancyTextBox07 }
+const fancyTextBoxServices = [
+    {
+        icon: {
+            class: "line-icon-Computer-3  text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC]"
+        },
+        title: "AI and Machine Learning",
+        description: "Learn More",
+        link: "/ai-and-machine-learning-solutions"
+    },
+    {
+        icon: {
+            class: "line-icon-Tablet-Phone  text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC]"
+        },
+        title: "Custom Software Development",
+        description: "Learn More",
+        link: "/custom-software-development"
+    },
+    {
+        icon: {
+            class: "line-icon-Big-Data  text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC]"
+        },
+        title: "API Development and Integration",
+        description: "Learn More",
+        link: "/api-development-and-integration"
+    },
+    {
+        icon: {
+            class: "line-icon-Security-Block  text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC]"
+        },
+        title: "BI and Analytics",
+        description: "Learn More",
+        link: "/business-intelligence-and-analytics"
+    },
+    {
+        icon: {
+            class: "line-icon-Cloud-Computer  text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC]"
+        },
+        title: "Cloud Services",
+        description: "Learn More",
+        link: "/cloud-services"
+    },
+    {
+        icon: {
+            class: "line-icon-Brush  text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC]"
+        },
+        title: "Managed IT Services",
+        description: "Learn More",
+        link: "/managed-it-services"
+    }   
+]
+
+export {fancyTextBoxServices, fancyTextBoxAbout, fancyTextBox01, fancyTextBox02, fancyTextBox03, fancyTextBox04, fancyTextBox05, fancyTextBox06, fancyTextBox07 }

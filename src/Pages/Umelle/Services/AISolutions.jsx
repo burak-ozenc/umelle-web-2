@@ -15,6 +15,7 @@ import FooterMenu, {Footer} from '../../../Components/Footers/Footer';
 import InViewPort from '../../../Components/InViewPort';
 import InteractiveBanners04 from "../../../Components/InteractiveBanners/InteractiveBanners04";
 import {InteractiveBannersData18} from "../../../Components/InteractiveBanners/InteractiveBannersData";
+import FancyTextBox from '../../../Components/FancyTextBox/FancyTextBox';
 
 // Data
 import FooterData from '../../../Components/Footers/FooterData';
@@ -22,6 +23,8 @@ import Buttons from "../../../Components/Button/Buttons";
 import IconWithText from "../../../Components/IconWithText/IconWithText";
 import SEO from "../../../Components/Umelle/SEO";
 import { useEffect } from 'react';
+import { fancyTextBoxServices } from '../../../Components/FancyTextBox/FancyTextBoxData';
+
 const Header = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Header})))
 const HeaderNav = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.HeaderNav})))
 const Menu = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Menu})))
@@ -147,6 +150,20 @@ const AISolutions = (props) => {
         
         {/* Lazy Load HTML */}
         <InViewPort>
+            {/* Section Start */}
+      <m.section {...fadeIn}>
+        <Container fluid className="px-0">
+          <FancyTextBox
+            grid="row-cols-1 row-cols-xl-6 row-cols-md-3 row-cols-sm-2 gx-0"
+            theme="fancy-text-box-01"
+            data={fancyTextBoxServices}
+            themeColor="light"
+            animation={fadeIn}
+          />
+        </Container>
+      </m.section>
+      {/* Section End */}
+
             {/* Section Start */}
             <m.section id="about" className="border-b border-mediumgray py-[30px] lg:py-[40px] sm:pb-[50px] md:pt-0 sm:pt-[50px]" {...fadeIn}>
                     <Container>
