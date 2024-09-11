@@ -1,4 +1,4 @@
-import React, {lazy, useEffect} from 'react'
+import React, {lazy, useEffect, useRef, useState} from 'react'
 
 // Libraries
 import {Link} from 'react-router-dom';
@@ -7,7 +7,7 @@ import {m, AnimatePresence} from 'framer-motion';
 
 // Functions
 import {fadeIn, fadeInLeft} from '../../../Functions/GlobalAnimations';
-import { sendEmail, resetForm } from '../../../Functions/Utilities';
+import {  resetForm } from '../../../Functions/Utilities';
 import { Input } from '../../../Components/Form/Form';
 import {ContactFormStyle02Schema} from '../../../Components/Form/FormSchema';
 
@@ -30,6 +30,8 @@ import pricingSection2Image from '../../../Assets/img/Product/pricing/ProductPri
 import { fancyTextBox07 } from '../../../Components/FancyTextBox/FancyTextBoxData';
 import bannerbot1 from '../../../Assets/img/Product/banner-01.jpg';
 import pricingFAQ from '../../../Assets/img/Product/pricing/pricing_FAQ.png';
+import * as emailjs from "@emailjs/browser";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const Header = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Header})))
 const HeaderNav = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.HeaderNav})))
@@ -41,11 +43,43 @@ const SideButtons = lazy(() => import("../../../Components/SideButtons"))
 const Footer_Data = [FooterData[0], FooterData[1], FooterData[4], FooterData[3]]
   
 const ProductPricing = (props) => {
+    const [sent, setSent] = useState(true)
+    const [message, setMessage] = useState('')
 
+    const recaptcha = useRef()
+    
     useEffect(() => {
         analyticsEvent('page_view',null);
     },[])
-    
+
+    const sendEmail = (values) => {
+        analyticsEvent('submitContactForm',
+            {
+                mail: values['email'],
+                nameSubmitted: values['name']
+            })
+
+        emailjs
+            .send(process.env.REACT_APP_EMAIL_SERVICE_ID, process.env.REACT_APP_EMAIL_CONTACT_TEMPLATE_ID, values, {
+                publicKey: process.env.REACT_APP_EMAIL_PUBLIC_KEY,
+            })
+            .then(
+                () => {
+                    console.log('SUCCESS!');
+                },
+                (error) => {
+                    console.log('FAILED...', error);
+                    setSent(false)
+                    setMessage("An error occurred while submitting. Please send email to admin@umelle.com")
+                },
+            )
+            .then(
+                window.location.href = process.env.REACT_APP_CONTACT_SUCCESS_1
+            );
+    };
+
+    console.log(sent)
+    console.log(message)
 
     return (<div style={props.style}>
         {/*SEO Starts*/}
@@ -105,12 +139,17 @@ const ProductPricing = (props) => {
                   initialValues={{ name: '', email: '' }}
                   validationSchema={ContactFormStyle02Schema}
                   onSubmit={async (values, actions) => {
-                    actions.setSubmitting(true)
-                    const response = await sendEmail(values)
-                    response.status === "success" && resetForm(actions)
+                      actions.setSubmitting(true)
+                      if (values.recaptcha !== '') {
+                          const response = await sendEmail(values)
+                          response.status === "success" && analyticsEvent('contact',values);
+                          response.status === "success" && resetForm(actions, recaptcha);
+                      } else {
+                          recaptcha.current.captcha.classList.add("error")
+                      }
                   }}
                 >
-                  {({ isSubmitting, status }) => (
+                    {({isSubmitting, status, setFieldValue}) => (
                     <Form className="mb-[30px]">
                       <Input showErrorMsg={false} type="text" name="name" labelClass="mb-[25px]" className="rounded-[5px] text-md py-[15px] px-[20px] w-full border-[1px] border-solid border-[#dfdfdf]" placeholder="Your name" />
                       <Input showErrorMsg={false} type="email" name="email" labelClass="mb-[25px]" className="rounded-[5px] text-md py-[15px] px-[20px] w-full border-[1px] border-solid border-[#dfdfdf]" placeholder="Your email address" />
@@ -118,12 +157,23 @@ const ProductPricing = (props) => {
                       <AnimatePresence>
                         {status && <m.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}><MessageBox className="mt-[20px] text-center py-[10px]" theme="message-box01" variant="success" message="Your message has been sent successfully!" /></m.div>}
                       </AnimatePresence>
+                        {process.env.REACT_APP_GRECAPTCHA_API_KEY && (
+                            <ReCAPTCHA
+                                ref={recaptcha}
+                                className="mb-[35px]"
+                                sitekey={process.env.REACT_APP_GRECAPTCHA_API_KEY}
+                                onChange={(response) => {
+                                    setFieldValue("recaptcha", response)
+                                }}
+                            />
+                        )}
                     </Form>
                   )}
                 </Formik>
                 <p className="w-[80%] text-xs leading-6 mx-auto xs:w-full text-center">We are committed to protecting your privacy. We will never collect information about you without your explicit consent.</p>
               </div>
             </Col>
+              
           </Row>
         </Container>
       </m.section>

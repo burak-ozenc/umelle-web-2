@@ -37,7 +37,14 @@ const HomeStartupPage = (props) => {
     const recaptcha = useRef()
 
     const sendEmail = (values) => {
-        analyticsEvent('submitContactForm',values)
+        analyticsEvent('submitContactForm',
+            {
+                mail: values['email'],
+                nameSubmitted: values['name'],
+                phoneNo: values['phone'],
+                companyName: values['company'],
+                comment: values['comment']
+            })
         
         emailjs
             .send(process.env.REACT_APP_EMAIL_SERVICE_ID, process.env.REACT_APP_EMAIL_CONTACT_TEMPLATE_ID, values, {
@@ -46,13 +53,15 @@ const HomeStartupPage = (props) => {
             .then(
                 () => {
                     console.log('SUCCESS!');
-                    window.location.href = process.env.REACT_APP_CONTACT_SUCCESS_1
                 },
                 (error) => {
                     console.log('FAILED...', error);
                     setSent(false)
                     setMessage("An error occurred while submitting. Please send email to admin@umelle.com")
                 },
+            )
+            .then(
+                window.location.href = process.env.REACT_APP_CONTACT_SUCCESS_1
             );
     };
 
