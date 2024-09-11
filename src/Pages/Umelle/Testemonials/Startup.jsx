@@ -22,33 +22,34 @@ import TestimonialsCarousel03 from '../../../Components/TestimonialCarousel/Test
 import FooterData from '../../../Components/Footers/FooterData';
 import {TestimonialsCarouselData3} from '../../../Components/TestimonialCarousel/TestimonialsCarouselData';
 import reachOut from '../../../Assets/img/Product/pricing/ProductPricing_Header-01.png';
+import testemonials from '../../../Assets/img/Testemonials/testimonials-01.png';
 
 const TabData = [
     {
       tabTitle: 'Challenge',
       tabicons: "ti-light-bulb",
       subtitle: 'ACWA JPIA faced inefficiencies and high costs due to fragmented systems, unreliable vendor support, and manual data entry with spreadsheets.',
-      img: 'https://via.placeholder.com/800x550',
+      img: testemonials,
       title: 'Transforming Operations: ACWA JPIAs Success Story',
     },
     {
       tabTitle: 'Solution',
       tabicons: "ti-timer",
-      img: 'https://via.placeholder.com/800x550',
+      img: testemonials,
       title: 'Transforming Operations: ACWA JPIAs Success Story',
       subtitle: 'We delivered a tailored management system for ACWA JPIA that streamlined General Liability, Workers Compensation, and data management, integrating advanced features like Business Intelligence and automated invoicing.',
     },
     {
       tabTitle: 'Process',
       tabicons: "ti-pie-chart",
-      img: 'https://via.placeholder.com/800x550',
+      img: testemonials,
       title: 'Transforming Operations: ACWA JPIAs Success Story',
       subtitle: 'We used Agile methodology to iteratively refine each module, ensuring the final product continuously met ACWA JPIA’s evolving needs and objectives.',
     },
     {
       tabTitle: 'Impact',
       tabicons: "ti-crown",
-      img: 'https://via.placeholder.com/800x550',
+      img: testemonials,
       title: 'Transforming Operations: ACWA JPIAs Success Story',
       subtitle: 'Over 15 months, we delivered a comprehensive data management solution that integrated all aspects of ACWA JPIA’s operations, from member policies to third-party data and automated invoicing, creating a unified, efficient powerhouse.',
     },

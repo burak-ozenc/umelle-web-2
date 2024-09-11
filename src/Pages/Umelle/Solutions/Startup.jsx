@@ -1,4 +1,4 @@
-import React, {lazy, useEffect, useState} from 'react'
+import React, {lazy, useEffect} from 'react'
 
 // Libraries
 import {Link} from 'react-router-dom';
@@ -9,7 +9,7 @@ import {m} from 'framer-motion';
 import {fadeIn} from '../../../Functions/GlobalAnimations';
 
 // Components
-import {analyticsEvent, ScrollToAnchor} from "../../../Functions/Utilities";
+import {analyticsEvent} from "../../../Functions/Utilities";
 import FooterMenu, {Footer} from '../../../Components/Footers/Footer';
 import InViewPort from '../../../Components/InViewPort';
 import IconWithText from '../../../Components/IconWithText/IconWithText';
@@ -24,7 +24,6 @@ import Counter from "../../../Components/Counters/Counter";
 import {CounterData05} from "../../../Components/Counters/CounterData";
 import {ProcessStepData02} from "../../../Components/ProcessStep/ProcessStepData";
 import Buttons from "../../../Components/Button/Buttons";
-import {AccordionDataSolutions} from "../../../Components/Accordion/AccordionData";
 import SEO from "../../../Components/Umelle/SEO";
 import {Parallax} from 'react-scroll-parallax';
 import ownSolution from '../../../Assets/img/umelle/ProductPage_Overview-01.png';
@@ -52,48 +51,11 @@ const HomeStartupPage = (props) => {
     //         });
     //     }
     // }, [location]); // This ensures the tracking code runs every time the route changes
-    ScrollToAnchor();
-    const [anchorKey, setAnchorKey] = useState(0)
-    // ScrollToAnchor();
+    
 
     useEffect(() => {
         analyticsEvent('page_view',null);
     },[])
-
-
-    useEffect(() => {
-        // Decode entities in the URL
-        // Sometimes a URL like #/foo#bar will be encoded as #/foo%23bar
-        window.location.hash = window.decodeURIComponent(window.location.hash);
-        // const scrollToAnchor = () => {
-        const hashParts = window.location.hash.split('#');
-        if (hashParts.length > 1) {
-            const hash = hashParts.slice(-1)[0];
-
-
-            function searchByKey(array, id) {   
-                for (let i = 0; i < array.length; i++) {
-                    if (array[i].id === id) {
-                        return array[i].key;
-                    }
-                }
-                // Return null if id is not found
-                return 0;
-            }
-            
-            setAnchorKey(searchByKey(AccordionDataSolutions, hash))
-            // document.querySelector(`#${hash}`).scrollIntoView();
-        }
-        // };
-
-        // scrollToAnchor();
-        // window.onhashchange = scrollToAnchor;
-
-        // Cleanup function to remove event listener
-        return () => {
-            window.onhashchange = null;
-        };
-    }, []); // Empty dependency array to run only once after initial mount
     
 
     return (<div style={props.style}>
@@ -145,63 +107,63 @@ const HomeStartupPage = (props) => {
         {/* Section End */}
 
         {/* Section Start */}
-      <section className="py-[160px] overflow-hidden lg:py-[60px] md:py-[95px] sm:py-[80px] xs:py-[50px]">
-        <Container>
-          <Row className="justify-center">
-          <Col xl={{ span: 7, offset: 2 }} lg={8}>
-              <IconWithText grid="row-cols-1 row-cols-lg-2 row-cols-sm-2 gap-y-[40px]" theme="icon-with-text-01" data={IconWithTextData_12} animation={fadeIn} animationDelay={0.2} />
-            </Col>
-            <m.div className="col-xl-3 col-lg-4 col-sm-7 flex flex-col md:mb-24" {...{ ...fadeIn, transition: { delay: 0.2 } }}>
-              <div className="mb-[20px] md:text-center sm:mb-[10px]">
-                <span className="font-serif text-md uppercase font-medium text-gradient bg-gradient-to-r from-[#556fff] via-[#e05fc4] to-[#ff798e]">About company</span>
-              </div>
-              <h3 className="alt-font text-darkgray font-semibold mb-[20px] font-serif md:text-center md:mb-[30px] heading-5">Insurance Management</h3>
-              <div className="mt-auto mx-auto mx-lg-0">
-                <Buttons href="/contact" className="font-medium font-serif uppercase bg-[#fff] hover:bg-black rounded-none md:mb-[15px] text-xxs btn-fancy xs:mb-0" color="#000" size="sm" themeColor="#000" title="GET FREE QUOTE" />
-              </div>
-            </m.div>    
-          </Row>
-        </Container>
-      </section>
-      {/* Section End */}
-
-      {/* Section start */}
-      <m.div className="relative overflow-hidden py-[130px] lg:py-[90px] md:py-[75px] sm:py-[50px] sm:px-[15px]" {...fadeIn}>
-        <Parallax className="lg-no-parallax bg-cover cover-background absolute top-[-30px] left-0 h-[100vh] lg:h-[64vh] lg:top-[-75px] lg:!translate-y-0 md:h-[60vh] md:-top-[30px] sm:top-0 sm:h-[56vh] xs:h-[50vh] w-full" translateY={[-40, 40]} style={{ backgroundImage: `url(${ownSolution})` }}></Parallax>
-        <div className="left-0 top-0 h-full w-full absolute bg-darkslateblue opacity-75"></div>
-        <Container className="relative">
-          <Row className="justify-center items-center">
-            <Col xl={7} md={8} sm={10} className="md:mb-[30px] sm:mb-[30px]">
-              <h4 className="font-serif font-semibold text-white mb-0 sm:text-center">Build your own Solution:</h4>
-            </Col>
-            <Col xl={5} md={4} className="md:flex md:justify-center text-end">
-              <Buttons ariaLabel="button" to="/custom-solution" className="font-medium font-serif uppercase rounded-none lg:mb-[15px] landscape:lg:mb-[15px]" themeColor={["#902cfc", "#4423c4"]} size="xl" color="#fff" title="Get Started" />
-            </Col>
-          </Row>
-        </Container>
-      </m.div>
-      {/* Section end */ }
-
-      {/* Section Start */}
-      <section className="py-[160px] overflow-hidden lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px]">
-        <Container>
-          <Row className="justify-center">
-            <m.div className="col-xl-3 col-lg-4 col-sm-7 flex flex-col md:mb-24" {...{ ...fadeIn, transition: { delay: 0.2 } }}>
-              <div className="mb-[20px] md:text-center sm:mb-[10px]">
-                <span className="font-serif text-md uppercase font-medium text-gradient bg-gradient-to-r from-[#556fff] via-[#e05fc4] to-[#ff798e]">About company</span>
-              </div>
-              <h3 className="alt-font text-darkgray font-semibold mb-[20px] font-serif md:text-center md:mb-[30px] heading-5">Operations Management</h3>
-              <div className="mt-auto mx-auto mx-lg-0">
-                <Buttons href="/contact" className="font-medium font-serif uppercase bg-[#fff] hover:bg-black rounded-none md:mb-[15px] text-xxs btn-fancy xs:mb-0" color="#000" size="sm" themeColor="#000" title="GET FREE QUOTE" />
-              </div>
-            </m.div>
+        <section id="insurance-management" className="py-[160px] overflow-hidden lg:py-[60px] md:py-[95px] sm:py-[80px] xs:py-[50px]">
+            <Container>
+            <Row className="justify-center">
             <Col xl={{ span: 7, offset: 2 }} lg={8}>
-              <IconWithText grid="row-cols-1 row-cols-lg-2 row-cols-sm-2 gap-y-[40px]" theme="icon-with-text-01" data={IconWithTextData_13} animation={fadeIn} animationDelay={0.2} />
-            </Col>
-          </Row>
-        </Container>
-      </section>
-      {/* Section End */}
+                <IconWithText grid="row-cols-1 row-cols-lg-2 row-cols-sm-2 gap-y-[40px]" theme="icon-with-text-01" data={IconWithTextData_12} animation={fadeIn} animationDelay={0.2} />
+                </Col>
+                <m.div className="col-xl-3 col-lg-4 col-sm-7 flex flex-col md:mb-24" {...{ ...fadeIn, transition: { delay: 0.2 } }}>
+                <div className="mb-[20px] md:text-center sm:mb-[10px]">
+                    <span className="font-serif text-md uppercase font-medium text-gradient bg-gradient-to-r from-[#556fff] via-[#e05fc4] to-[#ff798e]">Custom Solutions</span>
+                </div>
+                <h3 className="alt-font text-darkgray font-semibold mb-[20px] font-serif md:text-center md:mb-[30px] heading-5">Insurance Management</h3>
+                <div className="mt-auto mx-auto mx-lg-0">
+                    <Buttons href="/contact" className="font-medium font-serif uppercase bg-[#fff] hover:bg-black rounded-none md:mb-[15px] text-xxs btn-fancy xs:mb-0" color="#000" size="sm" themeColor="#000" title="GET QUOTE" />
+                </div>
+                </m.div>    
+            </Row>
+            </Container>
+        </section>
+        {/* Section End */}
+
+        {/* Section start */}
+        <m.div className="relative overflow-hidden py-[130px] lg:py-[90px] md:py-[75px] sm:py-[50px] sm:px-[15px]" {...fadeIn}>
+            <Parallax className="lg-no-parallax bg-cover cover-background absolute top-[-30px] left-0 h-[100vh] lg:h-[64vh] lg:top-[-75px] lg:!translate-y-0 md:h-[60vh] md:-top-[30px] sm:top-0 sm:h-[56vh] xs:h-[50vh] w-full" translateY={[-40, 40]} style={{ backgroundImage: `url(${ownSolution})` }}></Parallax>
+            <div className="left-0 top-0 h-full w-full absolute bg-darkslateblue opacity-75"></div>
+            <Container className="relative">
+            <Row className="justify-center items-center">
+                <Col xl={7} md={8} sm={10} className="md:mb-[30px] sm:mb-[30px]">
+                <h4 className="font-serif font-semibold text-white mb-0 sm:text-center">Build your own Solution:</h4>
+                </Col>
+                <Col xl={5} md={4} className="md:flex md:justify-center text-end">
+                <Buttons ariaLabel="button" to="/custom-solution" className="font-medium font-serif uppercase rounded-none lg:mb-[15px] landscape:lg:mb-[15px]" themeColor={["#902cfc", "#4423c4"]} size="xl" color="#fff" title="Get Started" />
+                </Col>
+            </Row>
+            </Container>
+        </m.div>
+        {/* Section end */ }
+
+        {/* Section Start */}
+        <section id="operations-management" className="py-[160px] overflow-hidden lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px]">
+            <Container>
+            <Row className="justify-center">
+                <m.div className="col-xl-3 col-lg-4 col-sm-7 flex flex-col md:mb-24" {...{ ...fadeIn, transition: { delay: 0.2 } }}>
+                <div className="mb-[20px] md:text-center sm:mb-[10px]">
+                    <span className="font-serif text-md uppercase font-medium text-gradient bg-gradient-to-r from-[#556fff] via-[#e05fc4] to-[#ff798e]">Custom Solutions</span>
+                </div>
+                <h3 className="alt-font text-darkgray font-semibold mb-[20px] font-serif md:text-center md:mb-[30px] heading-5">Operations Management</h3>
+                <div className="mt-auto mx-auto mx-lg-0">
+                    <Buttons href="/contact" className="font-medium font-serif uppercase bg-[#fff] hover:bg-black rounded-none md:mb-[15px] text-xxs btn-fancy xs:mb-0" color="#000" size="sm" themeColor="#000" title="GET Quote" />
+                </div>
+                </m.div>
+                <Col xl={{ span: 7, offset: 2 }} lg={8}>
+                <IconWithText grid="row-cols-1 row-cols-lg-2 row-cols-sm-2 gap-y-[40px]" theme="icon-with-text-01" data={IconWithTextData_13} animation={fadeIn} animationDelay={0.2} />
+                </Col>
+            </Row>
+            </Container>
+        </section>
+        {/* Section End */}
 
         {/* Lazy Load HTML */}
         <InViewPort>
@@ -280,7 +242,7 @@ const HomeStartupPage = (props) => {
                     overlay={["#0039e3cc", "#4132e0cc", "#5e28ddcc", "#741bd9cc", "#8600d4cc"]}
                     data={InteractiveBannersData21}
                     animation={fadeIn} />
-                    <InteractiveBanners04
+                <InteractiveBanners04
                     grid="row-cols-12 gap-y-10 sm:justify-center py-7"
                     overlay={["#0039e3cc", "#4132e0cc", "#5e28ddcc", "#741bd9cc", "#8600d4cc"]}
                     data={InteractiveBannersData22}
@@ -291,25 +253,31 @@ const HomeStartupPage = (props) => {
             {/* Section End */}
 
             {/* CTA Banner Section Start */}
-            <section className="lg:pt-[160px] md:pt-[10px] sm:pt-[50px]">
-                <Container fluid>
-                    <Row style={{backgroundImage: `url('/assets/img/Untitled-6-01.webp')`}}
-                         className="cover-background relative cover-background lg:py-[90px] md:py-[75px] sm:py-[50px]">
-                        <Col xs={12} className="text-center my-[5rem] md:my-[7.5rem]">
-                            <div className="justify-center align-items-center text-center d-flex flex-col">
-                                <h6 className="text-center font-serif bg-transparent text-black m-3 w-[400px]">
-                                Streamline Your Operations Now
-                                </h6>
-                            </div>
+            <m.section id="download"
+                    className="py-[160px] cover-background lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px]"
+                    style={{backgroundImage: `url(/assets/img/BottomCTABanner_LandingPage_TESTT-01-01.webp)`}} {...fadeIn}>
+                <Container>
+                    <Row className="items-center">
+                        <Col lg={8} md={8} className="col-12 text-left font-serif uppercase sm:mb-[30px] sm:text-center">
+                            <span
+                                className="font-medium text-md text-white bg-transparent tracking-[.5px] inline-block mb-[15px] sm:mb-[10px]">
+                                WE BUILD BETTER SOFTWARE 
+                            </span>
+                            <h2 className="heading-4 font-semibold text-white -tracking-[1px] mb-0">
+                                DISCOVER YOUR TRUE PORTENTIAL
+                            </h2>
+                        </Col>
+                        <Col lg={{offset: 1}} md={3} className="flex sm:justify-center ps-lg-0">
                             <Buttons ariaLabel="button"
-                                     href="/contact"
-                                     className="mx-[10px] font-medium font-serif uppercase rounded-none lg:mb-[15px] landscape:lg:mb-[15px] justify-center align-items-center"
-                                     themeColor={["#3844F7", "#902CFC"]} size="md" color="#fff"
-                                     title="Schedule a Meeting"/>
+                                    href="/contact"
+                                    className="mx-[10px] font-medium font-serif uppercase rounded-none lg:mb-[15px] landscape:lg:mb-[15px] justify-center align-items-center mt-4"
+                                    themeColor={["#3844F7", "#902CFC"]} size="xl" color="#fff"
+                                    title="GET IN TOUCH"
+                            />
                         </Col>
                     </Row>
                 </Container>
-            </section>
+            </m.section>
             {/* CTA Banner Section End */}
 
             {/* Footer Start */}

@@ -1,28 +1,23 @@
 const ListData01 = [
     {
         icon: "fas fa-check",
-        content: "Member and User Management ",
-        id: '/solutions#memberAndUserManagement',
-    },
-    {
-        icon: "fas fa-check",
-        content: "Communication Management",
-        id: '/solutions#communicationManagement',
+        content: "Comprehensive Data Management",
     },
     {
         icon: "fas fa-check",
         content: "Policy and Program Management",
-        id: '/solutions#policyAndProgramManagemen',
     },
     {
         icon: "fas fa-check",
         content: "Advanced Reporting Analytics ",
-        id: '/solutions#kPIsAndAnalytics',
     },
     {
         icon: "fas fa-check",
-        content: "Financial Management and Automation",
-        id: '/solutions#financeManagement',
+        content: "Finance Management and Automation",
+    },
+    {
+        icon: "fas fa-check",
+        content: "Intuitive Member Portal",
     },
 ]
 

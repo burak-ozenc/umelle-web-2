@@ -388,28 +388,6 @@ const CustomSolution = (props) => {
             </section>
             {/* Section End */}
 
-            {/* CTA Banner Section Start */}
-            <section className="lg:pt-[160px] md:pt-[10px] sm:pt-[50px] ">
-                <Container fluid>
-                    <Row style={{backgroundImage: `url('/assets/img/Untitled-6-01.webp')`}}
-                         className="cover-background relative cover-background lg:py-[90px] md:py-[75px] sm:py-[50px] text-center align-items-center">
-                        <Col xs={12} md={6} className="my-[5rem] md:my-[7.5rem] d-flex justify-content-end align-items-center">
-                            <h6 className="bg-transparent text-md-end text-center text-black m-0 w-[500px]">
-                                LET'S DISCUSS YOUR PROJECT
-                            </h6>
-                        </Col>
-                        <Col md={3} className="d-flex justify-content-center align-items-center">
-                            <Link to="/contact">
-                                <Buttons ariaLabel="button"
-                                    className="mx-[10px] font-medium font-serif uppercase rounded-none lg:mb-[15px] landscape:lg:mb-[15px] justify-center align-items-center mt-0"
-                                    themeColor={["#3844F7", "#902CFC"]} size="md" color="#fff"
-                                    title="Schedule a meeting"/>
-                            </Link>
-                        </Col>
-                    </Row> 
-                </Container>
-            </section>
-            {/* CTA Banner Section End */}
 
             {/* Footer Start */}
             <Footer className="startup-footer bg-no-repeat bg-right" theme="light">

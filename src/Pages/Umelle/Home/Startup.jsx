@@ -2,11 +2,9 @@ import React, {lazy, useEffect} from 'react'
 
 // Libraries
 import {Link} from 'react-router-dom';
-import {Col, Container, Navbar, Row, Tab, Tabs} from "react-bootstrap";
-import {m} from 'framer-motion';
+import {Col, Container, Navbar, Row,} from "react-bootstrap";
 
 // Functions
-import {fadeIn} from '../../../Functions/GlobalAnimations';
 
 // Components
 import {analyticsEvent, ScrollToAnchor} from "../../../Functions/Utilities";
@@ -16,8 +14,6 @@ import PortfolioBordered from '../../../Components/Portfolio/PortfolioBordered';
 
 // Data
 import FooterData from '../../../Components/Footers/FooterData';
-import {IconWithTextData_02} from "../../../Components/IconWithText/IconWithTextData";
-import Accordions from "../../../Components/Accordion/Accordion";
 import portimg1 from '../../../Assets/img/HomePage/Artboard 1.png';
 import portimg2 from '../../../Assets/img/HomePage/Artboard 2.png';
 import portimg3 from '../../../Assets/img/HomePage/Artboard 3.png';
@@ -27,68 +23,66 @@ import portimg6 from '../../../Assets/img/HomePage/Artboard 6.png';
 import portimg7 from '../../../Assets/img/HomePage/Artboard 7.png';
 
 
-const IconWithText = lazy(() => import('../../../Components/IconWithText/IconWithText'))
 const Header = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Header})))
 const HeaderNav = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.HeaderNav})))
 const Menu = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Menu})))
 
-const Buttons = lazy(() => import('../../../Components/Button/Buttons'))
 const SEO = lazy(() => import('../../../Components/Umelle/SEO'))
 
 const PortfolioData = [
     {
-        title: "MOTION",
+        title: "ORION DATAWORKS",
         img: portimg1,
         category: ["Branding", "Logo"],
-        subtitle: "Identity",
-        link: "/portfolio/single-project-page-01",
+        subtitle: "Discover why ORION is the ideal data software for insurance pools",
+        link: "/products",
         double_col: false
     },
     {
-        title: "BIOLATOR",
+        title: "CUSTOM INSURANCE SOFTWARE DEVELOPMENT",
         img: portimg2,
         category: ["Graphics", "Logo"],
-        subtitle: "Branding",
-        link: "/portfolio/single-project-page-02",
+        subtitle: "Learn how we can build a data software that aligns with your business logic",
+        link: "/solutions",
         double_col: false
     },
     {
-        title: "OSLANDS",
+        title: "CLOUD SOLUTIONS",
         img: portimg3,
         category: ["Branding", "Photography"],
-        subtitle: "Branding",
-        link: "/portfolio/single-project-page-03",
+        subtitle: "Discover how our seamless migration and scalable solutions boost cost savings",
+        link: "/cloud-services",
         double_col: false
     },
     {
-        title: "FINANCIAL",
+        title: "API DEVELOPMENT & INTEGRATIONS",
         img: portimg4,
         category: ["Graphics", "Photography"],
-        subtitle: "Photography",
-        link: "/portfolio/single-project-page-04",
+        subtitle: "Learn how our secure, scalable connectivity  can streamline your operations and enhance functionality",
+        link: "/api-development-and-integration",
         double_col: false
     },
     {
-        title: "DUPONT",
+        title: "TESTEMONIALS & CASTE STUDIES ",
         img: portimg5,
         category: ["Branding", "Graphics", "Logo"],
-        subtitle: "Branding",
-        link: "/portfolio/single-project-page-05",
+        subtitle: "Discover our client success stories",
+        link: "/testemonials",
         double_col: false
     },
     {
-        title: "GARDNER",
+        title: "BUILD YOUR OWN SOLUTION",
         img: portimg6,
         category: ["Logo", "Photography"],
-        subtitle: "Branding",
-        link: "/portfolio/single-project-page-01",
+        subtitle: "Shape your custom data insurance software experience",
+        link: "/custom-solution",
         double_col: false
     },
     {
-        title: "TRUENORTH",
+        title: "BUSINESS INTELLIGENCE & ANALYTICS",
         img: portimg7,
         category: ["Branding", "Graphics", "Photography"],
-        subtitle: "Photography",
+        subtitle: "Discover how our advanced reporting and real-time analytics drive informed, data-driven decisions",
         link: "/portfolio/single-project-page-02",
         double_col: false
     },
@@ -161,120 +155,7 @@ const HomeStartupPage = (props) => {
         
         {/* Lazy Load HTML */}
         <InViewPort>
-            {/* Section Start */}
-            <section id="test" className="bg-white pt-20 switch-tabs">
-                <Col className="text-center">
-                    <h6 className="font-serif text-darkgray text-center font-medium mb-[1%]">
-                        We understand the unique challenges and needs of pooled insurance providers
-                    </h6>
-                    <p className="m-[30px] text-[23px] mb-[0px]">
-                        That's why we've meticulously crafted a solution that not only meets these needs but exceeds
-                        them, providing a blend of fiscal precision and superior member service.
-                    </p>
-                </Col>
-                <Tabs
-                    defaultActiveKey="light"
-                    id="uncontrolled-tab-example"
-                    className="justify-center"
-                    style={{display: 'none'}}
-                >
-                    {/* Accordion style 03 ( Light ) start */}
-                    <Tab eventKey="light" title="LIGHT">
-                        <m.section className="py-[55px] bg-white">
-                            <Container>
-                                <Row className="justify-center">
-                                    <Col lg={10} md={10}>
-                                        <Accordions theme="accordion-style-03" className="test" animation={fadeIn}/>
-                                    </Col>
-                                </Row>
-                            </Container>
-                        </m.section>
-                    </Tab>
-                    {/* Accordion style 03 ( Light ) end */}
-                </Tabs>
-            </section>
-            {/* Section End */}
-
-            {/* Section Start */}
-            <section className="bg-lightgray py-[55px] lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px]">
-                <Container>
-                    <Row>
-                        <Col className="mb-[55px]">
-                            <h6 className="font-serif text-dark text-center font-medium mb-[0px] lg:mb-[15px]">
-                                Transforming Challenges into Opportunities
-                            </h6>
-                        </Col>
-                    </Row>
-                    <Row className="justify-center">
-                        <Col xs={12} lg={12} md={9}>
-                            <IconWithText
-                                grid="row-cols-1 row-cols-lg-2 gap-y-[30px] xs:gap-y-[15px]"
-                                theme="icon-with-text-02"
-                                data={IconWithTextData_02}
-                                animation={fadeIn}
-                                animationDelay={0.2}
-                            />
-                        </Col>
-                    </Row>
-                </Container>
-            </section>
-            {/* Section End */}
-
-            {/* CTA Banner Section Start */}
-            <m.section id="download"
-                    className="py-[160px] cover-background lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px]"
-                    style={{backgroundImage: `url(/assets/img/BottomCTABanner_LandingPage_TESTT-01-01.webp)`}} {...fadeIn}>
-                <Container>
-                    <Row className="items-center">
-                        <Col lg={8} md={8} className="col-12 text-left font-serif uppercase sm:mb-[30px] sm:text-center">
-                            <span
-                                className="font-medium text-md text-white bg-transparent tracking-[.5px] inline-block mb-[15px] sm:mb-[10px]">
-                                WE BUILD BETTER SOFTWARE 
-                            </span>
-                            <h2 className="heading-4 font-semibold text-white -tracking-[1px] mb-0">
-                                DISCOVER YOUR TRUE PORTENTIAL
-                            </h2>
-                        </Col>
-                        <Col lg={{offset: 1}} md={3} className="flex sm:justify-center ps-lg-0">
-                            <Buttons ariaLabel="button"
-                                    href="/contact"
-                                    className="mx-[10px] font-medium font-serif uppercase rounded-none lg:mb-[15px] landscape:lg:mb-[15px] justify-center align-items-center mt-4"
-                                    themeColor={["#3844F7", "#902CFC"]} size="xl" color="#fff"
-                                    title="GET IN TOUCH"
-                            />
-                        </Col>
-                    </Row>
-                </Container>
-            </m.section>
-            {/* CTA Banner Section End */}
-
-            {/*/!* Section start *!/*/}
-            {/*<section className="overflow-visible h-[225px]2"*/}
-            {/*         style={{backgroundImage: `url("https://i.ibb.co/XZsnq0w/homepage-bottompagebanner-CTA-v2-01.png")`}}>*/}
-            {/*    <Container>*/}
-            {/*        <LazyMotion strict features={domMax}>*/}
-            {/*            <Row*/}
-            {/*                className="md:h-[450px] sm:h-[450px] xs:h-[450px] align-items-center justify-center "*/}
-            {/*            >*/}
-            {/*                <Col xs={6} lg={6} md={6}*/}
-            {/*                     className="justify-center align-items-center items-center my-0 mx-auto relative flex flex-col">*/}
-            {/*                    <div initial={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)'}}*/}
-            {/*                         animate={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)'}}*/}
-            {/*                         transition={{duration: 0.5, delay: 0.9, ease: "easeIn"}}*/}
-            {/*                         className="justify-center m-[7rem] align-items-center"*/}
-            {/*                    >*/}
-            {/*                        <Buttons ariaLabel="button"*/}
-            {/*                                 href="/contact"*/}
-            {/*                                 className="mx-[10px] font-medium font-serif uppercase rounded-none lg:mb-[15px] landscape:lg:mb-[15px] justify-center align-items-center"*/}
-            {/*                                 themeColor={["#556fff", "#ff798e"]} size="md" color="#fff"*/}
-            {/*                                 title="SCHEDULE A MEETING"/>*/}
-            {/*                    </div>*/}
-            {/*                </Col>*/}
-            {/*            </Row>*/}
-            {/*        </LazyMotion>*/}
-            {/*    </Container>*/}
-            {/*</section>*/}
-            {/*/!* Section End *!/*/}
+            
 
             {/* Footer Start */}
             <Footer className="startup-footer bg-no-repeat bg-right" theme="light">

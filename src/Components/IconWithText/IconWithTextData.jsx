@@ -281,7 +281,7 @@ const IconWithTextData_12 = [
         title: "Risk management",
         id: 'riskManagement',
         key: 3,
-        content: "Automate your underwriting process, add actuarial business logic or automate communication between your core risk profiling processes."
+        content: "Add actuarial business logic and custom forms to streamline your risk profiling processes."
     },
 
 ]
@@ -313,7 +313,7 @@ const IconWithTextData_13 = [
         title: "Communication Management",
         id: 'communicationManagement',
         key: 5,
-        content: "Share documents and leave notes and reduce the need for sending sensitive data through third party channels."
+        content: "Share documents and leave important notes all in one place."
     },
 
 ]

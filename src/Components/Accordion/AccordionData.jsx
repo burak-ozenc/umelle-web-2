@@ -204,4 +204,22 @@ const AccordionData05 = [
     }
 ]
 
-export {AccordionData, AccordionData02, AccordionData05, SolutionClientAccordionData, AccordionDataSolutions,AccordionDataClientSolutions};
+const AccordionDataPricing = [
+    {
+        title: "What type of licensing are there?",
+        content: "Our licenses provide you with access to the system. You may choose the lisences that best fit your organization structure.",
+        //icon: 'line-icon-Add-UserStar text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC]'
+    },
+    {
+        title: "What type of permissions are there?",
+        content: "Following industry best practices, we provide several types of permission to segment access and keep your data safe. ",
+        //icon: 'line-icon-Alarm  text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC]'
+    },
+    {
+        title: "Can I change my support type?",
+        content: "You are free to choose the level of support your organization needs. We have several tiers of support to make sure you are well taken care of.",
+        //icon: 'line-icon-Monitor-Analytics text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC]'
+    }
+]
+
+export {AccordionDataPricing, AccordionData, AccordionData02, AccordionData05, SolutionClientAccordionData, AccordionDataSolutions,AccordionDataClientSolutions};

@@ -32,6 +32,7 @@ import {TabData07} from "../../../Components/Tab/TabData";
 import { IconWithTextData_07 } from '../../../Components/IconWithText/IconWithTextData';
 import { ListData02 } from '../../../Components/Lists/ListsData';
 import bannerbot1 from '../../../Assets/img/Product/banner-01.jpg';
+import pricing01 from '../../../Assets/img/Product/PRICING-01.png';
 
 const Header = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Header})))
 const HeaderNav = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.HeaderNav})))
@@ -243,7 +244,7 @@ const HomeStartupPage = (props) => {
                         <m.div className="col-lg-5 offset-lg-1 col-md-10" {...fadeIn}>
                             <div className="relative">
                                 <div className="bg-darkslateblue absolute h-full w-full top-0 left-0 opacity-20"></div>
-                                <img className="w-full" alt="" src="https://via.placeholder.com/457x607" width="457.5px" height="607.66px" />
+                                <img className="w-full" alt="" src={pricing01} width="457.5px" height="607.66px" />
 
                                 {/* Modal Component Start 
                                 <CustomModal.Wrapper

@@ -144,7 +144,6 @@ function App() {
                   <Route path="/contact" element={<Contact style={{ "--base-color": "#3844F7" }} />} />
                   <Route path="/coming-soon" element={<ComingSoon style={{ "--base-color": "#3844F7" }} />} />
                   <Route path="/products" element={<UIMSProduct style={{ "--base-color": "#3844F7" }} />} />
-                  <Route path="/umelle-insurance" element={<UmelleInsurance style={{ "--base-color": "#3844F7" }} />} />
                   <Route path="/aw-stg-landingp" element={<LandingPage style={{ "--base-color": "#3844F7" }} />} />
                   <Route path="/contact-success-1" element={<ContactSuccess style={{ "--base-color": "#3844F7" }} />} />
                   <Route path="/contact-success-2" element={<ContactSuccessCustom style={{ "--base-color": "#3844F7" }} />} />

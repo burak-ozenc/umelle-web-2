@@ -192,25 +192,31 @@ const AISolutions = (props) => {
             {/* Section End */}
 
             {/* CTA Banner Section Start */}
-            <section className="lg:pt-[100px] md:pt-[10px] sm:pt-[50px] ">
-                <Container fluid>
-                    <Row style={{backgroundImage: `url('/assets/img/ServicesPage_CTRBanner_LV-01-01-01.webp')`}}
-                         className="cover-background relative cover-background lg:py-[90px] md:py-[75px] sm:py-[50px]">
-                        <Col xs={12} className="text-center my-[5rem] md:my-[7.5rem]">
-                        <div className="justify-center align-items-center text-center d-flex flex-col">
-                                <h6 className="text-center font-serif bg-trasparent text-black m-3 w-[400px]">
-                                Connect with Our Experts and Get a Free Quote
-                                </h6>
-                            </div>
+            <m.section id="download"
+                className="py-[160px] cover-background lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px]"
+                style={{backgroundImage: `url(/assets/img/BottomCTABanner_LandingPage_TESTT-01-01.webp)`}} {...fadeIn}>
+                <Container>
+                    <Row className="items-center">
+                        <Col lg={8} md={8} className="col-12 text-left font-serif uppercase sm:mb-[30px] sm:text-center">
+                            <span
+                                className="font-medium text-md text-white bg-transparent tracking-[.5px] inline-block mb-[15px] sm:mb-[10px]">
+                                WE BUILD BETTER SOFTWARE 
+                            </span>
+                            <h2 className="heading-4 font-semibold text-white -tracking-[1px] mb-0">
+                                DISCOVER YOUR TRUE PORTENTIAL
+                            </h2>
+                        </Col>
+                        <Col lg={{offset: 1}} md={3} className="flex sm:justify-center ps-lg-0">
                             <Buttons ariaLabel="button"
-                                     href="/contact"
-                                     className="mx-[10px] font-medium font-serif uppercase rounded-none lg:mb-[15px] landscape:lg:mb-[15px] justify-center align-items-center"
-                                     themeColor={["#3844F7", "#902CFC"]} size="md" color="#fff"
-                                     title="Get a Quote"/>
+                                    href="/contact"
+                                    className="mx-[10px] font-medium font-serif uppercase rounded-none lg:mb-[15px] landscape:lg:mb-[15px] justify-center align-items-center mt-4"
+                                    themeColor={["#3844F7", "#902CFC"]} size="xl" color="#fff"
+                                    title="GET IN TOUCH"
+                            />
                         </Col>
                     </Row>
                 </Container>
-            </section>
+            </m.section>
             {/* CTA Banner Section End */}
 
 

@@ -23,7 +23,7 @@ import FancyTextBox from '../../../Components/FancyTextBox/FancyTextBox';
 // Data
 import FooterData from '../../../Components/Footers/FooterData';
 import Buttons from "../../../Components/Button/Buttons";
-import {AccordionData} from "../../../Components/Accordion/AccordionData";
+import {AccordionDataPricing} from "../../../Components/Accordion/AccordionData";
 import SEO from "../../../Components/Umelle/SEO";
 import pricingtitleImage from "../../../Assets/img/Product/pricing/PricingHeaderImg.png";
 import pricingSection2Image from '../../../Assets/img/Product/pricing/ProductPriCing_sECTION2-01.png';
@@ -166,7 +166,7 @@ const ProductPricing = (props) => {
                 3. A one-time payment for transition and transformation
                 </p>
                 <Buttons
-                  to="/"
+                  to="/contact"
                   className="font-medium mt-[10px] btn-fancy font-serif tracking-[1px] uppercase btn-transparent rounded-none hover:text-white"
                   color="#232323"
                   size="sm"
@@ -199,7 +199,7 @@ const ProductPricing = (props) => {
                         <Row className="justify-center">
                             <Col xl={5} lg={6} md={10} className="flex flex-col justify-center md:py-0 md:mb-20">
                                 <h2 className="heading-5 font-serif font-medium text-darkgray tracking-[-1px] mb-[4.5rem] w-[75%] md:mb-16 md:w-full">Frequently asked questions</h2>
-                                <Accordion theme="accordion-style-03" animation={fadeIn} data={AccordionData} className="consulting-accordion" />
+                                <Accordion theme="accordion-style-03" animation={fadeIn} data={AccordionDataPricing} className="consulting-accordion" />
                                 <p className="mt-12">Have more questions?
                                     <Link aria-label="link contatc classic" to="/contact" className="text-darkgray font-medium underline underline-offset-4 hover:text-[#BF8C4C] ml-[5px]">Get in touch</Link>
                                 </p>

@@ -611,22 +611,22 @@ const InteractiveBannersData22 = [
     {
         title: 'Flexible User Management',
         content: "Empower your team with flexible user management options. From granular access controls to custom user roles, ensure the right people have the right access at the right time.",
-        img: api_img1,
+        img: bi_img1,
     },
     {
         title: "Scalable Architecture",
         content: "Designed with growth in mind, our scalable architecture ensures that as your business expands, your capabilities can too, without the need for costly overhauls or downtime.",
-        img: api_img2,
+        img: bi_img2,
     },
     {
         title: "Collaboration Tools",
         content: "We build collaborative tools to enhance teamwork and streamline communication. Share insights, delegate tasks, and maintain alignment across teams easily.",
-        img: api_img3,
+        img: bi_img3,
     },
     {
         title: "Automated Reporting",
         content: "Say goodbye to manual report generation. We build automated reporting tools to deliver accurate, comprehensive reports, saving you time and providing insights at a glance.",
-        img: api_img4,
+        img: bi_img4,
     }
 ]
 export {InteractiveBannersData22, InteractiveBannersData21, InteractiveBannersData20, InteractiveBannersData19, InteractiveBannersData18, InteractiveBannersData17, InteractiveBannersData01, InteractiveBannersData02, InteractiveBannersData03, InteractiveBannersData04, InteractiveBannersData05, InteractiveBannersData06, InteractiveBannersData07, InteractiveBannersData08, InteractiveBannersData09, InteractiveBannersData10, InteractiveBannersData12, InteractiveBannersData13, InteractiveBannersData14, InteractiveBannersData15, InteractiveBannersData16 }

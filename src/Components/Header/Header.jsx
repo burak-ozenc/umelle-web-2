@@ -279,24 +279,24 @@ export const Menu = memo((props) => {
                             
                             {(item.megamenu) && (
                                 <div className="flex megamenu flex-col" ref={megamenu_ref}>
-                                    <div className="text-center mb-5 font-bold">
-                                        <p>Custom Insurance & Operations Management</p>
+                                    <div className="text-center mb-3 font-bold">
+                                        <Link to="/products3e2e3">Orion-Dataworks</Link>
                                     </div>
                             
-                                    <div className="flex flex-row">
+                                    <div className="flex flex-row justify-center items-center">
                                        {item.megamenu.map((item, i) => {
                                             return (
                                                 <>
-                                                    <ul className={`${(item.dropdown.filter(item => item.img).length > 0) ? "!pr-[30px] img-wrapper inline-block last:!pr-[0px] flex-row" : "inline-block"}`}
+                                                    <ul className={`flex flex-col justify-center items-center ${(item.dropdown.filter(item => item.img).length > 0) ? "!pr-[30px] img-wrapper inline-block last:!pr-[0px] flex-row" : "inline-block"}`}
                                                         key={i}>
                                                         {item.title &&
-                                                            <li className="title text-md font-medium mb-[15px] whitespace-nowrap">
+                                                            <li className="title text-md font-medium mb-[5px] whitespace-nowrap text-center">
                                                                 {item.title}
                                                             </li>}
                                                         {item.dropdown &&
                                                             item.dropdown.map((item, i) => {
                                                                 return (
-                                                                    <li className="nav-item" key={i}>
+                                                                    <li className="nav-item text-center" key={i}>
                                                                         {item.title && <Link className="nav-link"
                                                                                              to={item.link ? item.link : "#"}>{item.icon && (
                                                                             <i className={`${item.icon} mr-[10px]`}></i>)}{" "}

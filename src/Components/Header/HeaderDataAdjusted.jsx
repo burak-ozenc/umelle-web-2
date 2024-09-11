@@ -2,50 +2,15 @@ const HeaderDataAdjusted = [
     {
         title: 'SOLUTIONS',
         link: '/solutions',
-        megamenu: [
+        dropdown: [
             {
                 title: 'Insurance Management',
-                dropdown: [
-                    {
-                        title: 'Policy and Program Management',
-                        link: '/solutions#policyAndProgramManagement'
-                    },
-                    {
-                        title: 'Finance Management',
-                        link: '/solutions#financeManagement'
-                    },
-                    {
-                        title: 'Certificate Management',
-                        link: '/solutions#certificateManagement'
-                    },
-                    {
-                        title: 'Risk Management',
-                        link: '/solutions#riskManagement'
-                    }
-                ]
+                link: '/solutions#insurance-management'
             },
             {
                 title: 'Operations Management',
-                dropdown: [
-                    {
-                        title: 'Member and User Management',
-                        link: '/solutions#memberAndUserManagement'
-                    },
-                    {
-                        title: 'Communication Management',
-                        link: '/solutions#communicationManagement'
-                    },
-                    {
-                        title: 'Vendor Management',
-                        link: '/solutions#vendorManagement'
-                    },
-                    {
-                        title: 'KPIs and Analytics',
-                        link: '/solutions#kPIsAndAnalytics'
-                    },    
-                ]
-            }
-            
+                link: '/solutions#operations-management'
+            },
         ]
     },
     {
@@ -79,35 +44,40 @@ const HeaderDataAdjusted = [
     }, {
         title: 'PRODUCTS',
         link: '/products',
-        dropdown: [
+        megamenu: [
             {
-                title: 'Orion-Dataworks',
-                link: '/products'
+                dropdown: [
+                    {
+                        title: 'Core Platform',
+                        link: '/coreplatform'
+                    },
+                    {
+                       title: 'Portal',
+                       link: '/Orion-Dataworks-portal'
+                    },
+                    {
+                        title: 'Reporting',
+                        link: '/Orion-Dataworks-reporting'
+                    },
+                ]
             },
             {
-                title: 'Core Platform',
-                link: '/coreplatform'
-            },
-            {
-                title: 'Portal',
-                link: '/Orion-Dataworks-portal'
-            },
-            {
-                title: 'Reporting',
-                link: '/Orion-Dataworks-reporting'
-            },
-            {
-                title: 'Integrations',
-                link: '/Orion-Dataworks-integrations'
-            },
-            {
-                title: 'Support',
-                link: '/Orion-Dataworks-support'
-            },
-            {
-                title: 'Pricing',
-                link: '/Orion-Dataworks-pricing'
-            },
+                dropdown: [
+                    {
+                        title: 'Integrations',
+                        link: '/Orion-Dataworks-integrations'
+                    },
+                    {
+                        title: 'Support',
+                        link: '/Orion-Dataworks-support'
+                    },
+                    {
+                        title: 'Pricing',
+                        link: '/Orion-Dataworks-pricing'
+                    },   
+                ]
+            }
+            
         ]
     },
     {

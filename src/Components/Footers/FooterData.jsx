@@ -27,12 +27,12 @@ const FooterData = [
         title: "Solutions",
         submenu: [
             {
-                title: "Insurance Management",
-                link: "/solutions"
+                title: 'Insurance Management',
+                link: '/solutions#insurance-management'
             },
             {
-                title: "Operations Management",
-                link: "/solutions"
+                title: 'Operations Management',
+                link: '/solutions#operations-management'
             },
             // {
             //     title: "Job opportunities",
