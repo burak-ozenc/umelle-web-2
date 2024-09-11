@@ -41,7 +41,7 @@ export const Header = memo((props) => {
         // Calculate header height
         function setTopSpace() {
             let windowWidth = window.innerWidth,
-                headerheight = (props.topSpace.desktop && props.topSpace.desktop === true) ? headerEl.offsetHeight : 0;
+                headerheight = (props.topSpace.desktop && props.topSpace.desktop === true) ? headerEl.offsetHeight : 80;
 
             if (windowWidth <= 1199 && props.topSpace.lg) {
                 headerheight = props.topSpace.lg === true ? headerEl.offsetHeight : 0;
@@ -85,14 +85,14 @@ export const Header = memo((props) => {
                     ...scrollPos,
                     y: pos,
                     prevY: pos - 1,
-                    directionDown: true,
+                    directionDown: true, //set sticky effect
                 });
             } else {
                 setScrollPos({
                     ...scrollPos,
                     y: pos,
                     prevY: pos - 1,
-                    directionDown: false,
+                    directionDown: false, //set sticky effect
                 });
             }
 

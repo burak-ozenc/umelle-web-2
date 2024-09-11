@@ -221,26 +221,31 @@ const HomeStartupPage = (props) => {
             {/* Section End */}
 
             {/* CTA Banner Section Start */}
-            <section className="lg:pt-[160px] md:pt-[10px] sm:pt-[50px] ">
-                <Container fluid>
-                    <Row style={{backgroundImage: `url('/assets/img/Untitled-6-01.webp')`}}
-                         className="cover-background relative cover-background lg:py-[90px] md:py-[75px] sm:py-[50px] text-center align-items-center">
-                        <Col xs={12} md={6} className="my-[5rem] md:my-[7.5rem] d-flex justify-content-end align-items-center">
-                            <h6 className="bg-transparent text-md-end text-center text-black m-0 w-[500px]">
-                                LET'S DISCUSS YOUR PROJECT
-                            </h6>
+            <m.section id="download"
+                    className="py-[160px] cover-background lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px]"
+                    style={{backgroundImage: `url(/assets/img/BottomCTABanner_LandingPage_TESTT-01-01.webp)`}} {...fadeIn}>
+                <Container>
+                    <Row className="items-center">
+                        <Col lg={8} md={8} className="col-12 text-left font-serif uppercase sm:mb-[30px] sm:text-center">
+                            <span
+                                className="font-medium text-md text-white bg-transparent tracking-[.5px] inline-block mb-[15px] sm:mb-[10px]">
+                                WE BUILD BETTER SOFTWARE 
+                            </span>
+                            <h2 className="heading-4 font-semibold text-white -tracking-[1px] mb-0">
+                                DISCOVER YOUR TRUE PORTENTIAL
+                            </h2>
                         </Col>
-                        <Col md={3} className="d-flex justify-content-center align-items-center">
-                            <Link to="/contact">
-                                <Buttons ariaLabel="button"
-                                    className="mx-[10px] font-medium font-serif uppercase rounded-none lg:mb-[15px] landscape:lg:mb-[15px] justify-center align-items-center mt-0"
-                                    themeColor={["#3844F7", "#902CFC"]} size="md" color="#fff"
-                                    title="Schedule a meeting"/>
-                            </Link>
+                        <Col lg={{offset: 1}} md={3} className="flex sm:justify-center ps-lg-0">
+                            <Buttons ariaLabel="button"
+                                    href="/contact"
+                                    className="mx-[10px] font-medium font-serif uppercase rounded-none lg:mb-[15px] landscape:lg:mb-[15px] justify-center align-items-center mt-4"
+                                    themeColor={["#3844F7", "#902CFC"]} size="xl" color="#fff"
+                                    title="GET IN TOUCH"
+                            />
                         </Col>
-                    </Row> 
+                    </Row>
                 </Container>
-            </section>
+            </m.section>
             {/* CTA Banner Section End */}
 
             {/*/!* Section start *!/*/}

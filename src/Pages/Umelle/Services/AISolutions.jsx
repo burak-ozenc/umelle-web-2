@@ -151,18 +151,18 @@ const AISolutions = (props) => {
         {/* Lazy Load HTML */}
         <InViewPort>
             {/* Section Start */}
-      <m.section {...fadeIn}>
-        <Container fluid className="px-0">
-          <FancyTextBox
-            grid="row-cols-1 row-cols-xl-6 row-cols-md-3 row-cols-sm-2 gx-0"
-            theme="fancy-text-box-01"
-            data={fancyTextBoxServices}
-            themeColor="light"
-            animation={fadeIn}
-          />
-        </Container>
-      </m.section>
-      {/* Section End */}
+            <m.section {...fadeIn}>
+                <Container fluid className="px-0">
+                <FancyTextBox
+                    grid="row-cols-1 row-cols-xl-6 row-cols-md-3 row-cols-sm-2 gx-0"
+                    theme="fancy-text-box-01"
+                    data={fancyTextBoxServices}
+                    themeColor="light"
+                    animation={fadeIn}
+                />
+                </Container>
+            </m.section>
+            {/* Section End */}
 
             {/* Section Start */}
             <m.section id="about" className="border-b border-mediumgray py-[30px] lg:py-[40px] sm:pb-[50px] md:pt-0 sm:pt-[50px]" {...fadeIn}>

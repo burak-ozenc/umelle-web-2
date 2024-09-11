@@ -22,8 +22,6 @@ import {InteractiveBannersData21,InteractiveBannersData22} from "../../../Compon
 import FooterData from '../../../Components/Footers/FooterData';
 import Counter from "../../../Components/Counters/Counter";
 import {CounterData05} from "../../../Components/Counters/CounterData";
-import Services from "../../../Components/Services/Services";
-import {serviceData5} from "../../../Components/Services/ServicesData";
 import {ProcessStepData02} from "../../../Components/ProcessStep/ProcessStepData";
 import Buttons from "../../../Components/Button/Buttons";
 import {AccordionDataSolutions} from "../../../Components/Accordion/AccordionData";

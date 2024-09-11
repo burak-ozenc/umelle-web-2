@@ -14,7 +14,6 @@ import {fadeIn} from '../../../Functions/GlobalAnimations';
 import {analyticsEvent, ScrollToAnchor} from "../../../Functions/Utilities";
 import FooterMenu, {Footer} from '../../../Components/Footers/Footer';
 import InViewPort from '../../../Components/InViewPort';
-import CustomModal from '../../../Components/CustomModal';
 import Tab07 from '../../../Components/Tab/Tab07';
 import IconWithText from '../../../Components/IconWithText/IconWithText';
 import Lists from '../../../Components/Lists/Lists';
