@@ -1,4 +1,4 @@
-import React, {lazy} from 'react'
+import React from 'react'
 
 // Libraries
 import {Link} from 'react-router-dom';
