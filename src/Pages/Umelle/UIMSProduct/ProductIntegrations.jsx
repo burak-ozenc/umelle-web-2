@@ -34,7 +34,7 @@ import { fancyTextBox07 } from '../../../Components/FancyTextBox/FancyTextBoxDat
 import intimage1 from "../../../Assets/img/Product/integrations/API FLEXIBILITY.png";
 import intimage2 from "../../../Assets/img/Product/integrations/SECURE DATA EXCHANGE.png";
 import intimage3 from "../../../Assets/img/Product/integrations/SCALABLE INFRASTRUCTURE.png";
-import bannerbot1 from '../../../Assets/img/Product/banner-01.jpg';
+import bannerbot1 from '../../../Assets/img/Product/banner-01.webp';
 
 
 const Header = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Header})))

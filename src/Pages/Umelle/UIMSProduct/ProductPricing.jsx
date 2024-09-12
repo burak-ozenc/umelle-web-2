@@ -28,7 +28,7 @@ import SEO from "../../../Components/Umelle/SEO";
 import pricingtitleImage from "../../../Assets/img/Product/pricing/PricingHeaderImg.png";
 import pricingSection2Image from '../../../Assets/img/Product/pricing/ProductPriCing_sECTION2-01.png';
 import { fancyTextBox07 } from '../../../Components/FancyTextBox/FancyTextBoxData';
-import bannerbot1 from '../../../Assets/img/Product/banner-01.jpg';
+import bannerbot1 from '../../../Assets/img/Product/banner-01.webp';
 import pricingFAQ from '../../../Assets/img/Product/pricing/pricing_FAQ.png';
 import * as emailjs from "@emailjs/browser";
 import ReCAPTCHA from "react-google-recaptcha";

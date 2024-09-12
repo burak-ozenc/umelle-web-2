@@ -14,13 +14,13 @@ import PortfolioBordered from '../../../Components/Portfolio/PortfolioBordered';
 
 // Data
 import FooterData from '../../../Components/Footers/FooterData';
-import portimg1 from '../../../Assets/img/HomePage/Artboard 1.png';
-import portimg2 from '../../../Assets/img/HomePage/Artboard 2.png';
-import portimg3 from '../../../Assets/img/HomePage/Artboard 3.png';
-import portimg4 from '../../../Assets/img/HomePage/Artboard 4.png';
-import portimg5 from '../../../Assets/img/HomePage/Artboard 5.png';
-import portimg6 from '../../../Assets/img/HomePage/Artboard 6.png';
-import portimg7 from '../../../Assets/img/HomePage/Artboard 7.png';
+import portimg1 from '../../../Assets/img/HomePage/Artboard-1.webp';
+import portimg2 from '../../../Assets/img/HomePage/Artboard-2.webp';
+import portimg3 from '../../../Assets/img/HomePage/Artboard-3.webp';
+import portimg4 from '../../../Assets/img/HomePage/Artboard-4.webp';
+import portimg5 from '../../../Assets/img/HomePage/Artboard-5.webp';
+import portimg6 from '../../../Assets/img/HomePage/Artboard-6.webp';
+import portimg7 from '../../../Assets/img/HomePage/Artboard 7.webp';
 
 
 const Header = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Header})))

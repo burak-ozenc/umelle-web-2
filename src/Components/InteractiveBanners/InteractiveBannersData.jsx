@@ -1,27 +1,27 @@
-import ai_img1 from '../../Assets/img/Services/AI/Predictive Analytics.png';
-import ai_img2 from '../../Assets/img/Services/AI/Process Automation.png';
-import ai_img3 from '../../Assets/img/Services/AI/Enhanced Insights.png';
-import ai_img4 from '../../Assets/img/Services/AI/Decision Making.png';
-import cs_img1 from '../../Assets/img/Services/Custom SW/Tailored Solutions.png';
-import cs_img2 from '../../Assets/img/Services/Custom SW/Cutting-Edge Tech.png';
-import cs_img3 from '../../Assets/img/Services/Custom SW/User-Friendly Design.png';
-import cs_img4 from '../../Assets/img/Services/Custom SW/Scalable and Flexible.png';
-import api_img1 from '../../Assets/img/Services/API Development and Integration/Custom API Dev.png';
-import api_img2 from '../../Assets/img/Services/API Development and Integration/Secure and Scalable.png';
-import api_img3 from '../../Assets/img/Services/API Development and Integration/Efficient Connectivity.png';
-import api_img4 from '../../Assets/img/Services/API Development and Integration/Seemless Integration.png';
-import bi_img1 from '../../Assets/img/Services/BI and Analytics/Advanced Reporting.png';
-import bi_img2 from '../../Assets/img/Services/BI and Analytics/Interactive Dashboards.png';
-import bi_img3 from '../../Assets/img/Services/BI and Analytics/Real-Time Analytics.png';
-import bi_img4 from '../../Assets/img/Services/BI and Analytics/Data Integration.png';
-import cloud_img1 from '../../Assets/img/Services/Cloud Services/Seamless Migration.png';
-import cloud_img2 from '../../Assets/img/Services/Cloud Services/Efficient Management.png';
-import cloud_img3 from '../../Assets/img/Services/Cloud Services/Scaled Cloud Solutions.png';
-import cloud_img4 from '../../Assets/img/Services/Cloud Services/Enhanced Security.png';
-import mit_img1 from '../../Assets/img/Services/Managed IT Services/247 Monitoring.png';
-import mit_img2 from '../../Assets/img/Services/Managed IT Services/Advanced Security.png';
-import mit_img3 from '../../Assets/img/Services/Managed IT Services/IT Management.png';
-import mit_img4 from '../../Assets/img/Services/Managed IT Services/Scalable Solutions.png';
+import ai_img1 from '../../Assets/img/Services/AI/Predictive Analytics.webp';
+import ai_img2 from '../../Assets/img/Services/AI/Process Automation.webp';
+import ai_img3 from '../../Assets/img/Services/AI/Enhanced Insights.webp';
+import ai_img4 from '../../Assets/img/Services/AI/Decision Making.webp';
+import cs_img1 from '../../Assets/img/Services/Custom SW/Tailored Solutions.webp';
+import cs_img2 from '../../Assets/img/Services/Custom SW/Cutting-Edge Tech.webp';
+import cs_img3 from '../../Assets/img/Services/Custom SW/User-Friendly Design.webp';
+import cs_img4 from '../../Assets/img/Services/Custom SW/Scalable and Flexible.webp';
+import api_img1 from '../../Assets/img/Services/API Development and Integration/Custom API Dev.webp';
+import api_img2 from '../../Assets/img/Services/API Development and Integration/Secure and Scalable.webp';
+import api_img3 from '../../Assets/img/Services/API Development and Integration/Efficient Connectivity.webp';
+import api_img4 from '../../Assets/img/Services/API Development and Integration/Seemless Integration.webp';
+import bi_img1 from '../../Assets/img/Services/BI and Analytics/Advanced Reporting.webp';
+import bi_img2 from '../../Assets/img/Services/BI and Analytics/Interactive Dashboards.webp';
+import bi_img3 from '../../Assets/img/Services/BI and Analytics/Real-Time Analytics.webp';
+import bi_img4 from '../../Assets/img/Services/BI and Analytics/Data Integration.webp';
+import cloud_img1 from '../../Assets/img/Services/Cloud Services/Seamless Migration.webp';
+import cloud_img2 from '../../Assets/img/Services/Cloud Services/Efficient Management.webp';
+import cloud_img3 from '../../Assets/img/Services/Cloud Services/Scaled Cloud Solutions.webp';
+import cloud_img4 from '../../Assets/img/Services/Cloud Services/Enhanced Security.webp';
+import mit_img1 from '../../Assets/img/Services/Managed IT Services/247 Monitoring.webp';
+import mit_img2 from '../../Assets/img/Services/Managed IT Services/Advanced Security.webp';
+import mit_img3 from '../../Assets/img/Services/Managed IT Services/IT Management.webp';
+import mit_img4 from '../../Assets/img/Services/Managed IT Services/Scalable Solutions.webp';
 
 const InteractiveBannersData01 = [
     {
@@ -592,7 +592,7 @@ const InteractiveBannersData21 = [
         img: api_img1,
     },
     {
-        title: "Customizable Dashboards",
+        title: "Custom Dashboards",
         content: "With fully customizable dashboards, you can gain instant access to the insights that matter most. Tailor your view to monitor real-time data, track performance metrics, and make informed decisions with ease.",
         img: api_img2,
     },
@@ -603,7 +603,7 @@ const InteractiveBannersData21 = [
     },
     {
         title: "Robust Security",
-        content: "Security isn't just a feature; it's foundational to the solutions we build. With end-to-end encryption, regular audits, and compliance with industry standards, your data's integrity and confidentiality are our top priority.",
+        content: "Security isn't just a feature, it's foundational to the solutions we build. With end-to-end encryption, regular audits, and compliance with industry standards, your data's integrity and confidentiality are our top priority.",
         img: api_img4,
     }
 ]

@@ -32,8 +32,8 @@ import SEO from "../../../Components/Umelle/SEO";
 import { Parallax } from 'react-scroll-parallax';
 import ourStory from '../../../Assets/img/umelle/About/our story-01.png';
 import reachOut from '../../../Assets/img/Product/pricing/ProductPricing_Header-01.png';
-import aboutPar1 from '../../../Assets/img/About/AboutPar1.png';
-import aboutPar2 from '../../../Assets/img/About/AboutPar2.png';
+import aboutPar1 from '../../../Assets/img/About/AboutPar1.webp';
+import aboutPar2 from '../../../Assets/img/About/AboutPar2.webp';
 
 const Header = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Header})))
 const HeaderNav = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.HeaderNav})))

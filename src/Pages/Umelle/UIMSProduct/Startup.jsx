@@ -25,14 +25,14 @@ import Buttons from "../../../Components/Button/Buttons";
 import {AccordionDataSolutions} from "../../../Components/Accordion/AccordionData";
 import SEO from "../../../Components/Umelle/SEO";
 import {Parallax} from 'react-scroll-parallax';
-import productImage from "../../../Assets/img/umelle/ProductPage_Overview-01.png";
+import productImage from "../../../Assets/img/umelle/ProductPage_Overview-01.webp";
 import FancyTextBox from "../../../Components/FancyTextBox/FancyTextBox";
 import {fancyTextBox07} from "../../../Components/FancyTextBox/FancyTextBoxData";
 import {TabData07} from "../../../Components/Tab/TabData";
 import { IconWithTextData_07 } from '../../../Components/IconWithText/IconWithTextData';
 import { ListData02 } from '../../../Components/Lists/ListsData';
-import bannerbot1 from '../../../Assets/img/Product/banner-01.jpg';
-import pricing01 from '../../../Assets/img/Product/PRICING-01.png';
+import bannerbot1 from '../../../Assets/img/Product/banner-01.webp';
+import pricing01 from '../../../Assets/img/Product/PRICING-01.webp';
 
 const Header = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Header})))
 const HeaderNav = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.HeaderNav})))

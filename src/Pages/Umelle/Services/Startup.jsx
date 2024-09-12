@@ -32,7 +32,7 @@ import SEO from "../../../Components/Umelle/SEO";
 import { useEffect } from 'react';
 import {IconWithTextData_02} from "../../../Components/IconWithText/IconWithTextData";
 import {Parallax} from 'react-scroll-parallax';
-import ownSolution from '../../../Assets/img/umelle/ProductPage_Overview-01.png';
+import ownSolution from '../../../Assets/img/umelle/ProductPage_Overview-01.webp';
 
 const Header = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Header})))
 const HeaderNav = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.HeaderNav})))

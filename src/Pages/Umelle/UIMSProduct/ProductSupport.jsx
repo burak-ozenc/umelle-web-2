@@ -32,7 +32,7 @@ import { fancyTextBox07 } from '../../../Components/FancyTextBox/FancyTextBoxDat
 import supportimg1 from "../../../Assets/img/Product/support/COMPREHENSIVE INSURANCE SYSTEM MANAGEMENT.png";
 import supportimg2 from "../../../Assets/img/Product/support/ADVANCED DATA MANAGEMENT CAPABILITIES.png";
 import supportimg3 from "../../../Assets/img/Product/support/END-TO-END OPERATIONAL EFFICIENCY.png";
-import bannerbot1 from "../../../Assets/img/Product/banner-01.jpg";
+import bannerbot1 from "../../../Assets/img/Product/banner-01.webp";
 
 const Header = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Header})))
 const HeaderNav = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.HeaderNav})))

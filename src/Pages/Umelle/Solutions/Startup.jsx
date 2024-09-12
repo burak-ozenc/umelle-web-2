@@ -26,7 +26,7 @@ import {ProcessStepData02} from "../../../Components/ProcessStep/ProcessStepData
 import Buttons from "../../../Components/Button/Buttons";
 import SEO from "../../../Components/Umelle/SEO";
 import {Parallax} from 'react-scroll-parallax';
-import ownSolution from '../../../Assets/img/umelle/ProductPage_Overview-01.png';
+import ownSolution from '../../../Assets/img/umelle/ProductPage_Overview-01.webp';
 
 const Header = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Header})))
 const HeaderNav = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.HeaderNav})))

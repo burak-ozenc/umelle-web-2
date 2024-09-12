@@ -29,10 +29,10 @@ import {Parallax} from 'react-scroll-parallax';
 import { ListDataCorePlatform } from '../../../Components/Lists/ListsData';
 import {serviceData1} from '../../../Components/Services/ServicesData';
 import { fancyTextBox07 } from '../../../Components/FancyTextBox/FancyTextBoxData';
-import cpimage1 from '../../../Assets/img/Product/coreplatform/COMPREHENSIVE INSURANCE SYSTEM MANAGEMENT.png';
-import cpimage2 from '../../../Assets/img/Product/coreplatform/ADVANCED DATA MANAGEMENT CAPABILITIES.png';
-import cpimage3 from '../../../Assets/img/Product/coreplatform/END-TO-END OPERATIONAL EFFICIENCY.png';
-import bannerbot1 from '../../../Assets/img/Product/banner-01.jpg';
+import cpimage1 from '../../../Assets/img/Product/coreplatform/COMPREHENSIVE INSURANCE SYSTEM MANAGEMENT.webp';
+import cpimage2 from '../../../Assets/img/Product/coreplatform/ADVANCED DATA MANAGEMENT CAPABILITIES.webp';
+import cpimage3 from '../../../Assets/img/Product/coreplatform/END-TO-END OPERATIONAL EFFICIENCY.webp';
+import bannerbot1 from '../../../Assets/img/Product/banner-01.webp';
 
 const Header = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.Header})))
 const HeaderNav = React.lazy(() => import("../../../Components/Header/Header").then((module) => ({default: module.HeaderNav})))
