@@ -104,22 +104,22 @@ const fancyTextBox03 = [
 const fancyTextBox04 = [
     {
         icon: {
+            class: "line-icon-Tablet-Phone  text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC]"
+        },
+        id:"custom-software-development",
+        title: "Custom Software Development",
+        description: "Need a custom software solution? Umelle crafts exceptional systems tailored for both enterprise AMS/ERP needs and small businesses eager to take control of their data.",
+        link: "/custom-software-development"
+    },
+    {
+        icon: {
             class: "line-icon-Computer-3  text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC]"
         },
         title: "AI and Machine Learning Solutions",
         id:"ai-and-machine-learning-solutions",
         // subTitle: "Easy installation theme",
-        description: "Need a custom software solution? Umelle crafts exceptional systems tailored for both enterprise AMS/ERP needs and small businesses eager to take control of their data.",
+        description: "AI can help unlock the potential of your data. We create AI solutions for businesses looking to take the next step in providing better data analytics, better customer support, financial and risk modeling and much more.",
         link: "/ai-and-machine-learning-solutions"
-    },
-    {
-        icon: {
-            class: "line-icon-Tablet-Phone  text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC]"
-        },
-        id:"custom-software-development",
-        title: "Custom Software Development",
-        description: "Developing versatile applications that seamlessly operate across iOS, Android, and Windows platforms, delivering a consistent and immersive user experience on smartphones, tablets, and more.",
-        link: "/custom-software-development"
     },
     {
         icon: {
@@ -127,7 +127,7 @@ const fancyTextBox04 = [
         },
         id:"api-development-and-integration",
         title: "API Development and Integration",
-        description: "Empower your business with superior insights and a competitive edge, Umelle provides comprehensive data solutions for a unified view that enhances decision-making and operational efficiency.",
+        description: "Revolutionize your business with Umelle's Network and Web API services, enabling seamless integration, real-time data exchange, and robust security. Embrace scalable, flexible solutions to stay ahead in a competitive digital landscape.",
         link: "/api-development-and-integration"
     },
     {
@@ -136,7 +136,7 @@ const fancyTextBox04 = [
         },
         id:"business-intelligence-and-analytics",
         title: "Business Intelligence and Analytics",
-        description: "Revolutionize your business with Umelle's Network and Web API services, enabling seamless integration, real-time data exchange, and robust security. Embrace scalable, flexible solutions to stay ahead in a competitive digital landscape.",
+        description: "Empower your business with superior insights and a competitive edge, Umelle provides comprehensive data solutions for a unified view that enhances decision-making and operational efficiency.",
         link: "/business-intelligence-and-analytics"
     },
     {
