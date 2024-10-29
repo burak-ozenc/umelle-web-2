@@ -6,7 +6,7 @@ const AccordionData = [
     },
     {
         title: "Seamless Integration",
-        content: "Orion-Dataworks ensures seamless integration with existing and third-party systems, enabling efficient data flow and enhanced functionality across your entire IT ecosystem.",
+        content: "Orion DataWorks ensures seamless integration with existing and third-party systems, enabling efficient data flow and enhanced functionality across your entire IT ecosystem.",
         icon: 'line-icon-Alarm  text-gradient bg-gradient-to-r from-[#3844F7] to-[#902CFC]'
     },
     {

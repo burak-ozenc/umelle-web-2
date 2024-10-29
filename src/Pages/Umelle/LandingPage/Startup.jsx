@@ -37,7 +37,7 @@ const FeaturesData = [
     {
         icon: "line-icon-Archery-2 text-basecolor text-[40px] text-gradient bg-gradient-to-r from-[#3844F7]  to-[#902CFC]",
         title: "Seamless Integration",
-        content: "Orion-Dataworks ensures seamless integration with existing and third-party systems, enabling efficient data flow and enhanced functionality across your entire IT ecosystem.",
+        content: "Orion DataWorks ensures seamless integration with existing and third-party systems, enabling efficient data flow and enhanced functionality across your entire IT ecosystem.",
     },
     {
         icon: "line-icon-Monitor-Analytics text- text-[40px] text-gradient bg-gradient-to-r from-[#3844F7]  to-[#902CFC]",

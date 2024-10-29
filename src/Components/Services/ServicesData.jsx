@@ -18,7 +18,7 @@ const serviceData1 = [
         img: coreProductImage1,
         icon: "fas fa-arrow-right",
         title: "MANAGE YOUR DATA",
-        content: "Outside of our native operations, Orion-Dataworks enables third-party data integration, making it flexible and reliable",
+        content: "Outside of our native operations, Orion DataWorks enables third-party data integration, making it flexible and reliable",
         link: "services"
     },
     {

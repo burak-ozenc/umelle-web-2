@@ -229,7 +229,7 @@ const CorePlatform = (props) => {
                 STREAMLINE OPERATIONS WITH OUR ALL-IN-ONE DATA INSURANCE PLATFORM 
                 </h2>
                 <p className="w-[80%] mb-[35px] lg:w-full">
-                Orion-Dataworks reduces time on manual data entry and spreadsheet imports, and allows 
+                Orion DataWorks reduces time on manual data entry and spreadsheet imports, and allows 
                 to edit, correct and update data all in one place. Complete core operations such as 
                 Member Management, Property, Workers Compensation, and Liability natively, 
                 ensuring complete data integrity. 
@@ -330,7 +330,7 @@ const CorePlatform = (props) => {
                 {...fadeInLeft}
               >
                 <h2 className="heading-4 mb-[40px] leading-[40px] font-semibold tracking-[-2px] text-darkgray font-serif xs:mb-[20px]">
-                  <span className="p-0 block">Orion-Dataworks PROVIDES</span>
+                  <span className="p-0 block">Orion DataWorks PROVIDES</span>
                   <TextAnime
                     duration={3000}
                     color="#232323"

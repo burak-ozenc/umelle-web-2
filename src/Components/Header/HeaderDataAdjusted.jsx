@@ -43,41 +43,15 @@ const HeaderDataAdjusted = [
         ]
     }, {
         title: 'PRODUCTS',
-        link: '/products',
-        megamenu: [
+        link: '',
+        dropdown: [
             {
-                dropdown: [
-                    {
-                        title: 'Core Platform',
-                        link: '/coreplatform'
-                    },
-                    {
-                       title: 'Portal',
-                       link: '/Orion-Dataworks-portal'
-                    },
-                    {
-                        title: 'Reporting',
-                        link: '/Orion-Dataworks-reporting'
-                    },
-                ]
+                title: 'ORION DataWorks',
+                link: '/Orion-Dataworks'
+            }, {
+                title: 'ATLAS',
+                link: '/ATLAS-Support'
             },
-            {
-                dropdown: [
-                    {
-                        title: 'Integrations',
-                        link: '/Orion-Dataworks-integrations'
-                    },
-                    {
-                        title: 'Support',
-                        link: '/Orion-Dataworks-support'
-                    },
-                    {
-                        title: 'Pricing',
-                        link: '/Orion-Dataworks-pricing'
-                    },   
-                ]
-            }
-            
         ]
     },
     {
@@ -89,8 +63,8 @@ const HeaderDataAdjusted = [
                 link: '/company'
             },
             {
-                title: 'Testemonials',
-                link: '/testemonials'
+                title: 'Testimonials',
+                link: '/testimonials'
             }
         ]
     }    

@@ -40,7 +40,7 @@ const ProductSupport = lazy(() => import("./Pages/Umelle/UIMSProduct/ProductSupp
 const ProductPortal = lazy(() => import("./Pages/Umelle/UIMSProduct/ProductPortal"))
 const ProductReporting = lazy(() => import("./Pages/Umelle/UIMSProduct/ProductReporting"))
 const CustomSolution = lazy(() => import("./Pages/Umelle/CustomSolution/Startup"))
-const Testemonials = lazy(() => import("./Pages/Umelle/Testemonials/Startup"))
+const Testimonials = lazy(() => import("./Pages/Umelle/Testimonials/Startup"))
 
 function App() {
   const [headerHeight, setHeaderHeight] = useState(0);
@@ -142,7 +142,7 @@ function App() {
                   <Route path="/company" element={<UmelleCompany style={{ "--base-color": "#3844F7" }} />} />
                   <Route path="/contact" element={<Contact style={{ "--base-color": "#3844F7" }} />} />
                   <Route path="/coming-soon" element={<ComingSoon style={{ "--base-color": "#3844F7" }} />} />
-                  <Route path="/products" element={<UIMSProduct style={{ "--base-color": "#3844F7" }} />} />
+                  <Route path="/Orion-Dataworks" element={<UIMSProduct style={{ "--base-color": "#3844F7" }} />} />
                   <Route path="/aw-stg-landingp" element={<LandingPage style={{ "--base-color": "#3844F7" }} />} />
                   <Route path="/contact-success-1" element={<ContactSuccess style={{ "--base-color": "#3844F7" }} />} />
                   <Route path="/contact-success-2" element={<ContactSuccessCustom style={{ "--base-color": "#3844F7" }} />} />
@@ -159,7 +159,7 @@ function App() {
                   <Route path="/Orion-Dataworks-portal" element={<ProductPortal style={{ "--base-color": "#3844F7" }} />} />
                   <Route path="/Orion-Dataworks-reporting" element={<ProductReporting style={{ "--base-color": "#3844F7" }} />} />
                   <Route path="/custom-solution" element={<CustomSolution style={{ "--base-color": "#3844F7" }} />} />
-                  <Route path="/testemonials" element={<Testemonials style={{ "--base-color": "#3844F7" }} />} />
+                  <Route path="/testimonials" element={<Testimonials style={{ "--base-color": "#3844F7" }} />} />
                 </Routes>
               </Suspense>
             </AnimatePresence>

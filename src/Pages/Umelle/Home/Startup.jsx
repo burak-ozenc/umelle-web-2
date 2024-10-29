@@ -63,11 +63,11 @@ const PortfolioData = [
         double_col: false
     },
     {
-        title: "TESTEMONIALS & CASTE STUDIES ",
+        title: "TESTIMONIALS & CASTE STUDIES ",
         img: portimg5,
         category: ["Branding", "Graphics", "Logo"],
         subtitle: "Discover our client success stories",
-        link: "/testemonials",
+        link: "/testimonials",
         double_col: false
     },
     {

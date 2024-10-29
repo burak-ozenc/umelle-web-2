@@ -296,7 +296,7 @@ const fancyTextBox05 = [
             },
             title: "INTEGRATIONS",
             description: "Learn More",
-            link: "/productintegrations",
+            link: "/Orion-Dataworks-integrations",
         },
         {
             icon: {

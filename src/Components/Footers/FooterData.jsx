@@ -48,8 +48,8 @@ const FooterData = [
         title: "Products",
         submenu: [
             {
-                title: 'Orion-Dataworks',
-                link: '/products'
+                title: 'Orion DataWorks',
+                link: '/Orion-Dataworks'
             },
             {
                 title: 'Core Platform',
@@ -65,7 +65,7 @@ const FooterData = [
             },
             {
                 title: 'Integrations',
-                link: '/productintegrations'
+                link: 'Orion-Dataworks-integrations'
             },
             {
                 title: 'Support',
@@ -94,8 +94,8 @@ const FooterData = [
         title: "Products",
         submenu: [
             {
-                title: 'Orion-Dataworks',
-                link: '/products'
+                title: 'Orion DataWorks',
+                link: '/Orion-Dataworks'
             },
             {
                 title: 'Core Platform',
@@ -111,7 +111,7 @@ const FooterData = [
             },
             {
                 title: 'Integrations',
-                link: '/productintegrations'
+                link: '/Orion-Dataworks-integrations'
             },
             {
                 title: 'Support',

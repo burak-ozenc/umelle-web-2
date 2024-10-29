@@ -66,7 +66,7 @@ const SEO = lazy(() => import('../../../Components/Umelle/SEO'))
 // Filter the blog data category wise
 const Footer_Data = [FooterData[0], FooterData[1], FooterData[4], FooterData[3]]
 
-const Testemonials = (props) => {
+const Testimonials = (props) => {
     ScrollToAnchor();
     
     
@@ -229,4 +229,4 @@ const Testemonials = (props) => {
     </div>)
 }
 
-export default Testemonials
+export default Testimonials

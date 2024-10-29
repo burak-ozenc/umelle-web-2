@@ -182,7 +182,7 @@ const ProductIntegrations = (props) => {
               INTEGRATION MADE SIMPLE
               </h1>
               <p className="text-xmd leading-[30px] w-[73%] mb-12 lg:w-[90%] md:w-full xs:mb-[15px]">
-              Orion-Dataworks is designed to support and evolve with your business needs.
+              Orion DataWorks is designed to support and evolve with your business needs.
               </p>
               <Link to = "/contact" offset={0} delay={0} spy={true} smooth={true} duration={800} className="cursor-pointer">
               <Buttons ariaLabel="button"
@@ -341,7 +341,7 @@ const ProductIntegrations = (props) => {
                   />
                 </h2>
                 <p className="w-[90%] mb-[30px] xs:w-full">
-                Orion-Dataworks offers exceptional API flexibility, secure data exchange, and a scalable infrastructure, 
+                Orion DataWorks offers exceptional API flexibility, secure data exchange, and a scalable infrastructure, 
                 ensuring seamless integration with third-party systems to optimize performance and expand
                  capabilities
                 </p>

@@ -280,7 +280,7 @@ export const Menu = memo((props) => {
                             {(item.megamenu) && (
                                 <div className="flex megamenu flex-col" ref={megamenu_ref}>
                                     <div className="text-center mb-3 font-bold">
-                                        <Link to="/products">Orion-Dataworks</Link>
+                                        <Link to="/products">Orion DataWorks</Link>
                                     </div>
                             
                                     <div className="flex flex-row justify-center items-center">
