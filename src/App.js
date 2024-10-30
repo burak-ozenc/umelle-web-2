@@ -41,6 +41,7 @@ const ProductPortal = lazy(() => import("./Pages/Umelle/UIMSProduct/ProductPorta
 const ProductReporting = lazy(() => import("./Pages/Umelle/UIMSProduct/ProductReporting"))
 const CustomSolution = lazy(() => import("./Pages/Umelle/CustomSolution/Startup"))
 const Testimonials = lazy(() => import("./Pages/Umelle/Testimonials/Startup"))
+const Blog = lazy(() => import("./Pages/Umelle/Blog/Startup"))
 
 function App() {
   const [headerHeight, setHeaderHeight] = useState(0);
@@ -160,6 +161,7 @@ function App() {
                   <Route path="/Orion-Dataworks-reporting" element={<ProductReporting style={{ "--base-color": "#3844F7" }} />} />
                   <Route path="/custom-solution" element={<CustomSolution style={{ "--base-color": "#3844F7" }} />} />
                   <Route path="/testimonials" element={<Testimonials style={{ "--base-color": "#3844F7" }} />} />
+                  <Route path="/blog" element={<Blog style={{ "--base-color": "#3844F7" }} />} />
                 </Routes>
               </Suspense>
             </AnimatePresence>

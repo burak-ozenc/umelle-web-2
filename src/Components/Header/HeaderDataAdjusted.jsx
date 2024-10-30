@@ -55,7 +55,7 @@ const HeaderDataAdjusted = [
         ]
     },
     {
-        title: 'COMPANY ',
+        title: 'COMPANY',
         link: '/company',
         dropdown: [
             {
@@ -67,7 +67,11 @@ const HeaderDataAdjusted = [
                 link: '/testimonials'
             }
         ]
-    }    
+    },
+    {
+        title: 'BLOG',
+        link: '/blog',
+    }     
 ]
 
 export default HeaderDataAdjusted
