@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 // Libraries
 import { Col, Container, Navbar, Row } from "react-bootstrap";
@@ -15,6 +15,7 @@ import BlogClassic from "../../../Components/Blogs/BlogClassic";
 import SocialIcons from "../../../Components/SocialIcon/SocialIcons";
 import SideButtons from "../../../Components/SideButtons";
 import FooterMenu, {Footer} from '../../../Components/Footers/Footer';
+import { getBlogPosts } from "../../../Functions/Utilities";
 
 // Data, 
 import { blogData } from "../../../Components/Blogs/BlogData";
@@ -100,6 +101,9 @@ const blogMasonryData = blogData
 const Blog = (props) => {
   const swiperRef = React.useRef(null);
   const [activeSlide, setActiveSlide] = useState(0);
+  useEffect(() => {const data = getBlogPosts()
+    console.log(data)
+  }, [])
 
   return (
     <div>

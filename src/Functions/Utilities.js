@@ -3,6 +3,7 @@ import Swiper from "swiper"
 import {useLocation} from "react-router-dom";
 import {useEffect, useRef} from "react";
 import ReactPixel from "react-facebook-pixel";
+import { createClient } from "contentful";
 
 const pixelID = process.env.REACT_APP_FACEBOOK_PIXEL_ID
 
@@ -18,6 +19,38 @@ export const analyticsEvent = (event_name, value) => {
     return null;
 }
 
+export const getBlogPosts = async () => {
+    try {
+      const client = await createClient({
+        space: `${process.env.REACT_APP_CONTENTFUL_SPACE_ID}`,
+        accessToken: `${process.env.REACT_APP_CONTENTFUL_ACCESS_TOKEN}`
+      });
+      const entries = await client.getEntries({
+        locale: 'en-US' // default locale
+      });
+  
+      const mappedPosts = entries.items.map((entry) => {
+        return {
+          id: entry.sys.id,
+          name: entry.fields.name,
+          description: entry.fields.description,
+          category: entry.fields.category,
+          blogType: entry.fields.blogType,
+          tags: entry.fields.tags,
+          img: entry.fields.img,
+          content: entry.fields.content,
+          title: entry.fields.title,
+          author: entry.sys.createdBy.id, // assuming 'author' is a link to the user who created the post
+          comments: entry.fields.comments,
+          date: entry.fields.date,
+        };
+      });
+  
+      return mappedPosts;
+    } catch (error) {
+      console.log(`Error fetching blog posts ${error}`);
+    }
+  }
 
 export const getCookie = (name) => {
     var cookieArr = document.cookie.split(";");
