@@ -10,7 +10,8 @@ import Pagination from './HelperComponents/Pagination';
 import Filter from "../Portfolio/Filter";
 
 // Data
-import { blogData, authorData } from './BlogData';
+import { blogData } from './BlogData';
+import {formatBlogDate} from "../../Functions/Utilities";
 
 // Filter the blog data category wise
 const blogWidgetData = blogData.filter((item) => item.blogType === "widget");
@@ -49,14 +50,16 @@ const BlogWidget = (props) => {
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, ease: "easeOut" }} >
                   <figure className="shrink-0 h-auto w-[140px] mb-0 xs:w-[100px]">
-                    <Link aria-label="link" to={`${props.link}${[item.id]}`}>
+                    <Link aria-label="link" to={`blog-post/${[item.id]}`}>
                       <img height={88} width={140} src={item.img} alt="blog-widget" />
                     </Link>
                   </figure>
                   <div className="leading-normal pl-[30px] xs:pl-[15px] relative top-[-1px] grow">
-                    <span className="mb-[5px] text-xs font-serif block">{item.date}</span>
-                    <Link aria-label="link" to={`${props.link}${[item.id]}`} className="mb-0 leading-[22px] font-medium text-darkgray font-serif block">{item.title}</Link>
-                    <span className="text-xs font-serif">By <Link aria-label="link" to={`/blogs/author/${item.author}`} >{authorData.filter(author => author.id === item.author)[0].name}</Link></span>
+                    <span className="mb-[5px] text-xs font-serif block">{formatBlogDate(item.date)}</span>
+                    <Link aria-label="link" to={`blog-post/${[item?.id]}`} className="mb-0 leading-[22px] font-medium text-darkgray font-serif block">
+                        {item.title}
+                    </Link>
+                    <span className="text-xs font-serif">By authorData.name</span>
                   </div>
                 </m.div>
               </li>
@@ -89,21 +92,25 @@ BlogWidget.propTypes = {
   title: PropTypes.string,
   grid: PropTypes.string,
   link: PropTypes.string,
-  data: PropTypes.arrayOf(
-    PropTypes.exact({
-      id: PropTypes.number,
-      category: PropTypes.array,
-      tags: PropTypes.array,
-      blogType: PropTypes.string,
-      img: PropTypes.string,
-      title: PropTypes.string,
-      content: PropTypes.string,
-      author: PropTypes.number,
-      likes: PropTypes.number,
-      comments: PropTypes.number,
-      date: PropTypes.string,
-      double_col: PropTypes.bool
-    })
+    data: PropTypes.arrayOf(
+        PropTypes.exact({
+            id: PropTypes.string,
+            description: PropTypes.string,
+            category: PropTypes.array,
+            tags: PropTypes.array,
+            blogType: PropTypes.string,
+            img: PropTypes.string,
+            title: PropTypes.string,
+            content: PropTypes.object,
+            content2: PropTypes.object,
+            author: PropTypes.string,
+            quote: PropTypes.string,
+            quoteImage: PropTypes.string,
+            likes: PropTypes.number,
+            comments: PropTypes.number,
+            date: PropTypes.string,
+            double_col: PropTypes.bool
+        })
   ),
 }
 

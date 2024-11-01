@@ -3,7 +3,7 @@ import Swiper from "swiper"
 import {useLocation} from "react-router-dom";
 import {useEffect, useRef} from "react";
 import ReactPixel from "react-facebook-pixel";
-import { createClient } from "contentful";
+import {createClient} from "contentful";
 
 const pixelID = process.env.REACT_APP_FACEBOOK_PIXEL_ID
 
@@ -21,36 +21,87 @@ export const analyticsEvent = (event_name, value) => {
 
 export const getBlogPosts = async () => {
     try {
-      const client = await createClient({
-        space: `${process.env.REACT_APP_CONTENTFUL_SPACE_ID}`,
-        accessToken: `${process.env.REACT_APP_CONTENTFUL_ACCESS_TOKEN}`
-      });
-      const entries = await client.getEntries({
-        locale: 'en-US' // default locale
-      });
-  
-      const mappedPosts = entries.items.map((entry) => {
-        return {
-          id: entry.sys.id,
-          name: entry.fields.name,
-          description: entry.fields.description,
-          category: entry.fields.category,
-          blogType: entry.fields.blogType,
-          tags: entry.fields.tags,
-          img: entry.fields.img,
-          content: entry.fields.content,
-          title: entry.fields.title,
-          author: entry.sys.createdBy.id, // assuming 'author' is a link to the user who created the post
-          comments: entry.fields.comments,
-          date: entry.fields.date,
+        const client = await createClient({
+            space: `${process.env.REACT_APP_CONTENTFUL_SPACE_ID}`,
+            accessToken: `${process.env.REACT_APP_CONTENTFUL_ACCESS_TOKEN}`
+        });
+
+        let query = {
+            content_type: 'blogPost-2'
         };
-      });
-  
-      return mappedPosts;
+        const entries = await client.getEntries(query);
+
+
+        const mappedPosts = entries.items
+            .map((entry) => {
+                    return {
+                        id: entry.sys.id,
+                        description: entry?.fields?.description,
+                        category: entry?.fields?.category,
+                        blogType: entry?.fields?.blogType,
+                        tags: entry?.fields?.tags,
+                        img: entry?.fields?.image?.fields?.file?.url,
+                        content: entry?.fields?.content,
+                        content2: entry?.fields?.content2,
+                        title: entry?.fields?.title,
+                        quote: entry?.fields?.quote,
+                        quoteImage: entry?.fields?.quoteImage?.fields?.file?.url,
+                        author: entry.fields?.author,
+                        date: entry?.fields?.date,
+                    };
+                }
+            );
+
+        return mappedPosts;
     } catch (error) {
-      console.log(`Error fetching blog posts ${error}`);
+        console.log(`Error fetching blog posts ${error}`);
     }
-  }
+}
+
+export const getBlogSwiperData = async () => {
+    try {
+        const client = await createClient({
+            space: `${process.env.REACT_APP_CONTENTFUL_SPACE_ID}`,
+            accessToken: `${process.env.REACT_APP_CONTENTFUL_ACCESS_TOKEN}`
+        });
+
+        let query = {
+            content_type: 'BlogSwiperData'
+        };
+        const entries = await client.getEntries(query);
+
+
+        const mappedSwiperData = entries.items
+            .map((entry) => {
+                    return {
+                        id: entry.sys.id,
+                        title: entry?.fields?.title,
+                        category: entry?.fields?.category,
+                        author: entry.fields?.author,
+                        date: entry?.fields?.date,
+                        img: entry?.fields?.backgroundImage?.fields?.file?.url
+                    };
+                }
+            );
+
+        return mappedSwiperData;
+    } catch (error) {
+        console.log(`Error fetching blog posts ${error}`);
+    }
+}
+
+
+// // Helper function to process images
+// function processImages(images) {
+//     if (!images) return [];
+//
+//     return images.map(image => ({
+//         url: image.fields.file.url,
+//         title: image.fields.title,
+//         description: image.fields.description,
+//         // Add any other image fields you need
+//     }));
+// }
 
 export const getCookie = (name) => {
     var cookieArr = document.cookie.split(";");
@@ -247,3 +298,52 @@ export const ScrollToAnchor = () => {
 
     return null;
 }
+
+
+export const formatBlogDate = (dateString) => {
+    const date = new Date(dateString);
+
+    // Options for the date format
+    const options = {month: 'long', day: 'numeric', year: 'numeric'};
+
+    // Format the date using toLocaleDateString with 'en-US' locale
+    return date.toLocaleDateString('en-US', options);
+};
+
+
+export const getBlogPost = async (blogID = null) => {
+    try {
+        const client = await createClient({
+            space: `${process.env.REACT_APP_CONTENTFUL_SPACE_ID}`,
+            accessToken: `${process.env.REACT_APP_CONTENTFUL_ACCESS_TOKEN}`
+        });
+
+        let query = {
+            content_type: 'blogPost-2'
+        };
+
+        if (blogID) {
+            // If productId is provided, fetch only that specific product
+            query['sys.id'] = blogID;
+        }
+
+        const entries = await client.getEntries(query);
+
+        const processItem = (item) => ({
+            id: item.sys.id,
+            quoteImage: item.fields?.quoteImage?.fields?.file?.url,
+            ...item.fields
+        });
+
+        if (blogID) {
+            // If productId was provided, return the single product or null if not found
+            return entries.items.length > 0 ? processItem(entries.items[0]) : null;
+        } else {
+            // Otherwise, return all products
+            return null;
+        }
+    } catch (error) {
+        console.log(`Error fetching products: ${error}`);
+        throw error; // Re-throw the error so it can be handled by the caller
+    }
+};

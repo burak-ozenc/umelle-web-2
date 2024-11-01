@@ -3,6 +3,7 @@ const Critters = require('critters-webpack-plugin');
 // const purgecss = require("@fullhuman/postcss-purgecss");
 
 module.exports = {
+  // target : 'node',
   webpack: {
     configure: (webpackConfig) => {
       return {

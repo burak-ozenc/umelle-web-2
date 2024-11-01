@@ -11,6 +11,7 @@ import Filter from "../Portfolio/Filter";
 
 // Data
 import { blogData } from "./BlogData";
+import {formatBlogDate} from "../../Functions/Utilities";
 
 // Filter the blog data category wise
 const blogCleanData = blogData.filter((item) => item.blogType === "clean");
@@ -58,7 +59,7 @@ const BlogClean = (props) => {
                   </Link>
                 </div>
                 <div className="post-details p-[30px] sm:px-[25px] bg-white">
-                  <span className="text-md uppercase"> {item.date} </span>
+                  <span className="text-md uppercase"> {formatBlogDate(item.date)} </span>
                   <Link aria-label="link" to={`${props.link}${[item.id]}`} className="font-medium text-darkgray font-serif block" > {item.title} </Link>
                 </div>
               </m.div>
@@ -82,7 +83,7 @@ const BlogClean = (props) => {
 
 BlogClean.defaultProps = {
   data: blogCleanData,
-  link: "/blog-types/blog-standard-post/"
+  link: "/blog/blog-post/"
 };
 
 BlogClean.propTypes = {
@@ -90,18 +91,22 @@ BlogClean.propTypes = {
   link: PropTypes.string,
   data: PropTypes.arrayOf(
     PropTypes.exact({
-      id: PropTypes.number,
-      category: PropTypes.array,
-      tags: PropTypes.array,
-      blogType: PropTypes.string,
-      img: PropTypes.string,
-      title: PropTypes.string,
-      content: PropTypes.string,
-      author: PropTypes.number,
-      likes: PropTypes.number,
-      comments: PropTypes.number,
-      date: PropTypes.string,
-      double_col: PropTypes.bool
+        id: PropTypes.string,
+        description: PropTypes.string,
+        category: PropTypes.array,
+        tags: PropTypes.array,
+        blogType: PropTypes.string,
+        img: PropTypes.string,
+        title: PropTypes.string,
+        content: PropTypes.object,
+        content2: PropTypes.object,
+        quote: PropTypes.string,
+        quoteImage: PropTypes.string,
+        author: PropTypes.string,
+        likes: PropTypes.number,
+        comments: PropTypes.number,
+        date: PropTypes.string,
+        double_col: PropTypes.bool
     })
   ),
 };

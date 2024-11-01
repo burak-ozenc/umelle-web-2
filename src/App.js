@@ -13,6 +13,7 @@ import ScrollToTopButton from "./Components/ScrollToTop"
 import {ScrollToAnchor} from "./Functions/Utilities";
 import { HelmetProvider} from "react-helmet-async";
 import ReactPixel from "react-facebook-pixel";
+import PostLayout from "./Pages/Umelle/Blog/PostLayout";
 
 // import ReactGA from "react-ga4";
 
@@ -161,7 +162,10 @@ function App() {
                   <Route path="/Orion-Dataworks-reporting" element={<ProductReporting style={{ "--base-color": "#3844F7" }} />} />
                   <Route path="/custom-solution" element={<CustomSolution style={{ "--base-color": "#3844F7" }} />} />
                   <Route path="/testimonials" element={<Testimonials style={{ "--base-color": "#3844F7" }} />} />
-                  <Route path="/blog" element={<Blog style={{ "--base-color": "#3844F7" }} />} />
+                  <Route path="blog">
+                      <Route path="" element ={<Blog style={{ "--base-color": "#3844F7" }}/>}/>
+                      <Route path="blog-post/:postID" element={<PostLayout/>}/>
+                  </Route>
                 </Routes>
               </Suspense>
             </AnimatePresence>
