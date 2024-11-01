@@ -79,7 +79,8 @@ export const getBlogSwiperData = async () => {
                         category: entry?.fields?.category,
                         author: entry.fields?.author,
                         date: entry?.fields?.date,
-                        img: entry?.fields?.backgroundImage?.fields?.file?.url
+                        img: entry?.fields?.backgroundImage?.fields?.file?.url,
+                        link : entry?.fields?.link
                     };
                 }
             );

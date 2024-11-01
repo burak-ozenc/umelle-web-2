@@ -101,7 +101,6 @@ const Blog = (props) => {
 
             setBlogs(duplicatedArray)
             setSwiperData(rawSwiperData)
-            console.log('rawSwiperData', rawSwiperData)
         } catch (error) {
             console.error("Error fetching products:", error);
         }
@@ -175,7 +174,7 @@ const Blog = (props) => {
                             <SwiperSlide
                                 key={i}
                                 className={`bg-cover bg-no-repeat bg-center relative overflow-hidden transition-default flex items-end h-full${activeSlide !== i ? ' opacity-60' : ''}`}
-                                style={{backgroundImage: `url(${item.backgroundImage})`}}
+                                style={{backgroundImage: `url(${item.img})`}}
                             >
                                 <m.div
                                     initial={{opacity: 0, y: "30%"}}
@@ -194,7 +193,7 @@ const Blog = (props) => {
                                         <span className="relative px-[16px] py-[4px] bg-white uppercase font-serif">
                                             <Link
                                                 aria-label="link for"
-                                                to="/blogs/blog-grid"
+                                                to={item?.link}
                                                 className="tracking-[.5px] text-xs hover:text-darkgray"
                                             >
                                                 {item.category}
@@ -204,7 +203,7 @@ const Blog = (props) => {
                                     <h2 className="heading-5 mb-[30px] xs:mb-[15px]">
                                         <Link
                                             aria-label="link for"
-                                            to="/blogs/blog-grid"
+                                            to={item?.link}
                                             className="text-darkgray hover:text-darkgray font-serif font-medium -tracking-[1px] mb-[30px]"
                                         >
                                             {item.title}
