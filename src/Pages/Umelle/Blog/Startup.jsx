@@ -11,7 +11,7 @@ import {m} from "framer-motion";
 import {Header, HeaderNav, Menu} from "../../../Components/Header/Header";
 import BlogWidget from "../../../Components/Blogs/BlogWidget";
 // import BlogClean from "../../..//Components/Blogs/BlogClean";
-import BlogClassic from "../../../Components/Blogs/BlogClassic";
+// import BlogClassic from "../../../Components/Blogs/BlogClassic";
 import SideButtons from "../../../Components/SideButtons";
 import FooterMenu, {Footer} from '../../../Components/Footers/Footer';
 import {formatBlogDate, getBlogPosts, getBlogSwiperData} from "../../../Functions/Utilities";
@@ -95,11 +95,12 @@ const Blog = (props) => {
     const fetchData = async () => {
         try {
             const data = await getBlogPosts()
+            console.log(data)
             const rawSwiperData = await getBlogSwiperData()
 
-            const duplicatedArray = new Array(30).fill(data[0]);
+            // const duplicatedArray = new Array(30).fill(data[0]);
 
-            setBlogs(duplicatedArray)
+            setBlogs(data)
             setSwiperData(rawSwiperData)
         } catch (error) {
             console.error("Error fetching products:", error);
@@ -264,7 +265,7 @@ const Blog = (props) => {
                         <Col xs={12} lg={12} sm={10} className="xs:px-0">
                             {blogs && <BlogWidget
                                 grid="grid grid-3col xl-grid-3col lg-grid-2col md-grid-1col sm-grid-1col xs-grid-1col gutter-double-extra-large"
-                                data={blogs.slice(-6)}
+                                data={blogs.slice(0, 10)}
                             />}
                         </Col>
                     </Row>
@@ -273,7 +274,7 @@ const Blog = (props) => {
             {/* Section End */}
 
             {/* Section Start */}
-            {blogs &&
+            {/* {blogs &&
                 <section
                     className="relative px-[11%] py-[130px] xl:px-[2%] lg:py-[90px] md:py-[75px] sm:py-[50px] xs:px-0">
                     <Container fluid className="xs:px-0">
@@ -282,7 +283,7 @@ const Blog = (props) => {
                             data={blogs.slice(12, 22)}
                         />
                     </Container>
-                </section>}
+                </section>} */}
             {/* Section End */}
 
             {/* Footer Start */}

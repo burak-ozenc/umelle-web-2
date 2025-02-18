@@ -35,15 +35,15 @@ export const getBlogPosts = async () => {
         const mappedPosts = entries.items
             .map((entry) => {
                     return {
+                        title: entry?.fields?.title,
                         id: entry.sys.id,
-                        description: entry?.fields?.description,
                         category: entry?.fields?.category,
                         blogType: entry?.fields?.blogType,
                         tags: entry?.fields?.tags,
                         img: entry?.fields?.image?.fields?.file?.url,
                         content: entry?.fields?.content,
                         content2: entry?.fields?.content2,
-                        title: entry?.fields?.title,
+                        description: entry?.fields?.description,
                         quote: entry?.fields?.quote,
                         quoteImage: entry?.fields?.quoteImage?.fields?.file?.url,
                         author: entry.fields?.author,

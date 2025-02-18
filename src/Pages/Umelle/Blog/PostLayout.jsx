@@ -9,7 +9,7 @@ import {documentToReactComponents} from '@contentful/rich-text-react-renderer';
 // Components
 import Blockquote from '../../../Components/Blockquote/Blockquote'
 import {fadeIn} from '../../../Functions/GlobalAnimations'
-import Dropcaps  from '../../../Components/Dropcaps/Dropcaps'
+// import Dropcaps  from '../../../Components/Dropcaps/Dropcaps'
 import BlogClean from '../../../Components/Blogs/BlogClean'
 import {Header, HeaderNav, Menu} from "../../../Components/Header/Header";
 
@@ -19,7 +19,8 @@ import SideButtons from "../../../Components/SideButtons";
 import FooterMenu, {Footer} from "../../../Components/Footers/Footer";
 import FooterData from '../../../Components/Footers/FooterData';
 import {formatBlogDate, getBlogPost, getBlogPosts} from "../../../Functions/Utilities";
-import { BLOCKS, INLINES } from '@contentful/rich-text-types';
+// import { BLOCKS, INLINES } from '@contentful/rich-text-types';
+import headerimage from '../../../Assets/img/umelle/homepage_bottompagebanner_CTA_v2-01.png';
 
 const Footer_Data = [FooterData[0], FooterData[1], FooterData[4], FooterData[3]]
 
@@ -30,7 +31,7 @@ const PostLayout = (props) => {
     const {postID} = useParams();
     const [blogs, setBlogs] = useState(null);
     // Variable to track if Dropcaps has been applied
-    let isDropcapsApplied = false;
+    // let isDropcapsApplied = false;
     useEffect(() => {
 
         // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -40,43 +41,48 @@ const PostLayout = (props) => {
 
     const fetchData = async () => {
         try {
-            const data = await getBlogPosts()
+            //const data = await getBlogPosts()
             // console.log(data[0])
 
-            const duplicatedArray = new Array(3).fill(data[0]);
+            // const duplicatedArray = new Array(3).fill(data[0]);
 
-            setBlogs(duplicatedArray)
-            console.log('blogs', duplicatedArray)
-        } catch (error) {
+            // setBlogs(duplicatedArray)
+            // console.log('blogs', duplicatedArray)
+            const allPosts = await getBlogPosts();
+            setBlogs(allPosts);
+            console.log('blogs', allPosts);
+        } 
+        
+        catch (error) {
             console.error("Error fetching products:", error);
         }
     };
     
 
     // Rendering options for Contentful rich text
-    const renderOptions = {
-        renderNode: {
-            [BLOCKS.PARAGRAPH]: (node) => {
-                const contentText = node.content.map(item => item.value).join('');
+    // const renderOptions = {
+    //     renderNode: {
+    //         [BLOCKS.PARAGRAPH]: (node) => {
+    //             const contentText = node.content.map(item => item.value).join('');
 
-                // Apply Dropcaps only to the first paragraph
-                if (!isDropcapsApplied) {
-                    isDropcapsApplied = true;
-                    return (
-                        <Dropcaps
-                            className="mb-[15px]"
-                            theme="dropcaps-style02"
-                            content={contentText}
-                        />
-                    );
-                }
-                // Render other paragraphs normally
-                return <p>{contentText}</p>;
-            },
-            [BLOCKS.HR]: () => <hr />,
-            [INLINES.SOFT_BREAK]: () => <br />, // Add line break rendering
-        },
-    };
+    //             // Apply Dropcaps only to the first paragraph
+    //             if (!isDropcapsApplied) {
+    //                 isDropcapsApplied = true;
+    //                 return (
+    //                     <Dropcaps
+    //                         className="mb-[15px]"
+    //                         theme="dropcaps-style02"
+    //                         content={contentText}
+    //                     />
+    //                 );
+    //             }
+    //             // Render other paragraphs normally
+    //             return <p>{contentText}</p>;
+    //         },
+    //         [BLOCKS.HR]: () => <hr />,
+    //         [INLINES.SOFT_BREAK]: () => <br />, // Add line break rendering
+    //     },
+    // };
 
     useEffect(() => {
         const fetchData = async () => {
@@ -135,7 +141,7 @@ const PostLayout = (props) => {
 
             {/* Section Start */}
             <section
-                className="pt-[130px] lg:pt-[90px] md:pt-[75px] sm:pt-[50px] pb-0 overflow-visible relative bg-lightgray px-[11%] lg:px-[4%]">
+                className="pt-[130px] lg:pt-[90px] md:pt-[75px] sm:pt-[50px] pb-0 overflow-visible relative bg-lightgray px-[11%] lg:px-[4%]" backgroundImage={headerimage}>
                 <Container fluid>
                     <Row>
                         <Col lg={6} className="order-2 z-10 pl-40 pb-[60px] lg:pl-12 md:pl-[15px]">
@@ -182,10 +188,7 @@ const PostLayout = (props) => {
                 <Container>
                     <Row className="justify-end">
                         <Col xl={5} lg={6} className="pl-[3.5rem] md:pl-[15px]">
-                            <p>Lorem ipsum has been the industry's standard dummy text, when an printer took a galley of
-                                type and scrambled it to make a type specimen book. It has survived not only five
-                                centuries, <span className="font-medium text-darkgray">but also the leap into electronic typesetting</span> remaining
-                                essentially unchanged.</p>
+                            <p>{data?.description}</p>
                         </Col>
                     </Row>
                 </Container>
@@ -193,7 +196,7 @@ const PostLayout = (props) => {
             {/* Seaction End */}
 
             {/* Section Start */}
-            <section className="pb-[130px] overflow-hidden lg:pb-[90px] md:pb-[75px] sm:pb-[50px] mt-[75px] lg:mt-0">
+            <section className="pb-[5px] overflow-hidden lg:pb-[90px] md:pb-[75px] sm:pb-[50px] mt-[75px] lg:mt-0">
                 <Container>
                     <Row className="justify-center  ">
                         <m.div
@@ -231,12 +234,12 @@ const PostLayout = (props) => {
                 
 
             {/* Section Start */}
-            <m.section className="mb-5 md:py-[75px] sm:py-[50px]" {...fadeIn}>
+            <m.section className="mb-20 md:py-[75px] sm:py-[50px]" {...fadeIn}>
                 <Container>
                     <Row className="justify-center">
                         <Col md={10}>
                             {/*{documentToReactComponents(data?.content2)}*/}
-                            {documentToReactComponents(data?.content2, renderOptions)}
+                            {documentToReactComponents(data?.content2)}
                             {/*<Dropcaps className="mb-[15px]" theme="dropcaps-style02"*/}
                             {/*          content={documentToReactComponents(data?.content2, renderOptions)}/>*/}
                             {/*//  content="lorem ipsum ..."/>*/}

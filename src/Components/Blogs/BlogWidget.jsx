@@ -59,7 +59,7 @@ const BlogWidget = (props) => {
                     <Link aria-label="link" to={`blog-post/${[item?.id]}`} className="mb-0 leading-[22px] font-medium text-darkgray font-serif block">
                         {item.title}
                     </Link>
-                    <span className="text-xs font-serif">By authorData.name</span>
+                    <span className="text-xs font-serif">By - {item.author}</span>
                   </div>
                 </m.div>
               </li>
