@@ -227,7 +227,7 @@ const HomeStartupPage = (props) => {
                         <h5 className="font-serif text-darkgray font-medium mb-[30px] w-full">TAILORED APPROACH TO UNDERSTAND AND MEET YOUR UNIQUE NEEDS</h5>
                         <p className="w-[95%] mb-[35px]">We combine cutting-edge innovation with a deep commitment to understanding your specific challenges in the insurance sector, delivering solutions that are both forward-thinking and perfectly aligned with your objectives.</p>
                         <div className="xs:flex">
-                            <Buttons to="/solutions" className=" mr-[20px] xs:mr-[10px] text-white hover:text-black font-medium rounded-none font-serif uppercase bg-black " size="md" color="#ffffff" themeColor="#ffffff" title="EXPLORE SOLUTIONS" Hover/>
+                            <Buttons to="/solutions" className="font-medium rounded-none font-serif uppercase hover:text-white bg-transparent btn-slide-right" color="#232323" size="md" themeColor="#232323" title="EXPLORE SOLUTIONS" />
                             <Buttons to="/services" className="font-medium rounded-none font-serif uppercase hover:text-white bg-transparent btn-slide-right" color="#232323" size="md" themeColor="#232323" title="EXPLORE SERVICES" />
                         </div>
                         </m.div>

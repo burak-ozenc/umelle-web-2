@@ -1,0 +1,80 @@
+/* BlogContent.scss */
+.blog-content {
+    /* Base text style */
+    color: #333;
+    font-size: 1.2rem;
+    line-height: 1.6;
+  
+    /* Headings */
+    h1, h2, h3, h4, h5, h6 {
+      font-weight: 700;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      line-height: 1.3;
+    }
+  
+    /* Adjust heading sizes if you want */
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.75rem; }
+    h3 { font-size: 1.5rem; }
+    /* ... and so on ... */
+  
+    /* Paragraphs */
+    p {
+      margin-bottom: 1rem;
+    }
+  
+    /* Lists */
+    ul,
+    ol {
+      margin-bottom: 1rem;    /* space after the list */
+      padding-left: 2rem;     /* indent the list items */
+    }
+  
+    /* Specifically for unordered lists (bullets) */
+    ul {
+      list-style-type: disc;  /* disc bullets */
+      list-style-position: outside; /* bullets outside the text block */
+    }
+  
+    /* Specifically for ordered lists (numbers) */
+    ol {
+      list-style-type: decimal; /* numbers (1,2,3...) */
+      list-style-position: outside;
+    }
+  
+    /* Optional: Additional styling for <li> */
+    li {
+      margin-bottom: 0.5rem;   /* space between each list item */
+    }
+  
+    /* Horizontal Rule */
+    hr {
+      border: none;
+      border-top: 1px solid #ccc;
+      margin: 2rem 0;
+    }
+  
+    /* Blockquotes */
+    blockquote {
+      margin: 2rem 0;
+      padding: 1rem 1.5rem;
+      border-left: 4px solid #888;
+      background-color: #f9f9f9;
+      font-style: italic;
+    }
+  
+    /* Images in the blog content */
+    img {
+      max-width: 100%;
+      height: auto;
+      margin: 1rem 0;
+      border-radius: 4px; /* optional */
+    }
+  
+    /* If you have code blocks */
+    pre, code {
+      font-family: 'Courier New', Courier, monospace;
+    }
+  }
+  

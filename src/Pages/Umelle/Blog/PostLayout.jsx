@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react'
+import './BlogContent.scss';
 
 // Libraries
 import {m} from 'framer-motion'
@@ -57,7 +58,6 @@ const PostLayout = (props) => {
             console.error("Error fetching products:", error);
         }
     };
-    
 
     // Rendering options for Contentful rich text
     const options = {
@@ -171,7 +171,9 @@ const PostLayout = (props) => {
                 <Container>
                     <Row className="justify-end">
                         <Col xl={5} lg={6} className="pl-[3.5rem] md:pl-[15px]">
-                            <p>{data?.description}</p>
+                            <div className="blog-content">
+                                <p>{data?.description}</p>
+                            </div>
                         </Col>
                     </Row>
                 </Container>
@@ -206,8 +208,9 @@ const PostLayout = (props) => {
                         <Col md={10}>
                             <m.div className="row" {...fadeIn}>
                                 <Col xl={12} className="mt-36 sm:mt-[50px]">
+                                    <div className="blog-content">
                                     {documentToReactComponents(data?.content,options)}
-                                    
+                                    </div>
                                 </Col>
                             </m.div>
                         </Col>
@@ -223,7 +226,9 @@ const PostLayout = (props) => {
                     <Row className="justify-center">
                         <Col md={10}>
                             {/*{documentToReactComponents(data?.content2)}*/}
-                            {documentToReactComponents(data?.content2)}
+                            <div className="blog-content">
+                            {documentToReactComponents(data?.content2, options)}
+                            </div>
                             {/*<Dropcaps className="mb-[15px]" theme="dropcaps-style02"*/}
                             {/*          content={documentToReactComponents(data?.content2, renderOptions)}/>*/}
                             {/*//  content="lorem ipsum ..."/>*/}

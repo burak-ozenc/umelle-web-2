@@ -47,11 +47,12 @@ const HeaderDataAdjusted = [
         dropdown: [
             {
                 title: 'ORION DataWorks',
-                link: '/Orion-Dataworks'
-            }, {
-                title: 'ATLAS',
-                link: '/ATLAS-Support'
-            },
+                link: '/orion-dataworks'
+            }, 
+            // {
+            //     title: 'ATLAS',
+            //     link: '/ATLAS-Support'
+            // },
         ]
     },
     {

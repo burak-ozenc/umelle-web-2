@@ -144,7 +144,7 @@ function App() {
                   <Route path="/company" element={<UmelleCompany style={{ "--base-color": "#3844F7" }} />} />
                   <Route path="/contact" element={<Contact style={{ "--base-color": "#3844F7" }} />} />
                   <Route path="/coming-soon" element={<ComingSoon style={{ "--base-color": "#3844F7" }} />} />
-                  <Route path="/Orion-Dataworks" element={<UIMSProduct style={{ "--base-color": "#3844F7" }} />} />
+                  <Route path="/orion-dataworks" element={<UIMSProduct style={{ "--base-color": "#3844F7" }} />} />
                   <Route path="/aw-stg-landingp" element={<LandingPage style={{ "--base-color": "#3844F7" }} />} />
                   <Route path="/contact-success-1" element={<ContactSuccess style={{ "--base-color": "#3844F7" }} />} />
                   <Route path="/contact-success-2" element={<ContactSuccessCustom style={{ "--base-color": "#3844F7" }} />} />
@@ -155,11 +155,11 @@ function App() {
                   <Route path="/cloud-services" element={<CloudServices style={{ "--base-color": "#3844F7" }} />} />
                   <Route path="/managed-it-services" element={<ManagedServices style={{ "--base-color": "#3844F7" }} />} />
                   <Route path="/coreplatform" element={<CorePlatform style={{ "--base-color": "#3844F7" }} />} />
-                  <Route path="/Orion-Dataworks-pricing" element={<ProductPricing style={{ "--base-color": "#3844F7" }} />} />
-                  <Route path="/Orion-Dataworks-integrations" element={<ProductIntegrations style={{ "--base-color": "#3844F7" }} />} />
-                  <Route path="/Orion-Dataworks-support" element={<ProductSupport style={{ "--base-color": "#3844F7" }} />} />
-                  <Route path="/Orion-Dataworks-portal" element={<ProductPortal style={{ "--base-color": "#3844F7" }} />} />
-                  <Route path="/Orion-Dataworks-reporting" element={<ProductReporting style={{ "--base-color": "#3844F7" }} />} />
+                  <Route path="/orion-dataworks-pricing" element={<ProductPricing style={{ "--base-color": "#3844F7" }} />} />
+                  <Route path="/orion-dataworks-integrations" element={<ProductIntegrations style={{ "--base-color": "#3844F7" }} />} />
+                  <Route path="/orion-dataworks-support" element={<ProductSupport style={{ "--base-color": "#3844F7" }} />} />
+                  <Route path="/orion-dataworks-portal" element={<ProductPortal style={{ "--base-color": "#3844F7" }} />} />
+                  <Route path="/orion-dataworks-reporting" element={<ProductReporting style={{ "--base-color": "#3844F7" }} />} />
                   <Route path="/custom-solution" element={<CustomSolution style={{ "--base-color": "#3844F7" }} />} />
                   <Route path="/testimonials" element={<Testimonials style={{ "--base-color": "#3844F7" }} />} />
                   <Route path="blog">

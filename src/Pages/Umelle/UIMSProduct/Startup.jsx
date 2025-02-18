@@ -237,7 +237,7 @@ const HomeStartupPage = (props) => {
                             <p className="w-[70%] mb-[40px] lg:w-[90%] md:mb-[45px] xs:mb-[25px]">No unnecessary expense. No hidden costs. Our pricing plans are designed to get you up and running fast.  </p>
                             <Lists theme="list-style-01" data={ListData02} />
                             <div className="mt-[50px] md:mt-[25px] xs:mt-[35px] landscape:md:mt-[40px]">
-                                <Buttons to="/contact" className="mr-[35px] btn-fill btn-fancy rounded-none font-medium font-serif uppercase md:mb-[15px] xs:mb-0" themeColor="#232323" color="#fff" size="sm" title="REQUEST PRICING" />
+                                <Buttons ariaLabel="button" to="/contact" className="mr-[35px] font-medium font-serif uppercase rounded-none lg:mb-[15px] landscape:lg:mb-[15px]" themeColor={["#902cfc", "#4423c4"]} size="m" color="#fff" title="REQUEST PRICING" />
                                 <Buttons to="/contact" className="font-medium pt-0 font-serif uppercase btn-link after:h-[2px] md:text-md md:mb-[15px] after:bg-darkgray hover:text-darkgray xs:mb-0" size="xl" color="#232323" title="REQUEST DEMO" />
                             </div>
                         </m.div>

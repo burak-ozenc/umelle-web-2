@@ -5,7 +5,7 @@
   "homepage": "https://www.umelle.com",
   "exports": "./index.js",
   "dependencies": {
-    "@contentful/rich-text-react-renderer": "^16.0.0",
+    "@contentful/rich-text-react-renderer": "^16.0.1",
     "@contentful/rich-text-types": "^17.0.0",
     "@emailjs/browser": "^4.3.3",
     "@testing-library/jest-dom": "^5.16.4",

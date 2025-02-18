@@ -119,7 +119,7 @@ const HomeStartupPage = (props) => {
                 </div>
                 <h3 className="alt-font text-darkgray font-semibold mb-[20px] font-serif md:text-center md:mb-[30px] heading-5">Insurance Management</h3>
                 <div className="mt-auto mx-auto mx-lg-0">
-                    <Buttons href="/contact" className="font-medium font-serif uppercase bg-[#fff] hover:bg-black rounded-none md:mb-[15px] text-xxs btn-fancy xs:mb-0" color="#000" size="sm" themeColor="#000" title="GET QUOTE" />
+                    <Buttons ariaLabel="button" to="/contact" className="font-medium font-serif uppercase rounded-none lg:mb-[15px] landscape:lg:mb-[15px]" themeColor={["#902cfc", "#4423c4"]} size="m" color="#fff" title="GET QUOTE" />
                 </div>
                 </m.div>    
             </Row>
@@ -154,7 +154,7 @@ const HomeStartupPage = (props) => {
                 </div>
                 <h3 className="alt-font text-darkgray font-semibold mb-[20px] font-serif md:text-center md:mb-[30px] heading-5">Operations Management</h3>
                 <div className="mt-auto mx-auto mx-lg-0">
-                    <Buttons href="/contact" className="font-medium font-serif uppercase bg-[#fff] hover:bg-black rounded-none md:mb-[15px] text-xxs btn-fancy xs:mb-0" color="#000" size="sm" themeColor="#000" title="GET Quote" />
+                <Buttons ariaLabel="button" to="/contact" className="font-medium font-serif uppercase rounded-none lg:mb-[15px] landscape:lg:mb-[15px]" themeColor={["#902cfc", "#4423c4"]} size="m" color="#fff" title="GET QUOTE" />
                 </div>
                 </m.div>
                 <Col xl={{ span: 7, offset: 2 }} lg={8}>
