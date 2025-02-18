@@ -5,6 +5,7 @@ import {m} from 'framer-motion'
 import {Navbar, Col, Container, Row} from 'react-bootstrap'
 import {Link, useParams} from 'react-router-dom'
 import {documentToReactComponents} from '@contentful/rich-text-react-renderer';
+import {BLOCKS, INLINES} from '@contentful/rich-text-types';
 
 // Components
 import Blockquote from '../../../Components/Blockquote/Blockquote'
@@ -19,7 +20,6 @@ import SideButtons from "../../../Components/SideButtons";
 import FooterMenu, {Footer} from "../../../Components/Footers/Footer";
 import FooterData from '../../../Components/Footers/FooterData';
 import {formatBlogDate, getBlogPost, getBlogPosts} from "../../../Functions/Utilities";
-// import { BLOCKS, INLINES } from '@contentful/rich-text-types';
 import headerimage from '../../../Assets/img/umelle/homepage_bottompagebanner_CTA_v2-01.png';
 
 const Footer_Data = [FooterData[0], FooterData[1], FooterData[4], FooterData[3]]
@@ -60,43 +60,27 @@ const PostLayout = (props) => {
     
 
     // Rendering options for Contentful rich text
-    // const renderOptions = {
-    //     renderNode: {
-    //         [BLOCKS.PARAGRAPH]: (node) => {
-    //             const contentText = node.content.map(item => item.value).join('');
-
-    //             // Apply Dropcaps only to the first paragraph
-    //             if (!isDropcapsApplied) {
-    //                 isDropcapsApplied = true;
-    //                 return (
-    //                     <Dropcaps
-    //                         className="mb-[15px]"
-    //                         theme="dropcaps-style02"
-    //                         content={contentText}
-    //                     />
-    //                 );
-    //             }
-    //             // Render other paragraphs normally
-    //             return <p>{contentText}</p>;
-    //         },
-    //         [BLOCKS.HR]: () => <hr />,
-    //         [INLINES.SOFT_BREAK]: () => <br />, // Add line break rendering
-    //     },
-    // };
+    const options = {
+        renderNode: {
+            
+            [BLOCKS.HR]: () => <hr />,
+            [INLINES.SOFT_BREAK]: () => <br/>  // Add line break rendering
+        },
+    };
 
     useEffect(() => {
         const fetchData = async () => {
             try {
                 const blogData = await getBlogPost(postID);
                 setData(blogData);
-
-                console.log('productData', blogData);
             } catch (error) {
                 console.log(error);
             }
         };
         fetchData();
     }, [postID]);
+
+
 
     return (
          data && 
@@ -134,7 +118,6 @@ const PostLayout = (props) => {
                 </HeaderNav>
             </Header>
             {/* Header End */}
-
 
             <SideButtons/>
 
@@ -223,7 +206,8 @@ const PostLayout = (props) => {
                         <Col md={10}>
                             <m.div className="row" {...fadeIn}>
                                 <Col xl={12} className="mt-36 sm:mt-[50px]">
-                                    {documentToReactComponents(data?.content)}
+                                    {documentToReactComponents(data?.content,options)}
+                                    
                                 </Col>
                             </m.div>
                         </Col>
